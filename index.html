@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,8 +27,14 @@ body{font-family:'DM Sans',sans-serif;color:var(--text);background:var(--light);
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(15,30,60,0.97);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,0.07);}
 .nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 28px;height:68px;}
-.logo{font-family:'Playfair Display',serif;font-size:1.45rem;font-weight:900;color:var(--white);letter-spacing:-0.5px;}
-.logo span{color:var(--accent);}
+
+/* LOGO SVG */
+.logo-wrap{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.logo-svg{width:42px;height:42px;flex-shrink:0;}
+.logo-text{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:900;color:var(--white);letter-spacing:-0.5px;line-height:1;}
+.logo-text span{color:var(--accent);}
+.logo-sub{font-size:.65rem;font-weight:500;color:rgba(255,255,255,0.45);letter-spacing:2px;text-transform:uppercase;margin-top:2px;}
+
 .nav-links{display:flex;gap:4px;list-style:none;}
 .nav-links a{color:rgba(255,255,255,0.80);text-decoration:none;font-size:.9rem;font-weight:500;padding:8px 16px;border-radius:8px;transition:all .2s;}
 .nav-links a:hover,.nav-links a.active{background:rgba(232,160,32,0.18);color:var(--accent2);}
@@ -128,8 +134,6 @@ section{padding:80px 24px;}
 .grammar-topic-item h5{font-weight:700;color:var(--navy);margin-bottom:4px;}
 .grammar-topic-item p{font-size:.83rem;color:var(--muted);}
 .grammar-topic-item .arrow{color:var(--accent);font-size:.9rem;}
-
-/* GRAMMAR DETAIL */
 .grammar-detail{display:none;}
 .grammar-detail.active{display:block;}
 .grammar-detail-back{display:inline-flex;align-items:center;gap:8px;color:var(--blue);font-weight:600;cursor:pointer;margin-bottom:24px;font-size:.9rem;border:none;background:none;font-family:'DM Sans',sans-serif;}
@@ -145,7 +149,7 @@ section{padding:80px 24px;}
 .exercise-list{display:grid;gap:12px;margin-top:12px;}
 .exercise-item{background:var(--light);border-radius:10px;padding:16px;border:1px solid var(--border);}
 .exercise-item p{font-weight:600;color:var(--navy);margin-bottom:8px;}
-.exercise-item input[type=text]{border:1px solid var(--border);border-radius:6px;padding:8px 12px;width:100%;max-width:300px;font-family:'DM Sans',sans-serif;font-size:.9rem;outline:none;transition:border .2s;}
+.exercise-item input[type=text]{border:1px solid var(--border);border-radius:6px;padding:8px 12px;width:100%;max-width:340px;font-family:'DM Sans',sans-serif;font-size:.9rem;outline:none;transition:border .2s;}
 .exercise-item input[type=text]:focus{border-color:var(--accent);}
 .check-btn{margin-top:8px;padding:8px 20px;background:var(--navy);color:white;border:none;border-radius:6px;cursor:pointer;font-weight:600;font-size:.85rem;font-family:'DM Sans',sans-serif;}
 .answer-feedback{font-size:.85rem;margin-top:6px;font-weight:600;}
@@ -163,6 +167,8 @@ section{padding:80px 24px;}
 .contact-item-icon{width:44px;height:44px;background:rgba(232,160,32,0.15);border:1px solid rgba(232,160,32,0.3);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:1.1rem;flex-shrink:0;}
 .contact-item h5{font-weight:700;color:white;margin-bottom:4px;}
 .contact-item p{color:rgba(255,255,255,0.6);font-size:.9rem;}
+.contact-item a{color:rgba(255,255,255,0.6);font-size:.9rem;text-decoration:none;}
+.contact-item a:hover{color:var(--accent2);}
 .contact-form{display:grid;gap:16px;}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
 .form-group{display:flex;flex-direction:column;gap:6px;}
@@ -171,6 +177,7 @@ section{padding:80px 24px;}
 .form-group input::placeholder,.form-group textarea::placeholder{color:rgba(255,255,255,0.35);}
 .form-group input:focus,.form-group textarea:focus{border-color:var(--accent);}
 .form-group textarea{resize:vertical;min-height:110px;}
+.form-group select option{background:var(--navy);color:white;}
 .form-submit{padding:14px;background:var(--accent);color:var(--navy);font-weight:700;border:none;border-radius:10px;cursor:pointer;font-size:1rem;font-family:'DM Sans',sans-serif;transition:all .2s;margin-top:4px;}
 .form-submit:hover{background:var(--accent2);}
 
@@ -205,14 +212,40 @@ footer strong{color:var(--accent);}
 <!-- NAV -->
 <nav>
   <div class="nav-inner">
-    <div class="logo">Ab<span>Online</span>English</div>
+    <!-- LOGO -->
+    <a class="logo-wrap" href="#home">
+      <svg class="logo-svg" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Outer circle -->
+        <circle cx="21" cy="21" r="20" fill="#0f1e3c" stroke="#e8a020" stroke-width="1.5"/>
+        <!-- Open book shape -->
+        <path d="M10 27 C10 27 10 15 21 15 C32 15 32 27 32 27" fill="none" stroke="#e8a020" stroke-width="1.8" stroke-linecap="round"/>
+        <line x1="21" y1="15" x2="21" y2="27" stroke="#e8a020" stroke-width="1.5" stroke-linecap="round"/>
+        <!-- Pages left -->
+        <path d="M10 27 C12 25 16 23 21 23" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.2" stroke-linecap="round"/>
+        <path d="M10 24 C12 22 15 21 21 21" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1" stroke-linecap="round"/>
+        <!-- Pages right -->
+        <path d="M32 27 C30 25 26 23 21 23" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.2" stroke-linecap="round"/>
+        <path d="M32 24 C30 22 27 21 21 21" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1" stroke-linecap="round"/>
+        <!-- Bottom book base -->
+        <path d="M9 27.5 Q21 30 33 27.5" fill="none" stroke="#e8a020" stroke-width="1.8" stroke-linecap="round"/>
+        <!-- UK flag hint - small union jack dots -->
+        <circle cx="21" cy="11" r="1.2" fill="#e8a020"/>
+        <!-- A letter hint on spine -->
+        <text x="21" y="35.5" text-anchor="middle" font-family="Georgia,serif" font-size="5" font-weight="bold" fill="#e8a020">Ab</text>
+      </svg>
+      <div>
+        <div class="logo-text">AbOnlin<span>English</span></div>
+        <div class="logo-sub">Dil Eğitimi</div>
+      </div>
+    </a>
+
     <ul class="nav-links" id="navLinks">
       <li><a href="#home" class="active" onclick="closeMenu()">Home</a></li>
-      <li><a href="#about" onclick="closeMenu()">About</a></li>
-      <li><a href="#documents" onclick="closeMenu()">Documents</a></li>
-      <li><a href="#skills" onclick="closeMenu()">Skills</a></li>
+      <li><a href="#about" onclick="closeMenu()">Hakkımızda</a></li>
+      <li><a href="#documents" onclick="closeMenu()">Dokümanlar</a></li>
+      <li><a href="#skills" onclick="closeMenu()">Beceriler</a></li>
       <li><a href="#grammar" onclick="closeMenu()">Dilbilgisi</a></li>
-      <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+      <li><a href="#contact" onclick="closeMenu()">İletişim</a></li>
     </ul>
     <button class="hamburger" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
   </div>
@@ -285,11 +318,11 @@ footer strong{color:var(--accent);}
     <h2 class="section-title">Dokümanlar & PDF'ler</h2>
     <p class="section-sub">Seviyenizi seçin ve konuya ait dokümanı indirin.</p>
     <div class="level-tabs">
-      <button class="level-tab active" onclick="filterDocs('ALL')">Tümü</button>
-      <button class="level-tab" onclick="filterDocs('A1')">A1</button>
-      <button class="level-tab" onclick="filterDocs('A2')">A2</button>
-      <button class="level-tab" onclick="filterDocs('B1')">B1</button>
-      <button class="level-tab" onclick="filterDocs('B2')">B2</button>
+      <button class="level-tab active" onclick="filterDocs('ALL',event)">Tümü</button>
+      <button class="level-tab" onclick="filterDocs('A1',event)">A1</button>
+      <button class="level-tab" onclick="filterDocs('A2',event)">A2</button>
+      <button class="level-tab" onclick="filterDocs('B1',event)">B1</button>
+      <button class="level-tab" onclick="filterDocs('B2',event)">B2</button>
     </div>
     <div class="doc-grid" id="docGrid"></div>
   </div>
@@ -302,10 +335,10 @@ footer strong{color:var(--accent);}
     <h2 class="section-title">Temel Beceriler</h2>
     <p class="section-sub">İngilizce'nin dört temel becerisini geliştirmek için pratik materyaller.</p>
     <div class="skills-tabs">
-      <button class="skill-tab active" onclick="switchSkill('reading')"><i class="fas fa-book-open" style="margin-right:6px"></i>Reading</button>
-      <button class="skill-tab" onclick="switchSkill('writing')"><i class="fas fa-pen-nib" style="margin-right:6px"></i>Writing</button>
-      <button class="skill-tab" onclick="switchSkill('listening')"><i class="fas fa-headphones" style="margin-right:6px"></i>Listening</button>
-      <button class="skill-tab" onclick="switchSkill('speaking')"><i class="fas fa-microphone" style="margin-right:6px"></i>Speaking</button>
+      <button class="skill-tab active" onclick="switchSkill('reading',event)"><i class="fas fa-book-open" style="margin-right:6px"></i>Reading</button>
+      <button class="skill-tab" onclick="switchSkill('writing',event)"><i class="fas fa-pen-nib" style="margin-right:6px"></i>Writing</button>
+      <button class="skill-tab" onclick="switchSkill('listening',event)"><i class="fas fa-headphones" style="margin-right:6px"></i>Listening</button>
+      <button class="skill-tab" onclick="switchSkill('speaking',event)"><i class="fas fa-microphone" style="margin-right:6px"></i>Speaking</button>
     </div>
     <div id="skills-container"></div>
   </div>
@@ -335,11 +368,11 @@ footer strong{color:var(--accent);}
         <div class="contact-info">
           <div class="contact-item">
             <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
-            <div><h5>E-posta</h5><p>info@abonlinenglish.com</p></div>
+            <div><h5>E-posta</h5><a href="mailto:info@abonlinenglish.com">info@abonlinenglish.com</a></div>
           </div>
           <div class="contact-item">
             <div class="contact-item-icon"><i class="fas fa-phone"></i></div>
-            <div><h5>Telefon</h5><p>+90 (212) 000 00 00</p></div>
+            <div><h5>Telefon</h5><p>+90 (XXX) XXX XX XX</p></div>
           </div>
           <div class="contact-item">
             <div class="contact-item-icon"><i class="fab fa-whatsapp"></i></div>
@@ -369,66 +402,570 @@ footer strong{color:var(--accent);}
 
 <footer>
   <strong>AbOnlinEnglish</strong> Dil Eğitimi &copy; 2025 — Tüm hakları saklıdır.<br>
-  <span style="margin-top:6px;display:inline-block;">info@abonlinenglish.com | +90 (212) 000 00 00</span>
+  <span style="margin-top:6px;display:inline-block;">info@abonlinenglish.com</span>
 </footer>
 
 <div class="toast" id="toast"></div>
 
 <script>
-/* ========== DATA ========== */
+/* ========== DOCUMENTS DATA ========== */
 const docs = [
   {level:'A1',title:'Present Simple',desc:'Geniş zaman kullanımı, olumlu/olumsuz/soru cümleleri ve alıştırmalar.',pdf:'present-simple-a1.pdf'},
   {level:'A1',title:'To Be (am/is/are)',desc:'"To be" fiilinin kullanımı, kısaltmalar ve pratik egzersizler.',pdf:'to-be-a1.pdf'},
   {level:'A1',title:'Articles (a/an/the)',desc:'Belirsiz ve belirli tanımlıkların doğru kullanımı.',pdf:'articles-a1.pdf'},
   {level:'A1',title:'Numbers & Time',desc:'Sayılar, saat ifadeleri ve tarih kullanımı.',pdf:'numbers-time-a1.pdf'},
+  {level:'A1',title:'Possessive Adjectives',desc:'my, your, his, her, its, our, their kullanımı.',pdf:'possessives-a1.pdf'},
+  {level:'A1',title:'There is / There are',desc:'Mekan ve varlık ifadeleri için temel yapı.',pdf:'there-is-a1.pdf'},
   {level:'A2',title:'Past Simple',desc:'Geçmiş zaman yapısı, düzenli/düzensiz fiiller ve alıştırmalar.',pdf:'past-simple-a2.pdf'},
   {level:'A2',title:'Present Continuous',desc:'Şimdiki zaman ve kullanım alanları.',pdf:'present-continuous-a2.pdf'},
   {level:'A2',title:'Comparatives & Superlatives',desc:'Karşılaştırma yapıları ve üstünlük ifadeleri.',pdf:'comparatives-a2.pdf'},
-  {level:'A2',title:'There is / There are',desc:'"There is/are" yapısı ile mekân ve nesne ifadeleri.',pdf:'there-is-a2.pdf'},
+  {level:'A2',title:'Future (going to / will)',desc:'Gelecek zaman planları ve tahminler.',pdf:'future-a2.pdf'},
+  {level:'A2',title:'Prepositions',desc:'in, on, at, by, with – zaman ve yer edatları.',pdf:'prepositions-a2.pdf'},
   {level:'B1',title:'Present Perfect',desc:'Geçmiş-şimdi bağlantısı, ever/never/already/yet kullanımı.',pdf:'present-perfect-b1.pdf'},
   {level:'B1',title:'Conditionals (Type 0 & 1)',desc:'Gerçek koşul cümleleri ve alıştırmalar.',pdf:'conditionals-b1.pdf'},
   {level:'B1',title:'Passive Voice',desc:'Edilgen yapı ve kullanım alanları.',pdf:'passive-b1.pdf'},
   {level:'B1',title:'Modal Verbs',desc:'can/could/may/might/should/must kullanımı.',pdf:'modals-b1.pdf'},
+  {level:'B1',title:'Gerunds & Infinitives',desc:'-ing ve to-infinitive kullanım kuralları.',pdf:'gerunds-b1.pdf'},
   {level:'B2',title:'Conditionals (Type 2 & 3)',desc:'Varsayımsal ve pişmanlık cümleleri.',pdf:'conditionals-b2.pdf'},
   {level:'B2',title:'Reported Speech',desc:'Dolaylı anlatım ve zaman uyumu.',pdf:'reported-speech-b2.pdf'},
   {level:'B2',title:'Relative Clauses',desc:'Tanımlayıcı ve açıklayıcı yan cümleler.',pdf:'relative-clauses-b2.pdf'},
   {level:'B2',title:'Advanced Passive',desc:'Karmaşık edilgen yapılar ve akademik kullanım.',pdf:'passive-adv-b2.pdf'},
+  {level:'B2',title:'Inversion & Emphasis',desc:'Vurgu yapıları ve devrik cümleler.',pdf:'inversion-b2.pdf'},
 ];
 
+/* ========== SKILLS DATA ========== */
 const skills = {
   reading:{icon:'📖',title:'Reading – Okuma',desc:'Okuma becerinizi geliştirmek için farklı seviyelerde metinler, anlama soruları ve strateji rehberleri.',tips:['Okumadan önce başlığa ve görsellere bakın.','Bilinmeyen kelimeler için bağlamı kullanın.','Ana fikri bulmak için ilk ve son paragrafa odaklanın.','Notlar alın, önemli kısımların altını çizin.'],mats:[{icon:'📄',title:'A1–A2 Reading Texts',desc:'Günlük hayat konularında kısa metinler'},{icon:'📄',title:'B1 Reading Comprehension',desc:'Orta seviye anlama soruları'},{icon:'📄',title:'B2 Academic Reading',desc:'Akademik metin stratejileri'},{icon:'📝',title:'Reading Strategies Guide',desc:'Etkili okuma teknikleri rehberi'}]},
   writing:{icon:'✍️',title:'Writing – Yazma',desc:'E-posta, paragraf ve deneme yazma becerilerinizi geliştirin. Şablonlar, örnekler ve düzeltilmiş çalışmalar.',tips:['Yazmadan önce plan yapın.','Paragraf yapısına dikkat edin (giriş–gelişme–sonuç).','Bağlaçları doğru kullanın.','Yazdıktan sonra mutlaka gözden geçirin.'],mats:[{icon:'📄',title:'Email Writing Templates',desc:'Formal ve informal e-posta şablonları'},{icon:'📄',title:'Paragraph Writing Guide',desc:'Paragraf yazma adım adım rehber'},{icon:'📄',title:'Essay Structure',desc:'Deneme yapısı ve örnekler'},{icon:'📝',title:'Useful Phrases & Connectors',desc:'Yazıda kullanılacak bağlaçlar ve ifadeler'}]},
-  listening:{icon:'🎧',title:'Listening – Dinleme',desc:'Farklı aksanları anlama, anahtar kelime yakalama ve not alma becerilerini geliştiren materyaller.',tips:['İlk dinlemede genel anlama odaklanın.','Anahtar kelimeleri ve isimleri not alın.','Farklı aksanlara maruz kalmaya çalışın.','Dinleme metni ile transcript birlikte çalışın.'],mats:[{icon:'🎵',title:'A1–A2 Listening Scripts',desc:'Temel diyalog transkriptleri'},{icon:'🎵',title:'B1 Note-Taking Practice',desc:'Not alma egzersizleri ve ses dosyaları'},{icon:'🎵',title:'B2 Lecture Listening',desc:'Akademik dinleme materyalleri'},{icon:'📝',title:'Listening Strategies',desc:'Dinleme öncesi/sonrası stratejiler'}]},
+  listening:{icon:'🎧',title:'Listening – Dinleme',desc:'Farklı aksanları anlama, anahtar kelime yakalama ve not alma becerilerini geliştiren materyaller.',tips:['İlk dinlemede genel anlama odaklanın.','Anahtar kelimeleri ve isimleri not alın.','Farklı aksanlara maruz kalmaya çalışın.','Dinleme metni ile transcript birlikte çalışın.'],mats:[{icon:'🎵',title:'A1–A2 Listening Scripts',desc:'Temel diyalog transkriptleri'},{icon:'🎵',title:'B1 Note-Taking Practice',desc:'Not alma egzersizleri'},{icon:'🎵',title:'B2 Lecture Listening',desc:'Akademik dinleme materyalleri'},{icon:'📝',title:'Listening Strategies',desc:'Dinleme öncesi/sonrası stratejiler'}]},
   speaking:{icon:'🎙️',title:'Speaking – Konuşma',desc:'Telaffuz, akıcılık ve kendine güven geliştirmek için rehberler, soru listeleri ve konuşma kalıpları.',tips:['Yüksek sesle konuşma pratiği yapın.','Günde en az 5 dakika İngilizce konuşun.','Hataları düzeltmeye takılmayın, akıcılığa odaklanın.','Ayna karşısında ya da kayıt alarak çalışın.'],mats:[{icon:'📄',title:'Pronunciation Guide',desc:'IPA ve telaffuz kuralları'},{icon:'📄',title:'Conversation Starters',desc:'Sohbet başlatma kalıpları'},{icon:'📄',title:'IELTS Speaking Topics',desc:'IELTS sınav konuları ve örnek cevaplar'},{icon:'📝',title:'Useful Phrases for Fluency',desc:'Akıcı konuşma için kalıp ifadeler'}]},
 };
 
+/* ========== GRAMMAR DATA (FULL) ========== */
 const grammar = {
   A1:{topics:[
-    {title:'Present Simple',sub:'Geniş zaman',explanation:'Present Simple, rutinler, alışkanlıklar ve genel gerçekler için kullanılır.',structure:'Subject + V1 (he/she/it → V1+s)',examples:[{eng:'I work every day.',tr:'Her gün çalışırım.'},{eng:'She drinks coffee in the morning.',tr:'Sabahları kahve içer.'},{eng:'They do not play football.',tr:'Futbol oynamazlar.'}],exercises:[{q:'He ___ (go) to school every day.',a:'goes'},{q:'They ___ (not/watch) TV at night.',a:"don't watch"},{q:'___ she ___ (speak) English? (Does)',a:'Does / speak'}]},
-    {title:'To Be (am/is/are)',sub:'"To be" fiili',explanation:'"To be" İngilizcenin en temel fiilidir. Kimlik, meslek ve vasıfları ifade etmek için kullanılır.',structure:'I am / You are / He-She-It is',examples:[{eng:'I am a student.',tr:'Ben bir öğrenciyim.'},{eng:'She is from Turkey.',tr:'O Türkiye\'den.'},{eng:'They are happy.',tr:'Onlar mutlu.'}],exercises:[{q:'He ___ a doctor.',a:'is'},{q:'We ___ happy today.',a:'are'},{q:'I ___ not tired.',a:'am'}]},
-    {title:'Articles (a / an / the)',sub:'Tanımlıklar',explanation:'"a" ve "an" belirsiz, "the" ise belirli tanımlık olarak kullanılır.',structure:'a + sessiz harf / an + sesli harf / the + bilinen isim',examples:[{eng:'I have a cat.',tr:'Bir kedim var.'},{eng:'She is an engineer.',tr:'O bir mühendis.'},{eng:'The sun is bright.',tr:'Güneş parlak.'}],exercises:[{q:'I saw ___ elephant at the zoo.',a:'an'},{q:'She is ___ teacher.',a:'a'},{q:'Close ___ door, please.',a:'the'}]},
+    {
+      title:'Present Simple',sub:'Geniş Zaman',
+      explanation:'Present Simple, rutinler, alışkanlıklar ve genel gerçekler için kullanılır. "He/she/it" ile fiil sonuna "-s" eklenir.',
+      structure:'(+) Subject + V1 (he/she/it → V1+s)\n(-) Subject + do/does + not + V1\n(?) Do/Does + Subject + V1?',
+      examples:[
+        {eng:'I work every day.',tr:'Her gün çalışırım.'},
+        {eng:'She drinks coffee in the morning.',tr:'Sabahları kahve içer.'},
+        {eng:'They do not play football.',tr:'Futbol oynamazlar.'},
+        {eng:'Does he speak English?',tr:'İngilizce konuşur mu?'}
+      ],
+      exercises:[
+        {q:'He ___ (go) to school every day.',a:'goes'},
+        {q:'They ___ (not/watch) TV at night.',a:"don't watch"},
+        {q:'___ she ___ (speak) English? (Does/speak)',a:'does speak'},
+        {q:'Water ___ (boil) at 100 degrees.',a:'boils'},
+        {q:'We ___ (not/live) in Istanbul.',a:"don't live"}
+      ]
+    },
+    {
+      title:'To Be (am / is / are)',sub:'"To be" Fiili',
+      explanation:'"To be" İngilizcenin en temel fiilidir. Kimlik, meslek, köken ve vasıfları ifade etmek için kullanılır.',
+      structure:'I am / You are / He-She-It is / We-You-They are\nOlumsuz: am not / isn\'t / aren\'t\nSoru: Am I? / Is he? / Are they?',
+      examples:[
+        {eng:'I am a student.',tr:'Ben bir öğrenciyim.'},
+        {eng:'She is from Turkey.',tr:'O Türkiye\'den.'},
+        {eng:'They are happy.',tr:'Onlar mutlu.'},
+        {eng:'Is he a doctor? Yes, he is.',tr:'O bir doktor mu? Evet.'}
+      ],
+      exercises:[
+        {q:'He ___ a doctor.',a:'is'},
+        {q:'We ___ happy today.',a:'are'},
+        {q:'I ___ not tired.',a:'am'},
+        {q:'___ they from Ankara?',a:'Are'},
+        {q:'She ___ not a teacher.',a:'is'}
+      ]
+    },
+    {
+      title:'Articles (a / an / the)',sub:'Tanımlıklar',
+      explanation:'"a" ve "an" belirsiz tanımlıklardır. "a" sessiz harften, "an" sesli harften önce gelir. "the" belirli tanımlıktır, bilinen şeyler için kullanılır.',
+      structure:'a + sessiz harf başlangıcı (a cat, a book)\nan + sesli harf başlangıcı (an apple, an hour)\nthe + bilinen/özgün isim (the sun, the door)',
+      examples:[
+        {eng:'I have a cat.',tr:'Bir kedim var.'},
+        {eng:'She is an engineer.',tr:'O bir mühendis.'},
+        {eng:'The sun is bright.',tr:'Güneş parlak.'},
+        {eng:'I saw an elephant.',tr:'Bir fil gördüm.'}
+      ],
+      exercises:[
+        {q:'I saw ___ elephant at the zoo.',a:'an'},
+        {q:'She is ___ teacher.',a:'a'},
+        {q:'Close ___ door, please.',a:'the'},
+        {q:'He has ___ umbrella.',a:'an'},
+        {q:'___ Eiffel Tower is in Paris.',a:'The'}
+      ]
+    },
+    {
+      title:'Plural Nouns',sub:'Çoğul İsimler',
+      explanation:'Çoğul isimler genellikle "-s" eklenerek yapılır. Bazı kuralsız çoğullar ezberlenmeli, bazı özel durumlar da dikkat gerektirir.',
+      structure:'+ s: book → books, car → cars\n+ es: box → boxes, bus → buses\n-y → -ies: city → cities\nDüzensiz: man→men, child→children, tooth→teeth',
+      examples:[
+        {eng:'I have three books.',tr:'Üç kitabım var.'},
+        {eng:'The children are playing.',tr:'Çocuklar oynuyor.'},
+        {eng:'Two boxes are on the table.',tr:'Masanın üzerinde iki kutu var.'},
+        {eng:'The men are working.',tr:'Erkekler çalışıyor.'}
+      ],
+      exercises:[
+        {q:'One child → two ___',a:'children'},
+        {q:'One city → three ___',a:'cities'},
+        {q:'One tooth → many ___',a:'teeth'},
+        {q:'One box → five ___',a:'boxes'},
+        {q:'One woman → several ___',a:'women'}
+      ]
+    },
+    {
+      title:'Possessive Adjectives & Pronouns',sub:'İyelik Sıfatları',
+      explanation:'İyelik sıfatları (my, your, his…) bir ismin önünde gelir. İyelik zamirleri (mine, yours, his…) ise tek başına kullanılır.',
+      structure:'my/mine, your/yours, his/his, her/hers, its/–\nour/ours, your/yours, their/theirs',
+      examples:[
+        {eng:'This is my book.',tr:'Bu benim kitabım.'},
+        {eng:'Is this yours?',tr:'Bu senin mi?'},
+        {eng:'Her bag is red.',tr:'Onun çantası kırmızı.'},
+        {eng:'The cat licked its paw.',tr:'Kedi patisini yaladı.'}
+      ],
+      exercises:[
+        {q:'This is ___ (I) pen.',a:'my'},
+        {q:'Is that book ___ (you)?',a:'yours'},
+        {q:'He lost ___ (he) keys.',a:'his'},
+        {q:'The dog wagged ___ tail.',a:'its'},
+        {q:'That car is ___ (we).',a:'ours'}
+      ]
+    },
+    {
+      title:'There is / There are',sub:'Varlık İfadeleri',
+      explanation:'"There is" tekil, "there are" çoğul isimlerle kullanılır. Bir yerde bir şeyin var olduğunu ifade eder.',
+      structure:'There is + singular noun\nThere are + plural noun\nSoru: Is there…? / Are there…?\nOlumsuz: There isn\'t / There aren\'t',
+      examples:[
+        {eng:'There is a cat on the sofa.',tr:'Kanepede bir kedi var.'},
+        {eng:'There are three students.',tr:'Üç öğrenci var.'},
+        {eng:'Is there a bank nearby?',tr:'Yakınlarda bir banka var mı?'},
+        {eng:"There aren't any chairs.",tr:'Hiç sandalye yok.'}
+      ],
+      exercises:[
+        {q:'___ a dog in the garden.',a:'There is'},
+        {q:'___ four chairs in the room.',a:'There are'},
+        {q:'___ any milk in the fridge? (negative)',a:"There isn't"},
+        {q:'___ a problem? (question)',a:'Is there'},
+        {q:'___ many people at the party.',a:'There are'}
+      ]
+    },
+    {
+      title:'Numbers & Time',sub:'Sayılar ve Saat',
+      explanation:'Temel sayılar, sıra sayıları (1st, 2nd, 3rd…) ve saat ifadeleri (o\'clock, half past, quarter to/past) öğrenilir.',
+      structure:'Saat: It is + time\no\'clock / half past / quarter past / quarter to\nTarih: on + the + ordinal number + of + month',
+      examples:[
+        {eng:"It's half past three.",tr:'Saat üç buçuk.'},
+        {eng:"It's quarter to eight.",tr:'Saat sekize çeyrek var.'},
+        {eng:'My birthday is on the 5th of May.',tr:'Doğum günüm 5 Mayıs.'},
+        {eng:"It's twenty past nine.",tr:'Saat dokuzu yirmi geçiyor.'}
+      ],
+      exercises:[
+        {q:'3:30 → It\'s ___ past three.',a:'half'},
+        {q:'7:45 → It\'s quarter ___ eight.',a:'to'},
+        {q:'12:15 → It\'s quarter ___ twelve.',a:'past'},
+        {q:'Sıra sayısı: 1 → ___',a:'first'},
+        {q:'Sıra sayısı: 3 → ___',a:'third'}
+      ]
+    },
   ]},
+
   A2:{topics:[
-    {title:'Past Simple',sub:'Geçmiş zaman',explanation:'Past Simple, geçmişte başlayıp biten eylemler için kullanılır.',structure:'Subject + V2 / did not + V1 / Did + subject + V1?',examples:[{eng:'I visited London last year.',tr:'Geçen yıl Londra\'yı ziyaret ettim.'},{eng:'She did not call me.',tr:'Beni aramadı.'},{eng:'Did you see the film?',tr:'Filmi gördün mü?'}],exercises:[{q:'She ___ (visit) Paris in 2022.',a:'visited'},{q:'They ___ (not/come) to the party.',a:"didn't come"},{q:'___ he ___ (finish) his homework? (Did)',a:'Did / finish'}]},
-    {title:'Present Continuous',sub:'Şimdiki zaman',explanation:'Present Continuous, şu an devam eden eylemler ve yakın gelecek planları için kullanılır.',structure:'Subject + am/is/are + V-ing',examples:[{eng:'I am studying now.',tr:'Şu an çalışıyorum.'},{eng:'She is cooking dinner.',tr:'Akşam yemeği pişiriyor.'},{eng:"They aren't sleeping.",tr:'Uyumuyorlar.'}],exercises:[{q:'She ___ (read) a book right now.',a:'is reading'},{q:'We ___ (not/play) football now.',a:"aren't playing"},{q:'___ they ___ (watch) TV? (Are)',a:'Are / watching'}]},
+    {
+      title:'Past Simple',sub:'Geçmiş Zaman',
+      explanation:'Past Simple, geçmişte başlayıp biten eylemler için kullanılır. Düzenli fiillere "-ed" eklenir; düzensiz fiillerin ikinci halleri ezberlenmelidir.',
+      structure:'(+) Subject + V2\n(-) Subject + did not (didn\'t) + V1\n(?) Did + Subject + V1?',
+      examples:[
+        {eng:'I visited London last year.',tr:'Geçen yıl Londra\'yı ziyaret ettim.'},
+        {eng:'She did not call me.',tr:'Beni aramadı.'},
+        {eng:'Did you see the film?',tr:'Filmi gördün mü?'},
+        {eng:'They went to the park yesterday.',tr:'Dün parka gittiler.'}
+      ],
+      exercises:[
+        {q:'She ___ (visit) Paris in 2022.',a:'visited'},
+        {q:'They ___ (not/come) to the party.',a:"didn't come"},
+        {q:'___ he ___ (finish) his homework? (Did)',a:'Did / finish'},
+        {q:'We ___ (go) to the cinema last night.',a:'went'},
+        {q:'I ___ (not/see) that movie.',a:"didn't see"}
+      ]
+    },
+    {
+      title:'Present Continuous',sub:'Şimdiki Zaman (Süregelen)',
+      explanation:'Present Continuous, şu an devam eden eylemler, geçici durumlar ve yakın gelecek planları için kullanılır.',
+      structure:'(+) Subject + am/is/are + V-ing\n(-) Subject + am/is/are + not + V-ing\n(?) Am/Is/Are + Subject + V-ing?',
+      examples:[
+        {eng:'I am studying now.',tr:'Şu an çalışıyorum.'},
+        {eng:'She is cooking dinner.',tr:'Akşam yemeği pişiriyor.'},
+        {eng:"They aren't sleeping.",tr:'Uyumuyorlar.'},
+        {eng:"Are you coming tonight?",tr:'Bu gece geliyor musun?'}
+      ],
+      exercises:[
+        {q:'She ___ (read) a book right now.',a:'is reading'},
+        {q:'We ___ (not/play) football now.',a:"aren't playing"},
+        {q:'___ they ___ (watch) TV? (Are)',a:'Are / watching'},
+        {q:'I ___ (not/listen) to music.',a:"am not listening"},
+        {q:'He ___ (run) in the park.',a:'is running'}
+      ]
+    },
+    {
+      title:'Future: will & going to',sub:'Gelecek Zaman',
+      explanation:'"Will" anlık kararlar ve tahminler için; "going to" planlanmış kararlar ve açık kanıta dayalı tahminler için kullanılır.',
+      structure:'will: Subject + will + V1\ngoing to: Subject + am/is/are + going to + V1',
+      examples:[
+        {eng:"I'll help you with that.",tr:'Sana bununla yardım edeceğim.'},
+        {eng:"We're going to visit Rome next summer.",tr:'Gelecek yaz Roma\'yı ziyaret edeceğiz.'},
+        {eng:'Look at those clouds! It\'s going to rain.',tr:'Şu bulutlara bak! Yağmur yağacak.'},
+        {eng:"I think she'll win the competition.",tr:'Yarışmayı kazanacağını düşünüyorum.'}
+      ],
+      exercises:[
+        {q:'I think it ___ (rain) tomorrow. (will)',a:'will rain'},
+        {q:'We ___ (visit) our grandparents this weekend. (going to)',a:'are going to visit'},
+        {q:'"The phone is ringing." → "I ___ get it." (will)',a:"I'll get"},
+        {q:'She ___ (not/come) to the party. (will)',a:"won't come"},
+        {q:'___ you ___ (travel) abroad? (going to)',a:'Are you going to travel'}
+      ]
+    },
+    {
+      title:'Comparatives & Superlatives',sub:'Karşılaştırma Yapıları',
+      explanation:'Karşılaştırma sıfatları iki şeyi karşılaştırır. Üstünlük sıfatları bir şeyi gruptaki en üst seviyeyle niteler.',
+      structure:'Karşılaştırma: adj + -er + than / more + adj + than\nÜstünlük: the + adj + -est / the most + adj\nDüzensiz: good→better→best / bad→worse→worst',
+      examples:[
+        {eng:'She is taller than her brother.',tr:'Kardeşinden daha uzun.'},
+        {eng:'This book is more interesting than that one.',tr:'Bu kitap şunundan daha ilginç.'},
+        {eng:'He is the smartest student in the class.',tr:'Sınıfın en zeki öğrencisi.'},
+        {eng:'Today is worse than yesterday.',tr:'Bugün dünden daha kötü.'}
+      ],
+      exercises:[
+        {q:'She is ___ (tall) than her sister.',a:'taller'},
+        {q:'This is ___ (expensive) bag in the shop.',a:'the most expensive'},
+        {q:'He runs ___ (fast) than me.',a:'faster'},
+        {q:'My English is ___ (good) than last year.',a:'better'},
+        {q:'That was ___ (bad) film I have ever seen.',a:'the worst'}
+      ]
+    },
+    {
+      title:'Prepositions of Time & Place',sub:'Zaman ve Yer Edatları',
+      explanation:'"In, on, at" zaman ve yer için kullanılan temel edatlardır. Her birinin farklı kullanım kuralları vardır.',
+      structure:'at: saat, belirli noktalar (at 5pm, at school)\non: gün, tarih (on Monday, on 3rd May)\nin: ay, yıl, mevsim, ülke (in July, in Turkey)',
+      examples:[
+        {eng:"The meeting is at 3 o'clock.",tr:'Toplantı saat 3\'te.'},
+        {eng:'She was born on a Monday.',tr:'Pazartesi günü doğdu.'},
+        {eng:'We go on holiday in August.',tr:'Ağustosta tatile gideriz.'},
+        {eng:'He lives in a small village.',tr:'Küçük bir köyde yaşıyor.'}
+      ],
+      exercises:[
+        {q:'The party is ___ Friday.',a:'on'},
+        {q:'She wakes up ___ 7 am.',a:'at'},
+        {q:'We met ___ 2019.',a:'in'},
+        {q:'He lives ___ the city centre.',a:'in'},
+        {q:'The bus arrives ___ noon.',a:'at'}
+      ]
+    },
+    {
+      title:'Can / Can\'t (Ability & Permission)',sub:'Yetenek ve İzin',
+      explanation:'"Can" yetenek (bir şeyi yapabilmek) ve izin istemek için kullanılır. Olumsuz hali "cannot" ya da kısa biçimiyle "can\'t"tir.',
+      structure:'(+) Subject + can + V1\n(-) Subject + can\'t + V1\n(?) Can + Subject + V1?',
+      examples:[
+        {eng:'She can speak three languages.',tr:'Üç dil konuşabiliyor.'},
+        {eng:"I can't swim.",tr:'Yüzme bilmiyorum.'},
+        {eng:'Can I open the window?',tr:'Pencereyi açabilir miyim?'},
+        {eng:'He can play the guitar really well.',tr:'Gitarı çok iyi çalabiliyor.'}
+      ],
+      exercises:[
+        {q:'She ___ (can) swim very fast.',a:'can'},
+        {q:'I ___ (can/not) drive yet.',a:"can't"},
+        {q:'___ you speak French?',a:'Can'},
+        {q:'He ___ (can) not come to the party.',a:"can't"},
+        {q:'___ I sit here? (permission)',a:'Can'}
+      ]
+    },
+    {
+      title:'Past Continuous',sub:'Geçmişte Süregelen Eylem',
+      explanation:'Past Continuous, geçmişte belirli bir anda devam etmekte olan eylemleri ifade eder. Genellikle Past Simple ile birlikte kullanılır.',
+      structure:'(+) Subject + was/were + V-ing\n(-) Subject + was/were + not + V-ing\n(?) Was/Were + Subject + V-ing?',
+      examples:[
+        {eng:'I was reading when she called.',tr:'O aradığında kitap okuyordum.'},
+        {eng:'They were playing football at 5pm.',tr:'Saat 5\'te futbol oynuyorlardı.'},
+        {eng:"He wasn't sleeping, he was working.",tr:'Uyumuyordu, çalışıyordu.'},
+        {eng:'What were you doing last night?',tr:'Dün gece ne yapıyordun?'}
+      ],
+      exercises:[
+        {q:'She ___ (sleep) when I arrived.',a:'was sleeping'},
+        {q:'We ___ (not/watch) TV at 8pm.',a:"weren't watching"},
+        {q:'___ they ___ (study) all day?',a:'Were / studying'},
+        {q:'It ___ (rain) heavily this morning.',a:'was raining'},
+        {q:'I ___ (listen) to music when he knocked.',a:'was listening'}
+      ]
+    },
   ]},
+
   B1:{topics:[
-    {title:'Present Perfect',sub:'Geçmiş-şimdi bağlantısı',explanation:'Present Perfect, geçmişte olan ama şimdiye etkisi süren eylemler için kullanılır.',structure:'Subject + have/has + V3',examples:[{eng:'I have visited Paris three times.',tr:'Paris\'i üç kez ziyaret ettim.'},{eng:'She has never eaten sushi.',tr:'Hiç sushi yememiş.'},{eng:"They haven't finished yet.",tr:'Henüz bitirmediler.'}],exercises:[{q:'I ___ (never/see) this film before.',a:'have never seen'},{q:'She ___ (just/arrive) home.',a:'has just arrived'},{q:'___ you ever ___ (try) bungee jumping? (Have)',a:'Have / tried'}]},
-    {title:'Conditionals (Type 0 & 1)',sub:'Koşul cümleleri',explanation:'Type 0: genel gerçekler. Type 1: gerçekleşmesi olası durumlar.',structure:'If + present, will + V1',examples:[{eng:'If you heat water, it boils.',tr:'Suyu ısıtırsan kaynar.'},{eng:"If it rains, I'll stay home.",tr:'Yağarsa evde kalırım.'},{eng:"She'll fail if she doesn't study.",tr:'Çalışmazsa başarısız olur.'}],exercises:[{q:"If she ___ (study), she ___ (pass). (will)",a:'studies / will pass'},{q:'Water boils if you ___ (heat) it to 100°C.',a:'heat'},{q:"If I ___ (have) time, I ___ (call) you. (will)",a:'have / will call'}]},
-    {title:'Passive Voice',sub:'Edilgen yapı',explanation:'Edilgen yapıda özne eylemin alıcısıdır; eylem yapan bilinmiyor ya da önemsizdir.',structure:'Subject + am/is/are/was/were + V3',examples:[{eng:'The letter is written by John.',tr:'Mektup John tarafından yazıldı.'},{eng:'The car was stolen last night.',tr:'Araba dün gece çalındı.'},{eng:'English is spoken worldwide.',tr:'İngilizce dünya genelinde konuşulur.'}],exercises:[{q:'The book ___ (write) by Orwell.',a:'was written'},{q:'This song ___ (sing) by millions of people.',a:'is sung'},{q:'The windows ___ (clean) yesterday.',a:'were cleaned'}]},
+    {
+      title:'Present Perfect',sub:'Geçmiş-Şimdi Bağlantısı',
+      explanation:'Present Perfect, geçmişte olan ama şimdiye etkisi süren eylemler için kullanılır. "ever, never, already, yet, just, since, for" kelimeleriyle sıkça kullanılır.',
+      structure:'(+) Subject + have/has + V3\n(-) Subject + haven\'t/hasn\'t + V3\n(?) Have/Has + Subject + V3?',
+      examples:[
+        {eng:'I have visited Paris three times.',tr:'Paris\'i üç kez ziyaret ettim.'},
+        {eng:'She has never eaten sushi.',tr:'Hiç sushi yememiş.'},
+        {eng:"They haven't finished yet.",tr:'Henüz bitirmediler.'},
+        {eng:'Have you ever been to Japan?',tr:'Hiç Japonya\'ya gittiniz mi?'}
+      ],
+      exercises:[
+        {q:'I ___ (never/see) this film before.',a:'have never seen'},
+        {q:'She ___ (just/arrive) home.',a:'has just arrived'},
+        {q:'___ you ever ___ (try) bungee jumping?',a:'Have / tried'},
+        {q:'They ___ (live) here for ten years.',a:'have lived'},
+        {q:'He ___ (not/finish) his work yet.',a:"hasn't finished"}
+      ]
+    },
+    {
+      title:'Present Perfect vs. Past Simple',sub:'Karşılaştırma',
+      explanation:'Past Simple belirli bir geçmiş zaman ifadesiyle kullanılır (yesterday, in 2010). Present Perfect ise zaman belirtilmeksizin ya da "since/for" ile kullanılır.',
+      structure:'Past Simple + spesifik zaman (yesterday, last year, in 2005)\nPresent Perfect + belirsiz zaman / since / for / yet / already',
+      examples:[
+        {eng:'I saw him yesterday. (Past Simple)',tr:'Onu dün gördüm.'},
+        {eng:"I've seen that film. (Present Perfect)",tr:'O filmi gördüm. (ne zaman önemli değil)'},
+        {eng:"She hasn't called since Monday.",tr:'Pazartesiden beri aramadı.'},
+        {eng:'Did you eat breakfast this morning?',tr:'Bu sabah kahvaltı ettin mi?'}
+      ],
+      exercises:[
+        {q:'I ___ (see) him yesterday. (Past Simple)',a:'saw'},
+        {q:'She ___ (not/call) since last week. (Pres.Perf.)',a:"hasn't called"},
+        {q:'___ you ___ (finish) the report yet? (Pres.Perf.)',a:'Have / finished'},
+        {q:'When ___ you ___ (arrive)? – This morning. (Past Simple)',a:'did / arrive'},
+        {q:'He ___ (work) here for five years. (Pres.Perf.)',a:'has worked'}
+      ]
+    },
+    {
+      title:'Conditionals (Type 0 & 1)',sub:'Koşul Cümleleri',
+      explanation:'Type 0: genel gerçekler ve bilimsel gerçekler. Type 1: gerçekleşmesi mümkün durumlar ve sonuçları.',
+      structure:'Type 0: If + present simple, present simple\nType 1: If + present simple, will + V1',
+      examples:[
+        {eng:'If you heat water, it boils. (Type 0)',tr:'Suyu ısıtırsan kaynar.'},
+        {eng:"If it rains, I'll stay home. (Type 1)",tr:'Yağarsa evde kalırım.'},
+        {eng:"She'll fail if she doesn't study.",tr:'Çalışmazsa başarısız olur.'},
+        {eng:"If you press this button, the door opens.",tr:'Bu düğmeye basarsan kapı açılır.'}
+      ],
+      exercises:[
+        {q:"If she ___ (study), she ___ (pass). (will)",a:'studies / will pass'},
+        {q:'Water boils if you ___ (heat) it to 100°C.',a:'heat'},
+        {q:"If I ___ (have) time, I ___ (call) you. (will)",a:'have / will call'},
+        {q:"Plants die if you ___ (not/water) them.",a:"don't water"},
+        {q:"If he ___ (be) late, she ___ (not/wait). (won't)",a:"is / won't wait"}
+      ]
+    },
+    {
+      title:'Passive Voice (Present & Past)',sub:'Edilgen Yapı',
+      explanation:'Edilgen yapıda özne eylemin alıcısıdır; eylemi yapan bilinmiyor ya da önemsizdir. Genellikle "by" ile kim tarafından yapıldığı belirtilir.',
+      structure:'Present Passive: am/is/are + V3\nPast Passive: was/were + V3',
+      examples:[
+        {eng:'The letter is written by John.',tr:'Mektup John tarafından yazıldı.'},
+        {eng:'The car was stolen last night.',tr:'Araba dün gece çalındı.'},
+        {eng:'English is spoken worldwide.',tr:'İngilizce dünya genelinde konuşulur.'},
+        {eng:'The windows were broken by the storm.',tr:'Pencereler fırtına tarafından kırıldı.'}
+      ],
+      exercises:[
+        {q:'The book ___ (write) by Orwell.',a:'was written'},
+        {q:'This song ___ (sing) by millions.',a:'is sung'},
+        {q:'The windows ___ (clean) yesterday.',a:'were cleaned'},
+        {q:'English ___ (teach) in most schools.',a:'is taught'},
+        {q:'The cake ___ (eat) already.',a:'has been eaten'}
+      ]
+    },
+    {
+      title:'Modal Verbs',sub:'Kiplik Fiilleri',
+      explanation:'Modal fiiller yetenek, olasılık, zorunluluk ve izin ifade eder. Ana fiilden önce gelir ve fiil mastarla (bare infinitive) kullanılır.',
+      structure:'can/could – yetenek, izin\nmay/might – olasılık\nshould/ought to – tavsiye\nmust/have to – zorunluluk\nneedn\'t – gerek yok',
+      examples:[
+        {eng:'You should see a doctor.',tr:'Bir doktora görünmelisin.'},
+        {eng:'She must finish her homework.',tr:'Ödevini bitirmek zorunda.'},
+        {eng:'It might rain later.',tr:'Sonradan yağmur yağabilir.'},
+        {eng:"You don't have to come.",tr:'Gelmen gerekmiyor.'}
+      ],
+      exercises:[
+        {q:"You ___ (tavsiye) exercise more. (should)",a:'should'},
+        {q:'She ___ (zorunluluk) be here by 9. (must)',a:'must'},
+        {q:'It ___ (olasılık) snow tomorrow. (might)',a:'might'},
+        {q:"You ___ (gerek yok) pay. It's free. (needn't)",a:"needn't"},
+        {q:'___ I open the window? (izin/may)',a:'May'}
+      ]
+    },
+    {
+      title:'Gerunds & Infinitives',sub:'–ing ve To-Mastar',
+      explanation:'Bazı fiillerden sonra gerund (-ing), bazılarından sonra infinitive (to + V1) kullanılır. Bazı fiiller her iki yapıyla da kullanılabilir.',
+      structure:'Gerund (-ing): enjoy, avoid, finish, suggest, mind\nInfinitive (to+V1): want, decide, hope, plan, promise\nHer ikisi: like, love, hate, begin, start',
+      examples:[
+        {eng:'I enjoy reading books.',tr:'Kitap okumaktan zevk alırım.'},
+        {eng:'She decided to leave early.',tr:'Erken ayrılmaya karar verdi.'},
+        {eng:'He avoids eating junk food.',tr:'Abur cubur yemekten kaçınıyor.'},
+        {eng:'They hope to travel abroad.',tr:'Yurt dışına seyahat etmeyi umuyorlar.'}
+      ],
+      exercises:[
+        {q:'I enjoy ___ (swim) in the sea.',a:'swimming'},
+        {q:'She decided ___ (leave) early.',a:'to leave'},
+        {q:'He avoids ___ (eat) sugar.',a:'eating'},
+        {q:'They hope ___ (visit) Japan.',a:'to visit'},
+        {q:'We finished ___ (clean) the house.',a:'cleaning'}
+      ]
+    },
+    {
+      title:'Used to',sub:'Geçmişteki Alışkanlıklar',
+      explanation:'"Used to" geçmişte var olan ama artık olmayan alışkanlık ve durumları ifade eder.',
+      structure:'(+) Subject + used to + V1\n(-) Subject + didn\'t use to + V1\n(?) Did + Subject + use to + V1?',
+      examples:[
+        {eng:'I used to drink coffee every morning.',tr:'Her sabah kahve içerdim (artık içmiyorum).'},
+        {eng:'She used to live in Ankara.',tr:'Ankara\'da yaşardı.'},
+        {eng:"He didn't use to like vegetables.",tr:'Sebzeleri sevmezdi.'},
+        {eng:'Did you use to play any sports?',tr:'Herhangi bir spor yapar mıydın?'}
+      ],
+      exercises:[
+        {q:'I ___ (be) shy when I was a child.',a:'used to be'},
+        {q:'She ___ (not/like) fish when she was young.',a:"didn't use to like"},
+        {q:'___ they ___ (live) in the city?',a:'Did / use to live'},
+        {q:'He ___ (play) football every weekend.',a:'used to play'},
+        {q:'We ___ (not/have) a car.',a:"didn't use to have"}
+      ]
+    },
   ]},
+
   B2:{topics:[
-    {title:'Conditionals (Type 2 & 3)',sub:'Varsayım & pişmanlık',explanation:'Type 2: gerçek dışı şimdi/gelecek. Type 3: geçmişte farklı olsaydı.',structure:'Type2: If+past, would+V1 | Type3: If+had+V3, would+have+V3',examples:[{eng:"If I were rich, I'd travel the world.",tr:'Zengin olsaydım, dünyayı gezerdin.'},{eng:"If she had studied, she wouldn't have failed.",tr:'Çalışsaydı, başarısız olmazdı.'},{eng:"I would have helped if I'd known.",tr:'Bilseydim yardım ederdim.'}],exercises:[{q:"If I ___ (be) you, I ___ (apologize). (would)",a:'were / would apologize'},{q:"She ___ (pass) if she ___ (study) harder. (would have/had)",a:'would have passed / had studied'},{q:"If they ___ (leave) earlier, they ___ (miss/not) the train. (would have)",a:"had left / wouldn't have missed"}]},
-    {title:'Reported Speech',sub:'Dolaylı anlatım',explanation:'Başka birinin söylediklerini aktarırken kullanılır; zaman ve zamirler değişir.',structure:'say/tell + (that) + backshifted tense',examples:[{eng:'"I am tired." → She said she was tired.',tr:'"Yorgunum" → Yorgun olduğunu söyledi.'},{eng:'"I will call you." → He said he would call me.',tr:'Arayacağını söyledi.'},{eng:'"Did you see it?" → She asked if I had seen it.',tr:'Görüp görmediğimi sordu.'}],exercises:[{q:'"I live in London." → He said he ___ in London.',a:'lived'},{q:'"I will come." → She said she ___ come.',a:'would'},{q:'"Are you tired?" → She asked if I ___ tired.',a:'was'}]},
+    {
+      title:'Conditionals (Type 2 & 3)',sub:'Varsayım & Pişmanlık',
+      explanation:'Type 2: gerçek dışı şimdi/gelecek koşullar. Type 3: geçmişte farklı olsaydı hayali durumlar.',
+      structure:'Type 2: If + past simple, would + V1\nType 3: If + had + V3, would have + V3\nMixed: If + had + V3, would + V1',
+      examples:[
+        {eng:"If I were rich, I'd travel the world.",tr:'Zengin olsaydım, dünyayı gezerdim.'},
+        {eng:"If she had studied, she wouldn't have failed.",tr:'Çalışsaydı, başarısız olmazdı.'},
+        {eng:"I would have helped if I'd known.",tr:'Bilseydim yardım ederdim.'},
+        {eng:"If he hadn't missed the bus, he'd be here now.",tr:'Otobüsü kaçırmasaydı şimdi burada olurdu.'}
+      ],
+      exercises:[
+        {q:"If I ___ (be) you, I ___ (apologize). (would)",a:'were / would apologize'},
+        {q:"She ___ (pass) if she ___ (study) harder. (would have/had)",a:'would have passed / had studied'},
+        {q:"If they ___ (leave) earlier, they ___ (miss/not) the train.",a:"had left / wouldn't have missed"},
+        {q:"If I ___ (know) her address, I ___ (write) to her. (would)",a:'knew / would write'},
+        {q:"He ___ (not/be) sick if he ___ (eat) well. (Type 2)",a:"wouldn't be / ate"}
+      ]
+    },
+    {
+      title:'Reported Speech',sub:'Dolaylı Anlatım',
+      explanation:'Başka birinin söylediklerini aktarırken zamirler ve zaman dilimleri değişir (backshift). "Say" ve "tell" arasındaki farka dikkat edilmelidir.',
+      structure:'say → said (that)\ntell + person → told + person (that)\nPresent → Past / will → would / can → could\nZamirler: I→he/she, you→I/they, here→there',
+      examples:[
+        {eng:'"I am tired." → She said she was tired.',tr:'"Yorgunum" → Yorgun olduğunu söyledi.'},
+        {eng:'"I will call you." → He said he would call me.',tr:'Beni arayacağını söyledi.'},
+        {eng:'"Did you see it?" → She asked if I had seen it.',tr:'Görüp görmediğimi sordu.'},
+        {eng:'"Don\'t touch it!" → He told me not to touch it.',tr:'Dokunmamamı söyledi.'}
+      ],
+      exercises:[
+        {q:'"I live in London." → He said he ___ in London.',a:'lived'},
+        {q:'"I will come." → She said she ___ come.',a:'would'},
+        {q:'"Are you tired?" → She asked if I ___ tired.',a:'was'},
+        {q:'"I can swim." → He said he ___ swim.',a:'could'},
+        {q:'"Don\'t shout!" → She told him ___ shout.',a:'not to'}
+      ]
+    },
+    {
+      title:'Relative Clauses',sub:'İlgi Cümleleri',
+      explanation:'Defining (tanımlayıcı) relative clauses kişi/nesneyi tanımlar ve virgülsüz kullanılır. Non-defining (açıklayıcı) relative clauses ek bilgi verir ve virgülle ayrılır.',
+      structure:'who – kişiler için\nwhich / that – nesneler için\nwhose – iyelik için\nwhere – yer için\nwhen – zaman için',
+      examples:[
+        {eng:'The man who called is my uncle.',tr:'Arayan adam amcam.'},
+        {eng:'The book which I bought is very good.',tr:'Aldığım kitap çok iyi.'},
+        {eng:'She lives in a house where there is no garden.',tr:'Bahçesi olmayan bir evde yaşıyor.'},
+        {eng:'My sister, who is a doctor, lives in London.',tr:'Doktor olan kız kardeşim Londra\'da yaşıyor.'}
+      ],
+      exercises:[
+        {q:'The woman ___ works here is my friend.',a:'who'},
+        {q:'The car ___ he bought is expensive.',a:'which / that'},
+        {q:'This is the city ___ I was born.',a:'where'},
+        {q:'The student ___ grades are best will get an award.',a:'whose'},
+        {q:'Do you remember the day ___ we met?',a:'when'}
+      ]
+    },
+    {
+      title:'Advanced Passive',sub:'Gelişmiş Edilgen Yapılar',
+      explanation:'Farklı zaman dilimlerinde edilgen yapı, çift nesne, impersonal it yapıları ve modal ile edilgen yapı kullanımı.',
+      structure:'Present Perfect Passive: have/has been + V3\nFuture Passive: will be + V3\nModal Passive: modal + be + V3\nImpersonal: It is said that… / He is believed to…',
+      examples:[
+        {eng:'The report has been submitted.',tr:'Rapor teslim edildi.'},
+        {eng:'The building will be demolished.',tr:'Bina yıkılacak.'},
+        {eng:'The problem should be solved immediately.',tr:'Sorun hemen çözülmeli.'},
+        {eng:'It is believed that he escaped.',tr:'Kaçtığına inanılıyor.'}
+      ],
+      exercises:[
+        {q:'The letter ___ (write) by tomorrow. (future passive)',a:'will be written'},
+        {q:'The results ___ (announce) yet. (pres.perf.passive)',a:'have been announced'},
+        {q:'This rule ___ (must/follow) by everyone.',a:'must be followed'},
+        {q:'It ___ (say) that she is very talented.',a:'is said'},
+        {q:'The suspect ___ (believe) to be dangerous.',a:'is believed'}
+      ]
+    },
+    {
+      title:'Wish & If Only',sub:'Dilek ve Pişmanlık',
+      explanation:'"Wish" ve "if only" gerçek dışı dilekler ve pişmanlıklar için kullanılır. Zaman dilimine göre farklı yapılar alır.',
+      structure:'Şimdiki pişmanlık: wish + past simple\nGeçmiş pişmanlık: wish + had + V3\nGelecek dilek: wish + would + V1',
+      examples:[
+        {eng:'I wish I spoke better English.',tr:'Keşke daha iyi İngilizce konuşsaydım.'},
+        {eng:'She wishes she had studied harder.',tr:'Keşke daha çok çalışmış olsaydı.'},
+        {eng:"I wish it wouldn't rain so much.",tr:'Keşke bu kadar çok yağmur yağmasaydı.'},
+        {eng:"If only I'd listened to my parents.",tr:'Keşke ailemi dinleseydim.'}
+      ],
+      exercises:[
+        {q:"I wish I ___ (know) the answer. (present wish)",a:'knew'},
+        {q:"She wishes she ___ (study) harder. (past wish)",a:'had studied'},
+        {q:"If only he ___ (not/say) that! (past)",a:"hadn't said"},
+        {q:"I wish it ___ (stop) raining. (future wish)",a:'would stop'},
+        {q:"If only I ___ (be) taller! (present)",a:'were'}
+      ]
+    },
+    {
+      title:'Inversion & Emphasis',sub:'Vurgu Yapıları',
+      explanation:'Negatif veya kısıtlayıcı zarflar cümlenin başına alındığında yardımcı fiil öne geçer. Bu yapı resmi ve etkileyici bir ton yaratır.',
+      structure:'Never / Rarely / Seldom / Hardly / Not only… + yardımcı + özne + fiil\nNot until / Only when / No sooner … than',
+      examples:[
+        {eng:'Never have I seen such beauty.',tr:'Böyle bir güzellik hiç görmedim.'},
+        {eng:'Rarely does she arrive late.',tr:'Nadiren geç gelir.'},
+        {eng:'Not only did he lie, but he also stole.',tr:'Hem yalan söyledi hem de çaldı.'},
+        {eng:'No sooner had I arrived than it started raining.',tr:'Yeni varmıştım ki yağmur başladı.'}
+      ],
+      exercises:[
+        {q:'Never ___ I seen such a mess! (have)',a:'have'},
+        {q:'Rarely ___ she complain. (does)',a:'does'},
+        {q:'Not only ___ he rude, but also arrogant. (was)',a:'was'},
+        {q:'Hardly ___ I sat down when the phone rang. (had)',a:'had'},
+        {q:'No sooner ___ she left than the guests arrived. (had)',a:'had'}
+      ]
+    },
+    {
+      title:'Cleft Sentences',sub:'Yarıklı Cümleler (Vurgu)',
+      explanation:'Cleft cümleler belirli bir öğeyi vurgulamak için kullanılır. "It is/was…that/who" ve "What…is/was" yapılarıyla oluşturulur.',
+      structure:'It-cleft: It is/was + vurgulanan öğe + that/who…\nWhat-cleft: What + clause + is/was + vurgulanan öğe',
+      examples:[
+        {eng:'It was John who broke the window.',tr:'Pencereyi kıran John\'du.'},
+        {eng:'It is patience that you need.',tr:'İhtiyacın olan şey sabır.'},
+        {eng:'What I need is a good rest.',tr:'İhtiyacım olan şey iyi bir dinlenme.'},
+        {eng:'What surprised me was her reaction.',tr:'Beni şaşırtan şey onun tepkisiydi.'}
+      ],
+      exercises:[
+        {q:'___ was Paris that she visited, not Rome.',a:'It'},
+        {q:'It was ___ (he) who called the police.',a:'he'},
+        {q:'What I love ___ travelling. (is/are)',a:'is'},
+        {q:'___ surprised us was the price.',a:'What'},
+        {q:'It is ___ (she) that deserves the prize.',a:'she'}
+      ]
+    },
   ]},
 };
 
 /* ========== RENDER DOCS ========== */
 let activeDocLevel = 'ALL';
-function filterDocs(level){
+function filterDocs(level, event){
   activeDocLevel = level;
   document.querySelectorAll('.level-tab').forEach(t=>t.classList.remove('active'));
-  event.target.classList.add('active');
+  if(event) event.target.classList.add('active');
   renderDocs();
 }
 function renderDocs(){
@@ -452,10 +989,10 @@ renderDocs();
 
 /* ========== RENDER SKILLS ========== */
 let activeSkill = 'reading';
-function switchSkill(key){
+function switchSkill(key, event){
   activeSkill = key;
   document.querySelectorAll('.skill-tab').forEach(t=>t.classList.remove('active'));
-  event.target.classList.add('active');
+  if(event) event.target.classList.add('active');
   renderSkills();
 }
 function renderSkills(){
@@ -510,6 +1047,7 @@ function renderGrammarMain(){
   const main = document.getElementById('grammarMain');
   if(activeGrammarTopic !== null){
     const t = grammar[activeGrammarLevel].topics[activeGrammarTopic];
+    const structureFormatted = t.structure.replace(/\n/g,'<br>');
     main.innerHTML = `
       <div class="grammar-main">
         <div class="grammar-detail active">
@@ -522,7 +1060,7 @@ function renderGrammarMain(){
             <p>${t.explanation}</p>
             <div class="example-box" style="margin-top:12px;background:rgba(15,30,60,0.06);">
               <span style="font-size:.82rem;font-weight:700;color:var(--muted);">YAPI:</span>
-              <div style="font-weight:700;color:var(--navy);margin-top:4px;">${t.structure}</div>
+              <div style="font-weight:700;color:var(--navy);margin-top:6px;line-height:1.8;">${structureFormatted}</div>
             </div>
           </div>
           <div class="grammar-section">
@@ -541,8 +1079,8 @@ function renderGrammarMain(){
                 <div class="exercise-item">
                   <p>${i+1}. ${ex.q}</p>
                   <input type="text" id="ex_${activeGrammarLevel}_${activeGrammarTopic}_${i}" placeholder="Cevabınızı yazın...">
-                  <button class="check-btn" onclick="checkAnswer('ex_${activeGrammarLevel}_${activeGrammarTopic}_${i}','${ex.a}',this)">Kontrol Et</button>
-                  <div class="answer-feedback" id="fb_${activeGrammarLevel}_${activeGrammarTopic}_${i}"></div>
+                  <button class="check-btn" onclick="checkAnswer('ex_${activeGrammarLevel}_${activeGrammarTopic}_${i}','${ex.a.replace(/'/g,"\\'")}',this)">Kontrol Et</button>
+                  <div class="answer-feedback" id="fb_ex_${activeGrammarLevel}_${activeGrammarTopic}_${i}"></div>
                 </div>
               `).join('')}
             </div>
@@ -578,7 +1116,7 @@ renderGrammarMain();
 /* ========== EXERCISE CHECKER ========== */
 function checkAnswer(inputId, correct, btn){
   const input = document.getElementById(inputId);
-  const fb = document.getElementById('fb_'+inputId.slice(3));
+  const fb = document.getElementById('fb_'+inputId);
   const userAnswer = input.value.trim().toLowerCase();
   const correctLower = correct.toLowerCase();
   if(userAnswer === correctLower){
@@ -613,11 +1151,11 @@ function closeMenu(){
 
 /* NAV ACTIVE HIGHLIGHT */
 const sections = document.querySelectorAll('section');
-const navLinks = document.querySelectorAll('.nav-links a');
+const navLinksAll = document.querySelectorAll('.nav-links a');
 window.addEventListener('scroll',()=>{
   let cur='';
   sections.forEach(s=>{if(window.scrollY>=s.offsetTop-100)cur=s.id;});
-  navLinks.forEach(a=>{a.classList.toggle('active',a.getAttribute('href')==='#'+cur);});
+  navLinksAll.forEach(a=>{a.classList.toggle('active',a.getAttribute('href')==='#'+cur);});
 });
 </script>
 </body>
