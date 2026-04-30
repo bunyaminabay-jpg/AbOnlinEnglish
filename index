@@ -311,10 +311,6 @@ footer strong{color:var(--accent);}
       <a href="#about" class="btn-secondary">Hakkımızda</a>
     </div>
     <div class="hero-stats">
-      <div class="stat"><div class="stat-num">4</div><div class="stat-label">CEFR Levels</div></div>
-      <div class="stat"><div class="stat-num">40+</div><div class="stat-label">Doküman</div></div>
-      <div class="stat"><div class="stat-num">4</div><div class="stat-label">Beceri Alanı</div></div>
-      <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Ücretsiz</div></div>
     </div>
   </div>
 </section>
