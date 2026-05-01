@@ -303,7 +303,7 @@ footer strong{color:var(--accent);}
 <!-- HERO -->
 <section class="hero" id="home">
   <div style="position:relative;z-index:1;width:100%;">
-    <div class="hero-badge">🇬🇧 Online English Platform</div>
+    <div class="hero-badge">Online English Platform</div>
     <h1>İngilizce Öğrenmenin<br>En <em>Akıllı</em> Yolu</h1>
     <p>Seviyenize uygun dokümanlar, gramer dersleri ve beceri geliştirme materyalleri ile İngilizce yolculuğunuzu hızlandırın.</p>
     <div class="hero-btns">
@@ -322,11 +322,11 @@ footer strong{color:var(--accent);}
       <div>
         <div class="section-tag">Hakkımızda</div>
         <h2 class="section-title">Neden AbOnlinEnglish?</h2>
-        <p class="section-sub">A1'den B2'ye kadar yapılandırılmış Cambridge CEFR materyallerimiz, öğrencilerin kendi hızında ilerlemesini sağlar.</p>
+        <p class="section-sub">A1'den B2'ye kadar yapılandırılmış materyallerimiz, öğrencilerin kendi hızında ilerlemesini sağlar.</p>
         <div class="about-features">
           <div class="feature-card">
             <div class="feature-icon"><i class="fas fa-layer-group"></i></div>
-            <div><h4>Cambridge CEFR İçerik</h4><p>A1, A2, B1, B2 seviyeleri için Cambridge müfredatına uygun hazırlanmış egzersizler.</p></div>
+            <div><h4>CEFR İçerik</h4><p>A1, A2, B1, B2 seviyeleri için CEFR müfredatına uygun hazırlanmış egzersizler.</p></div>
           </div>
           <div class="feature-card">
             <div class="feature-icon"><i class="fas fa-file-pdf"></i></div>
