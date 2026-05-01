@@ -471,7 +471,7 @@ footer strong{color:var(--accent);}
         <div class="price-item">
           <div class="duration">Tekli Ders</div>
           <div class="price" style="font-size:1.5rem;">Fiyat İçin Yazın</div>
-          <div class="price-sub">60 dakika</div>
+          <div class="price-sub">50 dakika</div>
         </div>
         <div class="price-item">
           <div class="duration">Aylık Paket</div>
@@ -487,7 +487,7 @@ footer strong{color:var(--accent);}
       <p style="color:rgba(255,255,255,0.55);font-size:.88rem;margin-bottom:20px;">Dersler Google Meet veya Zoom üzerinden yapılır. Ders materyalleri öğrenciye önceden iletilir.</p>
       <div class="lesson-cta">
         <a href="https://wa.me/90XXXXXXXXXX" class="btn-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp ile Yaz</a>
-        <a href="mailto:ingilizogrensene@gmail.com" class="btn-email-lesson"><i class="fas fa-envelope"></i> E-posta Gönder</a>
+        <a href="mailto:ingilizceogrensene@gmail.com" class="btn-email-lesson"><i class="fas fa-envelope"></i> E-posta Gönder</a>
         <a href="https://www.instagram.com/abonlinenglish" class="btn-secondary" target="_blank" style="display:inline-flex;align-items:center;gap:8px;"><i class="fab fa-instagram"></i> Instagram'dan Yaz</a>
       </div>
     </div>
