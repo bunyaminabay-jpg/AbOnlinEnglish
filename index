@@ -341,7 +341,7 @@ footer strong{color:var(--accent);}
       <div class="about-visual">
         <div class="big-icon">📚</div>
         <h3>A1 → B2 Yolculuğu</h3>
-        <p>Cambridge CEFR çerçevesine uygun yapılandırılmış müfredatımız ile her adımda yanınızdayız.</p>
+        <p>CEFR çerçevesine uygun yapılandırılmış müfredatımız ile her adımda yanınızdayız.</p>
         <div style="margin-top:24px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
           <span style="background:rgba(232,160,32,0.25);color:var(--accent2);padding:6px 16px;border-radius:6px;font-weight:700;font-size:.9rem;">A1</span>
           <span style="color:rgba(255,255,255,0.3);padding:6px 0;">→</span>
@@ -392,9 +392,9 @@ footer strong{color:var(--accent);}
 <!-- GRAMMAR -->
 <section id="grammar">
   <div class="section-inner">
-    <div class="section-tag">Cambridge CEFR Dilbilgisi</div>
+    <div class="section-tag">CEFR Dilbilgisi</div>
     <h2 class="section-title">Grammar – Dilbilgisi</h2>
-    <p class="section-sub">Cambridge CEFR çerçevesine göre A1'den B2'ye tüm gramer konuları — tablolu yapı, örnekler ve çoklu alıştırma türleri.</p>
+    <p class="section-sub">CEFR çerçevesine göre A1'den B2'ye tüm gramer konuları — tablolu yapı, örnekler ve çoklu alıştırma türleri.</p>
     <div class="grammar-layout">
       <div class="grammar-sidebar" id="grammarSidebar"></div>
       <div id="grammarMain"></div>
@@ -413,7 +413,7 @@ footer strong{color:var(--accent);}
       <div class="teacher-avatar">👨‍🏫</div>
       <div class="teacher-info">
         <h4>AbOnlinEnglish Eğitmeni</h4>
-        <p>Cambridge CEFR sertifikalı eğitim yaklaşımı · A1'den B2'ye tüm seviyelerde birebir ders · Konuşma, yazma, gramer ve sınav odaklı çalışma programları.</p>
+        <p>CEFR eğitim yaklaşımı · A1'den B2'ye tüm seviyelerde birebir ders · Konuşma, yazma, gramer ve sınav odaklı çalışma programları.</p>
       </div>
     </div>
 
@@ -444,7 +444,7 @@ footer strong{color:var(--accent);}
         <p>Paragraf, e-posta ve deneme yazımı ile gramer yapılarını kalıcı öğrenin.</p>
         <ul>
           <li>Yazı geri bildirimi</li>
-          <li>Cambridge gramer müfredatı</li>
+          <li>Gramer müfredatı</li>
           <li>Hata analizi ve düzeltme</li>
         </ul>
       </div>
@@ -1683,7 +1683,7 @@ function renderGrammarMain(){
     main.innerHTML = `
       <div class="grammar-main">
         <button class="grammar-detail-back" onclick="activeGrammarTopic=null;renderGrammarMain()"><i class="fas fa-arrow-left"></i> Konulara Dön</button>
-        <span class="level-tag">${t.cefr} – Cambridge CEFR</span>
+        <span class="level-tag">${t.cefr} –CEFR</span>
         <h2 class="grammar-detail">${t.title}</h2>
         <p style="color:var(--muted);margin-bottom:20px;font-size:.97rem;">${t.sub}</p>
 
@@ -1710,7 +1710,7 @@ function renderGrammarMain(){
     main.innerHTML = `
       <div class="grammar-main">
         <h3 style="font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--navy);margin-bottom:8px;">${grammar[activeGrammarLevel].label} Konuları</h3>
-        <p style="color:var(--muted);margin-bottom:24px;">${topics.length} konu — Cambridge CEFR müfredatına göre hazırlanmıştır.</p>
+        <p style="color:var(--muted);margin-bottom:24px;">${topics.length} konu — CEFR müfredatına göre hazırlanmıştır.</p>
         <div class="grammar-topic-list">
           ${topics.map((t,i)=>`
             <div class="grammar-topic-item" onclick="activeGrammarTopic=${i};renderGrammarMain();renderGrammarSidebar();">
