@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AbonlinEnglish — Road Map</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ===== SHARED NAV ===== */
+nav{position:fixed;top:0;left:0;right:0;z-index:2000;background:rgba(15,30,60,0.97);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,0.07);}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 28px;height:68px;}
+.logo-wrap{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.logo-svg{width:42px;height:42px;flex-shrink:0;}
+.logo-text{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:900;color:#fff;letter-spacing:-0.5px;line-height:1;}
+.logo-text span{color:#e8a020;}
+.logo-sub{font-size:.65rem;font-weight:500;color:rgba(255,255,255,0.45);letter-spacing:2px;text-transform:uppercase;margin-top:2px;}
+.nav-links{display:flex;gap:2px;list-style:none;margin:0;padding:0;}
+.nav-links a{color:rgba(255,255,255,0.80);text-decoration:none;font-size:.85rem;font-weight:500;padding:8px 13px;border-radius:8px;transition:all .2s;}
+.nav-links a:hover,.nav-links a.active{background:rgba(232,160,32,0.18);color:#f0c060;}
+.nav-cta-btn{background:#e8a020!important;color:#0f1e3c!important;font-weight:700!important;padding:9px 18px!important;border-radius:8px;}
+.nav-cta-btn:hover{background:#f0c060!important;}
+.hamburger{display:none;background:none;border:none;cursor:pointer;color:white;font-size:1.5rem;line-height:1;padding:4px;}
+footer{background:#07111f;color:rgba(255,255,255,0.45);text-align:center;padding:32px 24px;font-size:.85rem;}
+footer strong{color:#e8a020;}
+.footer-socials{display:flex;justify-content:center;gap:16px;margin:16px 0;}
+.footer-socials a{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.6);text-decoration:none;transition:all .2s;}
+.footer-socials a:hover{background:#e8a020;color:#0f1e3c;}
+@media(max-width:700px){
+  .nav-links{display:none;flex-direction:column;position:absolute;top:68px;left:0;right:0;background:rgba(15,30,60,0.99);padding:16px;gap:4px;}
+  .nav-links.open{display:flex;}
+  .hamburger{display:block;}
+}
+/* ===== END SHARED NAV ===== */
+
+:root{--dark:#1E2D4E;--mid:#2D6A9F;--accent:#E8A020;--light:#EAF3FB;--white:#fff;--gray:#6B7280;--lgray:#F3F6FA;--border:#D0DFF0;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Inter',sans-serif;background:var(--lgray);color:var(--dark);}
+
+/* NAV */
+nav{background:var(--dark);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:60px;position:sticky;top:0;z-index:100;}
+.logo{display:flex;align-items:center;gap:10px;}
+.logo-mark{width:34px;height:34px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:900;color:#fff;font-size:16px;}
+.logo-text{font-family:'Playfair Display',serif;color:#fff;font-size:18px;font-weight:700;letter-spacing:-0.3px;}
+.logo-text span{color:var(--accent);}
+nav .tagline{font-size:12px;color:rgba(255,255,255,0.5);letter-spacing:0.06em;text-transform:uppercase;}
+
+/* HERO */
+.hero{background:var(--dark);padding:4rem 2rem 3rem;text-align:center;}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.5rem);color:#fff;line-height:1.15;margin-bottom:0.75rem;}
+.hero h1 span{color:var(--accent);}
+.hero p{font-size:1rem;color:rgba(255,255,255,0.65);max-width:520px;margin:0 auto 2rem;line-height:1.7;}
+.hero-stats{display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;}
+.hstat{text-align:center;}
+.hstat-num{font-size:2rem;font-weight:700;color:var(--accent);font-family:'Playfair Display',serif;}
+.hstat-lab{font-size:11px;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:0.06em;margin-top:2px;}
+
+/* SECTION */
+.section{max-width:1100px;margin:3rem auto;padding:0 1.5rem;}
+.section-title{font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gray);margin-bottom:0.5rem;}
+.section-heading{font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--dark);margin-bottom:1.5rem;}
+
+/* OVERVIEW GRID */
+.levels-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:16px;}
+.level-card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 2px 12px rgba(30,45,78,0.07);cursor:pointer;transition:transform 0.18s,box-shadow 0.18s;text-decoration:none;display:block;color:inherit;}
+.level-card:hover{transform:translateY(-4px);box-shadow:0 8px 28px rgba(30,45,78,0.13);}
+.lc-top{padding:20px 22px 16px;display:flex;justify-content:space-between;align-items:flex-start;}
+.lc-badge{font-size:28px;font-weight:700;font-family:'Playfair Display',serif;}
+.lc-pill{font-size:11px;font-weight:600;padding:4px 10px;border-radius:20px;letter-spacing:0.04em;}
+.lc-name{font-size:16px;font-weight:600;margin-bottom:2px;}
+.lc-tr{font-size:12px;opacity:0.65;margin-bottom:12px;}
+.lc-exam{font-size:11px;opacity:0.55;font-style:italic;margin-bottom:12px;}
+.lc-stats{display:flex;gap:8px;flex-wrap:wrap;padding:12px 22px;border-top:1px solid var(--border);}
+.lcs{background:var(--lgray);border-radius:8px;padding:7px 12px;flex:1;min-width:80px;}
+.lcs-label{font-size:9px;text-transform:uppercase;letter-spacing:0.07em;color:var(--gray);margin-bottom:2px;}
+.lcs-val{font-size:14px;font-weight:600;}
+
+/* SCHEDULE TABLE */
+.sched-wrap{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 2px 12px rgba(30,45,78,0.07);}
+table{width:100%;border-collapse:collapse;}
+thead th{background:var(--dark);color:#fff;font-size:11px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:12px 16px;text-align:left;}
+tbody tr:nth-child(even){background:var(--lgray);}
+tbody td{padding:12px 16px;font-size:13px;border-bottom:1px solid var(--border);}
+tbody tr:last-child td{border-bottom:none;}
+.badge-pill{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:12px;letter-spacing:0.04em;}
+
+/* DETAIL SECTIONS */
+.level-detail{margin-bottom:3rem;}
+.level-detail-header{border-radius:16px 16px 0 0;padding:24px 28px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+.ldh-code{font-family:'Playfair Display',serif;font-size:3rem;font-weight:900;color:rgba(255,255,255,0.9);}
+.ldh-info h2{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:#fff;line-height:1.2;}
+.ldh-info p{font-size:12px;color:rgba(255,255,255,0.7);margin-top:3px;}
+.ldh-meta{margin-left:auto;display:flex;gap:10px;flex-wrap:wrap;}
+.ldh-chip{background:rgba(255,255,255,0.15);border-radius:10px;padding:8px 14px;text-align:center;}
+.ldh-chip-val{font-size:1.1rem;font-weight:700;color:#fff;}
+.ldh-chip-lab{font-size:9px;text-transform:uppercase;color:rgba(255,255,255,0.6);letter-spacing:0.07em;}
+.units-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px;padding:16px;background:#fff;border-radius:0 0 16px 16px;box-shadow:0 4px 16px rgba(30,45,78,0.08);}
+.unit-card{border:1px solid var(--border);border-radius:12px;padding:14px 16px;}
+.unit-num{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--gray);margin-bottom:4px;}
+.unit-theme{font-size:14px;font-weight:600;color:var(--dark);margin-bottom:8px;}
+.unit-row{display:flex;gap:8px;margin-bottom:4px;font-size:11px;}
+.unit-row-label{color:var(--gray);width:56px;flex-shrink:0;font-weight:500;}
+.unit-row-val{color:var(--dark);line-height:1.5;}
+
+/* NOTE */
+.note{background:var(--light);border-left:3px solid var(--mid);border-radius:0 10px 10px 0;padding:12px 18px;font-size:12px;color:var(--gray);line-height:1.7;margin-top:1.5rem;}
+
+/* FOOTER */
+footer{background:var(--dark);text-align:center;padding:2rem;color:rgba(255,255,255,0.4);font-size:12px;margin-top:3rem;}
+footer span{color:var(--accent);}
+
+/* SMOOTH SCROLL */
+html{scroll-behavior:smooth;}
+
+/* BOOKS SECTION */
+.books-section{max-width:1100px;margin:0 auto 3rem;padding:0 1.5rem;}
+.publisher-block{background:#fff;border-radius:16px;padding:24px 28px;margin-bottom:20px;box-shadow:0 2px 12px rgba(30,45,78,0.07);}
+.publisher-header{display:flex;align-items:center;gap:14px;margin-bottom:18px;border-bottom:2px solid var(--border);padding-bottom:14px;}
+.pub-logo{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:15px;color:#fff;flex-shrink:0;}
+.pub-name{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--dark);}
+.pub-origin{font-size:11px;color:var(--gray);margin-top:2px;}
+.books-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;}
+.book-card{border:1px solid var(--border);border-radius:12px;padding:14px 16px;display:flex;gap:12px;align-items:flex-start;}
+.book-level-tag{font-size:10px;font-weight:700;padding:3px 8px;border-radius:8px;letter-spacing:0.06em;white-space:nowrap;flex-shrink:0;margin-top:2px;}
+.book-info{}
+.book-title{font-size:13px;font-weight:600;color:var(--dark);margin-bottom:3px;}
+.book-desc{font-size:11px;color:var(--gray);line-height:1.5;}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="logo-wrap" href="abonlinenglish-landing.html">
+      <svg class="logo-svg" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="21" cy="21" r="20" fill="#0f1e3c" stroke="#e8a020" stroke-width="1.5"/>
+        <path d="M10 27 C10 27 10 15 21 15 C32 15 32 27 32 27" fill="none" stroke="#e8a020" stroke-width="1.8" stroke-linecap="round"/>
+        <line x1="21" y1="15" x2="21" y2="27" stroke="#e8a020" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M10 27 C12 25 16 23 21 23" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.2" stroke-linecap="round"/>
+        <path d="M32 27 C30 25 26 23 21 23" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.2" stroke-linecap="round"/>
+        <path d="M9 27.5 Q21 30 33 27.5" fill="none" stroke="#e8a020" stroke-width="1.8" stroke-linecap="round"/>
+        <text x="21" y="35.5" text-anchor="middle" font-family="Georgia,serif" font-size="5" font-weight="bold" fill="#e8a020">Ab</text>
+      </svg>
+      <div>
+        <div class="logo-text">AbOnlin<span>English</span></div>
+        <div class="logo-sub">Dil Eğitimi</div>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="abonlinenglish-landing.html" onclick="closeMenu()">Anasayfa</a></li>
+      <li><a href="index.html" onclick="closeMenu()">Kendin Öğren</a></li>
+      <li><a href="YOL_HARITASI_COMPLETE__2_.html" class="active" onclick="closeMenu()">Yol Haritası</a></li>
+      <li><a href="placement-test-50.html" onclick="closeMenu()">Seviye Testi</a></li>
+      <li><a href="games.html" onclick="closeMenu()">Oyunlar</a></li>
+      <li><a href="abonlinenglish-landing.html#pricing" class="nav-cta-btn" onclick="closeMenu()">Ücretsiz Ders</a></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+  </div>
+</nav>
+<div style="height:68px;"></div>
+
+<div class="hero">
+  <h1>Your English<br><span>Road Map</span></h1>
+  <p>A structured, six-level learning path aligned with Cambridge, Pearson, IELTS and TOEFL frameworks — designed for real progress, one step at a time.</p>
+  <div class="hero-stats">
+    <div class="hstat"><div class="hstat-num">6</div><div class="hstat-lab">Levels</div></div>
+    <div class="hstat"><div class="hstat-num">72</div><div class="hstat-lab">Units</div></div>
+    <div class="hstat"><div class="hstat-num">234</div><div class="hstat-lab">Lesson Hours</div></div>
+    <div class="hstat"><div class="hstat-num">8,000+</div><div class="hstat-lab">Target Words</div></div>
+  </div>
+</div>
+
+<!-- OVERVIEW -->
+<div class="section">
+  <p class="section-title">Where Are You Now?</p>
+  <h2 class="section-heading">Choose Your Level</h2>
+  <div class="levels-grid">
+
+    <a class="level-card" href="#level-A1">
+      <div class="lc-top">
+        <div><div class="lc-badge" style="color:#7C3AED">A1</div><div class="lc-name">Starter</div><div class="lc-tr">Başlangıç</div><div class="lc-exam">Cambridge Starters · GSE 10–22</div></div>
+        <div class="lc-pill" style="background:#EDE9FE;color:#7C3AED">Beginner</div>
+      </div>
+      <div class="lc-stats">
+        <div class="lcs"><div class="lcs-label">Hours</div><div class="lcs-val">24 h</div></div>
+        <div class="lcs"><div class="lcs-label">1h/week</div><div class="lcs-val">~6 mo</div></div>
+        <div class="lcs"><div class="lcs-label">2h/week</div><div class="lcs-val">~3 mo</div></div>
+        <div class="lcs"><div class="lcs-label">Vocabulary</div><div class="lcs-val">~500</div></div>
+      </div>
+    </a>
+
+    <a class="level-card" href="#level-A2">
+      <div class="lc-top">
+        <div><div class="lc-badge" style="color:#2563EB">A2</div><div class="lc-name">Elementary</div><div class="lc-tr">Temel</div><div class="lc-exam">KET · Movers · GSE 23–42</div></div>
+        <div class="lc-pill" style="background:#DBEAFE;color:#2563EB">Elementary</div>
+      </div>
+      <div class="lc-stats">
+        <div class="lcs"><div class="lcs-label">Hours</div><div class="lcs-val">30 h</div></div>
+        <div class="lcs"><div class="lcs-label">1h/week</div><div class="lcs-val">~7 mo</div></div>
+        <div class="lcs"><div class="lcs-label">2h/week</div><div class="lcs-val">~3.5 mo</div></div>
+        <div class="lcs"><div class="lcs-label">Vocabulary</div><div class="lcs-val">~1,000</div></div>
+      </div>
+    </a>
+
+    <a class="level-card" href="#level-B1">
+      <div class="lc-top">
+        <div><div class="lc-badge" style="color:#059669">B1</div><div class="lc-name">Pre-Intermediate</div><div class="lc-tr">Orta Öncesi</div><div class="lc-exam">PET · IELTS 4–5 · TOEFL 42–71</div></div>
+        <div class="lc-pill" style="background:#D1FAE5;color:#059669">Independent</div>
+      </div>
+      <div class="lc-stats">
+        <div class="lcs"><div class="lcs-label">Hours</div><div class="lcs-val">36 h</div></div>
+        <div class="lcs"><div class="lcs-label">1h/week</div><div class="lcs-val">~9 mo</div></div>
+        <div class="lcs"><div class="lcs-label">2h/week</div><div class="lcs-val">~4.5 mo</div></div>
+        <div class="lcs"><div class="lcs-label">Vocabulary</div><div class="lcs-val">~2,000</div></div>
+      </div>
+    </a>
+
+    <a class="level-card" href="#level-B2">
+      <div class="lc-top">
+        <div><div class="lc-badge" style="color:#0891B2">B2</div><div class="lc-name">Upper-Intermediate</div><div class="lc-tr">Orta Üstü</div><div class="lc-exam">FCE · IELTS 5.5–6.5 · TOEFL 72–94</div></div>
+        <div class="lc-pill" style="background:#CFFAFE;color:#0891B2">Competent</div>
+      </div>
+      <div class="lc-stats">
+        <div class="lcs"><div class="lcs-label">Hours</div><div class="lcs-val">42 h</div></div>
+        <div class="lcs"><div class="lcs-label">1h/week</div><div class="lcs-val">~11 mo</div></div>
+        <div class="lcs"><div class="lcs-label">2h/week</div><div class="lcs-val">~5.5 mo</div></div>
+        <div class="lcs"><div class="lcs-label">Vocabulary</div><div class="lcs-val">~3,500</div></div>
+      </div>
+    </a>
+
+    <a class="level-card" href="#level-C1">
+      <div class="lc-top">
+        <div><div class="lc-badge" style="color:#D97706">C1</div><div class="lc-name">Advanced</div><div class="lc-tr">İleri</div><div class="lc-exam">CAE · IELTS 7–8 · TOEFL 95–119</div></div>
+        <div class="lc-pill" style="background:#FEF3C7;color:#D97706">Advanced</div>
+      </div>
+      <div class="lc-stats">
+        <div class="lcs"><div class="lcs-label">Hours</div><div class="lcs-val">48 h</div></div>
+        <div class="lcs"><div class="lcs-label">1h/week</div><div class="lcs-val">~12 mo</div></div>
+        <div class="lcs"><div class="lcs-label">2h/week</div><div class="lcs-val">~6 mo</div></div>
+        <div class="lcs"><div class="lcs-label">Vocabulary</div><div class="lcs-val">~5,000</div></div>
+      </div>
+    </a>
+
+    <a class="level-card" href="#level-C2">
+      <div class="lc-top">
+        <div><div class="lc-badge" style="color:#DC2626">C2</div><div class="lc-name">Proficiency</div><div class="lc-tr">Ustalık</div><div class="lc-exam">CPE · IELTS 8.5–9 · TOEFL 118–120</div></div>
+        <div class="lc-pill" style="background:#FEE2E2;color:#DC2626">Mastery</div>
+      </div>
+      <div class="lc-stats">
+        <div class="lcs"><div class="lcs-label">Hours</div><div class="lcs-val">54 h</div></div>
+        <div class="lcs"><div class="lcs-label">1h/week</div><div class="lcs-val">~14 mo</div></div>
+        <div class="lcs"><div class="lcs-label">2h/week</div><div class="lcs-val">~7 mo</div></div>
+        <div class="lcs"><div class="lcs-label">Vocabulary</div><div class="lcs-val">8,000+</div></div>
+      </div>
+    </a>
+
+  </div>
+</div>
+
+<!-- SCHEDULE TABLE -->
+<div class="section">
+  <p class="section-title">Time Planning</p>
+  <h2 class="section-heading">How Long Will It Take?</h2>
+  <div class="sched-wrap">
+    <table>
+      <thead><tr><th>Level</th><th>Exam Reference</th><th>Lesson Hours</th><th>1 h / week</th><th>2 h / week</th><th>Recommended Resources</th></tr></thead>
+      <tbody>
+        <tr><td><span class="badge-pill" style="background:#EDE9FE;color:#7C3AED">A1</span></td><td>Starters · GSE 10–22</td><td>24 h</td><td>~6 months</td><td>~3 months</td><td>English in Mind 1, Family &amp; Friends 1</td></tr>
+        <tr><td><span class="badge-pill" style="background:#DBEAFE;color:#2563EB">A2</span></td><td>KET · Movers · GSE 23–42</td><td>30 h</td><td>~7 months</td><td>~3.5 months</td><td>English in Mind 2, PTE General A2</td></tr>
+        <tr><td><span class="badge-pill" style="background:#D1FAE5;color:#059669">B1</span></td><td>PET · IELTS 4–5</td><td>36 h</td><td>~9 months</td><td>~4.5 months</td><td>Compact PET, Cambridge IELTS B1</td></tr>
+        <tr><td><span class="badge-pill" style="background:#CFFAFE;color:#0891B2">B2</span></td><td>FCE · IELTS 5.5–6.5</td><td>42 h</td><td>~11 months</td><td>~5.5 months</td><td>Ready for FCE, IELTS Trainer B2</td></tr>
+        <tr><td><span class="badge-pill" style="background:#FEF3C7;color:#D97706">C1</span></td><td>CAE · IELTS 7–8</td><td>48 h</td><td>~12 months</td><td>~6 months</td><td>Advanced Expert CAE, TOEFL C1</td></tr>
+        <tr><td><span class="badge-pill" style="background:#FEE2E2;color:#DC2626">C2</span></td><td>CPE · IELTS 8.5–9</td><td>54 h</td><td>~14 months</td><td>~7 months</td><td>Proficiency Masterclass CPE</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note">These hours reflect classroom lesson time only. Home study, revision and exam practice add additional time. Each unit = 2 lesson hours: grammar input → vocabulary → skills practice → feedback. Duration may vary ±20% based on the learner's starting point and pace.</div>
+</div>
+
+<!-- LEVEL DETAIL SECTIONS -->
+<div class="section" id="detailed-plans">
+  <p class="section-title">Detailed Plans</p>
+  <h2 class="section-heading">12-Unit Syllabus per Level</h2>
+
+  <!-- A1 -->
+  <div class="level-detail" id="level-A1">
+    <div class="level-detail-header" style="background:linear-gradient(135deg,#7C3AED,#9F67FA);">
+      <div class="ldh-code">A1</div>
+      <div class="ldh-info"><h2>Starter · Başlangıç</h2><p>Cambridge Starters · Pearson GSE 10–22 · ~500 words</p></div>
+      <div class="ldh-meta">
+        <div class="ldh-chip"><div class="ldh-chip-val">24h</div><div class="ldh-chip-lab">Total</div></div>
+        <div class="ldh-chip"><div class="ldh-chip-val">~6 mo</div><div class="ldh-chip-lab">1h/week</div></div>
+        <div class="ldh-chip"><div class="ldh-chip-val">~3 mo</div><div class="ldh-chip-lab">2h/week</div></div>
+      </div>
+    </div>
+    <div class="units-grid">
+      <div class="unit-card"><div class="unit-num">Unit 1</div><div class="unit-theme">Hello &amp; the Alphabet</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">To be (am/is/are), pronouns</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Greetings, countries, names</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">Self-introduction dialogue</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 2</div><div class="unit-theme">Numbers &amp; Colours</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Numbers 1–100, colour adjectives</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Colours, classroom objects</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">Identify &amp; describe objects</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 3</div><div class="unit-theme">My Family</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Have/has, possessive adjectives</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Family members, ages</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">Family tree presentation</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 4</div><div class="unit-theme">My Home</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">There is/are, prepositions of place</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Rooms, furniture</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">Describe a room (writing)</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 5</div><div class="unit-theme">Daily Routine</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Simple Present (aff. &amp; neg.)</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Daily actions, clock times</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">Tell the time</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 6</div><div class="unit-theme">Food &amp; Drinks</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Countable/uncountable, a/an/some</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Food, drinks, meals</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">Order food (dialogue)</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 7</div><div class="unit-theme">My Town</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Simple Present questions, directions</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Places (park, school, market…)</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">Give directions (listening)</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 8</div><div class="unit-theme">Sports &amp; Hobbies</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Like/love/hate + -ing, can (ability)</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Sports, hobbies, weekend</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">Short survey &amp; writing</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 9</div><div class="unit-theme">Weather &amp; Seasons</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Present Continuous</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Weather, seasons, clothes</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">Read a weather forecast</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 10</div><div class="unit-theme">Animals &amp; Nature</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Plural nouns, how many</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Animals, nature, size adjectives</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">Write an animal riddle</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 11</div><div class="unit-theme">Shopping</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">How much/many, this/that/these/those</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Shopping, prices, sizes</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">Shop role-play</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 12</div><div class="unit-theme">Review &amp; Test</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">A1 full revision</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">500-word flashcard review</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">Cambridge Starters mini test</span></div></div>
+    </div>
+  </div>
+
+  <!-- A2 -->
+  <div class="level-detail" id="level-A2" style="margin-top:2rem">
+    <div class="level-detail-header" style="background:linear-gradient(135deg,#2563EB,#60A5FA);">
+      <div class="ldh-code">A2</div>
+      <div class="ldh-info"><h2>Elementary · Temel</h2><p>KET · Movers · GSE 23–42 · ~1,000 words</p></div>
+      <div class="ldh-meta">
+        <div class="ldh-chip"><div class="ldh-chip-val">30h</div><div class="ldh-chip-lab">Total</div></div>
+        <div class="ldh-chip"><div class="ldh-chip-val">~7 mo</div><div class="ldh-chip-lab">1h/week</div></div>
+        <div class="ldh-chip"><div class="ldh-chip-val">~3.5 mo</div><div class="ldh-chip-lab">2h/week</div></div>
+      </div>
+    </div>
+    <div class="units-grid">
+      <div class="unit-card"><div class="unit-num">Unit 1</div><div class="unit-theme">Past Experiences</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Simple Past (regular &amp; irregular)</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Past time expressions, holidays</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">Write a holiday memory</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 2</div><div class="unit-theme">People &amp; Appearance</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Comparatives &amp; superlatives</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Physical description, personality</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">Describe a person</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 3</div><div class="unit-theme">Jobs &amp; Work</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Want to / would like to, frequency adverbs</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Jobs, workplace, hours</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">Read a job advertisement</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 4</div><div class="unit-theme">Health &amp; Body</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Should/shouldn't, imperatives</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Body parts, illness, advice</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">Doctor role-play + short text</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 5</div><div class="unit-theme">Future Plans</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Going to, will (prediction &amp; decision)</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Future phrases, plans</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">Short conversation about plans</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 6</div><div class="unit-theme">Travel &amp; Transport</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Prepositions of movement, Past Continuous</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Transport, airport, tickets</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">Write a travel email</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 7</div><div class="unit-theme">Entertainment &amp; Media</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Object pronouns, too/enough</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Films, music, book genres</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">Write a film review</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 8</div><div class="unit-theme">Food &amp; Culture</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Quantifiers (much/many/a lot/a few)</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Food culture, recipes, measures</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">Read &amp; write a recipe</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 9</div><div class="unit-theme">Technology</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Can/can't (permission &amp; possibility)</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Gadgets, tech verbs</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">Read a short tech article</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 10</div><div class="unit-theme">School &amp; Education</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Have to / don't have to, must</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">School subjects, rules, tools</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">Discuss school rules</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 11</div><div class="unit-theme">Environment</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Pres. Continuous (future), Zero Conditional</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Environment, recycling, nature events</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">Design an eco-poster (writing)</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 12</div><div class="unit-theme">Review &amp; KET Practice</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">A2 comprehensive revision</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">1,000-word review + gap fill</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">KET Reading &amp; Writing mini test</span></div></div>
+    </div>
+  </div>
+
+  <!-- B1 -->
+  <div class="level-detail" id="level-B1" style="margin-top:2rem">
+    <div class="level-detail-header" style="background:linear-gradient(135deg,#059669,#34D399);">
+      <div class="ldh-code">B1</div>
+      <div class="ldh-info"><h2>Pre-Intermediate · Orta Öncesi</h2><p>PET · IELTS 4–5 · TOEFL 42–71 · ~2,000 words</p></div>
+      <div class="ldh-meta">
+        <div class="ldh-chip"><div class="ldh-chip-val">36h</div><div class="ldh-chip-lab">Total</div></div>
+        <div class="ldh-chip"><div class="ldh-chip-val">~9 mo</div><div class="ldh-chip-lab">1h/week</div></div>
+        <div class="ldh-chip"><div class="ldh-chip-val">~4.5 mo</div><div class="ldh-chip-lab">2h/week</div></div>
+      </div>
+    </div>
+    <div class="units-grid">
+      <div class="unit-card"><div class="unit-num">Unit 1</div><div class="unit-theme">Life Events</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Present Perfect (experience, ever/never)</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Life milestones</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">Read a biography</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 2</div><div class="unit-theme">City Life</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Present Perfect vs Simple Past</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Urban life, transport issues</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">Write a complaint letter</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 3</div><div class="unit-theme">Advice &amp; Possibility</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Modal verbs: could/might/should/ought to</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Suggestion phrases, options</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">Problem-solution discussion</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 4</div><div class="unit-theme">Media &amp; News</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Reported speech (say/tell, tense shift)</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Journalism terms, source language</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">Listen &amp; summarise a news report</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 5</div><div class="unit-theme">Conditionals</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Zero, 1st &amp; 2nd Conditional</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Condition linkers, result phrases</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">Conditional sentence debate</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 6</div><div class="unit-theme">Work &amp; Careers</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Gerunds &amp; infinitives</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">CV words, job applications</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">Cover letter + interview role-play</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 7</div><div class="unit-theme">Science &amp; Inventions</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Passive Voice (Present &amp; Past Simple)</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Scientific process words, inventions</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">IELTS Academic reading practice</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 8</div><div class="unit-theme">Environment</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Relative clauses (who/which/that/where)</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Environmental issues, solutions</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">Write an opinion paragraph</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 9</div><div class="unit-theme">Cultures &amp; Customs</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Used to / would (past habits)</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Traditions, cultural differences</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">Cultural comparison discussion</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 10</div><div class="unit-theme">Health &amp; Lifestyle</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Adverbs (manner, frequency, degree)</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Health habits, diet, stress</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">IELTS Listening Section 1</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 11</div><div class="unit-theme">Travel &amp; Tourism</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">will vs going to vs Pres. Continuous (future)</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Tourism, reservations, packages</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">Write a travel blog</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 12</div><div class="unit-theme">PET / IELTS B1 Mock</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">B1 full revision + error analysis</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Collocation list + cloze test</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">Full PET reading &amp; writing mini test</span></div></div>
+    </div>
+  </div>
+
+  <!-- B2 -->
+  <div class="level-detail" id="level-B2" style="margin-top:2rem">
+    <div class="level-detail-header" style="background:linear-gradient(135deg,#0891B2,#22D3EE);">
+      <div class="ldh-code">B2</div>
+      <div class="ldh-info"><h2>Upper-Intermediate · Orta Üstü</h2><p>FCE · IELTS 5.5–6.5 · TOEFL 72–94 · ~3,500 words</p></div>
+      <div class="ldh-meta">
+        <div class="ldh-chip"><div class="ldh-chip-val">42h</div><div class="ldh-chip-lab">Total</div></div>
+        <div class="ldh-chip"><div class="ldh-chip-val">~11 mo</div><div class="ldh-chip-lab">1h/week</div></div>
+        <div class="ldh-chip"><div class="ldh-chip-val">~5.5 mo</div><div class="ldh-chip-lab">2h/week</div></div>
+      </div>
+    </div>
+    <div class="units-grid">
+      <div class="unit-card"><div class="unit-num">Unit 1</div><div class="unit-theme">Identity &amp; Society</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Present Perfect Continuous</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Social identity, community terms</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">FCE Part 1: essay writing</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 2</div><div class="unit-theme">Global Issues</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">3rd Conditional &amp; Mixed Conditionals</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Global problems, debate language</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">FCE Speaking Part 3 discussion</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 3</div><div class="unit-theme">Language &amp; Communication</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Reporting verbs (claim, deny, insist…)</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Academic word list set 1, discourse markers</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">Summarise &amp; paraphrase an article</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 4</div><div class="unit-theme">Science &amp; Technology</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Passive (all tenses), causative have/get</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Tech innovation, research vocabulary</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">IELTS Academic Task 1 (graph/chart)</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 5</div><div class="unit-theme">Art &amp; Culture</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Wishes &amp; regrets (wish/if only)</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Arts, criticism, aesthetic adjectives</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">Write a review (film/book/exhibition)</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 6</div><div class="unit-theme">Business &amp; Economics</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Inversions (Not only…, Rarely…)</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Business collocations, financial terms</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">Formal email / report writing</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 7</div><div class="unit-theme">Health &amp; Medicine</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Participle clauses (Having done…)</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Medical language, public health issues</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">IELTS Reading (matching headings)</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 8</div><div class="unit-theme">Education &amp; Learning</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Cleft sentences (It is… that / What… is)</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Academic verbs, learning styles</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">IELTS Task 2: agree/disagree essay</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 9</div><div class="unit-theme">Environment &amp; Ethics</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Noun phrases &amp; complex nominalisations</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Environmental ethics, policy language</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">Problem-solution essay (IELTS/TOEFL)</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 10</div><div class="unit-theme">Travel &amp; Culture Clash</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Subjunctive (It is vital that… / suggest that…)</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Travel anecdotes, intercultural idioms</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">FCE Speaking Part 2 (long turn)</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 11</div><div class="unit-theme">Media &amp; Influence</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Emphasis &amp; fronting (Seldom have I…)</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Persuasion language, media bias terms</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">Analyse a persuasive text</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 12</div><div class="unit-theme">FCE / IELTS B2 Mock</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">B2 full revision + error correction</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Collocation + word formation drill</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">Full FCE Use of English + writing test</span></div></div>
+    </div>
+  </div>
+
+  <!-- C1 -->
+  <div class="level-detail" id="level-C1" style="margin-top:2rem">
+    <div class="level-detail-header" style="background:linear-gradient(135deg,#D97706,#FCD34D);">
+      <div class="ldh-code">C1</div>
+      <div class="ldh-info"><h2>Advanced · İleri</h2><p>CAE · IELTS 7–8 · TOEFL 95–119 · ~5,000 words</p></div>
+      <div class="ldh-meta">
+        <div class="ldh-chip"><div class="ldh-chip-val">48h</div><div class="ldh-chip-lab">Total</div></div>
+        <div class="ldh-chip"><div class="ldh-chip-val">~12 mo</div><div class="ldh-chip-lab">1h/week</div></div>
+        <div class="ldh-chip"><div class="ldh-chip-val">~6 mo</div><div class="ldh-chip-lab">2h/week</div></div>
+      </div>
+    </div>
+    <div class="units-grid">
+      <div class="unit-card"><div class="unit-num">Unit 1</div><div class="unit-theme">Mind &amp; Cognition</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Advanced modal verbs (must have, can't have, needn't have)</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Psychology, cognition, perception</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">CAE Part 5: critical reading</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 2</div><div class="unit-theme">Society &amp; Politics</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Advanced passive &amp; impersonal constructions</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Political systems, sociological terms</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">Balanced argument essay (CAE style)</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 3</div><div class="unit-theme">Philosophy &amp; Ethics</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Concession &amp; contrast (however, whereas, albeit)</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Philosophical terms, abstract nouns</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">Structured debate &amp; rebuttal</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 4</div><div class="unit-theme">Science &amp; Research</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Complex relative clauses (whereby, in which)</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Research methodology, hedging language</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">TOEFL Integrated Task (read + listen + write)</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 5</div><div class="unit-theme">Economy &amp; Globalisation</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Fronting &amp; topicalisation for discourse effect</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Macroeconomics, trade, globalisation</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">IELTS Task 2 (two-part question)</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 6</div><div class="unit-theme">Literature &amp; Narrative</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Narrative tenses &amp; aspect (perfect, continuous)</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Literary analysis terms, genre vocabulary</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">Write an analytical literary essay</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 7</div><div class="unit-theme">Law &amp; Justice</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Nominalisations &amp; formal register</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Legal terminology, justice system</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">CAE Part 2: formal report writing</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 8</div><div class="unit-theme">Technology &amp; the Future</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Future perfect &amp; future continuous in context</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">AI, biotech, futurism vocabulary</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">Speculative essay + CAE reading</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 9</div><div class="unit-theme">Media Literacy</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Discourse markers &amp; cohesion devices</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Critical media vocab, rhetorical terms</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">Deconstruct &amp; respond to an editorial</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 10</div><div class="unit-theme">Health &amp; Well-being</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Ellipsis, substitution &amp; reference</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Medical research language, well-being</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">TOEFL Speaking Task 4 (academic)</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 11</div><div class="unit-theme">Environment &amp; Policy</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Advanced conditionals in formal writing</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Policy language, environmental law</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">Write a proposal (CAE style)</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 12</div><div class="unit-theme">CAE / TOEFL C1 Mock</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">C1 comprehensive revision + transformation</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">AWL set 2 + phrasal verb mastery</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">Full CAE Use of English + writing paper</span></div></div>
+    </div>
+  </div>
+
+  <!-- C2 -->
+  <div class="level-detail" id="level-C2" style="margin-top:2rem">
+    <div class="level-detail-header" style="background:linear-gradient(135deg,#DC2626,#F87171);">
+      <div class="ldh-code">C2</div>
+      <div class="ldh-info"><h2>Proficiency · Ustalık</h2><p>CPE · IELTS 8.5–9 · TOEFL 118–120 · 8,000+ words</p></div>
+      <div class="ldh-meta">
+        <div class="ldh-chip"><div class="ldh-chip-val">54h</div><div class="ldh-chip-lab">Total</div></div>
+        <div class="ldh-chip"><div class="ldh-chip-val">~14 mo</div><div class="ldh-chip-lab">1h/week</div></div>
+        <div class="ldh-chip"><div class="ldh-chip-val">~7 mo</div><div class="ldh-chip-lab">2h/week</div></div>
+      </div>
+    </div>
+    <div class="units-grid">
+      <div class="unit-card"><div class="unit-num">Unit 1</div><div class="unit-theme">Language &amp; Style</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Register, tone &amp; stylistic variation</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Idiomatic vs formal register contrast</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">CPE Part 2: formal essay</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 2</div><div class="unit-theme">Critical Thinking</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Advanced inversion &amp; ellipsis</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Logical argument vocabulary, hedging</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">Evaluate and critique an academic text</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 3</div><div class="unit-theme">History &amp; Civilisation</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Archaic &amp; literary structures in context</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Historical vocabulary, timeline language</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">CPE Reading (multiple matching)</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 4</div><div class="unit-theme">Science &amp; Philosophy of Knowledge</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Complex nominalisations &amp; abstract syntax</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Epistemology, scientific method, theory</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">TOEFL Independent Writing (30 min essay)</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 5</div><div class="unit-theme">Creative Writing</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Figurative language, syntax for effect</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Literary devices, descriptive lexis</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">Write a short story or personal essay</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 6</div><div class="unit-theme">Global &amp; Political Affairs</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Concession, contrast &amp; qualification at C2</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Geopolitics, diplomacy, international law</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">Formal debate + CPE speaking task</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 7</div><div class="unit-theme">Economics &amp; Ethics</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Ellipsis &amp; substitution in academic prose</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Ethical economics, corporate responsibility</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">CPE Part 1: lexico-grammar cloze</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 8</div><div class="unit-theme">Literature &amp; Interpretation</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Stylistic grammar: foregrounding, passivisation</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Textual analysis, literary criticism</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">Analyse an unseen literary extract</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 9</div><div class="unit-theme">Technology &amp; Society</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">All advanced structures in integrated use</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Digital ethics, transhumanism, surveillance</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">IELTS Band 9 essay (critique &amp; propose)</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 10</div><div class="unit-theme">Medicine &amp; Bioethics</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Specialised register &amp; genre conventions</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Bioethics, clinical research, consent</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">Write a structured academic report</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 11</div><div class="unit-theme">Environment &amp; Future Generations</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">Precision grammar: scope, quantification</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">Intergenerational ethics, climate policy</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">CPE Writing: article &amp; review</span></div></div>
+      <div class="unit-card"><div class="unit-num">Unit 12</div><div class="unit-theme">CPE Full Mock Exam</div><div class="unit-row"><span class="unit-row-label">Grammar</span><span class="unit-row-val">C2 comprehensive revision &amp; error-free writing</span></div><div class="unit-row"><span class="unit-row-label">Vocab</span><span class="unit-row-val">8,000+ word active use, idiom mastery</span></div><div class="unit-row"><span class="unit-row-label">Skill</span><span class="unit-row-val">Full CPE Reading, Use of English &amp; Writing</span></div></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- RECOMMENDED BOOKS -->
+<div class="books-section" id="recommended-books">
+  <p class="section-title" style="padding:0 0 0.5rem;">Curated Library</p>
+  <h2 class="section-heading">Recommended Books by Level</h2>
+
+  <!-- OXFORD -->
+  <div class="publisher-block">
+    <div class="publisher-header">
+      <div class="pub-logo" style="background:#003865;">OUP</div>
+      <div><div class="pub-name">Oxford University Press</div><div class="pub-origin">Oxford, United Kingdom</div></div>
+    </div>
+    <div class="books-grid">
+      <div class="book-card">
+        <span class="book-level-tag" style="background:#EDE9FE;color:#7C3AED">A1</span>
+        <div class="book-info"><div class="book-title">Oxford International Express Starter</div><div class="book-desc">Professional context, clear grammar, widely used worldwide for true beginners.</div></div>
+      </div>
+      <div class="book-card">
+        <span class="book-level-tag" style="background:#DBEAFE;color:#2563EB">A2</span>
+        <div class="book-info"><div class="book-title">American English File 2</div><div class="book-desc">Oxford's most popular series; engaging topics, systematic grammar and skills.</div></div>
+      </div>
+      <div class="book-card">
+        <span class="book-level-tag" style="background:#D1FAE5;color:#059669">B1</span>
+        <div class="book-info"><div class="book-title">Headway Pre-Intermediate (5th Ed.)</div><div class="book-desc">Trusted globally for 30+ years; balanced four-skills approach, clear syllabus.</div></div>
+      </div>
+      <div class="book-card">
+        <span class="book-level-tag" style="background:#CFFAFE;color:#0891B2">B2</span>
+        <div class="book-info"><div class="book-title">Headway Upper-Intermediate (5th Ed.)</div><div class="book-desc">Authentic texts, academic vocabulary building, strong writing syllabus.</div></div>
+      </div>
+      <div class="book-card">
+        <span class="book-level-tag" style="background:#FEF3C7;color:#D97706">C1</span>
+        <div class="book-info"><div class="book-title">Oxford Advanced Learner's Grammar</div><div class="book-desc">Definitive reference for advanced learners; 340 units, corpus-based examples.</div></div>
+      </div>
+      <div class="book-card">
+        <span class="book-level-tag" style="background:#FEE2E2;color:#DC2626">C2</span>
+        <div class="book-info"><div class="book-title">Practical English Usage (Swan)</div><div class="book-desc">The world's foremost guide to English usage problems; essential at mastery level.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PEARSON / LONGMAN -->
+  <div class="publisher-block">
+    <div class="publisher-header">
+      <div class="pub-logo" style="background:#0077B6;">PEA</div>
+      <div><div class="pub-name">Pearson / Longman</div><div class="pub-origin">London, United Kingdom</div></div>
+    </div>
+    <div class="books-grid">
+      <div class="book-card">
+        <span class="book-level-tag" style="background:#EDE9FE;color:#7C3AED">A1</span>
+        <div class="book-info"><div class="book-title">Longman English for Starters</div><div class="book-desc">Friendly and structured, designed for learners with no prior English experience.</div></div>
+      </div>
+      <div class="book-card">
+        <span class="book-level-tag" style="background:#DBEAFE;color:#2563EB">A2</span>
+        <div class="book-info"><div class="book-title">Cutting Edge Elementary (3rd Ed.)</div><div class="book-desc">Task-based learning, real-world language, excellent for classroom use.</div></div>
+      </div>
+      <div class="book-card">
+        <span class="book-level-tag" style="background:#D1FAE5;color:#059669">B1</span>
+        <div class="book-info"><div class="book-title">Cutting Edge Pre-Intermediate (3rd Ed.)</div><div class="book-desc">Communicative tasks and vocabulary banks; strong grammar progression.</div></div>
+      </div>
+      <div class="book-card">
+        <span class="book-level-tag" style="background:#CFFAFE;color:#0891B2">B2</span>
+        <div class="book-info"><div class="book-title">Cutting Edge Upper-Intermediate (3rd Ed.)</div><div class="book-desc">Authentic videos, discussion tasks, FCE-aligned writing and reading sections.</div></div>
+      </div>
+      <div class="book-card">
+        <span class="book-level-tag" style="background:#FEF3C7;color:#D97706">C1</span>
+        <div class="book-info"><div class="book-title">Longman Advanced Learners' Grammar</div><div class="book-desc">Corpus-driven, 200 units; ideal self-study reference at C1 and above.</div></div>
+      </div>
+      <div class="book-card">
+        <span class="book-level-tag" style="background:#FEE2E2;color:#DC2626">C2</span>
+        <div class="book-info"><div class="book-title">Proficiency Masterclass (Pearson)</div><div class="book-desc">Rigorous CPE preparation; academic reading, nuanced writing, error analysis.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MACMILLAN -->
+  <div class="publisher-block">
+    <div class="publisher-header">
+      <div class="pub-logo" style="background:#E63946;">MAC</div>
+      <div><div class="pub-name">Macmillan Education</div><div class="pub-origin">London, United Kingdom</div></div>
+    </div>
+    <div class="books-grid">
+      <div class="book-card">
+        <span class="book-level-tag" style="background:#EDE9FE;color:#7C3AED">A1</span>
+        <div class="book-info"><div class="book-title">Global Starter (Macmillan)</div><div class="book-desc">International themes, clear grammar tables, engaging visuals for new learners.</div></div>
+      </div>
+      <div class="book-card">
+        <span class="book-level-tag" style="background:#DBEAFE;color:#2563EB">A2</span>
+        <div class="book-info"><div class="book-title">Straightforward Elementary (2nd Ed.)</div><div class="book-desc">Concise, functional approach; excellent for adult learners building confidence.</div></div>
+      </div>
+      <div class="book-card">
+        <span class="book-level-tag" style="background:#D1FAE5;color:#059669">B1</span>
+        <div class="book-info"><div class="book-title">Straightforward Pre-Intermediate (2nd Ed.)</div><div class="book-desc">Clear learning outcomes per unit, practical vocabulary, integrated skills.</div></div>
+      </div>
+      <div class="book-card">
+        <span class="book-level-tag" style="background:#CFFAFE;color:#0891B2">B2</span>
+        <div class="book-info"><div class="book-title">Global Upper-Intermediate (Macmillan)</div><div class="book-desc">Critical thinking tasks, international perspectives, strong academic writing focus.</div></div>
+      </div>
+      <div class="book-card">
+        <span class="book-level-tag" style="background:#FEF3C7;color:#D97706">C1</span>
+        <div class="book-info"><div class="book-title">Open Mind Advanced (Macmillan)</div><div class="book-desc">21st-century skills focus; critical reading, debate tasks, complex grammar.</div></div>
+      </div>
+      <div class="book-card">
+        <span class="book-level-tag" style="background:#FEE2E2;color:#DC2626">C2</span>
+        <div class="book-info"><div class="book-title">Macmillan English Dictionary (Advanced)</div><div class="book-desc">Over 100,000 entries with corpus examples; indispensable for mastery-level vocabulary.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NATIONAL GEOGRAPHIC LEARNING -->
+  <div class="publisher-block">
+    <div class="publisher-header">
+      <div class="pub-logo" style="background:#FFCC00;color:#1E2D4E;">NGL</div>
+      <div><div class="pub-name">National Geographic Learning (Cengage)</div><div class="pub-origin">Boston, USA</div></div>
+    </div>
+    <div class="books-grid">
+      <div class="book-card">
+        <span class="book-level-tag" style="background:#EDE9FE;color:#7C3AED">A1</span>
+        <div class="book-info"><div class="book-title">Keynote Beginner</div><div class="book-desc">TED-Talk-based content; visually rich, motivating real-world stories for starters.</div></div>
+      </div>
+      <div class="book-card">
+        <span class="book-level-tag" style="background:#DBEAFE;color:#2563EB">A2</span>
+        <div class="book-info"><div class="book-title">National Geographic Life Elementary</div><div class="book-desc">Stunning photography, cross-cultural topics; ideal for curious adult learners.</div></div>
+      </div>
+      <div class="book-card">
+        <span class="book-level-tag" style="background:#D1FAE5;color:#059669">B1</span>
+        <div class="book-info"><div class="book-title">Keynote Pre-Intermediate</div><div class="book-desc">Authentic TED talks adapted for the classroom; critical thinking from B1 onwards.</div></div>
+      </div>
+      <div class="book-card">
+        <span class="book-level-tag" style="background:#CFFAFE;color:#0891B2">B2</span>
+        <div class="book-info"><div class="book-title">Keynote Upper-Intermediate</div><div class="book-desc">Original TED speakers, academic vocabulary, extended listening and discussion.</div></div>
+      </div>
+      <div class="book-card">
+        <span class="book-level-tag" style="background:#FEF3C7;color:#D97706">C1</span>
+        <div class="book-info"><div class="book-title">Keynote Advanced</div><div class="book-desc">Unedited TED content, complex argument analysis, CAE-level writing tasks.</div></div>
+      </div>
+      <div class="book-card">
+        <span class="book-level-tag" style="background:#FEE2E2;color:#DC2626">C2</span>
+        <div class="book-info"><div class="book-title">National Geographic Reading Explorer 5</div><div class="book-desc">Authentic academic texts, discipline-based reading, university preparation.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EF / SCHOLASTIC / HEINLE -->
+  <div class="publisher-block">
+    <div class="publisher-header">
+      <div class="pub-logo" style="background:#2D6A9F;">MIX</div>
+      <div><div class="pub-name">Mixed Publishers — Best of the Rest</div><div class="pub-origin">Heinle · Scholastic · Collins · Barron's</div></div>
+    </div>
+    <div class="books-grid">
+      <div class="book-card">
+        <span class="book-level-tag" style="background:#EDE9FE;color:#7C3AED">A1</span>
+        <div class="book-info"><div class="book-title">Touchstone 1 (Heinle / Cambridge)</div><div class="book-desc">Conversation-driven; natural English, corpus-based language, pair activities.</div></div>
+      </div>
+      <div class="book-card">
+        <span class="book-level-tag" style="background:#DBEAFE;color:#2563EB">A2</span>
+        <div class="book-info"><div class="book-title">Touchstone 2 (Heinle)</div><div class="book-desc">Seamless transition from A1; listening scripts, vocabulary notebooks included.</div></div>
+      </div>
+      <div class="book-card">
+        <span class="book-level-tag" style="background:#D1FAE5;color:#059669">B1</span>
+        <div class="book-info"><div class="book-title">Collins English for Exams — PET Practice Tests</div><div class="book-desc">12 full practice tests; realistic PET format, detailed answer key and audio.</div></div>
+      </div>
+      <div class="book-card">
+        <span class="book-level-tag" style="background:#CFFAFE;color:#0891B2">B2</span>
+        <div class="book-info"><div class="book-title">Barron's IELTS Superpack (B2)</div><div class="book-desc">Comprehensive IELTS prep; strategy guides, full tests, vocabulary booster.</div></div>
+      </div>
+      <div class="book-card">
+        <span class="book-level-tag" style="background:#FEF3C7;color:#D97706">C1</span>
+        <div class="book-info"><div class="book-title">Collins English for Exams — CAE Practice Tests</div><div class="book-desc">8 complete CAE papers with expert guidance; excellent for exam stamina.</div></div>
+      </div>
+      <div class="book-card">
+        <span class="book-level-tag" style="background:#FEE2E2;color:#DC2626">C2</span>
+        <div class="book-info"><div class="book-title">Barron's TOEFL iBT (15th Ed.)</div><div class="book-desc">7 full TOEFL tests, speaking/writing scoring rubrics, vocabulary index.</div></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-socials">
+    <a href="https://www.instagram.com/abonlinenglish" target="_blank" title="Instagram" style="font-size:1.2rem;">&#9825;</a>
+    <a href="mailto:ingilizceogrensene@gmail.com" title="E-posta" style="font-size:1.1rem;">@</a>
+  </div>
+  <strong>AbOnlinEnglish</strong> Dil Eğitimi &copy; 2025 — Tüm hakları saklıdır.<br>
+  <span style="margin-top:6px;display:inline-block;">ingilizceogrensene@gmail.com &nbsp;|&nbsp; @abonlinenglish</span>
+</footer>
+
+</body>
+</html>

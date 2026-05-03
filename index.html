@@ -1,286 +1,195 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AbOnlinEnglish – Dil Eğitimi</title>
+<title>Kendin Öğren — AbOnlinEnglish</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
-:root {
-  --navy: #0f1e3c;
-  --blue: #1a3a6b;
-  --accent: #e8a020;
-  --accent2: #f0c060;
-  --light: #f5f7fa;
-  --white: #ffffff;
-  --text: #222b3a;
-  --muted: #6b7a99;
-  --border: #dde3f0;
-  --card-shadow: 0 4px 24px rgba(15,30,60,0.10);
-  --radius: 14px;
-  --green: #27ae60;
-  --red: #e74c3c;
+:root{
+  --navy:#0f1e3c;--blue:#1a3a6b;--accent:#e8a020;--accent2:#f0c060;
+  --light:#f5f7fa;--white:#fff;--text:#222b3a;--muted:#6b7a99;--border:#dde3f0;
+  --teal:#0d9488;--purple:#7c3aed;--green:#16a34a;
+  --card-shadow:0 4px 24px rgba(15,30,60,0.10);--radius:14px;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-body{font-family:'DM Sans',sans-serif;color:var(--text);background:var(--light);min-height:100vh;}
+body{font-family:'DM Sans',sans-serif;color:var(--text);background:var(--light);}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(15,30,60,0.97);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,0.07);}
+nav{position:fixed;top:0;left:0;right:0;z-index:2000;background:rgba(15,30,60,0.97);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,0.07);}
 .nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 28px;height:68px;}
 .logo-wrap{display:flex;align-items:center;gap:12px;text-decoration:none;}
 .logo-svg{width:42px;height:42px;flex-shrink:0;}
-.logo-text{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:900;color:var(--white);letter-spacing:-0.5px;line-height:1;}
+.logo-text{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:900;color:#fff;letter-spacing:-0.5px;line-height:1;}
 .logo-text span{color:var(--accent);}
 .logo-sub{font-size:.65rem;font-weight:500;color:rgba(255,255,255,0.45);letter-spacing:2px;text-transform:uppercase;margin-top:2px;}
 .nav-links{display:flex;gap:2px;list-style:none;}
 .nav-links a{color:rgba(255,255,255,0.80);text-decoration:none;font-size:.85rem;font-weight:500;padding:8px 13px;border-radius:8px;transition:all .2s;}
 .nav-links a:hover,.nav-links a.active{background:rgba(232,160,32,0.18);color:var(--accent2);}
-.hamburger{display:none;background:none;border:none;cursor:pointer;color:white;font-size:1.4rem;}
-
-/* HERO */
-.hero{background:linear-gradient(135deg,#0f1e3c 0%,#1a3a6b 55%,#0d2a5a 100%);min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 24px 80px;position:relative;overflow:hidden;}
-.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 30%,rgba(232,160,32,0.12) 0%,transparent 70%);}
-.hero-badge{display:inline-block;background:rgba(232,160,32,0.2);border:1px solid rgba(232,160,32,0.4);color:var(--accent2);font-size:.8rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:6px 18px;border-radius:50px;margin-bottom:24px;}
-.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,6vw,4.2rem);font-weight:900;color:var(--white);line-height:1.1;margin-bottom:22px;}
-.hero h1 em{color:var(--accent);font-style:normal;}
-.hero p{font-size:1.15rem;color:rgba(255,255,255,0.72);max-width:560px;margin:0 auto 36px;line-height:1.7;}
-.hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
-.btn-primary{background:var(--accent);color:var(--navy);font-weight:700;padding:14px 32px;border-radius:10px;text-decoration:none;transition:all .2s;border:none;cursor:pointer;font-size:1rem;}
-.btn-primary:hover{background:var(--accent2);transform:translateY(-2px);}
-.btn-secondary{background:rgba(255,255,255,0.1);color:white;font-weight:600;padding:14px 32px;border-radius:10px;text-decoration:none;transition:all .2s;border:1px solid rgba(255,255,255,0.2);cursor:pointer;font-size:1rem;}
-.btn-secondary:hover{background:rgba(255,255,255,0.18);}
-.hero-stats{display:flex;gap:40px;justify-content:center;margin-top:56px;flex-wrap:wrap;}
-.stat{text-align:center;}
-.stat-num{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:900;color:var(--accent);}
-.stat-label{font-size:.8rem;color:rgba(255,255,255,0.5);letter-spacing:1px;text-transform:uppercase;margin-top:4px;}
-
-/* SECTIONS */
-section{padding:80px 24px;}
-.section-inner{max-width:1200px;margin:0 auto;}
-.section-tag{font-size:.75rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent);margin-bottom:10px;}
-.section-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;color:var(--navy);margin-bottom:16px;line-height:1.2;}
-.section-sub{font-size:1.05rem;color:var(--muted);max-width:560px;line-height:1.7;margin-bottom:48px;}
-
-/* ABOUT */
-#about{background:var(--white);}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
-.about-features{display:grid;gap:20px;margin-top:12px;}
-.feature-card{display:flex;gap:16px;align-items:flex-start;background:var(--light);padding:20px;border-radius:var(--radius);border:1px solid var(--border);}
-.feature-icon{width:44px;height:44px;background:linear-gradient(135deg,var(--navy),var(--blue));border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:1.1rem;flex-shrink:0;}
-.feature-card h4{font-weight:700;margin-bottom:4px;color:var(--navy);}
-.feature-card p{font-size:.9rem;color:var(--muted);line-height:1.5;}
-.about-visual{background:linear-gradient(135deg,var(--navy),var(--blue));border-radius:24px;padding:40px;color:white;text-align:center;}
-.about-visual .big-icon{font-size:5rem;margin-bottom:20px;opacity:.8;}
-.about-visual h3{font-family:'Playfair Display',serif;font-size:1.6rem;margin-bottom:12px;}
-.about-visual p{opacity:.75;line-height:1.7;}
-
-/* LEVEL TABS */
-.level-tabs{display:flex;gap:8px;margin-bottom:32px;flex-wrap:wrap;}
-.level-tab{padding:10px 24px;border-radius:50px;border:2px solid var(--border);background:white;color:var(--muted);font-weight:600;cursor:pointer;transition:all .2s;font-size:.9rem;}
-.level-tab.active,.level-tab:hover{background:var(--navy);border-color:var(--navy);color:white;}
-
-/* DOCUMENT CARDS */
-#documents{background:var(--light);}
-.doc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;}
-.doc-card{background:white;border-radius:var(--radius);padding:22px;border:1px solid var(--border);box-shadow:var(--card-shadow);transition:all .25s;cursor:pointer;text-decoration:none;display:block;}
-.doc-card:hover{transform:translateY(-4px);box-shadow:0 12px 36px rgba(15,30,60,0.14);border-color:var(--accent);}
-.doc-card-top{display:flex;align-items:center;gap:14px;margin-bottom:14px;}
-.pdf-icon{width:46px;height:46px;background:linear-gradient(135deg,var(--navy),var(--blue));border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:1rem;flex-shrink:0;}
-.doc-level-badge{font-size:.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;background:rgba(15,30,60,0.08);color:var(--navy);padding:3px 10px;border-radius:4px;}
-.doc-card h4{font-weight:700;color:var(--navy);font-size:.95rem;margin-bottom:6px;}
-.doc-card p{font-size:.84rem;color:var(--muted);line-height:1.5;}
-.doc-action{display:inline-flex;align-items:center;gap:6px;margin-top:14px;padding:8px 16px;background:var(--navy);color:white;border-radius:8px;font-size:.82rem;font-weight:600;text-decoration:none;transition:all .2s;}
-.doc-action:hover{background:var(--accent);color:var(--navy);}
-.doc-action i{font-size:.75rem;}
-
-/* SKILLS */
-#skills{background:white;}
-.skills-tabs{display:flex;gap:0;border-bottom:2px solid var(--border);margin-bottom:36px;overflow-x:auto;}
-.skill-tab{padding:14px 28px;border:none;background:none;font-weight:600;color:var(--muted);cursor:pointer;position:relative;transition:color .2s;white-space:nowrap;font-family:'DM Sans',sans-serif;font-size:.95rem;}
-.skill-tab.active{color:var(--navy);}
-.skill-tab.active::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:2px;background:var(--accent);}
-.skill-content{display:none;}
-.skill-content.active{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;}
-.skill-info h3{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:900;color:var(--navy);margin-bottom:14px;}
-.skill-info p{color:var(--muted);line-height:1.7;margin-bottom:20px;font-size:.97rem;}
-.skill-tips{background:var(--light);border-radius:var(--radius);padding:22px;border-left:4px solid var(--accent);}
-.skill-tips h5{font-weight:700;color:var(--navy);margin-bottom:12px;}
-.skill-tips ul{list-style:none;display:grid;gap:8px;}
-.skill-tips ul li{display:flex;gap:10px;font-size:.9rem;color:var(--muted);}
-.skill-tips ul li::before{content:'✦';color:var(--accent);flex-shrink:0;}
-.skill-materials{display:grid;gap:12px;}
-.material-item{background:var(--light);border-radius:10px;padding:16px 18px;display:flex;align-items:center;gap:14px;border:1px solid var(--border);text-decoration:none;transition:all .2s;cursor:pointer;}
-.material-item:hover{border-color:var(--accent);background:white;}
-.mat-icon{width:38px;height:38px;background:linear-gradient(135deg,var(--navy),var(--blue));border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:.9rem;flex-shrink:0;}
-.mat-info h5{font-weight:600;font-size:.9rem;color:var(--navy);}
-.mat-info p{font-size:.8rem;color:var(--muted);}
-
-/* GRAMMAR */
-#grammar{background:var(--light);}
-.grammar-layout{display:grid;grid-template-columns:240px 1fr;gap:32px;min-height:500px;}
-.grammar-sidebar{background:white;border-radius:var(--radius);border:1px solid var(--border);padding:20px;height:fit-content;position:sticky;top:88px;}
-.grammar-sidebar h4{font-weight:700;font-size:.8rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:16px;}
-.grammar-level-btn{width:100%;text-align:left;padding:12px 16px;border-radius:8px;border:none;background:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-weight:600;color:var(--navy);font-size:.92rem;transition:all .2s;display:flex;align-items:center;justify-content:space-between;}
-.grammar-level-btn:hover{background:var(--light);}
-.grammar-level-btn.active{background:var(--navy);color:white;}
-.grammar-level-btn .badge{font-size:.7rem;background:rgba(232,160,32,0.2);color:var(--accent);padding:2px 8px;border-radius:4px;font-weight:700;}
-.grammar-level-btn.active .badge{background:rgba(255,255,255,0.2);color:white;}
-.grammar-main{background:white;border-radius:var(--radius);border:1px solid var(--border);padding:32px;}
-.grammar-topic-list{display:grid;gap:14px;}
-.grammar-topic-item{padding:18px 22px;border-radius:10px;border:1px solid var(--border);cursor:pointer;transition:all .22s;display:flex;align-items:center;justify-content:space-between;}
-.grammar-topic-item:hover{border-color:var(--accent);background:rgba(232,160,32,0.04);}
-.grammar-topic-item h5{font-weight:700;color:var(--navy);margin-bottom:4px;}
-.grammar-topic-item p{font-size:.83rem;color:var(--muted);}
-.grammar-topic-item .arrow{color:var(--accent);font-size:.9rem;}
-.grammar-detail-back{display:inline-flex;align-items:center;gap:8px;color:var(--blue);font-weight:600;cursor:pointer;margin-bottom:24px;font-size:.9rem;border:none;background:none;font-family:'DM Sans',sans-serif;}
-.grammar-detail h2{font-family:'Playfair Display',serif;font-size:2rem;color:var(--navy);margin-bottom:8px;}
-.grammar-detail .level-tag{display:inline-block;background:var(--navy);color:white;font-size:.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:4px;margin-bottom:20px;}
-.grammar-section{margin-bottom:28px;}
-.grammar-section h4{font-weight:700;color:var(--navy);margin-bottom:12px;display:flex;align-items:center;gap:8px;}
-.grammar-section h4 i{color:var(--accent);}
-.grammar-section p{color:var(--muted);line-height:1.75;font-size:.95rem;}
-.example-box{background:var(--light);border-left:4px solid var(--accent);border-radius:0 10px 10px 0;padding:16px 20px;margin:10px 0;}
-.example-box .eng{font-weight:700;color:var(--navy);}
-.example-box .tr{font-size:.87rem;color:var(--muted);}
-
-/* GRAMMAR TABLE */
-.grammar-table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.88rem;}
-.grammar-table th{background:var(--navy);color:white;padding:10px 14px;text-align:left;font-weight:700;}
-.grammar-table td{padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top;}
-.grammar-table tr:nth-child(even) td{background:#f8f9fc;}
-.grammar-table tr:hover td{background:rgba(232,160,32,0.06);}
-.grammar-table .pos{color:var(--green);font-weight:600;}
-.grammar-table .neg{color:var(--red);font-weight:600;}
-.grammar-table .ques{color:var(--blue);font-weight:600;}
-
-/* EXERCISES */
-.exercise-list{display:grid;gap:14px;margin-top:12px;}
-.exercise-item{background:var(--light);border-radius:10px;padding:18px;border:1px solid var(--border);}
-.exercise-item .ex-type{font-size:.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--accent);margin-bottom:6px;}
-.exercise-item p{font-weight:600;color:var(--navy);margin-bottom:10px;line-height:1.5;}
-.exercise-item input[type=text]{border:1px solid var(--border);border-radius:6px;padding:9px 13px;width:100%;max-width:360px;font-family:'DM Sans',sans-serif;font-size:.9rem;outline:none;transition:border .2s;background:white;}
-.exercise-item input[type=text]:focus{border-color:var(--accent);}
-.exercise-item .options{display:grid;gap:8px;margin-top:4px;}
-.exercise-item .opt-btn{text-align:left;padding:9px 16px;border:1px solid var(--border);border-radius:7px;background:white;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:.9rem;transition:all .2s;color:var(--navy);}
-.exercise-item .opt-btn:hover{border-color:var(--accent);background:rgba(232,160,32,0.05);}
-.exercise-item .opt-btn.correct-ans{background:#eafaf1;border-color:var(--green);color:var(--green);}
-.exercise-item .opt-btn.wrong-ans{background:#fdf2f2;border-color:var(--red);color:var(--red);}
-.check-btn{margin-top:10px;padding:9px 22px;background:var(--navy);color:white;border:none;border-radius:7px;cursor:pointer;font-weight:600;font-size:.85rem;font-family:'DM Sans',sans-serif;transition:all .2s;}
-.check-btn:hover{background:var(--accent);color:var(--navy);}
-.answer-feedback{font-size:.85rem;margin-top:8px;font-weight:600;padding:6px 12px;border-radius:6px;display:none;}
-.answer-feedback.correct{color:var(--green);background:#eafaf1;display:block;}
-.answer-feedback.wrong{color:var(--red);background:#fdf2f2;display:block;}
-.t-f-btns{display:flex;gap:10px;margin-top:8px;}
-.tf-btn{padding:8px 22px;border:1px solid var(--border);border-radius:7px;background:white;cursor:pointer;font-weight:700;font-size:.9rem;font-family:'DM Sans',sans-serif;transition:all .2s;}
-.tf-btn:hover{border-color:var(--accent);}
-
-/* ONLINE LESSON */
-#online-lesson{background:linear-gradient(135deg,#0f1e3c 0%,#1a3a6b 100%);}
-#online-lesson .section-title{color:white;}
-#online-lesson .section-tag{color:var(--accent2);}
-#online-lesson .section-sub{color:rgba(255,255,255,0.65);}
-.lesson-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:22px;margin-bottom:48px;}
-.lesson-card{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.13);border-radius:var(--radius);padding:28px;color:white;transition:all .25s;position:relative;overflow:hidden;}
-.lesson-card::before{content:'';position:absolute;top:-30px;right:-30px;width:100px;height:100px;background:rgba(232,160,32,0.1);border-radius:50%;}
-.lesson-card:hover{background:rgba(255,255,255,0.12);transform:translateY(-4px);}
-.lesson-card-icon{font-size:2.2rem;margin-bottom:16px;}
-.lesson-card h3{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:900;margin-bottom:10px;color:var(--accent2);}
-.lesson-card p{font-size:.9rem;color:rgba(255,255,255,0.7);line-height:1.65;}
-.lesson-card ul{list-style:none;margin-top:12px;display:grid;gap:6px;}
-.lesson-card ul li{font-size:.88rem;color:rgba(255,255,255,0.7);display:flex;gap:8px;}
-.lesson-card ul li::before{content:'✓';color:var(--accent);font-weight:700;flex-shrink:0;}
-.lesson-pricing{background:rgba(255,255,255,0.07);border:1px solid rgba(232,160,32,0.3);border-radius:var(--radius);padding:32px;color:white;text-align:center;max-width:900px;margin:0 auto;}
-.lesson-pricing h3{font-family:'Playfair Display',serif;font-size:1.6rem;margin-bottom:24px;color:var(--accent2);}
-.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:28px;}
-.price-item{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:20px;}
-.price-item .duration{font-size:.8rem;color:rgba(255,255,255,0.5);letter-spacing:1px;text-transform:uppercase;margin-bottom:6px;}
-.price-item .price{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:var(--accent);}
-.price-item .price-sub{font-size:.8rem;color:rgba(255,255,255,0.5);margin-top:4px;}
-.lesson-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:16px;}
-.btn-whatsapp{background:#25D366;color:white;font-weight:700;padding:14px 28px;border-radius:10px;text-decoration:none;transition:all .2s;display:inline-flex;align-items:center;gap:8px;font-size:.95rem;}
-.btn-whatsapp:hover{background:#1da855;transform:translateY(-2px);}
-.btn-email-lesson{background:var(--accent);color:var(--navy);font-weight:700;padding:14px 28px;border-radius:10px;text-decoration:none;transition:all .2s;display:inline-flex;align-items:center;gap:8px;font-size:.95rem;}
-.btn-email-lesson:hover{background:var(--accent2);transform:translateY(-2px);}
-.teacher-box{display:flex;gap:24px;align-items:center;background:rgba(255,255,255,0.06);border-radius:var(--radius);padding:24px;margin-bottom:40px;border:1px solid rgba(255,255,255,0.1);max-width:700px;}
-.teacher-avatar{width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-size:2.2rem;flex-shrink:0;border:3px solid rgba(232,160,32,0.5);}
-.teacher-info h4{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--accent2);margin-bottom:6px;}
-.teacher-info p{font-size:.9rem;color:rgba(255,255,255,0.65);line-height:1.6;}
-
-/* CONTACT */
-#contact{background:var(--navy);color:white;}
-#contact .section-title{color:white;}
-#contact .section-tag{color:var(--accent2);}
-#contact .section-sub{color:rgba(255,255,255,0.6);}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
-.contact-info{display:grid;gap:20px;margin-top:8px;}
-.contact-item{display:flex;gap:16px;align-items:flex-start;}
-.contact-item-icon{width:44px;height:44px;background:rgba(232,160,32,0.15);border:1px solid rgba(232,160,32,0.3);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:1.1rem;flex-shrink:0;}
-.contact-item h5{font-weight:700;color:white;margin-bottom:4px;}
-.contact-item p,.contact-item a{color:rgba(255,255,255,0.6);font-size:.9rem;text-decoration:none;}
-.contact-item a:hover{color:var(--accent2);}
-.contact-form{display:grid;gap:16px;}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
-.form-group{display:flex;flex-direction:column;gap:6px;}
-.form-group label{font-size:.84rem;font-weight:600;color:rgba(255,255,255,0.75);}
-.form-group input,.form-group textarea,.form-group select{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:10px;padding:12px 16px;color:white;font-family:'DM Sans',sans-serif;font-size:.92rem;outline:none;transition:border .2s;}
-.form-group input::placeholder,.form-group textarea::placeholder{color:rgba(255,255,255,0.35);}
-.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--accent);}
-.form-group textarea{resize:vertical;min-height:110px;}
-.form-group select option{background:var(--navy);color:white;}
-.form-submit{padding:14px;background:var(--accent);color:var(--navy);font-weight:700;border:none;border-radius:10px;cursor:pointer;font-size:1rem;font-family:'DM Sans',sans-serif;transition:all .2s;margin-top:4px;}
-.form-submit:hover{background:var(--accent2);}
-
-/* FOOTER */
-footer{background:#07111f;color:rgba(255,255,255,0.45);text-align:center;padding:32px 24px;font-size:.85rem;}
-footer strong{color:var(--accent);}
-.footer-socials{display:flex;justify-content:center;gap:16px;margin:16px 0;}
-.footer-socials a{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.6);font-size:1rem;text-decoration:none;transition:all .2s;}
-.footer-socials a:hover{background:var(--accent);color:var(--navy);}
-
-/* TOAST */
-.toast{position:fixed;bottom:28px;right:28px;background:var(--navy);color:white;padding:14px 24px;border-radius:10px;font-weight:600;font-size:.9rem;box-shadow:0 8px 28px rgba(0,0,0,0.3);z-index:9999;transform:translateY(80px);opacity:0;transition:all .3s;border-left:4px solid var(--accent);}
-.toast.show{transform:translateY(0);opacity:1;}
-
-/* PROGRESS BAR (exercises) */
-.ex-progress{height:6px;background:var(--border);border-radius:3px;margin-bottom:20px;}
-.ex-progress-bar{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:3px;transition:width .4s;}
-.ex-score{font-size:.9rem;font-weight:700;color:var(--navy);margin-bottom:16px;}
-
-/* MOBILE */
-@media(max-width:900px){
-  .about-grid,.contact-grid,.skill-content.active{grid-template-columns:1fr;}
-  .grammar-layout{grid-template-columns:1fr;}
-  .form-row{grid-template-columns:1fr;}
-  .about-visual{order:-1;}
-  .grammar-sidebar{position:static;}
-}
+.nav-cta-btn{background:var(--accent)!important;color:var(--navy)!important;font-weight:700!important;padding:9px 18px!important;border-radius:8px;}
+.nav-cta-btn:hover{background:var(--accent2)!important;}
+.hamburger{display:none;background:none;border:none;cursor:pointer;color:white;font-size:1.5rem;line-height:1;padding:4px;}
 @media(max-width:700px){
   .nav-links{display:none;flex-direction:column;position:absolute;top:68px;left:0;right:0;background:rgba(15,30,60,0.99);padding:16px;gap:4px;}
   .nav-links.open{display:flex;}
   .hamburger{display:block;}
-  .hero-stats{gap:24px;}
 }
+
+/* HERO */
+.hero{
+  background:linear-gradient(135deg,#0f1e3c 0%,#1a3a6b 55%,#0d2a5a 100%);
+  min-height:60vh;display:flex;align-items:center;justify-content:center;
+  text-align:center;padding:120px 24px 60px;position:relative;overflow:hidden;
+}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 30%,rgba(232,160,32,0.12) 0%,transparent 70%);}
+.hero-inner{position:relative;z-index:1;max-width:760px;}
+.hero-badge{display:inline-block;background:rgba(232,160,32,0.2);border:1px solid rgba(232,160,32,0.4);color:var(--accent2);font-size:.8rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:6px 18px;border-radius:50px;margin-bottom:24px;}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,5vw,3.6rem);font-weight:900;color:#fff;line-height:1.1;margin-bottom:20px;}
+.hero h1 em{color:var(--accent);font-style:normal;}
+.hero p{font-size:1.05rem;color:rgba(255,255,255,0.70);max-width:540px;margin:0 auto 36px;line-height:1.75;}
+.hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:48px;}
+.btn-primary{background:var(--accent);color:var(--navy);font-weight:700;padding:13px 30px;border-radius:10px;text-decoration:none;transition:all .2s;border:none;cursor:pointer;font-size:.95rem;display:inline-flex;align-items:center;gap:8px;}
+.btn-primary:hover{background:var(--accent2);transform:translateY(-2px);}
+.btn-secondary{background:rgba(255,255,255,0.10);color:white;font-weight:600;padding:13px 30px;border-radius:10px;text-decoration:none;border:1px solid rgba(255,255,255,0.2);transition:all .2s;cursor:pointer;font-size:.95rem;}
+.btn-secondary:hover{background:rgba(255,255,255,0.18);}
+.hero-stats{display:flex;justify-content:center;gap:2.5rem;flex-wrap:wrap;}
+.hs-num{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:900;color:#fff;}
+.hs-label{font-size:.75rem;color:rgba(255,255,255,0.42);letter-spacing:1px;text-transform:uppercase;margin-top:2px;}
+
+/* PLACEMENT BANNER */
+.placement-strip{background:#fff;border-bottom:1px solid var(--border);padding:16px 28px;}
+.placement-strip-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;}
+.ps-left{display:flex;align-items:center;gap:12px;}
+.ps-ico{width:42px;height:42px;background:linear-gradient(135deg,var(--blue),var(--teal));border-radius:10px;display:grid;place-items:center;font-size:1.2rem;flex-shrink:0;}
+.ps-ttl{font-size:14px;font-weight:700;color:var(--navy);}
+.ps-sub{font-size:12px;color:var(--muted);margin-top:2px;}
+.btn-accent-sm{padding:9px 22px;border-radius:8px;background:var(--accent);color:var(--navy);font-size:13px;font-weight:700;border:none;cursor:pointer;transition:all .2s;white-space:nowrap;text-decoration:none;}
+.btn-accent-sm:hover{background:var(--accent2);}
+
+/* SECTIONS */
+.section{padding:4.5rem 24px;max-width:1100px;margin:0 auto;}
+.section-tag{font-size:.75rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent);margin-bottom:10px;}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(1.7rem,4vw,2.5rem);font-weight:900;color:var(--navy);margin-bottom:14px;line-height:1.2;}
+.section-sub{font-size:1rem;color:var(--muted);max-width:520px;line-height:1.75;margin-bottom:40px;}
+.sec-center{text-align:center;}
+.sec-center .section-sub{margin-left:auto;margin-right:auto;}
+
+/* HOW IT WORKS */
+.how-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;}
+@media(max-width:800px){.how-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:480px){.how-grid{grid-template-columns:1fr;}}
+.how-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;box-shadow:var(--card-shadow);text-align:center;}
+.how-step{width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,var(--blue),#1a56db);display:grid;place-items:center;font-size:13px;font-weight:900;color:#fff;margin:0 auto .85rem;font-family:'Playfair Display',serif;}
+.how-ttl{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:.3rem;}
+.how-txt{font-size:13px;color:var(--muted);line-height:1.6;}
+
+/* LEVEL CARDS */
+.levels-2{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:1.5rem;}
+.levels-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;}
+@media(max-width:900px){.levels-2{grid-template-columns:1fr;}.levels-3{grid-template-columns:1fr 1fr;}}
+@media(max-width:580px){.levels-3{grid-template-columns:1fr;}}
+.level-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);overflow:hidden;cursor:pointer;transition:all .25s;display:flex;flex-direction:column;text-decoration:none;color:inherit;}
+.level-card:hover{box-shadow:0 12px 36px rgba(15,30,60,0.14);transform:translateY(-4px);}
+.lc-head{padding:1.75rem 1.75rem 1.4rem;position:relative;overflow:hidden;}
+.lc-head::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 80% 20%,rgba(255,255,255,0.07),transparent);pointer-events:none;}
+.lc-head.a1{background:linear-gradient(135deg,#0f2044,#1e3a8a);}
+.lc-head.a2{background:linear-gradient(135deg,#14532d,#166534);}
+.lc-head.b1{background:linear-gradient(135deg,#0f2044,#134e4a);}
+.lc-head.b2{background:linear-gradient(135deg,#1e0a3c,#3b0764);}
+.lc-head.c1{background:linear-gradient(135deg,#1c1209,#451a03);}
+.lc-badge{display:inline-block;padding:4px 12px;border-radius:50px;font-size:11px;font-weight:700;letter-spacing:.5px;margin-bottom:.65rem;}
+.lc-badge.a1{background:rgba(59,130,246,.25);color:#93c5fd;}
+.lc-badge.a2{background:rgba(34,197,94,.25);color:#86efac;}
+.lc-badge.b1{background:rgba(20,184,166,.25);color:#5eead4;}
+.lc-badge.b2{background:rgba(167,139,250,.25);color:#c4b5fd;}
+.lc-badge.c1{background:rgba(251,191,36,.25);color:#fde68a;}
+.lc-ttl{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:900;color:#fff;margin-bottom:.25rem;}
+.lc-sub{font-size:12.5px;color:rgba(255,255,255,.5);line-height:1.5;}
+.lc-chips{display:flex;gap:.4rem;margin-top:.85rem;flex-wrap:wrap;}
+.lc-chip{background:rgba(255,255,255,.12);border-radius:5px;padding:3px 9px;font-size:11px;font-weight:600;color:rgba(255,255,255,.7);}
+.lc-body{padding:1.25rem 1.75rem;flex:1;display:flex;flex-direction:column;}
+.lc-units{list-style:none;display:flex;flex-direction:column;gap:.35rem;margin-bottom:1.1rem;flex:1;}
+.lc-units li{display:flex;align-items:center;gap:.6rem;font-size:12.5px;color:var(--muted);}
+.lc-un{font-size:10px;font-weight:700;padding:2px 7px;border-radius:5px;flex-shrink:0;}
+.lc-un.a1{background:#dbeafe;color:#1e40af;}
+.lc-un.a2{background:#dcfce7;color:#15803d;}
+.lc-un.b1{background:#ccfbf1;color:#0f766e;}
+.lc-un.b2{background:#ede9fe;color:#5b21b6;}
+.lc-un.c1{background:#fef3c7;color:#92400e;}
+.lc-em{font-size:13px;flex-shrink:0;}
+.lc-gram{font-size:11px;color:var(--border);margin-left:auto;flex-shrink:0;}
+.lc-footer{display:flex;align-items:center;justify-content:space-between;padding-top:.85rem;border-top:1px solid var(--border);gap:.5rem;flex-wrap:wrap;}
+.lc-readers{font-size:11.5px;color:var(--muted);}
+.lc-btn{padding:8px 18px;border-radius:8px;font-size:12.5px;font-weight:700;border:none;cursor:pointer;transition:all .2s;color:#fff;text-decoration:none;display:inline-block;}
+.lc-btn.a1{background:linear-gradient(135deg,#1e3a8a,#1a56db);}
+.lc-btn.a2{background:linear-gradient(135deg,#14532d,#16a34a);}
+.lc-btn.b1{background:linear-gradient(135deg,#134e4a,#0d9488);}
+.lc-btn.b2{background:linear-gradient(135deg,#3b0764,#7c3aed);}
+.lc-btn.c1{background:linear-gradient(135deg,#451a03,#d97706);}
+.lc-btn:hover{opacity:.9;transform:translateY(-1px);}
+
+/* MATERIALS BOX */
+.mat-box{background:linear-gradient(135deg,#f0fdf4,#f0fdfa);border:1px solid #bbf7d0;border-radius:var(--radius);padding:1.75rem;margin-top:1.5rem;}
+.mat-ttl{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:1rem;}
+.mat-row{display:grid;grid-template-columns:repeat(5,1fr);gap:.75rem;}
+@media(max-width:700px){.mat-row{grid-template-columns:repeat(3,1fr);}}
+.mat-item{background:#fff;border:1px solid var(--border);border-radius:10px;padding:.75rem;text-align:center;}
+.mat-ico{font-size:1.5rem;margin-bottom:.3rem;}
+.mat-lbl{font-size:11px;font-weight:700;color:var(--navy);margin-bottom:.1rem;}
+.mat-desc2{font-size:10.5px;color:var(--muted);}
+
+/* GAMES CARD */
+.games-card{background:linear-gradient(135deg,var(--navy),#1a3a6b);border-radius:var(--radius);padding:2.5rem;text-align:center;position:relative;overflow:hidden;cursor:pointer;transition:all .25s;text-decoration:none;display:block;}
+.games-card:hover{transform:translateY(-3px);box-shadow:0 16px 48px rgba(15,30,60,.25);}
+.games-card::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 40%,rgba(232,160,32,0.12),transparent);pointer-events:none;}
+.gc-in{position:relative;z-index:1;}
+.gc-emoji{font-size:2.8rem;margin-bottom:.65rem;}
+.gc-ttl{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:900;color:#fff;margin-bottom:.35rem;}
+.gc-sub{font-size:14px;color:rgba(255,255,255,.55);max-width:380px;margin:0 auto 1.25rem;}
+.gc-tags{display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap;margin-bottom:1.5rem;}
+.gc-tag{background:rgba(255,255,255,.12);border-radius:6px;padding:4px 12px;font-size:12px;font-weight:600;color:rgba(255,255,255,.75);}
+.gc-btn{display:inline-flex;align-items:center;gap:.5rem;padding:11px 28px;border-radius:10px;background:var(--accent);color:var(--navy);font-size:14px;font-weight:700;border:none;cursor:pointer;transition:all .2s;}
+.gc-btn:hover{background:var(--accent2);transform:translateY(-2px);}
+
+/* CEFR LADDER */
+.cefr-ladder{display:flex;flex-direction:column;gap:.75rem;max-width:640px;margin:0 auto;}
+.cefr-row{display:flex;align-items:center;gap:1rem;background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:.85rem 1.1rem;box-shadow:var(--card-shadow);cursor:pointer;transition:all .2s;text-decoration:none;color:inherit;}
+.cefr-row:hover{box-shadow:0 8px 24px rgba(15,30,60,.12);transform:translateX(5px);border-color:var(--accent);}
+.cefr-bdg{width:48px;height:48px;border-radius:10px;display:grid;place-items:center;font-family:'Playfair Display',serif;font-weight:900;font-size:15px;color:#fff;flex-shrink:0;}
+.cb-a1{background:linear-gradient(135deg,#1e3a8a,#1a56db);}
+.cb-a2{background:linear-gradient(135deg,#14532d,#16a34a);}
+.cb-b1{background:linear-gradient(135deg,#134e4a,#0d9488);}
+.cb-b2{background:linear-gradient(135deg,#3b0764,#7c3aed);}
+.cb-c1{background:linear-gradient(135deg,#451a03,#d97706);}
+.cefr-info{flex:1;}
+.cefr-ttl{font-size:14px;font-weight:700;color:var(--navy);}
+.cefr-sub{font-size:12px;color:var(--muted);margin-top:2px;}
+.cefr-tags{display:flex;gap:.35rem;flex-wrap:wrap;margin-top:.4rem;}
+.ctag{font-size:10px;font-weight:600;padding:2px 7px;border-radius:5px;background:#f1f5f9;color:#64748b;}
+.cefr-arrow{color:var(--muted);font-size:1.2rem;transition:all .2s;}
+.cefr-row:hover .cefr-arrow{color:var(--accent);transform:translateX(3px);}
+
+/* FOOTER */
+footer{background:#07111f;color:rgba(255,255,255,0.45);text-align:center;padding:32px 24px;font-size:.85rem;margin-top:4rem;}
+footer strong{color:var(--accent);}
+.footer-socials{display:flex;justify-content:center;gap:16px;margin:16px 0;}
+.footer-socials a{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.6);text-decoration:none;transition:all .2s;font-size:14px;}
+.footer-socials a:hover{background:var(--accent);color:var(--navy);}
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <div class="nav-inner">
-    <a class="logo-wrap" href="#home">
+    <a class="logo-wrap" href="abonlinenglish-landing.html">
       <svg class="logo-svg" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="21" cy="21" r="20" fill="#0f1e3c" stroke="#e8a020" stroke-width="1.5"/>
         <path d="M10 27 C10 27 10 15 21 15 C32 15 32 27 32 27" fill="none" stroke="#e8a020" stroke-width="1.8" stroke-linecap="round"/>
         <line x1="21" y1="15" x2="21" y2="27" stroke="#e8a020" stroke-width="1.5" stroke-linecap="round"/>
         <path d="M10 27 C12 25 16 23 21 23" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.2" stroke-linecap="round"/>
-        <path d="M10 24 C12 22 15 21 21 21" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1" stroke-linecap="round"/>
         <path d="M32 27 C30 25 26 23 21 23" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.2" stroke-linecap="round"/>
-        <path d="M32 24 C30 22 27 21 21 21" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1" stroke-linecap="round"/>
         <path d="M9 27.5 Q21 30 33 27.5" fill="none" stroke="#e8a020" stroke-width="1.8" stroke-linecap="round"/>
-        <circle cx="21" cy="11" r="1.2" fill="#e8a020"/>
         <text x="21" y="35.5" text-anchor="middle" font-family="Georgia,serif" font-size="5" font-weight="bold" fill="#e8a020">Ab</text>
       </svg>
       <div>
@@ -289,1527 +198,321 @@ footer strong{color:var(--accent);}
       </div>
     </a>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#home" class="active" onclick="closeMenu()">Anasayfa</a></li>
-      <li><a href="#about" onclick="closeMenu()">Hakkımızda</a></li>
-      <li><a href="#documents" onclick="closeMenu()">Dokümanlar</a></li>
-      <li><a href="#skills" onclick="closeMenu()">Beceriler</a></li>
-      <li><a href="#grammar" onclick="closeMenu()">Dilbilgisi</a></li>
-      <li><a href="#online-lesson" onclick="closeMenu()">Özel Ders</a></li>
-      <li><a href="#contact" onclick="closeMenu()">İletişim</a></li>
+      <li><a href="abonlinenglish-landing.html" onclick="closeMenu()">Anasayfa</a></li>
+      <li><a href="index.html" class="active" onclick="closeMenu()">Kendin Öğren</a></li>
+      <li><a href="YOL_HARITASI_COMPLETE__2_.html" onclick="closeMenu()">Yol Haritası</a></li>
+      <li><a href="placement-test-50.html" onclick="closeMenu()">Seviye Testi</a></li>
+      <li><a href="games.html" onclick="closeMenu()">Oyunlar</a></li>
+      <li><a href="abonlinenglish-landing.html#pricing" class="nav-cta-btn" onclick="closeMenu()">Ücretsiz Ders</a></li>
     </ul>
-    <button class="hamburger" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+    <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
   </div>
 </nav>
 
 <!-- HERO -->
-<section class="hero" id="home">
-  <div style="position:relative;z-index:1;width:100%;">
-    <div class="hero-badge">🇬🇧 Online English Platform</div>
-    <h1>İngilizce Öğrenmenin<br>En <em>Akıllı</em> Yolu</h1>
-    <p>Seviyenize uygun dokümanlar, gramer dersleri ve beceri geliştirme materyalleri ile İngilizce yolculuğunuzu hızlandırın.</p>
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">📚 CEFR A1 → C1 · Kendin Öğren Platformu</div>
+    <h1>Kendi hızında,<br><em>kendi sisteminde</em> öğren.</h1>
+    <p>A1'den C1'e tüm seviyeler. Coursebook metinleri, grammar referansları, reading pasajları ve interaktif alıştırmalar — tek platformda.</p>
     <div class="hero-btns">
-      <a href="#grammar" class="btn-primary">🚀 Hemen Başla</a>
-      <a href="#about" class="btn-secondary">Hakkımızda</a>
+      <a href="#levels" class="btn-primary">Seviyeleri Gör ↓</a>
+      <a href="placement-test-50.html" class="btn-secondary">Seviyeni Test Et</a>
     </div>
     <div class="hero-stats">
+      <div><div class="hs-num">5</div><div class="hs-label">CEFR Seviyesi</div></div>
+      <div><div class="hs-num">50</div><div class="hs-label">Ünite</div></div>
+      <div><div class="hs-num">10</div><div class="hs-label">Graded Reader</div></div>
+      <div><div class="hs-num">1500+</div><div class="hs-label">Alıştırma</div></div>
     </div>
   </div>
 </section>
 
-<!-- ABOUT -->
-<section id="about">
-  <div class="section-inner">
-    <div class="about-grid">
+<!-- PLACEMENT STRIP -->
+<div class="placement-strip">
+  <div class="placement-strip-inner">
+    <div class="ps-left">
+      <div class="ps-ico">🎯</div>
       <div>
-        <div class="section-tag">Hakkımızda</div>
-        <h2 class="section-title">Neden AbOnlinEnglish?</h2>
-        <p class="section-sub">A1'den B2'ye kadar yapılandırılmış Cambridge CEFR materyallerimiz, öğrencilerin kendi hızında ilerlemesini sağlar.</p>
-        <div class="about-features">
-          <div class="feature-card">
-            <div class="feature-icon"><i class="fas fa-layer-group"></i></div>
-            <div><h4>Cambridge CEFR İçerik</h4><p>A1, A2, B1, B2 seviyeleri için Cambridge müfredatına uygun hazırlanmış egzersizler.</p></div>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon"><i class="fas fa-file-pdf"></i></div>
-            <div><h4>İndirilebilir PDF'ler</h4><p>Tüm materyaller PDF formatında, istediğin zaman indir ve çalış.</p></div>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon"><i class="fas fa-chalkboard-teacher"></i></div>
-            <div><h4>Özel Online Ders</h4><p>Birebir özel ders imkanı ile hızlı ve etkili ilerleme sağlayın.</p></div>
-          </div>
+        <div class="ps-ttl">Hangi seviyeden başlayacağını bilmiyor musun?</div>
+        <div class="ps-sub">50 soruluk ücretsiz seviye testi ile CEFR düzeyini bul.</div>
+      </div>
+    </div>
+    <a href="placement-test-50.html" class="btn-accent-sm">Seviye Testini Başlat →</a>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<div class="section">
+  <div class="sec-center">
+    <div class="section-tag">Nasıl Çalışır</div>
+    <h2 class="section-title">Sistemi 30 saniyede anla</h2>
+  </div>
+  <div class="how-grid">
+    <div class="how-card">
+      <div class="how-step">1</div>
+      <div class="how-ttl">Seviyeni seç</div>
+      <div class="how-txt">A1'den başla ya da seviye testi ile doğru noktayı bul.</div>
+    </div>
+    <div class="how-card">
+      <div class="how-step">2</div>
+      <div class="how-ttl">Üniteye gir</div>
+      <div class="how-txt">Vocabulary, Grammar, Reading ve Exercises sekmeleri tam coursebook içeriğini yansıtır.</div>
+    </div>
+    <div class="how-card">
+      <div class="how-step">3</div>
+      <div class="how-ttl">Alıştırmaları yap</div>
+      <div class="how-txt">Soruları yanıtla, anında kontrol et. İlerleme otomatik kaydedilir.</div>
+    </div>
+    <div class="how-card">
+      <div class="how-step">4</div>
+      <div class="how-ttl">İlerlemeni izle</div>
+      <div class="how-txt">Günlük seri ve tamamlanma yüzdesi ile motivasyonunu koru.</div>
+    </div>
+  </div>
+</div>
+
+<!-- LEVELS -->
+<div class="section" id="levels">
+  <div class="sec-center">
+    <div class="section-tag">Kurs İçerikleri</div>
+    <h2 class="section-title">A1'den C1'e tam müfredat</h2>
+    <p class="section-sub sec-center">Her seviye PDF kaynak materyallerinden doldurulmuştur. Bir seviye seç, hemen çalışmaya başla.</p>
+  </div>
+
+  <div class="levels-2">
+    <a class="level-card" href="index-A1-A2.html">
+      <div class="lc-head a1">
+        <span class="lc-badge a1">A1 · Beginner</span>
+        <div class="lc-ttl">A1 — Başlangıç</div>
+        <div class="lc-sub">To be · Adjectives · Simple Present · Articles · Prepositions</div>
+        <div class="lc-chips">
+          <span class="lc-chip">10 Ünite</span><span class="lc-chip">2 Reader</span><span class="lc-chip">Workbook</span><span class="lc-chip">300+ Soru</span>
         </div>
       </div>
-      <div class="about-visual">
-        <div class="big-icon">📚</div>
-        <h3>A1 → B2 Yolculuğu</h3>
-        <p>Cambridge CEFR çerçevesine uygun yapılandırılmış müfredatımız ile her adımda yanınızdayız.</p>
-        <div style="margin-top:24px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
-          <span style="background:rgba(232,160,32,0.25);color:var(--accent2);padding:6px 16px;border-radius:6px;font-weight:700;font-size:.9rem;">A1</span>
-          <span style="color:rgba(255,255,255,0.3);padding:6px 0;">→</span>
-          <span style="background:rgba(232,160,32,0.25);color:var(--accent2);padding:6px 16px;border-radius:6px;font-weight:700;font-size:.9rem;">A2</span>
-          <span style="color:rgba(255,255,255,0.3);padding:6px 0;">→</span>
-          <span style="background:rgba(232,160,32,0.25);color:var(--accent2);padding:6px 16px;border-radius:6px;font-weight:700;font-size:.9rem;">B1</span>
-          <span style="color:rgba(255,255,255,0.3);padding:6px 0;">→</span>
-          <span style="background:rgba(232,160,32,0.35);color:var(--accent2);padding:6px 16px;border-radius:6px;font-weight:700;font-size:.9rem;">B2</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- DOCUMENTS -->
-<section id="documents">
-  <div class="section-inner">
-    <div class="section-tag">English Documents</div>
-    <h2 class="section-title">Dokümanlar & Konu Anlatımları</h2>
-    <p class="section-sub">Seviyenizi seçin — her kart sizi o konunun detaylı anlatımına yönlendirir.</p>
-    <div class="level-tabs">
-      <button class="level-tab active" onclick="filterDocs('ALL',event)">Tümü</button>
-      <button class="level-tab" onclick="filterDocs('A1',event)">A1</button>
-      <button class="level-tab" onclick="filterDocs('A2',event)">A2</button>
-      <button class="level-tab" onclick="filterDocs('B1',event)">B1</button>
-      <button class="level-tab" onclick="filterDocs('B2',event)">B2</button>
-    </div>
-    <div class="doc-grid" id="docGrid"></div>
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section id="skills">
-  <div class="section-inner">
-    <div class="section-tag">Skills</div>
-    <h2 class="section-title">Temel Beceriler</h2>
-    <p class="section-sub">İngilizce'nin dört temel becerisini geliştirmek için pratik materyaller.</p>
-    <div class="skills-tabs">
-      <button class="skill-tab active" onclick="switchSkill('reading',event)"><i class="fas fa-book-open" style="margin-right:6px"></i>Reading</button>
-      <button class="skill-tab" onclick="switchSkill('writing',event)"><i class="fas fa-pen-nib" style="margin-right:6px"></i>Writing</button>
-      <button class="skill-tab" onclick="switchSkill('listening',event)"><i class="fas fa-headphones" style="margin-right:6px"></i>Listening</button>
-      <button class="skill-tab" onclick="switchSkill('speaking',event)"><i class="fas fa-microphone" style="margin-right:6px"></i>Speaking</button>
-    </div>
-    <div id="skills-container"></div>
-  </div>
-</section>
-
-<!-- GRAMMAR -->
-<section id="grammar">
-  <div class="section-inner">
-    <div class="section-tag">Cambridge CEFR Dilbilgisi</div>
-    <h2 class="section-title">Grammar – Dilbilgisi</h2>
-    <p class="section-sub">Cambridge CEFR çerçevesine göre A1'den B2'ye tüm gramer konuları — tablolu yapı, örnekler ve çoklu alıştırma türleri.</p>
-    <div class="grammar-layout">
-      <div class="grammar-sidebar" id="grammarSidebar"></div>
-      <div id="grammarMain"></div>
-    </div>
-  </div>
-</section>
-
-<!-- ONLINE LESSON -->
-<section id="online-lesson">
-  <div class="section-inner">
-    <div class="section-tag">Özel Online Ders</div>
-    <h2 class="section-title">Birebir Online İngilizce Dersi</h2>
-    <p class="section-sub">Kendi seviyenize ve hedefinize göre kişiselleştirilmiş ders planı ile hızla ilerleyin.</p>
-
-    <div class="teacher-box">
-      <div class="teacher-avatar">👨‍🏫</div>
-      <div class="teacher-info">
-        <h4>AbOnlinEnglish Eğitmeni</h4>
-        <p>Cambridge CEFR sertifikalı eğitim yaklaşımı · A1'den B2'ye tüm seviyelerde birebir ders · Konuşma, yazma, gramer ve sınav odaklı çalışma programları.</p>
-      </div>
-    </div>
-
-    <div class="lesson-cards">
-      <div class="lesson-card">
-        <div class="lesson-card-icon">🎯</div>
-        <h3>Kişiselleştirilmiş Plan</h3>
-        <p>Seviye testinize göre tamamen size özel müfredat ve ilerleme planı hazırlanır.</p>
-        <ul>
-          <li>Ücretsiz seviye testi</li>
-          <li>Hedefe göre ders planı</li>
-          <li>Haftalık ilerleme raporu</li>
+      <div class="lc-body">
+        <ul class="lc-units">
+          <li><span class="lc-un a1">U1</span><span class="lc-em">👋</span>Hello! Nice to Meet You<span class="lc-gram">To be</span></li>
+          <li><span class="lc-un a1">U2</span><span class="lc-em">👨‍👩‍👧</span>My Family<span class="lc-gram">Possessives</span></li>
+          <li><span class="lc-un a1">U3</span><span class="lc-em">🏠</span>My Home and My Day<span class="lc-gram">Simple Present</span></li>
+          <li><span class="lc-un a1">U4</span><span class="lc-em">🍎</span>Food I Like<span class="lc-gram">like/love/hate</span></li>
+          <li><span class="lc-un a1">U5</span><span class="lc-em">🎨</span>Colours, Numbers & Classroom<span class="lc-gram">Adjectives</span></li>
+          <li style="font-size:11.5px;color:#94a3b8;padding-left:.3rem">+ 5 ünite daha →</li>
         </ul>
+        <div class="lc-footer">
+          <div class="lc-readers">📖 The Lighthouse Keeper's Cat &nbsp;·&nbsp; The Boy Who Was Afraid</div>
+          <span class="lc-btn a1">Başla →</span>
+        </div>
       </div>
-      <div class="lesson-card">
-        <div class="lesson-card-icon">💬</div>
-        <h3>Konuşma & Telaffuz</h3>
-        <p>Speaking ve pronunciation odaklı interaktif derslerle özgüveni artırın.</p>
-        <ul>
-          <li>Gerçek konuşma pratikleri</li>
-          <li>Telaffuz düzeltme</li>
-          <li>IELTS / Cambridge konuşma hazırlığı</li>
-        </ul>
-      </div>
-      <div class="lesson-card">
-        <div class="lesson-card-icon">📝</div>
-        <h3>Yazma & Gramer</h3>
-        <p>Paragraf, e-posta ve deneme yazımı ile gramer yapılarını kalıcı öğrenin.</p>
-        <ul>
-          <li>Yazı geri bildirimi</li>
-          <li>Cambridge gramer müfredatı</li>
-          <li>Hata analizi ve düzeltme</li>
-        </ul>
-      </div>
-      <div class="lesson-card">
-        <div class="lesson-card-icon">🏆</div>
-        <h3>Sınav Hazırlığı</h3>
-        <p>IELTS, YDS, YÖKDİL ve Cambridge sınavlarına yönelik odaklı hazırlık programı.</p>
-        <ul>
-          <li>Sınav teknikleri ve stratejileri</li>
-          <li>Mock test uygulamaları</li>
-          <li>Zaman yönetimi</li>
-        </ul>
-      </div>
-    </div>
+    </a>
 
-    <div class="lesson-pricing">
-      <h3>📅 Ders Seçenekleri</h3>
-      <div class="pricing-grid">
-        <div class="price-item">
-          <div class="duration">Deneme Dersi</div>
-          <div class="price">Ücretsiz</div>
-          <div class="price-sub">30 dakika · bir kez</div>
-        </div>
-        <div class="price-item">
-          <div class="duration">Tekli Ders</div>
-          <div class="price" style="font-size:1.5rem;">Fiyat İçin Yazın</div>
-          <div class="price-sub">50 dakika</div>
-        </div>
-        <div class="price-item">
-          <div class="duration">Aylık Paket</div>
-          <div class="price" style="font-size:1.5rem;">Fiyat İçin Yazın</div>
-          <div class="price-sub">8 ders · haftada 2</div>
-        </div>
-        <div class="price-item">
-          <div class="duration">Yoğun Program</div>
-          <div class="price" style="font-size:1.5rem;">Fiyat İçin Yazın</div>
-          <div class="price-sub">16 ders · haftada 4</div>
+    <a class="level-card" href="index-A1-A2.html">
+      <div class="lc-head a2">
+        <span class="lc-badge a2">A2 · Elementary</span>
+        <div class="lc-ttl">A2 — Temel</div>
+        <div class="lc-sub">Past Simple · Going to · Comparatives · Modals · -ing verbs</div>
+        <div class="lc-chips">
+          <span class="lc-chip">10 Ünite</span><span class="lc-chip">2 Reader</span><span class="lc-chip">Workbook</span><span class="lc-chip">300+ Soru</span>
         </div>
       </div>
-      <p style="color:rgba(255,255,255,0.55);font-size:.88rem;margin-bottom:20px;">Dersler Google Meet veya Zoom üzerinden yapılır. Ders materyalleri öğrenciye önceden iletilir.</p>
-      <div class="lesson-cta">
-        <a href="https://wa.me/90XXXXXXXXXX" class="btn-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp ile Yaz</a>
-        <a href="mailto:ingilizceogrensene@gmail.com" class="btn-email-lesson"><i class="fas fa-envelope"></i> E-posta Gönder</a>
-        <a href="https://www.instagram.com/abonlinenglish" class="btn-secondary" target="_blank" style="display:inline-flex;align-items:center;gap:8px;"><i class="fab fa-instagram"></i> Instagram'dan Yaz</a>
+      <div class="lc-body">
+        <ul class="lc-units">
+          <li><span class="lc-un a2">U1</span><span class="lc-em">⏰</span>Daily Routines<span class="lc-gram">Adverbs of Freq.</span></li>
+          <li><span class="lc-un a2">U2</span><span class="lc-em">🛒</span>Shopping and Money<span class="lc-gram">some/any</span></li>
+          <li><span class="lc-un a2">U3</span><span class="lc-em">🌤️</span>Weather and Climate<span class="lc-gram">Pres. Continuous</span></li>
+          <li><span class="lc-un a2">U4</span><span class="lc-em">🧭</span>Getting Around<span class="lc-gram">Past Simple</span></li>
+          <li><span class="lc-un a2">U5</span><span class="lc-em">📖</span>My Past<span class="lc-gram">used to</span></li>
+          <li style="font-size:11.5px;color:#94a3b8;padding-left:.3rem">+ 5 ünite daha →</li>
+        </ul>
+        <div class="lc-footer">
+          <div class="lc-readers">📖 The Postcard from Nowhere &nbsp;·&nbsp; The Market of Lost Things</div>
+          <span class="lc-btn a2">Başla →</span>
+        </div>
       </div>
+    </a>
+  </div>
+
+  <div class="levels-3">
+    <a class="level-card" href="index-B1-B2-C1.html">
+      <div class="lc-head b1">
+        <span class="lc-badge b1">B1 · Pre-Intermediate</span>
+        <div class="lc-ttl">B1 — Orta</div>
+        <div class="lc-sub">Present Perfect · Passive · Conditionals · Narrative Tenses</div>
+        <div class="lc-chips">
+          <span class="lc-chip">10 Ünite</span><span class="lc-chip">2 Reader</span><span class="lc-chip">Workbook</span>
+        </div>
+      </div>
+      <div class="lc-body">
+        <ul class="lc-units">
+          <li><span class="lc-un b1">U1</span><span class="lc-em">✈️</span>Travel Experiences</li>
+          <li><span class="lc-un b1">U2</span><span class="lc-em">🌱</span>Environment & Climate</li>
+          <li><span class="lc-un b1">U3</span><span class="lc-em">📱</span>Media & Technology</li>
+          <li><span class="lc-un b1">U4</span><span class="lc-em">🧠</span>Learning & Memory</li>
+          <li style="font-size:11.5px;color:#94a3b8;padding-left:.3rem">+ 6 ünite daha →</li>
+        </ul>
+        <div class="lc-footer">
+          <div class="lc-readers" style="font-size:11px;">📖 The Island of Fog · The Last Conductor</div>
+          <span class="lc-btn b1">Başla →</span>
+        </div>
+      </div>
+    </a>
+
+    <a class="level-card" href="index-B1-B2-C1.html">
+      <div class="lc-head b2">
+        <span class="lc-badge b2">B2 · Upper-Intermediate</span>
+        <div class="lc-ttl">B2 — Üst Orta</div>
+        <div class="lc-sub">Advanced Passive · Cleft · Discourse Markers · Hedging</div>
+        <div class="lc-chips">
+          <span class="lc-chip">10 Ünite</span><span class="lc-chip">2 Reader</span><span class="lc-chip">Workbook</span>
+        </div>
+      </div>
+      <div class="lc-body">
+        <ul class="lc-units">
+          <li><span class="lc-un b2">U1</span><span class="lc-em">🔬</span>Science & Discovery</li>
+          <li><span class="lc-un b2">U2</span><span class="lc-em">⚖️</span>Law & Society</li>
+          <li><span class="lc-un b2">U3</span><span class="lc-em">💡</span>Innovation & Change</li>
+          <li><span class="lc-un b2">U4</span><span class="lc-em">📰</span>Language & Communication</li>
+          <li style="font-size:11.5px;color:#94a3b8;padding-left:.3rem">+ 6 ünite daha →</li>
+        </ul>
+        <div class="lc-footer">
+          <div class="lc-readers" style="font-size:11px;">📖 Everything She Left · Three Days in November</div>
+          <span class="lc-btn b2">Başla →</span>
+        </div>
+      </div>
+    </a>
+
+    <a class="level-card" href="index-B1-B2-C1.html">
+      <div class="lc-head c1">
+        <span class="lc-badge c1">C1 · Advanced</span>
+        <div class="lc-ttl">C1 — İleri</div>
+        <div class="lc-sub">Inversion · Ellipsis · Participial Phrases · Synthesis</div>
+        <div class="lc-chips">
+          <span class="lc-chip">10 Ünite</span><span class="lc-chip">2 Reader</span><span class="lc-chip">Workbook</span>
+        </div>
+      </div>
+      <div class="lc-body">
+        <ul class="lc-units">
+          <li><span class="lc-un c1">U1</span><span class="lc-em">🧩</span>Architecture of Thought</li>
+          <li><span class="lc-un c1">U2</span><span class="lc-em">⚡</span>Power, Narrative & Truth</li>
+          <li><span class="lc-un c1">U3</span><span class="lc-em">🌀</span>Consciousness & Identity</li>
+          <li><span class="lc-un c1">U4</span><span class="lc-em">📡</span>The Information Age</li>
+          <li style="font-size:11.5px;color:#94a3b8;padding-left:.3rem">+ 6 ünite daha →</li>
+        </ul>
+        <div class="lc-footer">
+          <div class="lc-readers" style="font-size:11px;">📖 The Cartographer · A Reliable Narrator</div>
+          <span class="lc-btn c1">Başla →</span>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="mat-box">
+    <div class="mat-ttl">📦 Her seviyede şunlar var</div>
+    <div class="mat-row">
+      <div class="mat-item"><div class="mat-ico">📘</div><div class="mat-lbl">Coursebook</div><div class="mat-desc2">Vocab + Grammar + Reading</div></div>
+      <div class="mat-item"><div class="mat-ico">📝</div><div class="mat-lbl">Workbook</div><div class="mat-desc2">Alıştırma + Hikayeler</div></div>
+      <div class="mat-item"><div class="mat-ico">📖</div><div class="mat-lbl">Reader 1 & 2</div><div class="mat-desc2">Özgün hikayeler</div></div>
+      <div class="mat-item"><div class="mat-ico">✏️</div><div class="mat-lbl">Exercises</div><div class="mat-desc2">Anında kontrol</div></div>
+      <div class="mat-item"><div class="mat-ico">🔥</div><div class="mat-lbl">İlerleme</div><div class="mat-desc2">Günlük seri sistemi</div></div>
     </div>
   </div>
-</section>
+</div>
 
-<!-- CONTACT -->
-<section id="contact">
-  <div class="section-inner">
-    <div class="section-tag">İletişim</div>
-    <h2 class="section-title">Bize Ulaşın</h2>
-    <p class="section-sub">Sorularınız için bizimle iletişime geçin.</p>
-    <div class="contact-grid">
-      <div>
-        <div class="contact-info">
-          <div class="contact-item">
-            <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
-            <div><h5>E-posta</h5><a href="mailto:ingilizceogrensene@gmail.com">ingilizceogrensene@gmail.com</a></div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-item-icon"><i class="fab fa-instagram"></i></div>
-            <div><h5>Instagram</h5><a href="https://www.instagram.com/abonlinenglish" target="_blank">@abonlinenglish</a></div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-item-icon"><i class="fab fa-whatsapp"></i></div>
-            <div><h5>WhatsApp</h5><p>Hızlı destek için yazın</p></div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-item-icon"><i class="fas fa-clock"></i></div>
-            <div><h5>Çalışma Saatleri</h5><p>Pzt–Cuma: 09:00 – 20:00</p></div>
-          </div>
-        </div>
-      </div>
-      <form class="contact-form" onsubmit="submitForm(event)">
-        <div class="form-row">
-          <div class="form-group"><label>Adınız</label><input type="text" placeholder="Ad Soyad" required></div>
-          <div class="form-group"><label>E-posta</label><input type="email" placeholder="ornek@mail.com" required></div>
-        </div>
-        <div class="form-group">
-          <label>Seviyeniz</label>
-          <select><option>Seviye Seçin</option><option>A1 – Başlangıç</option><option>A2 – Temel</option><option>B1 – Orta</option><option>B2 – Üst Orta</option><option>Bilmiyorum – Test Etmek İstiyorum</option></select>
-        </div>
-        <div class="form-group">
-          <label>Konu</label>
-          <select><option>Konu Seçin</option><option>Özel Ders Talebi</option><option>Deneme Dersi</option><option>Materyal Hakkında</option><option>Diğer</option></select>
-        </div>
-        <div class="form-group"><label>Mesajınız</label><textarea placeholder="Mesajınızı yazın..."></textarea></div>
-        <button class="form-submit" type="submit"><i class="fas fa-paper-plane" style="margin-right:8px"></i>Gönder</button>
-      </form>
-    </div>
+<!-- GAMES -->
+<div class="section">
+  <div class="sec-center">
+    <div class="section-tag">Alıştırma</div>
+    <h2 class="section-title">Oyunlarla pekiştir</h2>
+    <p class="section-sub" style="margin:0 auto 2rem;">Vocabulary quiz, sentence builder, ear training ve daha fazlası.</p>
   </div>
-</section>
+  <a class="games-card" href="games.html">
+    <div class="gc-in">
+      <div class="gc-emoji">🎮</div>
+      <h3 class="gc-ttl">Interaktif Oyunlar</h3>
+      <p class="gc-sub">A1'den C1'e tüm seviyelerde vocabulary, grammar, quiz ve daha fazlası.</p>
+      <div class="gc-tags">
+        <span class="gc-tag">Vocabulary Quiz</span>
+        <span class="gc-tag">Sentence Builder</span>
+        <span class="gc-tag">Reading Comprehension</span>
+        <span class="gc-tag">Ear Training</span>
+        <span class="gc-tag">Grammar Games</span>
+      </div>
+      <div class="gc-btn">Oyunları Aç →</div>
+    </div>
+  </a>
+</div>
+
+<!-- CEFR LADDER -->
+<div class="section">
+  <div class="sec-center">
+    <div class="section-tag">CEFR Yol Haritası</div>
+    <h2 class="section-title">Neredesin, nereye gidiyorsun?</h2>
+    <p class="section-sub" style="margin:0 auto 2rem;">Her seviyenin neyi kapsadığını gör, doğru noktadan başla.</p>
+  </div>
+  <div class="cefr-ladder">
+    <a class="cefr-row" href="index-A1-A2.html">
+      <div class="cefr-bdg cb-a1">A1</div>
+      <div class="cefr-info">
+        <div class="cefr-ttl">A1 Beginner — Başlangıç</div>
+        <div class="cefr-sub">To be · Possessives · Simple Present · Prepositions · Emotions</div>
+        <div class="cefr-tags"><span class="ctag">10 ünite</span><span class="ctag">2 reader</span><span class="ctag">workbook</span></div>
+      </div>
+      <div class="cefr-arrow">→</div>
+    </a>
+    <a class="cefr-row" href="index-A1-A2.html">
+      <div class="cefr-bdg cb-a2">A2</div>
+      <div class="cefr-info">
+        <div class="cefr-ttl">A2 Elementary — Temel</div>
+        <div class="cefr-sub">Past Simple · Going to · Comparatives · Modals · -ing verb patterns</div>
+        <div class="cefr-tags"><span class="ctag">10 ünite</span><span class="ctag">2 reader</span><span class="ctag">workbook</span></div>
+      </div>
+      <div class="cefr-arrow">→</div>
+    </a>
+    <a class="cefr-row" href="index-B1-B2-C1.html">
+      <div class="cefr-bdg cb-b1">B1</div>
+      <div class="cefr-info">
+        <div class="cefr-ttl">B1 Pre-Intermediate — Orta</div>
+        <div class="cefr-sub">Present Perfect · Passive Voice · Conditionals · Reported Speech</div>
+        <div class="cefr-tags"><span class="ctag">10 ünite</span><span class="ctag">2 reader</span><span class="ctag">workbook</span></div>
+      </div>
+      <div class="cefr-arrow">→</div>
+    </a>
+    <a class="cefr-row" href="index-B1-B2-C1.html">
+      <div class="cefr-bdg cb-b2">B2</div>
+      <div class="cefr-info">
+        <div class="cefr-ttl">B2 Upper-Intermediate — Üst Orta</div>
+        <div class="cefr-sub">Advanced Passive · Cleft Sentences · Discourse Markers · Hedging</div>
+        <div class="cefr-tags"><span class="ctag">10 ünite</span><span class="ctag">2 reader</span><span class="ctag">workbook</span></div>
+      </div>
+      <div class="cefr-arrow">→</div>
+    </a>
+    <a class="cefr-row" href="index-B1-B2-C1.html">
+      <div class="cefr-bdg cb-c1">C1</div>
+      <div class="cefr-info">
+        <div class="cefr-ttl">C1 Advanced — İleri</div>
+        <div class="cefr-sub">Inversion · Ellipsis · Participial Phrases · Synthesis</div>
+        <div class="cefr-tags"><span class="ctag">10 ünite</span><span class="ctag">2 reader</span><span class="ctag">workbook</span></div>
+      </div>
+      <div class="cefr-arrow">→</div>
+    </a>
+  </div>
+  <div style="text-align:center;margin-top:2rem;">
+    <a href="YOL_HARITASI_COMPLETE__2_.html" class="btn-primary" style="text-decoration:none;">Tam Yol Haritasını Gör →</a>
+  </div>
+</div>
 
 <footer>
   <div class="footer-socials">
-    <a href="https://www.instagram.com/abonlinenglish" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-    <a href="mailto:ingilizceogrensene@gmail.com" title="E-posta"><i class="fas fa-envelope"></i></a>
-    <a href="https://wa.me/90XXXXXXXXXX" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://www.instagram.com/abonlinenglish" target="_blank" title="Instagram">ig</a>
+    <a href="mailto:ingilizceogrensene@gmail.com" title="E-posta">@</a>
   </div>
   <strong>AbOnlinEnglish</strong> Dil Eğitimi &copy; 2025 — Tüm hakları saklıdır.<br>
   <span style="margin-top:6px;display:inline-block;">ingilizceogrensene@gmail.com &nbsp;|&nbsp; @abonlinenglish</span>
 </footer>
 
-<div class="toast" id="toast"></div>
-
 <script>
-/* ===================== DOCS DATA ===================== */
-const docs = [
-  {level:'A1',title:'Present Simple',desc:'Olumlu/olumsuz/soru yapısı, he/she/it kuralı, alıştırmalar.',grammarKey:'A1',topicIdx:0},
-  {level:'A1',title:'To Be (am/is/are)',desc:'"To be" fiilinin tüm çekimleri, kısaltmalar ve egzersizler.',grammarKey:'A1',topicIdx:1},
-  {level:'A1',title:'Articles (a/an/the)',desc:'Belirsiz ve belirli tanımlıkların doğru kullanımı.',grammarKey:'A1',topicIdx:2},
-  {level:'A1',title:'Plural Nouns',desc:'Düzenli ve düzensiz çoğul isimler.',grammarKey:'A1',topicIdx:3},
-  {level:'A1',title:'Possessive Adjectives',desc:'my, your, his, her, its, our, their ve iyelik zamirleri.',grammarKey:'A1',topicIdx:4},
-  {level:'A1',title:'There is / There are',desc:'Varlık ifadeleri, olumlu/olumsuz/soru.',grammarKey:'A1',topicIdx:5},
-  {level:'A1',title:'Numbers & Time',desc:'Sayılar, saat ve tarih ifadeleri.',grammarKey:'A1',topicIdx:6},
-  {level:'A2',title:'Past Simple',desc:'Düzenli/düzensiz fiiller, did yapısı.',grammarKey:'A2',topicIdx:0},
-  {level:'A2',title:'Present Continuous',desc:'Şimdiki süregelen zaman ve kullanım alanları.',grammarKey:'A2',topicIdx:1},
-  {level:'A2',title:'Future: will & going to',desc:'Gelecek zaman planları ve tahminler.',grammarKey:'A2',topicIdx:2},
-  {level:'A2',title:'Comparatives & Superlatives',desc:'Karşılaştırma ve üstünlük sıfatları.',grammarKey:'A2',topicIdx:3},
-  {level:'A2',title:'Prepositions',desc:'in, on, at, by – zaman ve yer edatları.',grammarKey:'A2',topicIdx:4},
-  {level:'A2',title:'Can / Can\'t',desc:'Yetenek ve izin ifadesi.',grammarKey:'A2',topicIdx:5},
-  {level:'A2',title:'Past Continuous',desc:'Geçmişte süregelen eylemler.',grammarKey:'A2',topicIdx:6},
-  {level:'B1',title:'Present Perfect',desc:'Have/has + V3, ever/never/already/yet.',grammarKey:'B1',topicIdx:0},
-  {level:'B1',title:'Present Perfect vs Past Simple',desc:'İki zamanın karşılaştırmalı kullanımı.',grammarKey:'B1',topicIdx:1},
-  {level:'B1',title:'Conditionals Type 0 & 1',desc:'Gerçek koşul cümleleri.',grammarKey:'B1',topicIdx:2},
-  {level:'B1',title:'Passive Voice',desc:'Edilgen yapı, present ve past.',grammarKey:'B1',topicIdx:3},
-  {level:'B1',title:'Modal Verbs',desc:'can/could/may/might/should/must',grammarKey:'B1',topicIdx:4},
-  {level:'B1',title:'Gerunds & Infinitives',desc:'-ing ve to-infinitive kullanım kuralları.',grammarKey:'B1',topicIdx:5},
-  {level:'B1',title:'Used to',desc:'Geçmişteki alışkanlıklar.',grammarKey:'B1',topicIdx:6},
-  {level:'B2',title:'Conditionals Type 2 & 3',desc:'Varsayım ve pişmanlık cümleleri.',grammarKey:'B2',topicIdx:0},
-  {level:'B2',title:'Reported Speech',desc:'Dolaylı anlatım ve zaman kayması.',grammarKey:'B2',topicIdx:1},
-  {level:'B2',title:'Relative Clauses',desc:'Defining ve non-defining yan cümleler.',grammarKey:'B2',topicIdx:2},
-  {level:'B2',title:'Advanced Passive',desc:'Perfect, future, modal edilgen yapılar.',grammarKey:'B2',topicIdx:3},
-  {level:'B2',title:'Wish & If Only',desc:'Dilek ve pişmanlık ifadeleri.',grammarKey:'B2',topicIdx:4},
-  {level:'B2',title:'Inversion & Emphasis',desc:'Devrik cümleler ve vurgu yapıları.',grammarKey:'B2',topicIdx:5},
-  {level:'B2',title:'Cleft Sentences',desc:'It-cleft ve What-cleft yapıları.',grammarKey:'B2',topicIdx:6},
-];
-
-let activeDocLevel = 'ALL';
-function filterDocs(level, event){
-  activeDocLevel = level;
-  document.querySelectorAll('.level-tab').forEach(t=>t.classList.remove('active'));
-  if(event) event.target.classList.add('active');
-  renderDocs();
-}
-function renderDocs(){
-  const grid = document.getElementById('docGrid');
-  const filtered = activeDocLevel==='ALL' ? docs : docs.filter(d=>d.level===activeDocLevel);
-  grid.innerHTML = filtered.map(d=>`
-    <div class="doc-card" onclick="goToGrammarTopic('${d.grammarKey}',${d.topicIdx})">
-      <div class="doc-card-top">
-        <div class="pdf-icon"><i class="fas fa-book-open"></i></div>
-        <span class="doc-level-badge">${d.level}</span>
-      </div>
-      <h4>${d.title}</h4>
-      <p>${d.desc}</p>
-      <span class="doc-action"><i class="fas fa-arrow-right"></i> Konu Anlatımına Git</span>
-    </div>
-  `).join('');
-}
-
-function goToGrammarTopic(level, topicIdx){
-  activeGrammarLevel = level;
-  activeGrammarTopic = topicIdx;
-  renderGrammarSidebar();
-  renderGrammarMain();
-  setTimeout(()=>{
-    document.getElementById('grammar').scrollIntoView({behavior:'smooth'});
-  },100);
-}
-
-renderDocs();
-
-/* ===================== SKILLS DATA ===================== */
-const skills = {
-  reading:{icon:'📖',title:'Reading – Okuma',desc:'Okuma becerinizi geliştirmek için farklı seviyelerde metinler, anlama soruları ve strateji rehberleri.',tips:['Okumadan önce başlığa ve görsellere bakın.','Bilinmeyen kelimeler için bağlamı kullanın.','Ana fikri bulmak için ilk ve son paragrafa odaklanın.','Notlar alın, önemli kısımların altını çizin.'],mats:[{icon:'📄',title:'A1–A2 Reading Texts',desc:'Günlük hayat konularında kısa metinler'},{icon:'📄',title:'B1 Reading Comprehension',desc:'Orta seviye anlama soruları'},{icon:'📄',title:'B2 Academic Reading',desc:'Akademik metin stratejileri'},{icon:'📝',title:'Reading Strategies Guide',desc:'Etkili okuma teknikleri rehberi'}]},
-  writing:{icon:'✍️',title:'Writing – Yazma',desc:'E-posta, paragraf ve deneme yazma becerilerinizi geliştirin.',tips:['Yazmadan önce plan yapın.','Paragraf yapısına dikkat edin.','Bağlaçları doğru kullanın.','Yazdıktan sonra mutlaka gözden geçirin.'],mats:[{icon:'📄',title:'Email Writing Templates',desc:'Formal ve informal e-posta şablonları'},{icon:'📄',title:'Paragraph Writing Guide',desc:'Paragraf yazma adım adım rehber'},{icon:'📄',title:'Essay Structure',desc:'Deneme yapısı ve örnekler'},{icon:'📝',title:'Useful Phrases & Connectors',desc:'Bağlaçlar ve ifadeler'}]},
-  listening:{icon:'🎧',title:'Listening – Dinleme',desc:'Farklı aksanları anlama ve not alma becerilerini geliştiren materyaller.',tips:['İlk dinlemede genel anlama odaklanın.','Anahtar kelimeleri ve isimleri not alın.','Farklı aksanlara maruz kalmaya çalışın.','Transcript ile birlikte çalışın.'],mats:[{icon:'🎵',title:'A1–A2 Listening Scripts',desc:'Temel diyalog transkriptleri'},{icon:'🎵',title:'B1 Note-Taking Practice',desc:'Not alma egzersizleri'},{icon:'🎵',title:'B2 Lecture Listening',desc:'Akademik dinleme materyalleri'},{icon:'📝',title:'Listening Strategies',desc:'Dinleme öncesi/sonrası stratejiler'}]},
-  speaking:{icon:'🎙️',title:'Speaking – Konuşma',desc:'Telaffuz, akıcılık ve özgüven geliştirmek için rehberler.',tips:['Yüksek sesle konuşma pratiği yapın.','Günde en az 5 dakika İngilizce konuşun.','Hataları düzeltmeye takılmayın, akıcılığa odaklanın.','Ayna karşısında ya da kayıt alarak çalışın.'],mats:[{icon:'📄',title:'Pronunciation Guide',desc:'IPA ve telaffuz kuralları'},{icon:'📄',title:'Conversation Starters',desc:'Sohbet başlatma kalıpları'},{icon:'📄',title:'IELTS Speaking Topics',desc:'IELTS sınav konuları ve örnek cevaplar'},{icon:'📝',title:'Useful Phrases for Fluency',desc:'Akıcı konuşma için kalıp ifadeler'}]},
-};
-
-let activeSkill = 'reading';
-function switchSkill(key, event){
-  activeSkill = key;
-  document.querySelectorAll('.skill-tab').forEach(t=>t.classList.remove('active'));
-  if(event) event.target.classList.add('active');
-  renderSkills();
-}
-function renderSkills(){
-  const s = skills[activeSkill];
-  document.getElementById('skills-container').innerHTML = `
-    <div class="skill-content active">
-      <div class="skill-info">
-        <h3>${s.icon} ${s.title}</h3>
-        <p>${s.desc}</p>
-        <div class="skill-tips"><h5>💡 İpuçları</h5><ul>${s.tips.map(t=>`<li>${t}</li>`).join('')}</ul></div>
-      </div>
-      <div class="skill-materials">
-        <h4 style="font-weight:700;color:var(--navy);margin-bottom:8px;">Materyaller</h4>
-        ${s.mats.map(m=>`
-          <div class="material-item" onclick="showToast('Materyal açılıyor: ${m.title}')">
-            <div class="mat-icon"><i class="fas fa-file-pdf"></i></div>
-            <div class="mat-info"><h5>${m.title}</h5><p>${m.desc}</p></div>
-            <i class="fas fa-download" style="color:var(--muted);margin-left:auto"></i>
-          </div>`).join('')}
-      </div>
-    </div>`;
-}
-renderSkills();
-
-/* ===================== GRAMMAR DATA ===================== */
-const grammar = {
-  A1:{label:'A1 – Başlangıç',topics:[
-    {
-      title:'Present Simple',sub:'Geniş Zaman',cefr:'A1',
-      explanation:'Present Simple rutinler, alışkanlıklar, genel gerçekler ve zaman çizelgesiyle belirlenen gelecek için kullanılır. Cambridge A1 kitaplarında ilk öğretilen temel yapıdır.',
-      table:[
-        ['Özne','Olumlu','Olumsuz','Soru'],
-        ['I / You / We / They','work / play / go','do not (don\'t) work','Do I/you work?'],
-        ['He / She / It','works / plays / goes','does not (doesn\'t) work','Does he/she work?'],
-      ],
-      notes:['He/she/it ile fiil sonuna -s/-es/-ies eklenir.','watch→watches, go→goes, study→studies, have→has','Zaman zarfları: always, usually, often, sometimes, never, every day'],
-      examples:[
-        {eng:'I work every day.',tr:'Her gün çalışırım.'},
-        {eng:'She drinks coffee in the morning.',tr:'Sabahları kahve içer.'},
-        {eng:'They do not play football on Mondays.',tr:'Pazartesi günleri futbol oynamazlar.'},
-        {eng:'Does he speak English?',tr:'İngilizce konuşur mu?'},
-        {eng:'Water boils at 100 degrees.',tr:'Su 100 derecede kaynar.'},
-        {eng:'The train leaves at 8 am.',tr:'Tren sabah 8\'de kalkıyor.'},
-      ],
-      exercises:[
-        {type:'fill',q:'She ___ (go) to school every day.',a:'goes'},
-        {type:'fill',q:'They ___ (not/watch) TV at night.',a:"don't watch"},
-        {type:'fill',q:'Water ___ (boil) at 100 degrees.',a:'boils'},
-        {type:'fill',q:'He ___ (study) English every evening.',a:'studies'},
-        {type:'fill',q:'We ___ (not/live) in Istanbul.',a:"don't live"},
-        {type:'mc',q:'Which sentence is CORRECT?',opts:['He play football.','She don\'t work here.','They works every day.','He goes to school.'],a:'He goes to school.'},
-        {type:'mc',q:'"I ___ (like) chocolate." — correct form:',opts:['likes','like','am like','do likes'],a:'like'},
-        {type:'tf',q:'"She don\'t go to the gym." — Bu cümle doğru mu?',a:false,explain:'"She" ile "doesn\'t go" kullanılmalı.'},
-        {type:'tf',q:'"He watches TV every evening." — Bu cümle doğru mu?',a:true},
-        {type:'transform',q:'"I play tennis." → Olumsuz yapın.',a:"I don't play tennis."},
-        {type:'transform',q:'"She works in a bank." → Soru yapın.',a:'Does she work in a bank?'},
-      ]
-    },
-    {
-      title:'To Be (am / is / are)',sub:'"To be" Fiili',cefr:'A1',
-      explanation:'"To be" İngilizcenin en temel fiilidir. Kimlik, meslek, köken, yaş ve vasıfları ifade eder. Cambridge A1 Starters/Movers seviyesinde ilk öğretilen yapıdır.',
-      table:[
-        ['Özne','Tam Biçim','Kısaltma','Olumsuz','Soru'],
-        ['I','I am','I\'m','I\'m not','Am I?'],
-        ['You','You are','You\'re','You aren\'t','Are you?'],
-        ['He / She / It','He is','He\'s','He isn\'t','Is he?'],
-        ['We / They','We are','We\'re','We aren\'t','Are we?'],
-      ],
-      notes:['Kısa cevap: Yes, I am. / No, she isn\'t.','Yaş: I am 15 years old.','Meslek: She is a teacher.','Köken: They are from Turkey.'],
-      examples:[
-        {eng:'I am a student.',tr:'Ben bir öğrenciyim.'},
-        {eng:'She is from Ankara.',tr:'O Ankara\'dan.'},
-        {eng:'They are not tired.',tr:'Onlar yorgun değil.'},
-        {eng:'Is he a doctor? Yes, he is.',tr:'O bir doktor mu? Evet.'},
-        {eng:'We are happy today.',tr:'Bugün mutluyuz.'},
-        {eng:'It is cold outside.',tr:'Dışarısı soğuk.'},
-      ],
-      exercises:[
-        {type:'fill',q:'He ___ a doctor.',a:'is'},
-        {type:'fill',q:'We ___ happy today.',a:'are'},
-        {type:'fill',q:'I ___ not tired.',a:'am'},
-        {type:'fill',q:'___ they from Ankara?',a:'Are'},
-        {type:'fill',q:'She ___ not a teacher, she ___ a nurse.',a:'is / is'},
-        {type:'mc',q:'Choose the correct form: "She ___ 20 years old."',opts:['am','is','are','be'],a:'is'},
-        {type:'mc',q:'"___ you a student?" "Yes, I ___."',opts:['Are / am','Is / is','Am / are','Are / are'],a:'Are / am'},
-        {type:'tf',q:'"They is from London." — Doğru mu?',a:false,explain:'"They are from London." olmalı.'},
-        {type:'tf',q:'"I\'m not hungry." — Doğru mu?',a:true},
-        {type:'transform',q:'"He is a teacher." → Olumsuz yapın.',a:"He isn't a teacher."},
-        {type:'transform',q:'"They are from Spain." → Soru yapın.',a:'Are they from Spain?'},
-      ]
-    },
-    {
-      title:'Articles (a / an / the)',sub:'Tanımlıklar',cefr:'A1',
-      explanation:'"a" ve "an" belirsiz tanımlıklardır (ilk kez bahsedilen şeyler için). "the" belirli tanımlıktır (bilinen/özgün şeyler için). "an", sesli harf sesiyle başlayan kelimelerin önünde kullanılır.',
-      table:[
-        ['Tanımlık','Kullanım','Örnek'],
-        ['a','Sessiz harf sesiyle başlayan kelimeler önünde','a cat, a book, a university'],
-        ['an','Sesli harf sesiyle başlayan kelimeler önünde','an apple, an hour, an elephant'],
-        ['the','Bilinen/özgün/tek olan şeyler için','the sun, the door, the Eiffel Tower'],
-        ['(–) sıfır tanımlık','Genel anlamlı çoğul ve sıyılanamaz isimler','Dogs are friendly. / Water is life.'],
-      ],
-      notes:['university → /juː/ sessiz sesle başlar → "a university"','hour → /aʊ/ sesli sesle başlar → "an hour"','İkinci kez bahsedilince "a/an" → "the" olur.'],
-      examples:[
-        {eng:'I have a cat.',tr:'Bir kedim var.'},
-        {eng:'She is an engineer.',tr:'O bir mühendis.'},
-        {eng:'The sun is bright.',tr:'Güneş parlak.'},
-        {eng:'I saw an elephant at the zoo.',tr:'Hayvanat bahçesinde bir fil gördüm.'},
-        {eng:'A: I have a dog. B: Really? What colour is the dog?',tr:'A: Bir köpeğim var. B: Gerçekten mi? Köpeğin rengi ne?'},
-      ],
-      exercises:[
-        {type:'fill',q:'I saw ___ elephant at the zoo.',a:'an'},
-        {type:'fill',q:'She is ___ teacher.',a:'a'},
-        {type:'fill',q:'Close ___ door, please.',a:'the'},
-        {type:'fill',q:'He has ___ umbrella.',a:'an'},
-        {type:'fill',q:'___ Eiffel Tower is in Paris.',a:'The'},
-        {type:'fill',q:'She is ___ honest person.',a:'an'},
-        {type:'mc',q:'"I want ___ apple and ___ banana."',opts:['a / a','an / a','a / an','an / an'],a:'an / a'},
-        {type:'mc',q:'"___ moon is very bright tonight."',opts:['A','An','The','–'],a:'The'},
-        {type:'tf',q:'"She is a engineer." — Doğru mu?',a:false,explain:'"engineer" sesli harfle başlar → "an engineer" olmalı.'},
-        {type:'tf',q:'"The dogs are mammals." — Doğru mu?',a:false,explain:'Genel anlam için sıfır tanımlık: "Dogs are mammals."'},
-        {type:'transform',q:'"I have book." → Doğru biçimde yazın.',a:'I have a book.'},
-      ]
-    },
-    {
-      title:'Plural Nouns',sub:'Çoğul İsimler',cefr:'A1',
-      explanation:'İngilizce\'de çoğul isimler genellikle "-s" eklenerek yapılır. Bazı özel kurallar ve düzensiz çoğullar ezberlenmeli.',
-      table:[
-        ['Kural','Sonekler','Örnek'],
-        ['Genel kural','+s','book→books, cat→cats, car→cars'],
-        ['-s/-ss/-sh/-ch/-x/-z ile bitenler','+es','bus→buses, box→boxes, watch→watches'],
-        ['Ünsüz+-y ile bitenler','-y → +ies','city→cities, baby→babies, country→countries'],
-        ['Sesli+-y ile bitenler','+s','boy→boys, day→days, key→keys'],
-        ['-f/-fe ile bitenler','-f/-fe → +ves','leaf→leaves, knife→knives, wife→wives'],
-        ['Düzensiz','Tümüyle değişir','man→men, woman→women, child→children, tooth→teeth, foot→feet, mouse→mice'],
-        ['Tekil=Çoğul','Değişmez','sheep→sheep, fish→fish, deer→deer'],
-      ],
-      examples:[
-        {eng:'I have three books.',tr:'Üç kitabım var.'},
-        {eng:'The children are playing in the garden.',tr:'Çocuklar bahçede oynuyor.'},
-        {eng:'Two boxes are on the table.',tr:'Masanın üzerinde iki kutu var.'},
-        {eng:'The women are talking.',tr:'Kadınlar konuşuyor.'},
-      ],
-      exercises:[
-        {type:'fill',q:'One child → two ___',a:'children'},
-        {type:'fill',q:'One city → three ___',a:'cities'},
-        {type:'fill',q:'One tooth → many ___',a:'teeth'},
-        {type:'fill',q:'One box → five ___',a:'boxes'},
-        {type:'fill',q:'One woman → several ___',a:'women'},
-        {type:'fill',q:'One leaf → many ___',a:'leaves'},
-        {type:'mc',q:'Which plural is WRONG?',opts:['buses','childs','cities','men'],a:'childs'},
-        {type:'mc',q:'"sheep" kelimesinin çoğulu nedir?',opts:['sheeps','sheep','sheepes','sheepies'],a:'sheep'},
-        {type:'tf',q:'"I have two foots." — Doğru mu?',a:false,explain:'"foot" → "feet" olmalı.'},
-        {type:'tf',q:'"The mice are in the kitchen." — Doğru mu?',a:true},
-        {type:'transform',q:'"There is one bus." → Çoğul yapın.',a:'There are two buses.'},
-      ]
-    },
-    {
-      title:'Possessive Adjectives & Pronouns',sub:'İyelik Sıfatları ve Zamirleri',cefr:'A1',
-      explanation:'İyelik sıfatları (my, your…) isimden önce gelir. İyelik zamirleri (mine, yours…) ise yalnız başına kullanılır.',
-      table:[
-        ['Özne Zamiri','İyelik Sıfatı','İyelik Zamiri','Örnek'],
-        ['I','my','mine','This is my book. → It\'s mine.'],
-        ['You','your','yours','Is this your pen? → Yes, it\'s yours.'],
-        ['He','his','his','His bag is blue. → That bag is his.'],
-        ['She','her','hers','Her car is red. → That car is hers.'],
-        ['It','its','—','The dog licked its paw.'],
-        ['We','our','ours','Our house is big. → This house is ours.'],
-        ['They','their','theirs','Their books are on the table. → Those are theirs.'],
-      ],
-      examples:[
-        {eng:'This is my book.',tr:'Bu benim kitabım.'},
-        {eng:'Is this yours?',tr:'Bu senin mi?'},
-        {eng:'Her bag is red.',tr:'Onun çantası kırmızı.'},
-        {eng:'The cat licked its paw.',tr:'Kedi patisini yaladı.'},
-        {eng:'That car is theirs, not ours.',tr:'O araba onlarınki, bizimki değil.'},
-      ],
-      exercises:[
-        {type:'fill',q:'This is ___ (I) pen.',a:'my'},
-        {type:'fill',q:'Is that book ___ (you)?',a:'yours'},
-        {type:'fill',q:'He lost ___ (he) keys.',a:'his'},
-        {type:'fill',q:'The dog wagged ___ tail.',a:'its'},
-        {type:'fill',q:'That car is ___ (we).',a:'ours'},
-        {type:'fill',q:'Is this ___ (she) bag? Yes, it\'s ___.',a:'her / hers'},
-        {type:'mc',q:'"___ name is Ali." (He)',opts:['His','Her','Its','Their'],a:'His'},
-        {type:'mc',q:'"This phone is ___." (they)',opts:['their','theirs','them','they'],a:'theirs'},
-        {type:'tf',q:'"That is my book. It\'s mine." — Doğru mu?',a:true},
-        {type:'tf',q:'"The dog wags it tail." — Doğru mu?',a:false,explain:'"it" → "its" olmalı.'},
-        {type:'transform',q:'"This is the bag of she." → Doğru biçimde yazın.',a:'This is her bag.'},
-      ]
-    },
-    {
-      title:'There is / There are',sub:'Varlık İfadeleri',cefr:'A1',
-      explanation:'"There is" tekil (ve sıyılanamaz) isimlerle, "there are" çoğul isimlerle kullanılır. Bir yerde ya da durumda bir şeyin var olduğunu ifade eder.',
-      table:[
-        ['Yapı','Olumlu','Olumsuz','Soru'],
-        ['Tekil','There is a cat.','There isn\'t a cat.','Is there a cat?'],
-        ['Çoğul','There are some books.','There aren\'t any books.','Are there any books?'],
-        ['Kısa cevap','Yes, there is./are.','No, there isn\'t/aren\'t.','—'],
-      ],
-      notes:['some → olumlu cümlelerde','any → olumsuz ve soru cümlelerinde','Sayılamaz isimler tekil sayılır: There is some water.'],
-      examples:[
-        {eng:'There is a cat on the sofa.',tr:'Kanepede bir kedi var.'},
-        {eng:'There are three students in the class.',tr:'Sınıfta üç öğrenci var.'},
-        {eng:'Is there a bank nearby? Yes, there is.',tr:'Yakınlarda bir banka var mı? Evet, var.'},
-        {eng:"There aren't any chairs.",tr:'Hiç sandalye yok.'},
-        {eng:'There is some milk in the fridge.',tr:'Buzdolabında biraz süt var.'},
-      ],
-      exercises:[
-        {type:'fill',q:'___ a dog in the garden.',a:'There is'},
-        {type:'fill',q:'___ four chairs in the room.',a:'There are'},
-        {type:'fill',q:'___ any milk in the fridge? (negative)',a:"There isn't"},
-        {type:'fill',q:'___ a problem? (question)',a:'Is there'},
-        {type:'fill',q:'___ any students in the class? No, ___.',a:"Are there / there aren't"},
-        {type:'mc',q:'"___ some water in the glass."',opts:['There are','There is','Is there','Are there'],a:'There is'},
-        {type:'mc',q:'"___ any problems?" "No, there ___."',opts:['Is there / isn\'t','Are there / aren\'t','Is there / aren\'t','Are there / isn\'t'],a:"Are there / aren't"},
-        {type:'tf',q:'"There are a cat on the sofa." — Doğru mu?',a:false,explain:'"a cat" tekil → "There is a cat" olmalı.'},
-        {type:'tf',q:'"There isn\'t any sugar." — Doğru mu?',a:true},
-        {type:'transform',q:'"There is a bank." → Soru yapın.',a:'Is there a bank?'},
-        {type:'transform',q:'"There are some books." → Olumsuz yapın.',a:"There aren't any books."},
-      ]
-    },
-    {
-      title:'Numbers & Time',sub:'Sayılar ve Saat',cefr:'A1',
-      explanation:'Temel kardinal ve ordinal sayılar, saat ifadeleri ve tarih kullanımı A1 Cambridge Starters/Movers müfredatının temel parçasıdır.',
-      table:[
-        ['Saat İfadesi','Saat','Örnek'],
-        ['o\'clock','tam saat','It\'s three o\'clock. (3:00)'],
-        ['past','geçe','It\'s twenty past four. (4:20)'],
-        ['half past','buçuk','It\'s half past six. (6:30)'],
-        ['quarter past','çeyrek geçe','It\'s quarter past nine. (9:15)'],
-        ['quarter to','çeyrek kala','It\'s quarter to eight. (7:45)'],
-        ['to','kala','It\'s ten to five. (4:50)'],
-      ],
-      notes:['Ordinal sayılar: 1st-first, 2nd-second, 3rd-third, 4th-fourth…','Tarih: on the 5th of May / on May 5th','Yıl: in 2024 (two thousand and twenty-four)'],
-      examples:[
-        {eng:"It's half past three.",tr:'Saat üç buçuk. (3:30)'},
-        {eng:"It's quarter to eight.",tr:'Saat sekize çeyrek var. (7:45)'},
-        {eng:'My birthday is on the 15th of July.',tr:'Doğum günüm 15 Temmuz.'},
-        {eng:"It's twenty past nine.",tr:'Saat dokuzu yirmi geçiyor. (9:20)'},
-      ],
-      exercises:[
-        {type:'fill',q:'3:30 → It\'s ___ past three.',a:'half'},
-        {type:'fill',q:'7:45 → It\'s quarter ___ eight.',a:'to'},
-        {type:'fill',q:'9:15 → It\'s quarter ___ nine.',a:'past'},
-        {type:'fill',q:'5:00 → It\'s five ___.',a:"o'clock"},
-        {type:'fill',q:'Ordinal: 1 → ___',a:'first'},
-        {type:'fill',q:'Ordinal: 3 → ___',a:'third'},
-        {type:'mc',q:'4:20 nasıl söylenir?',opts:["It's twenty to four.","It's twenty past four.","It's four twenty past.","It's half past four."],a:"It's twenty past four."},
-        {type:'mc',q:'"15 Mart" nasıl yazılır?',opts:['on 15 March','in the 15th March','on the 15th of March','at March 15'],a:'on the 15th of March'},
-        {type:'tf',q:'"It\'s quarter past seven." saat 7:45\'i gösterir.',a:false,explain:'7:45 → "quarter TO eight" olmalı. "Quarter past seven" = 7:15.'},
-        {type:'tf',q:'"She was born on the 2nd of June." — Doğru mu?',a:true},
-        {type:'transform',q:'11:30 → Yazın.',a:"It's half past eleven."},
-      ]
-    },
-  ]},
-
-  A2:{label:'A2 – Temel',topics:[
-    {
-      title:'Past Simple',sub:'Geçmiş Zaman',cefr:'A2',
-      explanation:'Past Simple geçmişte başlayıp biten eylemler için kullanılır. Cambridge A2 Key (KET) sınavının temel konusudur.',
-      table:[
-        ['Yapı','Form','Örnek'],
-        ['Düzenli (+)','Subject + V-ed','I visited / she worked / they played'],
-        ['Düzensiz (+)','Subject + V2 (irreg.)','go→went, eat→ate, see→saw, buy→bought'],
-        ['Olumsuz','Subject + didn\'t + V1','She didn\'t come. / I didn\'t see.'],
-        ['Soru','Did + Subject + V1?','Did you see it? / Did he go?'],
-        ['Kısa cevap','Yes, I did. / No, she didn\'t.','—'],
-      ],
-      notes:['Spelling: stop→stopped, travel→travelled, study→studied','Zaman zarfları: yesterday, last week, in 2020, ago, then, when','Düzensiz fiiller listesi ezberlenmeli: go/went, come/came, have/had, make/made, take/took…'],
-      examples:[
-        {eng:'I visited London last year.',tr:'Geçen yıl Londra\'yı ziyaret ettim.'},
-        {eng:'She did not call me yesterday.',tr:'Dün beni aramadı.'},
-        {eng:'Did you see the film? Yes, I did.',tr:'Filmi gördün mü? Evet.'},
-        {eng:'They went to the park two days ago.',tr:'İki gün önce parka gittiler.'},
-        {eng:'He stopped the car and got out.',tr:'Arabayı durdurup indi.'},
-      ],
-      exercises:[
-        {type:'fill',q:'She ___ (visit) Paris in 2022.',a:'visited'},
-        {type:'fill',q:'They ___ (not/come) to the party.',a:"didn't come"},
-        {type:'fill',q:'We ___ (go) to the cinema last night.',a:'went'},
-        {type:'fill',q:'I ___ (not/see) that movie.',a:"didn't see"},
-        {type:'fill',q:'___ he ___ (finish) his homework yesterday?',a:'Did he finish'},
-        {type:'fill',q:'She ___ (stop) the car suddenly.',a:'stopped'},
-        {type:'mc',q:'"He ___ TV all evening."',opts:['watch','watched','was watching','watches'],a:'watched'},
-        {type:'mc',q:'"___ you ___ a coffee?" "Yes, I ___."',opts:['Did/have/did','Do/have/did','Did/had/did','Did/have/do'],a:'Did/have/did'},
-        {type:'tf',q:'"I goed to school yesterday." — Doğru mu?',a:false,explain:'"go" düzensiz → "went" olmalı.'},
-        {type:'tf',q:'"Did she called you?" — Doğru mu?',a:false,explain:'Did ile V1 kullanılır → "Did she call you?"'},
-        {type:'transform',q:'"She visited Paris." → Olumsuz yapın.',a:"She didn't visit Paris."},
-        {type:'transform',q:'"They went home." → Soru yapın.',a:'Did they go home?'},
-      ]
-    },
-    {
-      title:'Present Continuous',sub:'Şimdiki Süregelen Zaman',cefr:'A2',
-      explanation:'Present Continuous şu an devam eden eylemler, geçici durumlar ve yakın gelecek planları için kullanılır.',
-      table:[
-        ['Yapı','Form','Örnek'],
-        ['Olumlu','Subject + am/is/are + V-ing','I am reading. / She is cooking.'],
-        ['Olumsuz','Subject + am/is/are + not + V-ing','We aren\'t sleeping. / He isn\'t working.'],
-        ['Soru','Am/Is/Are + Subject + V-ing?','Are you coming? / Is she studying?'],
-        ['V-ing kuralı','Sonunda -e → -e atar','make→making, ride→riding'],
-        ['V-ing kuralı','Kısa sesli+ünsüz → ünsüzü çift yaz','run→running, sit→sitting, swim→swimming'],
-      ],
-      notes:['Zaman zarfları: now, right now, at the moment, today, currently','State verbs (duygu/durum fiilleri) genellikle continuous almaz: know, want, love, believe, understand'],
-      examples:[
-        {eng:'I am studying now.',tr:'Şu an çalışıyorum.'},
-        {eng:'She is cooking dinner.',tr:'Akşam yemeği pişiriyor.'},
-        {eng:"They aren't sleeping.",tr:'Uyumuyorlar.'},
-        {eng:"Are you coming tonight? Yes, I am.",tr:'Bu gece geliyor musun? Evet.'},
-        {eng:'I am meeting my friend tomorrow. (plan)',tr:'Yarın arkadaşımla buluşuyorum.'},
-      ],
-      exercises:[
-        {type:'fill',q:'She ___ (read) a book right now.',a:'is reading'},
-        {type:'fill',q:'We ___ (not/play) football now.',a:"aren't playing"},
-        {type:'fill',q:'I ___ (not/listen) to music.',a:"am not listening"},
-        {type:'fill',q:'He ___ (run) in the park.',a:'is running'},
-        {type:'fill',q:'___ they ___ (watch) TV?',a:'Are they watching'},
-        {type:'fill',q:'She ___ (make) a cake at the moment.',a:'is making'},
-        {type:'mc',q:'"-ing" doğru yazımı: "swim"',opts:['swiming','swimming','swimeing','swimm'],a:'swimming'},
-        {type:'mc',q:'"Look! He ___ to us!"',opts:['waves','waving','is waving','wave'],a:'is waving'},
-        {type:'tf',q:'"I am wanting a coffee." — Doğru mu?',a:false,explain:'"want" state verb → "I want a coffee." olmalı.'},
-        {type:'tf',q:'"She is making dinner right now." — Doğru mu?',a:true},
-        {type:'transform',q:'"He is playing guitar." → Olumsuz yapın.',a:"He isn't playing guitar."},
-        {type:'transform',q:'"They are studying." → Soru yapın.',a:'Are they studying?'},
-      ]
-    },
-    {
-      title:'Future: will & going to',sub:'Gelecek Zaman',cefr:'A2',
-      explanation:'"Will" anlık kararlar, tahminler ve vaatler için; "going to" önceden planlanmış kararlar ve açık kanıta dayalı tahminler için kullanılır.',
-      table:[
-        ['Form','Kullanım','Örnek'],
-        ['will + V1','Anlık karar','A: The phone is ringing. B: I\'ll get it!'],
-        ['will + V1','Tahmin (kanıtsız)','I think it will rain.'],
-        ['will + V1','Vaat/teklif','I\'ll help you with that.'],
-        ['going to + V1','Önceden planlı','We\'re going to visit Rome next summer.'],
-        ['going to + V1','Kanıta dayalı tahmin','Look at those clouds! It\'s going to rain.'],
-        ['Olumsuz','won\'t / isn\'t going to','She won\'t come. / He\'s not going to be late.'],
-      ],
-      examples:[
-        {eng:"I'll help you with that.",tr:'Sana yardım edeceğim. (anlık karar)'},
-        {eng:"We're going to visit Rome next summer.",tr:'Gelecek yaz Roma\'yı ziyaret edeceğiz. (plan)'},
-        {eng:'Look! It\'s going to rain.',tr:'Bak! Yağmur yağacak. (kanıt)'},
-        {eng:"I think she'll win.",tr:'Kazanacağını düşünüyorum. (tahmin)'},
-      ],
-      exercises:[
-        {type:'fill',q:'I think it ___ (rain) tomorrow. (will)',a:'will rain'},
-        {type:'fill',q:'We ___ (visit) our grandparents this weekend. (going to)',a:'are going to visit'},
-        {type:'fill',q:'"The phone is ringing." → "I ___ get it." (will)',a:"I'll get"},
-        {type:'fill',q:'She ___ (not/come) to the party. (will)',a:"won't come"},
-        {type:'fill',q:'Look at those clouds! It ___ (rain). (going to)',a:'is going to rain'},
-        {type:'fill',q:'He ___ (study) medicine next year. (going to)',a:'is going to study'},
-        {type:'mc',q:'Anlık karar hangisidir?',opts:["I'm going to buy a car.","I'll have the soup, please.","She is going to cook.","They will travel next year."],a:"I'll have the soup, please."},
-        {type:'mc',q:'"She ___ be at the party — she never misses it." (kesin tahmin)',opts:['is going to','will','won\'t','going to'],a:'will'},
-        {type:'tf',q:'"I will to go to school tomorrow." — Doğru mu?',a:false,explain:'will + bare infinitive → "I will go"'},
-        {type:'tf',q:'"We\'re going to move house next month." — Doğru mu?',a:true},
-        {type:'transform',q:'"I will help you." → Olumsuz yapın.',a:"I won't help you."},
-        {type:'transform',q:'"She is going to call him." → Soru yapın.',a:'Is she going to call him?'},
-      ]
-    },
-    {
-      title:'Comparatives & Superlatives',sub:'Karşılaştırma Yapıları',cefr:'A2',
-      explanation:'Karşılaştırma sıfatları (comparative) iki şeyi karşılaştırır. Üstünlük sıfatları (superlative) bir şeyi gruptaki en üst düzeyle niteler.',
-      table:[
-        ['Sıfat türü','Karşılaştırma','Üstünlük','Kural'],
-        ['1 heceli','tall → taller','the tallest','+er / +est'],
-        ['1 heceli -e ile biten','nice → nicer','the nicest','+r / +st'],
-        ['1 heceli (sesli+ünsüz)','big → bigger','the biggest','ünsüzü çift yaz'],
-        ['2 heceli -y ile biten','happy → happier','the happiest','-y → -ier / -iest'],
-        ['2+ heceli','beautiful → more beautiful','the most beautiful','more / most'],
-        ['Düzensiz','good → better','the best','ezberlenmeli'],
-        ['Düzensiz','bad → worse','the worst','—'],
-        ['Düzensiz','far → farther/further','the farthest/furthest','—'],
-      ],
-      examples:[
-        {eng:'She is taller than her brother.',tr:'Kardeşinden daha uzun.'},
-        {eng:'This book is more interesting than that one.',tr:'Bu kitap şunundan daha ilginç.'},
-        {eng:'He is the smartest student in the class.',tr:'Sınıfın en zeki öğrencisi.'},
-        {eng:'Today is worse than yesterday.',tr:'Bugün dünden daha kötü.'},
-        {eng:'This is the most beautiful city I\'ve ever seen.',tr:'Gördüğüm en güzel şehir bu.'},
-      ],
-      exercises:[
-        {type:'fill',q:'She is ___ (tall) than her sister.',a:'taller'},
-        {type:'fill',q:'This is ___ (expensive) bag in the shop.',a:'the most expensive'},
-        {type:'fill',q:'He runs ___ (fast) than me.',a:'faster'},
-        {type:'fill',q:'My English is ___ (good) than last year.',a:'better'},
-        {type:'fill',q:'That was ___ (bad) film I have ever seen.',a:'the worst'},
-        {type:'fill',q:'This box is ___ (heavy) than that one.',a:'heavier'},
-        {type:'mc',q:'"big" kelimesinin karşılaştırma formu:',opts:['biger','more big','bigger','bigest'],a:'bigger'},
-        {type:'mc',q:'"She is ___ student in the class."',opts:['more clever','cleverest','the cleverest','cleverer'],a:'the cleverest'},
-        {type:'tf',q:'"This car is more fast than that one." — Doğru mu?',a:false,explain:'"fast" tek heceli → "faster than" olmalı.'},
-        {type:'tf',q:'"He is the tallest in the team." — Doğru mu?',a:true},
-        {type:'transform',q:'"This film is boring. That film is more boring." → Birleştirin.',a:'That film is more boring than this one.'},
-      ]
-    },
-    {
-      title:'Prepositions of Time & Place',sub:'Zaman ve Yer Edatları',cefr:'A2',
-      explanation:'"In, on, at" zaman ve yer için kullanılan temel edatlardır. Her birinin farklı kullanım bağlamları vardır.',
-      table:[
-        ['Edat','Zaman için','Yer için'],
-        ['at','Belirli saat: at 5pm, at noon, at night, at Christmas','Belirli nokta: at school, at the bus stop, at home'],
-        ['on','Gün ve tarih: on Monday, on 3 May, on my birthday','Yüzey: on the table, on the wall, on the floor'],
-        ['in','Ay, yıl, mevsim: in July, in 2024, in summer','Kapalı alan: in the box, in Turkey, in the kitchen'],
-        ['for','Süre: for 3 hours, for a week','—'],
-        ['since','Başlangıç noktası: since Monday, since 2020','—'],
-        ['by','Son tarih: by Friday, by 9 am','Yan: by the door, by the river'],
-      ],
-      examples:[
-        {eng:"The meeting is at 3 o'clock.",tr:'Toplantı saat 3\'te.'},
-        {eng:'She was born on a Monday in July.',tr:'Temmuzda bir Pazartesi günü doğdu.'},
-        {eng:'We go on holiday in August.',tr:'Ağustosta tatile gideriz.'},
-        {eng:'I\'ve lived here since 2018.',tr:'2018\'den beri burada yaşıyorum.'},
-      ],
-      exercises:[
-        {type:'fill',q:'The party is ___ Friday.',a:'on'},
-        {type:'fill',q:'She wakes up ___ 7 am.',a:'at'},
-        {type:'fill',q:'We met ___ 2019.',a:'in'},
-        {type:'fill',q:'He lives ___ the city centre.',a:'in'},
-        {type:'fill',q:'The bus arrives ___ noon.',a:'at'},
-        {type:'fill',q:'She has worked here ___ three years.',a:'for'},
-        {type:'mc',q:'"I\'ll see you ___ Monday morning."',opts:['in','at','on','by'],a:'on'},
-        {type:'mc',q:'"The picture is ___ the wall."',opts:['in','at','on','by'],a:'on'},
-        {type:'tf',q:'"She was born in 1990 on May." — Doğru mu?',a:false,explain:'"on May" yanlış → "in May" olmalı.'},
-        {type:'tf',q:'"I have known her since 2015." — Doğru mu?',a:true},
-        {type:'transform',q:'"at / the table / the cat / is" → Doğru cümle yapın.',a:'The cat is at the table.' },
-      ]
-    },
-    {
-      title:"Can / Can't (Ability & Permission)",sub:'Yetenek ve İzin',cefr:'A2',
-      explanation:'"Can" yetenek (bir şeyi yapabilmek) ve izin istemek için kullanılır. "Could" geçmişte yetenek ya da kibarca izin istemek için kullanılır.',
-      table:[
-        ['Form','Kullanım','Örnek'],
-        ['can + V1','Yetenek (şimdi)','She can swim very fast.'],
-        ["can't + V1",'Yetenek yok',"I can't drive yet."],
-        ['Can + I/we…?','İzin istek','Can I open the window?'],
-        ['could + V1','Geçmişte yetenek','I could ride a bike when I was 5.'],
-        ["couldn't + V1",'Geçmişte yetenek yok',"He couldn't sleep last night."],
-        ['Could + I…?','Kibarca izin','Could I use your phone?'],
-      ],
-      examples:[
-        {eng:'She can speak three languages.',tr:'Üç dil konuşabiliyor.'},
-        {eng:"I can't swim.",tr:'Yüzme bilmiyorum.'},
-        {eng:'Can I open the window?',tr:'Pencereyi açabilir miyim?'},
-        {eng:'When I was young, I could run very fast.',tr:'Küçükken çok hızlı koşabiliyordum.'},
-      ],
-      exercises:[
-        {type:'fill',q:'She ___ (can) swim very fast.',a:'can'},
-        {type:'fill',q:'I ___ (can/not) drive yet.',a:"can't"},
-        {type:'fill',q:'___ you speak French?',a:'Can'},
-        {type:'fill',q:'When he was a child, he ___ (could) play piano.',a:'could'},
-        {type:'fill',q:'___ I sit here? (kibarca)',a:'Could'},
-        {type:'mc',q:'"___ you help me, please?" (kibarca)',opts:['Can','Could','Will','Should'],a:'Could'},
-        {type:'mc',q:'Geçmişteki yetenek:',opts:["She can't run.","She couldn't run.","She won't run.","She isn't running."],a:"She couldn't run."},
-        {type:'tf',q:'"She can to swim." — Doğru mu?',a:false,explain:'can + bare infinitive → "She can swim."'},
-        {type:'tf',q:'"Could I borrow your pen, please?" — Doğru mu?',a:true},
-        {type:'transform',q:'"I can cook." → Geçmiş zaman (could) yapın.',a:'I could cook.'},
-        {type:'transform',q:'"She can play the guitar." → Soru yapın.',a:'Can she play the guitar?'},
-      ]
-    },
-    {
-      title:'Past Continuous',sub:'Geçmişte Süregelen Eylem',cefr:'A2',
-      explanation:'Past Continuous geçmişte belirli bir anda devam etmekte olan eylemleri ifade eder. Genellikle Past Simple ile "when/while" bağlacıyla kullanılır.',
-      table:[
-        ['Yapı','Form','Örnek'],
-        ['Olumlu','Subject + was/were + V-ing','I was reading. / They were playing.'],
-        ['Olumsuz','Subject + was/were + not + V-ing',"He wasn't sleeping."],
-        ['Soru','Was/Were + Subject + V-ing?','Were they studying?'],
-        ['when ile','Past Simple + Past Continuous','I was watching TV when she called.'],
-        ['while ile','Past Continuous + Past Continuous','While I was cooking, she was studying.'],
-      ],
-      notes:['when = o an / while = o süre boyunca','Past Continuous: arka plan / Past Simple: kısa eylem'],
-      examples:[
-        {eng:'I was reading when she called.',tr:'O aradığında kitap okuyordum.'},
-        {eng:'They were playing football at 5pm.',tr:'Saat 5\'te futbol oynuyorlardı.'},
-        {eng:"He wasn't sleeping, he was working.",tr:'Uyumuyordu, çalışıyordu.'},
-        {eng:'While I was cooking, my sister was watching TV.',tr:'Ben yemek pişirirken kız kardeşim TV izliyordu.'},
-      ],
-      exercises:[
-        {type:'fill',q:'She ___ (sleep) when I arrived.',a:'was sleeping'},
-        {type:'fill',q:'We ___ (not/watch) TV at 8pm.',a:"weren't watching"},
-        {type:'fill',q:'___ they ___ (study) all day?',a:'Were they studying'},
-        {type:'fill',q:'It ___ (rain) heavily when we left.',a:'was raining'},
-        {type:'fill',q:'While she ___ (read), he ___ (cook).',a:'was reading / was cooking'},
-        {type:'fill',q:'I ___ (listen) to music when he knocked on the door.',a:'was listening'},
-        {type:'mc',q:'"When I ___ in the bath, the phone ___."',opts:['was sitting / rang','sat / was ringing','sat / rang','was sitting / was ringing'],a:'was sitting / rang'},
-        {type:'mc',q:'"___ he working at midnight?" "Yes, he ___."',opts:['Was/was','Were/was','Was/were','Were/were'],a:'Was/was'},
-        {type:'tf',q:'"They were play football." — Doğru mu?',a:false,explain:'"playing" olmalı → "They were playing"'},
-        {type:'tf',q:'"While I was studying, she was sleeping." — Doğru mu?',a:true},
-        {type:'transform',q:'"He was working." → Olumsuz yapın.',a:"He wasn't working."},
-        {type:'transform',q:'"She was singing." → Soru yapın.',a:'Was she singing?'},
-      ]
-    },
-  ]},
-
-  B1:{label:'B1 – Orta',topics:[
-    {
-      title:'Present Perfect',sub:'Geçmiş–Şimdi Bağlantısı',cefr:'B1',
-      explanation:'Present Perfect, geçmişte olan ama şimdiye etkisi devam eden eylemler için kullanılır. Cambridge B1 Preliminary (PET) sınavının temel konusudur.',
-      table:[
-        ['Yapı','Form','Örnek'],
-        ['Olumlu','Subject + have/has + V3','I have seen it. / She has arrived.'],
-        ['Olumsuz','Subject + haven\'t/hasn\'t + V3',"They haven't finished."],
-        ['Soru','Have/Has + Subject + V3?','Have you ever been to Japan?'],
-        ['ever','Hayatında bir kere olsun','Have you ever eaten sushi?'],
-        ['never','Hiç olmadı','She has never seen snow.'],
-        ['already','Beklentiden önce','I\'ve already eaten.'],
-        ['yet','Soru/olumsuz (beklenti)','Have you finished yet? / I haven\'t done it yet.'],
-        ['just','Az önce','He has just arrived.'],
-        ['since','Başlangıç noktası','She has lived here since 2010.'],
-        ['for','Süre','I\'ve known him for 5 years.'],
-      ],
-      examples:[
-        {eng:'I have visited Paris three times.',tr:'Paris\'i üç kez ziyaret ettim.'},
-        {eng:'She has never eaten sushi.',tr:'Hiç sushi yememiş.'},
-        {eng:"They haven't finished yet.",tr:'Henüz bitirmediler.'},
-        {eng:'He has just arrived home.',tr:'Az önce eve geldi.'},
-        {eng:'Have you ever been to Japan?',tr:'Hiç Japonya\'ya gittiniz mi?'},
-      ],
-      exercises:[
-        {type:'fill',q:'I ___ (never/see) this film before.',a:'have never seen'},
-        {type:'fill',q:'She ___ (just/arrive) home.',a:'has just arrived'},
-        {type:'fill',q:'They ___ (live) here for ten years.',a:'have lived'},
-        {type:'fill',q:'He ___ (not/finish) his work yet.',a:"hasn't finished"},
-        {type:'fill',q:'___ you ever ___ (try) bungee jumping?',a:'Have you ever tried'},
-        {type:'fill',q:'She ___ (work) here since 2018.',a:'has worked'},
-        {type:'mc',q:'"Have you ___ the new film?" "Not ___."',opts:['seen/yet','saw/already','seen/already','saw/yet'],a:'seen/yet'},
-        {type:'mc',q:'"She ___ just ___ her homework."',opts:['has/finished','have/finished','has/finish','have/finish'],a:'has/finished'},
-        {type:'tf',q:'"I have went to London." — Doğru mu?',a:false,explain:'"went" Past Simple → "have gone" olmalı.'},
-        {type:'tf',q:'"She has lived here for 5 years." — Doğru mu?',a:true},
-        {type:'transform',q:'"I visited Paris." → Present Perfect yapın.',a:'I have visited Paris.'},
-        {type:'transform',q:'"Has she called?" → Olumsuz yapın.',a:"She hasn't called."},
-      ]
-    },
-    {
-      title:'Present Perfect vs. Past Simple',sub:'Karşılaştırmalı Kullanım',cefr:'B1',
-      explanation:'Cambridge B1 müfredatında iki zamanın doğru seçimi kritik önem taşır. Temel fark: Past Simple belirli bir geçmiş zamana bağlıdır; Present Perfect şimdiye bağlantılıdır.',
-      table:[
-        ['Kriter','Past Simple','Present Perfect'],
-        ['Zaman belirteci','yesterday, last year, in 2010, ago','ever, never, just, yet, already, since, for, recently'],
-        ['Kullanım','Biten eylem + belirli zaman','Geçmişi şimdiye bağlayan eylem'],
-        ['Soru','Did you see it?','Have you seen it?'],
-        ['Türkçe karşılık','Gördüm (dün)','Gördüm (ne zaman önemli değil)'],
-        ['Tipik zaman zarfı','yesterday / last week / in 2005','this week / today / recently / ever'],
-      ],
-      examples:[
-        {eng:'I saw him yesterday. (Past Simple)',tr:'Onu dün gördüm.'},
-        {eng:"I've seen that film before. (Present Perfect)",tr:'O filmi daha önce gördüm.'},
-        {eng:"She hasn't called since Monday.",tr:'Pazartesiden beri aramadı.'},
-        {eng:'When did you arrive? – This morning.',tr:'Ne zaman geldin? – Bu sabah.'},
-        {eng:"He's lived here for ten years (still here).",tr:'On yıldır burada yaşıyor (hâlâ burada).'},
-        {eng:'He lived in Paris for three years (and left).',tr:'Paris\'te üç yıl yaşadı (ve ayrıldı).'},
-      ],
-      exercises:[
-        {type:'fill',q:'I ___ (see) him yesterday. (Past Simple)',a:'saw'},
-        {type:'fill',q:'She ___ (not/call) since last week. (Pres.Perf.)',a:"hasn't called"},
-        {type:'fill',q:'When ___ you ___ (arrive)? – This morning.',a:'did / arrive'},
-        {type:'fill',q:'He ___ (work) here for five years. (still works)',a:'has worked'},
-        {type:'fill',q:'We ___ (go) to Rome in 2019.',a:'went'},
-        {type:'fill',q:'"___ you finish the report yet?" "Yes, I ___ it an hour ago."',a:'Have / finished'},
-        {type:'mc',q:'"I ___ her at the party last night."',opts:['have met','met','have meet','meet'],a:'met'},
-        {type:'mc',q:'"___ you ever ___ to New York?"',opts:['Did/go','Have/gone','Have/went','Did/been'],a:'Have/gone'},
-        {type:'tf',q:'"I have seen him yesterday." — Doğru mu?',a:false,explain:'"yesterday" ile Present Perfect kullanılmaz → "I saw him yesterday."'},
-        {type:'tf',q:'"Have you ever eaten Japanese food?" — Doğru mu?',a:true},
-        {type:'transform',q:'"She worked here since 2020." → Doğru yapın.',a:'She has worked here since 2020.'},
-        {type:'transform',q:'"Did you finish it?" → Present Perfect yapın.',a:'Have you finished it?'},
-      ]
-    },
-    {
-      title:'Conditionals (Type 0 & 1)',sub:'Koşul Cümleleri',cefr:'B1',
-      explanation:'Type 0 genel gerçekler ve bilimsel gerçekler için; Type 1 gerçekleşmesi mümkün durumlar ve olası sonuçları için kullanılır.',
-      table:[
-        ['Tip','If-clause','Main clause','Kullanım'],
-        ['Type 0','If + present simple','present simple','Genel/bilimsel gerçek'],
-        ['Type 1','If + present simple','will + V1','Gerçek / mümkün koşul'],
-        ['Type 1 varyant','If + present simple','can/may/might/should + V1','Olasılıklı sonuç'],
-        ['Unless','Unless = if...not','—','Unless you study, you will fail.'],
-      ],
-      notes:['If-clause başta ya da sonda olabilir. Başta ise virgül kullanılır.','Type 1 ana cümlede "will" yerine "can, may, might" de gelebilir.'],
-      examples:[
-        {eng:'If you heat water to 100°C, it boils. (Type 0)',tr:'Suyu 100°C\'ye ısıtırsan kaynar.'},
-        {eng:"If it rains, I'll stay home. (Type 1)",tr:'Yağarsa evde kalırım.'},
-        {eng:"She'll fail if she doesn't study.",tr:'Çalışmazsa başarısız olur.'},
-        {eng:"Unless you hurry, you'll miss the bus.",tr:'Acele etmezsen otobüsü kaçırırsın.'},
-        {eng:"If I have time, I might call you.",tr:'Vaktim olursa seni arayabilirim.'},
-      ],
-      exercises:[
-        {type:'fill',q:"If she ___ (study), she ___ (pass). (will)",a:'studies / will pass'},
-        {type:'fill',q:'Water boils if you ___ (heat) it to 100°C.',a:'heat'},
-        {type:'fill',q:"If I ___ (have) time, I ___ (call) you. (will)",a:'have / will call'},
-        {type:'fill',q:"Plants die if you ___ (not/water) them.",a:"don't water"},
-        {type:'fill',q:"Unless he ___ (study), he ___ (fail).",a:"studies / will fail"},
-        {type:'fill',q:'If she ___ (miss) the bus, she ___ (be) late.',a:'misses / will be'},
-        {type:'mc',q:'"If you ___ hard, you ___ the exam."',opts:['study/pass','study/will pass','will study/pass','will study/will pass'],a:'study/will pass'},
-        {type:'mc',q:'Type 0 koşul cümlesinde doğru yapı:',opts:['If it rains, I stayed home.','If it rains, I will stay home.','If it rains, I stay home.','If it rained, I stay home.'],a:'If it rains, I stay home.'},
-        {type:'tf',q:'"If it will rain, take an umbrella." — Doğru mu?',a:false,explain:'If-clause\'da will kullanılmaz → "If it rains"'},
-        {type:'tf',q:'"Unless you study, you won\'t pass." — Doğru mu?',a:true},
-        {type:'transform',q:'"If you heat it, it melts." → unless kullanın.',a:"Unless you heat it, it won't melt."},
-        {type:'transform',q:'"I will help you if you ask." → Sırala değiştirin.',a:'If you ask, I will help you.'},
-      ]
-    },
-    {
-      title:'Passive Voice (Present & Past)',sub:'Edilgen Yapı',cefr:'B1',
-      explanation:'Edilgen yapıda özne eylemin alıcısıdır. Eylemi yapan bilinmiyor, önemsiz ya da açık olduğunda kullanılır.',
-      table:[
-        ['Zaman','Edilgen Yapı','Örnek'],
-        ['Present Simple','am/is/are + V3','English is spoken worldwide.'],
-        ['Past Simple','was/were + V3','The letter was written by John.'],
-        ['Present Continuous','am/is/are + being + V3','The house is being painted.'],
-        ['Present Perfect','have/has + been + V3','The email has been sent.'],
-        ['Future (will)','will + be + V3','The report will be published.'],
-        ['Modal','modal + be + V3','The problem should be solved.'],
-      ],
-      notes:['"by" + fail eden kimse belirtilirken kullanılır.','Eylemin alıcısı özne konumuna geçer.'],
-      examples:[
-        {eng:'The letter is written by John.',tr:'Mektup John tarafından yazılıyor.'},
-        {eng:'The car was stolen last night.',tr:'Araba dün gece çalındı.'},
-        {eng:'English is spoken worldwide.',tr:'İngilizce dünya genelinde konuşulur.'},
-        {eng:'The windows were broken by the storm.',tr:'Pencereler fırtına tarafından kırıldı.'},
-      ],
-      exercises:[
-        {type:'fill',q:'The book ___ (write) by Orwell.',a:'was written'},
-        {type:'fill',q:'This song ___ (sing) by millions of people.',a:'is sung'},
-        {type:'fill',q:'The windows ___ (clean) yesterday.',a:'were cleaned'},
-        {type:'fill',q:'English ___ (teach) in most schools.',a:'is taught'},
-        {type:'fill',q:'The report ___ (submit) tomorrow. (will)',a:'will be submitted'},
-        {type:'fill',q:'The car ___ (repair) at the moment. (continuous)',a:'is being repaired'},
-        {type:'mc',q:'Aktif: "They built the bridge in 1990." → Edilgen:',opts:['The bridge is built in 1990.','The bridge was built in 1990.','The bridge has been built in 1990.','The bridge was being built in 1990.'],a:'The bridge was built in 1990.'},
-        {type:'mc',q:'Doğru edilgen yapı:',opts:['The cake was eating.','The cake was eaten.','The cake is eat.','The cake were eaten.'],a:'The cake was eaten.'},
-        {type:'tf',q:'"The letter was wrote by Maria." — Doğru mu?',a:false,explain:'"wrote" yanlış → "written" (V3) olmalı.'},
-        {type:'tf',q:'"The bridge is being built." — Doğru mu?',a:true},
-        {type:'transform',q:'"Workers clean the office every day." → Edilgen yapın.',a:'The office is cleaned every day.'},
-        {type:'transform',q:'"Someone stole my bike." → Edilgen yapın.',a:'My bike was stolen.'},
-      ]
-    },
-    {
-      title:'Modal Verbs',sub:'Kiplik Fiilleri',cefr:'B1',
-      explanation:'Modal fiiller yetenek, olasılık, zorunluluk ve izin ifade eder. Ana fiilden önce gelir ve V1 (bare infinitive) ile kullanılır.',
-      table:[
-        ['Modal','Anlam','Örnek'],
-        ['can','Yetenek (şimdi)','She can swim.'],
-        ['could','Geçmiş yetenek / kibarca istek','He could play piano as a child.'],
-        ['may','Resmi izin / olasılık','May I leave early? / It may rain.'],
-        ['might','Daha az kesin olasılık','It might snow tomorrow.'],
-        ['should','Tavsiye','You should see a doctor.'],
-        ['ought to','Tavsiye (daha formal)','You ought to apologise.'],
-        ['must','Güçlü zorunluluk / kesin çıkarım','You must wear a seatbelt. / He must be tired.'],
-        ['have to','Dış zorunluluk','I have to work on Saturdays.'],
-        ["don't have to",'Zorunluluk yok',"You don't have to come."],
-        ["mustn't",'Yasak',"You mustn't smoke here."],
-        ['needn\'t','Gerekmiyor',"You needn't worry."],
-        ['would','Kibarca istek / alışkanlık','Would you like a drink? / He would always sing.'],
-      ],
-      examples:[
-        {eng:'You should see a doctor.',tr:'Bir doktora görünmelisin.'},
-        {eng:'She must finish her homework.',tr:'Ödevini bitirmek zorunda.'},
-        {eng:'It might rain later.',tr:'Sonradan yağmur yağabilir.'},
-        {eng:"You mustn't park here.",tr:'Buraya park etmemelisin / etmek yasak.'},
-        {eng:"You don't have to come if you're busy.",tr:'Meşgulsen gelmen gerekmiyor.'},
-      ],
-      exercises:[
-        {type:'fill',q:'You ___ (tavsiye) exercise more.',a:'should'},
-        {type:'fill',q:'She ___ (zorunluluk/dış) finish by 9. (have to)',a:'has to'},
-        {type:'fill',q:'It ___ (olasılık, az kesin) snow tomorrow.',a:'might'},
-        {type:'fill',q:"You ___ (yasak) smoke in the classroom.",a:"mustn't"},
-        {type:'fill',q:"You ___ (gerekmiyor) pay. It's free.",a:"don't have to"},
-        {type:'fill',q:'___ I open the window? (resmi izin)',a:'May'},
-        {type:'fill',q:'He ___ (kesin çıkarım) be tired — he worked all night.',a:'must'},
-        {type:'mc',q:'"You ___ drive too fast — it\'s dangerous."',opts:["mustn't","don't have to","needn't","couldn't"],a:"mustn't"},
-        {type:'mc',q:'"She ___ be home — her lights are on."',opts:['might','should','must','could'],a:'must'},
-        {type:'tf',q:'"He musts go to school." — Doğru mu?',a:false,explain:'"must" modal → "musts" yanlış; "He must go."'},
-        {type:'tf',q:'"You don\'t have to wear a uniform here." — Doğru mu?',a:true},
-        {type:'transform',q:'"It is necessary to wear a seatbelt." → must kullanın.',a:'You must wear a seatbelt.'},
-        {type:'transform',q:'"It is not necessary to hurry." → needn\'t kullanın.',a:"You needn't hurry."},
-      ]
-    },
-    {
-      title:'Gerunds & Infinitives',sub:'–ing ve To-Mastar',cefr:'B1',
-      explanation:'Bazı fiillerden sonra gerund (-ing), bazılarından sonra infinitive (to + V1) kullanılır. Bazı fiiller her iki yapıyla da kullanılabilir (anlam farkıyla).',
-      table:[
-        ['Yapı','Fiiller','Örnek'],
-        ['Gerund (-ing)','enjoy, avoid, finish, suggest, mind, dislike, keep, risk, miss','I enjoy swimming.'],
-        ['Infinitive (to+V1)','want, decide, hope, plan, promise, agree, manage, refuse, seem','She decided to leave.'],
-        ['Her ikisi (anlam aynı)','like, love, hate, begin, start, continue, prefer','I like swimming. / I like to swim.'],
-        ['Her ikisi (anlam farklı)','remember, forget, stop, try, regret','I stopped smoking. (quit) / I stopped to smoke. (durdu ve içti)'],
-        ['Preposition + gerund','good at, interested in, instead of, before, after, without','She\'s good at singing.'],
-      ],
-      examples:[
-        {eng:'I enjoy reading books.',tr:'Kitap okumaktan zevk alırım.'},
-        {eng:'She decided to leave early.',tr:'Erken ayrılmaya karar verdi.'},
-        {eng:'He avoids eating junk food.',tr:'Abur cubur yemekten kaçınıyor.'},
-        {eng:'I remember locking the door. (yaptığımı hatırlıyorum)',tr:'vs. Remember to lock the door. (yapman gerektiğini unut)'},
-        {eng:'After finishing work, I went home.',tr:'İşi bitirdikten sonra eve gittim.'},
-      ],
-      exercises:[
-        {type:'fill',q:'I enjoy ___ (swim) in the sea.',a:'swimming'},
-        {type:'fill',q:'She decided ___ (leave) early.',a:'to leave'},
-        {type:'fill',q:'He avoids ___ (eat) sugar.',a:'eating'},
-        {type:'fill',q:'They hope ___ (visit) Japan.',a:'to visit'},
-        {type:'fill',q:'We finished ___ (clean) the house.',a:'cleaning'},
-        {type:'fill',q:'She is interested in ___ (learn) French.',a:'learning'},
-        {type:'fill',q:'I stopped ___ (smoke) last year. (quit)',a:'smoking'},
-        {type:'fill',q:'He stopped ___ (tie) his shoelace. (durdu ve bağladı)',a:'to tie'},
-        {type:'mc',q:'"She agreed ___ the project."',opts:['do','doing','to do','for do'],a:'to do'},
-        {type:'mc',q:'"I\'m good at ___ languages."',opts:['learn','to learn','learning','learned'],a:'learning'},
-        {type:'tf',q:'"I enjoy to play tennis." — Doğru mu?',a:false,explain:'"enjoy" + gerund → "I enjoy playing tennis."'},
-        {type:'tf',q:'"She managed to pass the exam." — Doğru mu?',a:true},
-        {type:'transform',q:'"I want that I go to Paris." → Doğru yapın.',a:'I want to go to Paris.'},
-      ]
-    },
-    {
-      title:'Used to',sub:'Geçmişteki Alışkanlıklar',cefr:'B1',
-      explanation:'"Used to" geçmişte var olan ama artık olmayan alışkanlık veya durumları ifade eder. "Would" da tekrarlayan geçmiş eylemler için kullanılabilir (durum fiilleriyle değil).',
-      table:[
-        ['Form','Yapı','Örnek'],
-        ['Olumlu','Subject + used to + V1','I used to drink coffee every morning.'],
-        ['Olumsuz','Subject + didn\'t use to + V1',"He didn't use to like vegetables."],
-        ['Soru','Did + Subject + use to + V1?','Did you use to play any sports?'],
-        ['Would (eylem)','Subject + would + V1','She would always sing in the shower.'],
-        ['Dikkat!','would + durum fiili YANLIŞ','✗ I would know her. ✓ I used to know her.'],
-      ],
-      examples:[
-        {eng:'I used to drink coffee every morning.',tr:'Her sabah kahve içerdim (artık içmiyorum).'},
-        {eng:'She used to live in Ankara.',tr:'Ankara\'da yaşardı (artık yaşamıyor).'},
-        {eng:"He didn't use to like vegetables.",tr:'Sebzeleri sevmezdi.'},
-        {eng:'Did you use to play any sports?',tr:'Herhangi bir spor yapar mıydın?'},
-        {eng:'We would go fishing every Sunday. (eylem)',tr:'Her Pazar balık tutmaya giderdik.'},
-      ],
-      exercises:[
-        {type:'fill',q:'I ___ (be) shy when I was a child.',a:'used to be'},
-        {type:'fill',q:'She ___ (not/like) fish when she was young.',a:"didn't use to like"},
-        {type:'fill',q:'___ they ___ (live) in the city?',a:'Did they use to live'},
-        {type:'fill',q:'He ___ (play) football every weekend.',a:'used to play'},
-        {type:'fill',q:'We ___ (not/have) a car when I was little.',a:"didn't use to have"},
-        {type:'fill',q:'She ___ (would/walk) to school every day.',a:'would walk'},
-        {type:'mc',q:'Doğru olan hangisi? (durum fiili)',opts:['I would know her.','I used to know her.','I was knowing her.','I knew to her.'],a:'I used to know her.'},
-        {type:'mc',q:'"He ___ smoke, but he quit years ago."',opts:['would','used to','was used to','is used to'],a:'used to'},
-        {type:'tf',q:'"She was used to live in London." — Doğru mu?',a:false,explain:'"used to live" olmalı. "be used to" farklı bir yapı (alışmak).'},
-        {type:'tf',q:'"Did you use to play the piano?" — Doğru mu?',a:true},
-        {type:'transform',q:'"I went to the park every Sunday as a child." → used to kullanın.',a:'I used to go to the park every Sunday.'},
-        {type:'transform',q:'"He used to smoke." → Olumsuz yapın.',a:"He didn't use to smoke."},
-      ]
-    },
-  ]},
-
-  B2:{label:'B2 – Üst Orta',topics:[
-    {
-      title:'Conditionals (Type 2 & 3)',sub:'Varsayım & Pişmanlık',cefr:'B2',
-      explanation:'Type 2 gerçek dışı şimdi/gelecek koşullar; Type 3 geçmişte farklı olsaydı hayali durumlar için kullanılır. Cambridge B2 First (FCE) sınavının kritik konusudur.',
-      table:[
-        ['Tip','If-clause','Main clause','Anlam'],
-        ['Type 2','If + past simple','would + V1','Şimdi/gelecekte gerçek dışı (unreal now/future)'],
-        ['Type 2 (to be)','If + were (tüm özneler)','would + V1','"was" yerine resmi "were": If I were you…'],
-        ['Type 3','If + had + V3','would have + V3','Geçmişte gerçek dışı (unreal past)'],
-        ['Mixed','If + had + V3 (past)','would + V1 (now)','Geçmiş koşul + şimdiki sonuç'],
-        ['Inversion','Had + S + V3 (formal)','would have + V3','Had she known, she would have helped.'],
-      ],
-      examples:[
-        {eng:"If I were rich, I'd travel the world.",tr:'Zengin olsaydım, dünyayı gezerdim.'},
-        {eng:"If she had studied harder, she wouldn't have failed.",tr:'Daha çok çalışsaydı, başarısız olmazdı.'},
-        {eng:"I would have helped if I'd known.",tr:'Bilseydim yardım ederdim.'},
-        {eng:"If he hadn't missed the bus, he'd be here now. (mixed)",tr:'Otobüsü kaçırmasaydı şimdi burada olurdu.'},
-        {eng:"Had I known, I would have acted differently. (inversion)",tr:'Bilseydim, farklı davranırdım.'},
-      ],
-      exercises:[
-        {type:'fill',q:"If I ___ (be) you, I ___ (apologize).",a:'were / would apologize'},
-        {type:'fill',q:"She ___ (pass) if she ___ (study) harder.",a:'would have passed / had studied'},
-        {type:'fill',q:"If they ___ (leave) earlier, they ___ (not/miss) the train.",a:"had left / wouldn't have missed"},
-        {type:'fill',q:"If I ___ (know) her address, I ___ (write) to her.",a:'knew / would write'},
-        {type:'fill',q:"He ___ (not/be) sick if he ___ (eat) well. (Type 2)",a:"wouldn't be / ate"},
-        {type:'fill',q:"___ she ___ (know), she would have helped. (inversion)",a:'Had / known'},
-        {type:'mc',q:'"If I ___ a bird, I ___ fly away."',opts:['am/will','was/would','were/would','were/will'],a:'were/would'},
-        {type:'mc',q:'"If she ___ the bus, she ___ late."',opts:['missed/would have been','had missed/would be','had missed/would have been','missed/would be'],a:'had missed/would have been'},
-        {type:'tf',q:'"If I would know, I would help." — Doğru mu?',a:false,explain:'If-clause\'da "would" kullanılmaz → "If I knew"'},
-        {type:'tf',q:'"Had they arrived earlier, they would have met him." — Doğru mu?',a:true},
-        {type:'transform',q:'"Because I didn\'t study, I failed." → Type 3 yapın.',a:"If I had studied, I wouldn't have failed."},
-        {type:'transform',q:'"I don\'t have a car, so I can\'t come." → Type 2 yapın.',a:"If I had a car, I could come."},
-      ]
-    },
-    {
-      title:'Reported Speech',sub:'Dolaylı Anlatım',cefr:'B2',
-      explanation:'Başka birinin söylediklerini aktarırken zamanlar geriye kayar (backshift). "Say" ve "tell" arasındaki farka dikkat edilmeli.',
-      table:[
-        ['Direct','Reported (backshift)','Örnek'],
-        ['Present Simple','→ Past Simple','"I work here." → She said she worked there.'],
-        ['Present Continuous','→ Past Continuous','"I am reading." → He said he was reading.'],
-        ['Present Perfect','→ Past Perfect','"I have finished." → She said she had finished.'],
-        ['Past Simple','→ Past Perfect','"I went home." → He said he had gone home.'],
-        ['will','→ would','"I will help." → She said she would help.'],
-        ['can','→ could','"I can swim." → He said he could swim.'],
-        ['may','→ might','"It may rain." → She said it might rain.'],
-        ['must','→ had to (zorunluluk)','/ must (hâlâ geçerli)','"You must go." → He said I had to go.'],
-        ['Zamir','I→he/she, you→I/they, here→there, now→then','—'],
-      ],
-      notes:['say → said (kişi belirtilmez ya da that ile)','tell → told + kişi (always needs an object)','Soru: asked if/whether (evet/hayır) / asked + wh-word (wh-soru)'],
-      examples:[
-        {eng:'"I am tired." → She said she was tired.',tr:'"Yorgunum" → Yorgun olduğunu söyledi.'},
-        {eng:'"I will call you." → He said he would call me.',tr:'Beni arayacağını söyledi.'},
-        {eng:'"Did you see it?" → She asked if I had seen it.',tr:'Görüp görmediğimi sordu.'},
-        {eng:'"Don\'t touch it!" → He told me not to touch it.',tr:'Dokunmamamı söyledi.'},
-        {eng:'"Where do you live?" → She asked me where I lived.',tr:'Nerede yaşadığımı sordu.'},
-      ],
-      exercises:[
-        {type:'fill',q:'"I live in London." → He said he ___ in London.',a:'lived'},
-        {type:'fill',q:'"I will come." → She said she ___ come.',a:'would'},
-        {type:'fill',q:'"Are you tired?" → She asked if I ___ tired.',a:'was'},
-        {type:'fill',q:'"I can swim." → He said he ___ swim.',a:'could'},
-        {type:'fill',q:'"Don\'t shout!" → She told him ___ shout.',a:'not to'},
-        {type:'fill',q:'"I have finished the report." → She said she ___ the report.',a:'had finished'},
-        {type:'fill',q:'"Where do you work?" → She asked me where I ___.',a:'worked'},
-        {type:'mc',q:'"I went to Paris." → She said she ___ to Paris.',opts:['went','had gone','has gone','goes'],a:'had gone'},
-        {type:'mc',q:'"___ me where the station was."',opts:['He said','He told','He asked','He spoke'],a:'He asked'},
-        {type:'tf',q:'"She told that she was tired." — Doğru mu?',a:false,explain:'"told" kişi ister → "She told me she was tired." ya da "She said she was tired."'},
-        {type:'tf',q:'"He asked if I had seen the film." — Doğru mu?',a:true},
-        {type:'transform',q:'"I am studying." → She said...',a:'She said she was studying.'},
-        {type:'transform',q:'"Why did you come?" → He asked...',a:'He asked why I had come.'},
-      ]
-    },
-    {
-      title:'Relative Clauses',sub:'İlgi Cümleleri',cefr:'B2',
-      explanation:'Defining (tanımlayıcı) relative clauses virgülsüz yazılır ve kişi/nesneyi tanımlar. Non-defining (açıklayıcı) clauses ek bilgi verir ve virgülle ayrılır.',
-      table:[
-        ['Zamir','Kullanım','Defining','Non-defining'],
-        ['who','Kişiler için','The man who called is my uncle.','My sister, who is a doctor, lives in London.'],
-        ['which','Nesneler için','The book which I bought is great.','His car, which is red, was stolen.'],
-        ['that','Kişi ve nesneler (defining only)','The film that won the award is great.','✗ Non-defining\'de kullanılmaz'],
-        ['whose','İyelik (kişi/nesne)','The student whose grades are best will win.','Tom, whose brother is famous, smiled.'],
-        ['where','Yer','The city where I was born is small.','Paris, where she grew up, is beautiful.'],
-        ['when','Zaman','The day when we met was rainy.','2020, when it all changed, was hard.'],
-        ['whom (formal)','Kişi (nesne konumunda)','The man whom I met was kind.','—'],
-      ],
-      notes:['Defining RC\'de zamir çıkarılabilir (contact clause): The book I bought (= which I bought)','Non-defining RC\'de that kullanılmaz, zamir çıkarılamaz, virgül zorunlu.'],
-      examples:[
-        {eng:'The man who called is my uncle.',tr:'Arayan adam amcam.'},
-        {eng:'The book which I bought is very good.',tr:'Aldığım kitap çok iyi.'},
-        {eng:'My sister, who is a doctor, lives in London.',tr:'Doktor olan kız kardeşim Londra\'da yaşıyor.'},
-        {eng:'The city where I grew up no longer exists.',tr:'Büyüdüğüm şehir artık yok.'},
-        {eng:'The student whose work was best got an award.',tr:'Çalışması en iyi olan öğrenci ödül aldı.'},
-      ],
-      exercises:[
-        {type:'fill',q:'The woman ___ works here is my friend.',a:'who'},
-        {type:'fill',q:'The car ___ he bought is expensive.',a:'which / that'},
-        {type:'fill',q:'This is the city ___ I was born.',a:'where'},
-        {type:'fill',q:'The student ___ grades are best will get an award.',a:'whose'},
-        {type:'fill',q:'Do you remember the day ___ we first met?',a:'when'},
-        {type:'fill',q:'My father, ___ is 60, still works.',a:'who'},
-        {type:'fill',q:'The film ___ we watched last night was amazing.',a:'that / which'},
-        {type:'mc',q:'Non-defining RC\'de kullanılmayan zamir:',opts:['who','which','whose','that'],a:'that'},
-        {type:'mc',q:'"This is the restaurant ___ we had our first date."',opts:['who','when','where','which'],a:'where'},
-        {type:'tf',q:'"The man that called, lives in London." — Bu non-defining mi?',a:false,explain:'Virgül var gibi görünüyor ama "that" non-defining\'de kullanılmaz. "who" olmalı ya da defining kullanılmalı.'},
-        {type:'tf',q:'"She lives in Paris, which is a beautiful city." — Doğru mu?',a:true},
-        {type:'transform',q:'"The man is my uncle. He called yesterday." → Birleştirin.',a:'The man who called yesterday is my uncle.'},
-        {type:'transform',q:'"My sister is a doctor. She lives in London." → Non-defining yapın.',a:'My sister, who is a doctor, lives in London.'},
-      ]
-    },
-    {
-      title:'Advanced Passive',sub:'Gelişmiş Edilgen Yapılar',cefr:'B2',
-      explanation:'Farklı zaman dilimlerinde edilgen yapı, impersonal it yapıları ve modal edilgen kullanımı B2 düzeyinin önemli konularındandır.',
-      table:[
-        ['Zaman / Yapı','Edilgen','Örnek'],
-        ['Present Continuous','is/are being + V3','The road is being repaired.'],
-        ['Present Perfect','have/has been + V3','The email has been sent.'],
-        ['Past Perfect','had been + V3','The task had been completed before she arrived.'],
-        ['Future (will)','will be + V3','The results will be announced tomorrow.'],
-        ['Future (going to)','is/are going to be + V3','The building is going to be demolished.'],
-        ['Modal','modal + be + V3','This rule must be followed.'],
-        ['Impersonal It','It is said/believed/thought/reported + that','It is believed that he escaped.'],
-        ['Subject + passive infinitive','He is said/known/thought + to be/have','He is believed to be dangerous.'],
-      ],
-      examples:[
-        {eng:'The report has been submitted.',tr:'Rapor teslim edildi.'},
-        {eng:'The building will be demolished next year.',tr:'Bina gelecek yıl yıkılacak.'},
-        {eng:'The problem should be solved immediately.',tr:'Sorun hemen çözülmeli.'},
-        {eng:'It is believed that he escaped.',tr:'Kaçtığına inanılıyor.'},
-        {eng:'He is said to have been the best in his field.',tr:'Alanının en iyisi olduğu söyleniyor.'},
-      ],
-      exercises:[
-        {type:'fill',q:'The letter ___ (write) by tomorrow. (future passive)',a:'will be written'},
-        {type:'fill',q:'The results ___ (announce) yet. (pres.perf.passive)',a:'have been announced'},
-        {type:'fill',q:'This rule ___ (must/follow) by everyone.',a:'must be followed'},
-        {type:'fill',q:'The bridge ___ (repair) at the moment. (continuous)',a:'is being repaired'},
-        {type:'fill',q:'It ___ (say) that she is very talented.',a:'is said'},
-        {type:'fill',q:'The suspect ___ (believe) to be dangerous.',a:'is believed'},
-        {type:'fill',q:'The task ___ (complete) before she arrived. (past perfect passive)',a:'had been completed'},
-        {type:'mc',q:'"It ___ that the economy will improve."',opts:['is expected','expects','has expected','expected'],a:'is expected'},
-        {type:'mc',q:'Future going to passive:',opts:['The house will be painted.','The house is being painted.','The house is going to be painted.','The house has been painted.'],a:'The house is going to be painted.'},
-        {type:'tf',q:'"The letter has wrote." — Doğru mu?',a:false,explain:'"written" (V3) kullanılmalı → "has been written"'},
-        {type:'tf',q:'"She is known to have worked there for years." — Doğru mu?',a:true},
-        {type:'transform',q:'"People believe that he is innocent." → It yapısına çevirin.',a:'It is believed that he is innocent.'},
-        {type:'transform',q:'"They are repairing the road now." → Edilgen yapın.',a:'The road is being repaired now.'},
-      ]
-    },
-    {
-      title:'Wish & If Only',sub:'Dilek ve Pişmanlık',cefr:'B2',
-      explanation:'"Wish" ve "if only" gerçek dışı dilekler ve pişmanlıklar için kullanılır. Zaman dilimine göre farklı yapılar alır.',
-      table:[
-        ['Zaman','Yapı','Anlam','Örnek'],
-        ['Şimdiki pişmanlık','wish + past simple','Şimdi farklı olmasını diliyorum','I wish I spoke better English.'],
-        ['Şimdiki "to be"','wish + were (tüm özneler)','—','I wish I were taller.'],
-        ['Geçmiş pişmanlık','wish + had + V3','Geçmişte farklı olmasını diliyorum','She wishes she had studied harder.'],
-        ['Gelecek dilek','wish + would + V1','Başkasının davranışını değiştirmesini diliyorum',"I wish it wouldn't rain so much."],
-        ['If only','if only + aynı yapılar','Daha güçlü vurgu','If only I had listened to my parents!'],
-      ],
-      examples:[
-        {eng:'I wish I spoke better English.',tr:'Keşke daha iyi İngilizce konuşsaydım.'},
-        {eng:'She wishes she had studied harder.',tr:'Keşke daha çok çalışmış olsaydı.'},
-        {eng:"I wish it wouldn't rain so much.",tr:'Keşke bu kadar çok yağmur yağmasaydı.'},
-        {eng:"If only I'd listened to my parents.",tr:'Keşke ailemi dinleseydim.'},
-        {eng:'I wish I were taller.',tr:'Keşke daha uzun olsaydım.'},
-      ],
-      exercises:[
-        {type:'fill',q:"I wish I ___ (know) the answer. (present)",a:'knew'},
-        {type:'fill',q:"She wishes she ___ (study) harder. (past)",a:'had studied'},
-        {type:'fill',q:"If only he ___ (not/say) that! (past)",a:"hadn't said"},
-        {type:'fill',q:"I wish it ___ (stop) raining. (future wish)",a:'would stop'},
-        {type:'fill',q:"If only I ___ (be) taller! (present)",a:'were'},
-        {type:'fill',q:"He wishes he ___ (not/miss) the flight.",a:"hadn't missed"},
-        {type:'fill',q:"I wish you ___ (stop) making noise. (future wish)",a:'would stop'},
-        {type:'mc',q:'"I wish I ___ more money now."',opts:['have','had','would have','have had'],a:'had'},
-        {type:'mc',q:'"She wishes she ___ him before."',opts:['meets','met','has met','had met'],a:'had met'},
-        {type:'tf',q:'"I wish I would be taller." — Doğru mu?',a:false,explain:'"would" kendinize dilek edilmez → "I wish I were taller."'},
-        {type:'tf',q:'"If only she had told me the truth!" — Doğru mu?',a:true},
-        {type:'transform',q:'"I don\'t have a car. It\'s a pity." → wish kullanın.',a:'I wish I had a car.'},
-        {type:'transform',q:'"I didn\'t study. I failed the exam." → wish kullanın.',a:"I wish I had studied. / If only I had studied."},
-      ]
-    },
-    {
-      title:'Inversion & Emphasis',sub:'Vurgu Yapıları',cefr:'B2',
-      explanation:'Negatif veya kısıtlayıcı zarflar cümlenin başına alındığında yardımcı fiil öne geçer. Bu yapı resmi ve güçlü etki yaratır. Cambridge B2 yazma ve okuma bölümlerinde sıkça karşılaşılır.',
-      table:[
-        ['Başlangıç ifadesi','Yapı','Örnek'],
-        ['Never','Never + aux + S + V','Never have I seen such chaos.'],
-        ['Rarely / Seldom','Rarely/Seldom + aux + S + V','Rarely does she arrive late.'],
-        ['Hardly / Scarcely','Hardly/Scarcely + aux + S + V + when…','Hardly had I sat down when the phone rang.'],
-        ['Not only','Not only + aux + S + V + but also…','Not only did he lie, but he also stole.'],
-        ['Not until','Not until + clause + aux + S + V','Not until she left did I realise.'],
-        ['Only when/after/if','Only when + clause + aux + S + V','Only when he spoke did I understand.'],
-        ['No sooner','No sooner + had + S + V3 + than…','No sooner had she left than it rained.'],
-        ['So / Such','So + adj + aux + S + V…','So tired was she that she slept all day.'],
-      ],
-      examples:[
-        {eng:'Never have I seen such beauty.',tr:'Böyle bir güzellik hiç görmedim.'},
-        {eng:'Rarely does she complain.',tr:'Nadiren şikayet eder.'},
-        {eng:'Not only did he lie, but he also stole.',tr:'Hem yalan söyledi hem de çaldı.'},
-        {eng:'No sooner had I arrived than it started raining.',tr:'Yeni varmıştım ki yağmur başladı.'},
-        {eng:'So beautiful was the view that we stopped the car.',tr:'Manzara o kadar güzeldi ki arabayı durdurduk.'},
-      ],
-      exercises:[
-        {type:'fill',q:'Never ___ I seen such a mess! (have)',a:'have'},
-        {type:'fill',q:'Rarely ___ she complain. (does)',a:'does'},
-        {type:'fill',q:'Not only ___ he rude, but also arrogant. (was)',a:'was'},
-        {type:'fill',q:'Hardly ___ I sat down when the phone rang. (had)',a:'had'},
-        {type:'fill',q:'No sooner ___ she left than the guests arrived. (had)',a:'had'},
-        {type:'fill',q:'So tired ___ she that she fell asleep instantly.',a:'was'},
-        {type:'fill',q:'Not until she called ___ I realise the mistake.',a:'did'},
-        {type:'mc',q:'"___ had she arrived when the meeting started."',opts:['Rarely','No sooner','Hardly','Not only'],a:'No sooner'},
-        {type:'mc',q:'"Not only ___ he pass, but he also got the highest score."',opts:['did','had','does','has'],a:'did'},
-        {type:'tf',q:'"Never I have seen such a film." — Doğru mu?',a:false,explain:'Devrik sıra: "Never have I seen..."'},
-        {type:'tf',q:'"So cold was the weather that the lake froze." — Doğru mu?',a:true},
-        {type:'transform',q:'"I had never eaten sushi before." → Never ile başlayın.',a:'Never had I eaten sushi before.'},
-        {type:'transform',q:'"She arrived and immediately the alarm went off." → No sooner kullanın.',a:'No sooner had she arrived than the alarm went off.'},
-      ]
-    },
-    {
-      title:'Cleft Sentences',sub:'Yarıklı Cümleler (Vurgu)',cefr:'B2',
-      explanation:'Cleft cümleler belirli bir öğeyi vurgulamak için kullanılır. "It is/was…that/who" ve "What…is/was" yapılarıyla oluşturulur.',
-      table:[
-        ['Tip','Yapı','Örnek'],
-        ['It-cleft (kişi)','It is/was + vurgulanan + who + rest','It was John who broke the window.'],
-        ['It-cleft (nesne/yer/zaman)','It is/was + vurgulanan + that + rest','It is patience that you need.'],
-        ['What-cleft (özne)','What + S + V + is/was + vurgulanan','What surprised me was her reaction.'],
-        ['What-cleft (nesne)','What + S + V + is + V1','What I need is a good rest.'],
-        ['All-cleft','All + S + V + is/was','All I want is your happiness.'],
-      ],
-      examples:[
-        {eng:'It was John who broke the window.',tr:'Pencereyi kıran John\'du.'},
-        {eng:'It is patience that you need.',tr:'İhtiyacın olan şey sabır.'},
-        {eng:'What I love is travelling.',tr:'Sevdiğim şey seyahat etmek.'},
-        {eng:'What surprised me was her reaction.',tr:'Beni şaşırtan şey onun tepkisiydi.'},
-        {eng:'All I want is to be happy.',tr:'Tek istediğim mutlu olmak.'},
-      ],
-      exercises:[
-        {type:'fill',q:'___ was Paris that she visited, not Rome.',a:'It'},
-        {type:'fill',q:'It was ___ (he) who called the police.',a:'he'},
-        {type:'fill',q:'What I love ___ travelling. (is/are)',a:'is'},
-        {type:'fill',q:'___ surprised us was the price.',a:'What'},
-        {type:'fill',q:'It is ___ (she) that deserves the prize.',a:'she'},
-        {type:'fill',q:'All she ___ (want) is a little peace.',a:'wants'},
-        {type:'fill',q:"___ I didn't understand was his behaviour.",a:'What'},
-        {type:'mc',q:'"___ is helping people that makes her happy."',opts:['It','What','That','Which'],a:'It'},
-        {type:'mc',q:'"What I need ___ a break."',opts:['are','is','be','were'],a:'is'},
-        {type:'tf',q:'"It was in Paris where she met him." — Doğru mu?',a:false,explain:'"where" değil "that" → "It was in Paris that she met him."'},
-        {type:'tf',q:'"What I enjoy most is reading." — Doğru mu?',a:true},
-        {type:'transform',q:'"I need a holiday." → What-cleft yapın.',a:'What I need is a holiday.'},
-        {type:'transform',q:'"My father taught me everything." → It-cleft (my father\'ı vurgula)',a:'It was my father who taught me everything.'},
-      ]
-    },
-  ]},
-};
-
-/* ===================== GRAMMAR RENDER ===================== */
-let activeGrammarLevel = 'A1';
-let activeGrammarTopic = null;
-
-function renderGrammarSidebar(){
-  const sb = document.getElementById('grammarSidebar');
-  sb.innerHTML = `<h4>Seviyeler</h4>` + Object.keys(grammar).map(lvl=>`
-    <button class="grammar-level-btn ${lvl===activeGrammarLevel?'active':''}" onclick="setGrammarLevel('${lvl}')">
-      ${lvl} <span class="badge">${grammar[lvl].topics.length} konu</span>
-    </button>
-  `).join('');
-}
-
-function setGrammarLevel(lvl){
-  activeGrammarLevel = lvl;
-  activeGrammarTopic = null;
-  renderGrammarSidebar();
-  renderGrammarMain();
-}
-
-function renderGrammarMain(){
-  const main = document.getElementById('grammarMain');
-  if(activeGrammarTopic !== null){
-    const t = grammar[activeGrammarLevel].topics[activeGrammarTopic];
-    // Build table HTML
-    let tableHTML = '';
-    if(t.table && t.table.length){
-      tableHTML = `<table class="grammar-table"><thead><tr>${t.table[0].map(h=>`<th>${h}</th>`).join('')}</tr></thead><tbody>${t.table.slice(1).map(row=>`<tr>${row.map(cell=>`<td>${cell}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
-    }
-    // Notes
-    let notesHTML = '';
-    if(t.notes && t.notes.length){
-      notesHTML = `<div class="skill-tips" style="margin-top:14px;"><h5>📌 Notlar</h5><ul>${t.notes.map(n=>`<li>${n}</li>`).join('')}</ul></div>`;
-    }
-    // Exercises
-    const exHTML = t.exercises.map((ex,i)=>{
-      const id = `ex_${activeGrammarLevel}_${activeGrammarTopic}_${i}`;
-      if(ex.type==='fill'){
-        return `<div class="exercise-item"><div class="ex-type">Doldurma</div><p>${i+1}. ${ex.q}</p><input type="text" id="${id}" placeholder="Cevabınızı yazın..."><button class="check-btn" onclick="checkAnswer('${id}','${ex.a.replace(/'/g,"\\'").replace(/"/g,'&quot;')}',this)">Kontrol Et</button><div class="answer-feedback" id="fb_${id}"></div></div>`;
-      } else if(ex.type==='mc'){
-        return `<div class="exercise-item"><div class="ex-type">Çoktan Seçmeli</div><p>${i+1}. ${ex.q}</p><div class="options">${ex.opts.map(o=>`<button class="opt-btn" onclick="checkMC(this,'${o.replace(/'/g,"\\'").replace(/"/g,'&quot;')}','${ex.a.replace(/'/g,"\\'").replace(/"/g,'&quot;')}','fb_${id}')">${o}</button>`).join('')}</div><div class="answer-feedback" id="fb_${id}"></div></div>`;
-      } else if(ex.type==='tf'){
-        return `<div class="exercise-item"><div class="ex-type">Doğru / Yanlış</div><p>${i+1}. ${ex.q}</p><div class="t-f-btns"><button class="tf-btn" onclick="checkTF(this,true,${ex.a},'fb_${id}')">✔ Doğru</button><button class="tf-btn" onclick="checkTF(this,false,${ex.a},'fb_${id}')">✘ Yanlış</button></div><div class="answer-feedback" id="fb_${id}">${ex.explain?'<span style="display:none" data-explain="'+ex.explain+'"></span>':''}</div></div>`;
-      } else if(ex.type==='transform'){
-        return `<div class="exercise-item"><div class="ex-type">Dönüştürme</div><p>${i+1}. ${ex.q}</p><input type="text" id="${id}" placeholder="Cevabınızı yazın..."><button class="check-btn" onclick="checkAnswer('${id}','${ex.a.replace(/'/g,"\\'").replace(/"/g,'&quot;')}',this)">Kontrol Et</button><div class="answer-feedback" id="fb_${id}"></div></div>`;
-      }
-      return '';
-    }).join('');
-
-    main.innerHTML = `
-      <div class="grammar-main">
-        <button class="grammar-detail-back" onclick="activeGrammarTopic=null;renderGrammarMain()"><i class="fas fa-arrow-left"></i> Konulara Dön</button>
-        <span class="level-tag">${t.cefr} – Cambridge CEFR</span>
-        <h2 class="grammar-detail">${t.title}</h2>
-        <p style="color:var(--muted);margin-bottom:20px;font-size:.97rem;">${t.sub}</p>
-
-        <div class="grammar-section">
-          <h4><i class="fas fa-book"></i> Açıklama</h4>
-          <p>${t.explanation}</p>
-        </div>
-        <div class="grammar-section">
-          <h4><i class="fas fa-table"></i> Yapı Tablosu</h4>
-          ${tableHTML}
-          ${notesHTML}
-        </div>
-        <div class="grammar-section">
-          <h4><i class="fas fa-lightbulb"></i> Örnekler</h4>
-          ${t.examples.map(e=>`<div class="example-box"><div class="eng">${e.eng}</div><div class="tr">${e.tr}</div></div>`).join('')}
-        </div>
-        <div class="grammar-section">
-          <h4><i class="fas fa-pencil-alt"></i> Alıştırmalar (${t.exercises.length} soru)</h4>
-          <div class="exercise-list">${exHTML}</div>
-        </div>
-      </div>`;
-  } else {
-    const topics = grammar[activeGrammarLevel].topics;
-    main.innerHTML = `
-      <div class="grammar-main">
-        <h3 style="font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--navy);margin-bottom:8px;">${grammar[activeGrammarLevel].label} Konuları</h3>
-        <p style="color:var(--muted);margin-bottom:24px;">${topics.length} konu — Cambridge CEFR müfredatına göre hazırlanmıştır.</p>
-        <div class="grammar-topic-list">
-          ${topics.map((t,i)=>`
-            <div class="grammar-topic-item" onclick="activeGrammarTopic=${i};renderGrammarMain();renderGrammarSidebar();">
-              <div>
-                <h5>${t.title}</h5>
-                <p>${t.sub}</p>
-              </div>
-              <i class="fas fa-chevron-right arrow"></i>
-            </div>
-          `).join('')}
-        </div>
-      </div>`;
-  }
-}
-
-renderGrammarSidebar();
-renderGrammarMain();
-
-/* ===================== EXERCISE CHECKERS ===================== */
-function checkAnswer(inputId, correct, btn){
-  const input = document.getElementById(inputId);
-  const fb = document.getElementById('fb_'+inputId);
-  const userAnswer = input.value.trim().toLowerCase().replace(/\s+/g,' ');
-  const correctAnswers = correct.toLowerCase().split('/').map(s=>s.trim());
-  const isCorrect = correctAnswers.some(ca => userAnswer === ca);
-  if(isCorrect){
-    fb.textContent = '✓ Doğru!';
-    fb.className = 'answer-feedback correct';
-    input.style.borderColor='#27ae60';
-  } else {
-    fb.innerHTML = `✗ Yanlış. Doğru cevap: <strong>${correct}</strong>`;
-    fb.className = 'answer-feedback wrong';
-    input.style.borderColor='#e74c3c';
-  }
-}
-
-function checkMC(btn, selected, correct, fbId){
-  const allBtns = btn.closest('.options').querySelectorAll('.opt-btn');
-  allBtns.forEach(b=>{
-    b.disabled=true;
-    b.classList.remove('correct-ans','wrong-ans');
-    if(b.textContent.trim()===correct) b.classList.add('correct-ans');
-    else if(b.textContent.trim()===selected && selected!==correct) b.classList.add('wrong-ans');
-  });
-  const fb = document.getElementById(fbId);
-  if(selected===correct){
-    fb.textContent='✓ Doğru!';
-    fb.className='answer-feedback correct';
-  } else {
-    fb.innerHTML=`✗ Yanlış. Doğru cevap: <strong>${correct}</strong>`;
-    fb.className='answer-feedback wrong';
-  }
-}
-
-function checkTF(btn, userVal, correctVal, fbId){
-  const btns = btn.closest('.t-f-btns').querySelectorAll('.tf-btn');
-  btns.forEach(b=>b.disabled=true);
-  const fb = document.getElementById(fbId);
-  const explainEl = fb.querySelector('[data-explain]');
-  const explain = explainEl ? explainEl.dataset.explain : '';
-  if(userVal===correctVal){
-    btn.style.background='#eafaf1';btn.style.borderColor='#27ae60';btn.style.color='#27ae60';
-    fb.textContent='✓ Doğru!';
-    fb.className='answer-feedback correct';
-  } else {
-    btn.style.background='#fdf2f2';btn.style.borderColor='#e74c3c';btn.style.color='#e74c3c';
-    fb.innerHTML=`✗ Yanlış.${explain?' '+explain:''}`;
-    fb.className='answer-feedback wrong';
-  }
-}
-
-/* ===================== UTILS ===================== */
-function showToast(msg){
-  const t = document.getElementById('toast');
-  t.textContent = '✅ '+msg;
-  t.classList.add('show');
-  setTimeout(()=>t.classList.remove('show'),2800);
-}
-function submitForm(e){
-  e.preventDefault();
-  showToast('Mesajınız gönderildi! En kısa sürede dönüş yapacağız.');
-  e.target.reset();
-}
-function toggleMenu(){
-  document.getElementById('navLinks').classList.toggle('open');
-}
-function closeMenu(){
-  document.getElementById('navLinks').classList.remove('open');
-}
-
-/* NAV HIGHLIGHT */
-const sections = document.querySelectorAll('section');
-const navLinksAll = document.querySelectorAll('.nav-links a');
-window.addEventListener('scroll',()=>{
-  let cur='';
-  sections.forEach(s=>{if(window.scrollY>=s.offsetTop-100)cur=s.id;});
-  navLinksAll.forEach(a=>{a.classList.toggle('active',a.getAttribute('href')==='#'+cur);});
-});
+function toggleMenu(){document.getElementById('navLinks').classList.toggle('open');}
+function closeMenu(){document.getElementById('navLinks').classList.remove('open');}
 </script>
 </body>
 </html>
