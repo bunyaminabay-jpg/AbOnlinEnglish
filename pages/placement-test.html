@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>English Level Test — AbOnlinEnglish</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0d1117;--ink2:#1c2333;--ink3:#30363d;
+  --mist:#f0f4f8;--mist2:#e8eef4;--mist3:#d1dbe7;
+  --white:#ffffff;
+  --azure:#0969da;--azure2:#1a7fe8;--azure-pale:#dbeafe;
+  --jade:#1a7f64;--jade-pale:#d1fae5;
+  --amber:#9a6700;--amber-pale:#fff8c5;
+  --ruby:#cf222e;--ruby-pale:#ffebe9;
+  --lavender:#6e40c9;--lavender-pale:#f3efff;
+  --gold:#c9a227;--gold2:#f0c040;
+  --r:10px;--r2:16px;--r3:24px;
+  --sh:0 1px 3px rgba(13,17,23,0.12),0 8px 32px rgba(13,17,23,0.08);
+  --sh2:0 4px 16px rgba(13,17,23,0.08),0 20px 64px rgba(13,17,23,0.12);
+  --trans:all 0.2s cubic-bezier(0.4,0,0.2,1);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Outfit',sans-serif;background:var(--mist);color:var(--ink);line-height:1.6;min-height:100vh}
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:var(--mist2)}
+::-webkit-scrollbar-thumb{background:var(--mist3);border-radius:3px}
+::-webkit-scrollbar-thumb:hover{background:#b0bec5}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;height:64px;
+  background:rgba(255,255,255,0.92);backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(13,17,23,0.08);
+  display:flex;align-items:center;padding:0 2rem;gap:1rem;justify-content:space-between}
+.nav-brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.nav-mark{width:34px;height:34px;background:var(--ink2);border-radius:9px;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Cormorant Garamond',serif;font-weight:700;font-size:18px;color:var(--gold2);letter-spacing:-1px}
+.nav-name{font-family:'Outfit',sans-serif;font-weight:700;font-size:15px;color:var(--ink);letter-spacing:-0.3px}
+.nav-name em{color:var(--azure);font-style:normal}
+.nav-pill{display:flex;align-items:center;gap:6px;padding:5px 14px;
+  background:var(--azure-pale);border:1px solid #bfdbfe;border-radius:100px;
+  font-size:12px;font-weight:600;color:var(--azure);letter-spacing:0.3px}
+.nav-pill::before{content:'';width:7px;height:7px;background:var(--azure);border-radius:50%;animation:blink 1.4s ease infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}
+
+/* ── SCREENS ── */
+#introScreen{padding-top:64px;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding-bottom:3rem}
+#testScreen{display:none;padding-top:64px;min-height:100vh}
+#resultScreen{display:none;padding-top:64px;min-height:100vh}
+
+/* ── INTRO ── */
+.intro-hero{max-width:680px;margin:0 auto;padding:4rem 2rem 2rem;text-align:center}
+.intro-eyebrow{display:inline-flex;align-items:center;gap:8px;padding:6px 16px;
+  background:var(--ink2);color:rgba(255,255,255,0.9);border-radius:100px;
+  font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:2rem}
+.intro-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,7vw,5rem);
+  font-weight:700;color:var(--ink);line-height:1.05;margin-bottom:1.25rem;letter-spacing:-1px}
+.intro-title em{color:var(--azure);font-style:italic}
+.intro-sub{font-size:1.1rem;color:var(--ink3);max-width:480px;margin:0 auto 3rem;line-height:1.8;font-weight:300}
+.intro-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:640px;margin:0 auto 2.5rem}
+.ic{background:white;border:1px solid var(--mist3);border-radius:var(--r2);padding:1.25rem 1rem;text-align:center;transition:var(--trans)}
+.ic:hover{border-color:var(--azure);transform:translateY(-2px);box-shadow:var(--sh)}
+.ic-icon{font-size:1.75rem;margin-bottom:0.5rem}
+.ic-val{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:700;color:var(--ink);line-height:1}
+.ic-lbl{font-size:11px;color:var(--ink3);margin-top:4px;font-weight:500}
+.intro-skills{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;max-width:560px;margin:0 auto 2.5rem;text-align:left}
+.isk{background:white;border:1px solid var(--mist3);border-radius:var(--r);padding:1rem 1.25rem;display:flex;align-items:center;gap:12px}
+.isk-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.isk-body .isk-name{font-size:13px;font-weight:700;color:var(--ink)}
+.isk-body .isk-q{font-size:12px;color:var(--ink3);margin-top:2px}
+.intro-cefr{display:flex;justify-content:center;gap:6px;margin-bottom:2.5rem;flex-wrap:wrap}
+.cefr-pill{padding:5px 14px;border-radius:6px;font-size:11px;font-weight:700;font-family:'JetBrains Mono',monospace;letter-spacing:0.5px;border:1px solid}
+.cefr-a1{background:#f0fdf4;color:#166534;border-color:#bbf7d0}
+.cefr-a2{background:#fffbeb;color:#713f12;border-color:#fde68a}
+.cefr-b1{background:#eff6ff;color:#1e40af;border-color:#bfdbfe}
+.cefr-b2{background:#f5f3ff;color:#4c1d95;border-color:#ddd6fe}
+.cefr-c1{background:#fff1f2;color:#881337;border-color:#fecdd3}
+.cefr-c2{background:#0d1117;color:var(--gold2);border-color:#3a3a1a}
+.btn-start{display:inline-flex;align-items:center;gap:10px;padding:16px 40px;
+  background:var(--ink2);color:white;border:none;border-radius:var(--r2);
+  font-size:16px;font-weight:700;cursor:pointer;transition:var(--trans);font-family:'Outfit',sans-serif;letter-spacing:-0.3px}
+.btn-start:hover{background:var(--ink);transform:translateY(-2px);box-shadow:0 8px 32px rgba(13,17,23,0.25)}
+.btn-start-arrow{font-size:20px;transition:var(--trans)}
+.btn-start:hover .btn-start-arrow{transform:translateX(4px)}
+.intro-disclaimer{margin-top:1.5rem;font-size:12px;color:var(--ink3);max-width:480px;text-align:center}
+
+@media(max-width:600px){.intro-cards{grid-template-columns:repeat(2,1fr)}.intro-skills{grid-template-columns:1fr}}
+
+/* ── PROGRESS BAR ── */
+.prog-bar{background:white;border-bottom:1px solid var(--mist3);position:sticky;top:64px;z-index:100;padding:12px 2rem}
+.prog-inner{max-width:800px;margin:0 auto}
+.prog-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.prog-left{display:flex;align-items:center;gap:10px}
+.prog-section-tag{padding:3px 10px;border-radius:5px;font-size:11px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;font-family:'JetBrains Mono',monospace}
+.pst-grammar{background:var(--azure-pale);color:var(--azure)}
+.pst-vocab{background:var(--amber-pale);color:var(--amber)}
+.pst-reading{background:var(--jade-pale);color:var(--jade)}
+.pst-listening{background:var(--lavender-pale);color:var(--lavender)}
+.prog-qnum{font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;color:var(--ink2)}
+.prog-pct{font-size:12px;color:var(--ink3)}
+.prog-track{height:5px;background:var(--mist2);border-radius:100px;overflow:hidden}
+.prog-fill{height:100%;border-radius:100px;background:linear-gradient(90deg,var(--azure),var(--jade));transition:width 0.6s cubic-bezier(0.4,0,0.2,1)}
+
+/* ── QUESTION AREA ── */
+.test-body{max-width:800px;margin:0 auto;padding:2rem}
+
+.q-card{background:white;border:1px solid var(--mist3);border-radius:var(--r3);padding:2.5rem;
+  box-shadow:var(--sh);animation:slideUp 0.3s cubic-bezier(0.4,0,0.2,1)}
+@keyframes slideUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.q-meta{display:flex;align-items:center;gap:10px;margin-bottom:1.5rem}
+.q-type-label{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--ink3);display:flex;align-items:center;gap:6px}
+.q-type-label::before{content:'';display:inline-block;width:16px;height:2px;background:currentColor;border-radius:1px}
+.q-diff-badge{padding:2px 8px;border-radius:4px;font-size:10px;font-weight:700;font-family:'JetBrains Mono',monospace;border:1px solid}
+.diff-A1,.diff-A2{background:#f0fdf4;color:#166534;border-color:#bbf7d0}
+.diff-B1,.diff-B2{background:#eff6ff;color:#1e40af;border-color:#bfdbfe}
+.diff-C1,.diff-C2{background:#fff1f2;color:#881337;border-color:#fecdd3}
+
+.q-text{font-size:1.15rem;color:var(--ink);font-weight:500;line-height:1.75;margin-bottom:2rem}
+.q-blank{display:inline-block;min-width:80px;height:2px;background:var(--ink);vertical-align:middle;margin:0 4px;position:relative;top:-4px}
+
+.opts{display:grid;gap:8px}
+.opt{width:100%;text-align:left;padding:13px 16px 13px 14px;
+  border:1.5px solid var(--mist3);border-radius:var(--r);background:white;
+  cursor:pointer;transition:var(--trans);
+  display:grid;grid-template-columns:32px 1fr;align-items:center;gap:12px;
+  font-family:'Outfit',sans-serif;font-size:14px;font-weight:500;color:var(--ink)}
+.opt-letter{width:28px;height:28px;border-radius:7px;background:var(--mist);
+  display:flex;align-items:center;justify-content:center;
+  font-size:11px;font-weight:700;color:var(--ink3);font-family:'JetBrains Mono',monospace;transition:var(--trans)}
+.opt:hover:not(:disabled){border-color:var(--azure);background:#f8fbff}
+.opt:hover:not(:disabled) .opt-letter{background:var(--azure);color:white}
+.opt.sel{border-color:var(--azure);background:#f0f7ff;color:var(--azure)}
+.opt.sel .opt-letter{background:var(--azure);color:white}
+.opt.correct{border-color:var(--jade);background:var(--jade-pale);color:var(--jade)}
+.opt.correct .opt-letter{background:var(--jade);color:white}
+.opt.wrong{border-color:var(--ruby);background:var(--ruby-pale);color:var(--ruby)}
+.opt.wrong .opt-letter{background:var(--ruby);color:white}
+
+/* ── READING BOX ── */
+.passage-card{background:var(--mist);border:1px solid var(--mist3);border-radius:var(--r2);
+  padding:1.75rem 2rem;margin-bottom:1.25rem;position:relative;overflow:hidden}
+.passage-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--jade)}
+.passage-header{display:flex;align-items:center;gap:8px;margin-bottom:1rem}
+.passage-tag{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--jade);background:var(--jade-pale);padding:3px 10px;border-radius:4px}
+.passage-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:700;color:var(--ink)}
+.passage-text{font-size:14px;color:var(--ink2);line-height:1.9}
+.passage-text p+p{margin-top:0.875rem}
+
+/* ── AUDIO BOX ── */
+.audio-card{background:var(--ink2);border-radius:var(--r2);padding:1.25rem 1.5rem;
+  margin-bottom:1.25rem;display:flex;align-items:center;gap:1.25rem}
+.audio-play{width:48px;height:48px;border-radius:50%;background:var(--gold2);border:none;
+  cursor:pointer;display:flex;align-items:center;justify-content:center;
+  font-size:20px;flex-shrink:0;transition:var(--trans);color:var(--ink2)}
+.audio-play:hover{transform:scale(1.1);box-shadow:0 0 20px rgba(240,192,64,0.4)}
+.audio-play.playing{background:white;animation:audioPulse 1.2s ease infinite}
+@keyframes audioPulse{0%,100%{box-shadow:0 0 0 0 rgba(240,192,64,0.4)}50%{box-shadow:0 0 0 12px rgba(240,192,64,0)}}
+.audio-info{flex:1;min-width:0}
+.audio-title{font-size:14px;font-weight:600;color:white;margin-bottom:3px}
+.audio-hint{font-size:11px;color:rgba(255,255,255,0.45)}
+.audio-prog-track{height:3px;background:rgba(255,255,255,0.15);border-radius:100px;margin-top:8px}
+.audio-prog-fill{height:100%;background:var(--gold2);border-radius:100px;width:0;transition:width 0.3s linear}
+.audio-replay-btn{padding:5px 12px;border:1px solid rgba(255,255,255,0.2);border-radius:6px;
+  background:none;color:rgba(255,255,255,0.55);font-size:11px;cursor:pointer;transition:var(--trans);white-space:nowrap}
+.audio-replay-btn:hover{color:white;border-color:rgba(255,255,255,0.5)}
+
+/* ── LISTEN SEP ── */
+.listen-sep{background:linear-gradient(135deg,var(--ink2),#253352);border-radius:var(--r3);
+  padding:2.5rem 2rem;text-align:center;color:white;margin-bottom:1.25rem;
+  animation:slideUp 0.4s ease}
+.listen-sep-icon{font-size:2.5rem;margin-bottom:0.75rem}
+.listen-sep h2{font-family:'Cormorant Garamond',serif;font-size:2rem;margin-bottom:0.5rem}
+.listen-sep p{color:rgba(255,255,255,0.6);font-size:14px}
+
+/* ── NAV BUTTONS ── */
+.q-nav{display:flex;justify-content:space-between;align-items:center;margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--mist2)}
+.btn-prev{padding:10px 20px;border:1.5px solid var(--mist3);border-radius:var(--r);
+  font-size:13px;font-weight:600;color:var(--ink3);background:white;cursor:pointer;
+  transition:var(--trans);display:flex;align-items:center;gap:6px;font-family:'Outfit',sans-serif}
+.btn-prev:hover{border-color:var(--ink3);color:var(--ink)}
+.btn-prev:disabled{opacity:0.35;cursor:default}
+.btn-next{padding:11px 28px;background:var(--ink2);color:white;border:none;
+  border-radius:var(--r);font-size:14px;font-weight:700;cursor:pointer;
+  transition:var(--trans);display:flex;align-items:center;gap:8px;font-family:'Outfit',sans-serif}
+.btn-next:hover:not(:disabled){background:var(--ink);transform:translateY(-1px);box-shadow:0 6px 20px rgba(13,17,23,0.2)}
+.btn-next:disabled{background:var(--mist3);cursor:not-allowed;color:var(--ink3)}
+.btn-submit{background:linear-gradient(135deg,var(--jade),#2aae8a)!important;color:white!important}
+.btn-submit:hover:not(:disabled){box-shadow:0 6px 20px rgba(26,127,100,0.35)!important}
+
+.dot-row{display:flex;gap:5px;flex-wrap:wrap;max-width:200px}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--mist3);transition:var(--trans)}
+.dot.done{background:var(--jade)}
+.dot.cur{background:var(--azure);transform:scale(1.5)}
+
+/* ── RESULT SCREEN ── */
+.result-wrap{max-width:800px;margin:0 auto;padding:3rem 2rem}
+.result-hero{background:var(--ink2);border-radius:var(--r3);padding:3.5rem 2.5rem;
+  text-align:center;color:white;margin-bottom:1.5rem;position:relative;overflow:hidden}
+.result-hero::before{content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 30% 40%,rgba(26,127,240,0.15),transparent 60%),
+             radial-gradient(ellipse at 70% 70%,rgba(26,127,100,0.1),transparent 50%)}
+.confetti-wrap{font-size:3rem;margin-bottom:1rem;animation:float 2s ease-in-out infinite alternate}
+@keyframes float{from{transform:translateY(0)}to{transform:translateY(-10px)}}
+.res-level{font-family:'Cormorant Garamond',serif;font-size:6rem;font-weight:700;
+  line-height:1;background:linear-gradient(135deg,var(--gold2),#fb923c);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:0.25rem}
+.res-name{font-size:1.5rem;font-weight:600;color:rgba(255,255,255,0.85);margin-bottom:0.4rem}
+.res-score{font-family:'JetBrains Mono',monospace;font-size:13px;color:rgba(255,255,255,0.45);margin-bottom:2rem}
+.res-desc{max-width:520px;margin:0 auto 2.5rem;color:rgba(255,255,255,0.65);font-size:15px;line-height:1.85;font-weight:300}
+.res-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.res-btn{padding:12px 26px;border-radius:var(--r);font-size:14px;font-weight:700;cursor:pointer;border:none;font-family:'Outfit',sans-serif;transition:var(--trans)}
+.res-btn-gold{background:var(--gold2);color:var(--ink)}
+.res-btn-gold:hover{background:#f7cc50;transform:translateY(-1px)}
+.res-btn-outline{background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.75);border:1.5px solid rgba(255,255,255,0.2)}
+.res-btn-outline:hover{background:rgba(255,255,255,0.18);color:white}
+
+.res-section{background:white;border:1px solid var(--mist3);border-radius:var(--r3);
+  padding:2rem;margin-bottom:1.25rem;box-shadow:var(--sh)}
+.res-section-title{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:700;color:var(--ink);margin-bottom:1.5rem;display:flex;align-items:center;gap:10px}
+.res-section-title::after{content:'';flex:1;height:1px;background:var(--mist3)}
+
+.breakdown-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.bd-item{border:1px solid var(--mist3);border-radius:var(--r2);padding:1.25rem}
+.bd-label{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--ink3);margin-bottom:0.5rem}
+.bd-score{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:700;line-height:1;margin-bottom:0.75rem}
+.bd-pct{font-size:13px;font-weight:400;color:var(--ink3);margin-left:6px}
+.bd-bar{height:5px;background:var(--mist2);border-radius:100px;overflow:hidden}
+.bd-fill{height:100%;border-radius:100px;transition:width 1.4s cubic-bezier(0.4,0,0.2,1)}
+
+.cefr-track{display:flex;position:relative;margin:0.5rem 0}
+.cefr-track::before{content:'';position:absolute;top:22px;left:24px;right:24px;height:2px;background:var(--mist3);z-index:0}
+.cefr-node{flex:1;display:flex;flex-direction:column;align-items:center;z-index:1}
+.cefr-circle{width:44px;height:44px;border-radius:50%;border:2px solid var(--mist3);
+  background:white;display:flex;align-items:center;justify-content:center;
+  font-size:10px;font-weight:800;font-family:'JetBrains Mono',monospace;color:var(--ink3);transition:var(--trans)}
+.cefr-node.passed .cefr-circle{border-color:var(--jade);background:var(--jade);color:white}
+.cefr-node.active .cefr-circle{border-color:var(--azure);background:var(--azure);color:white;
+  transform:scale(1.3);box-shadow:0 0 0 4px rgba(9,105,218,0.15)}
+.cefr-label{font-size:10px;font-weight:700;color:var(--ink3);margin-top:8px;font-family:'JetBrains Mono',monospace}
+.cefr-node.passed .cefr-label,.cefr-node.active .cefr-label{color:var(--ink);font-weight:700}
+
+.rec-list{display:flex;flex-direction:column;gap:8px}
+.rec-item{display:flex;align-items:center;gap:12px;padding:12px 14px;
+  background:var(--mist);border-radius:var(--r);font-size:13px;color:var(--ink2);
+  border:1px solid var(--mist3)}
+.rec-icon{font-size:1.1rem;flex-shrink:0}
+
+/* ── TOAST ── */
+.toast{position:fixed;bottom:2rem;right:2rem;padding:12px 18px;
+  background:var(--ink2);color:white;border-radius:var(--r);font-size:13px;
+  box-shadow:var(--sh2);z-index:500;transform:translateY(80px);opacity:0;transition:all 0.3s ease;
+  display:flex;align-items:center;gap:8px;max-width:320px;line-height:1.4}
+.toast.show{transform:translateY(0);opacity:1}
+.toast.success{border-left:3px solid var(--jade)}
+.toast.info{border-left:3px solid var(--azure)}
+
+/* ── SECTION SEPARATOR ── */
+.section-sep{background:linear-gradient(135deg,#0e2040,#1a3a6e);border-radius:var(--r3);
+  padding:2.5rem 2rem;text-align:center;color:white;margin-bottom:1.25rem;animation:slideUp 0.4s ease}
+.section-sep-icon{font-size:2.5rem;margin-bottom:0.75rem}
+.section-sep h2{font-family:'Cormorant Garamond',serif;font-size:2rem;color:white;margin-bottom:0.5rem}
+.section-sep p{font-size:14px;color:rgba(255,255,255,0.55)}
+
+/* ── FOOTER ── */
+footer{background:var(--ink);color:rgba(255,255,255,0.35);text-align:center;padding:2.5rem 1.5rem;font-size:12px;margin-top:4rem}
+footer strong{color:var(--gold2)}
+.footer-links{display:flex;justify-content:center;gap:20px;margin-bottom:1rem}
+.footer-links a{color:rgba(255,255,255,0.4);text-decoration:none;transition:var(--trans)}
+.footer-links a:hover{color:var(--gold2)}
+
+@media(max-width:640px){
+  .breakdown-grid{grid-template-columns:1fr}
+  .q-card{padding:1.5rem}
+  .result-hero{padding:2.5rem 1.5rem}
+  .res-level{font-size:4.5rem}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="#">
+    <div class="nav-mark">Ab</div>
+    <div class="nav-name">AbOnlin<em>English</em></div>
+  </a>
+  <div class="nav-pill">CEFR Placement Test</div>
+</nav>
+
+<!-- ═══════════════ INTRO ═══════════════ -->
+<div id="introScreen">
+  <div class="intro-hero">
+    <div class="intro-eyebrow">🎓 Official CEFR Placement</div>
+    <h1 class="intro-title">Discover Your<br><em>English Level</em></h1>
+    <p class="intro-sub">A professional, research-based test covering Grammar, Vocabulary, Reading & Listening — aligned with the Common European Framework of Reference.</p>
+
+    <div class="intro-cards">
+      <div class="ic"><div class="ic-icon">📐</div><div class="ic-val">17</div><div class="ic-lbl">Grammar Qs</div></div>
+      <div class="ic"><div class="ic-icon">📖</div><div class="ic-val">13</div><div class="ic-lbl">Vocabulary Qs</div></div>
+      <div class="ic"><div class="ic-icon">📰</div><div class="ic-val">10</div><div class="ic-lbl">Reading Qs</div></div>
+      <div class="ic"><div class="ic-icon">🎧</div><div class="ic-val">10</div><div class="ic-lbl">Listening Qs</div></div>
+    </div>
+
+    <div class="intro-skills">
+      <div class="isk"><div class="isk-dot" style="background:var(--azure)"></div><div class="isk-body"><div class="isk-name">Grammar</div><div class="isk-q">Tenses, conditionals, passives</div></div></div>
+      <div class="isk"><div class="isk-dot" style="background:var(--amber)"></div><div class="isk-body"><div class="isk-name">Vocabulary</div><div class="isk-q">Collocations, idioms, word choice</div></div></div>
+      <div class="isk"><div class="isk-dot" style="background:var(--jade)"></div><div class="isk-body"><div class="isk-name">Reading</div><div class="isk-q">Academic & contemporary texts</div></div></div>
+      <div class="isk"><div class="isk-dot" style="background:var(--lavender)"></div><div class="isk-body"><div class="isk-name">Listening</div><div class="isk-q">Conversations, lectures, news</div></div></div>
+    </div>
+
+    <div class="intro-cefr">
+      <span class="cefr-pill cefr-a1">A1</span>
+      <span class="cefr-pill cefr-a2">A2</span>
+      <span class="cefr-pill cefr-b1">B1</span>
+      <span class="cefr-pill cefr-b2">B2</span>
+      <span class="cefr-pill cefr-c1">C1</span>
+      <span class="cefr-pill cefr-c2">C2</span>
+    </div>
+
+    <button class="btn-start" onclick="startTest()">
+      Begin Test
+      <span class="btn-start-arrow">→</span>
+    </button>
+    <p class="intro-disclaimer">~15 minutes · 50 questions · No registration required · Results immediately</p>
+  </div>
+</div>
+
+<!-- ═══════════════ TEST ═══════════════ -->
+<div id="testScreen">
+  <div class="prog-bar">
+    <div class="prog-inner">
+      <div class="prog-row">
+        <div class="prog-left">
+          <span class="prog-section-tag pst-grammar" id="sectionTag">Grammar</span>
+          <span class="prog-qnum" id="qNum">1 / 50</span>
+        </div>
+        <span class="prog-pct" id="progPct">0% complete</span>
+      </div>
+      <div class="prog-track"><div class="prog-fill" id="progFill" style="width:0%"></div></div>
+    </div>
+  </div>
+  <div class="test-body" id="testContent"></div>
+</div>
+
+<!-- ═══════════════ RESULT ═══════════════ -->
+<div id="resultScreen">
+  <div class="result-wrap">
+
+    <div class="result-hero">
+      <div class="confetti-wrap" id="resEmoji">🎉</div>
+      <div class="res-level" id="resLevel">B1</div>
+      <div class="res-name" id="resName">Intermediate</div>
+      <div class="res-score" id="resScore">0 / 50 points</div>
+      <p class="res-desc" id="resDesc">—</p>
+      <div class="res-actions">
+        <button class="res-btn res-btn-gold" onclick="window.location.href='../index.html'">📚 Start Learning at My Level</button>
+        <button class="res-btn res-btn-outline" onclick="retakeTest()">↺ Retake Test</button>
+        <button class="res-btn res-btn-outline" onclick="window.location.href='../index.html'">🏠 Home</button>
+      </div>
+    </div>
+
+    <div class="res-section">
+      <div class="res-section-title">📊 Score Breakdown</div>
+      <div class="breakdown-grid" id="breakdownGrid"></div>
+    </div>
+
+    <div class="res-section">
+      <div class="res-section-title">🗺️ CEFR Position</div>
+      <div class="cefr-track" id="cefrTrack"></div>
+    </div>
+
+    <div class="res-section">
+      <div class="res-section-title">🎯 Your Next Steps</div>
+      <div class="rec-list" id="recList"></div>
+    </div>
+
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<footer>
+  <div class="footer-links">
+    <a href="#">Home</a>
+    <a href="mailto:ingilizceogrensene@gmail.com">Contact</a>
+    <a href="https://www.instagram.com/abonlinenglish" target="_blank">Instagram</a>
+  </div>
+  <strong>AbOnlinEnglish</strong> Language Education &copy; 2025 · All rights reserved<br>
+  <span style="margin-top:6px;display:inline-block">ingilizceogrensene@gmail.com &nbsp;·&nbsp; @abonlinenglish</span>
+</footer>
+
+<script>
+/* ─────────────────────────────────────────
+   QUESTION DATA
+───────────────────────────────────────── */
+const grammarQs = [
+  {q:"She ___ to school every day.", opts:["go","goes","is going","went"], a:1, diff:"A1"},
+  {q:"There ___ a book on the table.", opts:["is","are","be","am"], a:0, diff:"A1"},
+  {q:"___ you like some coffee?", opts:["Do","Would","Are","Should"], a:1, diff:"A1"},
+  {q:"They ___ TV last night.", opts:["watch","are watching","watched","watches"], a:2, diff:"A2"},
+  {q:"I ___ never been to London.", opts:["have","has","had","am"], a:0, diff:"A2"},
+  {q:"She ___ in this company for five years.", opts:["worked","has worked","is working","works"], a:1, diff:"A2"},
+  {q:"We ___ to the cinema last Friday.", opts:["go","went","have gone","are going"], a:1, diff:"A2"},
+  {q:"If it rains tomorrow, we ___ the picnic.", opts:["cancel","will cancel","would cancel","cancelled"], a:1, diff:"B1"},
+  {q:"The report ___ by the manager every month.", opts:["writes","is written","has written","was writing"], a:1, diff:"B1"},
+  {q:"I wish I ___ more time to study.", opts:["have","had","will have","having"], a:1, diff:"B1"},
+  {q:"She asked me where I ___ going.", opts:["am","was","will be","have been"], a:1, diff:"B1"},
+  {q:"By the time she arrived, the party ___ already ended.", opts:["had","has","is","was"], a:0, diff:"B2"},
+  {q:"He suggested ___ the meeting to next week.", opts:["to postpone","postponing","postpone","postponed"], a:1, diff:"B2"},
+  {q:"___ I known about the problem earlier, I would have helped.", opts:["If","Were","Had","Should"], a:2, diff:"B2"},
+  {q:"The new policy ___ considerable controversy since its introduction.", opts:["provoked","has provoked","had provoked","provokes"], a:1, diff:"C1"},
+  {q:"Not only ___ the new regulations impractical, but they are also counterproductive.", opts:["are","is","were","have"], a:0, diff:"C1"},
+  {q:"It is high time we ___ this matter more seriously.", opts:["take","took","have taken","taking"], a:1, diff:"C2"},
+];
+
+const vocabQs = [
+  {q:"What does 'resilient' mean?", opts:["fragile","recovering quickly from difficulty","slow","creative"], a:1, diff:"B1"},
+  {q:"Choose the correct collocation: 'make a ___'", opts:["decision","discover","knowledge","opportunity"], a:0, diff:"A2"},
+  {q:"The word 'ambiguous' means something that is ___.", opts:["very clear","having more than one meaning","extremely difficult","simple to understand"], a:1, diff:"B2"},
+  {q:"Which phrasal verb means 'to cancel a meeting'?", opts:["call off","call up","call out","call on"], a:0, diff:"B2"},
+  {q:"'Procrastinate' means to ___ doing something.", opts:["hurry","enjoy","delay","complete"], a:2, diff:"B1"},
+  {q:"Choose the word that collocates with 'heavy': ___ traffic", opts:["strong","heavy","big","large"], a:1, diff:"A2"},
+  {q:"The prefix 'un-' in 'unusual' means:", opts:["very","again","not","before"], a:2, diff:"A2"},
+  {q:"Which word is a synonym for 'eloquent'?", opts:["silent","articulate","confused","loud"], a:1, diff:"C1"},
+  {q:"'She has a penchant for classical music.' What does 'penchant' mean?", opts:["dislike","strong preference","talent","memory"], a:1, diff:"C1"},
+  {q:"'The catalyst for change was the new CEO.' 'Catalyst' means:", opts:["barrier","result","something that causes change","opposition"], a:2, diff:"B2"},
+  {q:"Which word best completes: 'The scientist made a ___ discovery that changed medicine.'?", opts:["groundbreaking","ordinary","slight","temporary"], a:0, diff:"B1"},
+  {q:"'Meticulous' means:", opts:["careless and hasty","extremely careful and precise","creative and bold","loud and energetic"], a:1, diff:"C1"},
+  {q:"Choose the correct word: 'The company decided to ___ its losses and close the project.'", opts:["cut","trim","write off","reduce"], a:2, diff:"B2"},
+];
+
+const passages = {
+  p1:{
+    title:"The Science of Sleep",
+    text:`Sleep is one of the most fundamental biological needs, yet it remains one of the least understood aspects of human health. Scientists now believe that sleep serves several critical functions: it allows the brain to consolidate memories, repair cellular damage, and flush out harmful waste products that accumulate during waking hours.\n\nThe recommended amount of sleep for adults is between seven and nine hours per night. However, studies show that more than one third of adults in developed countries regularly sleep fewer than six hours. This chronic sleep deprivation has been linked to a range of serious health problems, including obesity, heart disease, and impaired cognitive function.\n\nInterestingly, the quality of sleep matters as much as the quantity. Sleep is divided into several stages, including REM (Rapid Eye Movement) sleep, during which most dreaming occurs, and deep slow-wave sleep, which is particularly important for physical restoration. Disrupting these cycles — through noise, light, or irregular schedules — can reduce the benefits of sleep even when total hours seem adequate.`,
+    qs:[
+      {q:"According to the passage, what does sleep help the brain do?", opts:["Produce more energy","Consolidate memories and remove waste","Improve physical strength","Speed up metabolism"], a:1, diff:"B1"},
+      {q:"What proportion of adults in developed countries sleep fewer than six hours?", opts:["Less than one quarter","Approximately half","More than one third","About one fifth"], a:2, diff:"B1"},
+      {q:"The word 'chronic' (paragraph 2) most likely means:", opts:["occasional","very serious","persistent and long-term","sudden"], a:2, diff:"B2"},
+      {q:"What is stated about REM sleep?", opts:["It is the deepest phase of sleep","Most dreaming occurs during it","It is not necessary for adults","It lasts most of the night"], a:1, diff:"B1"},
+      {q:"Which statement best summarises the main point of the passage?", opts:["Adults need at least ten hours of sleep","Sleep quality and quantity both affect health significantly","REM sleep is the most important sleep stage","Only children need adequate sleep"], a:1, diff:"B2"},
+    ]
+  },
+  p2:{
+    title:"Artificial Intelligence and the Future of Work",
+    text:`The rapid advancement of artificial intelligence is prompting economists and policymakers to reconsider traditional assumptions about labour markets. While previous waves of automation primarily displaced routine, manual tasks, modern AI systems are increasingly capable of performing complex cognitive work — from legal research to medical diagnostics.\n\nProponents of automation argue that technological disruption ultimately creates more jobs than it destroys, pointing to historical precedents such as the Industrial Revolution. However, critics contend that this time may be fundamentally different: the pace of change is unprecedented, leaving insufficient time for workers to adapt through retraining. Moreover, the gains from AI-driven productivity may accrue disproportionately to capital owners rather than workers.\n\nWhat seems clear is that certain skills will become increasingly valuable: critical thinking, creativity, emotional intelligence, and complex problem-solving — abilities that remain difficult for machines to replicate. Education systems and labour policies will need to evolve accordingly if societies are to manage this transition equitably.`,
+    qs:[
+      {q:"How does the author characterise previous waves of automation?", opts:["They affected only cognitive tasks","They mainly displaced routine manual work","They had little impact on employment","They were slower than today's AI"], a:1, diff:"B2"},
+      {q:"The word 'accrue' (paragraph 2) most likely means:", opts:["be distributed widely","accumulate or come to","disappear gradually","be wasted"], a:1, diff:"C1"},
+      {q:"What argument do critics make about AI-driven automation?", opts:["Workers will easily adapt through retraining","AI will create more jobs than it destroys","The speed of change leaves insufficient time for adaptation","AI cannot perform cognitive tasks"], a:2, diff:"B2"},
+      {q:"According to the passage, which skill will remain valuable?", opts:["Routine data processing","Manual dexterity","Emotional intelligence","Memorisation"], a:2, diff:"B1"},
+      {q:"What is the author's overall tone in this passage?", opts:["Highly optimistic about AI","Strongly opposed to automation","Balanced, presenting multiple perspectives","Indifferent to the topic"], a:2, diff:"C1"},
+    ]
+  }
+};
+
+const listeningClips = [
+  {
+    id:"c1", title:"Conversation at a Train Station",
+    text:"A: Excuse me, could you tell me when the next train to Edinburgh leaves? B: Certainly. There's one at half past two and another at quarter to four. A: Perfect, I'll take the half past two. How long does the journey take? B: It usually takes around four and a half hours, but there might be some delays today due to engineering works on the line.",
+    qs:[
+      {q:"When does the first train to Edinburgh leave?", opts:["2:00","2:30","3:45","4:15"], a:1, diff:"A2"},
+      {q:"How long does the journey usually take?", opts:["3 hours","4 hours","4.5 hours","5 hours"], a:2, diff:"A2"},
+      {q:"Why might there be delays today?", opts:["Bad weather","Overcrowding","Engineering works","Staff shortage"], a:2, diff:"B1"},
+    ]
+  },
+  {
+    id:"c2", title:"University Lecture Excerpt",
+    text:"Today we are going to examine the concept of cognitive dissonance, first introduced by psychologist Leon Festinger in 1957. Cognitive dissonance refers to the mental discomfort experienced when a person holds two or more contradictory beliefs, or when their actions conflict with their beliefs. Importantly, people are highly motivated to reduce this discomfort — they might change their beliefs, add new information that justifies both, or simply ignore one of the conflicting elements.",
+    qs:[
+      {q:"Who introduced the concept of cognitive dissonance?", opts:["Sigmund Freud","Leon Festinger","Carl Jung","B.F. Skinner"], a:1, diff:"B2"},
+      {q:"What does cognitive dissonance cause?", opts:["Physical pain","Mental discomfort","Memory loss","Increased focus"], a:1, diff:"B1"},
+      {q:"How might people respond to cognitive dissonance?", opts:["Accept both conflicting beliefs equally","Change beliefs or behaviour to reduce discomfort","Seek professional help","Avoid social contact"], a:1, diff:"B2"},
+    ]
+  },
+  {
+    id:"c3", title:"News Report: Climate Technology",
+    text:"Scientists at the University of Cambridge have announced a significant breakthrough in carbon capture technology. The new process, which uses modified algae grown in seawater, can remove carbon dioxide from the atmosphere at roughly ten times the efficiency of existing methods. Researchers say the technology could be commercially viable within five years, provided sufficient funding is secured. Environmental groups have welcomed the announcement but caution that carbon capture alone cannot replace the urgent need to reduce emissions at source.",
+    qs:[
+      {q:"What technology does the report describe?", opts:["Solar energy production","Carbon capture using algae","Wind turbine efficiency","Ocean desalination"], a:1, diff:"B1"},
+      {q:"How does the new process compare to existing methods?", opts:["Slightly more efficient","Twice as efficient","Ten times more efficient","Equally efficient"], a:2, diff:"B1"},
+      {q:"What do environmental groups caution about?", opts:["The technology is not scientifically valid","Carbon capture cannot replace reducing emissions at source","Algae farming is environmentally harmful","The technology will take 50 years to develop"], a:1, diff:"B2"},
+      {q:"When might the technology be commercially available?", opts:["Within one year","In about five years","In about ten years","Within twenty years"], a:1, diff:"B1"},
+    ]
+  }
+];
+
+/* ─────────────────────────────────────────
+   BUILD FLAT QUESTION LIST
+───────────────────────────────────────── */
+const QUESTIONS = [];
+grammarQs.forEach((q,i) => QUESTIONS.push({...q, type:'grammar', idx:i}));
+vocabQs.forEach((q,i) => QUESTIONS.push({...q, type:'vocab', idx:i}));
+passages.p1.qs.forEach((q,i) => QUESTIONS.push({...q, type:'reading', passKey:'p1', idx:i}));
+passages.p2.qs.forEach((q,i) => QUESTIONS.push({...q, type:'reading', passKey:'p2', idx:i}));
+listeningClips.forEach(clip => {
+  QUESTIONS.push({type:'listen-sep', clip});
+  clip.qs.forEach((q,i) => QUESTIONS.push({...q, type:'listening', clipId:clip.id, idx:i}));
+});
+
+const TOTAL_QS = QUESTIONS.filter(q => !q.type.endsWith('-sep')).length;
+
+let state = {pos:0, answers:{}, gram:0, voc:0, read:0, listen:0};
+
+/* ─────────────────────────────────────────
+   SECTION TAGS
+───────────────────────────────────────── */
+const sectionTagMap = {
+  grammar:   {label:'Grammar',   cls:'pst-grammar'},
+  vocab:     {label:'Vocabulary',cls:'pst-vocab'},
+  reading:   {label:'Reading',   cls:'pst-reading'},
+  listening: {label:'Listening', cls:'pst-listening'},
+  'listen-sep':{label:'Listening',cls:'pst-listening'},
+};
+
+/* ─────────────────────────────────────────
+   START
+───────────────────────────────────────── */
+function startTest() {
+  document.getElementById('introScreen').style.display = 'none';
+  document.getElementById('testScreen').style.display = 'block';
+  state = {pos:0, answers:{}, gram:0, voc:0, read:0, listen:0};
+  renderQ();
+}
+
+/* ─────────────────────────────────────────
+   PROGRESS
+───────────────────────────────────────── */
+function updateProgress() {
+  const answered = Object.keys(state.answers).length;
+  const pct = Math.round((answered / TOTAL_QS) * 100);
+  document.getElementById('progFill').style.width = pct + '%';
+  document.getElementById('progPct').textContent = pct + '% complete';
+
+  const q = QUESTIONS[state.pos];
+  const sec = sectionTagMap[q.type] || sectionTagMap.grammar;
+  const tag = document.getElementById('sectionTag');
+  tag.textContent = sec.label;
+  tag.className = 'prog-section-tag ' + sec.cls;
+
+  const qNum = QUESTIONS.slice(0, state.pos + 1).filter(q => !q.type.endsWith('-sep')).length;
+  document.getElementById('qNum').textContent = qNum + ' / ' + TOTAL_QS;
+}
+
+/* ─────────────────────────────────────────
+   RENDER
+───────────────────────────────────────── */
+function renderQ() {
+  updateProgress();
+  const q = QUESTIONS[state.pos];
+  const container = document.getElementById('testContent');
+  container.innerHTML = '';
+
+  if (q.type === 'listen-sep') renderListenSep(container, q);
+  else if (q.type === 'grammar' || q.type === 'vocab') renderMCQ(container, q);
+  else if (q.type === 'reading') renderReading(container, q);
+  else if (q.type === 'listening') renderListeningQ(container, q);
+  window.scrollTo(0, 64);
+}
+
+function mkOpts(q, savedAns) {
+  const L = ['A','B','C','D'];
+  return q.opts.map((o,i) => `
+    <button class="opt${savedAns===i?' sel':''}" onclick="selectAns(${i})" data-i="${i}">
+      <div class="opt-letter">${L[i]}</div>
+      <span>${o}</span>
+    </button>`).join('');
+}
+
+function mkNav(isSep=false) {
+  const isLast = state.pos === QUESTIONS.length - 1;
+  const needsAns = !isSep && state.answers[state.pos] === undefined;
+  return `
+    <div class="q-nav">
+      <button class="btn-prev" onclick="prevQ()" ${state.pos===0?'disabled':''}>← Back</button>
+      <div class="dot-row" id="dotRow"></div>
+      <button class="btn-next ${isLast?'btn-submit':''}" id="nextBtn" onclick="nextQ()" ${needsAns?'disabled':''}>
+        ${isLast ? '✅ Submit' : 'Next →'}
+      </button>
+    </div>`;
+}
+
+function buildDots() {
+  const row = document.getElementById('dotRow');
+  if (!row) return;
+  const visQs = QUESTIONS.filter(q => !q.type.endsWith('-sep'));
+  const from = Math.max(0, Math.min(state.pos - 5, visQs.length - 10));
+  const slice = visQs.slice(from, from + 10);
+  row.innerHTML = slice.map((q, i) => {
+    const globalIdx = QUESTIONS.indexOf(q);
+    const isCur = globalIdx === state.pos;
+    const isDone = state.answers[globalIdx] !== undefined;
+    return `<div class="dot ${isDone?'done':''} ${isCur?'cur':''}"></div>`;
+  }).join('');
+}
+
+function renderMCQ(container, q) {
+  container.innerHTML = `
+    <div style="padding:1.5rem 0">
+      <div class="q-card">
+        <div class="q-meta">
+          <span class="q-type-label">${q.type==='grammar'?'Grammar':'Vocabulary'}</span>
+          <span class="q-diff-badge diff-${q.diff||'B1'}">${q.diff||'B1'}</span>
+        </div>
+        <div class="q-text">${q.q.replace(/___/g,'<span class="q-blank"></span>')}</div>
+        <div class="opts">${mkOpts(q, state.answers[state.pos])}</div>
+      </div>
+      ${mkNav()}
+    </div>`;
+  buildDots();
+}
+
+function renderReading(container, q) {
+  const p = passages[q.passKey];
+  const passHtml = p.text.split('\n\n').map(t => `<p>${t.trim()}</p>`).join('');
+  container.innerHTML = `
+    <div style="padding:1.5rem 0">
+      <div class="passage-card">
+        <div class="passage-header">
+          <span class="passage-tag">Reading Text</span>
+          <span class="passage-title">${p.title}</span>
+        </div>
+        <div class="passage-text">${passHtml}</div>
+      </div>
+      <div class="q-card">
+        <div class="q-meta">
+          <span class="q-type-label">Reading Comprehension</span>
+          <span class="q-diff-badge diff-${q.diff||'B1'}">${q.diff||'B1'}</span>
+        </div>
+        <div class="q-text">${q.q}</div>
+        <div class="opts">${mkOpts(q, state.answers[state.pos])}</div>
+      </div>
+      ${mkNav()}
+    </div>`;
+  buildDots();
+}
+
+function renderListenSep(container, q) {
+  container.innerHTML = `
+    <div style="padding:1.5rem 0">
+      <div class="listen-sep">
+        <div class="listen-sep-icon">🎧</div>
+        <h2>Listening Section</h2>
+        <p>Listen to each audio clip carefully, then answer the questions that follow.</p>
+      </div>
+      <div class="audio-card">
+        <button class="audio-play" id="playBtn_${q.clip.id}" onclick="playClip('${q.clip.id}','${escJs(q.clip.text)}')">▶</button>
+        <div class="audio-info">
+          <div class="audio-title">${q.clip.title}</div>
+          <div class="audio-hint">Press play to listen · You may replay as many times as needed</div>
+          <div class="audio-prog-track"><div class="audio-prog-fill" id="prog_${q.clip.id}"></div></div>
+        </div>
+        <button class="audio-replay-btn" onclick="playClip('${q.clip.id}','${escJs(q.clip.text)}')">⟳ Replay</button>
+      </div>
+      ${mkNav(true)}
+    </div>`;
+  buildDots();
+}
+
+function renderListeningQ(container, q) {
+  const clip = listeningClips.find(c => c.id === q.clipId);
+  const uid = q.clipId + '_' + q.idx;
+  container.innerHTML = `
+    <div style="padding:1.5rem 0">
+      <div class="audio-card" style="margin-bottom:1rem">
+        <button class="audio-play" id="playBtn_${uid}" onclick="playClip('${uid}','${escJs(clip.text)}')">▶</button>
+        <div class="audio-info">
+          <div class="audio-title">${clip.title}</div>
+          <div class="audio-hint">🔊 Replay if needed</div>
+          <div class="audio-prog-track"><div class="audio-prog-fill" id="prog_${uid}"></div></div>
+        </div>
+        <button class="audio-replay-btn" onclick="playClip('${uid}','${escJs(clip.text)}')">⟳ Replay</button>
+      </div>
+      <div class="q-card">
+        <div class="q-meta">
+          <span class="q-type-label">Listening Comprehension</span>
+          <span class="q-diff-badge diff-${q.diff||'B1'}">${q.diff||'B1'}</span>
+        </div>
+        <div class="q-text">${q.q}</div>
+        <div class="opts">${mkOpts(q, state.answers[state.pos])}</div>
+      </div>
+      ${mkNav()}
+    </div>`;
+  buildDots();
+}
+
+/* ─────────────────────────────────────────
+   INTERACTION
+───────────────────────────────────────── */
+function selectAns(idx) {
+  state.answers[state.pos] = idx;
+  document.querySelectorAll('.opt').forEach((b,i) => b.classList.toggle('sel', i===idx));
+  const nb = document.getElementById('nextBtn');
+  if (nb) nb.disabled = false;
+  buildDots();
+}
+
+function nextQ() {
+  if (state.pos < QUESTIONS.length - 1) { state.pos++; renderQ(); }
+  else calculateResult();
+}
+
+function prevQ() {
+  if (state.pos > 0) { state.pos--; renderQ(); }
+}
+
+/* ─────────────────────────────────────────
+   AUDIO
+───────────────────────────────────────── */
+let currentUtt = null;
+function playClip(id, text) {
+  if (speechSynthesis.speaking) speechSynthesis.cancel();
+  const btn = document.getElementById('playBtn_' + id);
+  const fill = document.getElementById('prog_' + id);
+  if (btn) { btn.textContent = '⏸'; btn.classList.add('playing'); }
+  const utt = new SpeechSynthesisUtterance(text);
+  utt.lang = 'en-GB'; utt.rate = 0.88; utt.pitch = 1;
+  currentUtt = utt;
+  let iv = null, elapsed = 0;
+  utt.onstart = () => {
+    const est = (text.split(' ').length / 130) * 60 * 1000;
+    iv = setInterval(() => {
+      elapsed += 250;
+      if (fill) fill.style.width = Math.min((elapsed / est) * 100, 94) + '%';
+    }, 250);
+  };
+  utt.onend = utt.onerror = () => {
+    if (btn) { btn.textContent = '▶'; btn.classList.remove('playing'); }
+    if (fill) fill.style.width = '100%';
+    if (iv) clearInterval(iv);
+  };
+  speechSynthesis.speak(utt);
+  toast('🔊 Playing audio…', 'info');
+}
+
+function escJs(s) { return s.replace(/'/g,"\\'").replace(/"/g,'\\"').replace(/\n/g,' '); }
+
+/* ─────────────────────────────────────────
+   CALCULATE RESULT
+───────────────────────────────────────── */
+function calculateResult() {
+  let gram=0, voc=0, read=0, listen=0;
+  QUESTIONS.forEach((q,i) => {
+    if (q.type.endsWith('-sep')) return;
+    if (state.answers[i] === q.a) {
+      if (q.type==='grammar') gram++;
+      else if (q.type==='vocab') voc++;
+      else if (q.type==='reading') read++;
+      else if (q.type==='listening') listen++;
+    }
+  });
+  const total = gram + voc + read + listen;
+  const pct = (total / TOTAL_QS) * 100;
+
+  let level, name, emoji, desc;
+  if (pct < 20)      { level='A1'; name='Beginner';         emoji='🌱'; desc='You are beginning your English journey. You can understand and use very familiar everyday expressions and basic phrases. Focus on greetings, simple vocabulary, and present tense.' }
+  else if (pct < 36) { level='A2'; name='Elementary';       emoji='🌿'; desc='You can understand sentences relating to areas of immediate relevance such as personal information and shopping. You can communicate in simple, routine tasks requiring a direct exchange of familiar information.' }
+  else if (pct < 52) { level='B1'; name='Intermediate';     emoji='🌳'; desc='You can deal with most situations encountered while travelling in an English-speaking area. You can describe experiences, events, dreams and ambitions, and briefly give reasons and explanations for opinions and plans.' }
+  else if (pct < 68) { level='B2'; name='Upper-Intermediate';emoji='🔥'; desc='You can understand the main ideas of complex texts on both concrete and abstract topics, including technical discussions in your field. You interact with a degree of fluency and spontaneity that makes regular interaction with native speakers quite possible.' }
+  else if (pct < 84) { level='C1'; name='Advanced';         emoji='⚡'; desc='You can understand a wide range of demanding, longer texts, and recognise implicit meaning. You can express yourself fluently and spontaneously without much obvious searching for expressions.' }
+  else               { level='C2'; name='Proficiency';      emoji='👑'; desc='You can understand with ease virtually everything heard or read. You can express yourself spontaneously, very fluently and precisely, differentiating finer shades of meaning even in the most complex situations.' }
+
+  showResult(level, name, emoji, desc, total, gram, voc, read, listen);
+}
+
+function showResult(level, name, emoji, desc, total, gram, voc, read, listen) {
+  document.getElementById('testScreen').style.display = 'none';
+  document.getElementById('resultScreen').style.display = 'block';
+  window.scrollTo(0,0);
+
+  document.getElementById('resEmoji').textContent = emoji;
+  document.getElementById('resLevel').textContent = level;
+  document.getElementById('resName').textContent = name;
+  document.getElementById('resScore').textContent = `${total} / ${TOTAL_QS} points  ·  ${Math.round((total/TOTAL_QS)*100)}%`;
+  document.getElementById('resDesc').textContent = desc;
+
+  // Breakdown
+  const sections = [
+    {label:'Grammar',   score:gram,   max:17, color:'#0969da'},
+    {label:'Vocabulary',score:voc,    max:13, color:'#9a6700'},
+    {label:'Reading',   score:read,   max:10, color:'#1a7f64'},
+    {label:'Listening', score:listen, max:10, color:'#6e40c9'},
+  ];
+  document.getElementById('breakdownGrid').innerHTML = sections.map(s => {
+    const p = Math.round((s.score/s.max)*100);
+    return `<div class="bd-item">
+      <div class="bd-label">${s.label}</div>
+      <div class="bd-score" style="color:${s.color}">${s.score}<span class="bd-pct">/ ${s.max} (${p}%)</span></div>
+      <div class="bd-bar"><div class="bd-fill" style="width:0%;background:${s.color}" data-pct="${p}"></div></div>
+    </div>`;
+  }).join('');
+  setTimeout(() => {
+    document.querySelectorAll('.bd-fill').forEach(el => {
+      el.style.width = el.dataset.pct + '%';
+    });
+  }, 200);
+
+  // CEFR track
+  const levels = ['A1','A2','B1','B2','C1','C2'];
+  const li = levels.indexOf(level);
+  document.getElementById('cefrTrack').innerHTML = levels.map((l,i) => `
+    <div class="cefr-node ${i<li?'passed':i===li?'active':''}">
+      <div class="cefr-circle">${l}</div>
+      <div class="cefr-label">${l}</div>
+    </div>`).join('');
+
+  // Recommendations
+  const recs = [
+    {icon:'📚', text:`Start the <strong>${level} curriculum</strong> on AbOnlinEnglish — structured units designed precisely for your level.`},
+  ];
+  if (gram < 12) recs.push({icon:'📐', text:'Strengthen your <strong>Grammar</strong> — focus on the tense and structure exercises in the Grammar section.'});
+  if (voc < 8)  recs.push({icon:'📖', text:'Build your <strong>Vocabulary</strong> — use the Flashcard and Word-of-the-Day features every day.'});
+  if (read < 6)  recs.push({icon:'📰', text:'Improve your <strong>Reading</strong> — practise with the reading comprehension texts in each unit.'});
+  if (listen < 6) recs.push({icon:'🎧', text:'Sharpen your <strong>Listening</strong> — use the Listening Game and audio pronunciation tools daily.'});
+  recs.push({icon:'🎮', text:'Play the <strong>Games section</strong> to reinforce vocabulary and grammar in a fun, low-pressure way.'});
+  recs.push({icon:'🤖', text:'Ask the <strong>AI Assistant</strong> to explain any grammar points you found challenging in this test.'});
+
+  document.getElementById('recList').innerHTML = recs.map(r =>
+    `<div class="rec-item"><div class="rec-icon">${r.icon}</div><div>${r.text}</div></div>`
+  ).join('');
+
+  toast('✅ Test complete — your level: ' + level, 'success');
+}
+
+function retakeTest() {
+  document.getElementById('resultScreen').style.display = 'none';
+  document.getElementById('introScreen').style.display = 'flex';
+  window.scrollTo(0,0);
+}
+
+function toast(msg, type='info') {
+  const el = document.getElementById('toast');
+  el.innerHTML = msg;
+  el.className = 'toast ' + type;
+  el.classList.add('show');
+  setTimeout(() => el.classList.remove('show'), 3500);
+}
+</script>
+</body>
+</html>
