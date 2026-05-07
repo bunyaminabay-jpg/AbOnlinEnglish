@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kendin Öğren — AbOnlinEnglish</title>
+<meta name="description" content="CEFR A1–C1 İngilizce öğrenme platformu. Kendin öğren, kendi hızında ilerle.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ═══════════════════════════════════════════════════
+   DESIGN TOKENS — Single source of truth
+═══════════════════════════════════════════════════ */
+:root {
+  --navy:    #0f1e3c;
+  --blue:    #1a3a6b;
+  --accent:  #e8a020;
+  --accent2: #f0c060;
+  --light:   #f5f7fa;
+  --white:   #ffffff;
+  --text:    #222b3a;
+  --muted:   #6b7a99;
+  --border:  #dde3f0;
+  --teal:    #0d9488;
+  --purple:  #7c3aed;
+  --green:   #16a34a;
+  --coral:   #dc2626;
+  --card-shadow: 0 4px 24px rgba(15,30,60,.10);
+  --radius:  14px;
+  /* Level colours */
+  --a1: #1e3a8a; --a1l: #dbeafe;
+  --a2: #14532d; --a2l: #dcfce7;
+  --b1: #134e4a; --b1l: #ccfbf1;
+  --b2: #3b0764; --b2l: #ede9fe;
+  --c1: #451a03; --c1l: #fef3c7;
+}
+
+*  { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { font-family:'DM Sans',sans-serif; color:var(--text); background:var(--light); }
+
+/* ═══════════════════════════════════════════════════
+   NAV
+═══════════════════════════════════════════════════ */
+nav {
+  position:fixed; top:0; left:0; right:0; z-index:2000;
+  background:rgba(15,30,60,0.97); backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(255,255,255,0.07);
+}
+.nav-inner {
+  max-width:1200px; margin:0 auto;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:0 28px; height:68px;
+}
+.logo-wrap { display:flex; align-items:center; gap:12px; text-decoration:none; }
+.logo-svg  { width:42px; height:42px; flex-shrink:0; }
+.logo-text { font-family:'Playfair Display',serif; font-size:1.3rem; font-weight:900; color:#fff; letter-spacing:-0.5px; line-height:1; }
+.logo-text span { color:var(--accent); }
+.logo-sub  { font-size:.65rem; font-weight:500; color:rgba(255,255,255,0.45); letter-spacing:2px; text-transform:uppercase; margin-top:2px; }
+
+.nav-links { display:flex; gap:2px; list-style:none; }
+.nav-links a { color:rgba(255,255,255,0.80); text-decoration:none; font-size:.85rem; font-weight:500; padding:8px 13px; border-radius:8px; transition:all .2s; }
+.nav-links a:hover,
+.nav-links a.active { background:rgba(232,160,32,0.18); color:var(--accent2); }
+.nav-cta-btn { background:var(--accent)!important; color:var(--navy)!important; font-weight:700!important; padding:9px 18px!important; border-radius:8px; }
+.nav-cta-btn:hover { background:var(--accent2)!important; }
+
+/* Auth badge in nav (shown after login) */
+.nav-user { display:none; align-items:center; gap:8px; }
+.nav-user.visible { display:flex; }
+.nav-avatar { width:32px; height:32px; border-radius:50%; background:var(--accent); color:var(--navy); font-weight:800; font-size:.75rem; display:flex; align-items:center; justify-content:center; }
+.nav-streak { font-size:.78rem; color:var(--accent2); font-weight:700; }
+.nav-logout { font-size:.75rem; color:rgba(255,255,255,0.45); cursor:pointer; text-decoration:underline; padding:4px 8px; border:none; background:none; color:rgba(255,255,255,0.4); }
+.nav-logout:hover { color:var(--accent); }
+
+.hamburger { display:none; background:none; border:none; cursor:pointer; color:white; font-size:1.5rem; line-height:1; padding:4px; }
+
+@media(max-width:700px) {
+  .nav-links { display:none; flex-direction:column; position:absolute; top:68px; left:0; right:0; background:rgba(15,30,60,0.99); padding:16px; gap:4px; }
+  .nav-links.open { display:flex; }
+  .hamburger { display:block; }
+}
+
+/* ═══════════════════════════════════════════════════
+   AUTH GATE — Email login screen
+═══════════════════════════════════════════════════ */
+#auth-gate {
+  position:fixed; inset:0; z-index:9000;
+  background:linear-gradient(135deg, #0a1628 0%, #1a3a6b 60%, #0d2248 100%);
+  display:flex; align-items:center; justify-content:center;
+  padding:24px;
+}
+#auth-gate.hidden { display:none; }
+
+.auth-card {
+  background:#fff; border-radius:24px; padding:52px 44px; position:relative;
+  max-width:460px; width:100%; box-shadow:0 24px 80px rgba(0,0,0,0.35);
+  text-align:center;
+}
+@media(max-width:480px) { .auth-card { padding:36px 24px; } }
+
+.auth-logo { margin-bottom:28px; }
+.auth-logo svg { width:52px; height:52px; }
+.auth-title { font-family:'Playfair Display',serif; font-size:1.8rem; font-weight:900; color:var(--navy); margin-bottom:8px; line-height:1.2; }
+.auth-title em { color:var(--accent); font-style:normal; }
+.auth-sub { font-size:.9rem; color:var(--muted); margin-bottom:32px; line-height:1.65; }
+
+.auth-input-wrap { text-align:left; margin-bottom:8px; }
+.auth-input-wrap label { display:block; font-size:.78rem; font-weight:700; color:var(--navy); margin-bottom:6px; text-transform:uppercase; letter-spacing:.5px; }
+.auth-input {
+  width:100%; padding:14px 16px;
+  border:2px solid var(--border); border-radius:10px;
+  font-size:1rem; font-family:'DM Sans',sans-serif;
+  color:var(--text); outline:none; transition:border .2s;
+}
+.auth-input:focus { border-color:#1a56db; }
+.auth-input::placeholder { color:#b0b8cc; }
+
+.auth-error { font-size:.8rem; color:var(--coral); margin-bottom:12px; display:none; }
+.auth-error.show { display:block; }
+
+.auth-btn {
+  width:100%; padding:15px; border-radius:10px;
+  background:var(--navy); color:#fff; font-size:1rem; font-weight:700;
+  border:none; cursor:pointer; font-family:'DM Sans',sans-serif;
+  transition:all .2s; margin-top:8px; display:flex; align-items:center; justify-content:center; gap:8px;
+}
+.auth-btn:hover { background:#1a3a6b; transform:translateY(-1px); box-shadow:0 6px 20px rgba(15,30,60,0.25); }
+
+.auth-divider { margin:24px 0; position:relative; }
+.auth-divider::before { content:''; position:absolute; top:50%; left:0; right:0; height:1px; background:var(--border); }
+.auth-divider span { position:relative; background:#fff; padding:0 12px; font-size:.78rem; color:var(--muted); }
+
+.auth-placement-link {
+  display:inline-flex; align-items:center; gap:6px;
+  background:#fef3c7; color:#92400e; font-size:.82rem; font-weight:700;
+  padding:9px 18px; border-radius:8px; text-decoration:none;
+  transition:all .2s; border:1px solid #fde68a;
+}
+.auth-placement-link:hover { background:#fde68a; }
+.auth-note { font-size:.75rem; color:#b0b8cc; margin-top:20px; line-height:1.6; }
+
+/* ═══════════════════════════════════════════════════
+   DASHBOARD BAR — Shown after login
+═══════════════════════════════════════════════════ */
+#dashboard-bar {
+  display:none; position:sticky; top:68px; z-index:100;
+  background:#fff; border-bottom:2px solid var(--border);
+  padding:0 28px;
+}
+#dashboard-bar.visible { display:block; }
+
+.db-inner {
+  max-width:1200px; margin:0 auto;
+  display:flex; align-items:center; justify-content:space-between;
+  height:52px; gap:16px;
+}
+.db-greeting { font-size:.85rem; font-weight:600; color:var(--navy); }
+.db-greeting span { color:var(--muted); font-weight:400; }
+
+.db-stats { display:flex; align-items:center; gap:20px; }
+.db-stat { display:flex; align-items:center; gap:6px; }
+.db-stat-ico { font-size:1rem; }
+.db-stat-val { font-size:.92rem; font-weight:800; color:var(--navy); line-height:1; }
+.db-stat-lbl { font-size:.62rem; color:var(--muted); text-transform:uppercase; letter-spacing:1px; }
+
+.db-continue {
+  display:none; align-items:center; gap:10px;
+  background:linear-gradient(135deg, var(--navy), #1a56db);
+  border-radius:10px; padding:8px 16px;
+  text-decoration:none; transition:all .2s;
+}
+.db-continue.visible { display:flex; }
+.db-continue:hover { transform:translateY(-1px); box-shadow:0 4px 12px rgba(15,30,60,.25); }
+.db-continue-lbl { font-size:.7rem; color:rgba(255,255,255,.55); text-transform:uppercase; letter-spacing:1px; }
+.db-continue-txt { font-size:.82rem; font-weight:700; color:#fff; }
+
+/* ═══════════════════════════════════════════════════
+   MAIN CONTENT — Hidden until login
+═══════════════════════════════════════════════════ */
+#main-content { display:none; }
+#main-content.visible { display:block; }
+
+/* ═══════════════════════════════════════════════════
+   HERO
+═══════════════════════════════════════════════════ */
+.hero {
+  background:linear-gradient(135deg, #0f1e3c 0%, #1a3a6b 55%, #0d2a5a 100%);
+  min-height:52vh; display:flex; align-items:center; justify-content:center;
+  text-align:center; padding:100px 24px 60px; position:relative; overflow:hidden;
+}
+.hero::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 70% 60% at 50% 30%, rgba(232,160,32,0.12) 0%, transparent 70%); }
+.hero-inner { position:relative; z-index:1; max-width:700px; }
+.hero-badge { display:inline-block; background:rgba(232,160,32,0.2); border:1px solid rgba(232,160,32,0.4); color:var(--accent2); font-size:.8rem; font-weight:600; letter-spacing:2px; text-transform:uppercase; padding:6px 18px; border-radius:50px; margin-bottom:20px; }
+.hero h1 { font-family:'Playfair Display',serif; font-size:clamp(1.9rem,5vw,3.2rem); font-weight:900; color:#fff; line-height:1.1; margin-bottom:16px; }
+.hero h1 em { color:var(--accent); font-style:normal; }
+.hero p { font-size:1rem; color:rgba(255,255,255,0.68); max-width:500px; margin:0 auto 28px; line-height:1.75; }
+.hero-stats { display:flex; justify-content:center; gap:2rem; flex-wrap:wrap; }
+.hs-num   { font-family:'Playfair Display',serif; font-size:2rem; font-weight:900; color:#fff; }
+.hs-label { font-size:.7rem; color:rgba(255,255,255,0.4); letter-spacing:1px; text-transform:uppercase; margin-top:2px; }
+
+/* ═══════════════════════════════════════════════════
+   PLACEMENT BANNER
+═══════════════════════════════════════════════════ */
+.placement-strip { background:#fff; border-bottom:1px solid var(--border); padding:14px 28px; }
+.placement-strip-inner { max-width:1100px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap; }
+.ps-left { display:flex; align-items:center; gap:12px; }
+.ps-ico  { width:40px; height:40px; background:linear-gradient(135deg, var(--blue), var(--teal)); border-radius:10px; display:grid; place-items:center; font-size:1.1rem; flex-shrink:0; }
+.ps-ttl  { font-size:14px; font-weight:700; color:var(--navy); }
+.ps-sub  { font-size:12px; color:var(--muted); margin-top:2px; }
+.btn-accent-sm { padding:9px 22px; border-radius:8px; background:var(--accent); color:var(--navy); font-size:13px; font-weight:700; border:none; cursor:pointer; transition:all .2s; white-space:nowrap; text-decoration:none; display:inline-block; }
+.btn-accent-sm:hover { background:var(--accent2); }
+
+/* ═══════════════════════════════════════════════════
+   SECTION COMMONS
+═══════════════════════════════════════════════════ */
+.section       { padding:4rem 24px; max-width:1100px; margin:0 auto; }
+.section-tag   { font-size:.75rem; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; color:var(--accent); margin-bottom:10px; }
+.section-title { font-family:'Playfair Display',serif; font-size:clamp(1.7rem,4vw,2.4rem); font-weight:900; color:var(--navy); margin-bottom:12px; line-height:1.2; }
+.section-sub   { font-size:1rem; color:var(--muted); max-width:520px; line-height:1.75; margin-bottom:36px; }
+.sec-center    { text-align:center; }
+.sec-center .section-sub { margin-left:auto; margin-right:auto; }
+
+/* ═══════════════════════════════════════════════════
+   HOW IT WORKS
+═══════════════════════════════════════════════════ */
+.how-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1.25rem; }
+@media(max-width:800px) { .how-grid { grid-template-columns:repeat(2,1fr); } }
+@media(max-width:480px) { .how-grid { grid-template-columns:1fr; } }
+.how-card { background:var(--white); border:1px solid var(--border); border-radius:var(--radius); padding:1.5rem; box-shadow:var(--card-shadow); text-align:center; }
+.how-step { width:38px; height:38px; border-radius:10px; background:linear-gradient(135deg, var(--blue), #1a56db); display:grid; place-items:center; font-size:13px; font-weight:900; color:#fff; margin:0 auto .85rem; font-family:'Playfair Display',serif; }
+.how-ttl { font-size:14px; font-weight:700; color:var(--navy); margin-bottom:.3rem; }
+.how-txt { font-size:13px; color:var(--muted); line-height:1.6; }
+
+/* ═══════════════════════════════════════════════════
+   LEVEL CARDS
+═══════════════════════════════════════════════════ */
+.levels-2 { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-bottom:1.5rem; }
+.levels-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:1.25rem; }
+@media(max-width:900px) { .levels-2 { grid-template-columns:1fr; } .levels-3 { grid-template-columns:1fr 1fr; } }
+@media(max-width:580px) { .levels-3 { grid-template-columns:1fr; } }
+
+.level-card {
+  background:var(--white); border:1px solid var(--border); border-radius:var(--radius);
+  box-shadow:var(--card-shadow); overflow:hidden; cursor:pointer; transition:all .25s;
+  display:flex; flex-direction:column; text-decoration:none; color:inherit; position:relative;
+}
+.level-card:hover { box-shadow:0 12px 36px rgba(15,30,60,.14); transform:translateY(-4px); }
+
+/* Progress bar on card */
+.lc-progress { height:4px; background:rgba(255,255,255,0.15); }
+.lc-progress-fill { height:100%; background:rgba(255,255,255,0.55); border-radius:2px; transition:width .6s; }
+
+.lc-head { padding:1.75rem 1.75rem 1.4rem; position:relative; overflow:hidden; }
+.lc-head::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 80% 60% at 80% 20%, rgba(255,255,255,.07), transparent); pointer-events:none; }
+.lc-head.a1 { background:linear-gradient(135deg, #0f2044, #1e3a8a); }
+.lc-head.a2 { background:linear-gradient(135deg, #14532d, #166534); }
+.lc-head.b1 { background:linear-gradient(135deg, #0f2044, #134e4a); }
+.lc-head.b2 { background:linear-gradient(135deg, #1e0a3c, #3b0764); }
+.lc-head.c1 { background:linear-gradient(135deg, #1c1209, #451a03); }
+
+.lc-badge { display:inline-block; padding:4px 12px; border-radius:50px; font-size:11px; font-weight:700; letter-spacing:.5px; margin-bottom:.65rem; }
+.lc-badge.a1 { background:rgba(59,130,246,.25);  color:#93c5fd; }
+.lc-badge.a2 { background:rgba(34,197,94,.25);   color:#86efac; }
+.lc-badge.b1 { background:rgba(20,184,166,.25);  color:#5eead4; }
+.lc-badge.b2 { background:rgba(167,139,250,.25); color:#c4b5fd; }
+.lc-badge.c1 { background:rgba(251,191,36,.25);  color:#fde68a; }
+
+.lc-ttl  { font-family:'Playfair Display',serif; font-size:1.35rem; font-weight:900; color:#fff; margin-bottom:.25rem; }
+.lc-sub  { font-size:12.5px; color:rgba(255,255,255,.5); line-height:1.5; }
+.lc-chips { display:flex; gap:.4rem; margin-top:.85rem; flex-wrap:wrap; }
+.lc-chip  { background:rgba(255,255,255,.12); border-radius:5px; padding:3px 9px; font-size:11px; font-weight:600; color:rgba(255,255,255,.7); }
+
+.lc-body   { padding:1.25rem 1.75rem; flex:1; display:flex; flex-direction:column; }
+.lc-units  { list-style:none; display:flex; flex-direction:column; gap:.35rem; margin-bottom:1.1rem; flex:1; }
+.lc-units li { display:flex; align-items:center; gap:.6rem; font-size:12.5px; color:var(--muted); }
+.lc-un    { font-size:10px; font-weight:700; padding:2px 7px; border-radius:5px; flex-shrink:0; }
+.lc-un.a1 { background:#dbeafe; color:#1e40af; }
+.lc-un.a2 { background:#dcfce7; color:#15803d; }
+.lc-un.b1 { background:#ccfbf1; color:#0f766e; }
+.lc-un.b2 { background:#ede9fe; color:#5b21b6; }
+.lc-un.c1 { background:#fef3c7; color:#92400e; }
+.lc-em    { font-size:13px; flex-shrink:0; }
+.lc-gram  { font-size:11px; color:var(--border); margin-left:auto; flex-shrink:0; }
+
+.lc-footer { display:flex; align-items:center; justify-content:space-between; padding-top:.85rem; border-top:1px solid var(--border); gap:.5rem; flex-wrap:wrap; }
+.lc-readers { font-size:11.5px; color:var(--muted); }
+.lc-btn { padding:8px 18px; border-radius:8px; font-size:12.5px; font-weight:700; border:none; cursor:pointer; transition:all .2s; color:#fff; text-decoration:none; display:inline-block; }
+.lc-btn.a1 { background:linear-gradient(135deg, #1e3a8a, #1a56db); }
+.lc-btn.a2 { background:linear-gradient(135deg, #14532d, #16a34a); }
+.lc-btn.b1 { background:linear-gradient(135deg, #134e4a, #0d9488); }
+.lc-btn.b2 { background:linear-gradient(135deg, #3b0764, #7c3aed); }
+.lc-btn.c1 { background:linear-gradient(135deg, #451a03, #d97706); }
+.lc-btn:hover { opacity:.9; transform:translateY(-1px); }
+
+/* ═══════════════════════════════════════════════════
+   PROGRESS SECTION (shown if user has progress)
+═══════════════════════════════════════════════════ */
+#progress-section { display:none; }
+#progress-section.visible { display:block; }
+
+.progress-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:.75rem; }
+@media(max-width:700px) { .progress-grid { grid-template-columns:repeat(3,1fr); } }
+@media(max-width:400px) { .progress-grid { grid-template-columns:repeat(2,1fr); } }
+
+.prog-card { background:#fff; border:1px solid var(--border); border-radius:12px; padding:1rem; text-align:center; }
+.prog-label { font-size:.72rem; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:1px; margin-bottom:.5rem; }
+.prog-pct   { font-family:'Playfair Display',serif; font-size:1.4rem; font-weight:900; color:var(--navy); margin-bottom:.4rem; }
+.prog-bar   { height:6px; background:var(--border); border-radius:3px; overflow:hidden; }
+.prog-fill  { height:100%; border-radius:3px; transition:width .8s; }
+.prog-fill.a1 { background:linear-gradient(90deg, #1e3a8a, #3b82f6); }
+.prog-fill.a2 { background:linear-gradient(90deg, #14532d, #16a34a); }
+.prog-fill.b1 { background:linear-gradient(90deg, #134e4a, #0d9488); }
+.prog-fill.b2 { background:linear-gradient(90deg, #3b0764, #7c3aed); }
+.prog-fill.c1 { background:linear-gradient(90deg, #451a03, #d97706); }
+
+/* ═══════════════════════════════════════════════════
+   MATERIALS BOX
+═══════════════════════════════════════════════════ */
+.mat-box { background:linear-gradient(135deg, #f0fdf4, #f0fdfa); border:1px solid #bbf7d0; border-radius:var(--radius); padding:1.75rem; margin-top:1.5rem; }
+.mat-ttl { font-size:14px; font-weight:700; color:var(--navy); margin-bottom:1rem; }
+.mat-row { display:grid; grid-template-columns:repeat(5,1fr); gap:.75rem; }
+@media(max-width:700px) { .mat-row { grid-template-columns:repeat(3,1fr); } }
+.mat-item { background:#fff; border:1px solid var(--border); border-radius:10px; padding:.75rem; text-align:center; }
+.mat-ico  { font-size:1.5rem; margin-bottom:.3rem; }
+.mat-lbl  { font-size:11px; font-weight:700; color:var(--navy); margin-bottom:.1rem; }
+.mat-desc2 { font-size:10.5px; color:var(--muted); }
+
+/* ═══════════════════════════════════════════════════
+   CEFR LADDER
+═══════════════════════════════════════════════════ */
+.cefr-ladder { display:flex; flex-direction:column; gap:.75rem; max-width:640px; margin:0 auto; }
+.cefr-row { display:flex; align-items:center; gap:1rem; background:#fff; border:1px solid var(--border); border-radius:var(--radius); padding:.85rem 1.1rem; box-shadow:var(--card-shadow); cursor:pointer; transition:all .2s; text-decoration:none; color:inherit; }
+.cefr-row:hover { box-shadow:0 8px 24px rgba(15,30,60,.12); transform:translateX(5px); border-color:var(--accent); }
+.cefr-bdg { width:48px; height:48px; border-radius:10px; display:grid; place-items:center; font-family:'Playfair Display',serif; font-weight:900; font-size:15px; color:#fff; flex-shrink:0; }
+.cb-a1 { background:linear-gradient(135deg, #1e3a8a, #1a56db); }
+.cb-a2 { background:linear-gradient(135deg, #14532d, #16a34a); }
+.cb-b1 { background:linear-gradient(135deg, #134e4a, #0d9488); }
+.cb-b2 { background:linear-gradient(135deg, #3b0764, #7c3aed); }
+.cb-c1 { background:linear-gradient(135deg, #451a03, #d97706); }
+.cefr-info { flex:1; }
+.cefr-ttl  { font-size:14px; font-weight:700; color:var(--navy); }
+.cefr-sub  { font-size:12px; color:var(--muted); margin-top:2px; }
+.cefr-tags { display:flex; gap:.35rem; flex-wrap:wrap; margin-top:.4rem; }
+.ctag      { font-size:10px; font-weight:600; padding:2px 7px; border-radius:5px; background:#f1f5f9; color:#64748b; }
+.cefr-arrow { color:var(--muted); font-size:1.2rem; transition:all .2s; }
+.cefr-row:hover .cefr-arrow { color:var(--accent); transform:translateX(3px); }
+
+/* ═══════════════════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════════════════ */
+footer { background:#07111f; color:rgba(255,255,255,0.45); text-align:center; padding:32px 24px; font-size:.85rem; margin-top:4rem; }
+footer strong { color:var(--accent); }
+.footer-socials { display:flex; justify-content:center; gap:16px; margin:16px 0; }
+.footer-socials a { width:38px; height:38px; border-radius:50%; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.12); display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,0.6); text-decoration:none; transition:all .2s; font-size:14px; }
+.footer-socials a:hover { background:var(--accent); color:var(--navy); }
+
+/* ═══════════════════════════════════════════════════
+   TOAST
+═══════════════════════════════════════════════════ */
+#toast {
+  position:fixed; bottom:24px; right:24px; z-index:9999;
+  background:var(--navy); color:#fff; padding:12px 20px;
+  border-radius:10px; font-size:.88rem; font-weight:600;
+  box-shadow:0 8px 24px rgba(0,0,0,.25);
+  transform:translateY(80px); opacity:0; transition:all .3s;
+  max-width:320px;
+}
+#toast.show { transform:translateY(0); opacity:1; }
+#toast.success { background:var(--green); }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     AUTH GATE
+═══════════════════════════════════════════ -->
+<div id="auth-gate" class="hidden">
+  <div class="auth-card">
+    <button onclick="AUTH.closeGate()" style="position:absolute;top:16px;right:16px;background:none;border:none;font-size:1.4rem;color:#94a3b8;cursor:pointer;line-height:1;padding:4px;" title="Kapat">×</button>
+    <div class="auth-logo">
+      <svg width="52" height="52" viewBox="0 0 42 42" fill="none">
+        <circle cx="21" cy="21" r="20" fill="#0f1e3c" stroke="#e8a020" stroke-width="1.5"/>
+        <path d="M10 27 C10 27 10 15 21 15 C32 15 32 27 32 27" fill="none" stroke="#e8a020" stroke-width="1.8" stroke-linecap="round"/>
+        <line x1="21" y1="15" x2="21" y2="27" stroke="#e8a020" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M10 27 C12 25 16 23 21 23" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.2" stroke-linecap="round"/>
+        <path d="M32 27 C30 25 26 23 21 23" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.2" stroke-linecap="round"/>
+        <path d="M9 27.5 Q21 30 33 27.5" fill="none" stroke="#e8a020" stroke-width="1.8" stroke-linecap="round"/>
+        <text x="21" y="35.5" text-anchor="middle" font-family="Georgia,serif" font-size="5" font-weight="bold" fill="#e8a020">Ab</text>
+      </svg>
+    </div>
+
+    <h1 class="auth-title">Kendin <em>Öğren</em></h1>
+    <p class="auth-sub">İlerlemeni kaydetmek ve kaldığın yerden devam etmek için e-postanı gir.<br>Şifre yok, ücretsiz.</p>
+
+    <div class="auth-input-wrap">
+      <label for="auth-email">E-posta Adresi</label>
+      <input
+        id="auth-email"
+        class="auth-input"
+        type="email"
+        placeholder="ornek@mail.com"
+        autocomplete="email"
+        onkeydown="if(event.key==='Enter') AUTH.login()"
+      >
+    </div>
+    <p class="auth-error" id="auth-error">Geçerli bir e-posta adresi giriniz.</p>
+
+    <button class="auth-btn" onclick="AUTH.login()">
+      Giriş Yap &amp; Başla &nbsp;→
+    </button>
+
+    <div class="auth-divider"><span>ya da</span></div>
+
+    <a href="pages/placement-test.html" class="auth-placement-link">
+      🎯 Seviyeni Bilmiyor Musun? Testi Yap
+    </a>
+
+    <p class="auth-note">
+      🔒 Verileriniz yalnızca bu cihazda saklanır.<br>
+      Farklı cihazda devam etmek için aynı e-postayı kullanın.
+    </p>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SHARED NAV
+═══════════════════════════════════════════ -->
+<nav>
+  <div class="nav-inner">
+    <a class="logo-wrap" href="pages/landing.html">
+      <svg class="logo-svg" viewBox="0 0 42 42" fill="none">
+        <circle cx="21" cy="21" r="20" fill="#0f1e3c" stroke="#e8a020" stroke-width="1.5"/>
+        <path d="M10 27 C10 27 10 15 21 15 C32 15 32 27 32 27" fill="none" stroke="#e8a020" stroke-width="1.8" stroke-linecap="round"/>
+        <line x1="21" y1="15" x2="21" y2="27" stroke="#e8a020" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M10 27 C12 25 16 23 21 23" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.2" stroke-linecap="round"/>
+        <path d="M32 27 C30 25 26 23 21 23" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.2" stroke-linecap="round"/>
+        <path d="M9 27.5 Q21 30 33 27.5" fill="none" stroke="#e8a020" stroke-width="1.8" stroke-linecap="round"/>
+        <text x="21" y="35.5" text-anchor="middle" font-family="Georgia,serif" font-size="5" font-weight="bold" fill="#e8a020">Ab</text>
+      </svg>
+      <div>
+        <div class="logo-text">AbOnlin<span>English</span></div>
+        <div class="logo-sub">Dil Eğitimi</div>
+      </div>
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="pages/landing.html">Anasayfa</a></li>
+      <li><a href="index.html" class="active">Kendin Öğren</a></li>
+      <li><a href="pages/roadmap.html">Yol Haritası</a></li>
+      <li><a href="pages/placement-test.html">Seviye Testi</a></li>
+      <li><a href="pages/games.html">Oyunlar</a></li>
+      <li><a href="pages/landing.html#pricing" class="nav-cta-btn">Ücretsiz Ders</a></li>
+    </ul>
+
+    <!-- Auth user badge (shown after login) -->
+    <div class="nav-user" id="nav-user">
+      <div class="nav-avatar" id="nav-avatar">?</div>
+      <span class="nav-streak" id="nav-streak">🔥 0</span>
+      <button class="nav-logout" onclick="AUTH.logout()">Çıkış</button>
+    </div>
+
+    <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════
+     DASHBOARD BAR (post-login)
+═══════════════════════════════════════════ -->
+<div id="dashboard-bar">
+  <div class="db-inner">
+    <div class="db-greeting">
+      Merhaba, <span id="db-name">—</span> 👋
+    </div>
+    <div class="db-stats">
+      <div class="db-stat">
+        <span class="db-stat-ico">🔥</span>
+        <div>
+          <div class="db-stat-val" id="db-streak">0</div>
+          <div class="db-stat-lbl">Günlük Seri</div>
+        </div>
+      </div>
+      <div class="db-stat">
+        <span class="db-stat-ico">⭐</span>
+        <div>
+          <div class="db-stat-val" id="db-xp">0</div>
+          <div class="db-stat-lbl">XP</div>
+        </div>
+      </div>
+      <div class="db-stat">
+        <span class="db-stat-ico">✅</span>
+        <div>
+          <div class="db-stat-val" id="db-done">0</div>
+          <div class="db-stat-lbl">Ünite</div>
+        </div>
+      </div>
+    </div>
+    <a class="db-continue" id="db-continue" href="#">
+      <div>
+        <div class="db-continue-lbl">Devam Et</div>
+        <div class="db-continue-txt" id="db-continue-txt">—</div>
+      </div>
+      <span style="color:rgba(255,255,255,.6);font-size:1.1rem;">→</span>
+    </a>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     MAIN CONTENT
+═══════════════════════════════════════════ -->
+<div id="main-content" class="visible">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-badge">📚 CEFR A1 → C1 · Kendin Öğren Platformu</div>
+      <h1>Kendi hızında,<br><em>kendi sisteminde</em> öğren.</h1>
+      <p>A1'den C1'e tüm seviyeler. Coursebook metinleri, grammar referansları, reading pasajları ve interaktif alıştırmalar — tek platformda.</p>
+      <div class="hero-stats">
+        <div><div class="hs-num">5</div><div class="hs-label">CEFR Seviyesi</div></div>
+        <div><div class="hs-num">50</div><div class="hs-label">Ünite</div></div>
+        <div><div class="hs-num">10</div><div class="hs-label">Graded Reader</div></div>
+        <div><div class="hs-num">1500+</div><div class="hs-label">Alıştırma</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLACEMENT BANNER -->
+  <div class="placement-strip">
+    <div class="placement-strip-inner">
+      <div class="ps-left">
+        <div class="ps-ico">🎯</div>
+        <div>
+          <div class="ps-ttl">Hangi seviyeden başlayacağını bilmiyor musun?</div>
+          <div class="ps-sub">50 soruluk ücretsiz seviye testi ile CEFR düzeyini bul — 15 dakika yeter.</div>
+        </div>
+      </div>
+      <a href="pages/placement-test.html" class="btn-accent-sm">Seviye Testini Başlat →</a>
+    </div>
+  </div>
+
+  <!-- MY PROGRESS (shown if user has progress) -->
+  <div id="progress-section">
+    <div class="section">
+      <div class="section-tag">İlerlemen</div>
+      <h2 class="section-title">Devam ettiğin seviyeler</h2>
+      <div class="progress-grid" id="progress-grid">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <div class="section">
+    <div class="sec-center">
+      <div class="section-tag">Nasıl Çalışır</div>
+      <h2 class="section-title">Sistemi 30 saniyede anla</h2>
+    </div>
+    <div class="how-grid">
+      <div class="how-card">
+        <div class="how-step">1</div>
+        <div class="how-ttl">Seviyeni seç</div>
+        <div class="how-txt">A1'den başla ya da seviye testi ile doğru noktayı bul.</div>
+      </div>
+      <div class="how-card">
+        <div class="how-step">2</div>
+        <div class="how-ttl">Üniteye gir</div>
+        <div class="how-txt">Vocabulary, Grammar, Reading ve Exercises sekmeleri tam coursebook içeriğini yansıtır.</div>
+      </div>
+      <div class="how-card">
+        <div class="how-step">3</div>
+        <div class="how-ttl">Alıştırmaları yap</div>
+        <div class="how-txt">Soruları yanıtla, anında kontrol et. İlerleme otomatik kaydedilir.</div>
+      </div>
+      <div class="how-card">
+        <div class="how-step">4</div>
+        <div class="how-ttl">İlerlemeni izle</div>
+        <div class="how-txt">Günlük seri ve tamamlanma yüzdesi ile motivasyonunu koru.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LEVELS -->
+  <div class="section" id="levels">
+    <div class="sec-center">
+      <div class="section-tag">Kurs İçerikleri</div>
+      <h2 class="section-title">A1'den C1'e tam müfredat</h2>
+      <p class="section-sub sec-center">Her seviye PDF kaynak materyallerinden doldurulmuştur. Bir seviye seç, hemen çalışmaya başla.</p>
+    </div>
+
+    <div class="levels-2">
+
+      <!-- A1 -->
+      <a class="level-card" href="pages/a1-a2-b1-b2-c1-c2.html" onclick="return AUTH.checkAndGo(this)">
+        <div class="lc-head a1">
+          <span class="lc-badge a1">A1 · Beginner</span>
+          <div class="lc-ttl">A1 — Başlangıç</div>
+          <div class="lc-sub">To be · Adjectives · Simple Present · Articles · Prepositions</div>
+          <div class="lc-chips">
+            <span class="lc-chip">10 Ünite</span><span class="lc-chip">2 Reader</span><span class="lc-chip">Workbook</span><span class="lc-chip">300+ Soru</span>
+          </div>
+        </div>
+        <div class="lc-progress"><div class="lc-progress-fill" id="prog-a1" style="width:0%"></div></div>
+        <div class="lc-body">
+          <ul class="lc-units">
+            <li><span class="lc-un a1">U1</span><span class="lc-em">👋</span>Hello! Nice to Meet You<span class="lc-gram">To be</span></li>
+            <li><span class="lc-un a1">U2</span><span class="lc-em">👨‍👩‍👧</span>My Family<span class="lc-gram">Possessives</span></li>
+            <li><span class="lc-un a1">U3</span><span class="lc-em">🏠</span>My Home and My Day<span class="lc-gram">Simple Present</span></li>
+            <li><span class="lc-un a1">U4</span><span class="lc-em">🍎</span>Food I Like<span class="lc-gram">like/love/hate</span></li>
+            <li><span class="lc-un a1">U5</span><span class="lc-em">🎨</span>Colours, Numbers &amp; Classroom<span class="lc-gram">Adjectives</span></li>
+            <li style="font-size:11.5px;color:#94a3b8;padding-left:.3rem">+ 5 ünite daha →</li>
+          </ul>
+          <div class="lc-footer">
+            <div class="lc-readers">📖 The Lighthouse Keeper's Cat &nbsp;·&nbsp; The Boy Who Was Afraid</div>
+            <span class="lc-btn a1">Başla →</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- A2 -->
+      <a class="level-card" href="pages/a1-a2-b1-b2-c1-c2.html" onclick="return AUTH.checkAndGo(this)">
+        <div class="lc-head a2">
+          <span class="lc-badge a2">A2 · Elementary</span>
+          <div class="lc-ttl">A2 — Temel</div>
+          <div class="lc-sub">Past Simple · Going to · Comparatives · Modals · -ing verbs</div>
+          <div class="lc-chips">
+            <span class="lc-chip">10 Ünite</span><span class="lc-chip">2 Reader</span><span class="lc-chip">Workbook</span><span class="lc-chip">300+ Soru</span>
+          </div>
+        </div>
+        <div class="lc-progress"><div class="lc-progress-fill" id="prog-a2" style="width:0%"></div></div>
+        <div class="lc-body">
+          <ul class="lc-units">
+            <li><span class="lc-un a2">U1</span><span class="lc-em">⏰</span>Daily Routines<span class="lc-gram">Adverbs of Freq.</span></li>
+            <li><span class="lc-un a2">U2</span><span class="lc-em">🛒</span>Shopping and Money<span class="lc-gram">some/any</span></li>
+            <li><span class="lc-un a2">U3</span><span class="lc-em">🌤️</span>Weather and Climate<span class="lc-gram">Pres. Continuous</span></li>
+            <li><span class="lc-un a2">U4</span><span class="lc-em">🧭</span>Getting Around<span class="lc-gram">Past Simple</span></li>
+            <li><span class="lc-un a2">U5</span><span class="lc-em">📖</span>My Past<span class="lc-gram">used to</span></li>
+            <li style="font-size:11.5px;color:#94a3b8;padding-left:.3rem">+ 5 ünite daha →</li>
+          </ul>
+          <div class="lc-footer">
+            <div class="lc-readers">📖 The Postcard from Nowhere &nbsp;·&nbsp; The Market of Lost Things</div>
+            <span class="lc-btn a2">Başla →</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="levels-3">
+
+      <!-- B1 -->
+      <a class="level-card" href="pages/a1-a2-b1-b2-c1-c2.html" onclick="return AUTH.checkAndGo(this)">
+        <div class="lc-head b1">
+          <span class="lc-badge b1">B1 · Pre-Intermediate</span>
+          <div class="lc-ttl">B1 — Orta</div>
+          <div class="lc-sub">Present Perfect · Passive · Conditionals · Narrative Tenses</div>
+          <div class="lc-chips">
+            <span class="lc-chip">10 Ünite</span><span class="lc-chip">2 Reader</span><span class="lc-chip">Workbook</span>
+          </div>
+        </div>
+        <div class="lc-progress"><div class="lc-progress-fill" id="prog-b1" style="width:0%"></div></div>
+        <div class="lc-body">
+          <ul class="lc-units">
+            <li><span class="lc-un b1">U1</span><span class="lc-em">✈️</span>Travel Experiences</li>
+            <li><span class="lc-un b1">U2</span><span class="lc-em">🌱</span>Environment &amp; Climate</li>
+            <li><span class="lc-un b1">U3</span><span class="lc-em">📱</span>Media &amp; Technology</li>
+            <li><span class="lc-un b1">U4</span><span class="lc-em">🧠</span>Learning &amp; Memory</li>
+            <li style="font-size:11.5px;color:#94a3b8;padding-left:.3rem">+ 6 ünite daha →</li>
+          </ul>
+          <div class="lc-footer">
+            <div class="lc-readers" style="font-size:11px;">📖 The Island of Fog · The Last Conductor</div>
+            <span class="lc-btn b1">Başla →</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- B2 -->
+      <a class="level-card" href="pages/a1-a2-b1-b2-c1-c2.html" onclick="return AUTH.checkAndGo(this)">
+        <div class="lc-head b2">
+          <span class="lc-badge b2">B2 · Upper-Intermediate</span>
+          <div class="lc-ttl">B2 — Üst Orta</div>
+          <div class="lc-sub">Advanced Passive · Cleft · Discourse Markers · Hedging</div>
+          <div class="lc-chips">
+            <span class="lc-chip">10 Ünite</span><span class="lc-chip">2 Reader</span><span class="lc-chip">Workbook</span>
+          </div>
+        </div>
+        <div class="lc-progress"><div class="lc-progress-fill" id="prog-b2" style="width:0%"></div></div>
+        <div class="lc-body">
+          <ul class="lc-units">
+            <li><span class="lc-un b2">U1</span><span class="lc-em">🔬</span>Science &amp; Discovery</li>
+            <li><span class="lc-un b2">U2</span><span class="lc-em">⚖️</span>Law &amp; Society</li>
+            <li><span class="lc-un b2">U3</span><span class="lc-em">💡</span>Innovation &amp; Change</li>
+            <li><span class="lc-un b2">U4</span><span class="lc-em">📰</span>Language &amp; Communication</li>
+            <li style="font-size:11.5px;color:#94a3b8;padding-left:.3rem">+ 6 ünite daha →</li>
+          </ul>
+          <div class="lc-footer">
+            <div class="lc-readers" style="font-size:11px;">📖 Everything She Left · Three Days in November</div>
+            <span class="lc-btn b2">Başla →</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- C1 -->
+      <a class="level-card" href="pages/a1-a2-b1-b2-c1-c2.html" onclick="return AUTH.checkAndGo(this)">
+        <div class="lc-head c1">
+          <span class="lc-badge c1">C1 · Advanced</span>
+          <div class="lc-ttl">C1 — İleri</div>
+          <div class="lc-sub">Inversion · Ellipsis · Participial Phrases · Synthesis</div>
+          <div class="lc-chips">
+            <span class="lc-chip">10 Ünite</span><span class="lc-chip">2 Reader</span><span class="lc-chip">Workbook</span>
+          </div>
+        </div>
+        <div class="lc-progress"><div class="lc-progress-fill" id="prog-c1" style="width:0%"></div></div>
+        <div class="lc-body">
+          <ul class="lc-units">
+            <li><span class="lc-un c1">U1</span><span class="lc-em">🧩</span>The Architecture of Thought</li>
+            <li><span class="lc-un c1">U2</span><span class="lc-em">⚡</span>Power, Narrative &amp; Truth</li>
+            <li><span class="lc-un c1">U3</span><span class="lc-em">🌀</span>Consciousness &amp; Identity</li>
+            <li><span class="lc-un c1">U4</span><span class="lc-em">📡</span>The Information Age</li>
+            <li style="font-size:11.5px;color:#94a3b8;padding-left:.3rem">+ 6 ünite daha →</li>
+          </ul>
+          <div class="lc-footer">
+            <div class="lc-readers" style="font-size:11px;">📖 The Cartographer · A Reliable Narrator</div>
+            <span class="lc-btn c1">Başla →</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- MATERIALS BOX -->
+    <div class="mat-box">
+      <div class="mat-ttl">📦 Her seviyede şunlar var</div>
+      <div class="mat-row">
+        <div class="mat-item"><div class="mat-ico">📘</div><div class="mat-lbl">Coursebook</div><div class="mat-desc2">Vocab + Grammar + Reading</div></div>
+        <div class="mat-item"><div class="mat-ico">📝</div><div class="mat-lbl">Workbook</div><div class="mat-desc2">Alıştırma + Hikayeler</div></div>
+        <div class="mat-item"><div class="mat-ico">📖</div><div class="mat-lbl">Reader 1 &amp; 2</div><div class="mat-desc2">Özgün hikayeler</div></div>
+        <div class="mat-item"><div class="mat-ico">✏️</div><div class="mat-lbl">Exercises</div><div class="mat-desc2">Anında kontrol</div></div>
+        <div class="mat-item"><div class="mat-ico">🔥</div><div class="mat-lbl">İlerleme</div><div class="mat-desc2">Günlük seri sistemi</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CEFR LADDER -->
+  <div class="section">
+    <div class="sec-center">
+      <div class="section-tag">CEFR Yol Haritası</div>
+      <h2 class="section-title">Neredesin, nereye gidiyorsun?</h2>
+      <p class="section-sub sec-center">Her seviyenin neyi kapsadığını gör, doğru noktadan başla.</p>
+    </div>
+    <div class="cefr-ladder">
+      <a class="cefr-row" href="pages/a1-a2-b1-b2-c1-c2.html" onclick="return AUTH.checkAndGo(this)">
+        <div class="cefr-bdg cb-a1">A1</div>
+        <div class="cefr-info">
+          <div class="cefr-ttl">A1 Beginner — Başlangıç</div>
+          <div class="cefr-sub">To be · Possessives · Simple Present · Prepositions · Emotions</div>
+          <div class="cefr-tags"><span class="ctag">10 ünite</span><span class="ctag">2 reader</span><span class="ctag">workbook</span></div>
+        </div>
+        <div class="cefr-arrow">→</div>
+      </a>
+      <a class="cefr-row" href="pages/a1-a2-b1-b2-c1-c2.html" onclick="return AUTH.checkAndGo(this)">
+        <div class="cefr-bdg cb-a2">A2</div>
+        <div class="cefr-info">
+          <div class="cefr-ttl">A2 Elementary — Temel</div>
+          <div class="cefr-sub">Past Simple · Going to · Comparatives · Modals · -ing verb patterns</div>
+          <div class="cefr-tags"><span class="ctag">10 ünite</span><span class="ctag">2 reader</span><span class="ctag">workbook</span></div>
+        </div>
+        <div class="cefr-arrow">→</div>
+      </a>
+      <a class="cefr-row" href="pages/a1-a2-b1-b2-c1-c2.html" onclick="return AUTH.checkAndGo(this)">
+        <div class="cefr-bdg cb-b1">B1</div>
+        <div class="cefr-info">
+          <div class="cefr-ttl">B1 Pre-Intermediate — Orta</div>
+          <div class="cefr-sub">Present Perfect · Passive Voice · Conditionals · Reported Speech</div>
+          <div class="cefr-tags"><span class="ctag">10 ünite</span><span class="ctag">2 reader</span><span class="ctag">workbook</span></div>
+        </div>
+        <div class="cefr-arrow">→</div>
+      </a>
+      <a class="cefr-row" href="pages/a1-a2-b1-b2-c1-c2.html" onclick="return AUTH.checkAndGo(this)">
+        <div class="cefr-bdg cb-b2">B2</div>
+        <div class="cefr-info">
+          <div class="cefr-ttl">B2 Upper-Intermediate — Üst Orta</div>
+          <div class="cefr-sub">Advanced Passive · Cleft Sentences · Discourse Markers · Hedging</div>
+          <div class="cefr-tags"><span class="ctag">10 ünite</span><span class="ctag">2 reader</span><span class="ctag">workbook</span></div>
+        </div>
+        <div class="cefr-arrow">→</div>
+      </a>
+      <a class="cefr-row" href="pages/a1-a2-b1-b2-c1-c2.html" onclick="return AUTH.checkAndGo(this)">
+        <div class="cefr-bdg cb-c1">C1</div>
+        <div class="cefr-info">
+          <div class="cefr-ttl">C1 Advanced — İleri</div>
+          <div class="cefr-sub">Inversion · Ellipsis · Participial Phrases · Synthesis</div>
+          <div class="cefr-tags"><span class="ctag">10 ünite</span><span class="ctag">2 reader</span><span class="ctag">workbook</span></div>
+        </div>
+        <div class="cefr-arrow">→</div>
+      </a>
+    </div>
+    <div style="text-align:center;margin-top:2rem;">
+      <a href="pages/roadmap.html" class="btn-accent-sm">Tam Yol Haritasını Gör →</a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <strong>AbOnlinEnglish</strong> · CEFR A1–C1 İngilizce Öğrenme Platformu
+    <div class="footer-socials">
+      <a href="mailto:ingilizceogrensene@gmail.com" title="E-posta">✉</a>
+      <a href="#" title="Instagram">📸</a>
+    </div>
+    <p>© 2025 AbOnlinEnglish · <a href="pages/landing.html" style="color:inherit;">Anasayfa</a> · <a href="pages/placement-test.html" style="color:inherit;">Seviye Testi</a></p>
+  </footer>
+
+</div><!-- /main-content -->
+
+<!-- TOAST -->
+<div id="toast"></div>
+
+<script>
+/* ═══════════════════════════════════════════════════════════════
+   AUTH SYSTEM
+   - Email-only login
+   - localStorage persistence
+   - No backend required
+═══════════════════════════════════════════════════════════════ */
+const AUTH = (function() {
+
+  const STORAGE_KEY = 'abonline_user_v1';
+  const PROGRESS_KEY = 'abonline_progress_v1';
+
+  /* ── Storage helpers ── */
+  function getUser() {
+    try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || null; }
+    catch(e) { return null; }
+  }
+  function saveUser(u) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(u)); }
+    catch(e) {}
+  }
+  function getProgress() {
+    try { return JSON.parse(localStorage.getItem(PROGRESS_KEY)) || { completed:{}, streak:{count:0,lastDate:''}, xp:0 }; }
+    catch(e) { return { completed:{}, streak:{count:0,lastDate:''}, xp:0 }; }
+  }
+  function saveProgress(p) {
+    try { localStorage.setItem(PROGRESS_KEY, JSON.stringify(p)); }
+    catch(e) {}
+  }
+
+  /* ── Validation ── */
+  function isValidEmail(e) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(e.trim());
+  }
+
+  /* ── Login ── */
+  function login() {
+    const input = document.getElementById('auth-email');
+    const err   = document.getElementById('auth-error');
+    const email = input.value.trim().toLowerCase();
+
+    if (!isValidEmail(email)) {
+      err.classList.add('show');
+      input.focus();
+      return;
+    }
+    err.classList.remove('show');
+
+    const user = {
+      email,
+      name: email.split('@')[0],
+      loginDate: new Date().toISOString()
+    };
+    saveUser(user);
+
+    // Update streak on login
+    const prog = getProgress();
+    const today = new Date().toDateString();
+    if (prog.streak.lastDate !== today) {
+      const yest = new Date(); yest.setDate(yest.getDate()-1);
+      if (prog.streak.lastDate === yest.toDateString()) {
+        prog.streak.count++;
+      } else {
+        prog.streak.count = Math.max(prog.streak.count, 1);
+      }
+      prog.streak.lastDate = today;
+      saveProgress(prog);
+    }
+
+    showPortal(user, prog);
+    toast('Hoş geldin, ' + user.name + '! 👋', 'success');
+  }
+
+  /* ── Logout ── */
+  function logout() {
+    document.getElementById('auth-gate').classList.remove('hidden');
+    document.getElementById('main-content').classList.remove('visible');
+    document.getElementById('dashboard-bar').classList.remove('visible');
+    document.getElementById('nav-user').classList.remove('visible');
+    document.getElementById('auth-email').value = '';
+  }
+
+  /* ── Show portal after login ── */
+  function showPortal(user, prog) {
+    // Hide gate, show content
+    document.getElementById('auth-gate').classList.add('hidden');
+    document.getElementById('main-content').classList.add('visible');
+    document.getElementById('dashboard-bar').classList.add('visible');
+    document.getElementById('nav-user').classList.add('visible');
+
+    // Nav
+    const initials = user.name.slice(0,2).toUpperCase();
+    document.getElementById('nav-avatar').textContent = initials;
+    document.getElementById('nav-streak').textContent = '🔥 ' + prog.streak.count;
+
+    // Dashboard bar
+    document.getElementById('db-name').textContent = user.name;
+    document.getElementById('db-streak').textContent = prog.streak.count;
+    document.getElementById('db-xp').textContent = prog.xp || 0;
+    const doneCount = Object.values(prog.completed).filter(Boolean).length;
+    document.getElementById('db-done').textContent = doneCount;
+
+    // Continue button
+    if (prog.lastUnit) {
+      const cont = document.getElementById('db-continue');
+      cont.classList.add('visible');
+      cont.href = prog.lastUnit.href || '#';
+      document.getElementById('db-continue-txt').textContent = prog.lastUnit.label || '—';
+    }
+
+    // Progress bars on level cards
+    const levels = ['a1','a2','b1','b2','c1'];
+    let anyProgress = false;
+    levels.forEach(function(lvl) {
+      const keys = [1,2,3,4,5,6,7,8,9,10].map(function(n){ return lvl+'u'+n; });
+      const done = keys.filter(function(k){ return prog.completed[k]; }).length;
+      const pct  = Math.round((done / 10) * 100);
+      if (pct > 0) anyProgress = true;
+      const fill = document.getElementById('prog-' + lvl);
+      if (fill) fill.style.width = pct + '%';
+    });
+
+    // Progress section
+    if (anyProgress) {
+      renderProgressSection(prog, levels);
+    }
+
+    // Expose global progress API for level pages
+    window.PROGRESS = {
+      get:    getProgress,
+      save:   saveProgress,
+      markUnit: function(levelUnit, label, href) {
+        const p = getProgress();
+        p.completed[levelUnit] = true;
+        p.xp = (p.xp || 0) + 50;
+        p.lastUnit = { label: label, href: href || '#' };
+        saveProgress(p);
+        document.getElementById('db-xp').textContent = p.xp;
+        document.getElementById('db-done').textContent = Object.values(p.completed).filter(Boolean).length;
+        const lvl = levelUnit.replace(/u\d+/,'');
+        const keys = [1,2,3,4,5,6,7,8,9,10].map(function(n){ return lvl+'u'+n; });
+        const done = keys.filter(function(k){ return p.completed[k]; }).length;
+        const fill = document.getElementById('prog-' + lvl);
+        if (fill) fill.style.width = Math.round((done/10)*100) + '%';
+      }
+    };
+  }
+
+  /* ── Progress section ── */
+  function renderProgressSection(prog, levels) {
+    const grid = document.getElementById('progress-grid');
+    const section = document.getElementById('progress-section');
+    grid.innerHTML = '';
+
+    levels.forEach(function(lvl) {
+      const keys = [1,2,3,4,5,6,7,8,9,10].map(function(n){ return lvl+'u'+n; });
+      const done = keys.filter(function(k){ return prog.completed[k]; }).length;
+      const pct  = Math.round((done / 10) * 100);
+      if (pct === 0) return;
+
+      const labels = { a1:'A1 Beginner', a2:'A2 Elementary', b1:'B1 Pre-Int.', b2:'B2 Upper', c1:'C1 Advanced' };
+      const hrefs  = { a1:'pages/a1-a2-b1-b2-c1-c2.html', a2:'pages/a1-a2-b1-b2-c1-c2.html', b1:'pages/a1-a2-b1-b2-c1-c2.html', b2:'pages/a1-a2-b1-b2-c1-c2.html', c1:'pages/a1-a2-b1-b2-c1-c2.html' };
+
+      const card = document.createElement('a');
+      card.href = hrefs[lvl] || '#';
+      card.className = 'prog-card';
+      card.style.textDecoration = 'none';
+      card.innerHTML =
+        '<div class="prog-label">' + labels[lvl] + '</div>' +
+        '<div class="prog-pct">' + pct + '%</div>' +
+        '<div class="prog-bar"><div class="prog-fill ' + lvl + '" style="width:' + pct + '%"></div></div>';
+      grid.appendChild(card);
+    });
+
+    section.classList.add('visible');
+  }
+
+  /* ── Auto-login if stored ── */
+  function init() {
+    const user = getUser();
+    if (user) {
+      const prog = getProgress();
+      showPortal(user, prog);
+      // Gate açma — kullanıcı zaten giriş yapmış
+    }
+    // Giriş yapılmamışsa hiçbir şey yapma, sayfa normal açık
+  }
+
+
+  /* ── checkAndGo: level'a tıklanınca auth kontrolü ── */
+  function checkAndGo(linkEl) {
+    if (getUser()) return true; // Giriş yapılmış, devam et
+    // Giriş yapılmamış: auth gate aç, tıklanan linki kaydet
+    _pendingHref = linkEl.href;
+    document.getElementById('auth-gate').classList.remove('hidden');
+    document.getElementById('auth-email').focus();
+    return false; // linke gitme
+  }
+
+  /* ── closeGate: X ile kapat ── */
+  function closeGate() {
+    document.getElementById('auth-gate').classList.add('hidden');
+    _pendingHref = null;
+  }
+
+  var _pendingHref = null;
+
+  /* ── Login override: giriş sonrası bekleyen linke git ── */
+  function loginAndGo() {
+    const input = document.getElementById('auth-email');
+    const err   = document.getElementById('auth-error');
+    const email = input.value.trim().toLowerCase();
+    if (!isValidEmail(email)) { err.classList.add('show'); input.focus(); return; }
+    err.classList.remove('show');
+    const user = { email, name: email.split('@')[0], loginDate: new Date().toISOString() };
+    saveUser(user);
+    const prog = getProgress();
+    const today = new Date().toDateString();
+    if (prog.streak.lastDate !== today) {
+      const yest = new Date(); yest.setDate(yest.getDate()-1);
+      prog.streak.count = (prog.streak.lastDate === yest.toDateString()) ? prog.streak.count + 1 : 1;
+      prog.streak.lastDate = today;
+      saveProgress(prog);
+    }
+    document.getElementById('auth-gate').classList.add('hidden');
+    showPortal(user, prog);
+    toast('Hoş geldin, ' + user.name + '! 🎉', 'success');
+    if (_pendingHref) { window.location.href = _pendingHref; _pendingHref = null; }
+  }
+
+  return { login: loginAndGo, logout, init, checkAndGo, closeGate };
+
+})();
+
+/* ═══════════════════════════════════════════════════════════════
+   UI HELPERS
+═══════════════════════════════════════════════════════════════ */
+function toggleMenu() { document.getElementById('navLinks').classList.toggle('open'); }
+function closeMenu()  { document.getElementById('navLinks').classList.remove('open'); }
+
+function toast(msg, type) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = 'show' + (type ? ' ' + type : '');
+  clearTimeout(t._timer);
+  t._timer = setTimeout(function(){ t.classList.remove('show','success'); }, 3000);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   BOOT
+═══════════════════════════════════════════════════════════════ */
+document.addEventListener('DOMContentLoaded', function() {
+  AUTH.init();
+});
+</script>
+
+</body>
+</html>
