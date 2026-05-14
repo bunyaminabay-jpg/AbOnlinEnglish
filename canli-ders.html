@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Canlı Ders — AbOnlinEnglish</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0b0c0f;
+  --surface: #13141a;
+  --surface2: #1c1d26;
+  --border: rgba(255,255,255,0.07);
+  --border2: rgba(255,255,255,0.13);
+  --text: #eeeae0;
+  --muted: #7a7870;
+  --dim: #3a3830;
+  --accent: #e8a842;
+  --accent-dim: rgba(232,168,66,0.12);
+  --accent-glow: rgba(232,168,66,0.25);
+  --green: #3ecf8e;
+  --green-dim: rgba(62,207,142,0.12);
+  --red: #e8524a;
+  --red-dim: rgba(232,82,74,0.12);
+  --blue: #5b9cf6;
+  --blue-dim: rgba(91,156,246,0.12);
+  --r: 18px;
+  --r-sm: 10px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Instrument Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* ── BACKGROUND TEXTURE ── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 20% 10%, rgba(232,168,66,0.06) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 80% 80%, rgba(91,156,246,0.05) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── GRAIN ── */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.6;
+}
+
+/* ── HEADER ── */
+header {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 36px;
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(20px);
+  background: rgba(11,12,15,0.85);
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  font-size: 1.15rem;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+.logo em {
+  font-style: normal;
+  color: var(--accent);
+}
+
+.live-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--muted);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.pulse-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 0 0 var(--green);
+  animation: pulseRing 2s ease-in-out infinite;
+}
+@keyframes pulseRing {
+  0%   { box-shadow: 0 0 0 0 rgba(62,207,142,0.5); }
+  70%  { box-shadow: 0 0 0 6px rgba(62,207,142,0); }
+  100% { box-shadow: 0 0 0 0 rgba(62,207,142,0); }
+}
+
+/* ── MAIN ── */
+main {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 20px;
+}
+
+/* ── VIEWS ── */
+.view { display: none; width: 100%; max-width: 460px; }
+.view.active { display: block; animation: riseIn 0.45s cubic-bezier(0.16,1,0.3,1); }
+@keyframes riseIn {
+  from { opacity: 0; transform: translateY(28px) scale(0.98); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* ── CARD ── */
+.card {
+  background: var(--surface);
+  border-radius: var(--r);
+  border: 1px solid var(--border2);
+  padding: 36px;
+  box-shadow:
+    0 0 0 1px rgba(0,0,0,0.4),
+    0 24px 64px rgba(0,0,0,0.5),
+    inset 0 1px 0 rgba(255,255,255,0.05);
+}
+
+/* ── CARD HEADER ── */
+.card-eyebrow {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.card-eyebrow::before {
+  content: '';
+  width: 20px; height: 1px;
+  background: var(--dim);
+}
+
+.card h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.card-sub {
+  color: var(--muted);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+/* ── ROLE SELECTOR ── */
+.selector {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.sel-btn {
+  padding: 20px 16px;
+  border-radius: var(--r-sm);
+  border: 1.5px solid var(--border);
+  background: var(--surface2);
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+.sel-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--accent-dim);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.sel-btn:hover { border-color: var(--border2); }
+.sel-btn:hover::before { opacity: 1; }
+.sel-btn.selected {
+  border-color: var(--accent);
+  background: var(--accent-dim);
+  box-shadow: 0 0 0 1px var(--accent-glow);
+}
+.sel-icon { font-size: 1.8rem; margin-bottom: 8px; }
+.sel-label { font-size: 0.82rem; font-weight: 600; color: var(--text); letter-spacing: 0.02em; }
+
+/* ── FORM ── */
+.field { margin-bottom: 20px; }
+label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+input[type="text"],
+input[type="password"],
+input[type="url"],
+input[type="time"] {
+  width: 100%;
+  padding: 13px 15px;
+  border: 1.5px solid var(--border2);
+  border-radius: var(--r-sm);
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 0.95rem;
+  color: var(--text);
+  background: var(--surface2);
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+  -webkit-appearance: none;
+  color-scheme: dark;
+}
+input::placeholder { color: var(--dim); }
+input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+  background: rgba(28,29,38,0.9);
+}
+input.error {
+  border-color: var(--red);
+  box-shadow: 0 0 0 3px var(--red-dim);
+}
+
+.field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+.field-row .field { margin-bottom: 0; }
+
+/* ── BUTTONS ── */
+.btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: var(--r-sm);
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  letter-spacing: 0.01em;
+  position: relative;
+  overflow: hidden;
+}
+.btn:active { transform: scale(0.98); }
+
+.btn-primary {
+  background: var(--accent);
+  color: #0b0c0f;
+}
+.btn-primary:hover {
+  background: #f0b94a;
+  box-shadow: 0 4px 20px var(--accent-glow);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--muted);
+  border: 1.5px solid var(--border2);
+  margin-top: 10px;
+}
+.btn-ghost:hover { border-color: var(--border2); color: var(--text); background: var(--surface2); }
+
+.btn-green {
+  background: var(--green);
+  color: #0b0c0f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+.btn-green:hover { background: #52e0a0; box-shadow: 0 4px 20px rgba(62,207,142,0.3); }
+
+.btn-danger {
+  background: transparent;
+  color: var(--red);
+  border: 1.5px solid rgba(232,82,74,0.25);
+  margin-top: 10px;
+}
+.btn-danger:hover { background: var(--red-dim); border-color: var(--red); }
+
+.btn + .btn { margin-top: 10px; }
+
+/* ── ERROR BOX ── */
+.err-box {
+  display: none;
+  background: var(--red-dim);
+  border: 1px solid rgba(232,82,74,0.3);
+  border-radius: var(--r-sm);
+  padding: 11px 14px;
+  font-size: 0.83rem;
+  color: var(--red);
+  margin-bottom: 18px;
+  align-items: center;
+  gap: 8px;
+}
+.err-box.show { display: flex; animation: shakeX 0.4s ease; }
+@keyframes shakeX {
+  0%,100% { transform: translateX(0); }
+  20%,60%  { transform: translateX(-6px); }
+  40%,80%  { transform: translateX(6px); }
+}
+
+/* ── DIVIDER ── */
+.divider {
+  text-align: center;
+  position: relative;
+  margin: 26px 0;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dim);
+}
+.divider::before, .divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: calc(50% - 60px);
+  height: 1px;
+  background: var(--border);
+}
+.divider::before { left: 0; }
+.divider::after { right: 0; }
+
+/* ── ADMIN STATUS ── */
+.status-grid {
+  background: var(--surface2);
+  border-radius: var(--r-sm);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.status-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+}
+.status-row:last-child { border-bottom: none; }
+.status-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  font-weight: 600;
+}
+.status-val { font-size: 0.88rem; font-weight: 500; }
+.status-val.mono { font-family: 'Courier New', monospace; letter-spacing: 0.1em; font-size: 0.95rem; color: var(--accent); }
+.status-val.green { color: var(--green); }
+.status-val.red { color: var(--red); }
+
+/* ── WAITING ROOM ── */
+.waiting-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+.waiting-avatar {
+  width: 60px; height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), #f0c060);
+  color: var(--bg);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  font-size: 1.2rem;
+  margin: 0 auto 14px;
+  box-shadow: 0 0 0 4px var(--accent-dim);
+}
+.waiting-teacher-name { font-weight: 700; font-size: 1rem; margin-bottom: 3px; }
+.waiting-teacher-role { font-size: 0.78rem; color: var(--muted); }
+
+.countdown-wrap {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 28px 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.countdown-wrap::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  animation: shimmer 2.5s ease-in-out infinite;
+}
+@keyframes shimmer {
+  0% { opacity: 0.3; }
+  50% { opacity: 1; }
+  100% { opacity: 0.3; }
+}
+
+.topic-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--accent-dim);
+  border: 1px solid rgba(232,168,66,0.2);
+  border-radius: 100px;
+  padding: 5px 12px;
+  font-size: 0.75rem;
+  color: var(--accent);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  margin-bottom: 18px;
+}
+
+#countdown-display {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  line-height: 1;
+  margin-bottom: 8px;
+  transition: color 0.4s;
+}
+#countdown-display.live  { color: var(--green); text-shadow: 0 0 30px rgba(62,207,142,0.4); }
+#countdown-display.soon  { color: var(--accent); text-shadow: 0 0 30px var(--accent-glow); }
+
+.countdown-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.welcome-chip {
+  text-align: center;
+  font-size: 0.83rem;
+  color: var(--muted);
+  margin-top: 14px;
+}
+
+/* ── SUCCESS / PUBLISHED ── */
+.published-badge {
+  width: 64px; height: 64px;
+  background: var(--green-dim);
+  border: 1px solid rgba(62,207,142,0.25);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.8rem;
+  margin: 0 auto 24px;
+}
+
+.pass-box {
+  background: var(--surface2);
+  border: 1px solid var(--border2);
+  border-radius: var(--r-sm);
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+.pass-box .pass-label {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.pass-box .pass-value {
+  font-family: 'Courier New', monospace;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+}
+.copy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border: 1px solid var(--border2);
+  border-radius: 100px;
+  background: transparent;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-family: 'Instrument Sans', sans-serif;
+  color: var(--muted);
+  margin-top: 12px;
+  transition: all 0.2s;
+}
+.copy-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+/* ── NO LESSON ── */
+.no-lesson-icon {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 20px;
+  filter: grayscale(0.4);
+}
+
+/* ── FOOTER ── */
+footer {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 18px;
+  font-size: 0.72rem;
+  color: var(--dim);
+  border-top: 1px solid var(--border);
+  letter-spacing: 0.04em;
+}
+
+/* ── UTIL ── */
+.mt-8 { margin-top: 8px; }
+.tc { text-align: center; }
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--dim); border-radius: 3px; }
+
+/* ── MOBILE ── */
+@media (max-width: 520px) {
+  header { padding: 16px 20px; }
+  .card { padding: 28px 22px; }
+  .card h2 { font-size: 1.5rem; }
+  #countdown-display { font-size: 2.8rem; }
+  .field-row { grid-template-columns: 1fr; }
+  .selector { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- AbOnlinEnglish Shared Nav -->
+<style>
+.site-nav{position:fixed;top:0;left:0;right:0;z-index:2000;background:rgba(12,26,48,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,146,10,0.15);}
+.site-nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 36px;height:72px;}
+.site-logo{font-family:'Playfair Display',serif;font-size:1.55rem;font-weight:900;color:#fff;text-decoration:none;letter-spacing:-.3px;}
+.site-logo em{color:#e8ad30;font-style:normal;}
+.site-nav-links{display:flex;gap:5px;list-style:none;align-items:center;}
+.site-nav-links li{display:flex;align-items:center;}
+.site-nav-links li:not(:last-child)::after{content:'';display:inline-block;width:1px;height:16px;background:rgba(255,255,255,0.15);margin-left:5px;}
+.site-nav-links a{color:#fff;text-decoration:none;font-size:.9rem;font-weight:600;padding:7px 13px;border-radius:7px;transition:all .2s;position:relative;top:0;}
+.site-nav-links a:hover{top:-2px;filter:brightness(1.15);box-shadow:0 4px 14px rgba(0,0,0,.25);}
+@keyframes snpg{0%,100%{box-shadow:0 0 0 0 rgba(201,146,10,.5);}50%{box-shadow:0 0 0 6px rgba(201,146,10,0);}}
+.site-nav-cta{background:#c9920a!important;color:#0c1a30!important;font-weight:700!important;padding:8px 20px!important;border-radius:7px!important;animation:snpg 2.5s ease-in-out infinite;}
+.site-nav-cta:hover{background:#e8ad30!important;animation:none;}
+.live-nav-badge{background:rgba(232,82,74,0.2);border:1px solid rgba(232,82,74,0.4);color:#f87171;font-size:.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:50px;display:flex;align-items:center;gap:6px;}
+.live-nav-badge::before{content:'';width:7px;height:7px;border-radius:50%;background:#e8524a;animation:snblink 1.2s ease infinite;}
+@keyframes snblink{0%,100%{opacity:1;}50%{opacity:.3;}}
+.site-hamburger{display:none;background:none;border:none;cursor:pointer;color:rgba(255,255,255,.8);font-size:1.5rem;}
+@media(max-width:960px){
+  .site-nav-links{display:none;flex-direction:column;position:absolute;top:72px;left:0;right:0;background:rgba(12,26,48,.99);padding:14px;gap:4px;}
+  .site-nav-links.open{display:flex;}
+  .site-hamburger{display:block;}
+  body{padding-top:72px!important;}
+}
+/* body push için */
+body{padding-top:72px;}
+</style>
+<nav class="site-nav">
+  <div class="site-nav-inner">
+    <a class="site-logo" href="https://abonlinenglish.school/landing">AbOnlin<em>English</em></a>
+    <ul class="site-nav-links" id="siteNavLinks">
+      <li><a href="https://abonlinenglish.school/landing" style="background:#c0392b;color:#fff;">Anasayfa</a></li>
+      <li><a href="https://abonlinenglish.school/" style="background:#c0392b;color:#fff;">Kendin Öğren</a></li>
+      <li><a href="https://abonlinenglish.school/roadmap" style="background:#c0392b;color:#fff;">Yol Haritası</a></li>
+      <li><a href="https://abonlinenglish.school/placement-test" style="background:#c0392b;color:#fff;">Seviye Testi</a></li>
+      <li><a href="https://abonlinenglish.school/games" style="background:#c0392b;color:#fff;">Oyunlar</a></li>
+      <li><a href="https://abonlinenglish.school/canli-ders" style="background:#c0392b;color:#fff;box-shadow:0 0 0 2px rgba(255,255,255,.6) inset;">🔴 Canlı Ders</a></li>
+      <li><a class="site-nav-cta" href="https://abonlinenglish.school/landing#pricing">Ücretsiz Ders</a></li>
+    </ul>
+    <div class="live-nav-badge" style="margin-right:8px;">Canlı Ders</div>
+    <button class="site-hamburger" onclick="document.getElementById('siteNavLinks').classList.toggle('open')">&#9776;</button>
+  </div>
+</nav>
+
+<main>
+
+  <!-- VIEW 0: Rol seçimi -->
+  <div class="view active" id="view-select">
+    <div class="card">
+      <div class="card-eyebrow">Hoş geldiniz</div>
+      <h2>Derse Başlayalım</h2>
+      <p class="card-sub">Kimsiniz? Devam etmek için rolünüzü seçin.</p>
+
+      <div class="selector">
+        <div class="sel-btn" onclick="selectRole('student')" id="sel-student">
+          <div class="sel-icon">👨‍🎓</div>
+          <div class="sel-label">Öğrenciyim</div>
+        </div>
+        <div class="sel-btn" onclick="selectRole('teacher')" id="sel-teacher">
+          <div class="sel-icon">👩‍🏫</div>
+          <div class="sel-label">Öğretmenim</div>
+        </div>
+      </div>
+
+      <button class="btn btn-primary" onclick="goFromSelect()">Devam Et →</button>
+    </div>
+  </div>
+
+  <!-- VIEW 1: Öğrenci girişi -->
+  <div class="view" id="view-student">
+    <div class="card">
+      <div class="card-eyebrow">Öğrenci Girişi</div>
+      <h2>Derse Katıl</h2>
+      <p class="card-sub">Öğretmeninizin verdiği ders şifresini girin.</p>
+
+      <div class="err-box" id="student-err">⚠️ Şifre hatalı. Öğretmeninize danışın.</div>
+
+      <div class="field">
+        <label>Adınız</label>
+        <input type="text" id="student-name" placeholder="Adınızı yazın..." autocomplete="off" />
+      </div>
+
+      <div class="field">
+        <label>Ders Şifresi</label>
+        <input type="password" id="student-pass" placeholder="• • • • • •" />
+      </div>
+
+      <button class="btn btn-primary" onclick="studentEnter()">Derse Gir →</button>
+      <button class="btn btn-ghost" onclick="showView('view-select')">← Geri Dön</button>
+    </div>
+  </div>
+
+  <!-- VIEW 2: Öğretmen girişi -->
+  <div class="view" id="view-teacher-login">
+    <div class="card">
+      <div class="card-eyebrow">Öğretmen Girişi</div>
+      <h2>Admin Paneli</h2>
+      <p class="card-sub">Yetkili erişim için admin şifrenizi girin.</p>
+
+      <div class="err-box" id="teacher-err">⚠️ Admin şifresi hatalı.</div>
+
+      <div class="field">
+        <label>Admin Şifresi</label>
+        <input type="password" id="admin-pass" placeholder="• • • • • • • •" />
+      </div>
+
+      <button class="btn btn-primary" onclick="adminLogin()">Panele Gir →</button>
+      <button class="btn btn-ghost" onclick="showView('view-select')">← Geri Dön</button>
+    </div>
+  </div>
+
+  <!-- VIEW 3: Admin Panel -->
+  <div class="view" id="view-admin">
+    <div class="card">
+      <div class="card-eyebrow">Ders Yönetimi</div>
+      <h2>Yeni Ders Oluştur</h2>
+      <p class="card-sub">Ders bilgilerini kaydedin. Öğrenciler anında görecek.</p>
+
+      <div class="field">
+        <label>Google Meet Linki</label>
+        <input type="url" id="admin-link" placeholder="https://meet.google.com/xxx-xxxx-xxx" />
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label>Ders Şifresi</label>
+          <input type="text" id="admin-lesson-pass" placeholder="örn: ab2024" autocomplete="off" />
+        </div>
+        <div class="field">
+          <label>Ders Saati</label>
+          <input type="time" id="admin-time" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Ders Konusu <span style="color:var(--dim);font-style:italic;">(isteğe bağlı)</span></label>
+        <input type="text" id="admin-topic" placeholder="örn: Past Simple Tense — Unit 4" />
+      </div>
+
+      <button class="btn btn-primary" onclick="saveLesson()">💾 Kaydet & Yayınla</button>
+
+      <div class="divider">aktif ders durumu</div>
+
+      <div class="status-grid" id="admin-status">
+        <div class="status-row">
+          <span class="status-label">Durum</span>
+          <span class="status-val" id="st-status">—</span>
+        </div>
+        <div class="status-row">
+          <span class="status-label">Şifre</span>
+          <span class="status-val mono" id="st-pass">—</span>
+        </div>
+        <div class="status-row">
+          <span class="status-label">Saat</span>
+          <span class="status-val" id="st-time">—</span>
+        </div>
+        <div class="status-row">
+          <span class="status-label">Konu</span>
+          <span class="status-val" id="st-topic">—</span>
+        </div>
+      </div>
+
+      <button class="btn btn-danger" onclick="cancelLesson()">🗑 Dersi İptal Et</button>
+    </div>
+  </div>
+
+  <!-- VIEW 4: Öğrenci bekleme odası -->
+  <div class="view" id="view-waiting">
+    <div class="card">
+
+      <div class="waiting-header">
+        <div class="waiting-avatar">AB</div>
+        <div class="waiting-teacher-name">AbOnlinEnglish</div>
+        <div class="waiting-teacher-role">İngilizce Öğretmeni</div>
+      </div>
+
+      <div class="countdown-wrap">
+        <div id="lesson-topic-display"></div>
+        <div id="countdown-display">--:--</div>
+        <div class="countdown-label" id="countdown-label">bağlanılıyor...</div>
+      </div>
+
+      <button class="btn btn-green" id="join-btn" onclick="joinMeet()" style="display:none;">
+        <span>📹</span> Google Meet'e Katıl
+      </button>
+
+      <div class="welcome-chip" id="waiting-name"></div>
+    </div>
+  </div>
+
+  <!-- VIEW 5: Ders yok -->
+  <div class="view" id="view-no-lesson">
+    <div class="card tc">
+      <div class="no-lesson-icon">📅</div>
+      <h2>Şu an ders yok</h2>
+      <p class="card-sub">Öğretmeniniz henüz bir ders oluşturmadı. Biraz sonra tekrar deneyin.</p>
+      <button class="btn btn-ghost" onclick="showView('view-select')">← Ana Sayfaya Dön</button>
+    </div>
+  </div>
+
+  <!-- VIEW 6: Yayınlandı onayı -->
+  <div class="view" id="view-saved">
+    <div class="card tc">
+      <div class="published-badge">✅</div>
+      <h2>Ders Yayınlandı!</h2>
+      <p class="card-sub">Öğrenciler şifreyi girerek bekleme odasına girebilir.</p>
+
+      <div class="pass-box">
+        <div class="pass-label">Ders Şifresi</div>
+        <div class="pass-value" id="saved-pass-display">—</div>
+        <button class="copy-btn" onclick="copyPass()">📋 Kopyala</button>
+      </div>
+
+      <button class="btn btn-primary" onclick="showView('view-admin')">← Panele Dön</button>
+    </div>
+  </div>
+
+</main>
+
+<footer>AbOnlinEnglish.school — Canlı Ders Sistemi</footer>
+
+<script>
+// ── CONFIG ─────────────────────────────────────────────────────────────────
+// ⚠️ Gerçek projede admin doğrulamasını sunucu tarafında (backend/Firebase) yapın.
+// ── Güvenlik: Admin şifresi açık metin olarak saklanmıyor
+// SHA-256 hash doğrulaması kullanılıyor
+const ADMIN_HASH = "f1d272aec8de8902f8fd5a140778c4aed0bd0dbcbbc92f7b7723ceda220323d5";
+
+async function hashStr(str) {
+  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
+  return Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,'0')).join('');
+}
+
+// ── LOCAL STORAGE ──────────────────────────────────────────────────────────
+function getLesson() {
+  try { return JSON.parse(localStorage.getItem('ab_lesson') || 'null'); } catch { return null; }
+}
+function setLesson(data) {
+  localStorage.setItem('ab_lesson', JSON.stringify(data));
+}
+function clearLesson() {
+  localStorage.removeItem('ab_lesson');
+}
+
+// ── STATE ──────────────────────────────────────────────────────────────────
+let selectedRole = null;
+let countdownTimer = null;
+let currentMeetLink = null;
+
+// ── NAVIGATION ─────────────────────────────────────────────────────────────
+function showView(id) {
+  document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+
+function selectRole(role) {
+  selectedRole = role;
+  document.querySelectorAll('.sel-btn').forEach(b => b.classList.remove('selected'));
+  document.getElementById('sel-' + role).classList.add('selected');
+}
+
+function goFromSelect() {
+  if (!selectedRole) { alert('Lütfen bir rol seçin.'); return; }
+  clearErrors();
+  if (selectedRole === 'student') showView('view-student');
+  else showView('view-teacher-login');
+}
+
+// ── ERROR HELPERS ───────────────────────────────────────────────────────────
+function clearErrors() {
+  document.querySelectorAll('.err-box').forEach(e => e.classList.remove('show'));
+  document.querySelectorAll('input.error').forEach(e => e.classList.remove('error'));
+}
+
+function showError(errId, inputId) {
+  const errEl = document.getElementById(errId);
+  errEl.classList.remove('show');
+  void errEl.offsetWidth; // reflow for animation replay
+  errEl.classList.add('show');
+  const inp = document.getElementById(inputId);
+  inp.classList.add('error');
+  inp.addEventListener('input', () => {
+    inp.classList.remove('error');
+    errEl.classList.remove('show');
+  }, { once: true });
+}
+
+// ── ADMIN ──────────────────────────────────────────────────────────────────
+async function adminLogin() {
+  const pass = document.getElementById('admin-pass').value.trim();
+  if (!pass) { showError('teacher-err', 'admin-pass'); return; }
+  const h = await hashStr(pass);
+  if (h === ADMIN_HASH) {
+    showView('view-admin');
+    loadAdminStatus();
+  } else {
+    showError('teacher-err', 'admin-pass');
+  }
+}
+
+function loadAdminStatus() {
+  const lesson = getLesson();
+  if (!lesson) {
+    document.getElementById('st-status').textContent = 'Ders yok';
+    document.getElementById('st-status').className = 'status-val red';
+    document.getElementById('st-pass').textContent = '—';
+    document.getElementById('st-time').textContent = '—';
+    document.getElementById('st-topic').textContent = '—';
+    return;
+  }
+  document.getElementById('st-status').textContent = '● Aktif';
+  document.getElementById('st-status').className = 'status-val green';
+  document.getElementById('st-pass').textContent = lesson.pass;
+  document.getElementById('st-time').textContent = lesson.time || '—';
+  document.getElementById('st-topic').textContent = lesson.topic || '—';
+
+  // Formu doldur
+  document.getElementById('admin-link').value = lesson.link || '';
+  document.getElementById('admin-lesson-pass').value = lesson.pass || '';
+  document.getElementById('admin-time').value = lesson.time || '';
+  document.getElementById('admin-topic').value = lesson.topic || '';
+}
+
+function saveLesson() {
+  const link  = document.getElementById('admin-link').value.trim();
+  const pass  = document.getElementById('admin-lesson-pass').value.trim();
+  const time  = document.getElementById('admin-time').value.trim();
+  const topic = document.getElementById('admin-topic').value.trim();
+
+  if (!link || !pass) { alert('Meet linki ve ders şifresi zorunludur.'); return; }
+  if (!link.startsWith('http')) { alert('Geçerli bir Meet linki girin (https://...)'); return; }
+
+  setLesson({ link, pass, time, topic, created: Date.now() });
+  document.getElementById('saved-pass-display').textContent = pass;
+  showView('view-saved');
+}
+
+function cancelLesson() {
+  if (confirm('Dersi iptal etmek istediğinize emin misiniz?')) {
+    clearLesson();
+    loadAdminStatus();
+  }
+}
+
+function copyPass() {
+  const pass = document.getElementById('saved-pass-display').textContent;
+  navigator.clipboard.writeText(pass).then(() => {
+    const btn = document.querySelector('.copy-btn');
+    const orig = btn.textContent;
+    btn.textContent = '✓ Kopyalandı!';
+    btn.style.color = 'var(--green)';
+    btn.style.borderColor = 'var(--green)';
+    setTimeout(() => {
+      btn.textContent = orig;
+      btn.style.color = '';
+      btn.style.borderColor = '';
+    }, 2200);
+  }).catch(() => alert('Kopyalama başarısız. Manuel kopyalayın: ' + pass));
+}
+
+// ── STUDENT ────────────────────────────────────────────────────────────────
+function studentEnter() {
+  const name = document.getElementById('student-name').value.trim();
+  const pass = document.getElementById('student-pass').value.trim();
+
+  if (!name) { alert('Lütfen adınızı girin.'); return; }
+
+  const lesson = getLesson();
+  if (!lesson) {
+    showView('view-no-lesson');
+    return;
+  }
+
+  if (pass !== lesson.pass) {
+    showError('student-err', 'student-pass');
+    return;
+  }
+
+  currentMeetLink = lesson.link;
+
+  // Konu badge
+  const topicEl = document.getElementById('lesson-topic-display');
+  if (lesson.topic) {
+    topicEl.innerHTML = `<div class="topic-badge">📚 ${lesson.topic}</div>`;
+  } else {
+    topicEl.innerHTML = '';
+  }
+
+  document.getElementById('waiting-name').textContent = 'Hoş geldin, ' + name + ' 👋';
+  showView('view-waiting');
+  startCountdown(lesson.time);
+}
+
+// ── COUNTDOWN ──────────────────────────────────────────────────────────────
+function startCountdown(lessonTime) {
+  if (countdownTimer) clearInterval(countdownTimer);
+
+  const display  = document.getElementById('countdown-display');
+  const label    = document.getElementById('countdown-label');
+  const joinBtn  = document.getElementById('join-btn');
+
+  function tick() {
+    if (!lessonTime) {
+      display.textContent = '—';
+      display.className = '';
+      label.textContent = 'Ders saati belirtilmedi';
+      joinBtn.style.display = 'flex';
+      clearInterval(countdownTimer);
+      return;
+    }
+
+    const now = new Date();
+    const [h, m] = lessonTime.split(':').map(Number);
+    const target = new Date();
+    target.setHours(h, m, 0, 0);
+    const diff = target - now;
+
+    if (diff <= 0) {
+      if (diff > -10 * 60 * 1000) {
+        display.textContent = 'CANLI';
+        display.className = 'live';
+        label.textContent = 'Ders şu an aktif!';
+        joinBtn.style.display = 'flex';
+      } else {
+        display.textContent = 'Bitti';
+        display.className = '';
+        label.textContent = 'Bu ders sona erdi.';
+        joinBtn.style.display = 'none';
+        clearInterval(countdownTimer);
+      }
+      return;
+    }
+
+    if (diff < 5 * 60 * 1000) {
+      joinBtn.style.display = 'flex';
+      display.className = 'soon';
+    } else {
+      joinBtn.style.display = 'none';
+      display.className = '';
+    }
+
+    const totalSec = Math.floor(diff / 1000);
+    const hrs  = Math.floor(totalSec / 3600);
+    const mins = Math.floor((totalSec % 3600) / 60);
+    const secs = totalSec % 60;
+
+    if (hrs > 0) {
+      display.textContent = `${hrs}:${String(mins).padStart(2,'0')}:${String(secs).padStart(2,'0')}`;
+    } else {
+      display.textContent = `${String(mins).padStart(2,'0')}:${String(secs).padStart(2,'0')}`;
+    }
+    label.textContent = 'derse kadar kalan süre';
+  }
+
+  tick();
+  countdownTimer = setInterval(tick, 1000);
+}
+
+function joinMeet() {
+  if (currentMeetLink) window.open(currentMeetLink, '_blank');
+}
+
+// ── KEYBOARD ───────────────────────────────────────────────────────────────
+document.addEventListener('keydown', e => {
+  if (e.key !== 'Enter') return;
+  const active = document.querySelector('.view.active');
+  if (!active) return;
+  const id = active.id;
+  if      (id === 'view-student')        studentEnter();
+  else if (id === 'view-teacher-login')  adminLogin();
+  else if (id === 'view-admin')          saveLesson();
+});
+</script>
+</body>
+</html>
