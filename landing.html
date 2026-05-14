@@ -26,21 +26,21 @@ body{font-family:'Outfit',sans-serif;color:var(--text);background:var(--cream);o
 
 /* ---- NAV ---- */
 nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(12,26,48,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,146,10,0.15);}
-.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:64px;}
-.logo{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;color:#fff;text-decoration:none;letter-spacing:-.3px;}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 36px;height:72px;}
+.logo{font-family:'Cormorant Garamond',serif;font-size:1.65rem;font-weight:700;color:#fff;text-decoration:none;letter-spacing:-.3px;}
 .logo em{color:var(--gold2);font-style:normal;}
-.nav-links{display:flex;gap:6px;list-style:none;align-items:center;}
+.nav-links{display:flex;gap:5px;list-style:none;align-items:center;}
 .nav-links li{display:flex;align-items:center;}
-.nav-links li:not(:last-child)::after{content:'';display:inline-block;width:1px;height:14px;background:rgba(255,255,255,0.12);margin-left:6px;}
-.nav-links a{color:#fff;text-decoration:none;font-size:.82rem;font-weight:500;padding:7px 13px;border-radius:6px;transition:all .22s cubic-bezier(.4,0,.2,1);letter-spacing:.3px;position:relative;top:0;}
+.nav-links li:not(:last-child)::after{content:'';display:inline-block;width:1px;height:16px;background:rgba(255,255,255,0.15);margin-left:5px;}
+.nav-links a{color:#fff;text-decoration:none;font-size:.93rem;font-weight:600;padding:8px 15px;border-radius:7px;transition:all .22s cubic-bezier(.4,0,.2,1);letter-spacing:.2px;position:relative;top:0;}
 .nav-links a:hover{top:-2px;filter:brightness(1.15);box-shadow:0 4px 14px rgba(0,0,0,0.25);}
 .nav-links a.active{filter:brightness(1.1);}
 @keyframes pulse-gold{0%,100%{box-shadow:0 0 0 0 rgba(201,146,10,0.5);}50%{box-shadow:0 0 0 6px rgba(201,146,10,0);}}
-.nav-cta{background:var(--gold)!important;color:var(--navy)!important;font-weight:700!important;padding:8px 20px!important;border-radius:6px!important;letter-spacing:.3px;animation:pulse-gold 2.5s ease-in-out infinite;}
+.nav-cta{background:var(--gold)!important;color:var(--navy)!important;font-weight:700!important;padding:9px 22px!important;border-radius:7px!important;letter-spacing:.3px;animation:pulse-gold 2.5s ease-in-out infinite;font-size:.93rem!important;}
 .nav-cta:hover{background:var(--gold2)!important;color:var(--navy)!important;transform:translateY(-1px);animation:none;box-shadow:0 4px 16px rgba(201,146,10,0.4)!important;}
-.hamburger{display:none;background:none;border:none;cursor:pointer;color:rgba(255,255,255,0.8);font-size:1.4rem;}
-@media(max-width:720px){
-  .nav-links{display:none;flex-direction:column;position:absolute;top:64px;left:0;right:0;background:rgba(12,26,48,0.99);padding:12px;gap:2px;}
+.hamburger{display:none;background:none;border:none;cursor:pointer;color:rgba(255,255,255,0.8);font-size:1.6rem;}
+@media(max-width:960px){
+  .nav-links{display:none;flex-direction:column;position:absolute;top:72px;left:0;right:0;background:rgba(12,26,48,0.99);padding:14px;gap:4px;}
   .nav-links.open{display:flex;}
   .hamburger{display:block;}
 }
@@ -92,8 +92,8 @@ section{padding:96px 32px;}
 .m-block h3{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;color:var(--navy);margin-bottom:10px;}
 .m-block p{font-size:.9rem;color:var(--muted);line-height:1.8;font-weight:300;}
 .manifesto-callout{background:var(--navy);border-radius:12px;padding:48px 40px;position:sticky;top:100px;}
-.mc-quote{font-family:'Cormorant Garamond',serif;font-size:1.55rem;font-weight:400;font-style:italic;color:#fff;line-height:1.55;margin-bottom:20px;}
-.mc-quote strong{color:var(--gold2);font-style:normal;font-weight:600;}
+.mc-quote{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;line-height:1.35;margin-bottom:20px;color:#fff;}
+.mc-quote strong{color:var(--gold2);font-style:normal;font-weight:700;}
 .mc-note{font-size:.78rem;color:rgba(255,255,255,0.35);letter-spacing:1px;text-transform:uppercase;border-top:1px solid rgba(255,255,255,0.08);padding-top:16px;margin-top:16px;line-height:1.7;}
 @media(max-width:860px){.manifesto-grid{grid-template-columns:1fr;}.manifesto-callout{position:static;}}
 
@@ -296,9 +296,9 @@ footer strong{color:var(--gold);}
 <!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-left">
-    <div class="hero-eyebrow">Birebir Online İngilizce</div>
-    <h1>Sistem olmadan<br>çaba <em>yetmez.</em></h1>
-    <p class="hero-sub">Yıllarca öğrendiniz ama konuşamıyorsunuz. Eksik olan yetenek değil — yapı. A1+A2 toplamda 6 ay, haftada 2 ders — her haftası planlanmış, her dersi amaçlı, kesintisiz bir yol.</p>
+    <div class="hero-eyebrow">Birebir Online İngilizce · A1 & A2</div>
+    <h1>6 ayda A1 ve A2 kurslarını<br>bitirin. <em>Garanti değil — sistem.</em></h1>
+    <p class="hero-sub">Haftada 2 ders, 24 hafta, 20 ünite + 4 değerlendirme haftası. Her haftanın konusu baştan bellidir — siz sadece gelin. Yıllarca öğrenip konuşamadıysanız sorun içerikte değil, yapıdaydı.</p>
     <div class="hero-btns">
       <a href="#pricing" class="btn-gold">İlk Dersi Ücretsiz Başlat</a>
       <a href="#how" class="btn-outline">Sistemi Gör</a>
@@ -307,8 +307,8 @@ footer strong{color:var(--gold);}
   <div class="hero-right">
     <div class="hero-stats">
       <div class="stat-item">
-        <div class="stat-num">6</div>
-        <div class="stat-label">Ay · A1'den A2'ye</div>
+        <div class="stat-num">24</div>
+        <div class="stat-label">Hafta · Toplam plan</div>
       </div>
       <div class="stat-item">
         <div class="stat-num">50'</div>
@@ -319,8 +319,8 @@ footer strong{color:var(--gold);}
         <div class="stat-label">Konuşma pratiği</div>
       </div>
       <div class="stat-item">
-        <div class="stat-num">0</div>
-        <div class="stat-label">Belirsizlik · Plan net</div>
+        <div class="stat-num">6</div>
+        <div class="stat-label">Ay · Haftada 2 ders</div>
       </div>
     </div>
   </div>
@@ -351,7 +351,7 @@ footer strong{color:var(--gold);}
       </div>
       <div>
         <div class="manifesto-callout">
-          <div class="mc-quote">"Öğrenmeyi bitirmek isteyenler için <strong>net bir plan</strong> ve <strong>disiplinli devam</strong> şarttır. Bunu sağlayamayanı öğrencim olarak kabul etmiyorum — çünkü ikimizin de zamanı değerli."</div>
+          <div class="mc-quote">"Disiplin ve devam yoksa —<br><strong>ben de yokum.</strong>"</div>
           <div class="mc-note">Bu program birebir ve kişiye özeldir. Haftada 2–3 ders · Ders dışı çalışma zorunluluğu var · Grup formatı mevcut değil</div>
         </div>
       </div>
@@ -484,7 +484,7 @@ footer strong{color:var(--gold);}
       </div>
       <div>
         <div style="font-size:.68rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold2);margin-bottom:10px;">Her Ay</div>
-        <div style="font-size:.9rem;color:rgba(255,255,255,0.65);line-height:1.8;font-weight:300;">2 ünite tamamlanır<br>Ay sonu değerlendirme<br>İlerleme raporu<br>Plan güncelleme</div>
+        <div style="font-size:.9rem;color:rgba(255,255,255,0.65);line-height:1.8;font-weight:300;">3–4 ünite tamamlanır<br>Ay sonu değerlendirme<br>İlerleme raporu<br>Plan güncelleme</div>
       </div>
       <div>
         <div style="font-size:.68rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold2);margin-bottom:10px;">6. Ay Sonunda</div>
