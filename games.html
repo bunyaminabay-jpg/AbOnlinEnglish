@@ -1,240 +1,191 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Learning Games — AbOnlinEnglish</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Kelime Oyunları — AbOnlinEnglish</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-/* ===== SHARED NAV ===== */
-nav{position:fixed;top:0;left:0;right:0;z-index:2000;background:#0f1e3c !important;backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,0.12);}
-.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 28px;height:68px;}
-.logo-wrap{display:flex;align-items:center;gap:12px;text-decoration:none;}
-.logo-svg{width:42px;height:42px;flex-shrink:0;}
-.logo-text{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:900;color:#fff;letter-spacing:-0.5px;line-height:1;}
-.logo-text span{color:#e8a020;}
-.logo-sub{font-size:.65rem;font-weight:500;color:rgba(255,255,255,0.45);letter-spacing:2px;text-transform:uppercase;margin-top:2px;}
-.nav-links{display:flex;gap:2px;list-style:none;margin:0;padding:0;}
-.nav-links a{color:rgba(255,255,255,0.92);text-decoration:none;font-size:.85rem;font-weight:500;padding:8px 13px;border-radius:8px;transition:all .2s;}
-.nav-links a:hover,.nav-links a.active{background:rgba(232,160,32,0.18);color:#f0c060;}
-.nav-cta-btn{background:#e8a020!important;color:#0f1e3c!important;font-weight:700!important;padding:9px 18px!important;border-radius:8px;}
-.nav-cta-btn:hover{background:#f0c060!important;}
-.hamburger{display:none;background:none;border:none;cursor:pointer;color:white;font-size:1.5rem;line-height:1;padding:4px;}
-footer{background:#07111f;color:rgba(255,255,255,0.45);text-align:center;padding:32px 24px;font-size:.85rem;}
-footer strong{color:#e8a020;}
-.footer-socials{display:flex;justify-content:center;gap:16px;margin:16px 0;}
-.footer-socials a{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.6);text-decoration:none;transition:all .2s;}
-.footer-socials a:hover{background:#e8a020;color:#0f1e3c;}
-@media(max-width:700px){
-  .nav-links{display:none;flex-direction:column;position:absolute;top:68px;left:0;right:0;background:rgba(15,30,60,0.99);padding:16px;gap:4px;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#0c1a30;--gold:#c9920a;--gold2:#e8ad30;
+  --ink:#0d1117;--ink2:#1c2333;--ink3:#30363d;--ink4:#57606a;
+  --mist:#f0f4f8;--white:#fff;--border:#e2e8f0;
+  --green:#16a34a;--red:#dc2626;--blue:#2563eb;--purple:#7c3aed;
+  --A1:#16a34a;--A2:#2563eb;--B1:#7c3aed;--B2:#c0392b;
+  --r:10px;--r2:14px;--sh:0 2px 12px rgba(13,17,23,.08);
+}
+html,body{font-family:'Outfit',sans-serif;background:var(--mist);color:var(--ink);min-height:100vh;}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:3px}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:2000;background:rgba(12,26,48,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,146,10,0.15);}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 36px;height:72px;}
+.logo{font-family:'Cormorant Garamond',serif;font-size:1.65rem;font-weight:700;color:#fff;text-decoration:none;letter-spacing:-.3px;}
+.logo em{color:var(--gold2);font-style:normal;}
+.nav-links{display:flex;gap:5px;list-style:none;align-items:center;}
+.nav-links li{display:flex;align-items:center;}
+.nav-links li:not(:last-child)::after{content:'';display:inline-block;width:1px;height:16px;background:rgba(255,255,255,0.15);margin-left:5px;}
+.nav-links a{color:#fff;text-decoration:none;font-size:.93rem;font-weight:600;padding:8px 15px;border-radius:7px;transition:all .22s;letter-spacing:.2px;position:relative;top:0;}
+.nav-links a:hover{top:-2px;filter:brightness(1.15);box-shadow:0 4px 14px rgba(0,0,0,0.25);}
+@keyframes pulse-gold{0%,100%{box-shadow:0 0 0 0 rgba(201,146,10,.5);}50%{box-shadow:0 0 0 6px rgba(201,146,10,0);}}
+.nav-cta{background:var(--gold)!important;color:var(--navy)!important;font-weight:700!important;padding:9px 22px!important;border-radius:7px!important;animation:pulse-gold 2.5s ease-in-out infinite;font-size:.93rem!important;}
+.nav-cta:hover{background:var(--gold2)!important;color:var(--navy)!important;transform:translateY(-1px);animation:none;}
+.hamburger{display:none;background:none;border:none;cursor:pointer;color:rgba(255,255,255,.8);font-size:1.6rem;}
+@media(max-width:960px){
+  .nav-links{display:none;flex-direction:column;position:absolute;top:72px;left:0;right:0;background:rgba(12,26,48,.99);padding:14px;gap:4px;}
   .nav-links.open{display:flex;}
   .hamburger{display:block;}
 }
-/* ===== END SHARED NAV ===== */
 
-/* ===== BASE ===== */
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --navy:#0a1628;--navy2:#0f2044;--blue:#1a56db;--blue-light:#3b82f6;
-  --gold:#f59e0b;--gold-light:#fbbf24;--emerald:#10b981;--coral:#ef4444;
-  --purple:#7c3aed;--bg:#f8fafc;--bg2:#f1f5f9;--white:#ffffff;
-  --text:#0f172a;--text2:#475569;--text3:#94a3b8;--border:#e2e8f0;
-  --radius:12px;--radius-lg:20px;--shadow:0 4px 20px rgba(10,22,40,0.1);
-  --shadow-lg:0 20px 60px rgba(10,22,40,0.15);--transition:all 0.25s cubic-bezier(0.4,0,0.2,1)
-}
-html{scroll-behavior:smooth}
-body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
-::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:var(--bg2)}::-webkit-scrollbar-thumb{background:var(--blue-light);border-radius:3px}
-h1,h2,h3{font-family:'Playfair Display',serif;line-height:1.2}
+/* PAGE */
+.page-wrap{max-width:1100px;margin:0 auto;padding:100px 24px 60px;}
 
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 2rem;height:68px;display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,0.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
-.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
-.logo-icon{width:36px;height:36px;background:linear-gradient(135deg,var(--navy),var(--blue));border-radius:10px;display:flex;align-items:center;justify-content:center;color:white;font-family:'Playfair Display',serif;font-weight:900;font-size:16px}
-.logo-text{font-family:'Playfair Display',serif;font-weight:700;font-size:18px;color:var(--navy)}
-.logo-text span{color:var(--blue)}
-.nav-back{display:flex;align-items:center;gap:8px;padding:8px 16px;border:1.5px solid var(--border);border-radius:var(--radius);font-size:14px;font-weight:500;color:var(--text2);cursor:pointer;background:none;transition:var(--transition);text-decoration:none}
-.nav-back:hover{border-color:var(--blue);color:var(--blue)}
+/* HERO STRIP */
+.page-hero{text-align:center;margin-bottom:48px;}
+.page-hero .tag{display:inline-block;background:var(--navy);color:var(--gold2);font-size:.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:5px 16px;border-radius:50px;margin-bottom:16px;}
+.page-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:700;color:var(--navy);margin-bottom:12px;line-height:1.1;}
+.page-hero p{font-size:1rem;color:var(--ink4);max-width:520px;margin:0 auto;line-height:1.75;font-weight:300;}
 
-/* HERO */
-.games-hero{padding-top:68px;background:linear-gradient(160deg,var(--navy) 0%,#1e3a5f 100%);padding-bottom:4rem;padding-left:2rem;padding-right:2rem;text-align:center;position:relative;overflow:hidden}
-.games-hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 30% 50%,rgba(26,86,219,0.2),transparent 50%),radial-gradient(circle at 70% 30%,rgba(245,158,11,0.15),transparent 50%);pointer-events:none}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.3);color:var(--gold-light);padding:8px 18px;border-radius:100px;font-size:13px;font-weight:600;margin-bottom:1.5rem;letter-spacing:0.5px}
-.games-hero h1{font-size:clamp(2.5rem,5vw,4rem);color:white;margin-bottom:1rem;position:relative}
-.games-hero p{color:rgba(255,255,255,0.65);font-size:1rem;max-width:520px;margin:0 auto 2.5rem;position:relative}
+/* SCORE BAR */
+.score-bar{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:44px;}
+.score-pill{background:#fff;border:1px solid var(--border);border-radius:50px;padding:8px 20px;font-size:.85rem;font-weight:600;color:var(--ink3);display:flex;align-items:center;gap:6px;box-shadow:var(--sh);}
+.score-pill span{font-size:1rem;}
 
-/* Level selector */
-.level-filter{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;position:relative}
-.lvl-chip{padding:8px 18px;border-radius:100px;border:1.5px solid rgba(255,255,255,0.2);background:transparent;color:rgba(255,255,255,0.65);font-size:13px;font-weight:600;cursor:pointer;transition:var(--transition);font-family:'DM Mono',monospace}
-.lvl-chip:hover{border-color:rgba(255,255,255,0.5);color:white}
-.lvl-chip.active{background:white;color:var(--navy);border-color:white}
+/* LEVEL TABS */
+.level-tabs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:36px;}
+.ltab{padding:10px 24px;border-radius:50px;border:2px solid var(--border);background:#fff;font-weight:700;font-size:.88rem;cursor:pointer;transition:all .2s;color:var(--ink3);}
+.ltab:hover{transform:translateY(-2px);box-shadow:var(--sh);}
+.ltab.active{color:#fff;border-color:transparent;}
+.ltab[data-lv="A1"].active{background:var(--A1);}
+.ltab[data-lv="A2"].active{background:var(--A2);}
+.ltab[data-lv="B1"].active{background:var(--B1);}
+.ltab[data-lv="B2"].active{background:var(--B2);}
 
-/* Stats bar */
-.stats-bar{background:white;border-bottom:1px solid var(--border);padding:1rem 2rem}
-.stats-bar-inner{max-width:1200px;margin:0 auto;display:flex;gap:2rem;align-items:center;justify-content:center;flex-wrap:wrap}
-.stat-pill{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--text2)}
-.stat-pill strong{color:var(--navy);font-weight:700}
+/* GAME SELECTOR */
+.game-types{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin-bottom:44px;}
+.gtype{background:#fff;border:2px solid var(--border);border-radius:var(--r2);padding:20px;cursor:pointer;transition:all .2s;text-align:center;}
+.gtype:hover{transform:translateY(-3px);box-shadow:var(--sh);}
+.gtype.active{border-color:currentColor;}
+.gtype[data-gt="match"].active{border-color:var(--A1);color:var(--A1);}
+.gtype[data-gt="flash"].active{border-color:var(--A2);color:var(--A2);}
+.gtype[data-gt="spell"].active{border-color:var(--B1);color:var(--B1);}
+.gtype[data-gt="quiz"].active{border-color:var(--B2);color:var(--B2);}
+.gtype-ico{font-size:2rem;margin-bottom:8px;}
+.gtype-name{font-weight:700;font-size:.95rem;color:var(--ink);margin-bottom:4px;}
+.gtype-desc{font-size:.78rem;color:var(--ink4);font-weight:300;line-height:1.5;}
 
-/* GAMES GRID */
-.games-main{max-width:1200px;margin:0 auto;padding:3rem 2rem}
-.games-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.5rem}
+/* GAME ARENA */
+.game-arena{background:#fff;border-radius:20px;border:1px solid var(--border);box-shadow:var(--sh);padding:36px;min-height:400px;position:relative;}
+.arena-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;flex-wrap:wrap;gap:12px;}
+.arena-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;color:var(--navy);}
+.arena-meta{display:flex;gap:10px;align-items:center;}
+.arena-badge{padding:4px 12px;border-radius:50px;font-size:.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#fff;}
+.timer-bar{height:5px;background:var(--mist);border-radius:50px;margin-bottom:28px;overflow:hidden;}
+.timer-fill{height:100%;border-radius:50px;transition:width .1s linear;background:linear-gradient(90deg,var(--green),var(--blue));}
 
-/* GAME CARD */
-.game-card{background:white;border:1.5px solid var(--border);border-radius:var(--radius-lg);padding:2rem;cursor:pointer;transition:var(--transition);position:relative;overflow:hidden}
-.game-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--card-color,var(--blue))}
-.game-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:var(--card-color,var(--blue))}
-.game-card-icon{font-size:3rem;margin-bottom:1.25rem;display:block;filter:drop-shadow(0 4px 8px rgba(0,0,0,0.1))}
-.game-card h3{font-size:1.2rem;color:var(--navy);margin-bottom:0.5rem}
-.game-card p{font-size:14px;color:var(--text2);margin-bottom:1.25rem;line-height:1.6}
-.game-meta{display:flex;align-items:center;gap:10px;margin-bottom:1.25rem;flex-wrap:wrap}
-.game-meta-tag{font-size:11px;font-weight:600;padding:4px 10px;border-radius:100px;background:var(--bg2);color:var(--text2)}
-.diff-stars{display:flex;gap:2px}
-.diff-star{font-size:12px}
-.game-btn{width:100%;padding:11px;background:var(--card-color,var(--blue));color:white;border:none;border-radius:var(--radius);font-size:14px;font-weight:700;cursor:pointer;transition:var(--transition);font-family:'DM Sans',sans-serif}
-.game-btn:hover{filter:brightness(1.1);transform:translateY(-1px)}
+/* MATCH GAME */
+.match-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.match-col{display:flex;flex-direction:column;gap:8px;}
+.match-item{padding:13px 18px;border:2px solid var(--border);border-radius:var(--r);cursor:pointer;font-size:.9rem;font-weight:500;transition:all .18s;background:#fff;text-align:center;user-select:none;}
+.match-item:hover:not(.matched):not(.wrong){border-color:var(--navy);background:#f8fafc;transform:translateY(-1px);}
+.match-item.selected{border-color:var(--blue);background:#eff6ff;color:var(--blue);}
+.match-item.matched{border-color:var(--green);background:#f0fdf4;color:var(--green);cursor:default;}
+.match-item.wrong{border-color:var(--red);background:#fef2f2;color:var(--red);}
+@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
+.match-item.shake{animation:shake .3s ease;}
 
-/* MODAL */
-.modal-overlay{display:none;position:fixed;inset:0;z-index:200;background:rgba(0,0,0,0.65);backdrop-filter:blur(6px);align-items:center;justify-content:center;padding:1rem}
-.modal-overlay.active{display:flex;animation:fadeIn 0.2s ease}
-@keyframes fadeIn{from{opacity:0}to{opacity:1}}
-.modal-box{background:white;border-radius:var(--radius-lg);width:100%;max-width:700px;max-height:92vh;overflow-y:auto;box-shadow:0 40px 120px rgba(0,0,0,0.35);animation:slideUp 0.3s ease}
-@keyframes slideUp{from{transform:translateY(30px);opacity:0}to{transform:translateY(0);opacity:1}}
-.modal-header{background:var(--navy);color:white;padding:1.5rem 2rem;border-radius:var(--radius-lg) var(--radius-lg) 0 0;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:10}
-.modal-header h2{font-size:1.35rem;color:white;display:flex;align-items:center;gap:10px}
-.modal-close{background:rgba(255,255,255,0.12);border:none;color:white;width:38px;height:38px;border-radius:10px;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;transition:var(--transition)}
-.modal-close:hover{background:rgba(255,255,255,0.22)}
-.modal-body{padding:2rem}
+/* FLASHCARD */
+.flash-wrap{display:flex;flex-direction:column;align-items:center;}
+.flashcard{width:100%;max-width:500px;height:220px;perspective:1000px;cursor:pointer;margin:0 auto 24px;}
+.flash-inner{width:100%;height:100%;position:relative;transform-style:preserve-3d;transition:transform .5s cubic-bezier(.4,0,.2,1);}
+.flash-inner.flipped{transform:rotateY(180deg);}
+.flash-front,.flash-back{position:absolute;inset:0;border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:28px;backface-visibility:hidden;}
+.flash-front{background:linear-gradient(135deg,var(--navy),#1a3a6b);color:#fff;}
+.flash-back{background:linear-gradient(135deg,#f0fdf4,#dcfce7);color:var(--green);transform:rotateY(180deg);}
+.flash-word{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:700;margin-bottom:8px;}
+.flash-hint{font-size:.8rem;opacity:.5;letter-spacing:1px;text-transform:uppercase;}
+.flash-tr{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;margin-bottom:8px;}
+.flash-ex{font-size:.85rem;color:var(--ink3);font-style:italic;text-align:center;line-height:1.6;}
+.flash-nav{display:flex;gap:12px;align-items:center;}
+.flash-btn{padding:10px 24px;border-radius:var(--r);border:2px solid var(--border);background:#fff;font-weight:600;font-size:.88rem;cursor:pointer;transition:all .2s;font-family:'Outfit',sans-serif;}
+.flash-btn.knew{border-color:var(--green);color:var(--green);}
+.flash-btn.knew:hover{background:#f0fdf4;}
+.flash-btn.skip{border-color:var(--red);color:var(--red);}
+.flash-btn.skip:hover{background:#fef2f2;}
+.flash-btn.flip-btn{border-color:var(--blue);color:var(--blue);}
+.flash-btn.flip-btn:hover{background:#eff6ff;}
+.flash-progress{font-size:.82rem;color:var(--ink4);font-weight:500;}
 
-/* Score bar */
-.score-bar{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:2rem;background:var(--bg2);border-radius:var(--radius);padding:1.25rem}
-.score-box{text-align:center}
-.score-num{font-size:1.75rem;font-weight:900;color:var(--navy);font-family:'Playfair Display',serif}
-.score-lbl{font-size:12px;color:var(--text3);margin-top:2px}
-.timer-num{color:var(--coral)}
+/* SPELL GAME */
+.spell-wrap{text-align:center;}
+.spell-target{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--ink4);margin-bottom:8px;font-style:italic;}
+.spell-hint{font-size:2.2rem;font-weight:700;color:var(--navy);margin-bottom:6px;letter-spacing:4px;font-family:'Outfit',sans-serif;}
+.spell-img-hint{font-size:.9rem;color:var(--ink4);margin-bottom:24px;}
+.spell-input{width:100%;max-width:360px;padding:14px 20px;font-size:1.1rem;border:2px solid var(--border);border-radius:var(--r);outline:none;text-align:center;font-family:'Outfit',sans-serif;font-weight:600;transition:border .2s;letter-spacing:2px;}
+.spell-input:focus{border-color:var(--blue);}
+.spell-input.correct{border-color:var(--green);background:#f0fdf4;color:var(--green);}
+.spell-input.wrong{border-color:var(--red);background:#fef2f2;color:var(--red);}
+.spell-submit{margin-top:14px;padding:12px 32px;background:var(--navy);color:#fff;border:none;border-radius:var(--r);font-weight:700;font-size:.95rem;cursor:pointer;font-family:'Outfit',sans-serif;transition:all .2s;}
+.spell-submit:hover{background:var(--ink);}
+.spell-feedback{margin-top:14px;font-size:.95rem;font-weight:600;min-height:24px;}
+.spell-letters{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-top:20px;}
+.spell-letter{width:42px;height:42px;border:2px solid var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.1rem;cursor:pointer;background:#fff;transition:all .15s;user-select:none;}
+.spell-letter:hover{border-color:var(--navy);background:var(--mist);}
+.spell-letter.used{opacity:.25;pointer-events:none;}
 
-/* Buttons */
-.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:var(--radius);font-size:14px;font-weight:700;cursor:pointer;border:none;transition:var(--transition);font-family:'DM Sans',sans-serif}
-.btn-primary{background:var(--blue);color:white}
-.btn-primary:hover{background:#1447cc;transform:translateY(-1px)}
-.btn-gold{background:var(--gold);color:var(--navy)}
-.btn-gold:hover{background:var(--gold-light)}
-.btn-ghost{background:var(--bg2);color:var(--text2)}
-.btn-ghost:hover{background:var(--border)}
-.btn-danger{background:#fef2f2;color:#991b1b;border:1px solid #fecaca}
-.btn-success{background:#f0fdf4;color:#065f46;border:1px solid #bbf7d0}
-.btn-sm{padding:9px 18px;font-size:13px}
-.btn-full{width:100%;justify-content:center}
+/* QUIZ GAME */
+.quiz-q{font-size:1.1rem;font-weight:600;color:var(--navy);line-height:1.65;margin-bottom:6px;}
+.quiz-unit{font-size:.78rem;color:var(--ink4);margin-bottom:20px;font-style:italic;}
+.quiz-opts{display:flex;flex-direction:column;gap:10px;}
+.quiz-opt{padding:13px 18px;border:2px solid var(--border);border-radius:var(--r);cursor:pointer;font-size:.92rem;font-weight:500;transition:all .18s;background:#fff;display:flex;align-items:center;gap:12px;font-family:'Outfit',sans-serif;}
+.quiz-opt:hover:not(.answered){border-color:var(--navy);background:#f8fafc;}
+.quiz-opt.correct{border-color:var(--green);background:#f0fdf4;color:var(--green);}
+.quiz-opt.wrong{border-color:var(--red);background:#fef2f2;color:var(--red);}
+.quiz-opt .opt-letter{width:28px;height:28px;border-radius:6px;background:var(--mist);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;color:var(--ink4);flex-shrink:0;transition:all .18s;}
+.quiz-opt.correct .opt-letter{background:var(--green);color:#fff;}
+.quiz-opt.wrong .opt-letter{background:var(--red);color:#fff;}
+.quiz-next{margin-top:20px;padding:11px 28px;background:var(--navy);color:#fff;border:none;border-radius:var(--r);font-weight:700;cursor:pointer;font-family:'Outfit',sans-serif;transition:all .2s;display:none;}
+.quiz-next:hover{background:var(--ink);}
+.quiz-score-bar{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:20px;}
+.qs-dot{width:10px;height:10px;border-radius:50%;background:var(--border);}
+.qs-dot.c{background:var(--green);}
+.qs-dot.w{background:var(--red);}
+.qs-dot.cur{background:var(--blue);transform:scale(1.4);}
 
-/* OPTIONS */
-.opts-grid{display:grid;gap:10px}
-.opt{width:100%;text-align:left;padding:13px 18px;border:1.5px solid var(--border);border-radius:var(--radius);background:white;cursor:pointer;font-size:14px;font-weight:500;color:var(--text);transition:var(--transition);display:flex;align-items:center;gap:12px;font-family:'DM Sans',sans-serif}
-.opt-l{width:28px;height:28px;border-radius:7px;background:var(--bg2);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:var(--text2);flex-shrink:0;transition:var(--transition)}
-.opt:hover:not(:disabled){border-color:var(--blue);background:#f0f7ff}.opt:hover:not(:disabled) .opt-l{background:var(--blue);color:white}
-.opt.selected{border-color:var(--blue);background:#eff6ff;color:var(--blue)}.opt.selected .opt-l{background:var(--blue);color:white}
-.opt.correct{border-color:var(--emerald);background:#f0fdf4;color:#065f46}.opt.correct .opt-l{background:var(--emerald);color:white}
-.opt.wrong{border-color:var(--coral);background:#fef2f2;color:#991b1b}.opt.wrong .opt-l{background:var(--coral);color:white}
+/* RESULT */
+.result-box{text-align:center;padding:32px 20px;}
+.result-emoji{font-size:3.5rem;margin-bottom:12px;}
+.result-title{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:700;color:var(--navy);margin-bottom:8px;}
+.result-score{font-size:1rem;color:var(--ink4);margin-bottom:24px;}
+.result-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+.rbtn{padding:11px 26px;border-radius:var(--r);font-weight:700;font-size:.9rem;cursor:pointer;border:none;font-family:'Outfit',sans-serif;transition:all .2s;}
+.rbtn.primary{background:var(--navy);color:#fff;}
+.rbtn.primary:hover{background:var(--ink);}
+.rbtn.outline{border:2px solid var(--border);background:#fff;color:var(--ink3);}
+.rbtn.outline:hover{border-color:var(--navy);color:var(--navy);}
 
-/* Flashcard */
-.fc-wrap{perspective:800px;margin-bottom:1.5rem}
-.fc{width:100%;height:200px;position:relative;transform-style:preserve-3d;transition:transform 0.55s cubic-bezier(0.4,0,0.2,1);cursor:pointer;border-radius:var(--radius-lg)}
-.fc.flipped{transform:rotateY(180deg)}
-.fc-face{position:absolute;inset:0;border-radius:var(--radius-lg);backface-visibility:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2rem;text-align:center}
-.fc-front{background:linear-gradient(135deg,var(--navy),#1e3a5f);color:white}
-.fc-back{background:linear-gradient(135deg,var(--emerald),#059669);color:white;transform:rotateY(180deg)}
-.fc-word{font-size:2.5rem;font-weight:900;font-family:'Playfair Display',serif;margin-bottom:0.5rem}
-.fc-hint{font-size:13px;color:rgba(255,255,255,0.5)}
-.fc-meaning{font-size:1.25rem;font-weight:700;margin-bottom:0.5rem}
-.fc-example{font-size:13px;color:rgba(255,255,255,0.75);font-style:italic}
-.fc-controls{display:flex;gap:10px;margin-top:0.5rem}
+/* UNIT SELECT */
+.unit-select{margin-bottom:24px;}
+.unit-select label{font-size:.82rem;font-weight:600;color:var(--ink4);letter-spacing:.5px;text-transform:uppercase;display:block;margin-bottom:8px;}
+.unit-select select{padding:10px 16px;border:2px solid var(--border);border-radius:var(--r);font-family:'Outfit',sans-serif;font-size:.9rem;color:var(--ink);background:#fff;outline:none;cursor:pointer;width:100%;max-width:360px;}
+.unit-select select:focus{border-color:var(--navy);}
 
-/* Fill blank */
-.fill-sent{font-size:1.15rem;color:var(--navy);margin-bottom:1.5rem;line-height:2;font-weight:500}
-.fill-blank{display:inline-block;border-bottom:3px solid var(--blue);min-width:90px;padding:0 6px;font-weight:700;color:var(--blue);text-align:center;font-size:1.1rem}
+/* FOOTER */
+footer{background:#07111f;color:rgba(255,255,255,.35);text-align:center;padding:28px;font-size:.82rem;font-weight:300;margin-top:60px;}
+footer strong{color:var(--gold);}
 
-/* Match */
-.match-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-.match-col{display:flex;flex-direction:column;gap:8px}
-.match-item{padding:12px 16px;border:1.5px solid var(--border);border-radius:var(--radius);cursor:pointer;font-size:14px;font-weight:500;transition:var(--transition);text-align:center;user-select:none}
-.match-item:hover:not(.matched):not(.wrong){border-color:var(--blue);background:#f0f7ff;transform:translateY(-1px)}
-.match-item.selected{border-color:var(--blue);background:#eff6ff;color:var(--blue);transform:translateY(-2px);box-shadow:0 4px 12px rgba(26,86,219,0.15)}
-.match-item.matched{border-color:var(--emerald);background:#f0fdf4;color:#065f46;cursor:default}
-.match-item.wrong{border-color:var(--coral);background:#fef2f2;animation:shake 0.35s ease;cursor:default}
-@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+/* TOAST */
+.toast{position:fixed;bottom:24px;right:24px;background:var(--navy);color:#fff;padding:12px 20px;border-radius:var(--r);font-size:.85rem;font-weight:600;box-shadow:0 8px 28px rgba(0,0,0,.25);z-index:9999;transform:translateY(60px);opacity:0;transition:all .3s;border-left:3px solid var(--gold);}
+.toast.show{transform:translateY(0);opacity:1;}
 
-/* Speed quiz */
-.speed-timer-bar{height:10px;background:var(--bg2);border-radius:5px;margin-bottom:1.5rem;overflow:hidden}
-.speed-timer-fill{height:100%;border-radius:5px;background:linear-gradient(90deg,var(--emerald),var(--gold),var(--coral));transition:width 0.1s linear}
-.speed-q-text{font-size:1.25rem;font-weight:700;color:var(--navy);text-align:center;margin-bottom:2rem;min-height:60px;display:flex;align-items:center;justify-content:center}
-.speed-opts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.speed-opt{padding:14px;border:1.5px solid var(--border);border-radius:var(--radius);background:white;cursor:pointer;font-size:14px;font-weight:600;text-align:center;transition:var(--transition);font-family:'DM Sans',sans-serif}
-.speed-opt:hover{border-color:var(--blue);background:#eff6ff;color:var(--blue)}
-.speed-opt.correct{border-color:var(--emerald);background:#f0fdf4;color:#065f46;animation:pop 0.3s ease}
-.speed-opt.wrong{border-color:var(--coral);background:#fef2f2;color:#991b1b}
-@keyframes pop{0%{transform:scale(0.95)}50%{transform:scale(1.05)}100%{transform:scale(1)}}
-
-/* Builder */
-.builder-sentence-area{min-height:52px;border:2px dashed var(--border);border-radius:var(--radius);padding:10px 14px;margin-bottom:1.25rem;display:flex;flex-wrap:wrap;gap:6px;align-items:center;transition:var(--transition)}
-.builder-sentence-area.over{border-color:var(--blue);background:#f0f7ff}
-.word-tile{padding:8px 14px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;transition:var(--transition);user-select:none;display:inline-block}
-.word-tile.bank{background:var(--bg2);color:var(--text);border:1.5px solid var(--border)}
-.word-tile.bank:hover{border-color:var(--blue);background:#eff6ff;color:var(--blue);transform:translateY(-2px)}
-.word-tile.placed{background:var(--navy);color:white;border:1.5px solid var(--navy)}
-.word-tile.placed:hover{background:var(--coral);border-color:var(--coral)}
-.word-bank{display:flex;flex-wrap:wrap;gap:8px;min-height:44px}
-.builder-hint{font-size:13px;color:var(--text3);font-style:italic;margin-bottom:1rem}
-.builder-result{padding:1rem;border-radius:var(--radius);font-size:14px;font-weight:600;margin-top:0.75rem;display:none}
-.builder-result.correct{background:#f0fdf4;color:#065f46;border:1px solid #bbf7d0}
-.builder-result.wrong{background:#fef2f2;color:#991b1b;border:1px solid #fecaca}
-
-/* Listening game */
-.audio-player-box{background:linear-gradient(135deg,#1e1b4b,#312e81);border-radius:var(--radius);padding:1.5rem;margin-bottom:1.5rem;display:flex;align-items:center;gap:1rem}
-.ap-btn{width:56px;height:56px;border-radius:50%;background:white;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0;transition:var(--transition);color:var(--navy)}
-.ap-btn:hover{transform:scale(1.1);box-shadow:0 4px 20px rgba(255,255,255,0.3)}
-.ap-btn.playing{background:var(--gold);animation:pulse 1s ease infinite}
-@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
-.ap-info{flex:1}
-.ap-title{font-size:15px;font-weight:600;color:white;margin-bottom:4px}
-.ap-sub{font-size:12px;color:rgba(255,255,255,0.5)}
-.ap-progress{height:4px;background:rgba(255,255,255,0.15);border-radius:2px;margin-top:10px}
-.ap-prog-fill{height:100%;background:var(--gold);border-radius:2px;width:0%;transition:width 0.3s linear}
-
-/* Drag & Drop */
-.drag-categories{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem}
-.drag-zone{border:2px dashed var(--border);border-radius:var(--radius-lg);padding:1rem;min-height:120px;transition:var(--transition)}
-.drag-zone.over{border-color:var(--blue);background:#f0f7ff}
-.drag-zone-title{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text3);margin-bottom:0.75rem;text-align:center}
-.drag-zone.correct-zone{border-color:var(--emerald);background:#f0fdf4}
-.drag-zone.wrong-zone{border-color:var(--coral)}
-.drag-words{display:flex;flex-wrap:wrap;gap:6px;min-height:36px}
-.drag-word{padding:8px 14px;background:var(--bg2);border:1.5px solid var(--border);border-radius:8px;font-size:13px;font-weight:600;cursor:grab;transition:var(--transition);user-select:none}
-.drag-word:hover{border-color:var(--blue);background:#eff6ff;color:var(--blue)}
-.drag-word:active,.drag-word.dragging{cursor:grabbing;opacity:0.5;transform:scale(0.95)}
-.drag-word.correct{background:#f0fdf4;color:#065f46;border-color:var(--emerald);cursor:default}
-.drag-word.wrong{background:#fef2f2;color:#991b1b;border-color:var(--coral)}
-.drag-bank{display:flex;flex-wrap:wrap;gap:8px;padding:1rem;background:var(--bg2);border-radius:var(--radius);min-height:60px;margin-bottom:1.5rem}
-
-/* Result screen inside modal */
-.game-result{text-align:center;padding:2rem 1rem}
-.game-result-emoji{font-size:4.5rem;margin-bottom:0.75rem;animation:bounce 1s ease infinite alternate}
-@keyframes bounce{from{transform:translateY(0)}to{transform:translateY(-10px)}}
-.game-result-score{font-size:3.5rem;font-weight:900;font-family:'Playfair Display',serif;color:var(--navy);margin-bottom:0.25rem}
-.game-result-sub{font-size:1rem;color:var(--text2);margin-bottom:2rem}
-.game-result-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-
-/* Toast */
-.toast{position:fixed;bottom:2rem;right:2rem;background:var(--navy);color:white;padding:14px 20px;border-radius:var(--radius);font-size:14px;box-shadow:var(--shadow-lg);z-index:500;transform:translateY(100px);opacity:0;transition:all 0.3s ease}
-.toast.show{transform:translateY(0);opacity:1}
-.toast.success{border-left:4px solid var(--emerald)}
-.toast.info{border-left:4px solid var(--blue)}
-.toast.error{border-left:4px solid var(--coral)}
-
-/* Responsive */
-@media(max-width:640px){
-  .match-grid{grid-template-columns:1fr}
-  .speed-opts{grid-template-columns:1fr}
-  .drag-categories{grid-template-columns:1fr}
-  .modal-body{padding:1.25rem}
+@media(max-width:600px){
+  .match-grid{grid-template-columns:1fr;}
+  .page-wrap{padding:90px 16px 48px;}
+  .game-arena{padding:20px;}
+  .flash-word{font-size:1.8rem;}
+  .game-types{grid-template-columns:1fr 1fr;}
 }
 </style>
 </head>
@@ -243,1012 +194,1094 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 2rem;height:68px;d
 <!-- NAV -->
 <nav>
   <div class="nav-inner">
-    <a class="logo-wrap" href="landing.html">
-      <svg class="logo-svg" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="21" cy="21" r="20" fill="#0f1e3c" stroke="#e8a020" stroke-width="1.5"/>
-        <path d="M10 27 C10 27 10 15 21 15 C32 15 32 27 32 27" fill="none" stroke="#e8a020" stroke-width="1.8" stroke-linecap="round"/>
-        <line x1="21" y1="15" x2="21" y2="27" stroke="#e8a020" stroke-width="1.5" stroke-linecap="round"/>
-        <path d="M10 27 C12 25 16 23 21 23" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.2" stroke-linecap="round"/>
-        <path d="M32 27 C30 25 26 23 21 23" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.2" stroke-linecap="round"/>
-        <path d="M9 27.5 Q21 30 33 27.5" fill="none" stroke="#e8a020" stroke-width="1.8" stroke-linecap="round"/>
-        <text x="21" y="35.5" text-anchor="middle" font-family="Georgia,serif" font-size="5" font-weight="bold" fill="#e8a020">Ab</text>
-      </svg>
-      <div>
-        <div class="logo-text">AbOnlin<span>English</span></div>
-        <div class="logo-sub">Dil Eğitimi</div>
-      </div>
-    </a>
+    <a class="logo" href="https://abonlinenglish.school/landing">AbOnlin<em>English</em></a>
     <ul class="nav-links" id="navLinks">
-      <li><a href="landing.html">Anasayfa</a></li>
-      <li><a href="a1-a2-b1-b2-c1-c2.html" onclick="closeMenu()">Kendin Öğren</a></li>
-      <li><a href="roadmap.html" onclick="closeMenu()">Yol Haritası</a></li>
-      <li><a href="placement-test.html" onclick="closeMenu()">Seviye Testi</a></li>
-      <li><a href="games.html" class="active" onclick="closeMenu()">Oyunlar</a></li>
-      <li><a href="landing.html#pricing" class="nav-cta-btn" onclick="closeMenu()">Ücretsiz Ders</a></li>
+      <li><a href="https://abonlinenglish.school/landing" onclick="closeMenu()" style="background:#c0392b;color:#fff;">Anasayfa</a></li>
+      <li><a href="https://abonlinenglish.school/" onclick="closeMenu()" style="background:#c0392b;color:#fff;">Kendin Öğren</a></li>
+      <li><a href="https://abonlinenglish.school/roadmap" onclick="closeMenu()" style="background:#c0392b;color:#fff;">Yol Haritası</a></li>
+      <li><a href="https://abonlinenglish.school/placement-test" onclick="closeMenu()" style="background:#c0392b;color:#fff;">Seviye Testi</a></li>
+      <li><a href="https://abonlinenglish.school/games" onclick="closeMenu()" style="background:#c0392b;color:#fff;box-shadow:0 0 0 2px rgba(255,255,255,.6) inset;">Oyunlar</a></li>
+      <li><a class="nav-cta" href="https://abonlinenglish.school/landing#pricing" onclick="closeMenu()">Ücretsiz Ders</a></li>
     </ul>
     <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
   </div>
 </nav>
-<div style="height:68px;"></div>
 
-<!-- HERO -->
-<div class="games-hero">
-  <div class="hero-badge">🎮 7 Game Types · All Levels</div>
-  <h1>Learning Games</h1>
-  <p>Master English through interactive, score-tracked games designed for every level — from A1 to C2.</p>
-  <div class="level-filter">
-    <button class="lvl-chip active" onclick="filterLevel('all',this)">All Levels</button>
-    <button class="lvl-chip" onclick="filterLevel('A1',this)">A1</button>
-    <button class="lvl-chip" onclick="filterLevel('A2',this)">A2</button>
-    <button class="lvl-chip" onclick="filterLevel('B1',this)">B1</button>
-    <button class="lvl-chip" onclick="filterLevel('B2',this)">B2</button>
-    <button class="lvl-chip" onclick="filterLevel('C1',this)">C1</button>
+<div class="page-wrap">
+
+  <!-- HERO -->
+  <div class="page-hero">
+    <div class="tag">🎮 Kelime Oyunları</div>
+    <h1>Oynayarak öğren,<br>öğrendikçe kazan.</h1>
+    <p>A1'den B2'ye dört seviye, ünite konularından derlenmiş kelimeler — eşleştir, kart çevir, tahmin et, bil.</p>
   </div>
+
+  <!-- SCORE BAR -->
+  <div class="score-bar">
+    <div class="score-pill"><span>🔥</span> Seri: <strong id="streakNum">0</strong></div>
+    <div class="score-pill"><span>⭐</span> Puan: <strong id="scoreNum">0</strong></div>
+    <div class="score-pill"><span>✅</span> Doğru: <strong id="correctNum">0</strong></div>
+    <div class="score-pill"><span>🎮</span> Oynanan: <strong id="gamesNum">0</strong></div>
+  </div>
+
+  <!-- LEVEL TABS -->
+  <div class="level-tabs">
+    <button class="ltab active" data-lv="A1" onclick="setLevel('A1')">🟩 A1 Başlangıç</button>
+    <button class="ltab" data-lv="A2" onclick="setLevel('A2')">🟦 A2 Temel</button>
+    <button class="ltab" data-lv="B1" onclick="setLevel('B1')">🟣 B1 Orta</button>
+    <button class="ltab" data-lv="B2" onclick="setLevel('B2')">🔴 B2 Üst Orta</button>
+  </div>
+
+  <!-- GAME TYPE SELECTOR -->
+  <div class="game-types">
+    <div class="gtype active" data-gt="match" onclick="setGame('match')">
+      <div class="gtype-ico">🔗</div>
+      <div class="gtype-name">Eşleştir</div>
+      <div class="gtype-desc">İngilizce kelimeyi Türkçe karşılığıyla eşleştir</div>
+    </div>
+    <div class="gtype" data-gt="flash" onclick="setGame('flash')">
+      <div class="gtype-ico">🃏</div>
+      <div class="gtype-name">Kartlar</div>
+      <div class="gtype-desc">Kelime kartını çevir, anlamını öğren</div>
+    </div>
+    <div class="gtype" data-gt="spell" onclick="setGame('spell')">
+      <div class="gtype-ico">✏️</div>
+      <div class="gtype-name">Tahmin Et</div>
+      <div class="gtype-desc">İpuçlarından kelimeyi bul ve yaz</div>
+    </div>
+    <div class="gtype" data-gt="quiz" onclick="setGame('quiz')">
+      <div class="gtype-ico">⚡</div>
+      <div class="gtype-name">Hızlı Quiz</div>
+      <div class="gtype-desc">Doğru tanımı seç, puan topla</div>
+    </div>
+  </div>
+
+  <!-- UNIT SELECT -->
+  <div class="unit-select">
+    <label>Ünite Seç</label>
+    <select id="unitSelect" onchange="loadGame()">
+      <option value="all">Tüm üniteler (karışık)</option>
+    </select>
+  </div>
+
+  <!-- GAME ARENA -->
+  <div class="game-arena" id="gameArena">
+    <div style="text-align:center;padding:60px 20px;color:var(--ink4);">
+      <div style="font-size:3rem;margin-bottom:16px;">🎮</div>
+      <div style="font-size:1.1rem;font-weight:500;">Seviye ve oyun tipini seç, başla!</div>
+    </div>
+  </div>
+
 </div>
 
-<!-- STATS BAR -->
-<div class="stats-bar">
-  <div class="stats-bar-inner">
-    <div class="stat-pill">🎯 Session score: <strong id="sessionScore">0</strong></div>
-    <div class="stat-pill">🎮 Games played: <strong id="gamesPlayed">0</strong></div>
-    <div class="stat-pill">🏆 Best streak: <strong id="bestStreak">0</strong></div>
-    <div class="stat-pill">⏱ Time today: <strong id="timeToday">0 min</strong></div>
-  </div>
-</div>
-
-<!-- GAMES GRID -->
-<div class="games-main">
-  <div class="games-grid" id="gamesGrid">
-
-    <!-- Flashcards -->
-    <div class="game-card" style="--card-color:#1a56db" data-levels="A1,A2,B1,B2,C1,C2">
-      <span class="game-card-icon">🃏</span>
-      <h3>Vocabulary Flashcards</h3>
-      <p>Flip through vocabulary cards with English meanings and example sentences. Rate yourself to track what you know.</p>
-      <div class="game-meta">
-        <span class="game-meta-tag">All Levels</span>
-        <span class="game-meta-tag">Vocabulary</span>
-        <div class="diff-stars">⭐⭐☆</div>
-      </div>
-      <button class="game-btn" onclick="openGame('flashcard')">▶ Play Now</button>
-    </div>
-
-    <!-- Fill in the Blanks -->
-    <div class="game-card" style="--card-color:#7c3aed" data-levels="A2,B1,B2,C1">
-      <span class="game-card-icon">✏️</span>
-      <h3>Fill in the Blanks</h3>
-      <p>Complete sentences by choosing the correct missing word or form. Grammar and vocabulary combined.</p>
-      <div class="game-meta">
-        <span class="game-meta-tag">A2–C1</span>
-        <span class="game-meta-tag">Grammar</span>
-        <div class="diff-stars">⭐⭐⭐</div>
-      </div>
-      <button class="game-btn" onclick="openGame('fill')">▶ Play Now</button>
-    </div>
-
-    <!-- Word Matching -->
-    <div class="game-card" style="--card-color:#10b981" data-levels="A1,A2,B1">
-      <span class="game-card-icon">🔗</span>
-      <h3>Word Matching</h3>
-      <p>Match English words with their Turkish translations as fast as possible. Beat your best time!</p>
-      <div class="game-meta">
-        <span class="game-meta-tag">A1–B1</span>
-        <span class="game-meta-tag">Vocabulary</span>
-        <div class="diff-stars">⭐☆☆</div>
-      </div>
-      <button class="game-btn" onclick="openGame('match')">▶ Play Now</button>
-    </div>
-
-    <!-- Speed Quiz -->
-    <div class="game-card" style="--card-color:#ef4444" data-levels="B1,B2,C1,C2">
-      <span class="game-card-icon">⚡</span>
-      <h3>Speed Quiz</h3>
-      <p>Answer grammar questions before the timer runs out. 15 seconds per question — how many can you get right?</p>
-      <div class="game-meta">
-        <span class="game-meta-tag">B1–C2</span>
-        <span class="game-meta-tag">Grammar</span>
-        <div class="diff-stars">⭐⭐⭐</div>
-      </div>
-      <button class="game-btn" onclick="openGame('speed')">▶ Play Now</button>
-    </div>
-
-    <!-- Sentence Builder -->
-    <div class="game-card" style="--card-color:#f59e0b" data-levels="A2,B1,B2">
-      <span class="game-card-icon">🧩</span>
-      <h3>Sentence Builder</h3>
-      <p>Click words in the correct order to build grammatically correct English sentences from scrambled words.</p>
-      <div class="game-meta">
-        <span class="game-meta-tag">A2–B2</span>
-        <span class="game-meta-tag">Grammar</span>
-        <div class="diff-stars">⭐⭐☆</div>
-      </div>
-      <button class="game-btn" onclick="openGame('builder')">▶ Play Now</button>
-    </div>
-
-    <!-- Listening Game -->
-    <div class="game-card" style="--card-color:#0ea5e9" data-levels="A2,B1,B2,C1">
-      <span class="game-card-icon">🎧</span>
-      <h3>Listening Challenge</h3>
-      <p>Listen to sentences spoken in natural English and select the correct option. Trains your ear for real speech.</p>
-      <div class="game-meta">
-        <span class="game-meta-tag">A2–C1</span>
-        <span class="game-meta-tag">Listening</span>
-        <div class="diff-stars">⭐⭐☆</div>
-      </div>
-      <button class="game-btn" onclick="openGame('listen')">▶ Play Now</button>
-    </div>
-
-    <!-- Drag & Drop -->
-    <div class="game-card" style="--card-color:#8b5cf6" data-levels="A1,A2,B1,B2">
-      <span class="game-card-icon">🎯</span>
-      <h3>Drag & Drop Sort</h3>
-      <p>Sort and categorize words into the correct grammatical or thematic groups. Drag, drop, and learn!</p>
-      <div class="game-meta">
-        <span class="game-meta-tag">A1–B2</span>
-        <span class="game-meta-tag">Grammar</span>
-        <div class="diff-stars">⭐⭐☆</div>
-      </div>
-      <button class="game-btn" onclick="openGame('drag')">▶ Play Now</button>
-    </div>
-
-  </div>
-</div>
-
-<!-- MODAL -->
-<div class="modal-overlay" id="gameModal">
-  <div class="modal-box">
-    <div class="modal-header">
-      <h2 id="modalTitle">Game</h2>
-      <button class="modal-close" onclick="closeGame()">✕</button>
-    </div>
-    <div class="modal-body" id="modalBody"></div>
-  </div>
-</div>
+<footer>
+  <strong>AbOnlinEnglish</strong> Dil Eğitimi &copy; 2026 — Tüm hakları saklıdır.<br>
+  <span style="margin-top:4px;display:inline-block;">ingilizceogrensene@gmail.com &nbsp;·&nbsp; @abonlinenglish</span>
+</footer>
 
 <div class="toast" id="toast"></div>
 
 <script>
 /* ============================================================
-   GAME DATA
-   ============================================================ */
-
-const DATA = {
-  flashcards: [
-    {w:"Serendipity",pos:"noun",m:"Finding something good by chance",ex:"It was pure serendipity that they met.",tr:"Tesadüf eseri iyi bir şey bulmak"},
-    {w:"Resilient",pos:"adjective",m:"Recovering quickly from difficulties",ex:"She is a resilient person.",tr:"Güçlü, zorluklardan çabuk toparlanabilen"},
-    {w:"Eloquent",pos:"adjective",m:"Fluent and persuasive in speech",ex:"He gave an eloquent speech.",tr:"Belagatlı, etkileyici konuşan"},
-    {w:"Perseverance",pos:"noun",m:"Continuing despite difficulty",ex:"Success requires perseverance.",tr:"Azim, ısrar"},
-    {w:"Ambiguous",pos:"adjective",m:"Having more than one meaning",ex:"The instructions were ambiguous.",tr:"Belirsiz, çift anlamlı"},
-    {w:"Catalyst",pos:"noun",m:"Something that causes change",ex:"The protest was a catalyst for reform.",tr:"Katalizör, değişimi tetikleyen şey"},
-    {w:"Profound",pos:"adjective",m:"Very deep or intense",ex:"She had a profound impact.",tr:"Derin, köklü"},
-    {w:"Inevitable",pos:"adjective",m:"Certain to happen",ex:"Change is inevitable.",tr:"Kaçınılmaz"},
-    {w:"Scrutinise",pos:"verb",m:"Examine carefully and critically",ex:"He scrutinised every detail.",tr:"İncelemek, mercek altına almak"},
-    {w:"Meticulous",pos:"adjective",m:"Showing great attention to detail",ex:"She is a meticulous researcher.",tr:"Titiz, ayrıntıya çok dikkat eden"},
-    {w:"Discrepancy",pos:"noun",m:"A difference or inconsistency",ex:"There was a discrepancy in the accounts.",tr:"Tutarsızlık, uyuşmazlık"},
-    {w:"Penchant",pos:"noun",m:"A strong liking for something",ex:"He has a penchant for jazz music.",tr:"Düşkünlük, eğilim"},
-    {w:"Juxtapose",pos:"verb",m:"Place close together for contrast",ex:"The artist juxtaposed light and dark.",tr:"Yan yana koymak, karşılaştırmak"},
-    {w:"Pragmatic",pos:"adjective",m:"Dealing with things practically",ex:"We need a pragmatic solution.",tr:"Pratik, uygulamalı"},
-    {w:"Ephemeral",pos:"adjective",m:"Lasting for a very short time",ex:"Fame can be ephemeral.",tr:"Geçici, kısa ömürlü"},
-  ],
-
-  fillBlanks: [
-    {sent:"She ___ to work every day by bus.",opts:["go","goes","went","going"],a:1,diff:"A2",tip:"Third person singular → verb + 's'"},
-    {sent:"I have ___ visited three continents.",opts:["yet","already","never","just"],a:1,diff:"B1",tip:"'Already' means before the expected time"},
-    {sent:"If it ___ rain, we'll cancel the trip.",opts:["don't","doesn't","won't","isn't"],a:1,diff:"B1",tip:"First conditional: If + present simple"},
-    {sent:"The report ___ submitted by Friday.",opts:["must submit","must be submitted","has been","was"],a:1,diff:"B2",tip:"Passive voice with modal: must be + past participle"},
-    {sent:"He suggested ___ the meeting earlier.",opts:["move","moved","moving","to moving"],a:2,diff:"B2",tip:"'Suggest' is followed by a gerund (-ing)"},
-    {sent:"By the time she arrived, we ___ waiting for an hour.",opts:["had been","have been","were","are"],a:0,diff:"B2",tip:"Past Perfect Continuous: had been + -ing"},
-    {sent:"She ___ be tired — she worked all night.",opts:["should","must","might","can"],a:1,diff:"B1",tip:"'Must' expresses logical deduction"},
-    {sent:"___ I known earlier, I would have helped.",opts:["If","Were","Had","Should"],a:2,diff:"C1",tip:"Inverted third conditional: Had + subject + past participle"},
-    {sent:"He ___ rather stay home than go out.",opts:["will","would","should","could"],a:1,diff:"B2",tip:"'Would rather' expresses preference"},
-    {sent:"Not only ___ she smart, but she is also kind.",opts:["is","are","was","be"],a:0,diff:"C1",tip:"Subject-verb inversion after negative fronting"},
-  ],
-
-  matching: [
-    {en:"although",tr:"her ne kadar"},
-    {en:"therefore",tr:"bu nedenle"},
-    {en:"nevertheless",tr:"buna rağmen"},
-    {en:"furthermore",tr:"üstelik"},
-    {en:"consequently",tr:"sonuç olarak"},
-    {en:"meanwhile",tr:"bu arada"},
-    {en:"otherwise",tr:"aksi takdirde"},
-    {en:"however",tr:"ancak"},
-    {en:"moreover",tr:"dahası"},
-    {en:"whereas",tr:"oysa ki"},
-  ],
-
-  speed: [
-    {q:"She ___ (go) to school every day.",opts:["go","goes","went","going"],a:1},
-    {q:"'Have you ever been to Paris?' — '___ No, never.'",opts:["Yes, I have.","No, I haven't.","No, I don't.","No, I didn't."],a:1},
-    {q:"The passive form of 'They built the bridge' is:",opts:["The bridge was built.","The bridge built.","They were built the bridge.","The bridge has built."],a:0},
-    {q:"Which sentence uses the Present Perfect correctly?",opts:["I have seen him yesterday.","I saw him already.","I have already seen him.","I did see him yet."],a:2},
-    {q:"'Ephemeral' means:",opts:["everlasting","very short-lived","extremely large","deeply meaningful"],a:1},
-    {q:"Complete: 'If I ___ you, I would apologise.'",opts:["am","was","were","would be"],a:2},
-    {q:"Which is correct?",opts:["I am used to wake up early.","I used to waking up early.","I am used to waking up early.","I used to waked up early."],a:2},
-    {q:"'Procrastinate' means to:",opts:["work quickly","delay doing things","celebrate success","plan carefully"],a:1},
-    {q:"Past participle of 'write' is:",opts:["wrote","writing","written","writed"],a:2},
-    {q:"'She is ___ engineer.' — Correct article:",opts:["a","an","the","—"],a:1},
-    {q:"Which linking word shows contrast?",opts:["furthermore","consequently","nevertheless","therefore"],a:2},
-    {q:"Reported speech: 'I am happy.' → She said she ___ happy.",opts:["is","was","will be","has been"],a:1},
-  ],
-
-  builder: [
-    {words:["She","has","never","been","to","Japan"],correct:"She has never been to Japan",tr:"O hiç Japonya'ya gitmemiş."},
-    {words:["Did","you","watch","the","game","yesterday","?"],correct:"Did you watch the game yesterday ?",tr:"Dün maçı izledin mi?"},
-    {words:["I","have","already","finished","my","homework"],correct:"I have already finished my homework",tr:"Ödevimi çoktan bitirdim."},
-    {words:["The","report","was","written","by","the","manager"],correct:"The report was written by the manager",tr:"Rapor müdür tarafından yazıldı."},
-    {words:["Not","only","is","she","talented","but","also","hardworking"],correct:"Not only is she talented but also hardworking",tr:"Sadece yetenekli değil, aynı zamanda çalışkan."},
-    {words:["Had","I","known","earlier","I","would","have","helped"],correct:"Had I known earlier I would have helped",tr:"Daha önce bilseydim, yardım ederdim."},
-  ],
-
-  listening: [
-    {sent:"She works at a hospital in the city centre.",opts:["She works at a hotel.","She works at a hospital.","She walks to work.","She studied at a hospital."],a:1,note:"Listen for the location type and 'centre'"},
-    {sent:"Have you ever been to Paris before?",opts:["Have you always been to Paris?","Did you ever go to Paris?","Have you ever been to Paris before?","Have you never been to Paris?"],a:2,note:"Listen carefully to each word"},
-    {sent:"I usually wake up at seven o'clock.",opts:["I always wake up at seven.","I usually work until seven.","I usually wake up at seven o'clock.","I rarely wake up at seven."],a:2,note:"Focus on the adverb of frequency"},
-    {sent:"The conference has been postponed until further notice.",opts:["The conference was cancelled.","The conference has been postponed.","The meeting was rescheduled.","The conference will begin shortly."],a:1,note:"Note the difference between 'cancelled' and 'postponed'"},
-    {sent:"Could you please pass the salt and pepper?",opts:["Could you pass the butter please?","Could you please pass the salt and pepper?","Can you bring the sugar?","Would you like salt and pepper?"],a:1,note:"Listen for every word carefully"},
-  ],
-
-  drag: [
-    {
-      title:"Sort into: Regular or Irregular Verbs",
-      categories:["Regular Verbs","Irregular Verbs"],
-      items:[
-        {w:"walk",cat:"Regular Verbs"},{w:"go",cat:"Irregular Verbs"},
-        {w:"play",cat:"Regular Verbs"},{w:"see",cat:"Irregular Verbs"},
-        {w:"work",cat:"Regular Verbs"},{w:"eat",cat:"Irregular Verbs"},
-        {w:"talk",cat:"Regular Verbs"},{w:"buy",cat:"Irregular Verbs"},
-        {w:"finish",cat:"Regular Verbs"},{w:"know",cat:"Irregular Verbs"},
-      ]
-    },
-    {
-      title:"Sort: Countable or Uncountable Nouns",
-      categories:["Countable","Uncountable"],
-      items:[
-        {w:"book",cat:"Countable"},{w:"water",cat:"Uncountable"},
-        {w:"apple",cat:"Countable"},{w:"music",cat:"Uncountable"},
-        {w:"chair",cat:"Countable"},{w:"information",cat:"Uncountable"},
-        {w:"student",cat:"Countable"},{w:"advice",cat:"Uncountable"},
-        {w:"idea",cat:"Countable"},{w:"furniture",cat:"Uncountable"},
-      ]
-    },
-    {
-      title:"Sort: Adjectives describing Personality",
-      categories:["Positive","Negative"],
-      items:[
-        {w:"reliable",cat:"Positive"},{w:"arrogant",cat:"Negative"},
-        {w:"generous",cat:"Positive"},{w:"selfish",cat:"Negative"},
-        {w:"diligent",cat:"Positive"},{w:"manipulative",cat:"Negative"},
-        {w:"empathetic",cat:"Positive"},{w:"dishonest",cat:"Negative"},
-      ]
-    }
-  ]
+   KELIME VERİTABANI — ünite konularından
+============================================================ */
+var WORDS = {
+  A1: {
+    "Hello & Greetings": [
+      {en:"hello",tr:"merhaba",ex:"Hello! My name is Ali."},
+      {en:"goodbye",tr:"hoşça kal",ex:"Goodbye! See you tomorrow."},
+      {en:"please",tr:"lütfen",ex:"Can I have water, please?"},
+      {en:"thank you",tr:"teşekkür ederim",ex:"Thank you for your help."},
+      {en:"sorry",tr:"özür dilerim",ex:"Sorry, I don't understand."},
+      {en:"name",tr:"isim",ex:"What is your name?"},
+      {en:"friend",tr:"arkadaş",ex:"She is my best friend."},
+      {en:"teacher",tr:"öğretmen",ex:"My teacher is very kind."},
+      {en:"student",tr:"öğrenci",ex:"He is a good student."},
+      {en:"class",tr:"sınıf",ex:"We have English class today."}
+    ],
+    "My School": [
+      {en:"school",tr:"okul",ex:"I go to school every day."},
+      {en:"book",tr:"kitap",ex:"I have a new book."},
+      {en:"pen",tr:"kalem",ex:"Can I borrow your pen?"},
+      {en:"desk",tr:"sıra / masa",ex:"Put your book on the desk."},
+      {en:"bag",tr:"çanta",ex:"My bag is very heavy."},
+      {en:"homework",tr:"ödev",ex:"I do my homework every evening."},
+      {en:"lesson",tr:"ders",ex:"The English lesson starts at nine."},
+      {en:"library",tr:"kütüphane",ex:"I study in the library."},
+      {en:"playground",tr:"oyun alanı",ex:"We play in the playground."},
+      {en:"blackboard",tr:"tahta",ex:"Write the answer on the blackboard."}
+    ],
+    "My Family": [
+      {en:"mother",tr:"anne",ex:"My mother is a doctor."},
+      {en:"father",tr:"baba",ex:"My father works in Istanbul."},
+      {en:"sister",tr:"kız kardeş",ex:"I have one sister."},
+      {en:"brother",tr:"erkek kardeş",ex:"My brother is ten years old."},
+      {en:"grandmother",tr:"büyükanne",ex:"My grandmother makes great food."},
+      {en:"grandfather",tr:"büyükbaba",ex:"My grandfather tells good stories."},
+      {en:"baby",tr:"bebek",ex:"The baby is sleeping."},
+      {en:"family",tr:"aile",ex:"I love my family very much."},
+      {en:"parent",tr:"ebeveyn",ex:"My parents are very kind."},
+      {en:"child",tr:"çocuk",ex:"Every child learns differently."}
+    ],
+    "My Daily Routine": [
+      {en:"wake up",tr:"uyanmak",ex:"I wake up at seven o'clock."},
+      {en:"breakfast",tr:"kahvaltı",ex:"I eat breakfast every morning."},
+      {en:"lunch",tr:"öğle yemeği",ex:"We have lunch at school."},
+      {en:"dinner",tr:"akşam yemeği",ex:"We eat dinner together."},
+      {en:"sleep",tr:"uyumak",ex:"I sleep at ten o'clock."},
+      {en:"brush",tr:"fırçalamak",ex:"I brush my teeth twice a day."},
+      {en:"shower",tr:"duş almak",ex:"I take a shower every morning."},
+      {en:"walk",tr:"yürümek",ex:"I walk to school."},
+      {en:"watch TV",tr:"televizyon izlemek",ex:"I watch TV in the evening."},
+      {en:"read",tr:"okumak",ex:"I read books before sleeping."}
+    ],
+    "Food & Drink": [
+      {en:"apple",tr:"elma",ex:"I eat an apple every day."},
+      {en:"bread",tr:"ekmek",ex:"We have bread for breakfast."},
+      {en:"water",tr:"su",ex:"Drink water every day."},
+      {en:"milk",tr:"süt",ex:"I drink a glass of milk."},
+      {en:"egg",tr:"yumurta",ex:"I eat two eggs for breakfast."},
+      {en:"chicken",tr:"tavuk",ex:"She cooks chicken on Sundays."},
+      {en:"rice",tr:"pirinç",ex:"We eat rice with dinner."},
+      {en:"orange",tr:"portakal",ex:"I like orange juice."},
+      {en:"cake",tr:"pasta / kek",ex:"We eat cake on birthdays."},
+      {en:"coffee",tr:"kahve",ex:"My father drinks coffee every morning."}
+    ],
+    "Sports & Hobbies": [
+      {en:"football",tr:"futbol",ex:"I play football with my friends."},
+      {en:"swimming",tr:"yüzme",ex:"I go swimming on Saturdays."},
+      {en:"music",tr:"müzik",ex:"I love listening to music."},
+      {en:"dance",tr:"dans etmek",ex:"She can dance very well."},
+      {en:"draw",tr:"çizmek",ex:"I like to draw pictures."},
+      {en:"run",tr:"koşmak",ex:"I run in the park every morning."},
+      {en:"ride",tr:"sürmek / binmek",ex:"He can ride a bike."},
+      {en:"paint",tr:"boyamak / resim yapmak",ex:"She paints every weekend."},
+      {en:"game",tr:"oyun",ex:"We play games after school."},
+      {en:"hobby",tr:"hobi",ex:"My hobby is reading."}
+    ],
+    "My Home": [
+      {en:"house",tr:"ev",ex:"We live in a big house."},
+      {en:"kitchen",tr:"mutfak",ex:"My mother cooks in the kitchen."},
+      {en:"bedroom",tr:"yatak odası",ex:"My bedroom is on the second floor."},
+      {en:"bathroom",tr:"banyo",ex:"The bathroom is next to the bedroom."},
+      {en:"garden",tr:"bahçe",ex:"We have flowers in the garden."},
+      {en:"window",tr:"pencere",ex:"Open the window, please."},
+      {en:"door",tr:"kapı",ex:"Close the door, please."},
+      {en:"chair",tr:"sandalye",ex:"Sit on the chair."},
+      {en:"table",tr:"masa",ex:"Put the books on the table."},
+      {en:"lamp",tr:"lamba",ex:"Turn on the lamp."}
+    ],
+    "Shopping & Money": [
+      {en:"shop",tr:"dükkân / mağaza",ex:"I go to the shop on Saturdays."},
+      {en:"money",tr:"para",ex:"I don't have enough money."},
+      {en:"price",tr:"fiyat",ex:"What is the price?"},
+      {en:"cheap",tr:"ucuz",ex:"This bag is very cheap."},
+      {en:"expensive",tr:"pahalı",ex:"That phone is expensive."},
+      {en:"buy",tr:"satın almak",ex:"I want to buy a new coat."},
+      {en:"sell",tr:"satmak",ex:"They sell fresh bread here."},
+      {en:"pay",tr:"ödemek",ex:"I pay by card."},
+      {en:"change",tr:"para üstü",ex:"Here is your change."},
+      {en:"receipt",tr:"fiş / makbuz",ex:"Can I have a receipt, please?"}
+    ],
+    "Weather & Seasons": [
+      {en:"sunny",tr:"güneşli",ex:"It is sunny today."},
+      {en:"rainy",tr:"yağmurlu",ex:"I don't like rainy days."},
+      {en:"cold",tr:"soğuk",ex:"It is very cold in winter."},
+      {en:"hot",tr:"sıcak",ex:"It is very hot in summer."},
+      {en:"windy",tr:"rüzgarlı",ex:"It is very windy today."},
+      {en:"snow",tr:"kar",ex:"It snows in January."},
+      {en:"cloud",tr:"bulut",ex:"The sky is full of clouds."},
+      {en:"spring",tr:"ilkbahar",ex:"Flowers grow in spring."},
+      {en:"summer",tr:"yaz",ex:"I love summer holidays."},
+      {en:"winter",tr:"kış",ex:"Winter is very cold here."}
+    ],
+    "Health & Body": [
+      {en:"head",tr:"baş",ex:"I have a headache."},
+      {en:"hand",tr:"el",ex:"Wash your hands before eating."},
+      {en:"leg",tr:"bacak",ex:"I hurt my leg."},
+      {en:"stomach",tr:"mide / karın",ex:"My stomach hurts."},
+      {en:"tooth",tr:"diş",ex:"I have a toothache."},
+      {en:"eye",tr:"göz",ex:"She has beautiful eyes."},
+      {en:"ear",tr:"kulak",ex:"My ear hurts."},
+      {en:"fever",tr:"ateş",ex:"I have a fever today."},
+      {en:"medicine",tr:"ilaç",ex:"Take this medicine twice a day."},
+      {en:"rest",tr:"dinlenmek",ex:"You need to rest."}
+    ]
+  },
+  A2: {
+    "Holiday Adventures": [
+      {en:"journey",tr:"yolculuk / gezi",ex:"The journey to Ankara takes three hours."},
+      {en:"suitcase",tr:"bavul",ex:"Don't forget your suitcase."},
+      {en:"passport",tr:"pasaport",ex:"I need my passport to travel abroad."},
+      {en:"hotel",tr:"otel",ex:"We stayed in a nice hotel."},
+      {en:"beach",tr:"plaj",ex:"We went to the beach every day."},
+      {en:"tourist",tr:"turist",ex:"Many tourists visit Istanbul."},
+      {en:"souvenir",tr:"hediyelik eşya",ex:"I bought a souvenir for my sister."},
+      {en:"flight",tr:"uçuş",ex:"Our flight was delayed two hours."},
+      {en:"adventure",tr:"macera",ex:"Camping is a great adventure."},
+      {en:"explore",tr:"keşfetmek",ex:"We explored the old city."}
+    ],
+    "People & Personality": [
+      {en:"friendly",tr:"arkadaş canlısı",ex:"She is very friendly and kind."},
+      {en:"shy",tr:"utangaç",ex:"He is shy in new places."},
+      {en:"honest",tr:"dürüst",ex:"Always be honest with people."},
+      {en:"clever",tr:"zeki / akıllı",ex:"She is a very clever student."},
+      {en:"generous",tr:"cömert",ex:"He is generous with his time."},
+      {en:"patient",tr:"sabırlı",ex:"A good teacher must be patient."},
+      {en:"rude",tr:"kaba / saygısız",ex:"Don't be rude to others."},
+      {en:"cheerful",tr:"neşeli",ex:"She is always cheerful."},
+      {en:"lazy",tr:"tembel",ex:"Don't be lazy — study hard!"},
+      {en:"hardworking",tr:"çalışkan",ex:"He is the most hardworking student."}
+    ],
+    "Future Plans": [
+      {en:"plan",tr:"plan yapmak / plan",ex:"What are your plans for the summer?"},
+      {en:"dream",tr:"hayal / rüya",ex:"My dream is to travel the world."},
+      {en:"career",tr:"kariyer",ex:"She wants a career in medicine."},
+      {en:"university",tr:"üniversite",ex:"I want to study at university."},
+      {en:"move",tr:"taşınmak",ex:"We are going to move next year."},
+      {en:"earn",tr:"kazanmak",ex:"I want to earn enough money."},
+      {en:"retire",tr:"emekli olmak",ex:"My father will retire next year."},
+      {en:"achieve",tr:"başarmak",ex:"She will achieve her goals."},
+      {en:"promise",tr:"söz vermek",ex:"I promise to study harder."},
+      {en:"succeed",tr:"başarmak / kazanmak",ex:"If you work hard, you will succeed."}
+    ],
+    "City vs Countryside": [
+      {en:"traffic",tr:"trafik",ex:"The traffic in the city is terrible."},
+      {en:"pollution",tr:"kirlilik",ex:"Air pollution is a big problem."},
+      {en:"peaceful",tr:"huzurlu / sakin",ex:"The countryside is peaceful."},
+      {en:"crowded",tr:"kalabalık",ex:"The city centre is always crowded."},
+      {en:"neighbour",tr:"komşu",ex:"My neighbours are very friendly."},
+      {en:"transport",tr:"ulaşım",ex:"Public transport is fast in the city."},
+      {en:"field",tr:"tarla / alan",ex:"The fields are green in spring."},
+      {en:"village",tr:"köy",ex:"My grandparents live in a village."},
+      {en:"apartment",tr:"daire",ex:"We live in a small apartment."},
+      {en:"nature",tr:"doğa",ex:"I love spending time in nature."}
+    ],
+    "Technology & Gadgets": [
+      {en:"smartphone",tr:"akıllı telefon",ex:"I use my smartphone every day."},
+      {en:"laptop",tr:"dizüstü bilgisayar",ex:"She works on her laptop all day."},
+      {en:"internet",tr:"internet",ex:"I need the internet to study."},
+      {en:"download",tr:"indirmek",ex:"I downloaded a new app."},
+      {en:"upload",tr:"yüklemek",ex:"She uploaded photos to the site."},
+      {en:"charge",tr:"şarj etmek",ex:"My phone needs to charge."},
+      {en:"screen",tr:"ekran",ex:"The screen is broken."},
+      {en:"password",tr:"şifre",ex:"Don't share your password."},
+      {en:"wireless",tr:"kablosuz",ex:"Is there wireless internet here?"},
+      {en:"notification",tr:"bildirim",ex:"I turned off my notifications."}
+    ],
+    "At the Restaurant": [
+      {en:"menu",tr:"menü",ex:"Can I see the menu, please?"},
+      {en:"order",tr:"sipariş vermek",ex:"Are you ready to order?"},
+      {en:"waiter",tr:"garson",ex:"The waiter was very helpful."},
+      {en:"bill",tr:"hesap / fatura",ex:"Can we have the bill, please?"},
+      {en:"portion",tr:"porsiyon",ex:"The portions are very big here."},
+      {en:"reservation",tr:"rezervasyon",ex:"I have a reservation for two."},
+      {en:"starter",tr:"başlangıç yemeği",ex:"I'll have soup as a starter."},
+      {en:"dessert",tr:"tatlı",ex:"What desserts do you have?"},
+      {en:"vegetarian",tr:"vejetaryen",ex:"Do you have vegetarian options?"},
+      {en:"tip",tr:"bahşiş",ex:"We left a tip for the waiter."}
+    ],
+    "Adventure & Outdoor": [
+      {en:"mountain",tr:"dağ",ex:"We climbed a mountain last summer."},
+      {en:"forest",tr:"orman",ex:"The forest is beautiful in autumn."},
+      {en:"tent",tr:"çadır",ex:"We slept in a tent."},
+      {en:"campfire",tr:"kamp ateşi",ex:"We sat around the campfire."},
+      {en:"climb",tr:"tırmanmak",ex:"Can you climb that tree?"},
+      {en:"waterfall",tr:"şelale",ex:"The waterfall was amazing."},
+      {en:"path",tr:"yol / patika",ex:"Follow the path to the lake."},
+      {en:"survival",tr:"hayatta kalma",ex:"He learned survival skills."},
+      {en:"wildlife",tr:"yaban hayatı",ex:"We saw amazing wildlife."},
+      {en:"scenery",tr:"manzara",ex:"The scenery was breathtaking."}
+    ],
+    "Media & Entertainment": [
+      {en:"series",tr:"dizi",ex:"I'm watching a new series."},
+      {en:"documentary",tr:"belgesel",ex:"I love nature documentaries."},
+      {en:"headline",tr:"manşet / başlık",ex:"I read the headlines every morning."},
+      {en:"podcast",tr:"podcast",ex:"I listen to podcasts while walking."},
+      {en:"channel",tr:"kanal",ex:"Which channel do you watch most?"},
+      {en:"review",tr:"yorum / eleştiri",ex:"The film got great reviews."},
+      {en:"actor",tr:"aktör / oyuncu",ex:"Who is your favourite actor?"},
+      {en:"audience",tr:"izleyici / seyirci",ex:"The audience loved the show."},
+      {en:"broadcast",tr:"yayın yapmak / yayın",ex:"The match was broadcast live."},
+      {en:"stream",tr:"yayın akışı / canlı izlemek",ex:"I stream films online."}
+    ],
+    "Health & Lifestyle": [
+      {en:"exercise",tr:"egzersiz yapmak",ex:"I exercise three times a week."},
+      {en:"diet",tr:"diyet",ex:"She is on a healthy diet."},
+      {en:"habit",tr:"alışkanlık",ex:"Reading is a good habit."},
+      {en:"stress",tr:"stres",ex:"Too much work causes stress."},
+      {en:"vitamin",tr:"vitamin",ex:"Fruits contain many vitamins."},
+      {en:"calories",tr:"kalori",ex:"Chocolate has a lot of calories."},
+      {en:"surgery",tr:"ameliyat",ex:"He had surgery last month."},
+      {en:"pharmacy",tr:"eczane",ex:"I bought the medicine at the pharmacy."},
+      {en:"mental",tr:"zihinsel",ex:"Mental health is very important."},
+      {en:"routine",tr:"rutin",ex:"A healthy routine helps you focus."}
+    ],
+    "Our Planet": [
+      {en:"recycle",tr:"geri dönüştürmek",ex:"We should recycle plastic bottles."},
+      {en:"environment",tr:"çevre",ex:"We must protect the environment."},
+      {en:"endangered",tr:"nesli tükenmekte olan",ex:"Tigers are endangered animals."},
+      {en:"deforestation",tr:"ormansızlaşma",ex:"Deforestation destroys habitats."},
+      {en:"climate",tr:"iklim",ex:"Climate change is a global problem."},
+      {en:"species",tr:"tür / cins",ex:"Many species are disappearing."},
+      {en:"solar",tr:"güneş ile ilgili",ex:"Solar energy is clean energy."},
+      {en:"waste",tr:"atık / israf",ex:"We produce too much waste."},
+      {en:"global warming",tr:"küresel ısınma",ex:"Global warming is melting the ice caps."},
+      {en:"sustainable",tr:"sürdürülebilir",ex:"We need sustainable energy sources."}
+    ]
+  },
+  B1: {
+    "Travel Experiences": [
+      {en:"destination",tr:"varış noktası",ex:"Paris is a popular tourist destination."},
+      {en:"itinerary",tr:"gezi planı / güzergah",ex:"We planned our itinerary carefully."},
+      {en:"accommodation",tr:"konaklama",ex:"The accommodation was comfortable."},
+      {en:"currency",tr:"para birimi",ex:"The local currency is the euro."},
+      {en:"customs",tr:"gümrük / gelenekler",ex:"We passed through customs quickly."},
+      {en:"landmark",tr:"tarihi yapı / simge",ex:"Big Ben is a famous landmark."},
+      {en:"backpacker",tr:"sırt çantalı gezgin",ex:"She travelled as a backpacker."},
+      {en:"delay",tr:"gecikme",ex:"Our flight had a three-hour delay."},
+      {en:"local",tr:"yerel",ex:"We tried the local food."},
+      {en:"volunteer",tr:"gönüllü olmak",ex:"She volunteered abroad last year."}
+    ],
+    "Environment & Climate": [
+      {en:"emission",tr:"salım / emisyon",ex:"Carbon emissions must be reduced."},
+      {en:"renewable",tr:"yenilenebilir",ex:"We need more renewable energy."},
+      {en:"conservation",tr:"koruma",ex:"Wildlife conservation is important."},
+      {en:"drought",tr:"kuraklık",ex:"The drought destroyed the crops."},
+      {en:"habitat",tr:"yaşam alanı",ex:"Deforestation destroys animal habitats."},
+      {en:"flood",tr:"sel / taşkın",ex:"Floods affected thousands of people."},
+      {en:"fossil fuel",tr:"fosil yakıt",ex:"We rely too much on fossil fuels."},
+      {en:"greenhouse gas",tr:"sera gazı",ex:"CO2 is a greenhouse gas."},
+      {en:"ecosystem",tr:"ekosistem",ex:"The ecosystem is very fragile."},
+      {en:"carbon footprint",tr:"karbon ayak izi",ex:"We should reduce our carbon footprint."}
+    ],
+    "Media & Technology": [
+      {en:"algorithm",tr:"algoritma",ex:"Social media uses algorithms."},
+      {en:"privacy",tr:"mahremiyet / gizlilik",ex:"Online privacy is important."},
+      {en:"censorship",tr:"sansür",ex:"Some governments use censorship."},
+      {en:"fake news",tr:"sahte haber",ex:"Fake news spreads quickly online."},
+      {en:"influence",tr:"etkilemek / etki",ex:"Social media influences our opinions."},
+      {en:"subscribe",tr:"abone olmak",ex:"Subscribe to our channel."},
+      {en:"viral",tr:"viral olmak / çok paylaşılan",ex:"The video went viral overnight."},
+      {en:"addiction",tr:"bağımlılık",ex:"Phone addiction is a modern problem."},
+      {en:"source",tr:"kaynak",ex:"Always check your sources."},
+      {en:"bias",tr:"önyargı / taraflılık",ex:"Media can show political bias."}
+    ],
+    "Learning & Memory": [
+      {en:"concentrate",tr:"konsantre olmak",ex:"I can't concentrate when it's noisy."},
+      {en:"revise",tr:"tekrar etmek / gözden geçirmek",ex:"I revise my notes before exams."},
+      {en:"memorise",tr:"ezberlemek",ex:"It's hard to memorise long words."},
+      {en:"technique",tr:"teknik",ex:"Use a memory technique to learn faster."},
+      {en:"distraction",tr:"dikkat dağıtıcı şey",ex:"My phone is my biggest distraction."},
+      {en:"recall",tr:"hatırlamak / geri çağırmak",ex:"I can't recall his name."},
+      {en:"mindset",tr:"zihniyet / düşünce yapısı",ex:"A positive mindset helps you learn."},
+      {en:"repetition",tr:"tekrar",ex:"Learning through repetition is effective."},
+      {en:"motivation",tr:"motivasyon",ex:"Motivation is key to success."},
+      {en:"achievement",tr:"başarı / kazanım",ex:"Learning a language is a great achievement."}
+    ],
+    "Relationships & Society": [
+      {en:"trust",tr:"güven",ex:"Trust is the basis of friendship."},
+      {en:"argue",tr:"tartışmak",ex:"They argue about small things."},
+      {en:"respect",tr:"saygı / saygı göstermek",ex:"We should respect each other."},
+      {en:"community",tr:"topluluk / toplum",ex:"We live in a close community."},
+      {en:"conflict",tr:"çatışma / anlaşmazlık",ex:"They resolved the conflict peacefully."},
+      {en:"stereotype",tr:"kalıp yargı / stereotip",ex:"We should challenge stereotypes."},
+      {en:"prejudice",tr:"önyargı",ex:"Prejudice causes many problems."},
+      {en:"generation",tr:"nesil / kuşak",ex:"Each generation faces new challenges."},
+      {en:"tolerance",tr:"hoşgörü",ex:"Tolerance is essential in society."},
+      {en:"volunteer",tr:"gönüllü",ex:"Many people volunteer in their community."}
+    ],
+    "Food Cultures": [
+      {en:"cuisine",tr:"mutfak (bir ülkenin)",ex:"Turkish cuisine is very diverse."},
+      {en:"ingredient",tr:"malzeme / içerik",ex:"What ingredients do you need?"},
+      {en:"spice",tr:"baharat",ex:"This dish has many spices."},
+      {en:"vegetarian",tr:"vejetaryen",ex:"Do you have a vegetarian option?"},
+      {en:"blend",tr:"harman / karıştırmak",ex:"Blend the ingredients together."},
+      {en:"tradition",tr:"gelenek",ex:"Food traditions vary around the world."},
+      {en:"crop",tr:"ürün / ekin",ex:"Rice is the main crop in this region."},
+      {en:"harvest",tr:"hasat",ex:"The harvest season is in autumn."},
+      {en:"hunger",tr:"açlık",ex:"Hunger is a global problem."},
+      {en:"nutrition",tr:"beslenme",ex:"Good nutrition is important."}
+    ],
+    "Telling Stories": [
+      {en:"plot",tr:"konu / olay örgüsü",ex:"The plot of the film was surprising."},
+      {en:"character",tr:"karakter",ex:"The main character is very brave."},
+      {en:"narrator",tr:"anlatıcı",ex:"The narrator tells the story."},
+      {en:"setting",tr:"mekan / ortam",ex:"The story's setting is medieval Europe."},
+      {en:"twist",tr:"sürpriz dönüş / beklenmedik gelişme",ex:"There was a big twist at the end."},
+      {en:"suspense",tr:"gerilim / merak",ex:"The film was full of suspense."},
+      {en:"flashback",tr:"geriye dönüş",ex:"The story uses many flashbacks."},
+      {en:"theme",tr:"tema",ex:"The main theme is friendship."},
+      {en:"villain",tr:"kötü adam",ex:"The villain had a mysterious past."},
+      {en:"resolve",tr:"çözmek / çözüme kavuşturmak",ex:"The conflict was resolved at the end."}
+    ],
+    "City Life": [
+      {en:"commute",tr:"işe gidip gelmek",ex:"My commute takes one hour."},
+      {en:"suburb",tr:"banliyö / kenar mahalle",ex:"They moved to the suburbs."},
+      {en:"infrastructure",tr:"altyapı",ex:"The city needs better infrastructure."},
+      {en:"congestion",tr:"tıkanıklık / yoğun trafik",ex:"Traffic congestion is a big problem."},
+      {en:"urban",tr:"kentsel",ex:"Urban life can be stressful."},
+      {en:"resident",tr:"sakin / ikamet eden",ex:"Local residents protested the plan."},
+      {en:"district",tr:"bölge / ilçe",ex:"Which district do you live in?"},
+      {en:"renovation",tr:"yenileme / tadilat",ex:"The old building needs renovation."},
+      {en:"poverty",tr:"yoksulluk",ex:"Urban poverty is a serious issue."},
+      {en:"graffiti",tr:"grafiti / duvar yazısı",ex:"There is graffiti on the walls."}
+    ],
+    "Expressing Opinions": [
+      {en:"argue",tr:"savunmak / iddia etmek",ex:"I would argue that this is wrong."},
+      {en:"evidence",tr:"kanıt / delil",ex:"What evidence do you have?"},
+      {en:"debate",tr:"tartışma / münazara",ex:"We had a class debate today."},
+      {en:"viewpoint",tr:"bakış açısı",ex:"What is your viewpoint on this?"},
+      {en:"exaggerate",tr:"abartmak",ex:"Don't exaggerate the problem."},
+      {en:"assume",tr:"varsaymak",ex:"Don't assume you are right."},
+      {en:"convince",tr:"ikna etmek",ex:"She convinced me to try it."},
+      {en:"disagree",tr:"katılmamak",ex:"I disagree with your opinion."},
+      {en:"support",tr:"desteklemek",ex:"Do you support this idea?"},
+      {en:"conclude",tr:"sonuçlandırmak / sonuca varmak",ex:"We can conclude that it is effective."}
+    ],
+    "Global Challenges": [
+      {en:"poverty",tr:"yoksulluk",ex:"Poverty affects millions of people."},
+      {en:"inequality",tr:"eşitsizlik",ex:"Income inequality is growing."},
+      {en:"refugee",tr:"mülteci",ex:"Many refugees need shelter."},
+      {en:"conflict",tr:"çatışma",ex:"Armed conflict causes suffering."},
+      {en:"crisis",tr:"kriz",ex:"The climate crisis is urgent."},
+      {en:"humanitarian",tr:"insancıl / insani yardım",ex:"A humanitarian crisis is unfolding."},
+      {en:"solution",tr:"çözüm",ex:"We need global solutions."},
+      {en:"campaign",tr:"kampanya",ex:"She started a campaign against pollution."},
+      {en:"charity",tr:"hayır kurumu / yardım",ex:"He donates to charity every month."},
+      {en:"awareness",tr:"farkındalık",ex:"Raise awareness about the issue."}
+    ]
+  },
+  B2: {
+    "Science & Discovery": [
+      {en:"hypothesis",tr:"hipotez",ex:"The scientist tested her hypothesis."},
+      {en:"breakthrough",tr:"büyük keşif / çığır açan gelişme",ex:"It was a major scientific breakthrough."},
+      {en:"experiment",tr:"deney",ex:"They conducted a careful experiment."},
+      {en:"data",tr:"veri",ex:"The data supports the theory."},
+      {en:"gene",tr:"gen",ex:"Scientists discovered a new gene."},
+      {en:"molecule",tr:"molekül",ex:"Water is made of H2O molecules."},
+      {en:"evolve",tr:"evrimleşmek",ex:"Species evolve over thousands of years."},
+      {en:"observe",tr:"gözlemlemek",ex:"Scientists observe animal behaviour."},
+      {en:"theory",tr:"teori / kuram",ex:"Darwin's theory changed science."},
+      {en:"innovation",tr:"yenilik / inovasyon",ex:"Innovation drives economic growth."}
+    ],
+    "Law & Society": [
+      {en:"legislation",tr:"mevzuat / yasal düzenleme",ex:"New legislation was passed last year."},
+      {en:"justice",tr:"adalet",ex:"Everyone deserves justice."},
+      {en:"verdict",tr:"karar / hüküm",ex:"The jury gave a guilty verdict."},
+      {en:"conviction",tr:"mahkumiyet / inanç",ex:"His conviction was overturned."},
+      {en:"regulation",tr:"yönetmelik / düzenleme",ex:"New regulations were introduced."},
+      {en:"tribunal",tr:"mahkeme / heyeti",ex:"The case went to a tribunal."},
+      {en:"defendant",tr:"sanık / davalı",ex:"The defendant pleaded not guilty."},
+      {en:"appeal",tr:"itiraz / temyiz",ex:"She filed an appeal against the decision."},
+      {en:"enforce",tr:"uygulamak / yürürlüğe koymak",ex:"The law must be enforced."},
+      {en:"witness",tr:"tanık",ex:"The witness gave important evidence."}
+    ],
+    "Innovation & Change": [
+      {en:"disrupt",tr:"bozmak / sekteye uğratmak",ex:"Technology disrupts traditional industries."},
+      {en:"transform",tr:"dönüştürmek",ex:"AI is transforming the workplace."},
+      {en:"adapt",tr:"uyum sağlamak",ex:"Companies must adapt to change."},
+      {en:"redundant",tr:"işsiz kalmak / gereksiz",ex:"Many jobs became redundant."},
+      {en:"prototype",tr:"prototip",ex:"They built a prototype of the device."},
+      {en:"patent",tr:"patent",ex:"She holds a patent for the invention."},
+      {en:"venture",tr:"girişim",ex:"He started a new business venture."},
+      {en:"launch",tr:"piyasaya çıkarmak / başlatmak",ex:"They launched the product last week."},
+      {en:"scalable",tr:"ölçeklenebilir",ex:"The business model is scalable."},
+      {en:"automation",tr:"otomasyon",ex:"Automation is replacing some jobs."}
+    ],
+    "Language & Communication": [
+      {en:"fluency",tr:"akıcılık",ex:"Fluency takes years of practice."},
+      {en:"dialect",tr:"lehçe / ağız",ex:"He speaks with a regional dialect."},
+      {en:"nuance",tr:"nüans / ince anlam farkı",ex:"The nuance of the word is important."},
+      {en:"rhetoric",tr:"retorik / söylem",ex:"His speech used powerful rhetoric."},
+      {en:"ambiguity",tr:"belirsizlik / muğlaklık",ex:"The contract had some ambiguity."},
+      {en:"connotation",tr:"çağrışım / yan anlam",ex:"The word has a negative connotation."},
+      {en:"eloquent",tr:"belagatli / etkileyici konuşan",ex:"She gave an eloquent speech."},
+      {en:"implicit",tr:"örtük / dolaylı",ex:"The meaning was implicit, not stated."},
+      {en:"jargon",tr:"jargon / meslek dili",ex:"Avoid using too much technical jargon."},
+      {en:"syntax",tr:"söz dizimi",ex:"English syntax can be complex."}
+    ],
+    "Economics & Inequality": [
+      {en:"inflation",tr:"enflasyon",ex:"Inflation is rising every month."},
+      {en:"recession",tr:"ekonomik durgunluk",ex:"The country entered a recession."},
+      {en:"subsidy",tr:"sübvansiyon / devlet yardımı",ex:"Farmers receive government subsidies."},
+      {en:"monopoly",tr:"tekel",ex:"The company has a market monopoly."},
+      {en:"debt",tr:"borç",ex:"The national debt is very high."},
+      {en:"distribute",tr:"dağıtmak",ex:"Wealth is not distributed equally."},
+      {en:"wage",tr:"ücret / maaş",ex:"Minimum wage should increase."},
+      {en:"commodity",tr:"emtia / ticari mal",ex:"Oil is a valuable commodity."},
+      {en:"fiscal",tr:"mali / fiskal",ex:"The government introduced fiscal reforms."},
+      {en:"yield",tr:"verim / gelir sağlamak",ex:"The investment yielded good returns."}
+    ],
+    "Art & Creativity": [
+      {en:"aesthetic",tr:"estetik",ex:"The building has a minimalist aesthetic."},
+      {en:"abstract",tr:"soyut",ex:"I find abstract art difficult to understand."},
+      {en:"interpret",tr:"yorumlamak",ex:"How do you interpret this painting?"},
+      {en:"perspective",tr:"bakış açısı / perspektif",ex:"Each artist has a unique perspective."},
+      {en:"sculpture",tr:"heykel",ex:"The sculpture is made of marble."},
+      {en:"exhibit",tr:"sergilemek / sergi",ex:"Her work is exhibited in Paris."},
+      {en:"genre",tr:"tür / sanat akımı",ex:"Which genre of music do you prefer?"},
+      {en:"portrait",tr:"portre",ex:"He painted a portrait of his mother."},
+      {en:"symbolism",tr:"sembolizm",ex:"The painting is full of symbolism."},
+      {en:"composition",tr:"kompozisyon",ex:"The composition of the photo is excellent."}
+    ],
+    "Ethics & Society": [
+      {en:"moral",tr:"ahlaki",ex:"This raises serious moral questions."},
+      {en:"integrity",tr:"dürüstlük / bütünlük",ex:"A leader must have integrity."},
+      {en:"dilemma",tr:"ikilem",ex:"She faced an ethical dilemma."},
+      {en:"accountability",tr:"hesap verebilirlik",ex:"Governments must show accountability."},
+      {en:"transparency",tr:"şeffaflık",ex:"Transparency builds public trust."},
+      {en:"consent",tr:"rıza / onay",ex:"You need consent before sharing data."},
+      {en:"discrimination",tr:"ayrımcılık",ex:"Discrimination must be challenged."},
+      {en:"exploit",tr:"sömürmek",ex:"Companies should not exploit workers."},
+      {en:"principle",tr:"ilke / prensip",ex:"She stood by her principles."},
+      {en:"obligation",tr:"yükümlülük / zorunluluk",ex:"We have an obligation to help."}
+    ],
+    "Globalisation": [
+      {en:"multinational",tr:"çok uluslu",ex:"Multinational companies operate worldwide."},
+      {en:"outsource",tr:"dış kaynak kullanmak",ex:"The company outsourced its production."},
+      {en:"migration",tr:"göç",ex:"Economic migration is increasing."},
+      {en:"integration",tr:"entegrasyon / bütünleşme",ex:"European integration has benefits."},
+      {en:"tariff",tr:"tarife / gümrük vergisi",ex:"High tariffs hurt trade."},
+      {en:"export",tr:"ihracat / ihraç etmek",ex:"Turkey exports many products."},
+      {en:"import",tr:"ithalat / ithal etmek",ex:"We import most of our oil."},
+      {en:"sovereignty",tr:"egemenlik",ex:"Nations value their sovereignty."},
+      {en:"interdependence",tr:"karşılıklı bağımlılık",ex:"Economic interdependence is growing."},
+      {en:"cultural exchange",tr:"kültürel alışveriş",ex:"Cultural exchange enriches society."}
+    ],
+    "Psychology & Behaviour": [
+      {en:"cognition",tr:"biliş / zihinsel süreç",ex:"Cognition involves memory and reasoning."},
+      {en:"perception",tr:"algı / algılama",ex:"Our perception shapes our reality."},
+      {en:"unconscious",tr:"bilinçdışı",ex:"Many decisions are unconscious."},
+      {en:"resilience",tr:"psikolojik dayanıklılık",ex:"Resilience helps us face adversity."},
+      {en:"anxiety",tr:"kaygı / endişe",ex:"Anxiety is a common mental health issue."},
+      {en:"empathy",tr:"empati",ex:"Empathy is the ability to understand others."},
+      {en:"motivation",tr:"motivasyon / güdü",ex:"Intrinsic motivation is very powerful."},
+      {en:"manipulation",tr:"manipülasyon / yönlendirme",ex:"Advertising uses psychological manipulation."},
+      {en:"conform",tr:"uymak / uyum sağlamak",ex:"People tend to conform in groups."},
+      {en:"trigger",tr:"tetiklemek / tetikleyici",ex:"Stress can trigger anxiety."}
+    ],
+    "The Future of Humanity": [
+      {en:"artificial intelligence",tr:"yapay zeka",ex:"Artificial intelligence is advancing fast."},
+      {en:"biotechnology",tr:"biyoteknoloji",ex:"Biotechnology may cure diseases."},
+      {en:"surveillance",tr:"gözetim / denetim",ex:"Digital surveillance is controversial."},
+      {en:"longevity",tr:"uzun ömürlülük",ex:"Scientists are studying human longevity."},
+      {en:"scarcity",tr:"kıtlık",ex:"Water scarcity is a growing threat."},
+      {en:"autonomous",tr:"özerk / bağımsız",ex:"Autonomous vehicles are being tested."},
+      {en:"colonise",tr:"kolonileştirmek",ex:"Plans to colonise Mars are developing."},
+      {en:"extinction",tr:"soyu tükenme",ex:"Many species face extinction."},
+      {en:"utopia",tr:"ütopya",ex:"No society has achieved a true utopia."},
+      {en:"governance",tr:"yönetim / idare",ex:"Global governance is needed for climate change."}
+    ]
+  }
 };
 
 /* ============================================================
    STATE
-   ============================================================ */
-let appState = {
-  sessionScore: 0,
-  gamesPlayed: 0,
-  bestStreak: 0,
+============================================================ */
+var state = {
+  level: 'A1',
+  gameType: 'match',
+  unit: 'all',
+  score: 0,
   streak: 0,
-  sessionStart: Date.now()
+  correct: 0,
+  gamesPlayed: 0
 };
-let speechSynth = window.speechSynthesis;
+
+// Oturum skoru sessionStorage'dan yükle
+try{var ss=JSON.parse(sessionStorage.getItem('ab_games')||'{}');
+  if(ss.score) state.score=ss.score;
+  if(ss.streak) state.streak=ss.streak;
+  if(ss.correct) state.correct=ss.correct;
+  if(ss.gamesPlayed) state.gamesPlayed=ss.gamesPlayed;
+}catch(e){}
+
+function saveState(){
+  try{sessionStorage.setItem('ab_games',JSON.stringify({
+    score:state.score,streak:state.streak,correct:state.correct,gamesPlayed:state.gamesPlayed
+  }));}catch(e){}
+  document.getElementById('scoreNum').textContent=state.score;
+  document.getElementById('streakNum').textContent=state.streak;
+  document.getElementById('correctNum').textContent=state.correct;
+  document.getElementById('gamesNum').textContent=state.gamesPlayed;
+}
+saveState();
 
 /* ============================================================
-   FILTER
-   ============================================================ */
-function filterLevel(lvl, btn) {
-  document.querySelectorAll('.lvl-chip').forEach(c => c.classList.remove('active'));
-  btn.classList.add('active');
-  document.querySelectorAll('.game-card').forEach(card => {
-    if (lvl === 'all' || card.dataset.levels.includes(lvl)) {
-      card.style.display = '';
-    } else {
-      card.style.display = 'none';
-    }
+   HELPERS
+============================================================ */
+function shuffle(arr){
+  var a=[].concat(arr);
+  for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}
+  return a;
+}
+function getWords(){
+  var unitData = WORDS[state.level];
+  if(state.unit === 'all'){
+    var all=[];
+    Object.keys(unitData).forEach(function(u){all=all.concat(unitData[u]);});
+    return shuffle(all);
+  }
+  return shuffle(unitData[state.unit]||[]);
+}
+function lv_color(lv){
+  return {A1:'var(--A1)',A2:'var(--A2)',B1:'var(--B1)',B2:'var(--B2)'}[lv]||'var(--navy)';
+}
+
+/* ============================================================
+   LEVEL & GAME SWITCH
+============================================================ */
+function setLevel(lv){
+  state.level = lv;
+  document.querySelectorAll('.ltab').forEach(function(t){
+    t.classList.toggle('active', t.dataset.lv===lv);
+  });
+  buildUnitSelect();
+  loadGame();
+}
+
+function setGame(gt){
+  state.gameType = gt;
+  document.querySelectorAll('.gtype').forEach(function(g){
+    g.classList.toggle('active', g.dataset.gt===gt);
+  });
+  loadGame();
+}
+
+function buildUnitSelect(){
+  var sel = document.getElementById('unitSelect');
+  var units = Object.keys(WORDS[state.level]);
+  sel.innerHTML = '<option value="all">Tüm üniteler (karışık)</option>';
+  units.forEach(function(u){
+    sel.innerHTML += '<option value="'+u+'">'+u+'</option>';
+  });
+  state.unit = 'all';
+}
+
+function loadGame(){
+  state.unit = document.getElementById('unitSelect').value;
+  var funcs = {match:startMatch, flash:startFlash, spell:startSpell, quiz:startQuiz};
+  if(funcs[state.gameType]) funcs[state.gameType]();
+}
+
+/* ============================================================
+   MATCH GAME
+============================================================ */
+function startMatch(){
+  var words = getWords().slice(0,6);
+  var arena = document.getElementById('gameArena');
+  var color = lv_color(state.level);
+  
+  var engWords = shuffle(words.map(function(w,i){return {id:i,text:w.en,type:'en'};}));
+  var trWords  = shuffle(words.map(function(w,i){return {id:i,text:w.tr,type:'tr'};}));
+  
+  arena.innerHTML =
+    '<div class="arena-hdr">' +
+    '<div class="arena-title">🔗 Eşleştir</div>' +
+    '<div class="arena-meta">' +
+    '<span class="arena-badge" style="background:'+color+'">'+state.level+'</span>' +
+    '<span style="font-size:.82rem;color:var(--ink4)">'+words.length+' kelime</span>' +
+    '</div></div>' +
+    '<div id="matchGrid" class="match-grid">' +
+    '<div class="match-col" id="engCol"></div>' +
+    '<div class="match-col" id="trCol"></div>' +
+    '</div>' +
+    '<div id="matchResult" style="text-align:center;margin-top:20px;display:none;"></div>';
+  
+  var engCol = document.getElementById('engCol');
+  var trCol  = document.getElementById('trCol');
+  
+  engWords.forEach(function(w){
+    var el = document.createElement('div');
+    el.className = 'match-item';
+    el.textContent = w.text;
+    el.dataset.id = w.id;
+    el.dataset.type = 'en';
+    el.onclick = function(){selectMatch(this);};
+    engCol.appendChild(el);
+  });
+  trWords.forEach(function(w){
+    var el = document.createElement('div');
+    el.className = 'match-item';
+    el.textContent = w.text;
+    el.dataset.id = w.id;
+    el.dataset.type = 'tr';
+    el.onclick = function(){selectMatch(this);};
+    trCol.appendChild(el);
   });
 }
 
-/* ============================================================
-   MODAL OPEN / CLOSE
-   ============================================================ */
-const gameTitles = {
-  flashcard:'🃏 Vocabulary Flashcards',
-  fill:'✏️ Fill in the Blanks',
-  match:'🔗 Word Matching',
-  speed:'⚡ Speed Quiz',
-  builder:'🧩 Sentence Builder',
-  listen:'🎧 Listening Challenge',
-  drag:'🎯 Drag & Drop Sort'
-};
+var matchSel = null;
+var matchedCount = 0;
 
-function openGame(type) {
-  document.getElementById('modalTitle').textContent = gameTitles[type];
-  document.getElementById('gameModal').classList.add('active');
-  document.body.style.overflow = 'hidden';
-  renderGame(type);
-  appState.gamesPlayed++;
-  updateStats();
-}
-
-function closeGame() {
-  document.getElementById('gameModal').classList.remove('active');
-  document.body.style.overflow = '';
-  if (speechSynth.speaking) speechSynth.cancel();
-}
-
-function renderGame(type) {
-  const body = document.getElementById('modalBody');
-  const map = {
-    flashcard: () => initFlashcard(body),
-    fill: () => initFill(body),
-    match: () => initMatch(body),
-    speed: () => initSpeed(body),
-    builder: () => initBuilder(body),
-    listen: () => initListen(body),
-    drag: () => initDrag(body),
-  };
-  if (map[type]) map[type]();
-}
-
-/* ============================================================
-   STATS UPDATE
-   ============================================================ */
-function updateStats() {
-  document.getElementById('sessionScore').textContent = appState.sessionScore;
-  document.getElementById('gamesPlayed').textContent = appState.gamesPlayed;
-  document.getElementById('bestStreak').textContent = appState.bestStreak;
-  const mins = Math.floor((Date.now() - appState.sessionStart) / 60000);
-  document.getElementById('timeToday').textContent = mins + ' min';
-}
-
-function addScore(pts) {
-  appState.sessionScore += pts;
-  appState.streak++;
-  if (appState.streak > appState.bestStreak) appState.bestStreak = appState.streak;
-  updateStats();
-}
-
-function resetStreak() {
-  appState.streak = 0;
-}
-
-/* ============================================================
-   GAME: FLASHCARDS
-   ============================================================ */
-function initFlashcard(body) {
-  const cards = DATA.flashcards;
-  let ci = 0, known = 0, total = 0, flipped = false;
-
-  function render() {
-    const c = cards[ci];
-    flipped = false;
-    body.innerHTML = `
-      <div class="score-bar">
-        <div class="score-box"><div class="score-num">${ci+1}/${cards.length}</div><div class="score-lbl">Card</div></div>
-        <div class="score-box"><div class="score-num" style="color:var(--emerald)">${known}</div><div class="score-lbl">Known ✓</div></div>
-        <div class="score-box"><div class="score-num" style="color:var(--coral)">${total-known}</div><div class="score-lbl">Learning</div></div>
-      </div>
-      <div class="fc-wrap" id="fcWrap" onclick="flipFC()">
-        <div class="fc" id="fc">
-          <div class="fc-face fc-front">
-            <div style="font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:0.5rem">${c.pos}</div>
-            <div class="fc-word">${c.w}</div>
-            <div class="fc-hint">Tap to reveal meaning</div>
-          </div>
-          <div class="fc-face fc-back">
-            <div class="fc-meaning">${c.m}</div>
-            <div class="fc-example" style="margin-bottom:0.75rem">"${c.ex}"</div>
-            <div style="font-size:13px;color:rgba(255,255,255,0.65)">🇹🇷 ${c.tr}</div>
-          </div>
-        </div>
-      </div>
-      <div class="fc-controls" id="fcCtrl" style="display:none">
-        <button class="btn btn-danger btn-sm" style="flex:1" onclick="fcAnswer(false)">✗ Still Learning</button>
-        <button class="btn btn-ghost btn-sm" onclick="speakIt('${c.w}')">🔊</button>
-        <button class="btn btn-success btn-sm" style="flex:1" onclick="fcAnswer(true)">✓ I Know It!</button>
-      </div>
-      <p style="text-align:center;font-size:12px;color:var(--text3);margin-top:1rem">Click the card to flip it</p>
-    `;
+function selectMatch(el){
+  if(el.classList.contains('matched')||el.classList.contains('wrong')) return;
+  
+  if(!matchSel){
+    // ilk seçim
+    if(matchSel && matchSel!==el) matchSel.classList.remove('selected');
+    matchSel = el;
+    el.classList.add('selected');
+    return;
   }
-
-  window.flipFC = function() {
-    const fc = document.getElementById('fc');
-    const ctrl = document.getElementById('fcCtrl');
-    if (!flipped) {
-      fc.classList.add('flipped');
-      ctrl.style.display = 'flex';
-      flipped = true;
+  
+  // ikinci seçim — farklı kolondan mı?
+  if(matchSel.dataset.type === el.dataset.type){
+    matchSel.classList.remove('selected');
+    matchSel = el;
+    el.classList.add('selected');
+    return;
+  }
+  
+  if(matchSel.dataset.id === el.dataset.id){
+    // doğru eşleşme
+    matchSel.classList.remove('selected');
+    matchSel.classList.add('matched');
+    el.classList.add('matched');
+    matchSel = null;
+    matchedCount++;
+    state.score += 10;
+    state.streak++;
+    state.correct++;
+    saveState();
+    showToast('✅ +10 puan!');
+    var total = document.querySelectorAll('.match-item').length / 2;
+    if(matchedCount >= total){
+      matchedCount = 0;
+      setTimeout(function(){showMatchResult(total);}, 400);
     }
-  };
+  } else {
+    // yanlış
+    matchSel.classList.remove('selected');
+    matchSel.classList.add('wrong');
+    el.classList.add('wrong');
+    var ms = matchSel, e2 = el;
+    ms.classList.add('shake'); e2.classList.add('shake');
+    state.streak = 0;
+    saveState();
+    setTimeout(function(){
+      ms.classList.remove('wrong','shake');
+      e2.classList.remove('wrong','shake');
+    }, 800);
+    matchSel = null;
+    showToast('❌ Yanlış, tekrar dene!');
+  }
+}
 
-  window.fcAnswer = function(isKnown) {
-    total++;
-    if (isKnown) { known++; addScore(5); showToast('✓ Great!', 'success'); }
-    else { resetStreak(); showToast('Keep practicing!', 'info'); }
-    ci = (ci + 1) % cards.length;
-    if (ci === 0) {
-      body.innerHTML = `<div class="game-result">
-        <div class="game-result-emoji">${known>=cards.length*0.8?'🏆':known>cards.length*0.5?'⭐':'📚'}</div>
-        <div class="game-result-score">${known}/${cards.length}</div>
-        <div class="game-result-sub">Cards you know! ${known>=cards.length*0.8?'Outstanding! 🎉':'Keep reviewing the ones you missed.'}</div>
-        <div class="game-result-btns">
-          <button class="btn btn-primary" onclick="initFlashcard(document.getElementById('modalBody'))">Play Again</button>
-          <button class="btn btn-ghost" onclick="closeGame()">Done</button>
-        </div>
-      </div>`;
-      return;
-    }
-    render();
-  };
-
-  render();
+function showMatchResult(total){
+  state.gamesPlayed++;
+  saveState();
+  var arena = document.getElementById('gameArena');
+  arena.innerHTML =
+    '<div class="result-box">' +
+    '<div class="result-emoji">🎉</div>' +
+    '<div class="result-title">Tebrikler!</div>' +
+    '<div class="result-score">'+total+'/'+total+' eşleştirme tamamlandı · Toplam Puan: '+state.score+'</div>' +
+    '<div class="result-btns">' +
+    '<button class="rbtn primary" onclick="startMatch()">▶ Yeni Oyun</button>' +
+    '<button class="rbtn outline" onclick="setGame(\'flash\')">🃏 Kartlara Geç</button>' +
+    '</div></div>';
 }
 
 /* ============================================================
-   GAME: FILL IN THE BLANKS
-   ============================================================ */
-function initFill(body) {
-  const qs = DATA.fillBlanks;
-  let qi = 0, score = 0;
+   FLASHCARD GAME
+============================================================ */
+var flashWords = [];
+var flashIdx = 0;
+var flashKnew = 0;
 
-  function render() {
-    const q = qs[qi];
-    const letters = ['A','B','C','D'];
-    body.innerHTML = `
-      <div class="score-bar">
-        <div class="score-box"><div class="score-num">${qi+1}/${qs.length}</div><div class="score-lbl">Question</div></div>
-        <div class="score-box"><div class="score-num" style="color:var(--emerald)">${score}</div><div class="score-lbl">Score</div></div>
-        <div class="score-box"><div class="score-num" style="color:var(--blue)">${q.diff}</div><div class="score-lbl">Level</div></div>
-      </div>
-      <div class="fill-sent">${q.sent.replace(/___/g, '<span class="fill-blank" id="fillBlank">?</span>')}</div>
-      <div class="opts-grid">
-        ${q.opts.map((o,i)=>`<button class="opt" onclick="fillPick(${i})" data-i="${i}">
-          <div class="opt-l">${letters[i]}</div><span>${o}</span>
-        </button>`).join('')}
-      </div>
-      <div id="fillFb" style="margin-top:1.25rem"></div>
-    `;
+function startFlash(){
+  flashWords = getWords();
+  flashIdx = 0;
+  flashKnew = 0;
+  renderFlash();
+}
+
+function renderFlash(){
+  var arena = document.getElementById('gameArena');
+  var color = lv_color(state.level);
+  
+  if(flashIdx >= flashWords.length){
+    state.gamesPlayed++;
+    saveState();
+    arena.innerHTML =
+      '<div class="result-box">' +
+      '<div class="result-emoji">🃏</div>' +
+      '<div class="result-title">Kart Seti Bitti!</div>' +
+      '<div class="result-score">'+flashKnew+'/'+flashWords.length+' kart bildiniz</div>' +
+      '<div class="result-btns">' +
+      '<button class="rbtn primary" onclick="startFlash()">▶ Tekrar</button>' +
+      '<button class="rbtn outline" onclick="setGame(\'quiz\')">⚡ Quiz\'e Geç</button>' +
+      '</div></div>';
+    return;
   }
+  
+  var w = flashWords[flashIdx];
+  arena.innerHTML =
+    '<div class="arena-hdr">' +
+    '<div class="arena-title">🃏 Kelime Kartları</div>' +
+    '<div class="arena-meta">' +
+    '<span class="arena-badge" style="background:'+color+'">'+state.level+'</span>' +
+    '<span class="flash-progress">'+( flashIdx+1)+' / '+flashWords.length+'</span>' +
+    '</div></div>' +
+    '<div class="flash-wrap">' +
+    '<div class="flashcard" id="fc" onclick="flipCard()">' +
+    '<div class="flash-inner" id="fi">' +
+    '<div class="flash-front">' +
+    '<div class="flash-hint">🖱 Tıkla · çevir</div>' +
+    '<div class="flash-word">'+w.en+'</div>' +
+    '</div>' +
+    '<div class="flash-back">' +
+    '<div class="flash-tr">'+w.tr+'</div>' +
+    '<div class="flash-ex">'+w.ex+'</div>' +
+    '</div>' +
+    '</div></div>' +
+    '<div class="flash-nav">' +
+    '<button class="flash-btn skip" onclick="flashNext(false)">✗ Bilmedim</button>' +
+    '<button class="flash-btn flip-btn" onclick="flipCard()">↻ Çevir</button>' +
+    '<button class="flash-btn knew" onclick="flashNext(true)">✓ Bildim</button>' +
+    '</div></div>';
+}
 
-  window.fillPick = function(i) {
-    const q = qs[qi];
-    document.querySelectorAll('.opt').forEach(b => b.disabled = true);
-    const correct = i === q.a;
-    document.querySelectorAll('.opt')[i].classList.add(correct ? 'correct' : 'wrong');
-    if (!correct) document.querySelectorAll('.opt')[q.a].classList.add('correct');
-    document.getElementById('fillBlank').textContent = q.opts[q.a];
-    if (correct) { score++; addScore(10); } else { resetStreak(); }
+function flipCard(){
+  var fi = document.getElementById('fi');
+  if(fi) fi.classList.toggle('flipped');
+}
 
-    const fb = document.getElementById('fillFb');
-    fb.innerHTML = `
-      <div style="padding:0.75rem 1rem;border-radius:var(--radius);background:${correct?'#f0fdf4':'#fef2f2'};color:${correct?'#065f46':'#991b1b'};font-size:14px;margin-bottom:0.75rem">
-        ${correct?'✅ Correct!':'❌ Correct answer: <strong>'+q.opts[q.a]+'</strong>'}<br>
-        <span style="font-size:12px;color:inherit;opacity:0.7">💡 Tip: ${q.tip}</span>
-      </div>
-      ${qi < qs.length-1 ? `<button class="btn btn-primary btn-sm" onclick="fillNext()">Next →</button>`
-      : `<button class="btn btn-gold btn-sm" onclick="fillDone()">See Results 🎉</button>`}`;
-  };
-
-  window.fillNext = function() { qi++; render(); };
-  window.fillDone = function() {
-    body.innerHTML = `<div class="game-result">
-      <div class="game-result-emoji">${score===qs.length?'🏆':score>qs.length/2?'⭐':'📚'}</div>
-      <div class="game-result-score">${score}/${qs.length}</div>
-      <div class="game-result-sub">${score>=qs.length*0.8?'Excellent grammar skills!':'Keep practising — you\'re improving!'}</div>
-      <div class="game-result-btns">
-        <button class="btn btn-primary" onclick="initFill(document.getElementById('modalBody'))">Play Again</button>
-        <button class="btn btn-ghost" onclick="closeGame()">Done</button>
-      </div>
-    </div>`;
-  };
-
-  render();
+function flashNext(knew){
+  if(knew){ flashKnew++; state.score+=5; state.correct++; state.streak++; }
+  else{ state.streak=0; }
+  flashIdx++;
+  saveState();
+  renderFlash();
 }
 
 /* ============================================================
-   GAME: WORD MATCHING
-   ============================================================ */
-function initMatch(body) {
-  const pairs = DATA.matching.slice(0, 8);
-  let matched = 0, selected = null, start = Date.now(), timerRef = null;
-  const shuffledEn = [...pairs].sort(() => Math.random() - 0.5);
-  const shuffledTr = [...pairs].sort(() => Math.random() - 0.5);
+   SPELL / GUESS GAME
+============================================================ */
+var spellWords = [];
+var spellIdx = 0;
+var spellCorrect = 0;
+var spellInput = '';
 
-  function render() {
-    body.innerHTML = `
-      <div class="score-bar">
-        <div class="score-box"><div class="score-num">${matched}/${pairs.length}</div><div class="score-lbl">Matched</div></div>
-        <div class="score-box"><div class="score-num timer-num" id="mTimer">0s</div><div class="score-lbl">Time</div></div>
-        <div class="score-box"><div class="score-num" style="color:var(--purple)">${pairs.length-matched}</div><div class="score-lbl">Remaining</div></div>
-      </div>
-      <div class="match-grid">
-        <div class="match-col">${shuffledEn.map((p,i)=>`<div class="match-item" id="en${i}" data-word="${p.en}" data-type="en" onclick="matchClick(this)">${p.en}</div>`).join('')}</div>
-        <div class="match-col">${shuffledTr.map((p,i)=>`<div class="match-item" id="tr${i}" data-word="${p.en}" data-type="tr" onclick="matchClick(this)">${p.tr}</div>`).join('')}</div>
-      </div>
-    `;
-    timerRef = setInterval(() => {
-      const el = document.getElementById('mTimer');
-      if (el) el.textContent = Math.floor((Date.now()-start)/1000) + 's';
-    }, 1000);
+function startSpell(){
+  spellWords = getWords().slice(0,10);
+  spellIdx = 0;
+  spellCorrect = 0;
+  renderSpell();
+}
+
+function renderSpell(){
+  var arena = document.getElementById('gameArena');
+  var color = lv_color(state.level);
+  
+  if(spellIdx >= spellWords.length){
+    state.gamesPlayed++;
+    saveState();
+    arena.innerHTML =
+      '<div class="result-box">' +
+      '<div class="result-emoji">✏️</div>' +
+      '<div class="result-title">Oyun Bitti!</div>' +
+      '<div class="result-score">'+spellCorrect+'/'+spellWords.length+' doğru bildiniz</div>' +
+      '<div class="result-btns">' +
+      '<button class="rbtn primary" onclick="startSpell()">▶ Tekrar</button>' +
+      '<button class="rbtn outline" onclick="setGame(\'match\')">🔗 Eşleştir</button>' +
+      '</div></div>';
+    return;
   }
+  
+  var w = spellWords[spellIdx];
+  // Kelimeyi karıştır
+  var letters = shuffle(w.en.split(''));
+  
+  arena.innerHTML =
+    '<div class="arena-hdr">' +
+    '<div class="arena-title">✏️ Tahmin Et</div>' +
+    '<div class="arena-meta">' +
+    '<span class="arena-badge" style="background:'+color+'">'+state.level+'</span>' +
+    '<span style="font-size:.82rem;color:var(--ink4)">'+(spellIdx+1)+'/'+spellWords.length+'</span>' +
+    '</div></div>' +
+    '<div class="spell-wrap">' +
+    '<div class="spell-target">Türkçe: <strong>'+w.tr+'</strong></div>' +
+    '<div class="spell-hint">'+ w.en.split('').map(function(c,i){return i===0?c:'_';}).join(' ')+'</div>' +
+    '<div class="spell-img-hint">'+w.ex+'</div>' +
+    '<input class="spell-input" id="spellInput" type="text" placeholder="Kelimeyi yaz..." autocomplete="off" autocorrect="off" spellcheck="false">' +
+    '<div><button class="spell-submit" onclick="checkSpell()">Kontrol Et →</button></div>' +
+    '<div class="spell-feedback" id="spellFb"></div>' +
+    '<div class="spell-letters" id="spellLetters">' +
+    letters.map(function(l){ return '<div class="spell-letter" onclick="addLetter(\''+l+'\')">'+l+'</div>';}).join('')+
+    '</div>' +
+    '</div>';
+  
+  var inp = document.getElementById('spellInput');
+  if(inp){
+    inp.focus();
+    inp.addEventListener('keydown',function(e){if(e.key==='Enter') checkSpell();});
+  }
+}
 
-  window.matchClick = function(el) {
-    if (el.classList.contains('matched')) return;
-    if (!selected) {
-      selected = el;
-      el.classList.add('selected');
-    } else {
-      if (selected === el) { el.classList.remove('selected'); selected = null; return; }
-      if (selected.dataset.word === el.dataset.word && selected.dataset.type !== el.dataset.type) {
-        // Correct!
-        selected.classList.remove('selected'); selected.classList.add('matched');
-        el.classList.add('matched'); selected = null; matched++;
-        addScore(15);
-        if (matched === pairs.length) {
-          clearInterval(timerRef);
-          const secs = Math.floor((Date.now()-start)/1000);
-          setTimeout(() => {
-            body.innerHTML = `<div class="game-result">
-              <div class="game-result-emoji">🏆</div>
-              <div class="game-result-score">${matched}/${pairs.length}</div>
-              <div class="game-result-sub">Completed in ${secs} seconds!</div>
-              <div class="game-result-btns">
-                <button class="btn btn-primary" onclick="initMatch(document.getElementById('modalBody'))">Play Again</button>
-                <button class="btn btn-ghost" onclick="closeGame()">Done</button>
-              </div>
-            </div>`;
-          }, 400);
-        }
-      } else {
-        // Wrong
-        el.classList.add('wrong'); selected.classList.add('wrong');
-        resetStreak();
-        setTimeout(() => {
-          el.classList.remove('wrong','selected');
-          selected.classList.remove('wrong','selected');
-          selected = null;
-        }, 600);
-      }
-    }
-  };
+function addLetter(l){
+  var inp = document.getElementById('spellInput');
+  if(inp) inp.value += l;
+}
 
-  render();
+function checkSpell(){
+  var inp = document.getElementById('spellInput');
+  var fb  = document.getElementById('spellFb');
+  if(!inp||!fb) return;
+  var answer = inp.value.trim().toLowerCase();
+  var correct = spellWords[spellIdx].en.toLowerCase();
+  
+  if(answer === correct){
+    inp.classList.add('correct');
+    fb.style.color = 'var(--green)';
+    fb.textContent = '✅ Doğru! +15 puan';
+    spellCorrect++;
+    state.score += 15;
+    state.correct++;
+    state.streak++;
+    saveState();
+    setTimeout(function(){ spellIdx++; renderSpell(); }, 1000);
+  } else {
+    inp.classList.add('wrong');
+    inp.classList.add('shake');
+    fb.style.color = 'var(--red)';
+    fb.textContent = '❌ Doğrusu: ' + correct;
+    state.streak = 0;
+    saveState();
+    setTimeout(function(){
+      inp.classList.remove('wrong','shake');
+      inp.value = '';
+      fb.textContent = '';
+    }, 1500);
+    setTimeout(function(){ spellIdx++; renderSpell(); }, 2000);
+  }
 }
 
 /* ============================================================
-   GAME: SPEED QUIZ
-   ============================================================ */
-function initSpeed(body) {
-  const qs = [...DATA.speed].sort(() => Math.random()-0.5);
-  let qi = 0, score = 0, timePerQ = 15;
-  let timerRef = null, timeLeft = timePerQ;
-  const letters = ['A','B','C','D'];
+   QUIZ GAME
+============================================================ */
+var quizWords = [];
+var quizIdx = 0;
+var quizCorrect = 0;
+var quizHistory = [];
 
-  function render() {
-    if (qi >= qs.length) { speedDone(); return; }
-    const q = qs[qi];
-    timeLeft = timePerQ;
+function startQuiz(){
+  quizWords = getWords().slice(0,12);
+  quizIdx = 0;
+  quizCorrect = 0;
+  quizHistory = [];
+  renderQuiz();
+}
 
-    body.innerHTML = `
-      <div class="score-bar">
-        <div class="score-box"><div class="score-num">${qi+1}/${qs.length}</div><div class="score-lbl">Question</div></div>
-        <div class="score-box"><div class="score-num" style="color:var(--emerald)">${score}</div><div class="score-lbl">Score</div></div>
-        <div class="score-box"><div class="score-num timer-num" id="spTimer">${timeLeft}</div><div class="score-lbl">Seconds</div></div>
-      </div>
-      <div class="speed-timer-bar"><div class="speed-timer-fill" id="spFill" style="width:100%"></div></div>
-      <div class="speed-q-text">${q.q.replace(/___/g,'<strong>___</strong>')}</div>
-      <div class="speed-opts">
-        ${q.opts.map((o,i)=>`<button class="speed-opt" onclick="speedAnswer(${i})" data-i="${i}">${o}</button>`).join('')}
-      </div>
-    `;
-
-    timerRef = setInterval(() => {
-      timeLeft--;
-      const el = document.getElementById('spTimer');
-      const fill = document.getElementById('spFill');
-      if (el) el.textContent = timeLeft;
-      if (fill) fill.style.width = (timeLeft/timePerQ*100) + '%';
-      if (timeLeft <= 0) {
-        clearInterval(timerRef);
-        timeoutAnswer(q.a);
-      }
-    }, 1000);
+function renderQuiz(){
+  var arena = document.getElementById('gameArena');
+  var color = lv_color(state.level);
+  
+  if(quizIdx >= quizWords.length){
+    state.gamesPlayed++;
+    saveState();
+    var pct = Math.round(quizCorrect/quizWords.length*100);
+    var emoji = pct>=80?'🏆':pct>=60?'👍':'💪';
+    arena.innerHTML =
+      '<div class="result-box">' +
+      '<div class="result-emoji">'+emoji+'</div>' +
+      '<div class="result-title">Quiz Bitti!</div>' +
+      '<div class="result-score">'+quizCorrect+'/'+quizWords.length+' doğru · %'+pct+' · Toplam: '+state.score+' puan</div>' +
+      '<div class="result-btns">' +
+      '<button class="rbtn primary" onclick="startQuiz()">▶ Yeni Quiz</button>' +
+      '<button class="rbtn outline" onclick="setGame(\'spell\')">✏️ Tahmin\'e Geç</button>' +
+      '</div></div>';
+    return;
   }
-
-  window.speedAnswer = function(i) {
-    clearInterval(timerRef);
-    const q = qs[qi];
-    document.querySelectorAll('.speed-opt').forEach(b => b.disabled = true);
-    const correct = i === q.a;
-    document.querySelectorAll('.speed-opt')[i].classList.add(correct ? 'correct' : 'wrong');
-    if (!correct) document.querySelectorAll('.speed-opt')[q.a].classList.add('correct');
-    if (correct) { score++; addScore(Math.ceil(timeLeft)); showToast('+' + Math.ceil(timeLeft) + ' pts!', 'success'); }
-    else { resetStreak(); }
-    setTimeout(() => { qi++; render(); }, 1200);
-  };
-
-  function timeoutAnswer(correctIdx) {
-    document.querySelectorAll('.speed-opt').forEach(b => b.disabled = true);
-    document.querySelectorAll('.speed-opt')[correctIdx].classList.add('correct');
-    showToast("⏰ Time's up!", 'error');
-    resetStreak();
-    setTimeout(() => { qi++; render(); }, 1200);
+  
+  var w = quizWords[quizIdx];
+  // 3 yanlış seçenek üret
+  var pool = getWords().filter(function(x){return x.en!==w.en;});
+  var wrongs = shuffle(pool).slice(0,3);
+  var opts = shuffle([{text:w.tr,correct:true}].concat(wrongs.map(function(x){return {text:x.tr,correct:false};})));
+  var letters = ['A','B','C','D'];
+  
+  var dotHtml = '';
+  for(var i=0;i<quizWords.length;i++){
+    var cls = i<quizHistory.length ? (quizHistory[i]?'qs-dot c':'qs-dot w') : (i===quizIdx?'qs-dot cur':'qs-dot');
+    dotHtml += '<div class="'+cls+'"></div>';
   }
+  
+  arena.innerHTML =
+    '<div class="arena-hdr">' +
+    '<div class="arena-title">⚡ Hızlı Quiz</div>' +
+    '<div class="arena-meta">' +
+    '<span class="arena-badge" style="background:'+color+'">'+state.level+'</span>' +
+    '<span style="font-size:.82rem;color:var(--ink4)">'+(quizIdx+1)+'/'+quizWords.length+'</span>' +
+    '</div></div>' +
+    '<div class="quiz-score-bar">'+dotHtml+'</div>' +
+    '<div class="quiz-q"><strong>"'+w.en+'"</strong> kelimesinin Türkçesi nedir?</div>' +
+    '<div class="quiz-unit">'+w.ex+'</div>' +
+    '<div class="quiz-opts">' +
+    opts.map(function(o,i){
+      return '<button class="quiz-opt" onclick="pickQuiz(this,'+o.correct+')" data-correct="'+o.correct+'">' +
+        '<span class="opt-letter">'+letters[i]+'</span>'+o.text+'</button>';
+    }).join('')+
+    '</div>' +
+    '<button class="quiz-next" id="qnext" onclick="nextQuiz()">Sonraki →</button>';
+}
 
-  function speedDone() {
-    body.innerHTML = `<div class="game-result">
-      <div class="game-result-emoji">${score>=qs.length*0.8?'🏆':score>=qs.length*0.5?'⭐':'📚'}</div>
-      <div class="game-result-score">${score}/${qs.length}</div>
-      <div class="game-result-sub">${score>=qs.length*0.8?'Speed master! 🔥':'Nice effort — practice makes perfect!'}</div>
-      <div class="game-result-btns">
-        <button class="btn btn-primary" onclick="initSpeed(document.getElementById('modalBody'))">Play Again</button>
-        <button class="btn btn-ghost" onclick="closeGame()">Done</button>
-      </div>
-    </div>`;
+function pickQuiz(el, correct){
+  if(document.querySelector('.quiz-opt.correct')||document.querySelector('.quiz-opt.wrong.answered')) return;
+  document.querySelectorAll('.quiz-opt').forEach(function(o){
+    o.classList.add('answered');
+    if(o.dataset.correct==='true') o.classList.add('correct');
+  });
+  if(correct){
+    el.classList.add('correct');
+    quizCorrect++;
+    quizHistory.push(true);
+    state.score += 20;
+    state.correct++;
+    state.streak++;
+    showToast('✅ Doğru! +20 puan');
+  } else {
+    el.classList.add('wrong');
+    quizHistory.push(false);
+    state.streak = 0;
+    showToast('❌ Yanlış!');
   }
+  saveState();
+  var nxt = document.getElementById('qnext');
+  if(nxt) nxt.style.display='inline-block';
+  
+  // Otomatik geç
+  setTimeout(nextQuiz, 1200);
+}
 
-  render();
+function nextQuiz(){
+  quizIdx++;
+  renderQuiz();
 }
 
 /* ============================================================
-   GAME: SENTENCE BUILDER
-   ============================================================ */
-function initBuilder(body) {
-  const qs = DATA.builder;
-  let qi = 0, score = 0;
-
-  function render() {
-    if (qi >= qs.length) { builderDone(); return; }
-    const q = qs[qi];
-    const shuffled = [...q.words].sort(() => Math.random()-0.5);
-    let placed = [];
-    let bank = [...shuffled];
-
-    function updateUI() {
-      document.getElementById('bSentence').innerHTML = placed.length
-        ? placed.map((w,i)=>`<span class="word-tile placed" onclick="removeWord(${i})">${w}</span>`).join(' ')
-        : '<span style="color:var(--text3);font-size:14px">Click words below to build the sentence...</span>';
-    }
-
-    body.innerHTML = `
-      <div class="score-bar">
-        <div class="score-box"><div class="score-num">${qi+1}/${qs.length}</div><div class="score-lbl">Sentence</div></div>
-        <div class="score-box"><div class="score-num" style="color:var(--emerald)">${score}</div><div class="score-lbl">Score</div></div>
-        <div class="score-box"><div class="score-num" style="color:var(--purple)">🇹🇷</div><div class="score-lbl">Hint</div></div>
-      </div>
-      <div class="builder-hint">🇹🇷 ${q.tr}</div>
-      <div class="builder-sentence-area" id="bSentence">
-        <span style="color:var(--text3);font-size:14px">Click words below to build the sentence...</span>
-      </div>
-      <p style="font-size:12px;color:var(--text3);margin-bottom:0.75rem">Word bank — click to place, click placed word to remove:</p>
-      <div class="word-bank" id="bBank">
-        ${shuffled.map((w,i)=>`<span class="word-tile bank" id="bw${i}" onclick="placeWord('${w}',${i})">${w}</span>`).join('')}
-      </div>
-      <div class="builder-result" id="bResult"></div>
-      <div style="display:flex;gap:10px;margin-top:1.25rem;flex-wrap:wrap">
-        <button class="btn btn-ghost btn-sm" onclick="resetBuilder()">↺ Reset</button>
-        <button class="btn btn-primary btn-sm" onclick="checkBuilder()">✓ Check</button>
-      </div>
-    `;
-
-    window.placeWord = function(w, bankIdx) {
-      const el = document.getElementById('bw' + bankIdx);
-      if (el && !el.disabled) {
-        placed.push(w);
-        el.style.opacity = '0.3';
-        el.disabled = true;
-        el.style.pointerEvents = 'none';
-        bank[bankIdx] = null;
-        updateUI();
-      }
-    };
-
-    window.removeWord = function(placedIdx) {
-      const w = placed[placedIdx];
-      placed.splice(placedIdx, 1);
-      // Re-enable in bank
-      document.querySelectorAll('.word-tile.bank').forEach(el => {
-        if (el.textContent === w && el.style.opacity === '0.3') {
-          el.style.opacity = '1'; el.disabled = false; el.style.pointerEvents = '';
-          return;
-        }
-      });
-      updateUI();
-    };
-
-    window.resetBuilder = function() {
-      placed = [];
-      document.querySelectorAll('.word-tile.bank').forEach(el => {
-        el.style.opacity = '1'; el.disabled = false; el.style.pointerEvents = '';
-      });
-      updateUI();
-      document.getElementById('bResult').style.display = 'none';
-    };
-
-    window.checkBuilder = function() {
-      const attempt = placed.join(' ');
-      const correct = attempt.trim() === q.correct.trim();
-      const el = document.getElementById('bResult');
-      el.style.display = 'block';
-      el.className = 'builder-result ' + (correct ? 'correct' : 'wrong');
-      if (correct) {
-        el.innerHTML = `✅ Correct! "${q.correct}"`;
-        score++; addScore(20);
-        setTimeout(() => { qi++; render(); }, 1500);
-      } else {
-        el.innerHTML = `❌ Not quite. Try rearranging! Correct: "<strong>${q.correct}</strong>"`;
-        resetStreak();
-        setTimeout(() => { el.style.display='none'; }, 3000);
-      }
-    };
-  }
-
-  function builderDone() {
-    body.innerHTML = `<div class="game-result">
-      <div class="game-result-emoji">${score>=qs.length*0.8?'🏆':score>qs.length/2?'⭐':'📚'}</div>
-      <div class="game-result-score">${score}/${qs.length}</div>
-      <div class="game-result-sub">Sentences built correctly!</div>
-      <div class="game-result-btns">
-        <button class="btn btn-primary" onclick="initBuilder(document.getElementById('modalBody'))">Play Again</button>
-        <button class="btn btn-ghost" onclick="closeGame()">Done</button>
-      </div>
-    </div>`;
-  }
-
-  render();
-}
-
-/* ============================================================
-   GAME: LISTENING CHALLENGE
-   ============================================================ */
-function initListen(body) {
-  const qs = DATA.listening;
-  let qi = 0, score = 0;
-  const letters = ['A','B','C','D'];
-
-  function render() {
-    if (qi >= qs.length) { listenDone(); return; }
-    const q = qs[qi];
-    body.innerHTML = `
-      <div class="score-bar">
-        <div class="score-box"><div class="score-num">${qi+1}/${qs.length}</div><div class="score-lbl">Question</div></div>
-        <div class="score-box"><div class="score-num" style="color:var(--emerald)">${score}</div><div class="score-lbl">Score</div></div>
-        <div class="score-box"><div class="score-num">🎧</div><div class="score-lbl">Listen</div></div>
-      </div>
-      <div class="audio-player-box">
-        <button class="ap-btn" id="apBtn${qi}" onclick="playAudio('${qi}','${escapeJs(q.sent)}')">▶</button>
-        <div class="ap-info">
-          <div class="ap-title">Sentence ${qi+1}</div>
-          <div class="ap-sub">Press play to listen · Replay as needed · ${q.note}</div>
-          <div class="ap-progress"><div class="ap-prog-fill" id="apFill${qi}"></div></div>
-        </div>
-      </div>
-      <p style="font-size:13px;color:var(--text2);margin-bottom:1rem;font-weight:500">Which did you hear?</p>
-      <div class="opts-grid">
-        ${q.opts.map((o,i)=>`<button class="opt" onclick="listenPick(${i})" data-i="${i}">
-          <div class="opt-l">${letters[i]}</div><span>${o}</span>
-        </button>`).join('')}
-      </div>
-      <div id="listenFb" style="margin-top:1rem"></div>
-    `;
-  }
-
-  function escapeJs(s) { return s.replace(/'/g,"\\'"); }
-
-  window.playAudio = function(id, text) {
-    if (speechSynth.speaking) speechSynth.cancel();
-    const btn = document.getElementById('apBtn' + id);
-    const fill = document.getElementById('apFill' + id);
-    if (btn) { btn.textContent='⏸'; btn.classList.add('playing'); }
-    const utt = new SpeechSynthesisUtterance(text);
-    utt.lang='en-US'; utt.rate=0.82; utt.pitch=1;
-    let elapsed = 0;
-    const estDur = (text.split(' ').length / 120) * 60000;
-    const interval = setInterval(() => {
-      elapsed += 150;
-      if (fill) fill.style.width = Math.min((elapsed/estDur)*100, 95) + '%';
-    }, 150);
-    utt.onend = () => {
-      if (btn) { btn.textContent='▶'; btn.classList.remove('playing'); }
-      if (fill) fill.style.width = '100%';
-      clearInterval(interval);
-    };
-    speechSynth.speak(utt);
-  };
-
-  window.listenPick = function(i) {
-    const q = qs[qi];
-    document.querySelectorAll('.opt').forEach(b => b.disabled = true);
-    const correct = i === q.a;
-    document.querySelectorAll('.opt')[i].classList.add(correct ? 'correct' : 'wrong');
-    if (!correct) document.querySelectorAll('.opt')[q.a].classList.add('correct');
-    if (correct) { score++; addScore(10); } else { resetStreak(); }
-    const fb = document.getElementById('listenFb');
-    fb.innerHTML = `
-      <div style="padding:0.75rem 1rem;border-radius:var(--radius);background:${correct?'#f0fdf4':'#fef2f2'};color:${correct?'#065f46':'#991b1b'};font-size:14px;margin-bottom:0.75rem">
-        ${correct?'✅ Correct! Well done!':'❌ The correct sentence was: <strong>'+q.opts[q.a]+'</strong>'}
-      </div>
-      ${qi<qs.length-1?`<button class="btn btn-primary btn-sm" onclick="listenNext()">Next →</button>`:`<button class="btn btn-gold btn-sm" onclick="listenDone()">See Results 🎉</button>`}
-    `;
-  };
-
-  window.listenNext = function() { qi++; render(); };
-  function listenDone() {
-    body.innerHTML = `<div class="game-result">
-      <div class="game-result-emoji">${score>=qs.length*0.8?'🏆':score>qs.length/2?'⭐':'📚'}</div>
-      <div class="game-result-score">${score}/${qs.length}</div>
-      <div class="game-result-sub">${score>=qs.length*0.8?'Excellent listening skills!':'Keep training your ear!'}</div>
-      <div class="game-result-btns">
-        <button class="btn btn-primary" onclick="initListen(document.getElementById('modalBody'))">Play Again</button>
-        <button class="btn btn-ghost" onclick="closeGame()">Done</button>
-      </div>
-    </div>`;
-  }
-  window.listenDone = listenDone;
-
-  render();
-}
-
-/* ============================================================
-   GAME: DRAG & DROP
-   ============================================================ */
-function initDrag(body) {
-  const sets = DATA.drag;
-  let si = 0, score = 0;
-
-  function render() {
-    if (si >= sets.length) { dragDone(); return; }
-    const set = sets[si];
-    const shuffled = [...set.items].sort(() => Math.random()-0.5);
-    let placements = {}; // word -> category
-
-    body.innerHTML = `
-      <div class="score-bar">
-        <div class="score-box"><div class="score-num">${si+1}/${sets.length}</div><div class="score-lbl">Round</div></div>
-        <div class="score-box"><div class="score-num" style="color:var(--emerald)">${score}</div><div class="score-lbl">Points</div></div>
-        <div class="score-box"><div class="score-num">${set.items.length}</div><div class="score-lbl">Words</div></div>
-      </div>
-      <p style="font-size:15px;font-weight:700;color:var(--navy);margin-bottom:1.25rem">📋 ${set.title}</p>
-      <div class="drag-bank" id="dragBank">
-        ${shuffled.map((item,i)=>`<div class="drag-word" draggable="true" id="dw${i}" data-word="${item.w}" data-cat="${item.cat}"
-          ondragstart="dragStart(event,'${item.w}','${item.cat}')">${item.w}</div>`).join('')}
-      </div>
-      <div class="drag-categories">
-        ${set.categories.map(cat=>`
-          <div class="drag-zone" id="zone_${encodeURIComponent(cat)}"
-            ondragover="event.preventDefault();this.classList.add('over')"
-            ondragleave="this.classList.remove('over')"
-            ondrop="dropWord(event,'${cat}')">
-            <div class="drag-zone-title">${cat}</div>
-            <div class="drag-words" id="words_${encodeURIComponent(cat)}"></div>
-          </div>`).join('')}
-      </div>
-      <div id="dragFb" style="margin-top:1rem"></div>
-      <div style="display:flex;gap:10px;margin-top:1rem;flex-wrap:wrap">
-        <button class="btn btn-primary btn-sm" onclick="checkDrag()">✓ Check Answers</button>
-      </div>
-    `;
-
-    // Mobile fallback — click to place
-    document.querySelectorAll('.drag-word').forEach(el => {
-      el.addEventListener('click', function() {
-        // Show simple category picker on mobile
-        const word = this.dataset.word;
-        const cat = this.dataset.cat;
-        const picker = document.createElement('div');
-        picker.style.cssText='position:fixed;inset:0;z-index:300;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center';
-        picker.innerHTML=`<div style="background:white;border-radius:16px;padding:2rem;max-width:340px;width:90%">
-          <p style="font-weight:700;color:var(--navy);margin-bottom:1rem">Place "<strong>${word}</strong>" in:</p>
-          ${set.categories.map(c=>`<button style="width:100%;padding:12px;margin-bottom:8px;border:1.5px solid var(--border);border-radius:10px;cursor:pointer;font-weight:600;background:white;font-family:inherit" onclick="mobilePlace('${word}','${cat}','${c}','${encodeURIComponent(word)}')">${c}</button>`).join('')}
-          <button style="width:100%;padding:10px;background:var(--bg2);border:none;border-radius:8px;cursor:pointer;margin-top:4px;font-family:inherit" onclick="this.closest('[style*=fixed]').remove()">Cancel</button>
-        </div>`;
-        document.body.appendChild(picker);
-        window.mobilePlace = function(word, correctCat, chosenCat, wEnc) {
-          picker.remove();
-          placements[word] = chosenCat;
-          const wordEl = document.querySelector(`[data-word="${word}"].drag-word`);
-          if (wordEl) { wordEl.style.opacity='0.4'; wordEl.style.pointerEvents='none'; }
-          const zone = document.getElementById('words_' + encodeURIComponent(chosenCat));
-          if (zone) zone.innerHTML += `<div class="drag-word" style="cursor:default" data-word="${word}" data-placed="true">${word}</div>`;
-        };
-      });
-    });
-
-    let dragData = {};
-    window.dragStart = function(e, word, cat) {
-      dragData = { word, cat };
-      e.dataTransfer.setData('text', word);
-    };
-
-    window.dropWord = function(e, targetCat) {
-      e.preventDefault();
-      document.querySelectorAll('.drag-zone').forEach(z => z.classList.remove('over'));
-      const word = dragData.word;
-      const correctCat = dragData.cat;
-      if (!word) return;
-      placements[word] = targetCat;
-      const wordEl = document.querySelector(`[data-word="${word}"].drag-word:not([data-placed])`);
-      if (wordEl) { wordEl.style.opacity='0.4'; wordEl.style.pointerEvents='none'; }
-      const zone = document.getElementById('words_' + encodeURIComponent(targetCat));
-      if (zone) zone.innerHTML += `<div class="drag-word" data-word="${word}" data-placed="true" style="cursor:default">${word}</div>`;
-    };
-
-    window.checkDrag = function() {
-      let correct = 0, total = set.items.length;
-      set.items.forEach(item => {
-        const placed = placements[item.w];
-        if (placed === item.cat) correct++;
-      });
-      const fb = document.getElementById('dragFb');
-      const correct_pct = Math.round((correct/total)*100);
-      fb.innerHTML = `
-        <div style="padding:1rem;border-radius:var(--radius);background:${correct>=total*0.8?'#f0fdf4':'#fffbeb'};border:1px solid ${correct>=total*0.8?'#bbf7d0':'#fde68a'};font-size:14px;margin-bottom:0.75rem">
-          ${correct>=total*0.8?'✅':'⚠️'} You sorted <strong>${correct}/${total}</strong> correctly (${correct_pct}%)
-          ${correct<total?'<br><span style="font-size:12px;color:var(--text2)">Check the answer key below</span>':''}
-        </div>
-        <div style="font-size:12px;color:var(--text2);margin-bottom:0.75rem;display:flex;flex-wrap:wrap;gap:6px">
-          ${set.items.map(it=>`<span style="padding:4px 10px;border-radius:6px;background:${placements[it.w]===it.cat?'#f0fdf4':'#fef2f2'};color:${placements[it.w]===it.cat?'#065f46':'#991b1b'}">${it.w} → ${it.cat}</span>`).join('')}
-        </div>
-        ${si<sets.length-1?`<button class="btn btn-primary btn-sm" onclick="dragNext(${correct})">Next Round →</button>`:`<button class="btn btn-gold btn-sm" onclick="dragDone()">See Final Results 🎉</button>`}
-      `;
-      score += correct; addScore(correct * 5);
-    };
-
-    window.dragNext = function(pts) { si++; render(); };
-  }
-
-  function dragDone() {
-    body.innerHTML = `<div class="game-result">
-      <div class="game-result-emoji">🎯</div>
-      <div class="game-result-score">${score}</div>
-      <div class="game-result-sub">Points earned across all rounds!</div>
-      <div class="game-result-btns">
-        <button class="btn btn-primary" onclick="initDrag(document.getElementById('modalBody'))">Play Again</button>
-        <button class="btn btn-ghost" onclick="closeGame()">Done</button>
-      </div>
-    </div>`;
-  }
-  window.dragDone = dragDone;
-
-  render();
-}
-
-/* ============================================================
-   UTILITIES
-   ============================================================ */
-function escapeJs(s) { return s.replace(/'/g,"\\'").replace(/"/g,'\\"'); }
-
-function speakIt(text) {
-  if (speechSynth.speaking) speechSynth.cancel();
-  const utt = new SpeechSynthesisUtterance(text);
-  utt.lang = 'en-US'; utt.rate = 0.82;
-  speechSynth.speak(utt);
-}
-
-function showToast(msg, type = 'info') {
-  const t = document.getElementById('toast');
-  t.textContent = msg;
-  t.className = 'toast ' + type;
+   TOAST
+============================================================ */
+function showToast(msg){
+  var t=document.getElementById('toast');
+  t.textContent=msg;
   t.classList.add('show');
-  setTimeout(() => t.classList.remove('show'), 3000);
+  setTimeout(function(){t.classList.remove('show');},1800);
 }
 
 /* ============================================================
-   SESSION TIMER
-   ============================================================ */
-setInterval(updateStats, 30000);
+   NAV
+============================================================ */
+function toggleMenu(){document.getElementById('navLinks').classList.toggle('open');}
+function closeMenu(){document.getElementById('navLinks').classList.remove('open');}
+
+/* ============================================================
+   INIT
+============================================================ */
+buildUnitSelect();
+startMatch();
 </script>
-<footer>
-  <div class="footer-socials">
-    <a href="https://www.instagram.com/abonlinenglish" target="_blank" title="Instagram" style="font-size:1.2rem;">&#9825;</a>
-    <a href="mailto:ingilizceogrensene@gmail.com" title="E-posta" style="font-size:1.1rem;">@</a>
-  </div>
-  <strong>AbOnlinEnglish</strong> Dil Eğitimi &copy; 2026 — Tüm hakları saklıdır.<br>
-  <span style="margin-top:6px;display:inline-block;">ingilizceogrensene@gmail.com &nbsp;|&nbsp; @abonlinenglish</span>
-</footer>
 </body>
 </html>
