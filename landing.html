@@ -1,311 +1,278 @@
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AbOnlinEnglish – Dil Eğitimi</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<title>AbOnlinEnglish – Birebir Online İngilizce</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-/* ===== SHARED NAV ===== */
-nav{position:fixed;top:0;left:0;right:0;z-index:2000;background:#0f1e3c !important;backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,0.07);}
-.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 28px;height:68px;}
-.logo-wrap{display:flex;align-items:center;gap:12px;text-decoration:none;}
-.logo-svg{width:42px;height:42px;flex-shrink:0;}
-.logo-text{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:900;color:#fff;letter-spacing:-0.5px;line-height:1;}
-.logo-text span{color:#e8a020;}
-.logo-sub{font-size:.65rem;font-weight:500;color:rgba(255,255,255,0.45);letter-spacing:2px;text-transform:uppercase;margin-top:2px;}
-.nav-links{display:flex;gap:2px;list-style:none;margin:0;padding:0;}
-.nav-links a{color:rgba(255,255,255,0.92);text-decoration:none;font-size:.85rem;font-weight:500;padding:8px 13px;border-radius:8px;transition:all .2s;}
-.nav-links a:hover,.nav-links a.active{background:rgba(232,160,32,0.18);color:#f0c060;}
-.nav-cta-btn{background:#e8a020!important;color:#0f1e3c!important;font-weight:700!important;padding:9px 18px!important;border-radius:8px;}
-.nav-cta-btn:hover{background:#f0c060!important;}
-.hamburger{display:none;background:none;border:none;cursor:pointer;color:white;font-size:1.5rem;line-height:1;padding:4px;}
-footer{background:#07111f;color:rgba(255,255,255,0.45);text-align:center;padding:32px 24px;font-size:.85rem;}
-footer strong{color:#e8a020;}
-.footer-socials{display:flex;justify-content:center;gap:16px;margin:16px 0;}
-.footer-socials a{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.6);text-decoration:none;transition:all .2s;}
-.footer-socials a:hover{background:#e8a020;color:#0f1e3c;}
-@media(max-width:700px){
-  .nav-links{display:none;flex-direction:column;position:absolute;top:68px;left:0;right:0;background:rgba(15,30,60,0.99);padding:16px;gap:4px;}
-  .nav-links.open{display:flex;}
-  .hamburger{display:block;}
-}
-/* ===== END SHARED NAV ===== */
-
-:root {
-  --navy: #0f1e3c;
-  --blue: #1a3a6b;
-  --accent: #e8a020;
-  --accent2: #f0c060;
-  --light: #f5f7fa;
-  --white: #ffffff;
-  --text: #222b3a;
-  --muted: #6b7a99;
-  --border: #dde3f0;
-  --card-shadow: 0 4px 24px rgba(15,30,60,0.10);
-  --radius: 14px;
-  --green: #27ae60;
-  --red: #e74c3c;
+:root{
+  --navy:#0c1a30;
+  --navy2:#142240;
+  --gold:#c9920a;
+  --gold2:#e8ad30;
+  --cream:#faf8f4;
+  --white:#ffffff;
+  --text:#1a1f2e;
+  --muted:#6b7280;
+  --border:#e5e3dc;
+  --green:#1a7a4a;
+  --red:#b83a3a;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-body{font-family:'DM Sans',sans-serif;color:var(--text);background:var(--light);min-height:100vh;}
+body{font-family:'Outfit',sans-serif;color:var(--text);background:var(--cream);overflow-x:hidden;}
 
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(15,30,60,0.97);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,0.07);}
-.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 28px;height:68px;}
-.logo-wrap{display:flex;align-items:center;gap:12px;text-decoration:none;}
-.logo-svg{width:42px;height:42px;flex-shrink:0;}
-.logo-text{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:900;color:var(--white);letter-spacing:-0.5px;line-height:1;}
-.logo-text span{color:var(--accent);}
-.logo-sub{font-size:.65rem;font-weight:500;color:rgba(255,255,255,0.45);letter-spacing:2px;text-transform:uppercase;margin-top:2px;}
-.nav-links{display:flex;gap:2px;list-style:none;}
-.nav-links a{color:rgba(255,255,255,0.92);text-decoration:none;font-size:.85rem;font-weight:500;padding:8px 13px;border-radius:8px;transition:all .2s;}
-.nav-links a:hover,.nav-links a.active{background:rgba(232,160,32,0.18);color:var(--accent2);}
-.nav-cta-btn{background:var(--accent);color:var(--navy)!important;font-weight:700!important;padding:9px 18px!important;border-radius:8px;}
-.nav-cta-btn:hover{background:var(--accent2)!important;color:var(--navy)!important;}
-.hamburger{display:none;background:none;border:none;cursor:pointer;color:white;font-size:1.4rem;}
-
-/* HERO */
-.hero{background:linear-gradient(135deg,#0f1e3c 0%,#1a3a6b 55%,#0d2a5a 100%);min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 24px 80px;position:relative;overflow:hidden;}
-.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 30%,rgba(232,160,32,0.12) 0%,transparent 70%);}
-.hero-badge{display:inline-block;background:rgba(232,160,32,0.2);border:1px solid rgba(232,160,32,0.4);color:var(--accent2);font-size:.8rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:6px 18px;border-radius:50px;margin-bottom:24px;}
-.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,6vw,4.2rem);font-weight:900;color:var(--white);line-height:1.1;margin-bottom:22px;}
-.hero h1 em{color:var(--accent);font-style:normal;}
-.hero p{font-size:1.1rem;color:rgba(255,255,255,0.72);max-width:580px;margin:0 auto 36px;line-height:1.75;}
-.hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:60px;}
-.btn-primary{background:var(--accent);color:var(--navy);font-weight:700;padding:14px 32px;border-radius:10px;text-decoration:none;transition:all .2s;border:none;cursor:pointer;font-size:1rem;display:inline-flex;align-items:center;gap:8px;}
-.btn-primary:hover{background:var(--accent2);transform:translateY(-2px);}
-.btn-secondary{background:rgba(255,255,255,0.1);color:white;font-weight:600;padding:14px 32px;border-radius:10px;text-decoration:none;transition:all .2s;border:1px solid rgba(255,255,255,0.2);cursor:pointer;font-size:1rem;}
-.btn-secondary:hover{background:rgba(255,255,255,0.18);}
-
-/* HERO PROMISE STRIP */
-.hero-promise{display:flex;gap:0;justify-content:center;flex-wrap:wrap;border:1px solid rgba(255,255,255,0.1);border-radius:14px;overflow:hidden;max-width:700px;margin:0 auto;}
-.promise-item{flex:1;min-width:160px;padding:18px 20px;border-right:1px solid rgba(255,255,255,0.08);text-align:center;}
-.promise-item:last-child{border-right:none;}
-.promise-num{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:900;color:var(--accent);line-height:1;margin-bottom:4px;}
-.promise-label{font-size:.75rem;color:rgba(255,255,255,0.5);letter-spacing:1px;text-transform:uppercase;}
-
-/* SECTIONS */
-section{padding:88px 24px;}
-.section-inner{max-width:1200px;margin:0 auto;}
-.section-tag{font-size:.75rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent);margin-bottom:10px;}
-.section-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;color:var(--navy);margin-bottom:16px;line-height:1.2;}
-.section-sub{font-size:1.05rem;color:var(--muted);max-width:560px;line-height:1.75;margin-bottom:48px;}
-
-/* ===== PROBLEM ===== */
-#problem{background:var(--navy);}
-#problem .section-title{color:var(--white);}
-#problem .section-tag{color:var(--accent2);}
-#problem .section-sub{color:rgba(255,255,255,0.6);margin-bottom:40px;}
-.problem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,0.06);border-radius:var(--radius);overflow:hidden;border:1px solid rgba(255,255,255,0.06);}
-.problem-card{background:var(--navy);padding:36px 28px;}
-.problem-num{font-family:'Playfair Display',serif;font-size:3.5rem;font-weight:900;color:rgba(255,255,255,0.04);line-height:1;margin-bottom:16px;display:block;letter-spacing:-2px;}
-.problem-title{font-size:1rem;font-weight:700;color:var(--white);margin-bottom:10px;line-height:1.4;}
-.problem-desc{font-size:.9rem;color:rgba(255,255,255,0.5);line-height:1.7;}
-
-/* ===== SOLUTION ===== */
-#solution{background:var(--white);}
-.solution-layout{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
-.solution-steps{display:flex;flex-direction:column;gap:0;}
-.solution-step{display:flex;gap:20px;align-items:flex-start;padding:24px 0;border-bottom:1px solid var(--border);}
-.solution-step:last-child{border-bottom:none;}
-.step-circle{width:40px;height:40px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;color:var(--accent);font-weight:700;font-size:.9rem;flex-shrink:0;margin-top:2px;}
-.step-body h4{font-weight:700;color:var(--navy);margin-bottom:6px;font-size:.97rem;}
-.step-body p{font-size:.88rem;color:var(--muted);line-height:1.65;}
-.solution-callout{background:linear-gradient(135deg,var(--navy),var(--blue));border-radius:20px;padding:44px 36px;color:white;}
-.callout-quote{font-family:'Playfair Display',serif;font-size:1.55rem;font-weight:700;line-height:1.45;margin-bottom:20px;color:white;}
-.callout-quote em{color:var(--accent);font-style:normal;}
-.callout-meta{font-size:.82rem;color:rgba(255,255,255,0.5);letter-spacing:.5px;}
-
-/* ===== HOW IT WORKS ===== */
-#how{background:var(--light);}
-.how-steps{display:flex;flex-direction:column;gap:0;max-width:780px;}
-.how-step{display:grid;grid-template-columns:72px 1fr;gap:24px;padding:28px 0;border-bottom:1px solid var(--border);}
-.how-step:last-child{border-bottom:none;}
-.how-num{font-family:'Playfair Display',serif;font-size:2.6rem;font-weight:900;color:var(--accent);opacity:.25;line-height:1;padding-top:4px;}
-.how-content .how-tag{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;background:rgba(15,30,60,0.08);color:var(--navy);padding:3px 10px;border-radius:4px;margin-bottom:8px;}
-.how-content h3{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:900;color:var(--navy);margin-bottom:8px;}
-.how-content p{font-size:.9rem;color:var(--muted);max-width:56ch;line-height:1.7;}
-
-/* ===== ROADMAP ===== */
-#roadmap{background:var(--white);}
-.roadmap-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
-.level-card{border-radius:var(--radius);padding:28px 22px;border:1px solid var(--border);position:relative;overflow:hidden;background:var(--white);transition:all .2s;}
-.level-card:hover{transform:translateY(-4px);box-shadow:var(--card-shadow);}
-.level-card.active-level{background:linear-gradient(135deg,var(--navy),var(--blue));border-color:var(--navy);color:white;}
-.level-card.active-level .level-code{color:var(--accent);}
-.level-card.active-level .level-label{color:rgba(255,255,255,0.5);}
-.level-card.active-level .level-name{color:white;}
-.level-card.active-level .level-desc{color:rgba(255,255,255,0.65);}
-.level-card.active-level .level-topics li{color:rgba(255,255,255,0.7);}
-.level-card.active-level .level-topics li::before{background:var(--accent);}
-.level-card.active-level .level-dur{color:rgba(255,255,255,0.4);}
-.level-dur{position:absolute;top:18px;right:18px;font-size:.72rem;color:var(--muted);font-weight:600;}
-.level-label{font-size:.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:6px;}
-.level-code{font-family:'Playfair Display',serif;font-size:3rem;font-weight:900;color:var(--navy);line-height:1;letter-spacing:-2px;margin-bottom:6px;}
-.level-name{font-size:.9rem;font-weight:700;color:var(--navy);margin-bottom:8px;}
-.level-desc{font-size:.82rem;color:var(--muted);margin-bottom:16px;line-height:1.55;}
-.level-topics{list-style:none;display:flex;flex-direction:column;gap:6px;}
-.level-topics li{font-size:.82rem;color:var(--muted);display:flex;align-items:flex-start;gap:8px;line-height:1.45;}
-.level-topics li::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--accent);flex-shrink:0;margin-top:7px;}
-
-/* ===== SPEAKING ===== */
-#speaking{background:var(--light);}
-.speaking-layout{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;}
-.speaking-features{display:flex;flex-direction:column;gap:24px;margin-top:8px;}
-.speaking-feat{padding-left:20px;border-left:3px solid var(--accent);}
-.speaking-feat h4{font-weight:700;color:var(--navy);margin-bottom:6px;font-size:.97rem;}
-.speaking-feat p{font-size:.88rem;color:var(--muted);line-height:1.65;}
-.lesson-breakdown{background:var(--white);border-radius:var(--radius);border:1px solid var(--border);padding:28px;}
-.lesson-breakdown h3{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:900;color:var(--navy);margin-bottom:20px;}
-.breakdown-item{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--border);}
-.breakdown-item:last-child{border-bottom:none;}
-.b-time{width:36px;height:36px;border-radius:8px;background:var(--navy);display:flex;align-items:center;justify-content:center;color:var(--accent);font-weight:700;font-size:.75rem;flex-shrink:0;}
-.b-info strong{display:block;font-weight:700;color:var(--navy);font-size:.88rem;margin-bottom:2px;}
-.b-info span{font-size:.82rem;color:var(--muted);}
-
-/* ===== TRUST ===== */
-#trust{background:var(--white);}
-.trust-header{text-align:center;margin-bottom:48px;}
-.trust-header .section-sub{margin:0 auto;}
-.trust-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:900px;margin:0 auto;}
-.trust-card{border-radius:var(--radius);padding:28px 24px;border:1px solid var(--border);}
-.trust-card.yes{border-left:4px solid var(--green);}
-.trust-card.no{border-left:4px solid #e74c3c;}
-.trust-badge{display:inline-flex;align-items:center;gap:6px;font-size:.78rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase;margin-bottom:16px;padding:4px 12px;border-radius:4px;}
-.trust-badge.yes{background:#eafaf1;color:var(--green);}
-.trust-badge.no{background:#fdf2f2;color:#e74c3c;}
-.trust-list{list-style:none;display:flex;flex-direction:column;gap:10px;}
-.trust-list li{font-size:.9rem;color:var(--muted);display:flex;gap:10px;line-height:1.55;}
-.trust-list li .icon{flex-shrink:0;font-weight:700;}
-.trust-list li .icon.yes{color:var(--green);}
-.trust-list li .icon.no{color:#e74c3c;}
-
-/* ===== FOR WHO ===== */
-#forwho{background:var(--light);}
-.forwho-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
-.forwho-card{background:var(--white);border-radius:var(--radius);border:1px solid var(--border);padding:28px 24px;}
-.forwho-card.yes-card{border-color:var(--navy);}
-.forwho-card h3{font-weight:700;font-size:1rem;color:var(--navy);margin-bottom:16px;display:flex;align-items:center;gap:8px;}
-.forwho-list{list-style:none;display:flex;flex-direction:column;gap:10px;}
-.forwho-list li{font-size:.9rem;color:var(--muted);display:flex;gap:10px;line-height:1.55;}
-.forwho-list li .arr{flex-shrink:0;font-weight:700;}
-
-/* ===== PRICING ===== */
-#pricing{background:linear-gradient(135deg,#0f1e3c 0%,#1a3a6b 100%);}
-#pricing .section-title{color:white;}
-#pricing .section-tag{color:var(--accent2);}
-#pricing .section-sub{color:rgba(255,255,255,0.6);}
-.pricing-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
-.price-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius);padding:28px 22px;display:flex;flex-direction:column;position:relative;transition:all .2s;}
-.price-card:hover{background:rgba(255,255,255,0.09);transform:translateY(-3px);}
-.price-card.featured{background:rgba(255,255,255,0.10);border-color:rgba(232,160,32,0.5);}
-.price-card .feat-label{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--accent);color:var(--navy);font-size:.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 14px;border-radius:50px;white-space:nowrap;}
-.plan-name{font-size:.75rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:10px;}
-.plan-price{font-family:'Playfair Display',serif;font-size:2.6rem;font-weight:900;color:var(--white);line-height:1;letter-spacing:-1px;margin-bottom:4px;}
-.plan-period{font-size:.8rem;color:rgba(255,255,255,0.4);margin-bottom:14px;}
-.plan-desc{font-size:.88rem;color:rgba(255,255,255,0.6);line-height:1.6;margin-bottom:20px;flex:1;}
-.plan-features{list-style:none;display:flex;flex-direction:column;gap:0;margin-bottom:24px;}
-.plan-feat{font-size:.85rem;color:rgba(255,255,255,0.65);display:flex;gap:10px;padding:9px 0;border-bottom:1px solid rgba(255,255,255,0.06);}
-.plan-feat:last-child{border-bottom:none;}
-.plan-feat .check{color:var(--accent);font-weight:700;flex-shrink:0;}
-.price-cta{display:block;text-align:center;padding:13px;border-radius:8px;font-weight:700;font-size:.9rem;text-decoration:none;transition:all .2s;}
-.price-cta.primary{background:var(--accent);color:var(--navy);}
-.price-cta.primary:hover{background:var(--accent2);}
-.price-cta.ghost{border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.7);}
-.price-cta.ghost:hover{border-color:rgba(255,255,255,0.5);color:white;}
-.pricing-note{text-align:center;margin-top:24px;font-size:.82rem;color:rgba(255,255,255,0.3);}
-
-/* ===== FAQ ===== */
-#faq{background:var(--light);}
-.faq-inner{max-width:760px;margin:0 auto;}
-.faq-list{display:flex;flex-direction:column;}
-details.faq-item{border-bottom:1px solid var(--border);padding:8px 0;}
-details.faq-item summary{font-size:1rem;font-weight:600;color:var(--navy);padding:16px 0;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;list-style:none;user-select:none;}
-details.faq-item summary::-webkit-details-marker{display:none;}
-details.faq-item summary::after{content:'+';font-size:1.4rem;color:var(--muted);flex-shrink:0;transition:transform .2s;}
-details[open].faq-item summary::after{transform:rotate(45deg);}
-.faq-body{font-size:.93rem;color:var(--muted);line-height:1.75;padding:4px 0 20px;max-width:62ch;}
-
-/* ===== ONLINE LESSON (merged) ===== */
-#online-lesson{background:linear-gradient(135deg,#0f1e3c 0%,#1a3a6b 100%);}
-#online-lesson .section-title{color:white;}
-#online-lesson .section-tag{color:var(--accent2);}
-#online-lesson .section-sub{color:rgba(255,255,255,0.65);}
-.lesson-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px;margin-bottom:40px;}
-.lesson-card{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.13);border-radius:var(--radius);padding:26px;color:white;transition:all .25s;position:relative;overflow:hidden;}
-.lesson-card::before{content:'';position:absolute;top:-30px;right:-30px;width:100px;height:100px;background:rgba(232,160,32,0.08);border-radius:50%;}
-.lesson-card:hover{background:rgba(255,255,255,0.11);transform:translateY(-3px);}
-.lesson-card-icon{font-size:2rem;margin-bottom:14px;}
-.lesson-card h3{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:900;margin-bottom:8px;color:var(--accent2);}
-.lesson-card p{font-size:.88rem;color:rgba(255,255,255,0.65);line-height:1.65;}
-.lesson-card ul{list-style:none;margin-top:12px;display:grid;gap:6px;}
-.lesson-card ul li{font-size:.85rem;color:rgba(255,255,255,0.65);display:flex;gap:8px;}
-.lesson-card ul li::before{content:'✓';color:var(--accent);font-weight:700;flex-shrink:0;}
-
-/* ===== CONTACT ===== */
-#contact{background:var(--navy);color:white;}
-#contact .section-title{color:white;}
-#contact .section-tag{color:var(--accent2);}
-#contact .section-sub{color:rgba(255,255,255,0.6);}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
-.contact-info{display:grid;gap:20px;margin-top:8px;}
-.contact-item{display:flex;gap:16px;align-items:flex-start;}
-.contact-item-icon{width:44px;height:44px;background:rgba(232,160,32,0.15);border:1px solid rgba(232,160,32,0.3);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:1.1rem;flex-shrink:0;}
-.contact-item h5{font-weight:700;color:white;margin-bottom:4px;}
-.contact-item p,.contact-item a{color:rgba(255,255,255,0.6);font-size:.9rem;text-decoration:none;}
-.contact-item a:hover{color:var(--accent2);}
-.contact-form{display:grid;gap:16px;}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
-.form-group{display:flex;flex-direction:column;gap:6px;}
-.form-group label{font-size:.84rem;font-weight:600;color:rgba(255,255,255,0.75);}
-.form-group input,.form-group textarea,.form-group select{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:10px;padding:12px 16px;color:white;font-family:'DM Sans',sans-serif;font-size:.92rem;outline:none;transition:border .2s;}
-.form-group input::placeholder,.form-group textarea::placeholder{color:rgba(255,255,255,0.35);}
-.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--accent);}
-.form-group textarea{resize:vertical;min-height:110px;}
-.form-group select option{background:var(--navy);color:white;}
-.form-submit{padding:14px;background:var(--accent);color:var(--navy);font-weight:700;border:none;border-radius:10px;cursor:pointer;font-size:1rem;font-family:'DM Sans',sans-serif;transition:all .2s;margin-top:4px;}
-.form-submit:hover{background:var(--accent2);}
-
-/* ===== FINAL CTA ===== */
-#final-cta{background:var(--accent);padding:88px 24px;text-align:center;}
-#final-cta h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:900;color:var(--navy);margin-bottom:14px;line-height:1.15;}
-#final-cta h2 em{font-style:italic;opacity:.7;}
-#final-cta p{color:rgba(15,30,60,0.7);font-size:1.05rem;margin-bottom:32px;max-width:500px;margin-left:auto;margin-right:auto;}
-.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
-.btn-cta-dark{background:var(--navy);color:white;font-weight:700;padding:15px 34px;border-radius:10px;text-decoration:none;font-size:1rem;transition:all .2s;display:inline-flex;align-items:center;gap:8px;}
-.btn-cta-dark:hover{opacity:.88;transform:translateY(-2px);}
-.btn-cta-outline{border:2px solid rgba(15,30,60,0.3);color:var(--navy);font-weight:600;padding:13px 32px;border-radius:10px;text-decoration:none;font-size:1rem;transition:all .2s;display:inline-flex;align-items:center;gap:8px;}
-.btn-cta-outline:hover{border-color:var(--navy);background:rgba(15,30,60,0.06);}
-.cta-note{margin-top:18px;font-size:.82rem;color:rgba(15,30,60,0.5);}
-
-/* FOOTER */
-footer{background:#07111f;color:rgba(255,255,255,0.45);text-align:center;padding:32px 24px;font-size:.85rem;}
-footer strong{color:var(--accent);}
-.footer-socials{display:flex;justify-content:center;gap:16px;margin:16px 0;}
-.footer-socials a{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.6);font-size:1rem;text-decoration:none;transition:all .2s;}
-.footer-socials a:hover{background:var(--accent);color:var(--navy);}
-
-/* TOAST */
-.toast{position:fixed;bottom:28px;right:28px;background:var(--navy);color:white;padding:14px 24px;border-radius:10px;font-weight:600;font-size:.9rem;box-shadow:0 8px 28px rgba(0,0,0,0.3);z-index:9999;transform:translateY(80px);opacity:0;transition:all .3s;border-left:4px solid var(--accent);}
-.toast.show{transform:translateY(0);opacity:1;}
-
-/* RESPONSIVE */
-@media(max-width:900px){
-  .problem-grid,.roadmap-grid{grid-template-columns:1fr 1fr;}
-  .solution-layout,.speaking-layout,.trust-grid,.forwho-grid,.pricing-cards,.contact-grid,.skill-content.active{grid-template-columns:1fr;}
-  .form-row{grid-template-columns:1fr;}
-}
-@media(max-width:700px){
-  .nav-links{display:none;flex-direction:column;position:absolute;top:68px;left:0;right:0;background:rgba(15,30,60,0.99);padding:16px;gap:4px;}
+/* ---- NAV ---- */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(12,26,48,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,146,10,0.15);}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:64px;}
+.logo{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;color:#fff;text-decoration:none;letter-spacing:-.3px;}
+.logo em{color:var(--gold2);font-style:normal;}
+.nav-links{display:flex;gap:6px;list-style:none;align-items:center;}
+.nav-links li{display:flex;align-items:center;}
+.nav-links li:not(:last-child)::after{content:'';display:inline-block;width:1px;height:14px;background:rgba(255,255,255,0.12);margin-left:6px;}
+.nav-links a{color:#fff;text-decoration:none;font-size:.82rem;font-weight:500;padding:7px 13px;border-radius:6px;transition:all .22s cubic-bezier(.4,0,.2,1);letter-spacing:.3px;position:relative;top:0;}
+.nav-links a:hover{top:-2px;filter:brightness(1.15);box-shadow:0 4px 14px rgba(0,0,0,0.25);}
+.nav-links a.active{filter:brightness(1.1);}
+@keyframes pulse-gold{0%,100%{box-shadow:0 0 0 0 rgba(201,146,10,0.5);}50%{box-shadow:0 0 0 6px rgba(201,146,10,0);}}
+.nav-cta{background:var(--gold)!important;color:var(--navy)!important;font-weight:700!important;padding:8px 20px!important;border-radius:6px!important;letter-spacing:.3px;animation:pulse-gold 2.5s ease-in-out infinite;}
+.nav-cta:hover{background:var(--gold2)!important;color:var(--navy)!important;transform:translateY(-1px);animation:none;box-shadow:0 4px 16px rgba(201,146,10,0.4)!important;}
+.hamburger{display:none;background:none;border:none;cursor:pointer;color:rgba(255,255,255,0.8);font-size:1.4rem;}
+@media(max-width:720px){
+  .nav-links{display:none;flex-direction:column;position:absolute;top:64px;left:0;right:0;background:rgba(12,26,48,0.99);padding:12px;gap:2px;}
   .nav-links.open{display:flex;}
   .hamburger{display:block;}
-  .problem-grid,.roadmap-grid{grid-template-columns:1fr;}
-  .hero-promise{flex-direction:column;}
-  .promise-item{border-right:none;border-bottom:1px solid rgba(255,255,255,0.08);}
 }
+
+/* ---- HERO ---- */
+.hero{min-height:100vh;background:var(--navy);display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:0;padding:0;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:-200px;right:-200px;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(201,146,10,0.06) 0%,transparent 70%);pointer-events:none;}
+.hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(201,146,10,0.3),transparent);}
+.hero-left{padding:140px 64px 100px 80px;max-width:620px;}
+.hero-eyebrow{font-size:.72rem;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:var(--gold2);margin-bottom:28px;display:flex;align-items:center;gap:12px;}
+.hero-eyebrow::before{content:'';display:inline-block;width:32px;height:1px;background:var(--gold);}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.6rem,5vw,4rem);font-weight:600;color:#fff;line-height:1.1;margin-bottom:28px;letter-spacing:-.5px;}
+.hero h1 em{color:var(--gold2);font-style:italic;}
+.hero-sub{font-size:1rem;color:rgba(255,255,255,0.58);line-height:1.8;max-width:460px;margin-bottom:44px;font-weight:300;}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;}
+.btn-gold{background:var(--gold);color:var(--navy);font-weight:600;padding:14px 30px;border-radius:7px;text-decoration:none;font-size:.9rem;transition:all .2s;display:inline-flex;align-items:center;gap:8px;letter-spacing:.2px;}
+.btn-gold:hover{background:var(--gold2);transform:translateY(-2px);}
+.btn-outline{border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.7);font-weight:400;padding:14px 28px;border-radius:7px;text-decoration:none;font-size:.9rem;transition:all .2s;}
+.btn-outline:hover{border-color:rgba(255,255,255,0.5);color:#fff;}
+.hero-right{height:100vh;background:linear-gradient(135deg,rgba(20,34,64,0.6) 0%,rgba(12,26,48,0.9) 100%);display:flex;align-items:center;justify-content:center;border-left:1px solid rgba(201,146,10,0.1);}
+.hero-stats{display:flex;flex-direction:column;gap:0;width:100%;max-width:320px;}
+.stat-item{padding:32px 40px;border-bottom:1px solid rgba(255,255,255,0.05);}
+.stat-item:last-child{border-bottom:none;}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:3.2rem;font-weight:600;color:var(--gold2);line-height:1;letter-spacing:-2px;margin-bottom:6px;}
+.stat-label{font-size:.78rem;color:rgba(255,255,255,0.4);letter-spacing:1.5px;text-transform:uppercase;font-weight:400;}
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;min-height:auto;}
+  .hero-left{padding:120px 28px 48px;}
+  .hero-right{height:auto;border-left:none;border-top:1px solid rgba(201,146,10,0.1);}
+  .hero-stats{flex-direction:row;flex-wrap:wrap;max-width:100%;padding:32px 28px;}
+  .stat-item{border-bottom:none;border-right:1px solid rgba(255,255,255,0.05);flex:1;min-width:120px;padding:20px 24px;}
+  .stat-item:last-child{border-right:none;}
+}
+
+/* ---- SECTIONS ---- */
+section{padding:96px 32px;}
+.inner{max-width:1100px;margin:0 auto;}
+.tag{font-size:.72rem;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:14px;display:flex;align-items:center;gap:12px;}
+.tag::before{content:'';display:inline-block;width:24px;height:1px;background:var(--gold);}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);font-weight:600;color:var(--navy);line-height:1.15;margin-bottom:16px;letter-spacing:-.3px;}
+.section-sub{font-size:.97rem;color:var(--muted);line-height:1.85;max-width:540px;margin-bottom:56px;font-weight:300;}
+
+/* ---- MANIFESTO ---- */
+#manifesto{background:var(--cream);}
+.manifesto-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;}
+.manifesto-body{display:flex;flex-direction:column;gap:0;}
+.m-block{padding:28px 0;border-bottom:1px solid var(--border);}
+.m-block:last-child{border-bottom:none;}
+.m-block h3{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;color:var(--navy);margin-bottom:10px;}
+.m-block p{font-size:.9rem;color:var(--muted);line-height:1.8;font-weight:300;}
+.manifesto-callout{background:var(--navy);border-radius:12px;padding:48px 40px;position:sticky;top:100px;}
+.mc-quote{font-family:'Cormorant Garamond',serif;font-size:1.55rem;font-weight:400;font-style:italic;color:#fff;line-height:1.55;margin-bottom:20px;}
+.mc-quote strong{color:var(--gold2);font-style:normal;font-weight:600;}
+.mc-note{font-size:.78rem;color:rgba(255,255,255,0.35);letter-spacing:1px;text-transform:uppercase;border-top:1px solid rgba(255,255,255,0.08);padding-top:16px;margin-top:16px;line-height:1.7;}
+@media(max-width:860px){.manifesto-grid{grid-template-columns:1fr;}.manifesto-callout{position:static;}}
+
+/* ---- HOW ---- */
+#how{background:var(--white);border-top:1px solid var(--border);}
+.steps{display:flex;flex-direction:column;max-width:760px;}
+.step{display:grid;grid-template-columns:60px 1fr;gap:28px;padding:32px 0;border-bottom:1px solid var(--border);}
+.step:last-child{border-bottom:none;}
+.step-n{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:600;color:var(--gold);opacity:.35;line-height:1;padding-top:2px;}
+.step-c .step-badge{display:inline-block;font-size:.68rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;background:#f0ede6;color:var(--muted);padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.step-c h3{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;color:var(--navy);margin-bottom:8px;}
+.step-c p{font-size:.9rem;color:var(--muted);line-height:1.8;font-weight:300;max-width:56ch;}
+
+/* ---- ROADMAP ---- */
+#roadmap{background:var(--cream);}
+.level-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.level{border-radius:10px;padding:28px 24px;border:1px solid var(--border);background:var(--white);position:relative;transition:all .2s;}
+.level:hover{border-color:rgba(201,146,10,0.3);transform:translateY(-3px);}
+.level.hl{background:var(--navy);border-color:var(--navy);}
+.level .l-badge{font-size:.68rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:8px;}
+.level.hl .l-badge{color:rgba(255,255,255,0.4);}
+.level .l-code{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:600;color:var(--navy);line-height:1;margin-bottom:4px;letter-spacing:-2px;}
+.level.hl .l-code{color:var(--gold2);}
+.level .l-dur{position:absolute;top:20px;right:20px;font-size:.7rem;color:var(--muted);font-weight:500;}
+.level.hl .l-dur{color:rgba(255,255,255,0.3);}
+.level .l-name{font-size:.95rem;font-weight:600;color:var(--navy);margin-bottom:6px;}
+.level.hl .l-name{color:#fff;}
+.level .l-desc{font-size:.85rem;color:var(--muted);line-height:1.65;margin-bottom:18px;font-weight:300;}
+.level.hl .l-desc{color:rgba(255,255,255,0.5);}
+.level-list{list-style:none;display:flex;flex-direction:column;gap:6px;}
+.level-list li{font-size:.83rem;color:var(--muted);display:flex;align-items:flex-start;gap:8px;line-height:1.5;}
+.level-list li::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:7px;}
+.level.hl .level-list li{color:rgba(255,255,255,0.55);}
+@media(max-width:720px){.level-row{grid-template-columns:1fr;}}
+
+/* ---- LESSON ---- */
+#lesson{background:var(--white);border-top:1px solid var(--border);}
+.lesson-layout{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;}
+.lesson-features{display:flex;flex-direction:column;gap:0;margin-top:8px;}
+.lf{padding:22px 0;border-bottom:1px solid var(--border);}
+.lf:last-child{border-bottom:none;}
+.lf h4{font-weight:600;color:var(--navy);margin-bottom:6px;font-size:.95rem;}
+.lf p{font-size:.88rem;color:var(--muted);line-height:1.75;font-weight:300;}
+.breakdown{background:var(--cream);border-radius:12px;border:1px solid var(--border);padding:32px;}
+.breakdown h3{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;color:var(--navy);margin-bottom:24px;}
+.bk-item{display:flex;gap:16px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--border);}
+.bk-item:last-child{border-bottom:none;}
+.bk-time{width:38px;height:38px;background:var(--navy);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--gold2);font-weight:600;font-size:.72rem;flex-shrink:0;}
+.bk-info strong{display:block;font-weight:600;color:var(--navy);font-size:.88rem;margin-bottom:2px;}
+.bk-info span{font-size:.82rem;color:var(--muted);font-weight:300;}
+@media(max-width:860px){.lesson-layout{grid-template-columns:1fr;}}
+
+/* ---- MATERIALS ---- */
+#materials{background:var(--cream);}
+.mat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;}
+.mat-card{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:28px 24px;transition:all .2s;}
+.mat-card:hover{border-color:rgba(201,146,10,0.3);transform:translateY(-3px);}
+.mat-icon{font-size:1.8rem;margin-bottom:16px;}
+.mat-card h3{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--navy);margin-bottom:8px;}
+.mat-card p{font-size:.86rem;color:var(--muted);line-height:1.7;font-weight:300;}
+
+/* ---- TRUST ---- */
+#trust{background:var(--navy);}
+.trust-layout{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:860px;}
+.t-card{border-radius:10px;padding:28px 24px;}
+.t-card.yes{background:rgba(26,122,74,0.08);border:1px solid rgba(26,122,74,0.2);}
+.t-card.no{background:rgba(184,58,58,0.07);border:1px solid rgba(184,58,58,0.15);}
+.t-badge{display:inline-flex;align-items:center;gap:6px;font-size:.72rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:4px;margin-bottom:18px;}
+.t-badge.yes{background:rgba(26,122,74,0.15);color:#4ade80;}
+.t-badge.no{background:rgba(184,58,58,0.15);color:#f87171;}
+.t-list{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.t-list li{font-size:.88rem;color:rgba(255,255,255,0.55);display:flex;gap:10px;line-height:1.6;font-weight:300;}
+.t-icon.yes{color:#4ade80;font-weight:600;}
+.t-icon.no{color:#f87171;font-weight:600;}
+@media(max-width:720px){.trust-layout{grid-template-columns:1fr;max-width:100%;}}
+
+/* ---- FOR WHO ---- */
+#forwho{background:var(--cream);}
+.fw-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.fw-card{background:var(--white);border-radius:10px;border:1px solid var(--border);padding:28px 24px;}
+.fw-card.yes{border-color:var(--navy);}
+.fw-card h3{font-weight:600;font-size:.95rem;color:var(--navy);margin-bottom:18px;display:flex;align-items:center;gap:8px;}
+.fw-list{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.fw-list li{font-size:.88rem;color:var(--muted);display:flex;gap:10px;line-height:1.65;font-weight:300;}
+.fw-list li .arr{flex-shrink:0;color:var(--muted);}
+.fw-list li .arr.g{color:var(--green);}
+@media(max-width:720px){.fw-grid{grid-template-columns:1fr;}}
+
+/* ---- PRICING ---- */
+#pricing{background:var(--navy);}
+.price-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px;}
+.price-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:28px 22px;display:flex;flex-direction:column;position:relative;transition:all .2s;}
+.price-card:hover{background:rgba(255,255,255,0.07);}
+.price-card.feat{border-color:rgba(201,146,10,0.4);background:rgba(201,146,10,0.06);}
+.feat-tag{position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--navy);font-size:.68rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:4px 14px;border-radius:50px;white-space:nowrap;}
+.plan-name{font-size:.72rem;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:12px;}
+.plan-price{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;color:#fff;line-height:1.1;margin-bottom:4px;}
+.plan-period{font-size:.78rem;color:rgba(255,255,255,0.3);margin-bottom:16px;}
+.plan-desc{font-size:.87rem;color:rgba(255,255,255,0.5);line-height:1.7;margin-bottom:20px;flex:1;font-weight:300;}
+.plan-feats{list-style:none;display:flex;flex-direction:column;gap:0;margin-bottom:24px;}
+.plan-feat{font-size:.83rem;color:rgba(255,255,255,0.55);display:flex;gap:8px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-weight:300;}
+.plan-feat:last-child{border-bottom:none;}
+.plan-feat .ck{color:var(--gold2);font-weight:600;flex-shrink:0;}
+.pcta{display:block;text-align:center;padding:12px;border-radius:7px;font-weight:600;font-size:.88rem;text-decoration:none;transition:all .2s;}
+.pcta.primary{background:var(--gold);color:var(--navy);}
+.pcta.primary:hover{background:var(--gold2);}
+.pcta.ghost{border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.6);}
+.pcta.ghost:hover{border-color:rgba(255,255,255,0.4);color:#fff;}
+.price-note{text-align:center;margin-top:20px;font-size:.8rem;color:rgba(255,255,255,0.25);}
+@media(max-width:860px){.price-cards{grid-template-columns:1fr;}}
+
+/* ---- FAQ ---- */
+#faq{background:var(--white);border-top:1px solid var(--border);}
+.faq-inner{max-width:700px;}
+details.faq{border-bottom:1px solid var(--border);padding:4px 0;}
+details.faq summary{font-size:.97rem;font-weight:500;color:var(--navy);padding:18px 0;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;list-style:none;user-select:none;}
+details.faq summary::-webkit-details-marker{display:none;}
+details.faq summary::after{content:'+';font-size:1.4rem;color:var(--muted);flex-shrink:0;transition:transform .2s;}
+details[open].faq summary::after{transform:rotate(45deg);}
+.faq-body{font-size:.9rem;color:var(--muted);line-height:1.85;padding:2px 0 20px;max-width:58ch;font-weight:300;}
+
+/* ---- FINAL CTA ---- */
+#final-cta{background:var(--gold);padding:96px 32px;text-align:center;}
+#final-cta h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:600;color:var(--navy);margin-bottom:14px;line-height:1.15;letter-spacing:-.3px;}
+#final-cta h2 em{opacity:.55;font-style:italic;}
+#final-cta p{color:rgba(12,26,48,0.65);font-size:1rem;margin-bottom:32px;max-width:460px;margin-left:auto;margin-right:auto;line-height:1.75;font-weight:300;}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.btn-dark{background:var(--navy);color:#fff;font-weight:600;padding:14px 30px;border-radius:7px;text-decoration:none;font-size:.9rem;transition:all .2s;display:inline-flex;align-items:center;gap:8px;}
+.btn-dark:hover{opacity:.88;transform:translateY(-2px);}
+.btn-outline-dark{border:2px solid rgba(12,26,48,0.25);color:var(--navy);font-weight:500;padding:13px 28px;border-radius:7px;text-decoration:none;font-size:.9rem;transition:all .2s;display:inline-flex;align-items:center;gap:8px;}
+.btn-outline-dark:hover{border-color:var(--navy);}
+.cta-note{margin-top:18px;font-size:.78rem;color:rgba(12,26,48,0.4);}
+
+/* ---- CONTACT ---- */
+#contact{background:var(--navy);}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;}
+.c-info{display:flex;flex-direction:column;gap:20px;}
+.c-item{display:flex;gap:16px;align-items:flex-start;}
+.c-icon{width:42px;height:42px;background:rgba(201,146,10,0.12);border:1px solid rgba(201,146,10,0.2);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.c-icon svg{width:18px;height:18px;stroke:var(--gold2);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
+.c-item h5{font-weight:600;color:#fff;margin-bottom:3px;font-size:.88rem;}
+.c-item p,.c-item a{color:rgba(255,255,255,0.45);font-size:.88rem;text-decoration:none;font-weight:300;}
+.c-item a:hover{color:var(--gold2);}
+.c-form{display:flex;flex-direction:column;gap:14px;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.fg{display:flex;flex-direction:column;gap:5px;}
+.fg label{font-size:.78rem;font-weight:500;color:rgba(255,255,255,0.5);letter-spacing:.3px;}
+.fg input,.fg select,.fg textarea{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:11px 14px;color:#fff;font-family:'Outfit',sans-serif;font-size:.88rem;outline:none;transition:border .2s;font-weight:300;}
+.fg input::placeholder,.fg textarea::placeholder{color:rgba(255,255,255,0.25);}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--gold);}
+.fg textarea{resize:vertical;min-height:100px;}
+.fg select option{background:var(--navy);}
+.f-btns{display:flex;gap:10px;flex-wrap:wrap;}
+.f-btn{flex:1;padding:13px;border:none;border-radius:7px;cursor:pointer;font-family:'Outfit',sans-serif;font-size:.88rem;font-weight:600;display:flex;align-items:center;justify-content:center;gap:8px;transition:all .2s;}
+.f-btn.wa{background:var(--gold);color:var(--navy);}
+.f-btn.wa:hover{background:var(--gold2);}
+.f-btn.em{background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.7);border:1px solid rgba(255,255,255,0.1);}
+.f-btn.em:hover{background:rgba(255,255,255,0.13);}
+@media(max-width:860px){.contact-grid{grid-template-columns:1fr;}.form-row{grid-template-columns:1fr;}}
+
+/* ---- FOOTER ---- */
+footer{background:#060f1e;color:rgba(255,255,255,0.3);text-align:center;padding:32px 24px;font-size:.82rem;font-weight:300;}
+footer strong{color:var(--gold);}
+.foot-links{display:flex;justify-content:center;gap:24px;margin:12px 0;flex-wrap:wrap;}
+.foot-links a{color:rgba(255,255,255,0.3);text-decoration:none;font-size:.8rem;transition:color .2s;}
+.foot-links a:hover{color:var(--gold2);}
+
+/* ---- TOAST ---- */
+.toast{position:fixed;bottom:24px;right:24px;background:var(--navy);color:#fff;padding:13px 22px;border-radius:8px;font-size:.88rem;font-weight:500;box-shadow:0 8px 32px rgba(0,0,0,0.35);z-index:9999;transform:translateY(60px);opacity:0;transition:all .3s;border-left:3px solid var(--gold);}
+.toast.show{transform:translateY(0);opacity:1;}
+/* ---- UNIT CARDS ---- */
+.u-card{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:14px 16px;transition:all .2s;}
+.u-card:hover{border-color:rgba(12,26,48,0.3);transform:translateY(-2px);}
+.u-card.u-a2{border-left:3px solid var(--gold);}
+.u-card.u-review{background:#f5f3ee;border:1px dashed var(--border);}
+.u-num{font-size:.67rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:5px;}
+.u-title{font-weight:600;color:var(--navy);font-size:.87rem;margin-bottom:4px;line-height:1.3;}
+.u-gram{font-size:.77rem;color:var(--gold);font-weight:500;margin-bottom:3px;}
+.u-skill{font-size:.74rem;color:var(--muted);font-weight:300;line-height:1.4;}
 </style>
 </head>
 <body>
@@ -313,28 +280,14 @@ footer strong{color:var(--accent);}
 <!-- NAV -->
 <nav>
   <div class="nav-inner">
-    <a class="logo-wrap" href="landing.html">
-      <svg class="logo-svg" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="21" cy="21" r="20" fill="#0f1e3c" stroke="#e8a020" stroke-width="1.5"/>
-        <path d="M10 27 C10 27 10 15 21 15 C32 15 32 27 32 27" fill="none" stroke="#e8a020" stroke-width="1.8" stroke-linecap="round"/>
-        <line x1="21" y1="15" x2="21" y2="27" stroke="#e8a020" stroke-width="1.5" stroke-linecap="round"/>
-        <path d="M10 27 C12 25 16 23 21 23" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.2" stroke-linecap="round"/>
-        <path d="M32 27 C30 25 26 23 21 23" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.2" stroke-linecap="round"/>
-        <path d="M9 27.5 Q21 30 33 27.5" fill="none" stroke="#e8a020" stroke-width="1.8" stroke-linecap="round"/>
-        <text x="21" y="35.5" text-anchor="middle" font-family="Georgia,serif" font-size="5" font-weight="bold" fill="#e8a020">Ab</text>
-      </svg>
-      <div>
-        <div class="logo-text">AbOnlin<span>English</span></div>
-        <div class="logo-sub">Dil Eğitimi</div>
-      </div>
-    </a>
+    <a class="logo" href="#home">AbOnlin<em>English</em></a>
     <ul class="nav-links" id="navLinks">
-      <li><a href="landing.html" class="active" onclick="closeMenu()">Anasayfa</a></li>
-      <li><a href="../index.html" onclick="closeMenu()">Kendin Öğren</a></li>
-      <li><a href="roadmap.html" onclick="closeMenu()">Yol Haritası</a></li>
-      <li><a href="placement-test.html" onclick="closeMenu()">Seviye Testi</a></li>
-      <li><a href="games.html" onclick="closeMenu()">Oyunlar</a></li>
-      <li><a href="landing.html#pricing" class="nav-cta-btn" onclick="closeMenu()">Ücretsiz Ders</a></li>
+      <li><a class="active" href="https://abonlinenglish.school/landing" onclick="closeMenu()" style="background:#c0392b;color:#fff;">Anasayfa</a></li>
+      <li><a href="https://abonlinenglish.school/" onclick="closeMenu()" style="background:#c0392b;color:#fff;">Kendin Öğren</a></li>
+      <li><a href="https://abonlinenglish.school/roadmap" onclick="closeMenu()" style="background:#c0392b;color:#fff;">Yol Haritası</a></li>
+      <li><a href="https://abonlinenglish.school/placement-test" onclick="closeMenu()" style="background:#c0392b;color:#fff;">Seviye Testi</a></li>
+      <li><a href="https://abonlinenglish.school/games" onclick="closeMenu()" style="background:#c0392b;color:#fff;">Oyunlar</a></li>
+      <li><a class="nav-cta" href="#pricing" onclick="closeMenu()">Ücretsiz Ders</a></li>
     </ul>
     <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
   </div>
@@ -342,103 +295,65 @@ footer strong{color:var(--accent);}
 
 <!-- HERO -->
 <section class="hero" id="home">
-  <div style="position:relative;z-index:1;width:100%;max-width:800px;margin:0 auto;">
-    <div class="hero-badge">🇬🇧 Cambridge CEFR · Birebir Online Program</div>
-    <h1>Motivasyon yetmez.<br><em>Sistem</em> sonuç verir.</h1>
-    <p>Yıllardır öğreniyorsunuz ama konuşamıyorsunuz. Çünkü içerik değil, yapı eksik. A1'den B1'e — her haftası planlanmış, her dersi amaçlı — 6 aylık bir sistem.</p>
+  <div class="hero-left">
+    <div class="hero-eyebrow">Birebir Online İngilizce</div>
+    <h1>Sistem olmadan<br>çaba <em>yetmez.</em></h1>
+    <p class="hero-sub">Yıllarca öğrendiniz ama konuşamıyorsunuz. Eksik olan yetenek değil — yapı. A1+A2 toplamda 6 ay, haftada 2 ders — her haftası planlanmış, her dersi amaçlı, kesintisiz bir yol.</p>
     <div class="hero-btns">
-      <a href="#pricing" class="btn-primary"><i class="fas fa-play-circle"></i> İlk Dersi Ücretsiz Başlat</a>
-      <a href="#how" class="btn-secondary">Sistemi Gör</a>
+      <a href="#pricing" class="btn-gold">İlk Dersi Ücretsiz Başlat</a>
+      <a href="#how" class="btn-outline">Sistemi Gör</a>
     </div>
-    <div class="hero-promise">
-      <div class="promise-item">
-        <div class="promise-num">6</div>
-        <div class="promise-label">Ay · A1'den B1'e</div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">6</div>
+        <div class="stat-label">Ay · A1'den A2'ye</div>
       </div>
-      <div class="promise-item">
-        <div class="promise-num">50'</div>
-        <div class="promise-label">Dakika · Birebir Ders</div>
+      <div class="stat-item">
+        <div class="stat-num">50'</div>
+        <div class="stat-label">Dakika · Birebir ders</div>
       </div>
-      <div class="promise-item">
-        <div class="promise-num">%70</div>
-        <div class="promise-label">Konuşma Pratiği</div>
+      <div class="stat-item">
+        <div class="stat-num">%70</div>
+        <div class="stat-label">Konuşma pratiği</div>
       </div>
-      <div class="promise-item">
-        <div class="promise-num">0</div>
-        <div class="promise-label">Belirsizlik · Plan net</div>
+      <div class="stat-item">
+        <div class="stat-num">0</div>
+        <div class="stat-label">Belirsizlik · Plan net</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PROBLEM -->
-<section id="problem">
-  <div class="section-inner">
-    <div class="section-tag">Neden Bu Kadar Zor?</div>
-    <h2 class="section-title" style="color:white;">Yıllarca öğrendiniz.<br>Hâlâ bir cümle kuramıyorsunuz.</h2>
-    <p class="section-sub">Suç sizde değil — yöntemde. Motivasyonla başlayıp sistemsiz devam eden her girişim aynı yerde biter: yarıda.</p>
-    <div class="problem-grid">
-      <div class="problem-card">
-        <span class="problem-num">01</span>
-        <div class="problem-title">Gramer biliyor, konuşamıyorsunuz</div>
-        <div class="problem-desc">Yıllarca test çözdünüz, kural ezberlediniz. Ama biri size İngilizce bir şey sorduğunda beyin donuyor. Çünkü kurallar değil, pratik konuşturur. Pratik hiç olmadı.</div>
-      </div>
-      <div class="problem-card">
-        <span class="problem-num">02</span>
-        <div class="problem-title">Uygulama açıyorsunuz, ilerlemiyorsunuz</div>
-        <div class="problem-desc">Duolingo serisi, YouTube kanalları, podcast... Hepsini denediniz. Bir hafta sonra bıraktınız. Çünkü içerik tüketmek ile öğrenmek aynı şey değil. Sistem olmadan içerik birikmez.</div>
-      </div>
-      <div class="problem-card">
-        <span class="problem-num">03</span>
-        <div class="problem-title">Her seferinde "yarından itibaren" diyorsunuz</div>
-        <div class="problem-desc">Nereden başlayacağınızı bilmiyorsunuz. A1 mi, A2 mi? Hangi konu önce? Belirsizlik ertelemeye dönüşüyor, erteleme alışkanlığa. Yıllar böyle geçiyor.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SOLUTION -->
-<section id="solution">
-  <div class="section-inner">
-    <div class="solution-layout">
+<!-- MANIFESTO -->
+<section id="manifesto">
+  <div class="inner">
+    <div class="manifesto-grid">
       <div>
-        <div class="section-tag">Fark Eden Şey</div>
-        <h2 class="section-title">İngilizce öğrenmek değil — öğrenmeyi <em style="font-style:italic;">bitirmek</em> istiyorsunuz.</h2>
-        <p class="section-sub" style="margin-bottom:32px;">Her hafta ne çalışacağınız, hangi haftada hangi seviyeyi geçeceğiniz — hepsi baştan bellidir. Hislerinize değil, sisteme güvenirsiniz.</p>
-        <div class="solution-steps">
-          <div class="solution-step">
-            <div class="step-circle">1</div>
-            <div class="step-body">
-              <h4>Doğru yerden başlarsınız, tahmin yok</h4>
-              <p>İlk derste kısa bir konuşma değerlendirmesi yapılır. Gerçek seviyeniz belirlenir. Ne fazla geri, ne ileri — tam olmanız gereken yerden.</p>
-            </div>
+        <div class="tag">Neden Buraya Kadar</div>
+        <h2 class="section-title">Yıllarca öğrendiniz.<br>Hâlâ bir cümle<br>kuramıyorsunuz.</h2>
+        <p class="section-sub">Suç sizde değil — yöntemde. Motivasyonla başlayıp sistemsiz devam eden her girişim aynı yerde biter: yarıda.</p>
+        <div class="manifesto-body">
+          <div class="m-block">
+            <h3>Gramer biliyorsunuz, konuşamıyorsunuz</h3>
+            <p>Yıllarca kural ezberlediniz. Ama biri size İngilizce bir şey sorduğunda beyin donuyor. Çünkü kural öğrenmek ile kullanmak arasındaki köprü hiç kurulmadı. O köprü pratik — her derte büyük çoğunluğunu oluşturan konuşma pratiği.</p>
           </div>
-          <div class="solution-step">
-            <div class="step-circle">2</div>
-            <div class="step-body">
-              <h4>Ne çalışacağınızı önceden bilirsiniz</h4>
-              <p>Hangi haftada hangi konu, hangi ay hangi seviye — hepsi baştan bellidir. "Bu hafta ne yapayım?" sorusunu sormak zorunda kalmazsınız.</p>
-            </div>
+          <div class="m-block">
+            <h3>Uygulama açıyorsunuz, ilerlemiyorsunuz</h3>
+            <p>Duolingo, YouTube kanalları, podcast... Hepsini denediniz. Bir hafta sonra bıraktınız. İçerik tüketmek öğrenmek değil. Sistem olmadan içerik birikmez, birikse de konuşturmaz.</p>
           </div>
-          <div class="solution-step">
-            <div class="step-circle">3</div>
-            <div class="step-body">
-              <h4>Her dersin büyük çoğunluğu konuşma pratiği</h4>
-              <p>Anlatım sürenin %30'u, geri kalan %70'i sizin konuşmanız. Soru sormak, cevap vermek, hata yapmak ve düzeltmek — bu döngü öğretir.</p>
-            </div>
-          </div>
-          <div class="solution-step">
-            <div class="step-circle">4</div>
-            <div class="step-body">
-              <h4>İlerlemeniz görünür ve takip edilir</h4>
-              <p>Her ders sonrası hangi konunun güçlendiği, hangisinin tekrar gerektirdiği not edilir. Bir sonraki ders buradan şekillenir. Siz de görürsünüz.</p>
-            </div>
+          <div class="m-block">
+            <h3>Her seferinde "yarından itibaren" diyorsunuz</h3>
+            <p>Nereden başlayacağınızı bilmiyorsunuz. Belirsizlik ertelemeye dönüşüyor, erteleme alışkanlığa. Yıllar böyle geçiyor. Çözüm: başlamadan önce yolun tamamının çizilmiş olması.</p>
           </div>
         </div>
       </div>
-      <div class="solution-callout">
-        <div class="callout-quote">"Motivasyon başlatır, sistem bitirir. 6 ayda B1'e ulaşmak için büyük bir yeteneğe değil — <em>net bir plana ve devam etmeye</em> ihtiyacınız var."</div>
-        <div class="callout-meta">Cambridge CEFR · Haftada 2–3 ders · A1'den B1'e · 6 ay</div>
+      <div>
+        <div class="manifesto-callout">
+          <div class="mc-quote">"Öğrenmeyi bitirmek isteyenler için <strong>net bir plan</strong> ve <strong>disiplinli devam</strong> şarttır. Bunu sağlayamayanı öğrencim olarak kabul etmiyorum — çünkü ikimizin de zamanı değerli."</div>
+          <div class="mc-note">Bu program birebir ve kişiye özeldir. Haftada 2–3 ders · Ders dışı çalışma zorunluluğu var · Grup formatı mevcut değil</div>
+        </div>
       </div>
     </div>
   </div>
@@ -446,49 +361,49 @@ footer strong{color:var(--accent);}
 
 <!-- HOW IT WORKS -->
 <section id="how">
-  <div class="section-inner">
-    <div class="section-tag">Adım Adım Süreç</div>
-    <h2 class="section-title">Belirsizlik biter, sistem başlar.</h2>
-    <p class="section-sub">İlk mesajınızdan B1 seviyesindeki ilk gerçek konuşmanıza kadar her adım nettir. Sürpriz olmaz.</p>
-    <div class="how-steps">
-      <div class="how-step">
-        <div class="how-num">01</div>
-        <div class="how-content">
-          <span class="how-tag">Başlangıç</span>
-          <h3>30 dakika — sizi tanıyoruz, seviyenizi belirliyoruz</h3>
-          <p>Ücret yok, bağlayıcılık yok. Kısa bir konuşma değerlendirmesi. Neredesiniz, nereye gitmek istiyorsunuz — birlikte netleştiriyoruz. Sonrasına birlikte karar veriyoruz.</p>
+  <div class="inner">
+    <div class="tag">Süreç</div>
+    <h2 class="section-title">Belirsizlik biter,<br>sistem başlar.</h2>
+    <p class="section-sub">İlk mesajınızdan B1 seviyesindeki ilk gerçek konuşmanıza kadar her adım bellidir. Sürpriz olmaz.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-n">01</div>
+        <div class="step-c">
+          <span class="step-badge">Başlangıç</span>
+          <h3>Ücretsiz 30 dakika — seviyenizi birlikte belirliyoruz</h3>
+          <p>Zorunluluk yok, bağlayıcılık yok. Kısa bir konuşma değerlendirmesi. Neredesiniz, nereye gitmek istiyorsunuz — birlikte netleştiriyoruz. Devam edip etmemek tamamen size kalmış.</p>
         </div>
       </div>
-      <div class="how-step">
-        <div class="how-num">02</div>
-        <div class="how-content">
-          <span class="how-tag">Planlama</span>
-          <h3>6 aylık planınız kağıda dökülüyor</h3>
-          <p>Hangi ay A2'yi geçeceksiniz, hangi hafta hangi konuyu çalışacaksınız — bunlar başlamadan önce belirlenir ve size iletilir. "Ne yapsam?" sorusu tarihe karışır.</p>
+      <div class="step">
+        <div class="step-n">02</div>
+        <div class="step-c">
+          <span class="step-badge">Planlama</span>
+          <h3>6 aylık yol haritanız baştan bellidir</h3>
+          <p>Hangi ayda A1'i, hangi ayda A2'yi geçeceksiniz — hangi hafta hangi üniteyi çalışacaksınız — bunlar başlamadan önce belirlenir ve size iletilir. "Ne yapsam?" sorusu tarihe karışır.</p>
         </div>
       </div>
-      <div class="how-step">
-        <div class="how-num">03</div>
-        <div class="how-content">
-          <span class="how-tag">Dersler</span>
-          <h3>Haftada 2–3 ders — her biri 50 dakika, tam odak</h3>
-          <p>Materyaller 24 saat önce gelir, hazır gelirsiniz. Ders; pratik, düzeltme ve gerçek dil kullanımından oluşur. Bittikten sonra notlar ve geri bildirim iletilir.</p>
+      <div class="step">
+        <div class="step-n">03</div>
+        <div class="step-c">
+          <span class="step-badge">Dersler</span>
+          <h3>Haftada 2–3 ders, her biri 50 dakika, tam odak</h3>
+          <p>Özel hazırlanmış PDF materyaller 24 saat önce gelir, hazır gelirsiniz. Ders; pratik, anlık düzeltme ve gerçek dil kullanımından oluşur. Sonrasında geri bildirim ve ödev iletilir.</p>
         </div>
       </div>
-      <div class="how-step">
-        <div class="how-num">04</div>
-        <div class="how-content">
-          <span class="how-tag">İlerleme</span>
-          <h3>Her ay kapandı mı kapanmadı mı — birlikte görüyoruz</h3>
-          <p>Ay sonunda kısa bir değerlendirme. A1 tamamsa A2'ye geçiyoruz. Tamamlanmadıysa neden tamamlanmadığını birlikte analiz ediyoruz ve planı düzeltiyoruz.</p>
+      <div class="step">
+        <div class="step-n">04</div>
+        <div class="step-c">
+          <span class="step-badge">İlerleme</span>
+          <h3>Her ay kapandı mı — birlikte görüyoruz</h3>
+          <p>Ay sonunda kısa değerlendirme. A1 tamamsa A2'ye geçiyoruz. Tamamlanmadıysa neden tamamlanmadığını analiz edip planı düzeltiyoruz. Sürpriz ilerleme, sürpriz geri kalma olmaz.</p>
         </div>
       </div>
-      <div class="how-step">
-        <div class="how-num">05</div>
-        <div class="how-content">
-          <span class="how-tag">6. Ay</span>
+      <div class="step">
+        <div class="step-n">05</div>
+        <div class="step-c">
+          <span class="step-badge">6. Ay</span>
           <h3>Kendinizi anlatan biri olarak bitiriyorsunuz</h3>
-          <p>Günlük konular, iş toplantısı, seyahat, fikir savunma — bunların hepsinde kendinizi ifade edebilirsiniz. Bu bir garanti değil. Sistemi izleyen herkesin ulaştığı doğal nokta.</p>
+          <p>Günlük konular, iş toplantısı, seyahat, fikir savunma — bunların hepsinde kendinizi ifade edebilirsiniz. Sistemi izleyen herkesin ulaştığı doğal nokta.</p>
         </div>
       </div>
     </div>
@@ -497,120 +412,179 @@ footer strong{color:var(--accent);}
 
 <!-- ROADMAP -->
 <section id="roadmap">
-  <div class="section-inner">
-    <div class="section-tag">Müfredat</div>
-    <h2 class="section-title">Her hafta nerede olduğunuzu biliyorsunuz.</h2>
-    <p class="section-sub">Tahmin yok. "Sanırım ilerliyorum" yok. Her seviyenin bir bitiş tarihi, her konunun bir yeri var.</p>
-    <div class="roadmap-grid">
-      <div class="level-card">
-        <span class="level-dur">1–6. hafta</span>
-        <div class="level-label">Başlangıç</div>
-        <div class="level-code">A1</div>
-        <div class="level-name">İlk Sesler</div>
-        <div class="level-desc">Kendinizi tanıtırsınız, basit sorular sorarsınız, günlük rutini anlatırsınız.</div>
-        <ul class="level-topics">
-          <li>To be, have got, simple present</li>
-          <li>Sayılar, renkler, günler</li>
-          <li>Kendini tanıtma pratiği</li>
-          <li>Temel soru kalıpları</li>
-        </ul>
+  <div class="inner">
+    <div class="tag">6 Aylık Plan · Haftada 2 Ders</div>
+    <h2 class="section-title">Her hafta nerede<br>olduğunuzu biliyorsunuz.</h2>
+    <p class="section-sub">A1 + A2 toplamda 6 ay, haftada 2 × 50 dakika ders. 24 ünite, her birinin yeri ve zamanı baştan bellidir. Tahmin yok, "sanırım ilerliyorum" yok.</p>
+
+    <!-- Timeline bar -->
+    <div style="display:flex;gap:0;border-radius:10px;overflow:hidden;margin-bottom:48px;border:1px solid var(--border);">
+      <div style="flex:1;background:var(--navy);padding:18px 20px;text-align:center;">
+        <div style="font-size:.68rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:6px;">1–12. Hafta</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:600;color:var(--gold2);line-height:1;">A1</div>
+        <div style="font-size:.78rem;color:rgba(255,255,255,0.5);margin-top:4px;">3 Ay · 12 Ünite</div>
       </div>
-      <div class="level-card active-level">
-        <span class="level-dur">7–14. hafta</span>
-        <div class="level-label">Temel</div>
-        <div class="level-code">A2</div>
-        <div class="level-name">Hayata Giriyorsunuz</div>
-        <div class="level-desc">Alışveriş yaparsınız, yön tarif edersiniz, geçmişten bahsedersiniz. Dil artık hayatınızda.</div>
-        <ul class="level-topics">
-          <li>Past simple, present continuous</li>
-          <li>Sıklık zarfları, karşılaştırma</li>
-          <li>Diyalog pratiği</li>
-          <li>E-posta ve mesaj yazımı</li>
-        </ul>
+      <div style="flex:1;background:var(--gold);padding:18px 20px;text-align:center;">
+        <div style="font-size:.68rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(12,26,48,0.5);margin-bottom:6px;">13–24. Hafta</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:600;color:var(--navy);line-height:1;">A2</div>
+        <div style="font-size:.78rem;color:rgba(12,26,48,0.55);margin-top:4px;">3 Ay · 12 Ünite</div>
       </div>
-      <div class="level-card">
-        <span class="level-dur">15–20. hafta</span>
-        <div class="level-label">Orta Alt</div>
-        <div class="level-code">B1</div>
-        <div class="level-name">Artık Bağımsızsınız</div>
-        <div class="level-desc">Fikir savunursunuz, deneyim anlatırsınız, plan yaparsınız. Tercüman olmadan ilerlersiniz.</div>
-        <ul class="level-topics">
-          <li>Present perfect, conditionals</li>
-          <li>Modal verbs, passive voice</li>
-          <li>Uzun konuşma pratiği</li>
-          <li>Paragraf ve deneme yazımı</li>
-        </ul>
+      <div style="flex:1;background:var(--cream);padding:18px 20px;text-align:center;border-left:1px solid var(--border);">
+        <div style="font-size:.68rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:6px;">Opsiyonel Devam</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:600;color:var(--muted);line-height:1;opacity:.4;">B1</div>
+        <div style="font-size:.78rem;color:var(--muted);margin-top:4px;opacity:.6;">+8 Ay · Ayrı program</div>
       </div>
-      <div class="level-card" style="opacity:.55;border-style:dashed;">
-        <span class="level-dur">Opsiyonel</span>
-        <div class="level-label">Üst Orta</div>
-        <div class="level-code">B2</div>
-        <div class="level-name">Devam Yolu</div>
-        <div class="level-desc">B1'i geçenlere özel — sınav hazırlığı veya profesyonel İngilizce için isteğe bağlı devam.</div>
-        <ul class="level-topics">
-          <li>IELTS / YDS hazırlığı</li>
-          <li>İş yazışmaları</li>
-          <li>Akademik İngilizce</li>
-          <li>Sunum ve tartışma</li>
-        </ul>
+    </div>
+
+    <!-- A1 Grid -->
+    <div style="margin-bottom:12px;display:flex;align-items:center;gap:12px;">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;color:var(--navy);">A1 — Başlangıç</div>
+      <div style="font-size:.72rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;background:var(--navy);color:var(--gold2);padding:3px 10px;border-radius:4px;">12 Ünite · 1–12. Hafta</div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin-bottom:40px;">
+      <div class="u-card"><div class="u-num">Ü1 · Hf 1</div><div class="u-title">Hello & the Alphabet</div><div class="u-gram">To be · Zamirler</div><div class="u-skill">Kendini tanıtma diyaloğu</div></div>
+      <div class="u-card"><div class="u-num">Ü2 · Hf 2</div><div class="u-title">Numbers & Colours</div><div class="u-gram">Sayılar · Renk sıfatları</div><div class="u-skill">Nesneleri tanımla ve tarif et</div></div>
+      <div class="u-card"><div class="u-num">Ü3 · Hf 3</div><div class="u-title">My Family</div><div class="u-gram">Have/has · İyelik sıfatları</div><div class="u-skill">Aile ağacı sunumu</div></div>
+      <div class="u-card"><div class="u-num">Ü4 · Hf 4</div><div class="u-title">Food I Like</div><div class="u-gram">like / love / hate</div><div class="u-skill">Tercih ve tat ifadeleri</div></div>
+      <div class="u-card"><div class="u-num">Ü5 · Hf 5</div><div class="u-title">My Home & Daily Routine</div><div class="u-gram">Simple Present · Edatlar</div><div class="u-skill">Günlük rutin anlatımı</div></div>
+      <div class="u-card u-review"><div class="u-num">Hf 6</div><div class="u-title">Tekrar & Değerlendirme</div><div class="u-gram">Ü1–5 pekiştirme</div><div class="u-skill">Konuşma sınavı · Ü1–5</div></div>
+      <div class="u-card"><div class="u-num">Ü6 · Hf 7</div><div class="u-title">Jobs & Free Time</div><div class="u-gram">Simple Present sorular · Can/can't</div><div class="u-skill">Meslek ve hobi konuşması</div></div>
+      <div class="u-card"><div class="u-num">Ü7 · Hf 8</div><div class="u-title">Weather & Seasons</div><div class="u-gram">There is/are · Sıfatlar</div><div class="u-skill">Hava durumu tanımı</div></div>
+      <div class="u-card"><div class="u-num">Ü8 · Hf 9</div><div class="u-title">Shopping & Money</div><div class="u-gram">How much/many · Fiyatlar</div><div class="u-skill">Alışveriş diyaloğu</div></div>
+      <div class="u-card"><div class="u-num">Ü9 · Hf 10</div><div class="u-title">Getting Around</div><div class="u-gram">Imperatives · Yer edatları</div><div class="u-skill">Yol tarif etme pratiği</div></div>
+      <div class="u-card"><div class="u-num">Ü10 · Hf 11</div><div class="u-title">Health & Body</div><div class="u-gram">Have got · Simple Present</div><div class="u-skill">Semptom ve öneri diyaloğu</div></div>
+      <div class="u-card u-review"><div class="u-num">Hf 12</div><div class="u-title">A1 Final Değerlendirme</div><div class="u-gram">Tüm A1 müfredatı</div><div class="u-skill">Mock test · A1 geçiş onayı</div></div>
+    </div>
+
+    <!-- A2 Grid -->
+    <div style="margin-bottom:12px;display:flex;align-items:center;gap:12px;">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;color:var(--navy);">A2 — Temel</div>
+      <div style="font-size:.72rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;background:var(--gold);color:var(--navy);padding:3px 10px;border-radius:4px;">12 Ünite · 13–24. Hafta</div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin-bottom:40px;">
+      <div class="u-card u-a2"><div class="u-num">Ü1 · Hf 13</div><div class="u-title">Daily Routines</div><div class="u-gram">Adverbs of Frequency</div><div class="u-skill">Günlük rutin detaylı anlatım</div></div>
+      <div class="u-card u-a2"><div class="u-num">Ü2 · Hf 14</div><div class="u-title">Shopping & Services</div><div class="u-gram">some / any · Sayılamayan isimler</div><div class="u-skill">Mağazada diyalog</div></div>
+      <div class="u-card u-a2"><div class="u-num">Ü3 · Hf 15</div><div class="u-title">Weather & Climate</div><div class="u-gram">Present Continuous</div><div class="u-skill">Şu an olup bitenleri anlatma</div></div>
+      <div class="u-card u-a2"><div class="u-num">Ü4 · Hf 16</div><div class="u-title">Getting Around</div><div class="u-gram">Past Simple (düzenli fiiller)</div><div class="u-skill">Geçmiş seyahat anlatımı</div></div>
+      <div class="u-card u-a2"><div class="u-num">Ü5 · Hf 17</div><div class="u-title">My Past</div><div class="u-gram">Used to · Past Simple (düzensiz)</div><div class="u-skill">Çocukluk anısı anlatımı</div></div>
+      <div class="u-card u-review"><div class="u-num">Hf 18</div><div class="u-title">Tekrar & Değerlendirme</div><div class="u-gram">A2 Ü1–5 pekiştirme</div><div class="u-skill">Konuşma sınavı · Ü1–5</div></div>
+      <div class="u-card u-a2"><div class="u-num">Ü6 · Hf 19</div><div class="u-title">Food & Health</div><div class="u-gram">Comparatives & Superlatives</div><div class="u-skill">Sağlıklı yaşam tartışması</div></div>
+      <div class="u-card u-a2"><div class="u-num">Ü7 · Hf 20</div><div class="u-title">Work & School</div><div class="u-gram">Going to · Will (planlama)</div><div class="u-skill">Gelecek planı sunumu</div></div>
+      <div class="u-card u-a2"><div class="u-num">Ü8 · Hf 21</div><div class="u-title">Free Time & Hobbies</div><div class="u-gram">-ing verbs · Love/enjoy/hate + -ing</div><div class="u-skill">Hobi ve tercih konuşması</div></div>
+      <div class="u-card u-a2"><div class="u-num">Ü9 · Hf 22</div><div class="u-title">Travel & Transport</div><div class="u-gram">Past Simple · Soru kuruluşu</div><div class="u-skill">Tatil deneyimi anlatımı</div></div>
+      <div class="u-card u-a2"><div class="u-num">Ü10 · Hf 23</div><div class="u-title">People & Places</div><div class="u-gram">Modal verbs: should/must/can</div><div class="u-skill">Tavsiye ve zorunluluk ifadeleri</div></div>
+      <div class="u-card u-review" style="background:rgba(201,146,10,0.08);border-color:rgba(201,146,10,0.3)"><div class="u-num">Hf 24</div><div class="u-title" style="color:var(--gold);">A2 Final · 6. Ay Sonu</div><div class="u-gram">Tüm A2 müfredatı</div><div class="u-skill">Mock test · Program tamamlandı ✓</div></div>
+    </div>
+
+    <!-- Haftalık ritim -->
+    <div style="background:var(--navy);border-radius:12px;padding:32px 36px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;">
+      <div>
+        <div style="font-size:.68rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold2);margin-bottom:10px;">Her Hafta</div>
+        <div style="font-size:.9rem;color:rgba(255,255,255,0.65);line-height:1.8;font-weight:300;">2 × 50 dk canlı ders<br>1 PDF alıştırma seti<br>Kelime çalışması<br>Kısa yazma görevi</div>
+      </div>
+      <div>
+        <div style="font-size:.68rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold2);margin-bottom:10px;">Her Ay</div>
+        <div style="font-size:.9rem;color:rgba(255,255,255,0.65);line-height:1.8;font-weight:300;">2 ünite tamamlanır<br>Ay sonu değerlendirme<br>İlerleme raporu<br>Plan güncelleme</div>
+      </div>
+      <div>
+        <div style="font-size:.68rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold2);margin-bottom:10px;">6. Ay Sonunda</div>
+        <div style="font-size:.9rem;color:rgba(255,255,255,0.65);line-height:1.8;font-weight:300;">A2 tamamlandı<br>500→1.000 aktif kelime<br>Günlük konuşma akıcılığı<br>B1'e hazır zemin</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- LESSON STRUCTURE -->
+<section id="lesson">
+  <div class="inner">
+    <div class="lesson-layout">
+      <div>
+        <div class="tag">Yöntem</div>
+        <h2 class="section-title">Konuşmayı öğrenmenin<br>tek yolu konuşmaktır.</h2>
+        <p class="section-sub" style="margin-bottom:0;">Kural ezberi konuşturmaz. Konuşma pratiği hem konuşmayı hem grameri öğretir — aynı anda, doğal yoldan.</p>
+        <div class="lesson-features">
+          <div class="lf">
+            <h4>Hatanız anında görülür, kalıcı düzelir</h4>
+            <p>Yanlış bir yapı kullandığınızda "dur" diyoruz, doğrusunu söylüyoruz, siz tekrarlıyorsunuz. Dersin sonuna bırakmak hatayı pekiştirir. Anında düzeltmek kalıcı öğretir.</p>
+          </div>
+          <div class="lf">
+            <h4>Her pratik görevli — serbest sohbet değil</h4>
+            <p>"Konuşalım" değil — "Bu hafta geçmiş zamanda bir anını anlat, şu ifadeleri kullan." Hedefsiz konuşma vakit geçirir; hedefli konuşma dil inşa eder.</p>
+          </div>
+          <div class="lf">
+            <h4>Telaffuz her derse dahil, ayrı konu değil</h4>
+            <p>Hangi sesleri tutarlı yanlış çıkardığınız not edilir ve bir sonraki derste hedefe alınır. Doğal konuşmanın içinde gerçekleşir.</p>
+          </div>
+          <div class="lf">
+            <h4>Ders dışı çalışma zorunludur</h4>
+            <p>Ödevler, PDF alıştırmaları ve kaynak kitap çalışması derslerin ayrılmaz parçasıdır. Ders dışında hiç çalışmadan ilerleme beklemek bu programda işe yaramaz — bunu baştan söylüyorum.</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="breakdown">
+          <h3>50 dakika böyle geçiyor</h3>
+          <div class="bk-item">
+            <div class="bk-time">10'</div>
+            <div class="bk-info">
+              <strong>Önceki dersin özeti</strong>
+              <span>Geçen ders not edilen hatalar ve kelimeler kısa tekrarla açılır.</span>
+            </div>
+          </div>
+          <div class="bk-item">
+            <div class="bk-time">15'</div>
+            <div class="bk-info">
+              <strong>Bu haftanın konusu</strong>
+              <span>Gramer yapısı veya kelime grubu açıklanır, örneklerle netleştirilir.</span>
+            </div>
+          </div>
+          <div class="bk-item">
+            <div class="bk-time">20'</div>
+            <div class="bk-info">
+              <strong>Konuşma ve pratik</strong>
+              <span>Hedefli diyalog, soru-cevap, kısa sunum. Siz konuşursunuz, hatalar anında düzelir.</span>
+            </div>
+          </div>
+          <div class="bk-item">
+            <div class="bk-time">5'</div>
+            <div class="bk-info">
+              <strong>Sonraki haftaya hazırlık</strong>
+              <span>Ödevler netleştirilir: PDF alıştırma, kaynak kitap sayfaları veya yazma görevi.</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SPEAKING -->
-<section id="speaking">
-  <div class="section-inner">
-    <div class="section-tag">Neden Bu Yöntem Çalışıyor?</div>
-    <h2 class="section-title">Konuşmayı öğrenmenin<br>tek yolu konuşmaktır.</h2>
-    <div class="speaking-layout">
-      <div>
-        <p style="font-size:1.05rem;color:var(--muted);line-height:1.75;margin-bottom:32px;">Kural ezberi konuşturmaz. Konuşma pratiği hem konuşmayı hem grameri öğretir — aynı anda, doğal yoldan.</p>
-        <div class="speaking-features">
-          <div class="speaking-feat">
-            <h4>Hatanız anında görülür, kalıcı düzelir</h4>
-            <p>Yanlış bir yapı kullandığınızda "dur" diyoruz, doğrusunu söylüyoruz, siz tekrarlıyorsunuz. Dersin sonuna bırakmak hatayı pekiştirir. Anında düzeltmek kalıcı öğretir.</p>
-          </div>
-          <div class="speaking-feat">
-            <h4>Her pratik görevli — serbest sohbet değil</h4>
-            <p>"Konuşalım" değil — "Bu hafta geçmiş zamanda bir anını anlat, şu ifadeleri kullan." Hedefsiz konuşma vakit geçirir; hedefli konuşma dil inşa eder.</p>
-          </div>
-          <div class="speaking-feat">
-            <h4>Telaffuz her derse dahil, ayrı konu değil</h4>
-            <p>Hangi sesleri tutarlı yanlış çıkardığınız not edilir ve bir sonraki derste hedefe alınır. Telaffuz düzeltme, konuşma pratiğinin içinde doğal olarak gerçekleşir.</p>
-          </div>
-        </div>
+<!-- MATERIALS -->
+<section id="materials">
+  <div class="inner">
+    <div class="tag">Materyaller</div>
+    <h2 class="section-title">Her derse özel<br>hazırlanmış içerik.</h2>
+    <p class="section-sub">Kayıtlı video ders yok. Her materyal sizin seviyenize, hedefinize ve ilerleme hızınıza göre seçilir ve hazırlanır.</p>
+    <div class="mat-grid">
+      <div class="mat-card">
+        <div class="mat-icon">📄</div>
+        <h3>Özel Hazırlanmış PDF'ler</h3>
+        <p>Her ders için sıfırdan hazırlanan, o haftanın konusunu hedef alan alıştırma ve açıklama dosyaları. 24 saat önce gönderilir.</p>
       </div>
-      <div class="lesson-breakdown">
-        <h3>50 dakika böyle geçiyor</h3>
-        <div class="breakdown-item">
-          <div class="b-time">10'</div>
-          <div class="b-info">
-            <strong>Önceki dersin özeti</strong>
-            <span>Geçen ders not edilen hatalar ve kelimeler kısa tekrarla açılır.</span>
-          </div>
-        </div>
-        <div class="breakdown-item">
-          <div class="b-time">15'</div>
-          <div class="b-info">
-            <strong>Bu haftanın konusu</strong>
-            <span>Gramer yapısı veya kelime grubu açıklanır, örneklerle netleştirilir.</span>
-          </div>
-        </div>
-        <div class="breakdown-item">
-          <div class="b-time">20'</div>
-          <div class="b-info">
-            <strong>Konuşma ve pratik</strong>
-            <span>Hedefli diyalog, soru-cevap, kısa sunum. Siz konuşursunuz, hatalar anında düzelir.</span>
-          </div>
-        </div>
-        <div class="breakdown-item">
-          <div class="b-time">5'</div>
-          <div class="b-info">
-            <strong>Sonraki haftaya hazırlık</strong>
-            <span>Yapılacaklar netleştirilir: PDF alıştırma, kelime listesi veya yazma görevi.</span>
-          </div>
-        </div>
+      <div class="mat-card">
+        <div class="mat-icon">📚</div>
+        <h3>Hedefine Uygun Kaynak Kitaplar</h3>
+        <p>Seviyenize ve amacınıza göre seçilen kitaplar. IELTS, konuşma odaklı ya da genel İngilizce — hedef ne ise kaynak ona göre belirlenir.</p>
+      </div>
+      <div class="mat-card">
+        <div class="mat-icon">✏️</div>
+        <h3>Yazma ve Ödev Görevleri</h3>
+        <p>Her ders sonrası somut ödevler: kısa paragraf, e-posta taslağı veya kelime çalışması. Geri bildirimi sonraki derste verilir.</p>
+      </div>
+      <div class="mat-card">
+        <div class="mat-icon">🗺️</div>
+        <h3>Kişisel İlerleme Takibi</h3>
+        <p>Her ders notları tutulur. Güçlü ve zayıf noktalar kayıt altındadır. Bir sonraki ders buradan şekillenir. Siz de görürsünüz.</p>
       </div>
     </div>
   </div>
@@ -618,31 +592,29 @@ footer strong{color:var(--accent);}
 
 <!-- TRUST -->
 <section id="trust">
-  <div class="section-inner">
-    <div class="trust-header">
-      <div class="section-tag" style="display:block;text-align:center;">Açık Sözlülük</div>
-      <h2 class="section-title" style="text-align:center;">Ne vaat ediyorum, ne etmiyorum.</h2>
-      <p class="section-sub" style="text-align:center;margin:0 auto;">Dürüstlük bir strateji değil. Yanlış beklentiyle başlayan hiçbir ilişki iyi bitmez — o yüzden net konuşuyoruz.</p>
-    </div>
-    <div class="trust-grid">
-      <div class="trust-card yes">
-        <div class="trust-badge yes"><i class="fas fa-check"></i> Vaat edebilirim</div>
-        <ul class="trust-list">
-          <li><span class="icon yes">✓</span> Sistemi izlerseniz 6 ayda B1'e ulaşmak gerçekçi ve ulaşılabilir bir hedef</li>
-          <li><span class="icon yes">✓</span> Her dersten önce ne çalışılacağını bilirsiniz, sonrasında geri bildirim alırsınız</li>
-          <li><span class="icon yes">✓</span> Materyaller 24 saat önceden iletilir — derse hazır gelirsiniz</li>
-          <li><span class="icon yes">✓</span> Hatalarınız ve ilerlemeniz dersten derse takip edilir, kaybolmaz</li>
-          <li><span class="icon yes">✓</span> Cambridge CEFR tabanlı müfredat — ileride sınava girecekseniz sağlam zemin hazırlar</li>
+  <div class="inner">
+    <div class="tag" style="color:var(--gold2);">Açık Sözlülük</div>
+    <h2 class="section-title" style="color:#fff;max-width:480px;">Ne vaat ediyorum,<br>ne etmiyorum.</h2>
+    <p class="section-sub" style="color:rgba(255,255,255,0.45);margin-bottom:40px;">Yanlış beklentiyle başlayan hiçbir ilişki iyi bitmez. O yüzden net konuşuyoruz.</p>
+    <div class="trust-layout">
+      <div class="t-card yes">
+        <div class="t-badge yes">✓ Söyleyebileceklerim</div>
+        <ul class="t-list">
+          <li><span class="t-icon yes">✓</span>Sistemi izlerseniz 6 ayda B1 gerçekçi ve ulaşılabilir bir hedef</li>
+          <li><span class="t-icon yes">✓</span>Her dersten önce ne çalışılacağını bilirsiniz, sonrasında geri bildirim alırsınız</li>
+          <li><span class="t-icon yes">✓</span>Materyaller 24 saat önceden iletilir — derse hazır gelirsiniz</li>
+          <li><span class="t-icon yes">✓</span>Hatalarınız ve ilerlemeniz dersten derse kayıt altında tutulur</li>
+          <li><span class="t-icon yes">✓</span>Ders dışı çalışmayı sürdüren öğrenciler tutarlı biçimde ilerliyor</li>
         </ul>
       </div>
-      <div class="trust-card no">
-        <div class="trust-badge no"><i class="fas fa-times"></i> Söylemeyeceğim</div>
-        <ul class="trust-list">
-          <li><span class="icon no">–</span> "30 günde akıcı konuşma" — kimse bunu gerçekleştiremez, ben de söylemem</li>
-          <li><span class="icon no">–</span> Ders dışında hiç çalışmadan ilerleme beklemek — olmaz, o yüzden baştan söylüyorum</li>
-          <li><span class="icon no">–</span> "Kesin sonuç garantisi" — sonuç sizin tutarlılığınıza bağlı, başka türlü çalışmaz</li>
-          <li><span class="icon no">–</span> Haftada 1 derste 6 ayda B1 hedefi — matematik tutmuyor, dürüstçe söylüyorum</li>
-          <li><span class="icon no">–</span> Diploma veya resmi sertifika vermek — bunun için IELTS ya da Cambridge sınavına girmeniz gerekir</li>
+      <div class="t-card no">
+        <div class="t-badge no">– Söylemeyeceğim</div>
+        <ul class="t-list">
+          <li><span class="t-icon no">–</span>"30 günde akıcı konuşma" — kimse bunu gerçekleştiremez</li>
+          <li><span class="t-icon no">–</span>Ders dışında hiç çalışmadan ilerleme — bu programda olmaz, baştan söylüyorum</li>
+          <li><span class="t-icon no">–</span>Kesin sonuç garantisi — sonuç sizin tutarlılığınıza da bağlı</li>
+          <li><span class="t-icon no">–</span>Haftada 1 derste 6 ayda B1 — matematik tutmuyor, dürüstçe söylüyorum</li>
+          <li><span class="t-icon no">–</span>Resmi diploma veya sertifika — bunun için IELTS ya da Cambridge sınavına girmeniz gerekir</li>
         </ul>
       </div>
     </div>
@@ -651,29 +623,29 @@ footer strong{color:var(--accent);}
 
 <!-- FOR WHO -->
 <section id="forwho">
-  <div class="section-inner">
-    <div class="section-tag">Bu Program Kimin İçin?</div>
+  <div class="inner">
+    <div class="tag">Bu Program Kimin İçin?</div>
     <h2 class="section-title">Herkes için değil.<br>Sizin için mi?</h2>
-    <p class="section-sub">Bu programdan en çok kim faydalanır, kim faydalanmaz — açık söylüyorum. Yanlış başlamak ikimizin de zamanını boşa harcar.</p>
-    <div class="forwho-grid">
-      <div class="forwho-card yes-card">
-        <h3><i class="fas fa-check-circle" style="color:var(--green)"></i> Tam size göre</h3>
-        <ul class="forwho-list">
-          <li><span class="arr" style="color:var(--green);">→</span> Uzun zamandır öğreniyorsunuz ama bir türlü konuşamıyorsunuz — ve bunun değişmesini gerçekten istiyorsunuz</li>
-          <li><span class="arr" style="color:var(--green);">→</span> Haftada en az 2 gün, 50'şer dakika ders için zaman ayırabilirsiniz</li>
-          <li><span class="arr" style="color:var(--green);">→</span> Birebir çalışmayı tercih ediyorsunuz — kalabalıkta kaybolmak istemiyorsunuz</li>
-          <li><span class="arr" style="color:var(--green);">→</span> İş, seyahat ya da sınav gibi somut bir hedefiniz var — yönlü ilerlemek istiyorsunuz</li>
-          <li><span class="arr" style="color:var(--green);">→</span> Seviyeniz A1 ile B1 arasında — sıfırdan da başlanabilir</li>
+    <p class="section-sub">Yanlış başlamak ikimizin de zamanını boşa harcar. Bu programdan kim faydalanır, kim faydalanmaz — açık söylüyorum.</p>
+    <div class="fw-grid">
+      <div class="fw-card yes">
+        <h3><span style="color:var(--green);">✓</span> Tam size göre</h3>
+        <ul class="fw-list">
+          <li><span class="arr g">→</span>Uzun zamandır öğreniyorsunuz ama bir türlü konuşamıyorsunuz — ve bunun değişmesini gerçekten istiyorsunuz</li>
+          <li><span class="arr g">→</span>Haftada en az 2 gün, 50'şer dakika ders için zaman ayırabilirsiniz ve ders dışında da çalışmaya hazırsınız</li>
+          <li><span class="arr g">→</span>Birebir çalışmayı tercih ediyorsunuz — kalabalıkta kaybolmak istemiyorsunuz</li>
+          <li><span class="arr g">→</span>İş, seyahat ya da sınav gibi somut bir hedefiniz var</li>
+          <li><span class="arr g">→</span>Seviyeniz A1 ile B1 arasında — sıfırdan da başlanabilir</li>
         </ul>
       </div>
-      <div class="forwho-card">
-        <h3><i class="fas fa-times-circle" style="color:var(--muted)"></i> Uygun olmayabilir</h3>
-        <ul class="forwho-list">
-          <li><span class="arr" style="color:var(--muted);">→</span> 2–3 haftada "akıcı İngilizce" bekliyorsunuz — o beklentiyle başlamak hayal kırıklığıyla biter</li>
-          <li><span class="arr" style="color:var(--muted);">→</span> Ders dışında hiç çalışmadan ilerlemeyi bekliyorsunuz — bu sistemde olmaz</li>
-          <li><span class="arr" style="color:var(--muted);">→</span> B2 veya üzeri seviyedesiniz — ihtiyacınız farklı bir program, bunu açıkça söylüyorum</li>
-          <li><span class="arr" style="color:var(--muted);">→</span> Grup dersi arıyorsunuz — bu program tamamen birebir, grup formatı yok</li>
-          <li><span class="arr" style="color:var(--muted);">→</span> Sadece sınav puanı istiyorsunuz, gerçek dil değil — bu programa uymaz, baştan söyleyeyim</li>
+      <div class="fw-card">
+        <h3><span style="color:var(--muted);">–</span> Uygun olmayabilir</h3>
+        <ul class="fw-list">
+          <li><span class="arr">→</span>2–3 haftada akıcı İngilizce bekliyorsunuz — o beklentiyle başlamak hayal kırıklığıyla biter</li>
+          <li><span class="arr">→</span>Ders dışında hiç çalışmadan ilerlemeyi bekliyorsunuz — bu sistemde olmaz</li>
+          <li><span class="arr">→</span>B2 veya üzeri seviyedesiniz — ihtiyacınız farklı bir program</li>
+          <li><span class="arr">→</span>Grup dersi arıyorsunuz — bu program tamamen birebir, grup formatı yok</li>
+          <li><span class="arr">→</span>Sisteme değil sertifikaya ihtiyacınız var — bu programa uymaz</li>
         </ul>
       </div>
     </div>
@@ -682,140 +654,109 @@ footer strong{color:var(--accent);}
 
 <!-- PRICING -->
 <section id="pricing">
-  <div class="section-inner">
-    <div class="section-tag">Ücretler</div>
-    <h2 class="section-title">Programa dahil olmak için WhatsApp'tan yazın.</h2>
-    <p class="section-sub">Güncel ücretler ve müsaitlik bilgisi için doğrudan WhatsApp'tan ulaşın — en hızlı yanıt oradan geliyor.</p>
-    <div class="pricing-cards" style="grid-template-columns:repeat(3,1fr);">
+  <div class="inner">
+    <div class="tag" style="color:var(--gold2);">Ücretler</div>
+    <h2 class="section-title" style="color:#fff;max-width:500px;">Başlamak için<br>WhatsApp'tan yazın.</h2>
+    <p class="section-sub" style="color:rgba(255,255,255,0.45);">Güncel ücretler ve müsaitlik bilgisi için doğrudan WhatsApp'tan ulaşın — en hızlı yanıt oradan geliyor.</p>
+    <div class="price-cards">
       <div class="price-card">
         <div class="plan-name">Deneme Dersi</div>
-        <div class="plan-price" style="font-size:2rem;">Ücretsiz</div>
+        <div class="plan-price">Ücretsiz</div>
         <div class="plan-period">Bir kez · 30 dakika</div>
-        <div class="plan-desc">Seviyenizi birlikte netleştiriyoruz. Programın size uygun olup olmadığını görüyorsunuz. Zorunluluk yok, baskı yok.</div>
-        <ul class="plan-features">
-          <li class="plan-feat"><span class="check">✓</span> Seviye değerlendirmesi</li>
-          <li class="plan-feat"><span class="check">✓</span> 6 aylık plan önizlemesi</li>
-          <li class="plan-feat"><span class="check">✓</span> Google Meet üzerinden</li>
+        <div class="plan-desc">Seviyenizi birlikte netleştiriyoruz. Programın size uygun olup olmadığını görüyorsunuz. Zorunluluk yok.</div>
+        <ul class="plan-feats">
+          <li class="plan-feat"><span class="ck">✓</span>Konuşma değerlendirmesi</li>
+          <li class="plan-feat"><span class="ck">✓</span>6 aylık plan önizlemesi</li>
+          <li class="plan-feat"><span class="ck">✓</span>Google Meet üzerinden</li>
         </ul>
-        <a href="#" onclick="window.open('https://wa.me/905446405749?text=Merhaba%2C+%C3%BCcretsiz+deneme+dersi+hakk%C4%B1nda+bilgi+almak+istiyorum.','_blank');return false;" class="price-cta ghost"><i class="fab fa-whatsapp" style="margin-right:6px"></i>WhatsApp ile Başlat</a>
+        <a href="#" onclick="openWA('Merhaba%2C+%C3%BCcretsiz+deneme+dersi+hakk%C4%B1nda+bilgi+almak+istiyorum.')" class="pcta ghost">WhatsApp ile Başlat</a>
       </div>
-      <div class="price-card featured">
-        <div class="feat-label">Önerilen</div>
+      <div class="price-card feat">
+        <div class="feat-tag">Önerilen</div>
         <div class="plan-name">Haftada 2 Ders</div>
-        <div class="plan-price" style="font-size:1.6rem;letter-spacing:-0.5px;">Fiyat için<br>yazın</div>
+        <div class="plan-price" style="font-size:1.5rem;line-height:1.2;">Fiyat için<br>yazın</div>
         <div class="plan-period">/ ay · 8 ders · haftada 2</div>
-        <div class="plan-desc">Disiplinli ve yapılandırılmış ilerleme için tasarlandı. 6 ayda B1 hedefine ulaşmak için ideal tempo.</div>
-        <ul class="plan-features">
-          <li class="plan-feat"><span class="check">✓</span> 8 × 50 dakika birebir ders</li>
-          <li class="plan-feat"><span class="check">✓</span> Haftalık PDF materyaller</li>
-          <li class="plan-feat"><span class="check">✓</span> Gerçek zamanlı hata analizi</li>
-          <li class="plan-feat"><span class="check">✓</span> Aylık ilerleme raporu</li>
-          <li class="plan-feat"><span class="check">✓</span> WhatsApp ile soru hakkı</li>
+        <div class="plan-desc">6 ayda B1 hedefine ulaşmak için ideal tempo. Disiplinli ve yapılandırılmış ilerleme.</div>
+        <ul class="plan-feats">
+          <li class="plan-feat"><span class="ck">✓</span>8 × 50 dakika birebir ders</li>
+          <li class="plan-feat"><span class="ck">✓</span>Özel hazırlanmış PDF materyaller</li>
+          <li class="plan-feat"><span class="ck">✓</span>Hedefine uygun kaynak kitap</li>
+          <li class="plan-feat"><span class="ck">✓</span>Gerçek zamanlı hata analizi</li>
+          <li class="plan-feat"><span class="ck">✓</span>Aylık ilerleme raporu</li>
+          <li class="plan-feat"><span class="ck">✓</span>WhatsApp soru hakkı</li>
         </ul>
-        <a href="#" onclick="window.open('https://wa.me/905446405749?text=Merhaba%2C+haftada+2+ders+paketinin+%C3%BCcreti+hakk%C4%B1nda+bilgi+almak+istiyorum.','_blank');return false;" class="price-cta primary"><i class="fab fa-whatsapp" style="margin-right:6px"></i>Fiyat & Detay Sor</a>
+        <a href="#" onclick="openWA('Merhaba%2C+haftada+2+ders+paketi+hakk%C4%B1nda+bilgi+almak+istiyorum.')" class="pcta primary">Fiyat Sor</a>
       </div>
       <div class="price-card">
         <div class="plan-name">Haftada 1 Ders</div>
-        <div class="plan-price" style="font-size:1.6rem;letter-spacing:-0.5px;">Fiyat için<br>yazın</div>
+        <div class="plan-price" style="font-size:1.5rem;line-height:1.2;">Fiyat için<br>yazın</div>
         <div class="plan-period">/ ay · 4 ders · haftada 1</div>
-        <div class="plan-desc">Daha esnek bir tempo tercih edenler için. Süre uzar ama sistem aynıdır — her ders amaçlı, her hafta planlı.</div>
-        <ul class="plan-features">
-          <li class="plan-feat"><span class="check">✓</span> 4 × 50 dakika birebir ders</li>
-          <li class="plan-feat"><span class="check">✓</span> Haftalık PDF materyaller</li>
-          <li class="plan-feat"><span class="check">✓</span> Ders sonu geri bildirim notu</li>
-          <li class="plan-feat"><span class="check">✓</span> Aylık ilerleme değerlendirmesi</li>
-          <li class="plan-feat"><span class="check">✓</span> WhatsApp ile soru hakkı</li>
+        <div class="plan-desc">Daha esnek bir tempo tercih edenler için. Süre uzar ama sistem aynıdır — her ders amaçlı.</div>
+        <ul class="plan-feats">
+          <li class="plan-feat"><span class="ck">✓</span>4 × 50 dakika birebir ders</li>
+          <li class="plan-feat"><span class="ck">✓</span>Özel hazırlanmış PDF materyaller</li>
+          <li class="plan-feat"><span class="ck">✓</span>Hedefine uygun kaynak kitap</li>
+          <li class="plan-feat"><span class="ck">✓</span>Ders sonu geri bildirim notu</li>
+          <li class="plan-feat"><span class="ck">✓</span>Aylık ilerleme değerlendirmesi</li>
+          <li class="plan-feat"><span class="ck">✓</span>WhatsApp soru hakkı</li>
         </ul>
-        <a href="#" onclick="window.open('https://wa.me/905446405749?text=Merhaba%2C+haftada+1+ders+paketinin+%C3%BCcreti+hakk%C4%B1nda+bilgi+almak+istiyorum.','_blank');return false;" class="price-cta ghost"><i class="fab fa-whatsapp" style="margin-right:6px"></i>Fiyat & Detay Sor</a>
+        <a href="#" onclick="openWA('Merhaba%2C+haftada+1+ders+paketi+hakk%C4%B1nda+bilgi+almak+istiyorum.')" class="pcta ghost">Fiyat Sor</a>
       </div>
     </div>
-    <p class="pricing-note">Tüm paketlerde ücretsiz deneme dersi ile başlanır · Tekli ders seçeneği de mevcut</p>
-  </div>
-</section>
-
-<!-- ONLINE LESSON -->
-<section id="online-lesson">
-  <div class="section-inner">
-    <div class="section-tag">Özel Online Ders</div>
-    <h2 class="section-title">Birebir Online İngilizce Dersi</h2>
-    <p class="section-sub">Kendi seviyenize ve hedefinize göre kişiselleştirilmiş ders planı ile hızla ilerleyin.</p>
-    <div class="lesson-cards">
-      <div class="lesson-card">
-        <div class="lesson-card-icon">🎯</div>
-        <h3>Kişiselleştirilmiş Plan</h3>
-        <p>Seviye testinize göre tamamen size özel müfredat ve ilerleme planı hazırlanır.</p>
-        <ul><li>Ücretsiz seviye testi</li><li>Hedefe göre ders planı</li><li>Haftalık ilerleme raporu</li></ul>
-      </div>
-      <div class="lesson-card">
-        <div class="lesson-card-icon">💬</div>
-        <h3>Konuşma & Telaffuz</h3>
-        <p>Speaking ve pronunciation odaklı interaktif derslerle özgüveni artırın.</p>
-        <ul><li>Gerçek konuşma pratikleri</li><li>Telaffuz düzeltme</li><li>IELTS / Cambridge konuşma hazırlığı</li></ul>
-      </div>
-      <div class="lesson-card">
-        <div class="lesson-card-icon">📝</div>
-        <h3>Yazma & Gramer</h3>
-        <p>Paragraf, e-posta ve deneme yazımı ile gramer yapılarını kalıcı öğrenin.</p>
-        <ul><li>Yazı geri bildirimi</li><li>Cambridge gramer müfredatı</li><li>Hata analizi ve düzeltme</li></ul>
-      </div>
-      <div class="lesson-card">
-        <div class="lesson-card-icon">🏆</div>
-        <h3>Sınav Hazırlığı</h3>
-        <p>IELTS, YDS, YÖKDİL ve Cambridge sınavlarına yönelik odaklı hazırlık programı.</p>
-        <ul><li>Sınav teknikleri ve stratejileri</li><li>Mock test uygulamaları</li><li>Zaman yönetimi</li></ul>
-      </div>
-    </div>
+    <p class="price-note">Tüm paketlerde ücretsiz deneme dersi ile başlanır · Tekli ders seçeneği de mevcut</p>
   </div>
 </section>
 
 <!-- FAQ -->
 <section id="faq">
-  <div class="section-inner">
+  <div class="inner">
+    <div class="tag">Sık Sorulan Sorular</div>
+    <h2 class="section-title">Kafanızdaki sorular —<br>dürüst cevaplar.</h2>
     <div class="faq-inner">
-      <div class="section-tag" style="display:block;text-align:center;">Sık Sorulan Sorular</div>
-      <h2 class="section-title" style="text-align:center;">Kafanızdaki sorular — dürüst cevaplar.</h2>
-      <div class="faq-list">
-        <details class="faq-item">
-          <summary>Hiç bilmiyorum, sıfırdan başlayabilir miyim?</summary>
-          <p class="faq-body">Evet. A1 — yani mutlak başlangıç — bu programın başlangıç noktası. "Merhaba" bile demesini bilmiyorsanız oradan başlarız. Tek şart: öğrenmeye kararlı olmak.</p>
-        </details>
-        <details class="faq-item">
-          <summary>Haftada kaç ders yapmalıyım?</summary>
-          <p class="faq-body">6 ayda B1 için haftada en az 2 ders. Haftada 1 derste bu süre 10–12 aya uzar. Daha hızlı ulaşmak istiyorsanız yoğun programla haftada 4 derse çıkılabilir. Siz karar verirsiniz, ben dürüstçe söylüyorum.</p>
-        </details>
-        <details class="faq-item">
-          <summary>Ders dışında ne kadar zaman ayırmam gerekiyor?</summary>
-          <p class="faq-body">Günde 20–30 dakika yeterli. PDF alıştırmaları, kelime tekrarı, kısa yazma görevi. Bu süreyi ayırmayanların ilerlemesi yavaşlar — bunu baştan söylüyorum çünkü sürpriz olmasın.</p>
-        </details>
-        <details class="faq-item">
-          <summary>6 ayda B1'e ulaşmak garanti mi?</summary>
-          <p class="faq-body">Hayır, garanti değil — ve bunu söyleyen herkes abartıyor. Garanti edebileceğim şey: net plan, tutarlı pratik ve düzenli takiple 6 ayda B1 gerçekçi ve ulaşılabilir bir hedeftir. Ama sonuç yalnızca sisteme değil, sizin devamınıza da bağlı.</p>
-        </details>
-        <details class="faq-item">
-          <summary>Ders iptal etmem gerekirse ne olur?</summary>
-          <p class="faq-body">24 saat önceden haber vermeniz yeterli. İptal edilen ders kaybolmaz — sonraki haftaya taşınır. Paket içindeki dersler o ay içinde tamamlanır.</p>
-        </details>
-        <details class="faq-item">
-          <summary>IELTS ya da YDS hazırlığı yapılıyor mu?</summary>
-          <p class="faq-body">Evet. B1'e ulaştıktan sonra sınav odaklı programa geçilebilir. Yoğun programda sınav teknikleri başından dahil edilir. Hedefiniz sınav ise deneme dersinde birlikte planlarız.</p>
-        </details>
-        <details class="faq-item">
-          <summary>Dersler nerede yapılıyor?</summary>
-          <p class="faq-body">Google Meet veya Zoom — tercihinize göre. Bağlantı linki her dersten önce size iletilir. Ekstra uygulama indirmenize gerek yok, sadece bir tarayıcı yeterli.</p>
-        </details>
-      </div>
+      <details class="faq">
+        <summary>Hiç bilmiyorum, sıfırdan başlayabilir miyim?</summary>
+        <p class="faq-body">Evet. A1 — yani mutlak başlangıç — bu programın başlangıç noktası. "Merhaba" bile demesini bilmiyorsanız oradan başlarız. Tek şart: öğrenmeye kararlı olmak ve ders dışında da zaman ayırabilmek.</p>
+      </details>
+      <details class="faq">
+        <summary>Haftada kaç ders yapmalıyım?</summary>
+        <p class="faq-body">6 ayda B1 için haftada en az 2 ders. Haftada 1 derste bu süre 10–12 aya uzar. Daha hızlı ulaşmak istiyorsanız yoğun programla haftada 3'e çıkılabilir. Siz karar verirsiniz, ben dürüstçe söylüyorum.</p>
+      </details>
+      <details class="faq">
+        <summary>Ders dışında ne kadar zaman ayırmam gerekiyor?</summary>
+        <p class="faq-body">Günde 20–30 dakika. PDF alıştırmaları, kaynak kitap çalışması, kısa yazma görevi. Bu süreyi ayırmayanların ilerlemesi yavaşlar ya da durur — bunu baştan söylüyorum çünkü sürpriz olmasın. Ders dışı çalışma bu programın zorunlu parçasıdır.</p>
+      </details>
+      <details class="faq">
+        <summary>6 ayda B1'e ulaşmak garanti mi?</summary>
+        <p class="faq-body">Hayır, garanti değil — ve bunu söyleyen herkes abartıyor. Söyleyebileceğim şey: net plan, tutarlı pratik ve düzenli ders dışı çalışmayla 6 ayda B1 gerçekçi ve ulaşılabilir. Sonuç sisteme olduğu kadar sizin devamınıza da bağlı.</p>
+      </details>
+      <details class="faq">
+        <summary>Ders iptal etmem gerekirse ne olur?</summary>
+        <p class="faq-body">24 saat önceden haber vermeniz yeterli. İptal edilen ders kaybolmaz — sonraki haftaya taşınır. Paket içindeki dersler o ay içinde tamamlanır.</p>
+      </details>
+      <details class="faq">
+        <summary>IELTS ya da YDS hazırlığı yapılıyor mu?</summary>
+        <p class="faq-body">Evet. B1'e ulaştıktan sonra sınav odaklı programa geçilebilir. Hedefin baştan sınav ise deneme dersinde birlikte planlarız ve kaynak kitaplar buna göre seçilir.</p>
+      </details>
+      <details class="faq">
+        <summary>Dersler nerede yapılıyor?</summary>
+        <p class="faq-body">Google Meet veya Zoom — tercihinize göre. Bağlantı linki her dersten önce size iletilir. Ekstra uygulama indirmenize gerek yok, sadece bir tarayıcı yeterli.</p>
+      </details>
+      <details class="faq">
+        <summary>Kayıtlı video ders var mı?</summary>
+        <p class="faq-body">Hayır. Bu program tamamen canlı, birebir derslerden oluşuyor. Kayıtlı video içerik sunmuyorum. Materyaller PDF ve kaynak kitap formatında, dersler ise her seferinde sizinle canlı yapılıyor.</p>
+      </details>
     </div>
   </div>
 </section>
 
 <!-- FINAL CTA -->
 <section id="final-cta">
-  <div class="section-inner">
+  <div class="inner">
     <h2>İlk adım zor değil.<br><em>Atmamak</em> daha zor.</h2>
     <p>30 dakikalık ücretsiz bir ders. Seviyenizi birlikte belirleriz, 6 aylık planı masaya yatırırız. Devam etmek ya da etmemek — tamamen size kalmış.</p>
     <div class="cta-btns">
-      <a href="mailto:ingilizceogrensene@gmail.com?subject=Deneme Dersi Talebi" class="btn-cta-dark"><i class="fas fa-envelope"></i> Ücretsiz Dersi Başlat</a>
-      <a href="#" class="btn-cta-outline" onclick="window.open(atob('aHR0cHM6Ly93YS5tZS85MDU0NDY0MDU3NDk='),'_blank');return false;"><i class="fab fa-whatsapp"></i> WhatsApp ile Yaz</a>
+      <a href="mailto:ingilizceogrensene@gmail.com?subject=Deneme Dersi Talebi" class="btn-dark">✉ Ücretsiz Dersi Başlat</a>
+      <a href="#" onclick="openWA('Merhaba%2C+%C3%BCcretsiz+deneme+dersi+hakk%C4%B1nda+bilgi+almak+istiyorum.');return false;" class="btn-outline-dark">WhatsApp ile Yaz</a>
     </div>
     <p class="cta-note">Kredi kartı gerekmez · Bağlayıcılık yok · Sadece 30 dakika · Google Meet</p>
   </div>
@@ -823,48 +764,46 @@ footer strong{color:var(--accent);}
 
 <!-- CONTACT -->
 <section id="contact">
-  <div class="section-inner">
-    <div class="section-tag">İletişim</div>
-    <h2 class="section-title">Yazın, birlikte planlayalım.</h2>
-    <p class="section-sub">Formu doldurun — mesajınız hem WhatsApp'a hem e-postaya iletilecek. En hızlı yanıt WhatsApp'tan gelir.</p>
+  <div class="inner">
+    <div class="tag" style="color:var(--gold2);">İletişim</div>
+    <h2 class="section-title" style="color:#fff;">Yazın, birlikte planlayalım.</h2>
+    <p class="section-sub" style="color:rgba(255,255,255,0.4);margin-bottom:48px;">En hızlı yanıt WhatsApp'tan gelir.</p>
     <div class="contact-grid">
-      <div>
-        <div class="contact-info">
-          <div class="contact-item">
-            <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
-            <div><h5>E-posta</h5><a href="mailto:ingilizceogrensene@gmail.com">ingilizceogrensene@gmail.com</a></div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-item-icon"><i class="fab fa-whatsapp"></i></div>
-            <div><h5>WhatsApp</h5><a href="#" onclick="window.open('https://wa.me/905446405749','_blank');return false;">Hızlı destek için yazın</a></div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-item-icon"><i class="fab fa-instagram"></i></div>
-            <div><h5>Instagram</h5><a href="https://www.instagram.com/abonlinenglish" target="_blank">@abonlinenglish</a></div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-item-icon"><i class="fas fa-clock"></i></div>
-            <div><h5>Çalışma Saatleri</h5><p>Pzt–Cuma: 09:00 – 20:00</p></div>
-          </div>
+      <div class="c-info">
+        <div class="c-item">
+          <div class="c-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div><h5>E-posta</h5><a href="mailto:ingilizceogrensene@gmail.com">ingilizceogrensene@gmail.com</a></div>
+        </div>
+        <div class="c-item">
+          <div class="c-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.64 1.5h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.1a16 16 0 0 0 6 6l1.96-1.96a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 15.32z"/></svg></div>
+          <div><h5>WhatsApp</h5><a href="#" onclick="openWA('Merhaba');return false;">Hızlı destek için yazın</a></div>
+        </div>
+        <div class="c-item">
+          <div class="c-icon"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
+          <div><h5>Instagram</h5><a href="https://www.instagram.com/abonlinenglish" target="_blank">@abonlinenglish</a></div>
+        </div>
+        <div class="c-item">
+          <div class="c-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div><h5>Çalışma Saatleri</h5><p>Pzt–Cuma: 09:00 – 20:00</p></div>
         </div>
       </div>
-      <form class="contact-form" onsubmit="submitContactForm(event)">
+      <form class="c-form" onsubmit="submitWA(event)">
         <div class="form-row">
-          <div class="form-group"><label>Adınız</label><input type="text" id="cf-name" placeholder="Ad Soyad" required></div>
-          <div class="form-group"><label>E-posta</label><input type="email" id="cf-email" placeholder="ornek@mail.com" required></div>
+          <div class="fg"><label>Adınız</label><input type="text" id="cf-name" placeholder="Ad Soyad" required></div>
+          <div class="fg"><label>E-posta</label><input type="email" id="cf-email" placeholder="ornek@mail.com" required></div>
         </div>
-        <div class="form-group">
+        <div class="fg">
           <label>Seviyeniz</label>
-          <select id="cf-level"><option value="">Seviye Seçin</option><option>A1 – Başlangıç</option><option>A2 – Temel</option><option>B1 – Orta</option><option>B2 – Üst Orta</option><option>Bilmiyorum – Test Etmek İstiyorum</option></select>
+          <select id="cf-level"><option value="">Seviye seçin</option><option>A1 – Başlangıç</option><option>A2 – Temel</option><option>B1 – Orta</option><option>Bilmiyorum</option></select>
         </div>
-        <div class="form-group">
+        <div class="fg">
           <label>Konu</label>
-          <select id="cf-topic"><option value="">Konu Seçin</option><option>Özel Ders Talebi</option><option>Deneme Dersi</option><option>Ücret Bilgisi</option><option>Diğer</option></select>
+          <select id="cf-topic"><option value="">Konu seçin</option><option>Deneme Dersi</option><option>Ücret Bilgisi</option><option>Özel Ders Talebi</option><option>Diğer</option></select>
         </div>
-        <div class="form-group"><label>Mesajınız</label><textarea id="cf-message" placeholder="Mesajınızı yazın..." rows="4"></textarea></div>
-        <div style="display:flex;gap:12px;flex-wrap:wrap;">
-          <button class="form-submit" type="submit" style="flex:1;display:flex;align-items:center;justify-content:center;gap:8px;"><i class="fab fa-whatsapp"></i>WhatsApp ile Gönder</button>
-          <button class="form-submit" type="button" onclick="submitByEmail()" style="flex:1;background:rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;gap:8px;"><i class="fas fa-envelope"></i>E-posta ile Gönder</button>
+        <div class="fg"><label>Mesajınız</label><textarea id="cf-msg" placeholder="Mesajınızı yazın..." rows="3"></textarea></div>
+        <div class="f-btns">
+          <button type="submit" class="f-btn wa">WhatsApp ile Gönder</button>
+          <button type="button" onclick="submitEmail()" class="f-btn em">E-posta ile Gönder</button>
         </div>
       </form>
     </div>
@@ -872,55 +811,54 @@ footer strong{color:var(--accent);}
 </section>
 
 <footer>
-  <div class="footer-socials">
-    <a href="https://www.instagram.com/abonlinenglish" target="_blank" title="Instagram" style="font-size:1.2rem;">&#9825;</a>
-    <a href="mailto:ingilizceogrensene@gmail.com" title="E-posta" style="font-size:1.1rem;">@</a>
+  <div class="foot-links">
+    <a href="https://www.instagram.com/abonlinenglish" target="_blank">Instagram</a>
+    <a href="mailto:ingilizceogrensene@gmail.com">E-posta</a>
+    <a href="#faq">SSS</a>
+    <a href="#pricing">Ücretler</a>
   </div>
   <strong>AbOnlinEnglish</strong> Dil Eğitimi &copy; 2026 — Tüm hakları saklıdır.<br>
-  <span style="margin-top:6px;display:inline-block;">ingilizceogrensene@gmail.com &nbsp;|&nbsp; @abonlinenglish</span>
+  <span style="display:inline-block;margin-top:4px;font-size:.77rem;">ingilizceogrensene@gmail.com &nbsp;·&nbsp; @abonlinenglish</span>
 </footer>
 
 <div class="toast" id="toast"></div>
 
 <script>
-/* ===== UTILS ===== */
-function showToast(msg){const t=document.getElementById('toast');t.textContent='✅ '+msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2800);}
+function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2800);}
+function openWA(msg){window.open('https://wa.me/905446405749?text='+msg,'_blank');}
 function toggleMenu(){document.getElementById('navLinks').classList.toggle('open');}
 function closeMenu(){document.getElementById('navLinks').classList.remove('open');}
-
-/* ===== CONTACT FORM ===== */
-function getFormData(){
-  const name=document.getElementById('cf-name').value.trim();
-  const email=document.getElementById('cf-email').value.trim();
-  const level=document.getElementById('cf-level').value||'Belirtilmedi';
-  const topic=document.getElementById('cf-topic').value||'Belirtilmedi';
-  const message=document.getElementById('cf-message').value.trim();
-  return {name,email,level,topic,message};
+function getForm(){
+  return{
+    name:document.getElementById('cf-name').value.trim(),
+    email:document.getElementById('cf-email').value.trim(),
+    level:document.getElementById('cf-level').value||'Belirtilmedi',
+    topic:document.getElementById('cf-topic').value||'Belirtilmedi',
+    msg:document.getElementById('cf-msg').value.trim()
+  };
 }
-function submitContactForm(e){
+function submitWA(e){
   e.preventDefault();
-  const d=getFormData();
-  const text=`Merhaba! Web sitesinden mesaj:\n\nAd: ${d.name}\nE-posta: ${d.email}\nSeviye: ${d.level}\nKonu: ${d.topic}\nMesaj: ${d.message||'—'}`;
-  window.open('https://wa.me/905446405749?text='+encodeURIComponent(text),'_blank');
-  showToast('WhatsApp açılıyor — mesajı gönderin!');
+  const d=getForm();
+  const text=`Merhaba! Web sitesinden mesaj:\n\nAd: ${d.name}\nE-posta: ${d.email}\nSeviye: ${d.level}\nKonu: ${d.topic}\nMesaj: ${d.msg||'—'}`;
+  openWA(encodeURIComponent(text));
+  showToast('✅ WhatsApp açılıyor — mesajı gönderin!');
 }
-function submitByEmail(){
-  const d=getFormData();
+function submitEmail(){
+  const d=getForm();
   if(!d.name||!d.email){showToast('Lütfen adınızı ve e-postanızı girin.');return;}
-  const subject=encodeURIComponent('AbOnlinEnglish – '+( d.topic||'İletişim'));
-  const body=encodeURIComponent(`Merhaba,\n\nAd: ${d.name}\nE-posta: ${d.email}\nSeviye: ${d.level}\nKonu: ${d.topic}\nMesaj: ${d.message||'—'}`);
-  window.location.href=`mailto:ingilizceogrensene@gmail.com?subject=${subject}&body=${body}`;
-  showToast('E-posta uygulaması açılıyor!');
+  const s=encodeURIComponent('AbOnlinEnglish – '+(d.topic||'İletişim'));
+  const b=encodeURIComponent(`Merhaba,\n\nAd: ${d.name}\nE-posta: ${d.email}\nSeviye: ${d.level}\nKonu: ${d.topic}\nMesaj: ${d.msg||'—'}`);
+  window.location.href=`mailto:ingilizceogrensene@gmail.com?subject=${s}&body=${b}`;
+  showToast('✅ E-posta uygulaması açılıyor!');
 }
-
-/* NAV HIGHLIGHT */
-const sections=document.querySelectorAll('section');
-const navLinksAll=document.querySelectorAll('.nav-links a:not(.nav-cta-btn)');
+const secs=document.querySelectorAll('section');
+const navAs=document.querySelectorAll('.nav-links a:not(.nav-cta)');
 window.addEventListener('scroll',()=>{
   let cur='';
-  sections.forEach(s=>{if(window.scrollY>=s.offsetTop-100)cur=s.id;});
-  navLinksAll.forEach(a=>{a.classList.toggle('active',a.getAttribute('href')==='#'+cur);});
-});
+  secs.forEach(s=>{if(window.scrollY>=s.offsetTop-90)cur=s.id;});
+  navAs.forEach(a=>{a.classList.toggle('active',a.getAttribute('href')==='#'+cur);});
+},{passive:true});
 </script>
 </body>
 </html>
