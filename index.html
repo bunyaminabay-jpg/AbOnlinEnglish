@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="tr">
 
@@ -258,7 +259,6 @@ nav {
 }
 .level-card:hover { box-shadow:0 12px 36px rgba(15,30,60,.14); transform:translateY(-4px); }
 
-/* Progress bar on card */
 .lc-progress { height:4px; background:rgba(255,255,255,0.15); }
 .lc-progress-fill { height:100%; background:rgba(255,255,255,0.55); border-radius:2px; transition:width .6s; }
 
@@ -305,7 +305,7 @@ nav {
 .lc-btn:hover { opacity:.9; transform:translateY(-1px); }
 
 /* ═══════════════════════════════════════════════════
-   PROGRESS SECTION (shown if user has progress)
+   PROGRESS SECTION
 ═══════════════════════════════════════════════════ */
 #progress-section { display:none; }
 #progress-section.visible { display:block; }
@@ -383,9 +383,7 @@ footer strong { color:var(--accent); }
 </head>
 <body>
 
-<!-- ═══════════════════════════════════════════
-     AUTH GATE
-═══════════════════════════════════════════ -->
+<!-- AUTH GATE -->
 <div id="auth-gate" class="hidden">
   <div class="auth-card">
     <button onclick="AUTH.closeGate()" style="position:absolute;top:16px;right:16px;background:none;border:none;font-size:1.4rem;color:#94a3b8;cursor:pointer;line-height:1;padding:4px;" title="Kapat">×</button>
@@ -434,9 +432,7 @@ footer strong { color:var(--accent); }
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════════
-     SHARED NAV
-═══════════════════════════════════════════ -->
+<!-- NAV -->
 <nav>
   <div class="nav-inner">
     <a class="logo-wrap" href="/landing.html">
@@ -464,7 +460,6 @@ footer strong { color:var(--accent); }
       <li><a href="landing.html#pricing" class="nav-cta-btn">Ücretsiz Ders</a></li>
     </ul>
 
-    <!-- Auth user badge (shown after login) -->
     <div class="nav-user" id="nav-user">
       <div class="nav-avatar" id="nav-avatar">?</div>
       <span class="nav-streak" id="nav-streak">🔥 0</span>
@@ -475,9 +470,7 @@ footer strong { color:var(--accent); }
   </div>
 </nav>
 
-<!-- ═══════════════════════════════════════════
-     DASHBOARD BAR (post-login)
-═══════════════════════════════════════════ -->
+<!-- DASHBOARD BAR -->
 <div id="dashboard-bar">
   <div class="db-inner">
     <div class="db-greeting">
@@ -516,9 +509,7 @@ footer strong { color:var(--accent); }
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════════
-     MAIN CONTENT
-═══════════════════════════════════════════ -->
+<!-- MAIN CONTENT -->
 <div id="main-content" class="visible">
 
   <!-- HERO -->
@@ -550,14 +541,12 @@ footer strong { color:var(--accent); }
     </div>
   </div>
 
-  <!-- MY PROGRESS (shown if user has progress) -->
+  <!-- MY PROGRESS -->
   <div id="progress-section">
     <div class="section">
       <div class="section-tag">İlerlemen</div>
       <h2 class="section-title">Devam ettiğin seviyeler</h2>
-      <div class="progress-grid" id="progress-grid">
-        <!-- Populated by JS -->
-      </div>
+      <div class="progress-grid" id="progress-grid"></div>
     </div>
   </div>
 
@@ -600,8 +589,6 @@ footer strong { color:var(--accent); }
     </div>
 
     <div class="levels-2">
-
-      <!-- A1 -->
       <a class="level-card" href="a1-a2-b1-b2-c1-c2.html" onclick="return AUTH.checkAndGo(this)">
         <div class="lc-head a1">
           <span class="lc-badge a1">A1 · Beginner</span>
@@ -628,7 +615,6 @@ footer strong { color:var(--accent); }
         </div>
       </a>
 
-      <!-- A2 -->
       <a class="level-card" href="a1-a2-b1-b2-c1-c2.html" onclick="return AUTH.checkAndGo(this)">
         <div class="lc-head a2">
           <span class="lc-badge a2">A2 · Elementary</span>
@@ -657,8 +643,6 @@ footer strong { color:var(--accent); }
     </div>
 
     <div class="levels-3">
-
-      <!-- B1 -->
       <a class="level-card" href="a1-a2-b1-b2-c1-c2.html" onclick="return AUTH.checkAndGo(this)">
         <div class="lc-head b1">
           <span class="lc-badge b1">B1 · Pre-Intermediate</span>
@@ -684,7 +668,6 @@ footer strong { color:var(--accent); }
         </div>
       </a>
 
-      <!-- B2 -->
       <a class="level-card" href="a1-a2-b1-b2-c1-c2.html" onclick="return AUTH.checkAndGo(this)">
         <div class="lc-head b2">
           <span class="lc-badge b2">B2 · Upper-Intermediate</span>
@@ -710,7 +693,6 @@ footer strong { color:var(--accent); }
         </div>
       </a>
 
-      <!-- C1 -->
       <a class="level-card" href="a1-a2-b1-b2-c1-c2.html" onclick="return AUTH.checkAndGo(this)">
         <div class="lc-head c1">
           <span class="lc-badge c1">C1 · Advanced</span>
@@ -737,7 +719,6 @@ footer strong { color:var(--accent); }
       </a>
     </div>
 
-    <!-- MATERIALS BOX -->
     <div class="mat-box">
       <div class="mat-ttl">📦 Her seviyede şunlar var</div>
       <div class="mat-row">
@@ -809,7 +790,6 @@ footer strong { color:var(--accent); }
     </div>
   </div>
 
-  <!-- FOOTER -->
   <footer>
     <strong>AbOnlinEnglish</strong> · CEFR A1–C1 İngilizce Öğrenme Platformu
     <div class="footer-socials">
@@ -821,22 +801,40 @@ footer strong { color:var(--accent); }
 
 </div><!-- /main-content -->
 
-<!-- TOAST -->
 <div id="toast"></div>
 
 <script>
 /* ═══════════════════════════════════════════════════════════════
+   GOOGLE SHEETS ENTEGRASYONU
+   Her yeni e-posta girişinde Google Sheets'e kaydeder
+═══════════════════════════════════════════════════════════════ */
+const SHEETS_URL = 'https://script.google.com/macros/s/AKfycbxG70GUMS3bebYRcqm35uZ63I7PBpMgxjh9s4K3_BxqEacqf9wQriyQA_Yrllwqixml4g/exec';
+
+function sendEmailToSheets(email) {
+  // Daha önce gönderilmişse tekrar gönderme
+  const sentKey = 'abonline_sheets_sent_' + email;
+  if (localStorage.getItem(sentKey)) return;
+
+  fetch(SHEETS_URL, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: email })
+  }).then(function() {
+    localStorage.setItem(sentKey, '1');
+  }).catch(function(err) {
+    console.log('Sheets kayıt hatası:', err);
+  });
+}
+
+/* ═══════════════════════════════════════════════════════════════
    AUTH SYSTEM
-   - Email-only login
-   - localStorage persistence
-   - No backend required
 ═══════════════════════════════════════════════════════════════ */
 const AUTH = (function() {
 
   const STORAGE_KEY = 'abonline_user_v1';
   const PROGRESS_KEY = 'abonline_progress_v1';
 
-  /* ── Storage helpers ── */
   function getUser() {
     try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || null; }
     catch(e) { return null; }
@@ -854,50 +852,10 @@ const AUTH = (function() {
     catch(e) {}
   }
 
-  /* ── Validation ── */
   function isValidEmail(e) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(e.trim());
   }
 
-  /* ── Login ── */
-  function login() {
-    const input = document.getElementById('auth-email');
-    const err   = document.getElementById('auth-error');
-    const email = input.value.trim().toLowerCase();
-
-    if (!isValidEmail(email)) {
-      err.classList.add('show');
-      input.focus();
-      return;
-    }
-    err.classList.remove('show');
-
-    const user = {
-      email,
-      name: email.split('@')[0],
-      loginDate: new Date().toISOString()
-    };
-    saveUser(user);
-
-    // Update streak on login
-    const prog = getProgress();
-    const today = new Date().toDateString();
-    if (prog.streak.lastDate !== today) {
-      const yest = new Date(); yest.setDate(yest.getDate()-1);
-      if (prog.streak.lastDate === yest.toDateString()) {
-        prog.streak.count++;
-      } else {
-        prog.streak.count = Math.max(prog.streak.count, 1);
-      }
-      prog.streak.lastDate = today;
-      saveProgress(prog);
-    }
-
-    showPortal(user, prog);
-    toast('Hoş geldin, ' + user.name + '! 👋', 'success');
-  }
-
-  /* ── Logout ── */
   function logout() {
     document.getElementById('auth-gate').classList.remove('hidden');
     document.getElementById('main-content').classList.remove('visible');
@@ -906,27 +864,22 @@ const AUTH = (function() {
     document.getElementById('auth-email').value = '';
   }
 
-  /* ── Show portal after login ── */
   function showPortal(user, prog) {
-    // Hide gate, show content
     document.getElementById('auth-gate').classList.add('hidden');
     document.getElementById('main-content').classList.add('visible');
     document.getElementById('dashboard-bar').classList.add('visible');
     document.getElementById('nav-user').classList.add('visible');
 
-    // Nav
     const initials = user.name.slice(0,2).toUpperCase();
     document.getElementById('nav-avatar').textContent = initials;
     document.getElementById('nav-streak').textContent = '🔥 ' + prog.streak.count;
 
-    // Dashboard bar
     document.getElementById('db-name').textContent = user.name;
     document.getElementById('db-streak').textContent = prog.streak.count;
     document.getElementById('db-xp').textContent = prog.xp || 0;
     const doneCount = Object.values(prog.completed).filter(Boolean).length;
     document.getElementById('db-done').textContent = doneCount;
 
-    // Continue button
     if (prog.lastUnit) {
       const cont = document.getElementById('db-continue');
       cont.classList.add('visible');
@@ -934,7 +887,6 @@ const AUTH = (function() {
       document.getElementById('db-continue-txt').textContent = prog.lastUnit.label || '—';
     }
 
-    // Progress bars on level cards
     const levels = ['a1','a2','b1','b2','c1'];
     let anyProgress = false;
     levels.forEach(function(lvl) {
@@ -946,15 +898,11 @@ const AUTH = (function() {
       if (fill) fill.style.width = pct + '%';
     });
 
-    // Progress section
-    if (anyProgress) {
-      renderProgressSection(prog, levels);
-    }
+    if (anyProgress) renderProgressSection(prog, levels);
 
-    // Expose global progress API for level pages
     window.PROGRESS = {
-      get:    getProgress,
-      save:   saveProgress,
+      get: getProgress,
+      save: saveProgress,
       markUnit: function(levelUnit, label, href) {
         const p = getProgress();
         p.completed[levelUnit] = true;
@@ -972,58 +920,42 @@ const AUTH = (function() {
     };
   }
 
-  /* ── Progress section ── */
   function renderProgressSection(prog, levels) {
     const grid = document.getElementById('progress-grid');
     const section = document.getElementById('progress-section');
     grid.innerHTML = '';
-
     levels.forEach(function(lvl) {
       const keys = [1,2,3,4,5,6,7,8,9,10].map(function(n){ return lvl+'u'+n; });
       const done = keys.filter(function(k){ return prog.completed[k]; }).length;
       const pct  = Math.round((done / 10) * 100);
       if (pct === 0) return;
-
       const labels = { a1:'A1 Beginner', a2:'A2 Elementary', b1:'B1 Pre-Int.', b2:'B2 Upper', c1:'C1 Advanced' };
-      const hrefs  = { a1:'a1-a2-b1-b2-c1-c2.html', a2:'a1-a2-b1-b2-c1-c2.html', b1:'a1-a2-b1-b2-c1-c2.html', b2:'a1-a2-b1-b2-c1-c2.html', c1:'a1-a2-b1-b2-c1-c2.html' };
-
       const card = document.createElement('a');
-      card.href = hrefs[lvl] || '#';
+      card.href = 'a1-a2-b1-b2-c1-c2.html';
       card.className = 'prog-card';
       card.style.textDecoration = 'none';
-      card.innerHTML =
-        '<div class="prog-label">' + labels[lvl] + '</div>' +
-        '<div class="prog-pct">' + pct + '%</div>' +
-        '<div class="prog-bar"><div class="prog-fill ' + lvl + '" style="width:' + pct + '%"></div></div>';
+      card.innerHTML = '<div class="prog-label">' + labels[lvl] + '</div><div class="prog-pct">' + pct + '%</div><div class="prog-bar"><div class="prog-fill ' + lvl + '" style="width:' + pct + '%"></div></div>';
       grid.appendChild(card);
     });
-
     section.classList.add('visible');
   }
 
-  /* ── Auto-login if stored ── */
   function init() {
     const user = getUser();
     if (user) {
       const prog = getProgress();
       showPortal(user, prog);
-      // Gate açma — kullanıcı zaten giriş yapmış
     }
-    // Giriş yapılmamışsa hiçbir şey yapma, sayfa normal açık
   }
 
-
-  /* ── checkAndGo: level'a tıklanınca auth kontrolü ── */
   function checkAndGo(linkEl) {
-    if (getUser()) return true; // Giriş yapılmış, devam et
-    // Giriş yapılmamış: auth gate aç, tıklanan linki kaydet
+    if (getUser()) return true;
     _pendingHref = linkEl.href;
     document.getElementById('auth-gate').classList.remove('hidden');
     document.getElementById('auth-email').focus();
-    return false; // linke gitme
+    return false;
   }
 
-  /* ── closeGate: X ile kapat ── */
   function closeGate() {
     document.getElementById('auth-gate').classList.add('hidden');
     _pendingHref = null;
@@ -1031,15 +963,23 @@ const AUTH = (function() {
 
   var _pendingHref = null;
 
-  /* ── Login override: giriş sonrası bekleyen linke git ── */
   function loginAndGo() {
     const input = document.getElementById('auth-email');
     const err   = document.getElementById('auth-error');
     const email = input.value.trim().toLowerCase();
     if (!isValidEmail(email)) { err.classList.add('show'); input.focus(); return; }
     err.classList.remove('show');
+
+    const isNewUser = !getUser() || getUser().email !== email;
+
     const user = { email, name: email.split('@')[0], loginDate: new Date().toISOString() };
     saveUser(user);
+
+    // ★ YENİ KULLANICI İSE GOOGLE SHEETS'E KAYDET
+    if (isNewUser) {
+      sendEmailToSheets(email);
+    }
+
     const prog = getProgress();
     const today = new Date().toDateString();
     if (prog.streak.lastDate !== today) {
@@ -1058,9 +998,7 @@ const AUTH = (function() {
 
 })();
 
-/* ═══════════════════════════════════════════════════════════════
-   UI HELPERS
-═══════════════════════════════════════════════════════════════ */
+/* UI HELPERS */
 function toggleMenu() { document.getElementById('navLinks').classList.toggle('open'); }
 function closeMenu()  { document.getElementById('navLinks').classList.remove('open'); }
 
@@ -1072,9 +1010,6 @@ function toast(msg, type) {
   t._timer = setTimeout(function(){ t.classList.remove('show','success'); }, 3000);
 }
 
-/* ═══════════════════════════════════════════════════════════════
-   BOOT
-═══════════════════════════════════════════════════════════════ */
 document.addEventListener('DOMContentLoaded', function() {
   AUTH.init();
 });
