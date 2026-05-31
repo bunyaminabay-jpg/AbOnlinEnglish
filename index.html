@@ -247,6 +247,88 @@ footer strong { color: var(--accent); }
 #toast { position: fixed; bottom: 24px; right: 24px; z-index: 9999; background: var(--navy); color: #fff; padding: 12px 20px; border-radius: 10px; font-size: .88rem; font-weight: 600; box-shadow: 0 8px 24px rgba(0,0,0,.25); transform: translateY(80px); opacity: 0; transition: all .3s; max-width: 320px; }
 #toast.show { transform: translateY(0); opacity: 1; }
 #toast.success { background: var(--green); }
+
+/* ═══════════════════════════════════════════════════
+   LEVEL TABS
+═══════════════════════════════════════════════════ */
+.hero-level-tabs {
+  display: flex;
+  gap: .6rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+.hlt-tab {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .4px;
+  border: 1.5px solid transparent;
+  transition: all .25s;
+  position: relative;
+  overflow: hidden;
+}
+.hlt-tab::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity .25s;
+}
+.hlt-tab:hover::before { opacity: 1; }
+.hlt-tab .hlt-badge {
+  font-family: 'Playfair Display', serif;
+  font-size: .72rem;
+  font-weight: 900;
+  padding: 2px 7px;
+  border-radius: 20px;
+  line-height: 1;
+}
+.hlt-tab .hlt-label { color: rgba(255,255,255,.85); }
+.hlt-tab:hover .hlt-label { color: #fff; }
+
+/* A1 */
+.hlt-a1 { background: rgba(30,58,138,.35); border-color: rgba(59,130,246,.35); }
+.hlt-a1::before { background: linear-gradient(135deg, rgba(30,58,138,.6), rgba(26,86,219,.5)); }
+.hlt-a1 .hlt-badge { background: rgba(59,130,246,.3); color: #93c5fd; }
+.hlt-a1:hover { border-color: rgba(59,130,246,.8); box-shadow: 0 0 18px rgba(59,130,246,.4), 0 0 6px rgba(59,130,246,.3); transform: translateY(-2px); }
+
+/* A2 */
+.hlt-a2 { background: rgba(20,83,45,.35); border-color: rgba(34,197,94,.35); }
+.hlt-a2::before { background: linear-gradient(135deg, rgba(20,83,45,.6), rgba(22,163,74,.5)); }
+.hlt-a2 .hlt-badge { background: rgba(34,197,94,.3); color: #86efac; }
+.hlt-a2:hover { border-color: rgba(34,197,94,.8); box-shadow: 0 0 18px rgba(34,197,94,.4), 0 0 6px rgba(34,197,94,.3); transform: translateY(-2px); }
+
+/* B1 */
+.hlt-b1 { background: rgba(19,78,74,.35); border-color: rgba(20,184,166,.35); }
+.hlt-b1::before { background: linear-gradient(135deg, rgba(19,78,74,.6), rgba(13,148,136,.5)); }
+.hlt-b1 .hlt-badge { background: rgba(20,184,166,.3); color: #5eead4; }
+.hlt-b1:hover { border-color: rgba(20,184,166,.8); box-shadow: 0 0 18px rgba(20,184,166,.4), 0 0 6px rgba(20,184,166,.3); transform: translateY(-2px); }
+
+/* B2 */
+.hlt-b2 { background: rgba(59,7,100,.35); border-color: rgba(167,139,250,.35); }
+.hlt-b2::before { background: linear-gradient(135deg, rgba(59,7,100,.6), rgba(124,58,237,.5)); }
+.hlt-b2 .hlt-badge { background: rgba(167,139,250,.3); color: #c4b5fd; }
+.hlt-b2:hover { border-color: rgba(167,139,250,.8); box-shadow: 0 0 18px rgba(167,139,250,.4), 0 0 6px rgba(167,139,250,.3); transform: translateY(-2px); }
+
+/* C1 */
+.hlt-c1 { background: rgba(69,26,3,.35); border-color: rgba(251,191,36,.35); }
+.hlt-c1::before { background: linear-gradient(135deg, rgba(69,26,3,.6), rgba(217,119,6,.5)); }
+.hlt-c1 .hlt-badge { background: rgba(251,191,36,.3); color: #fde68a; }
+.hlt-c1:hover { border-color: rgba(251,191,36,.8); box-shadow: 0 0 18px rgba(251,191,36,.4), 0 0 6px rgba(251,191,36,.3); transform: translateY(-2px); }
+
+@keyframes tabPulse {
+  0%,100% { box-shadow: 0 0 8px rgba(232,160,32,.2); }
+  50%      { box-shadow: 0 0 20px rgba(232,160,32,.5), 0 0 8px rgba(232,160,32,.3); }
+}
+@media(max-width:500px) {
+  .hlt-tab { padding: 7px 13px; font-size: .72rem; }
+}
   </style>
 </head>
 <body>
@@ -322,6 +404,30 @@ footer strong { color: var(--accent); }
         <div><div class="hs-num">50</div><div class="hs-label">Ünite</div></div>
         <div><div class="hs-num">10</div><div class="hs-label">Graded Reader</div></div>
         <div><div class="hs-num">1500+</div><div class="hs-label">Alıştırma</div></div>
+      </div>
+
+      <!-- HERO LEVEL TABS — level kartlarına scroll -->
+      <div class="hero-level-tabs">
+        <a href="#levels" class="hlt-tab hlt-a1">
+          <span class="hlt-badge">A1</span>
+          <span class="hlt-label">Başlangıç Kursu</span>
+        </a>
+        <a href="#levels" class="hlt-tab hlt-a2">
+          <span class="hlt-badge">A2</span>
+          <span class="hlt-label">Temel Kurs</span>
+        </a>
+        <a href="#levels" class="hlt-tab hlt-b1">
+          <span class="hlt-badge">B1</span>
+          <span class="hlt-label">Orta Kurs</span>
+        </a>
+        <a href="#levels" class="hlt-tab hlt-b2">
+          <span class="hlt-badge">B2</span>
+          <span class="hlt-label">Üst Orta Kurs</span>
+        </a>
+        <a href="#levels" class="hlt-tab hlt-c1">
+          <span class="hlt-badge">C1</span>
+          <span class="hlt-label">İleri Kurs</span>
+        </a>
       </div>
 
       <!-- HERO SKILLS — skills.html'e hızlı erişim -->
