@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -85,7 +86,7 @@ nav{
 
 /* ──── LAYOUT ──── */
 .page{display:grid;grid-template-columns:256px 1fr;min-height:100vh;padding-top:0;}
-@media(max-width:820px){.page{grid-template-columns:1fr;}.sidebar{display:none;}}
+@media(max-width:820px){.page{grid-template-columns:1fr;}}
 
 /* ──── SIDEBAR YENİ - ACCORDION ──── */
 .sidebar{
@@ -342,7 +343,7 @@ nav{
   .os-n{font-size:1.4rem;}
   /* Nav */
   .logo-text{display:none;}
-  .nav-home{display:none;}
+  .nav-home{display:flex; font-size:.65rem; padding:4px 8px;}
 }
 /* ──── ORTA BOY EKRAN ──── */
 @media(max-width:820px){
@@ -363,18 +364,25 @@ nav{
   .mbn-icon{font-size:1rem;}
   /* İçerik alanını bottom nav kadar yukarı kaldır */
   .page{padding-bottom:52px;}
-  /* Sidebar yerine drawer */
+  /* Sidebar drawer — DİK KONUMDA DA AÇILIR */
   .sidebar{
-    position:fixed;top:54px;left:0;bottom:52px;z-index:700;
+    position:fixed;top:54px;left:0;bottom:52px;z-index:700;width:280px;
     transform:translateX(-100%);transition:transform .25s cubic-bezier(.4,0,.2,1);
-    box-shadow:4px 0 20px rgba(0,0,0,.2);
-    display:flex!important;
+    box-shadow:4px 0 20px rgba(0,0,0,.35);
+    display:flex!important;overflow-y:auto;
   }
   .sidebar.open{transform:translateX(0);}
   .sidebar-overlay{
-    display:none;position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:699;
+    display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:699;
   }
   .sidebar-overlay.on{display:block;}
+  /* Hamburger — her zaman görünür */
+  .hamburger{display:block!important;}
+  /* Nav home link — her zaman görünür */
+  .nav-home{display:flex!important;font-size:.65rem;padding:4px 8px;}
+  /* Nav levels küçült */
+  .nav-levels{gap:2px;}
+  .nl{padding:3px 7px;font-size:.62rem;}
 }
 @media(min-width:821px){
   .mobile-bottom-nav{display:none;}
@@ -764,6 +772,15 @@ nav{
 }
 .sk-fire{font-size:1.6rem;display:block;margin-bottom:2px;}
 .sk-txt{font-size:.75rem;font-weight:700;}
+
+/* ── HAMBURGER BUTTON ── */
+.hamburger{
+  background:none;border:1px solid rgba(255,255,255,.2);border-radius:6px;
+  color:rgba(255,255,255,.8);cursor:pointer;padding:5px 9px;font-size:1.1rem;
+  flex-shrink:0;transition:all .15s;
+}
+.hamburger:hover{background:rgba(255,255,255,.1);color:#fff;}
+
 </style>
 </head>
 <body>
@@ -775,15 +792,17 @@ nav{
   </div>
   <div class="nav-levels"><button class="nl" id="nl-a1" onclick="showLevel('a1')">A1</button><button class="nl" id="nl-a2" onclick="showLevel('a2')">A2</button><button class="nl" id="nl-b1" onclick="showLevel('b1')">B1</button><button class="nl" id="nl-b2" onclick="showLevel('b2')">B2</button><button class="nl" id="nl-c1" onclick="showLevel('c1')">C1</button></div>
   <div class="nav-right">
-    <a href="../index.html" class="nav-home">← Ana Sayfa</a>
+    <a href="/" class="nav-home">🏠 Ana Sayfa</a>
     <span class="nav-free-badge">✅ Ücretsiz — Giriş Gerekmez</span>
-    <a href="placement-test.html" class="nav-link">📋 Seviye Testi</a>
-    <a href="roadmap.html" class="nav-link">🗺 Yol Haritası</a>
-    <a href="games.html" class="nav-link">🎮 Oyunlar</a>
+    <a href="/placement-test" class="nav-link">📋 Seviye Testi</a>
+    <a href="/roadmap" class="nav-link">🗺 Yol Haritası</a>
+    <a href="/games" class="nav-link">🎮 Oyunlar</a>
     <div class="nav-flame">🔥 <span id="nav-sk">0</span></div>
     <div class="nav-xp">⚡ <span id="nav-xp">0</span> XP</div>
     <div class="xp-bar-w"><div class="xp-bar-f" id="xpbf" style="width:0%"></div></div>
   </div>
+  <!-- Mobil hamburger — sidebar açar -->
+  <button class="hamburger" id="ham-btn" onclick="openSidebar()" style="display:none;margin-left:8px">☰</button>
 </nav>
 
 <!-- Guest welcome banner -->
@@ -813,6 +832,10 @@ nav{
     <span class="mbn-icon">🟠</span>
     <span>C1</span>
   </button>
+  <a class="mbn-btn" href="/" style="text-decoration:none">
+    <span class="mbn-icon">🏠</span>
+    <span>Ana Sayfa</span>
+  </a>
 </nav>
 
 <div class="page">
