@@ -175,12 +175,12 @@ nav {
 .pw-total{display:flex;justify-content:space-between;align-items:center;padding-top:8px;border-top:1px solid var(--border);margin-top:8px;}
 .pw-total-label{font-size:.7rem;font-weight:700;color:var(--acc);}
 .pw-total-val{font-size:.82rem;font-weight:700;color:var(--acc);}
-.pkg-expand-btn{width:100%;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.04);color:#b0c8e8;font-family:inherit;font-size:.75rem;font-weight:600;padding:10px;border-radius:8px;cursor:pointer;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:6px;}
-.pkg-expand-btn:hover{background:var(--card2);color:#fff;}
-.pkg-expand-btn .arrow{transition:transform .2s;font-size:.65rem;}
-.pkg-expand-btn.open .arrow{transform:rotate(180deg);}
-.pkg-details{display:none;padding:0 20px 16px;}
-.pkg-details.open{display:block;}
+
+
+
+
+
+
 .detail-section{margin-top:14px;}
 .detail-section-title{font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--acc);margin-bottom:8px;}
 .detail-tag{display:inline-block;font-size:.72rem;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);color:#bdd0ee;padding:4px 10px;border-radius:6px;margin:3px 3px 0 0;}
@@ -303,20 +303,8 @@ footer strong{color:var(--acc);}
         <div class="pkg-body">
           <div class="pkg-goal">Her gün biraz zaman ayırabileceksen ve hızlı ilerlemek istiyorsan bu plan tam sana göre.</div>
           <div class="pkg-weekly"><div class="pw-label">📅 Haftalık Program</div><div class="pw-row"><span class="pw-item">Canlı Dersler</span><span class="pw-val">3 × 50 min</span></div><div class="pw-row"><span class="pw-item">Konuşma Pratiği</span><span class="pw-val">2 seans</span></div><div class="pw-row"><span class="pw-item">Ev çalışması</span><span class="pw-val">~2 saat</span></div><div class="pw-total"><span class="pw-total-label">⏱ Toplam süre</span><span class="pw-total-val">~6–7 saat/hafta</span></div></div>
-          <button class="pkg-expand-btn" onclick="togglePkg(this)">Tam Müfredatı Gör <span class="arrow">▼</span></button>
-          <div class="pkg-details">
-            <div class="detail-section"><div class="detail-section-title">Grammar Konuları</div><span class="detail-tag">To be (am/is/are)</span><span class="detail-tag">Pronouns</span><span class="detail-tag">Present Simple</span><span class="detail-tag">Have/has</span><span class="detail-tag">Articles</span><span class="detail-tag">Imperatives</span><span class="detail-tag">There is/are</span></div>
-            <div class="detail-section"><div class="detail-section-title">12 Ünite — Konular</div>
-              <div class="units-accordion">
-                <div class="unit-acc-item"><button class="unit-acc-hdr" onclick="toggleUnit(this)"><span class="u-num">Ünite 1</span>Hello &amp; the Alphabet<span class="u-arr">▼</span></button><div class="unit-acc-body"><div class="unit-detail-row"><span class="udl">Dil Bilgisi</span><span class="udv">To be (am/is/are), zamirler</span></div><div class="unit-detail-row"><span class="udl">Kelime</span><span class="udv">Selamlaşmalar, ülkeler, isimler</span></div><div class="unit-detail-row"><span class="udl">Beceri</span><span class="udv">Kendini tanıtma diyaloğu</span></div></div></div>
-                <div class="unit-acc-item"><button class="unit-acc-hdr" onclick="toggleUnit(this)"><span class="u-num">Ünite 2</span>Numbers &amp; Colours<span class="u-arr">▼</span></button><div class="unit-acc-body"><div class="unit-detail-row"><span class="udl">Dil Bilgisi</span><span class="udv">Sayılar 1–100, renk sıfatları</span></div><div class="unit-detail-row"><span class="udl">Kelime</span><span class="udv">Renkler, sınıf nesneleri</span></div><div class="unit-detail-row"><span class="udl">Beceri</span><span class="udv">Nesneleri tanımla ve tarif et</span></div></div></div>
-                <div class="unit-acc-item"><button class="unit-acc-hdr" onclick="toggleUnit(this)"><span class="u-num">Ünite 3</span>My Family<span class="u-arr">▼</span></button><div class="unit-acc-body"><div class="unit-detail-row"><span class="udl">Dil Bilgisi</span><span class="udv">Have/has, iyelik sıfatları</span></div><div class="unit-detail-row"><span class="udl">Kelime</span><span class="udv">Aile üyeleri, yaşlar</span></div><div class="unit-detail-row"><span class="udl">Beceri</span><span class="udv">Aile ağacı sunumu</span></div></div></div>
-                <div class="unit-acc-item"><button class="unit-acc-hdr" onclick="toggleUnit(this)"><span class="u-num">Ünite 4–12</span>Tüm A1 Müfredatı →<span class="u-arr">▼</span></button><div class="unit-acc-body"><div class="unit-detail-row"><span class="udl">Konular</span><span class="udv">Food · Daily Routines · Home · Jobs · Free Time · Weather · Shopping · Transport · A1 Mock Test</span></div><div class="unit-detail-row"><span class="udl">Dil Bilgisi</span><span class="udv">Present Simple · Can / Can't · Edatlar · Artikeller · Imperatives · There is / are · Basit sorular</span></div></div></div>
-              </div>
-            </div>
-            <div class="detail-section"><div class="detail-section-title">Bu seviyeyi bitirince...</div><span class="detail-tag">✓ 500+ aktif kelime</span><span class="detail-tag">✓ Basit konuşmalar</span><span class="detail-tag">✓ Cambridge Starters sınavına hazır</span></div>
-            <a href="/landing#pricing" class="cta-btn">Ücretsiz Deneme Dersi Al →</a>
-          </div>
+          
+          
         </div>
       </div>
       <div class="pkg-card featured">
@@ -324,12 +312,8 @@ footer strong{color:var(--acc);}
         <div class="pkg-body">
           <div class="pkg-goal">En çok tercih edilen plan. Haftada iki ders, biraz ev çalışması — ne çok hızlı ne çok yavaş.</div>
           <div class="pkg-weekly"><div class="pw-label">📅 Haftalık Program</div><div class="pw-row"><span class="pw-item">Canlı Dersler</span><span class="pw-val">2 × 50 min</span></div><div class="pw-row"><span class="pw-item">Konuşma Pratiği</span><span class="pw-val">2 seans</span></div><div class="pw-row"><span class="pw-item">Tekrar Seansı</span><span class="pw-val">1 seans</span></div><div class="pw-row"><span class="pw-item">Ev çalışması</span><span class="pw-val">~1.5 saat</span></div><div class="pw-total"><span class="pw-total-label">⏱ Toplam süre</span><span class="pw-total-val">~4–5 saat/hafta</span></div></div>
-          <button class="pkg-expand-btn" onclick="togglePkg(this)">Tam Müfredatı Gör <span class="arrow">▼</span></button>
-          <div class="pkg-details">
-            <div class="detail-section"><div class="detail-section-title">Aynı 12 Ünite — Rahat Tempo ile</div><span class="detail-tag">Ayda 2 ünite</span><span class="detail-tag">Her 4. haftada tekrar</span><span class="detail-tag">Mid &amp; end assessment</span></div>
-            <div class="detail-section"><div class="detail-section-title">Bu planda neler var?</div><span class="detail-tag">12 dil bilgisi ünitesi</span><span class="detail-tag">Konuşma portföyü</span><span class="detail-tag">Kelime çalışmaları</span><span class="detail-tag">Ödev geri bildirimi</span><span class="detail-tag">İlerleme raporları</span></div>
-            <a href="/landing#pricing" class="cta-btn">Ücretsiz Deneme Dersi Al →</a>
-          </div>
+          
+          
         </div>
       </div>
       <div class="pkg-card">
@@ -337,11 +321,8 @@ footer strong{color:var(--acc);}
         <div class="pkg-body">
           <div class="pkg-goal">Haftan yoğun mu? Haftada bir ders bile seni ilerletir. Yavaş ama düzenli — en güvenli yol.</div>
           <div class="pkg-weekly"><div class="pw-label">📅 Haftalık Program</div><div class="pw-row"><span class="pw-item">Canlı Dersler</span><span class="pw-val">1–2 × 50 min</span></div><div class="pw-row"><span class="pw-item">Konuşma Pratiği</span><span class="pw-val">1 seans</span></div><div class="pw-row"><span class="pw-item">Ev çalışması</span><span class="pw-val">~1 saat</span></div><div class="pw-total"><span class="pw-total-label">⏱ Toplam süre</span><span class="pw-total-val">~3–4 saat/hafta</span></div></div>
-          <button class="pkg-expand-btn" onclick="togglePkg(this)">Tam Müfredatı Gör <span class="arrow">▼</span></button>
-          <div class="pkg-details">
-            <div class="detail-section"><div class="detail-section-title">Esnek Tempo</div><span class="detail-tag">Her 3 haftada 1 ünite</span><span class="detail-tag">Aylık kontroller</span><span class="detail-tag">Kolayca yeniden planlanabilir</span></div>
-            <a href="/landing#pricing" class="cta-btn">Ücretsiz Deneme Dersi Al →</a>
-          </div>
+          
+          
         </div>
       </div>
     </div>
@@ -351,9 +332,9 @@ footer strong{color:var(--acc);}
   <div class="level-block" id="packages-A2">
     <div class="level-block-header"><div class="lb-badge" style="color:var(--a2-c)">A2</div><div class="lb-info"><h3>Temel · Temel</h3><p>KET · Movers · GSE 23–42 · ~1.000 hedef kelime</p></div><div class="lb-exam"><strong>Sınavlar</strong><br>KET · Movers · GSE 23–42</div></div>
     <div class="packages-grid">
-      <div class="pkg-card"><div class="pkg-header"><div class="pkg-type" style="color:var(--a2-c)">⚡ Fast Track</div><div class="pkg-duration">4–5 <span style="font-size:1rem;font-weight:400;color:var(--muted)">ay</span></div><div class="pkg-dur-label">~18 hafta · haftada 3 ders</div></div><div class="pkg-body"><div class="pkg-goal">Hızlı ilerlemeye hazırsan bu plan çok şey öğretiyor.</div><div class="pkg-weekly"><div class="pw-label">📅 Haftalık Program</div><div class="pw-row"><span class="pw-item">Canlı Dersler</span><span class="pw-val">3 × 50 min</span></div><div class="pw-row"><span class="pw-item">Konuşma Pratiği</span><span class="pw-val">2 seans</span></div><div class="pw-row"><span class="pw-item">Ev çalışması</span><span class="pw-val">~2 saat</span></div><div class="pw-total"><span class="pw-total-label">⏱ Toplam süre</span><span class="pw-total-val">~6–7 saat/hafta</span></div></div><button class="pkg-expand-btn" onclick="togglePkg(this)">Tam Müfredatı Gör <span class="arrow">▼</span></button><div class="pkg-details"><div class="detail-section"><div class="detail-section-title">Grammar Konuları</div><span class="detail-tag">Geçmiş Basit Zaman</span><span class="detail-tag">Karşılaştırmalı Sıfatlar</span><span class="detail-tag">Going to</span><span class="detail-tag">Sayılabilen/Sayılamayan</span><span class="detail-tag">Zaman Edatları</span></div><div class="detail-section"><div class="detail-section-title">Konu Başlıkları</div><span class="detail-tag">Shopping &amp; Services</span><span class="detail-tag">Travel &amp; Transport</span><span class="detail-tag">Boş Zaman</span><span class="detail-tag">Food &amp; Health</span><span class="detail-tag">Work &amp; School</span><span class="detail-tag">Geçmiş Olaylar</span></div><a href="/landing#pricing" class="cta-btn">Ücretsiz Deneme Dersi Al →</a></div></div></div>
-      <div class="pkg-card featured"><div class="pkg-header"><div class="pkg-type" style="color:var(--acc)"><span class="feat-star">★</span> Standart <span style="font-size:.58rem;opacity:.6;font-weight:400">En Popüler</span></div><div class="pkg-duration">6–8 <span style="font-size:1rem;font-weight:400;color:var(--muted)">ay</span></div><div class="pkg-dur-label">~26 hafta · haftada 2 ders</div></div><div class="pkg-body"><div class="pkg-goal">Hayatını aksatmadan, adım adım gerçek bir konuşma becerisi kazanırsın.</div><div class="pkg-weekly"><div class="pw-label">📅 Haftalık Program</div><div class="pw-row"><span class="pw-item">Canlı Dersler</span><span class="pw-val">2 × 50 min</span></div><div class="pw-row"><span class="pw-item">Konuşma Pratiği</span><span class="pw-val">2 seans</span></div><div class="pw-row"><span class="pw-item">Tekrar Seansı</span><span class="pw-val">1 seans</span></div><div class="pw-total"><span class="pw-total-label">⏱ Toplam süre</span><span class="pw-total-val">~4–5 saat/hafta</span></div></div><button class="pkg-expand-btn" onclick="togglePkg(this)">Tam Müfredatı Gör <span class="arrow">▼</span></button><div class="pkg-details"><div class="detail-section"><div class="detail-section-title">Bu planda neler var?</div><span class="detail-tag">12 yapılandırılmış ünite</span><span class="detail-tag">KET sınav hazırlığı</span><span class="detail-tag">Dinleme görevleri</span><span class="detail-tag">Yazma pratiği</span><span class="detail-tag">İlerleme takibi</span></div><a href="/landing#pricing" class="cta-btn">Ücretsiz Deneme Dersi Al →</a></div></div></div>
-      <div class="pkg-card"><div class="pkg-header"><div class="pkg-type" style="color:var(--a2-c)">🌙 Esnek</div><div class="pkg-duration">10 <span style="font-size:1rem;font-weight:400;color:var(--muted)">ay</span></div><div class="pkg-dur-label">~40 hafta · haftada 1 ders</div></div><div class="pkg-body"><div class="pkg-goal">Haftada bir ders, kendi hızında. Durdurmak zorunda değilsin — yavaş da olsa devam edersen sonuca ulaşırsın.</div><div class="pkg-weekly"><div class="pw-label">📅 Haftalık Program</div><div class="pw-row"><span class="pw-item">Canlı Dersler</span><span class="pw-val">1 × 50 min</span></div><div class="pw-row"><span class="pw-item">Konuşma Pratiği</span><span class="pw-val">1 seans</span></div><div class="pw-total"><span class="pw-total-label">⏱ Toplam süre</span><span class="pw-total-val">~2–3 saat/hafta</span></div></div><button class="pkg-expand-btn" onclick="togglePkg(this)">Tam Müfredatı Gör <span class="arrow">▼</span></button><div class="pkg-details"><div class="detail-section"><div class="detail-section-title">Nasıl ilerlersiniz?</div><span class="detail-tag">Ayda 1 ünite</span><span class="detail-tag">Esnek scheduling</span><span class="detail-tag">Aylık ilerleme değerlendirmesi</span></div><a href="/landing#pricing" class="cta-btn">Ücretsiz Deneme Dersi Al →</a></div></div></div>
+      <div class="pkg-card"><div class="pkg-header"><div class="pkg-type" style="color:var(--a2-c)">⚡ Fast Track</div><div class="pkg-duration">4–5 <span style="font-size:1rem;font-weight:400;color:var(--muted)">ay</span></div><div class="pkg-dur-label">~18 hafta · haftada 3 ders</div></div><div class="pkg-body"><div class="pkg-goal">Hızlı ilerlemeye hazırsan bu plan çok şey öğretiyor.</div><div class="pkg-weekly"><div class="pw-label">📅 Haftalık Program</div><div class="pw-row"><span class="pw-item">Canlı Dersler</span><span class="pw-val">3 × 50 min</span></div><div class="pw-row"><span class="pw-item">Konuşma Pratiği</span><span class="pw-val">2 seans</span></div><div class="pw-row"><span class="pw-item">Ev çalışması</span><span class="pw-val">~2 saat</span></div><div class="pw-total"><span class="pw-total-label">⏱ Toplam süre</span><span class="pw-total-val">~6–7 saat/hafta</span></div></div></div></div>
+      <div class="pkg-card featured"><div class="pkg-header"><div class="pkg-type" style="color:var(--acc)"><span class="feat-star">★</span> Standart <span style="font-size:.58rem;opacity:.6;font-weight:400">En Popüler</span></div><div class="pkg-duration">6–8 <span style="font-size:1rem;font-weight:400;color:var(--muted)">ay</span></div><div class="pkg-dur-label">~26 hafta · haftada 2 ders</div></div><div class="pkg-body"><div class="pkg-goal">Hayatını aksatmadan, adım adım gerçek bir konuşma becerisi kazanırsın.</div><div class="pkg-weekly"><div class="pw-label">📅 Haftalık Program</div><div class="pw-row"><span class="pw-item">Canlı Dersler</span><span class="pw-val">2 × 50 min</span></div><div class="pw-row"><span class="pw-item">Konuşma Pratiği</span><span class="pw-val">2 seans</span></div><div class="pw-row"><span class="pw-item">Tekrar Seansı</span><span class="pw-val">1 seans</span></div><div class="pw-total"><span class="pw-total-label">⏱ Toplam süre</span><span class="pw-total-val">~4–5 saat/hafta</span></div></div></div></div>
+      <div class="pkg-card"><div class="pkg-header"><div class="pkg-type" style="color:var(--a2-c)">🌙 Esnek</div><div class="pkg-duration">10 <span style="font-size:1rem;font-weight:400;color:var(--muted)">ay</span></div><div class="pkg-dur-label">~40 hafta · haftada 1 ders</div></div><div class="pkg-body"><div class="pkg-goal">Haftada bir ders, kendi hızında. Durdurmak zorunda değilsin — yavaş da olsa devam edersen sonuca ulaşırsın.</div><div class="pkg-weekly"><div class="pw-label">📅 Haftalık Program</div><div class="pw-row"><span class="pw-item">Canlı Dersler</span><span class="pw-val">1 × 50 min</span></div><div class="pw-row"><span class="pw-item">Konuşma Pratiği</span><span class="pw-val">1 seans</span></div><div class="pw-total"><span class="pw-total-label">⏱ Toplam süre</span><span class="pw-total-val">~2–3 saat/hafta</span></div></div></div></div>
     </div>
   </div>
 
@@ -361,32 +342,4 @@ footer strong{color:var(--acc);}
   <div class="level-block" id="packages-B1">
     <div class="level-block-header"><div class="lb-badge" style="color:var(--b1-c)">B1</div><div class="lb-info"><h3>Orta Öncesi · Orta Öncesi</h3><p>PET · IELTS 4–5 · TOEFL 42–71 · ~2.000 hedef kelime</p></div><div class="lb-exam"><strong>Sınavlar</strong><br>PET · IELTS 4–5 · TOEFL 42–71</div></div>
     <div class="packages-grid">
-      <div class="pkg-card"><div class="pkg-header"><div class="pkg-type" style="color:var(--b1-c)">🔥 Yoğun</div><div class="pkg-duration">5 <span style="font-size:1rem;font-weight:400;color:var(--muted)">ay</span></div><div class="pkg-dur-label">~20 hafta · haftada 3–4 ders</div></div><div class="pkg-body"><div class="pkg-goal">Bağımsız iletişime giden hızlandırılmış yol. Kariyer odaklı öğrenciler için ideal.</div><div class="pkg-weekly"><div class="pw-label">📅 Haftalık Program</div><div class="pw-row"><span class="pw-item">Canlı Dersler</span><span class="pw-val">3–4 × 50 min</span></div><div class="pw-row"><span class="pw-item">Konuşma Pratiği</span><span class="pw-val">2 seans</span></div><div class="pw-row"><span class="pw-item">Ev çalışması</span><span class="pw-val">~2.5 saat</span></div><div class="pw-total"><span class="pw-total-label">⏱ Toplam süre</span><span class="pw-total-val">~7–8 saat/hafta</span></div></div><button class="pkg-expand-btn" onclick="togglePkg(this)">Tam Müfredatı Gör <span class="arrow">▼</span></button><div class="pkg-details"><div class="detail-section"><div class="detail-section-title">Grammar Konuları</div><span class="detail-tag">Present Perfect</span><span class="detail-tag">Yardımcı fiiller</span><span class="detail-tag">Koşul cümleleri (0,1,2)</span><span class="detail-tag">Dolaylı Anlatım</span><span class="detail-tag">Edilgen Çatı</span><span class="detail-tag">Sıfat Cümleleri</span></div><a href="/landi
-
-<script>
-function togglePkg(btn){
-  var details = btn.nextElementSibling;
-  if(!details) return;
-  var open = details.classList.contains('open');
-  details.classList.toggle('open', !open);
-  var arrow = btn.querySelector('.arrow');
-  if(arrow) arrow.textContent = open ? '▼' : '▲';
-  btn.style.color = open ? '' : 'var(--acc,#3b82f6)';
-}
-
-function toggleUnit(btn){
-  var body = btn.nextElementSibling;
-  if(!body) return;
-  var open = body.style.display === 'block';
-  body.style.display = open ? 'none' : 'block';
-  var arr = btn.querySelector('.u-arr');
-  if(arr) arr.textContent = open ? '▼' : '▲';
-}
-
-function toggleMenu(){
-  var m = document.getElementById('mobile-menu') || document.querySelector('.nav-mobile-menu') || document.querySelector('.mob-menu');
-  if(m) m.classList.toggle('open');
-}
-</script>
-</body>
-</html>
+      <div class="pkg-card"><div class="pkg-header"><div class="pkg-type" style="color:var(--b1-c)">🔥 Yoğun</div><div class="pkg-duration">5 <span style="font-size:1rem;font-weight:400;color:var(--muted)">ay</span></div><div class="pkg-dur-label">~20 hafta · haftada 3–4 ders</div></div><div class="pkg-body"><div class="pkg-goal">Bağımsız iletişime giden hızlandırılmış yol. Kariyer odaklı öğrenciler için ideal.</div><div class="pkg-weekly"><div class="pw-label">📅 Haftalık Program</div><div class="pw-row"><span class="pw-item">Canlı Dersler</span><span class="pw-val">3–4 × 50 min</span></div><div class="pw-row"><span class="pw-item">Konuşma Pratiği</span><span class="pw-val">2 seans</span></div><div class="pw-row"><span class="pw-item">Ev çalışması</span><span class="pw-val">~2.5 saat</span></div><div class="pw-total"><span class="pw-total-label">⏱ Toplam süre</span><span class="pw-total-val">~7–8 saat/hafta</span></div></div>
