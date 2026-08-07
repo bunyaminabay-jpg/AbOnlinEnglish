@@ -270,15 +270,29 @@ textarea.wa:focus{border-color:var(--red)}
 </style>
 </head>
 <body>
-<div class="sn-links">
-  <a href="/" class="sn-link">🏠 Kendin Öğren</a>
-  <a href="/landing" class="sn-link">🏡 Anasayfa</a>
-  <a href="/roadmap" class="sn-link">🗺️ Yol Haritası</a>
-  <a href="/placement-test" class="sn-link">🎯 Seviye Testi</a>
-  <a href="/games" class="sn-link">🎮 Oyunlar</a>
-  <a href="/skills.html" class="sn-link on">📚 Skills</a>
-  <a href="/private-lessons.html" class="sn-cta">🎓 Private Lessons</a>
-</div>
+<nav class="sitenav">
+  <div class="sn-inner">
+    <a href="/landing" class="sn-brand"><span class="sn-logo">AB</span>AbOnlinEnglish</a>
+    <div class="sn-links">
+      <a href="/" class="sn-link">🏠 Kendin Öğren</a>
+      <a href="/landing" class="sn-link">🏡 Anasayfa</a>
+      <a href="/roadmap" class="sn-link">🗺️ Yol Haritası</a>
+      <a href="/placement-test" class="sn-link">🎯 Seviye Testi</a>
+      <a href="/games" class="sn-link">🎮 Oyunlar</a>
+      <a href="/skills.html" class="sn-link on">📚 Skills</a>
+      <a href="/private-lessons.html" class="sn-cta">🎓 Private Lessons</a>
+    </div>
+    <button class="sn-ham" onclick="document.getElementById('sn-mob').classList.toggle('open')" aria-label="Menü">☰</button>
+  </div>
+  <div class="sn-mob" id="sn-mob">
+    <a href="/">🏠 Kendin Öğren</a>
+    <a href="/landing">🏡 Anasayfa</a>
+    <a href="/roadmap">🗺️ Yol Haritası</a>
+    <a href="/placement-test">🎯 Seviye Testi</a>
+    <a href="/games">🎮 Oyunlar</a>
+    <a href="/skills.html">📚 Skills</a>
+    <a href="/private-lessons.html" class="mc">🎓 Private Lessons</a>
+  </div>
 </nav>
 <div class="skill-bar">
   <button class="sk-tab on" data-s="r" onclick="goSkill('r')">📖 Reading <span class="sk-cnt"><span id="r-done-cnt">0</span>/40</span></button>
