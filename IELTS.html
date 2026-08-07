@@ -1,0 +1,1640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IELTS Academy | ABOnlineEnglish</title>
+<meta name="description" content="Prepare for IELTS Academic with structured lessons, band-targeted practice and original IELTS-style tests for Reading, Writing, Speaking, Vocabulary and Grammar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0B1F3A; --navy-soft:#132A4D; --orange:#E07A3E; --orange-deep:#C4622C;
+    --green:#2F8F5B; --cream:#F7F4EE; --gold:#B99457; --ink:#1B2430;
+    --line:rgba(11,31,58,0.12); --shadow:0 20px 40px -20px rgba(11,31,58,0.35);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;font-family:'Outfit',sans-serif;color:var(--ink);background:var(--cream);-webkit-font-smoothing:antialiased;}
+  h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:600;margin:0;color:var(--navy);}
+  a{color:inherit;}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px;}
+
+  /* NAV */
+  header.nav{position:sticky;top:0;z-index:50;background:rgba(247,244,238,0.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+  .nav-inner{max-width:1120px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+  .brand{display:flex;align-items:baseline;gap:8px;font-family:'Cormorant Garamond',serif;flex-shrink:0;}
+  .brand .name{font-size:19px;font-weight:700;color:var(--navy);}
+  .brand .tag{font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--orange-deep);font-family:'Outfit',sans-serif;font-weight:600;}
+  nav.links{display:flex;gap:18px;font-size:13.2px;font-weight:500;overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  nav.links a{text-decoration:none;color:var(--navy);opacity:0.68;border-bottom:2px solid transparent;padding:4px 0;white-space:nowrap;}
+  nav.links a:hover{opacity:1;border-bottom-color:var(--orange);}
+  .top-btn{display:inline-flex;align-items:center;gap:6px;padding:9px 15px;border-radius:999px;border:1.5px solid var(--line);background:#fff;font-size:12.5px;font-weight:700;color:var(--navy);text-decoration:none;white-space:nowrap;flex-shrink:0;transition:all .15s;}
+  .top-btn:hover{border-color:var(--orange);color:var(--orange-deep);}
+  @media(max-width:900px){ nav.links{display:none;} }
+  @media(max-width:480px){
+    .nav-inner{padding:12px 16px;gap:8px;}
+    .brand .tag{display:none;}
+    .wrap{padding:0 16px;}
+  }
+
+  /* PAGE SWITCHING */
+  .page{display:none;}
+  .page.active{display:block;}
+  nav.links a{cursor:pointer;}
+  nav.links a.current{opacity:1;border-bottom-color:var(--orange);}
+
+  /* HERO */
+  .hero{position:relative;overflow:hidden;background:radial-gradient(ellipse 900px 500px at 15% -10%, #16305A 0%, var(--navy) 55%, #081627 100%);color:#F3EFE6;padding:80px 24px 88px;}
+  .hero-inner{max-width:1120px;margin:0 auto;position:relative;z-index:2;}
+  .hero .eyebrow{font-size:12.5px;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:18px;display:flex;align-items:center;gap:10px;}
+  .hero .eyebrow::before{content:"";width:28px;height:1px;background:var(--gold);}
+  .hero h1{color:#fff;font-size:clamp(38px,6vw,64px);line-height:1.04;font-weight:600;max-width:760px;}
+  .hero h1 em{font-style:italic;color:var(--orange);}
+  .hero p.lede{max-width:520px;font-size:16.5px;line-height:1.65;color:#C9D2E0;margin-top:20px;font-weight:300;}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px;}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:7px;font-weight:600;font-size:14.5px;text-decoration:none;cursor:pointer;border:1px solid transparent;transition:transform .15s, background .15s, border-color .15s;}
+  .btn-primary{background:var(--orange);color:#fff;}
+  .btn-primary:hover{background:var(--orange-deep);transform:translateY(-2px);}
+  .btn-ghost{background:transparent;border-color:rgba(255,255,255,0.28);color:#F3EFE6;}
+  .btn-ghost:hover{border-color:#fff;transform:translateY(-2px);}
+  .hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:56px;background:rgba(255,255,255,0.1);border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,0.1);}
+  .hero-stats div{background:rgba(255,255,255,0.03);padding:18px 16px;}
+  .hero-stats .num{font-family:'Cormorant Garamond',serif;font-size:28px;color:#fff;font-weight:700;}
+  .hero-stats .lbl{font-size:11.5px;color:#A9B4C6;margin-top:4px;}
+  @media(max-width:700px){ .hero-stats{grid-template-columns:1fr 1fr;} }
+
+  /* SECTION generic */
+  section{padding:70px 0;scroll-margin-top:64px;}
+  .section-head{max-width:640px;margin:0 auto 34px;}
+  .eyebrow-sm{font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:var(--orange-deep);font-weight:700;margin-bottom:8px;}
+  .section-head h2{font-size:clamp(26px,3.6vw,36px);}
+  .section-head p{color:#4A5568;font-size:14.8px;margin-top:10px;line-height:1.6;font-weight:300;}
+  @media(max-width:480px){ section{padding:46px 0;} }
+
+  /* TARGET BAND */
+  .band-select{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px;box-shadow:var(--shadow);}
+  .band-chips{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:22px;}
+  .chip{padding:9px 16px;border-radius:999px;border:1.5px solid var(--line);background:#fff;font-weight:600;font-size:13.5px;cursor:pointer;transition:all .15s;color:var(--navy);}
+  .chip:hover{border-color:var(--orange);}
+  .chip.active{background:var(--navy);border-color:var(--navy);color:#fff;}
+  .band-panel{display:grid;grid-template-columns:1fr 1fr;gap:26px;border-top:1px dashed var(--line);padding-top:22px;}
+  @media(max-width:700px){.band-panel{grid-template-columns:1fr;}}
+  .band-panel h4{font-family:'Outfit';font-size:12.5px;text-transform:uppercase;letter-spacing:0.08em;color:var(--gold);font-weight:700;margin-bottom:9px;}
+  .band-panel ul{margin:0 0 16px;padding-left:18px;font-size:14px;line-height:1.7;color:#3A4658;}
+  .band-panel .skill-row{display:flex;justify-content:space-between;font-size:13.5px;padding:7px 0;border-bottom:1px solid var(--line);gap:10px;}
+  .band-panel .skill-row b{color:var(--navy);text-align:right;}
+
+  /* SKILL CARDS */
+  .skills-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+  @media(max-width:900px){.skills-grid{grid-template-columns:1fr 1fr;}}
+  @media(max-width:560px){.skills-grid{grid-template-columns:1fr;}}
+  .skill-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px 20px;transition:transform .18s, box-shadow .18s;text-decoration:none;display:block;}
+  .skill-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);}
+  .skill-card .icon{width:36px;height:36px;border-radius:9px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;font-size:17px;color:#fff;}
+  .skill-card h3{font-size:21px;margin-bottom:6px;}
+  .skill-card p{font-size:13.2px;color:#5B6577;line-height:1.55;margin-bottom:14px;font-weight:300;}
+  .skill-card .steps{display:flex;gap:6px;font-size:11px;font-weight:600;color:var(--navy);flex-wrap:wrap;}
+  .skill-card .steps span{background:var(--cream);padding:4px 9px;border-radius:5px;}
+  .ic-1{background:#2F6FA8;} .ic-2{background:var(--green);} .ic-3{background:var(--orange);} .ic-4{background:var(--gold);}
+
+  /* BAND 6-7 */
+  .b67{background:var(--navy);color:#EDE9DF;border-radius:18px;padding:48px 40px;display:grid;grid-template-columns:1fr 1fr;gap:36px;position:relative;overflow:hidden;}
+  @media(max-width:800px){.b67{grid-template-columns:1fr;padding:32px 22px;}}
+  .b67 h2{color:#fff;font-size:clamp(24px,3.2vw,32px);}
+  .b67 p{color:#B9C2D4;font-size:14px;line-height:1.7;margin-top:12px;font-weight:300;}
+  .b67-list{list-style:none;margin:20px 0 0;padding:0;}
+  .b67-list li{padding:11px 0;border-bottom:1px solid rgba(255,255,255,0.1);font-size:14px;display:flex;gap:12px;}
+  .b67-list li::before{content:"—";color:var(--orange);flex-shrink:0;}
+
+  /* TABS (shared pattern) */
+  .tabbar{display:flex;gap:8px;margin-bottom:22px;flex-wrap:wrap;}
+  .tabbtn{padding:9px 15px;border-radius:8px;border:1.5px solid var(--line);background:#fff;font-weight:600;font-size:12.8px;cursor:pointer;color:var(--navy);white-space:nowrap;}
+  .tabbtn.active{background:var(--navy);color:#fff;border-color:var(--navy);}
+  @media(max-width:480px){ .tabbar{flex-wrap:nowrap;overflow-x:auto;padding-bottom:6px;-webkit-overflow-scrolling:touch;} }
+
+  /* ACCORDION (shared) */
+  .acc-item{background:#fff;border:1px solid var(--line);border-radius:10px;margin-bottom:9px;overflow:hidden;}
+  .acc-head{padding:15px 18px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-weight:600;font-size:14px;color:var(--navy);}
+  .acc-head .num{color:var(--orange-deep);margin-right:9px;font-family:'Cormorant Garamond';font-weight:700;}
+  .acc-body{max-height:0;overflow:hidden;transition:max-height .25s ease;padding:0 18px;font-size:13.3px;color:#42506A;line-height:1.65;}
+  .acc-body-inner{padding-bottom:16px;}
+  .acc-item.open .acc-body{max-height:400px;}
+  .acc-item.open .chev{transform:rotate(180deg);}
+  .chev{transition:transform .2s;color:var(--orange);}
+  .acc-body .eg{background:var(--cream);padding:9px 13px;border-radius:8px;margin-top:7px;font-style:italic;}
+
+  /* QTYPE / TOPIC GRID */
+  .qtype-grid,.topic-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;}
+  .fund-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:11px;}
+  @media(max-width:800px){.qtype-grid,.topic-grid,.fund-grid{grid-template-columns:1fr 1fr;}}
+  @media(max-width:520px){.qtype-grid,.topic-grid,.fund-grid{grid-template-columns:1fr;}}
+  .qtype-card,.topic-card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:15px 17px;cursor:pointer;transition:all .15s;}
+  .qtype-card:hover,.topic-card:hover{border-color:var(--orange);transform:translateY(-2px);}
+  .qtype-card h4,.topic-card h4{font-size:14px;color:var(--navy);margin-bottom:6px;}
+  .qtype-card p{font-size:12.2px;color:#6B7690;margin:0;line-height:1.5;}
+  .topic-card ul{margin:0;padding-left:16px;font-size:12.2px;color:#5B6577;line-height:1.6;display:none;}
+  .topic-card.open ul{display:block;}
+
+  /* PASSAGE / DEMO / MINI-TEST */
+  .demo{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);}
+  .demo-head{background:var(--cream);padding:18px 22px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);flex-wrap:wrap;gap:10px;}
+  .demo-head .title{font-family:'Cormorant Garamond';font-size:19px;font-weight:700;color:var(--navy);}
+  .badge{font-size:11px;font-weight:700;background:var(--green);color:#fff;padding:5px 11px;border-radius:999px;}
+  .demo-body{padding:24px 22px;}
+  .passage{font-size:13.5px;line-height:1.75;color:#334;max-height:300px;overflow-y:auto;padding-right:8px;border-right:1px dashed var(--line);}
+  .demo-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:26px;}
+  @media(max-width:820px){.demo-grid{grid-template-columns:1fr;} .passage{border-right:none;border-bottom:1px dashed var(--line);padding-bottom:16px;}}
+  .q{margin-bottom:18px;}
+  .q p{font-size:13.6px;font-weight:500;margin-bottom:8px;color:var(--navy);}
+  .opts{display:flex;flex-direction:column;gap:6px;}
+  .opts.row{flex-direction:row;flex-wrap:wrap;}
+  .opt{border:1.5px solid var(--line);border-radius:8px;padding:8px 13px;font-size:13px;cursor:pointer;transition:all .12s;background:#fff;}
+  .opt:hover{border-color:var(--orange);}
+  .opt.selected{border-color:var(--navy);background:#F0F3F8;font-weight:600;}
+  .opt.correct{border-color:var(--green);background:#EAF6EF;font-weight:600;}
+  .opt.incorrect{border-color:#C6493D;background:#FBEBE9;}
+  .submit-row{display:flex;align-items:center;gap:14px;margin-top:10px;flex-wrap:wrap;}
+  .btn-submit{background:var(--navy);color:#fff;border:none;padding:10px 20px;border-radius:7px;font-weight:600;cursor:pointer;font-size:13.5px;}
+  .btn-submit:hover{background:var(--navy-soft);}
+  .score-out{font-weight:700;font-size:14px;color:var(--navy);display:none;}
+  .expl{display:none;margin-top:14px;padding-top:14px;border-top:1px dashed var(--line);font-size:12.6px;color:#4A5568;line-height:1.6;}
+
+  /* WRITING LADDER */
+  .ladder{display:flex;flex-direction:column;gap:0;}
+  .step{display:grid;grid-template-columns:52px 1fr;gap:16px;position:relative;padding-bottom:24px;}
+  .step:last-child{padding-bottom:0;}
+  .step::before{content:"";position:absolute;left:25px;top:38px;bottom:0;width:1px;background:var(--line);}
+  .step:last-child::before{display:none;}
+  .step-num{width:50px;height:50px;border-radius:50%;background:#fff;border:1.5px solid var(--line);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond';font-weight:700;font-size:19px;color:var(--orange-deep);z-index:1;}
+  .step-card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:15px 18px;cursor:pointer;}
+  .step-card h4{font-size:14.5px;color:var(--navy);margin-bottom:5px;}
+  .step-card p{font-size:12.6px;color:#5B6577;line-height:1.55;margin:0;max-height:0;overflow:hidden;transition:max-height .2s;}
+  .step-card.open p{max-height:200px;margin-top:7px;}
+
+  /* BAND SAMPLE */
+  .band-sample{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px;box-shadow:var(--shadow);}
+  .band-sample .excerpt{font-size:13.8px;line-height:1.7;color:#2A3548;font-style:italic;border-left:3px solid var(--orange);padding-left:15px;margin-bottom:15px;}
+  .band-sample .why{font-size:12.8px;color:#4A5568;background:var(--cream);padding:13px 15px;border-radius:8px;}
+  .band-sample .why b{color:var(--navy);}
+
+  /* PROMPT BANK */
+  .filterbar{display:flex;gap:8px;margin-bottom:18px;flex-wrap:wrap;}
+  .filterbtn{padding:7px 13px;border-radius:999px;border:1.5px solid var(--line);background:#fff;font-size:12px;font-weight:600;cursor:pointer;color:var(--navy);}
+  .filterbtn.active{background:var(--orange);color:#fff;border-color:var(--orange);}
+  .prompt-card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:15px 18px;margin-bottom:9px;}
+  .prompt-card .tag{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--orange-deep);margin-bottom:5px;}
+  .prompt-card p{font-size:13.4px;color:#2A3548;margin:0;line-height:1.55;}
+  .prompt-card .cat{font-size:11px;color:#8A93A8;margin-top:5px;}
+
+  /* CHECKLIST */
+  .check-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  @media(max-width:700px){.check-grid{grid-template-columns:1fr;}}
+  .check-col{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px;}
+  .check-col h4{font-size:12.5px;text-transform:uppercase;letter-spacing:0.05em;color:var(--gold);font-weight:700;margin-bottom:11px;}
+  .check-item{display:flex;gap:9px;align-items:flex-start;font-size:13px;color:#334;margin-bottom:9px;cursor:pointer;}
+  .check-item input{margin-top:3px;}
+  .check-item.checked span{text-decoration:line-through;color:#9AA4B5;}
+
+  /* CUE CARD */
+  .cue-wrap{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);overflow:hidden;}
+  .cue-head{background:var(--navy);color:#fff;padding:18px 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+  .cue-head h3{color:#fff;font-size:19px;}
+  .cue-body{padding:24px;}
+  .cue-body ul{font-size:13.5px;line-height:1.9;color:#334;}
+  .cue-body .prep{margin-top:14px;font-size:12.5px;color:#6B7690;}
+  .cue-controls{display:flex;gap:10px;padding:0 24px 22px;flex-wrap:wrap;align-items:center;}
+  .btn-cue{background:var(--orange);color:#fff;border:none;padding:10px 17px;border-radius:7px;font-weight:600;cursor:pointer;font-size:13px;}
+  .btn-cue:hover{background:var(--orange-deep);}
+  .btn-ghost2{background:#fff;border:1.5px solid var(--line);color:var(--navy);padding:10px 17px;border-radius:7px;font-weight:600;cursor:pointer;font-size:13px;}
+  .timer-display{font-family:'Cormorant Garamond';font-size:21px;font-weight:700;color:var(--orange-deep);}
+
+  /* STRUCTURE FLOW / PART3 */
+  .structure-flow{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px;}
+  .structure-flow span{background:#fff;border:1.5px solid var(--line);padding:7px 13px;border-radius:999px;font-size:12px;font-weight:600;color:var(--navy);}
+  .structure-flow span:not(:last-child)::after{content:"→";margin-left:8px;color:var(--orange);}
+  .part3-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:13px;}
+  .part3-card .q{font-weight:600;color:var(--navy);font-size:14px;margin-bottom:9px;}
+  .part3-card .a{font-size:13px;color:#3A4658;line-height:1.7;font-style:italic;border-left:3px solid var(--green);padding-left:13px;}
+
+  /* FLASHCARDS */
+  .card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;}
+  @media(max-width:800px){.card-grid{grid-template-columns:1fr 1fr;}}
+  @media(max-width:520px){.card-grid{grid-template-columns:1fr;}}
+  .flip-card{perspective:1000px;height:185px;cursor:pointer;}
+  .flip-inner{position:relative;width:100%;height:100%;transition:transform .5s;transform-style:preserve-3d;}
+  .flip-card.flipped .flip-inner{transform:rotateY(180deg);}
+  .flip-front,.flip-back{position:absolute;width:100%;height:100%;backface-visibility:hidden;border-radius:12px;padding:17px;box-shadow:var(--shadow);border:1px solid var(--line);}
+  .flip-front{background:#fff;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;}
+  .flip-front .word{font-family:'Cormorant Garamond';font-size:25px;font-weight:700;color:var(--navy);}
+  .flip-front .ipa{font-size:12px;color:#8A93A8;margin-top:6px;}
+  .flip-front .type{font-size:10.5px;color:var(--orange-deep);text-transform:uppercase;letter-spacing:0.06em;margin-top:7px;font-weight:700;}
+  .flip-back{background:var(--navy);color:#EDE9DF;transform:rotateY(180deg);display:flex;flex-direction:column;justify-content:center;gap:6px;overflow-y:auto;}
+  .flip-back .meaning{font-size:12.5px;font-weight:600;color:#fff;}
+  .flip-back .ex{font-size:11px;font-style:italic;color:#C4CEDF;}
+  .flip-back .coll{font-size:10.5px;color:var(--gold);}
+  .flip-hint{text-align:center;font-size:11.5px;color:#9AA4B5;margin-top:13px;}
+  .coll-grid{display:flex;flex-wrap:wrap;gap:9px;}
+  .coll-chip{background:#fff;border:1.5px solid var(--line);padding:9px 14px;border-radius:999px;font-size:12.5px;color:var(--navy);font-weight:600;}
+  .coll-chip b{color:var(--orange-deep);}
+
+  /* TOOLS */
+  .calc-box{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px;box-shadow:var(--shadow);}
+  .calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;}
+  @media(max-width:700px){.calc-grid{grid-template-columns:1fr;}}
+  .field{margin-bottom:16px;}
+  .field label{display:block;font-size:12px;font-weight:700;color:var(--navy);margin-bottom:6px;text-transform:uppercase;letter-spacing:0.04em;}
+  .field .hint{font-size:11px;color:#8A93A8;margin-top:4px;}
+  input[type=number],select{width:100%;padding:10px 13px;border:1.5px solid var(--line);border-radius:8px;font-size:14.5px;font-family:'Outfit';color:var(--navy);background:#fff;}
+  input[type=number]:focus,select:focus{outline:none;border-color:var(--orange);}
+  .result-panel{background:var(--navy);border-radius:14px;padding:24px;color:#EDE9DF;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;}
+  .result-panel .big{font-family:'Cormorant Garamond';font-size:52px;font-weight:700;color:#fff;line-height:1;}
+  .result-panel .lbl{font-size:11.5px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-top:7px;font-weight:700;}
+  .result-panel .note{font-size:11px;color:#9AA4B5;margin-top:13px;line-height:1.5;}
+  .btn-calc{background:var(--orange);color:#fff;border:none;padding:12px 22px;border-radius:8px;font-weight:700;cursor:pointer;font-size:13.5px;width:100%;margin-top:5px;}
+  .btn-calc:hover{background:var(--orange-deep);}
+  .plan-tabbar{display:flex;gap:8px;margin-bottom:18px;flex-wrap:wrap;}
+  .plan-tab{padding:9px 15px;border-radius:8px;border:1.5px solid var(--line);background:#fff;font-weight:600;font-size:12.5px;cursor:pointer;color:var(--navy);}
+  .plan-tab.active{background:var(--navy);color:#fff;border-color:var(--navy);}
+  .plan-table{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden;box-shadow:var(--shadow);}
+  .plan-table th{background:var(--navy);color:#fff;text-align:left;padding:11px 13px;font-size:11.5px;text-transform:uppercase;letter-spacing:0.04em;}
+  .plan-table td{padding:11px 13px;font-size:12.5px;border-bottom:1px solid var(--line);color:#3A4658;}
+  .plan-table tr:last-child td{border-bottom:none;}
+  .plan-table .wk{font-weight:700;color:var(--orange-deep);}
+  .plan-scroll{overflow-x:auto;}
+  .mock-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;}
+  .mock-card .left h3{font-size:21px;margin-bottom:7px;}
+  .mock-card .left p{font-size:13px;color:#5B6577;max-width:440px;line-height:1.6;}
+  .mock-steps{display:flex;gap:9px;flex-wrap:wrap;margin-top:13px;}
+  .mock-steps span{background:var(--cream);padding:6px 11px;border-radius:6px;font-size:11.5px;font-weight:600;color:var(--navy);}
+  .btn-soon{background:var(--gold);color:#fff;padding:11px 19px;border-radius:8px;font-weight:700;font-size:12.5px;white-space:nowrap;}
+
+  footer{background:var(--navy);color:#93A0B8;padding:46px 24px 28px;margin-top:10px;}
+  .footer-inner{max-width:1120px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:22px;font-size:13px;}
+  footer a{text-decoration:none;color:#C9D2E0;}
+  footer .cols{display:flex;gap:56px;flex-wrap:wrap;}
+  footer h5{color:#fff;font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:11px;font-family:'Outfit';}
+  footer ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;}
+  .fine{text-align:center;font-size:11px;color:#5C6A85;margin-top:36px;border-top:1px solid rgba(255,255,255,0.08);padding-top:18px;}
+</style>
+</head>
+<body id="top">
+
+<header class="nav">
+  <div class="nav-inner">
+    <div class="brand"><span class="name">ABOnlineEnglish</span><span class="tag">IELTS Academy</span></div>
+    <nav class="links">
+      <a onclick="showPage('home');return false;" data-page="home" class="current">Home</a>
+      <a onclick="showPage('reading');return false;" data-page="reading">Reading</a>
+      <a onclick="showPage('writing');return false;" data-page="writing">Writing</a>
+      <a onclick="showPage('speaking');return false;" data-page="speaking">Speaking</a>
+      <a onclick="showPage('vocab');return false;" data-page="vocab">Vocabulary & Grammar</a>
+      <a onclick="showPage('tools');return false;" data-page="tools">Tools</a>
+    </nav>
+    <a class="top-btn" onclick="showPage('home');return false;" href="#">← Ana Sayfa</a>
+  </div>
+</header>
+
+<div id="page-home" class="page active">
+<!-- ============ HERO ============ -->
+<section class="hero" style="padding-bottom:88px;">
+  <div class="hero-inner">
+    <div class="eyebrow">IELTS Academic Preparation</div>
+    <h1>Prepare smarter.<br><em>Score</em> higher.</h1>
+    <p class="lede">Build the skills, master the strategies, and practise with original IELTS-style tasks — structured around the band you're actually aiming for.</p>
+    <div class="hero-actions">
+      <a href="#" onclick="showPage('reading');return false;" class="btn btn-primary">Start Learning</a>
+      <a href="#target" class="btn btn-ghost">Take a Level Test</a>
+      <a href="#target" class="btn btn-ghost">Choose Your Target Band</a>
+    </div>
+    <div class="hero-stats">
+      <div><div class="num">5</div><div class="lbl">Skill areas</div></div>
+      <div><div class="num">30+</div><div class="lbl">Structured lessons</div></div>
+      <div><div class="num">5.0–7.5+</div><div class="lbl">Band pathway</div></div>
+      <div><div class="num">100%</div><div class="lbl">Original content</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TARGET BAND ============ -->
+<section id="target">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow-sm">Step One</div>
+      <h2>Choose your target band</h2>
+      <p>Pick where you want to land. We'll show you what to focus on across each skill.</p>
+    </div>
+    <div class="band-select">
+      <div class="band-chips" id="bandChips"></div>
+      <div class="band-panel" id="bandPanel"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS OVERVIEW ============ -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow-sm">IELTS Academic</div>
+      <h2>Four skills, one path</h2>
+      <p>Every skill follows the same rhythm: learn the strategy, practise with guidance, then test yourself under real conditions.</p>
+    </div>
+    <div class="skills-grid">
+      <a class="skill-card" href="#" onclick="showPage('reading');return false;">
+        <div class="icon ic-1">R</div><h3>Reading</h3>
+        <p>12 core strategies and 13 question types, from Matching Headings to Diagram Completion.</p>
+        <div class="steps"><span>Learn</span><span>Practise</span><span>Test</span></div>
+      </a>
+      <a class="skill-card" href="#" onclick="showPage('writing');return false;">
+        <div class="icon ic-2">W</div><h3>Writing</h3>
+        <p>A 14-step process for Task 1 and Task 2, with Band 5–8 sample comparisons.</p>
+        <div class="steps"><span>Learn</span><span>Practise</span><span>Self-Assess</span></div>
+      </a>
+      <a class="skill-card" href="#" onclick="showPage('speaking');return false;">
+        <div class="icon ic-3">S</div><h3>Speaking</h3>
+        <p>Part 1 topics, Part 2 cue cards and Part 3 discussion practice.</p>
+        <div class="steps"><span>Learn</span><span>Practise</span><span>Model Answers</span></div>
+      </a>
+      <a class="skill-card" href="#" onclick="showPage('vocab');return false;">
+        <div class="icon ic-4">V</div><h3>Vocabulary & Grammar</h3>
+        <p>Band-leveled flashcards, collocations, and grammar structures.</p>
+        <div class="steps"><span>Learn</span><span>Practise</span><span>Test</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BAND 6-7 ============ -->
+<section id="band67">
+  <div class="wrap">
+    <div class="b67">
+      <div>
+        <h2>Stuck at Band 6?<br>Here's what Band 7 actually looks like.</h2>
+        <p>Most candidates plateau at 6.0 not from lack of effort, but because Band 7 rewards <em>consistency</em> — using strong vocabulary and grammar throughout, not just in places.</p>
+        <a href="#" onclick="showPage('writing');return false;" class="btn btn-primary" style="margin-top:18px;">Explore Band 6 → 7</a>
+      </div>
+      <ul class="b67-list">
+        <li><b>Reading:</b> spotting distractors and inference, not just vocabulary matching.</li>
+        <li><b>Writing:</b> extended, purposeful ideas instead of surface-level coverage of the question.</li>
+        <li><b>Speaking:</b> sustained fluency and flexible grammar, not occasional complex sentences.</li>
+        <li><b>Vocabulary:</b> natural collocation — "make a decision," never "do a decision."</li>
+      </ul>
+    </div>
+  </div>
+</section>
+</div><!-- /page-home -->
+
+<!-- ============ READING ============ -->
+<div id="page-reading" class="page">
+<section id="section-reading">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow-sm">IELTS Academic · Reading</div>
+      <h2>Read with purpose, not just speed</h2>
+      <p>Twelve core strategies, thirteen question types, and original practice passages.</p>
+    </div>
+
+    <div class="fund-grid" style="margin-bottom:44px;">
+      <div class="qtype-card"><h4>60 minutes</h4><p>No extra transfer time — answers go straight onto the answer sheet.</p></div>
+      <div class="qtype-card"><h4>3 passages</h4><p>40 questions total, generally increasing in difficulty.</p></div>
+      <div class="qtype-card"><h4>~20 min / passage</h4><p>18 minutes reading and answering, 2 minutes checking.</p></div>
+      <div class="qtype-card"><h4>No penalty</h4><p>Wrong answers don't cost points — never leave a question blank.</p></div>
+    </div>
+
+    <h3 style="font-size:20px;margin-bottom:14px;">12 Reading strategies</h3>
+    <div id="stratAcc" style="margin-bottom:44px;"></div>
+
+    <h3 style="font-size:20px;margin-bottom:14px;">13 question types</h3>
+    <div class="qtype-grid" id="qtypeGrid" style="margin-bottom:44px;"></div>
+
+    <h3 style="font-size:20px;margin-bottom:14px;">Practice passages</h3>
+    <div class="tabbar" id="rdPassageTabs"></div>
+    <div id="rdPassageDemo"></div>
+
+    <h3 style="font-size:20px;margin:48px 0 6px;">Full-length practice test — Test 1</h3>
+    <p style="font-size:13.5px;color:#4A5568;margin-bottom:18px;">Structured like the real exam: 3 passages with lettered paragraphs, mixed question types (Matching Headings, True/False/Not Given, Sentence Completion). Spend about 20 minutes per passage.</p>
+    <div class="tabbar" id="fltTabs"></div>
+    <div id="fltDemo"></div>
+  </div>
+</section>
+</div><!-- /page-reading -->
+
+<!-- ============ WRITING ============ -->
+<div id="page-writing" class="page">
+<section id="section-writing">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow-sm">IELTS Academic · Writing</div>
+      <h2>From blank page to Band 7 essay</h2>
+      <p>A 14-step process for Task 1 and Task 2, with real Band 5–8 comparisons.</p>
+    </div>
+
+    <h3 style="font-size:20px;margin-bottom:14px;">The 14-step writing process</h3>
+    <div class="ladder" id="ladder" style="margin-bottom:48px;"></div>
+
+    <h3 style="font-size:20px;margin-bottom:6px;">Band 5 → Band 8, same prompt</h3>
+    <p style="font-size:13.5px;color:#4A5568;margin-bottom:16px;">"Some people think children should begin learning a foreign language in primary school, while others believe it is better to wait. Discuss both views and give your own opinion."</p>
+    <div class="tabbar" id="wrBandTabs"></div>
+    <div id="wrBandSample" style="margin-bottom:48px;"></div>
+
+    <h3 style="font-size:20px;margin-bottom:14px;">Prompt bank</h3>
+    <div class="filterbar" id="filterBar"></div>
+    <div id="promptList" style="margin-bottom:48px;"></div>
+
+    <h3 style="font-size:20px;margin-bottom:14px;">Final band checklist</h3>
+    <div class="check-grid" id="checkGrid"></div>
+  </div>
+</section>
+</div><!-- /page-writing -->
+
+<!-- ============ SPEAKING ============ -->
+<div id="page-speaking" class="page">
+<section id="section-speaking">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow-sm">IELTS Academic · Speaking</div>
+      <h2>Practise speaking like the exam is real</h2>
+      <p>Part 1 topics, Part 2 cue cards with a live timer, and Part 3 discussion practice.</p>
+    </div>
+
+    <h3 style="font-size:20px;margin-bottom:14px;">Part 1 — Familiar topics</h3>
+    <div class="topic-grid" id="topicGrid" style="margin-bottom:44px;"></div>
+
+    <h3 style="font-size:20px;margin-bottom:14px;">Part 2 — Cue card practice</h3>
+    <div class="cue-wrap" style="margin-bottom:44px;">
+      <div class="cue-head">
+        <h3 id="cueTitle">Describe a place you would like to visit.</h3>
+        <span class="timer-display" id="cueTimer">1:00</span>
+      </div>
+      <div class="cue-body">
+        <ul id="cuePoints"></ul>
+        <p class="prep" id="cuePrep">You should say... and explain why this interests you.</p>
+        <textarea id="cueAnswer" placeholder="Type or outline your spoken answer here for practice..." style="width:100%;min-height:90px;margin-top:14px;padding:12px;border:1.5px solid var(--line);border-radius:8px;font-family:'Outfit';font-size:13px;resize:vertical;"></textarea>
+      </div>
+      <div class="cue-controls">
+        <button class="btn-cue" id="newCue">New random cue card</button>
+        <button class="btn-ghost2" id="startTimer">Start preparation timer</button>
+      </div>
+    </div>
+
+    <h3 style="font-size:20px;margin-bottom:14px;">Part 3 — Extending your answers</h3>
+    <div class="structure-flow">
+      <span>Answer</span><span>Reason</span><span>Example</span><span>Result / Consequence</span><span>Contrast</span>
+    </div>
+    <div id="part3List" style="margin-bottom:44px;"></div>
+
+    <h3 style="font-size:20px;margin-bottom:6px;">Band 5 → Band 8, same question</h3>
+    <p style="font-size:13.5px;color:#4A5568;margin-bottom:16px;">"Do you think it's important for children to learn a second language?"</p>
+    <div class="tabbar" id="spBandTabs"></div>
+    <div id="spBandSample"></div>
+  </div>
+</section>
+</div><!-- /page-speaking -->
+
+<!-- ============ VOCABULARY & GRAMMAR ============ -->
+<div id="page-vocab" class="page">
+<section id="section-vocab">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow-sm">IELTS Academic · Vocabulary & Grammar</div>
+      <h2>The words and structures that move you up a band</h2>
+      <p>Flip through band-leveled vocabulary flashcards and build the grammar range that separates Band 6 from Band 7.</p>
+    </div>
+
+    <h3 style="font-size:20px;margin-bottom:14px;">Vocabulary flashcards</h3>
+    <div class="tabbar" id="vocabTabs"></div>
+    <div class="card-grid" id="cardGrid"></div>
+    <p class="flip-hint" style="margin-bottom:44px;">Tap a card to flip it</p>
+
+    <h3 style="font-size:20px;margin-bottom:14px;">Natural collocations</h3>
+    <div class="coll-grid" id="collGrid" style="margin-bottom:44px;"></div>
+
+    <h3 style="font-size:20px;margin-bottom:14px;">Grammar for IELTS</h3>
+    <div class="tabbar" id="gramTabs"></div>
+    <div id="gramAcc" style="margin-bottom:44px;"></div>
+
+    <h3 style="font-size:20px;margin-bottom:14px;">Mini test — Subject-Verb Agreement</h3>
+    <div class="demo" style="box-shadow:none;">
+      <div class="demo-body" style="padding:22px;">
+        <div id="testArea"></div>
+        <div class="submit-row">
+          <button class="btn-submit" id="vgSubmitBtn">Submit answers</button>
+          <span class="score-out" id="vgScoreOut"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div><!-- /page-vocab -->
+
+<!-- ============ TOOLS ============ -->
+<div id="page-tools" class="page">
+<section id="section-tools">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow-sm">IELTS Academic · Tools</div>
+      <h2>Know your number. Know your next step.</h2>
+      <p>Estimate your overall band, then follow a study plan built around it.</p>
+    </div>
+
+    <h3 style="font-size:20px;margin-bottom:14px;">Band score calculator</h3>
+    <div class="calc-box" style="margin-bottom:48px;">
+      <div class="calc-grid">
+        <div>
+          <div class="field">
+            <label>Listening — raw score (out of 40)</label>
+            <input type="number" id="tlListening" min="0" max="40" placeholder="e.g. 32">
+            <div class="hint">Correct answers out of 40 questions</div>
+          </div>
+          <div class="field">
+            <label>Reading — raw score (out of 40)</label>
+            <input type="number" id="tlReading" min="0" max="40" placeholder="e.g. 30">
+            <div class="hint">Correct answers out of 40 questions</div>
+          </div>
+          <div class="field">
+            <label>Writing — self-estimated band</label>
+            <select id="tlWriting">
+              <option value="5">Band 5.0</option><option value="5.5">Band 5.5</option>
+              <option value="6" selected>Band 6.0</option><option value="6.5">Band 6.5</option>
+              <option value="7">Band 7.0</option><option value="7.5">Band 7.5</option><option value="8">Band 8.0+</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Speaking — self-estimated band</label>
+            <select id="tlSpeaking">
+              <option value="5">Band 5.0</option><option value="5.5">Band 5.5</option>
+              <option value="6" selected>Band 6.0</option><option value="6.5">Band 6.5</option>
+              <option value="7">Band 7.0</option><option value="7.5">Band 7.5</option><option value="8">Band 8.0+</option>
+            </select>
+          </div>
+          <button class="btn-calc" id="calcBtn">Calculate estimated band</button>
+        </div>
+        <div class="result-panel">
+          <div class="lbl">Estimated Overall Band</div>
+          <div class="big" id="resultBig">—</div>
+          <div class="lbl" style="margin-top:16px;">Breakdown</div>
+          <div class="note" id="breakdown" style="font-size:12.2px;color:#C4CEDF;">Fill in the fields and calculate.</div>
+          <div class="note">This is an estimate for practice purposes only — not an official IELTS score. Based on published approximate Academic Reading conversion figures; Listening uses the same table as an approximation.</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="font-size:20px;margin-bottom:14px;">Study plans</h3>
+    <div class="plan-tabbar" id="planTabs"></div>
+    <div class="plan-scroll" style="margin-bottom:48px;">
+      <table class="plan-table" id="planTable"></table>
+    </div>
+
+    <h3 style="font-size:20px;margin-bottom:14px;">Free mock test</h3>
+    <div id="mockIntro" class="mock-card">
+      <div class="left">
+        <h3 style="font-size:21px;">Try a short, free mock test</h3>
+        <p>A condensed version of the full exam: 6 Reading questions, 1 timed Writing task, and 1 Speaking cue card with a real preparation timer.</p>
+        <div class="mock-steps"><span>Reading (6 Q)</span><span>Writing (Task 2)</span><span>Speaking (Part 2)</span><span>Results</span></div>
+      </div>
+      <button class="btn-cue" onclick="startMock()">Start Free Mock Test</button>
+    </div>
+
+    <div id="mockWrap" style="display:none;">
+      <div class="tabbar" style="pointer-events:none;">
+        <span class="tabbtn" id="mockStepLabel1">1. Reading</span>
+        <span class="tabbtn" id="mockStepLabel2">2. Writing</span>
+        <span class="tabbtn" id="mockStepLabel3">3. Speaking</span>
+        <span class="tabbtn" id="mockStepLabel4">4. Results</span>
+      </div>
+
+      <div id="mockStage1" class="demo">
+        <div class="demo-head"><div class="title">Mock Reading — 2 short passages, 6 questions</div><span class="badge">No time limit</span></div>
+        <div class="demo-body" id="mockReadingBody"></div>
+        <div style="padding:0 22px 22px;">
+          <button class="btn-submit" onclick="mockGoTo(2)">Continue to Writing →</button>
+        </div>
+      </div>
+
+      <div id="mockStage2" class="demo" style="display:none;">
+        <div class="demo-head"><div class="title">Mock Writing Task 2</div><span class="badge">Aim for 40 min</span></div>
+        <div class="demo-body">
+          <p style="font-weight:600;color:var(--navy);margin-bottom:10px;">"Some people think university students should study whatever they like, while others think they should only study subjects useful for future employment. Discuss both views and give your opinion."</p>
+          <textarea id="mockWritingArea" placeholder="Write your essay here..." style="width:100%;min-height:180px;padding:12px;border:1.5px solid var(--line);border-radius:8px;font-family:'Outfit';font-size:13px;resize:vertical;" oninput="document.getElementById('mockWc').textContent = this.value.trim().split(/\s+/).filter(Boolean).length + ' words'"></textarea>
+          <div style="display:flex;justify-content:space-between;margin-top:10px;">
+            <span id="mockWc" style="font-size:12px;color:#8A93A8;font-weight:600;">0 words</span>
+            <button class="btn-submit" onclick="mockGoTo(3)">Continue to Speaking →</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="mockStage3" class="demo" style="display:none;">
+        <div class="demo-head"><div class="title">Mock Speaking Part 2</div><span class="badge" id="mockCueTimer">1:00</span></div>
+        <div class="demo-body">
+          <h3 style="font-size:18px;margin-bottom:10px;">Describe a place you would like to visit.</h3>
+          <ul style="font-size:13.5px;line-height:1.9;color:#334;"><li>where it is</li><li>why you want to visit it</li><li>who you would go with</li></ul>
+          <p style="font-size:12.5px;color:#6B7690;margin:10px 0;">...and explain why this place interests you.</p>
+          <textarea id="mockSpeakingArea" placeholder="Outline your spoken answer here..." style="width:100%;min-height:90px;padding:12px;border:1.5px solid var(--line);border-radius:8px;font-family:'Outfit';font-size:13px;resize:vertical;"></textarea>
+          <div style="display:flex;gap:10px;margin-top:10px;flex-wrap:wrap;">
+            <button class="btn-cue" onclick="mockStartTimer()">Start 1-min preparation timer</button>
+            <button class="btn-submit" onclick="mockGoTo(4)">Finish & See Results →</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="mockStage4" class="demo" style="display:none;">
+        <div class="demo-body" style="text-align:center;padding:40px 22px;">
+          <div class="lbl" style="font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);font-weight:700;">Mock Test Complete</div>
+          <div id="mockScoreBig" style="font-family:'Cormorant Garamond';font-size:48px;font-weight:700;color:var(--navy);margin:10px 0;">—</div>
+          <p id="mockScoreText" style="font-size:13.5px;color:#5B6577;max-width:420px;margin:0 auto 20px;line-height:1.6;"></p>
+          <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
+            <button class="btn-cue" onclick="showPage('reading')">Review Reading strategies</button>
+            <button class="btn-ghost2" onclick="resetMock()">Retake mock test</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div><!-- /page-tools -->
+
+<footer>
+  <div class="footer-inner">
+    <div style="max-width:280px;">
+      <div class="brand"><span class="name" style="color:#fff;">ABOnlineEnglish</span></div>
+      <p style="color:#8592AC;font-size:13px;margin-top:10px;line-height:1.6;">CEFR A1–C1 self-study and tutoring, plus focused exam preparation for IELTS Academic.</p>
+    </div>
+    <div class="cols">
+      <div>
+        <h5>IELTS Academy</h5>
+        <ul>
+          <li><a href="#" onclick="showPage('reading');return false;">Reading</a></li>
+          <li><a href="#" onclick="showPage('writing');return false;">Writing</a></li>
+          <li><a href="#" onclick="showPage('speaking');return false;">Speaking</a></li>
+          <li><a href="#" onclick="showPage('vocab');return false;">Vocabulary & Grammar</a></li>
+          <li><a href="#" onclick="showPage('tools');return false;">Tools</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="https://wa.me/905446405749">WhatsApp</a></li>
+          <li><a href="https://instagram.com/abonlinenglish">@abonlinenglish</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="fine">This IELTS-style content is original and created for ABOnlineEnglish. It is not affiliated with or endorsed by IELTS, British Council, IDP or Cambridge Assessment English.</div>
+</footer>
+
+<script>
+/* ============ PAGE SWITCHING ============ */
+function showPage(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('page-'+id).classList.add('active');
+  document.querySelectorAll('nav.links a').forEach(a=>{
+    a.classList.toggle('current', a.dataset.page === id);
+  });
+  window.scrollTo(0,0);
+}
+
+/* ============ TARGET BAND SELECTOR ============ */
+const bands = {
+  "5.0": { level:"Elementary-to-Intermediate control", reading:"Handle short, familiar texts; focus on skimming/scanning basics", listening:"Follow simple, clearly signposted talks", writing:"Write complete but simple sentences with a clear structure", speaking:"Give short, mostly accurate answers", focus:["Build core vocabulary through daily topics","Practise basic sentence accuracy before complexity","Get comfortable with all four question formats"] },
+  "5.5": { level:"Developing fluency", reading:"Start recognising paraphrase, not just keyword matching", listening:"Track multi-speaker conversations", writing:"Organise ideas into clear paragraphs", speaking:"Extend answers beyond one sentence", focus:["Learn linking words for coherence","Widen topic-specific vocabulary","Practise timed short-answer writing"] },
+  "6.0": { level:"Competent, inconsistent", reading:"Recognise most paraphrases; inference still developing", listening:"Understand main ideas in longer talks", writing:"Take a position, but development may be uneven", speaking:"Speak with some hesitation, but fluent enough", focus:["Push complex sentences from occasional to frequent","Sharpen True/False/Not Given accuracy","Build collocation awareness"] },
+  "6.5": { level:"The transition band", reading:"Handle distractors and multi-step inference", listening:"Distinguish similar-sounding distractor answers", writing:"Extend ideas with purposeful support", speaking:"Reduce repetition, try wider vocabulary", focus:["Consistency, not new skills, is the goal","Study real Band 7 writing samples closely","Practise Speaking Part 3 with reasoned answers"] },
+  "7.0": { level:"Good, consistent control", reading:"Fast and accurate across all question types", listening:"Catch detail even with accents or distractors", writing:"Mostly error-free complex sentences", speaking:"Natural fluency with flexible grammar", focus:["Refine less-common vocabulary with correct register","Aim for zero grammar slips in complex sentences","Polish coherence across full essays"] },
+  "7.5+": { level:"Fine control and flexibility", reading:"High speed with near-native accuracy", listening:"Full comprehension including implied meaning", writing:"Sophisticated, natural academic register", speaking:"Near-native flexibility and pronunciation control", focus:["Focus on nuance: tone, register, precision","Practise under strict timed conditions only","Target specific weak sub-skills, not general review"] },
+};
+const chipWrap = document.getElementById('bandChips');
+const bandPanelEl = document.getElementById('bandPanel');
+function renderBandPanel(key){
+  const b = bands[key];
+  bandPanelEl.innerHTML = `
+    <div><h4>What Band ${key} looks like</h4>
+      <p style="font-size:14px;color:#3A4658;line-height:1.6;margin-bottom:15px;">${b.level}</p>
+      <div class="skill-row"><span>Reading</span><b>${b.reading}</b></div>
+      <div class="skill-row"><span>Listening</span><b>${b.listening}</b></div>
+      <div class="skill-row"><span>Writing</span><b>${b.writing}</b></div>
+      <div class="skill-row"><span>Speaking</span><b>${b.speaking}</b></div>
+    </div>
+    <div><h4>Where to focus</h4><ul>${b.focus.map(f=>`<li>${f}</li>`).join('')}</ul></div>`;
+}
+Object.keys(bands).forEach((key,i)=>{
+  const chip = document.createElement('div');
+  chip.className = 'chip' + (i===2 ? ' active':'');
+  chip.textContent = 'Band ' + key;
+  chip.addEventListener('click', ()=>{
+    document.querySelectorAll('#bandChips .chip').forEach(c=>c.classList.remove('active'));
+    chip.classList.add('active');
+    renderBandPanel(key);
+  });
+  chipWrap.appendChild(chip);
+});
+renderBandPanel("6.0");
+
+/* ============ READING: STRATEGIES ============ */
+const strategies = [
+  ["Skimming","Get the general idea and structure of the passage fast (1–2 min). Read the first and last paragraph fully; read only the first sentence of the others."],
+  ["Scanning","Find a specific piece of information (a date, name, number) quickly. Move your eyes in a zigzag looking for the exact word or pattern — don't read sentences."],
+  ["Finding Keywords","Identify which words in the question you actually need to search for: nouns, numbers, and specific terms — not words like 'the' or 'is'."],
+  ["Recognising Paraphrases","IELTS almost never uses the passage's exact words in the question. Match the concept, not the word."],
+  ["Synonyms","The building block of paraphrase recognition: increase↔rise↔growth; decrease↔decline↔drop; important↔significant↔crucial."],
+  ["Reading for Detail","Used in True/False/Not Given and Multiple Choice — slow down and compare every word of the sentence to the question, especially absolute words like 'always' or 'never'."],
+  ["Identifying Main Ideas","Critical for Matching Headings. Read the whole paragraph, then ask 'what is this paragraph about, in one sentence?' — don't trust the first sentence alone."],
+  ["Identifying Supporting Ideas","Used in Matching Information. Phrases like 'for example,' 'such as,' or 'this shows' flag supporting evidence rather than the main claim."],
+  ["Understanding Reference Words","Words like 'it,' 'this,' 'such' point back to something earlier. Substitute the reference to check your understanding is correct."],
+  ["Making Inferences","Reading between the lines — what the writer implies but doesn't state directly. A Band 7+ skill. Don't over-interpret; stick to the logical conclusion the text supports."],
+  ["Dealing with Unfamiliar Vocabulary","Use word roots, part of speech, and context to guess meaning — you usually don't need the exact definition to answer correctly."],
+  ["Managing Time","Do the question type that suits you fastest first. Return to hard questions in your last five minutes. Never leave anything blank."],
+];
+const stratAcc = document.getElementById('stratAcc');
+strategies.forEach(([title,body],i)=>{
+  const el = document.createElement('div');
+  el.className = 'acc-item';
+  el.innerHTML = `<div class="acc-head"><span><span class="num">${String(i+1).padStart(2,'0')}</span>${title}</span><span class="chev">▾</span></div>
+    <div class="acc-body"><div class="acc-body-inner">${body}</div></div>`;
+  el.querySelector('.acc-head').addEventListener('click',()=>el.classList.toggle('open'));
+  stratAcc.appendChild(el);
+});
+
+/* ============ READING: QUESTION TYPES ============ */
+const qtypes = [
+  ["Multiple Choice","A/B/C/D options. Find the relevant part of the passage before reading the options."],
+  ["True / False / Not Given","TRUE = matches; FALSE = passage says the opposite; NOT GIVEN = not mentioned at all."],
+  ["Yes / No / Not Given","Same logic as TFNG but about the writer's opinion, not facts."],
+  ["Matching Headings","Match paragraphs to a list of headings based on the paragraph's overall idea, not repeated words."],
+  ["Matching Information","Find which paragraph contains a specific detail — scan for names, numbers, examples."],
+  ["Matching Features","Match names or concepts to characteristics — locate each name first, then read carefully around it."],
+  ["Sentence Completion","Fill a blank using words from the passage. Check grammar and never exceed the word limit."],
+  ["Summary Completion","Complete a summary of part of the passage — identify which section it summarises first."],
+  ["Note Completion","Fill blanks in bullet-point notes — note headings usually mirror passage sub-headings."],
+  ["Table Completion","Use row and column headers to narrow down exactly what information you need."],
+  ["Flow-chart Completion","Complete the steps of a process — follow sequence words like first, next, then, finally."],
+  ["Diagram Label Completion","Label parts of a diagram using the passage's physical descriptions."],
+  ["Short Answer Questions","Answer briefly, taken directly from the passage — respect the word limit exactly."],
+];
+const qtypeGrid = document.getElementById('qtypeGrid');
+qtypes.forEach(([t,d])=>{
+  const el = document.createElement('div');
+  el.className = 'qtype-card';
+  el.innerHTML = `<h4>${t}</h4><p>${d}</p>`;
+  qtypeGrid.appendChild(el);
+});
+
+/* ============ READING: PASSAGES ============ */
+const passages = [
+  { title:"Urban Vertical Farming", band:"Band 6.0 · Level 3",
+    text:`<p>Traditional agriculture depends on vast tracts of open land, but a growing number of cities are turning to a radically different model: vertical farming. By stacking crop layers inside repurposed warehouses or purpose-built towers, growers can produce food close to the consumers who will eat it. Proponents argue that precise control over light, water and nutrients allows vertical farms to use up to ninety percent less water than open-field cultivation, while avoiding the pesticides outdoor crops typically require.</p>
+    <p>Yet the technology is not without critics. The artificial lighting systems that replace sunlight consume substantial electricity, and unless that power comes from renewable sources, the environmental benefits of reduced water use may be offset by a larger carbon footprint. Leafy greens and herbs, which grow quickly and command a premium price, have so far proven the most commercially viable crops; staple grains remain largely unsuited to the model.</p>
+    <p>Whether the approach can scale beyond a niche market for premium salad greens remains an open question that will likely depend on falling energy costs and continued advances in LED efficiency.</p>
+    <p style="font-size:11px;color:#8892A0;">Original IELTS-style practice activity created for ABOnlineEnglish.</p>`,
+    qs:[
+      {p:"1. Vertical farming can reduce water use compared with traditional farming.", opts:["TRUE","FALSE","NOT GIVEN"], correct:"TRUE", expl:"The passage states vertical farms 'use up to ninety percent less water than open-field cultivation.'"},
+      {p:"2. Renewable energy is legally required for all vertical farms.", opts:["TRUE","FALSE","NOT GIVEN"], correct:"NOT GIVEN", expl:"Renewable energy is mentioned as a condition for environmental benefit, but no legal requirement is stated."},
+      {p:"3. One criticism is that vertical farming may increase carbon emissions if power isn't renewable.", opts:["TRUE","FALSE","NOT GIVEN"], correct:"TRUE", expl:"'Unless that power comes from renewable sources, the environmental benefits... may be offset by a larger carbon footprint.'"},
+    ]
+  },
+  { title:"The Silent Language of Bees", band:"Band 6.0 · Level 2",
+    text:`<p>For centuries, beekeepers observed that returning worker bees performed an elaborate series of movements inside the hive, yet the purpose remained a mystery until the 1940s, when the Austrian biologist Karl von Frisch began a systematic study of the "waggle dance." Von Frisch discovered that a bee returning from a rich food source performs a figure-of-eight pattern, waggling its abdomen along the straight middle section.</p>
+    <p>The dance's precision is striking: the angle between the waggle run and vertical corresponds to the angle between the food source and the sun, while the length of the run indicates distance. Bees dancing in complete darkness rely on gravity instead of the sun. This discovery, for which von Frisch later shared a Nobel Prize, overturned the assumption that insect behaviour was purely instinctive.</p>
+    <p>Subsequent research has refined rather than overturned von Frisch's model, showing bees also use scent cues and that colonies adjust foraging strategies based on collective "votes" cast by multiple dancing bees.</p>
+    <p style="font-size:11px;color:#8892A0;">Original IELTS-style practice activity created for ABOnlineEnglish.</p>`,
+    qs:[
+      {p:"4. In darkness, bees use gravity instead of the sun as their reference point.", opts:["TRUE","FALSE","NOT GIVEN"], correct:"TRUE", expl:"'Bees dancing in complete darkness rely on gravity instead of the sun.'"},
+      {p:"5. Von Frisch's discovery has since been proven completely incorrect.", opts:["TRUE","FALSE","NOT GIVEN"], correct:"FALSE", expl:"Later research 'refined rather than overturned' his model."},
+      {p:"6. Karl von Frisch was the first person ever to notice bee movement inside the hive.", opts:["TRUE","FALSE","NOT GIVEN"], correct:"NOT GIVEN", expl:"Beekeepers had observed the movements for centuries; the passage doesn't say who first noticed it."},
+    ]
+  },
+  { title:"Rethinking the Four-Day Work Week", band:"Band 6.5 · Level 3",
+    text:`<p>Over the past decade, a growing number of companies across Europe, New Zealand and parts of Asia have piloted a four-day working week, typically compressing five days of work into four without a corresponding cut in pay. Early trial results have been encouraging, with several organisations reporting output remained stable or increased.</p>
+    <p>Critics caution against generalising too readily: many participating companies were already flexible, well-resourced organisations. Whether the model would translate to sectors such as manufacturing or healthcare remains largely untested.</p>
+    <p>Governments have responded unevenly — some have funded pilot schemes, while others remain cautious about a one-size-fits-all mandate.</p>
+    <p style="font-size:11px;color:#8892A0;">Original IELTS-style practice activity created for ABOnlineEnglish.</p>`,
+    qs:[
+      {p:"7. Some governments have funded four-day week pilot schemes.", opts:["YES","NO","NOT GIVEN"], correct:"YES", expl:"'A handful have funded or actively encouraged pilot schemes.'"},
+      {p:"8. The writer believes all industries could adopt a four-day week equally easily.", opts:["YES","NO","NOT GIVEN"], correct:"NO", expl:"Critics specifically doubt this for manufacturing and healthcare."},
+      {p:"9. The four-day week has been proven to reduce national healthcare costs.", opts:["YES","NO","NOT GIVEN"], correct:"NOT GIVEN", expl:"Healthcare costs are not mentioned in the passage."},
+    ]
+  },
+  { title:"The Forgotten Engineering of Ancient Aqueducts", band:"Band 7.0 · Level 4",
+    text:`<p>Long before modern hydraulic engineering, Roman engineers achieved a feat that continues to impress specialists today: transporting water across dozens of kilometres using nothing but gravity. The aqueducts that supplied cities such as Rome and Nîmes relied on an almost imperceptible downward gradient — often as little as 30 centimetres of drop per kilometre — calculated with remarkable accuracy given the absence of any instrument resembling a modern level. Engineers achieved this precision using a device called a chorobates, a long wooden bench fitted with a water-filled groove that revealed even minute deviations from horizontal.</p>
+    <p>What is less widely appreciated is the extent to which these systems were engineered not merely to move water, but to manage it. Settling tanks removed sediment at regular intervals along the route, while inverted siphons — sealed pipe systems that allowed water to descend into a valley and rise again on the far side under pressure — enabled aqueducts to cross terrain that a continuous gradient could not accommodate.</p>
+    <p>Modern engineers who have studied the surviving aqueducts note that their designers appear to have possessed a sophisticated, if empirically derived, understanding of fluid dynamics centuries before the mathematical principles governing pressure and flow were formally established.</p>
+    <p style="font-size:11px;color:#8892A0;">Original IELTS-style practice activity created for ABOnlineEnglish.</p>`,
+    qs:[
+      {p:"10. According to the passage, one criticism of vertical farming is that it may increase carbon emissions if power isn't renewable.", opts:["A. it required a visible instrument like a modern level","B. it used a device called a chorobates to detect deviations from horizontal","C. it relied on siphons made only of lead","D. it was invented after formal fluid dynamics theory"], correct:"B. it used a device called a chorobates to detect deviations from horizontal", expl:"The passage states engineers used 'a device called a chorobates... that revealed even minute deviations from horizontal.'"},
+      {p:"11. What allowed aqueducts to cross valleys where a continuous gradient wasn't possible?", opts:["A. Settling tanks","B. Wooden benches","C. Inverted siphons","D. Concrete reinforcement"], correct:"C. Inverted siphons", expl:"'Inverted siphons... enabled aqueducts to cross terrain that a continuous gradient could not accommodate.'"},
+      {p:"12. Roman engineers had access to the formal mathematical theories of fluid dynamics.", opts:["TRUE","FALSE","NOT GIVEN"], correct:"FALSE", expl:"The passage says their understanding came 'centuries before the mathematical principles... were formally established.'"},
+    ]
+  },
+  { title:"Can Cities Be Designed for Loneliness Reduction?", band:"Band 7.0 · Level 4",
+    text:`<p>Urban loneliness has emerged as an unexpected public health concern in many of the world's densest cities, a paradox given that density is often associated with abundant opportunities for social contact. Researchers increasingly argue that physical proximity to others is not sufficient to prevent isolation; what matters more is the presence of "third places" — informal social settings such as cafés, parks and community centres that exist outside the home and workplace.</p>
+    <p>Some city planners have begun to respond by explicitly designing for social contact rather than treating it as an incidental by-product of urban form. Examples include the deliberate widening of pavements to encourage lingering, the installation of communal seating in public squares, and zoning reforms that permit small-scale commercial premises within primarily residential areas.</p>
+    <p>Critics of this design-led approach argue that it risks treating a structural problem as a matter of aesthetics, diverting attention from underlying drivers such as precarious employment and the decline of stable neighbourhood populations. Proponents counter that while urban design cannot solve loneliness alone, poorly designed environments can actively worsen it.</p>
+    <p style="font-size:11px;color:#8892A0;">Original IELTS-style practice activity created for ABOnlineEnglish.</p>`,
+    qs:[
+      {p:"13. What paradox does the passage identify regarding urban loneliness?", opts:["A. Dense cities have too few residents","B. Density does not guarantee reduced isolation","C. Loneliness only affects rural areas","D. Cities have stopped building public spaces"], correct:"B. Density does not guarantee reduced isolation", expl:"The passage calls it a paradox that density, despite offering social contact opportunities, doesn't prevent loneliness."},
+      {p:'14. According to the passage, "third places" refers to:', opts:["A. the third most populated area of a city","B. informal social spaces outside home and work","C. a category of city planning zones","D. places designed exclusively for tourists"], correct:"B. informal social spaces outside home and work", expl:"Third places are defined as 'informal social settings... that exist outside the home and workplace.'"},
+      {p:"15. The writer believes urban design alone can fully solve the problem of loneliness.", opts:["YES","NO","NOT GIVEN"], correct:"NO", expl:"The passage states design is 'necessary, if insufficient' — not a full solution on its own."},
+    ]
+  },
+];
+const rdTabs = document.getElementById('rdPassageTabs');
+const rdDemoWrap = document.getElementById('rdPassageDemo');
+function renderPassage(idx){
+  const p = passages[idx];
+  rdDemoWrap.innerHTML = `
+    <div class="demo">
+      <div class="demo-head"><div class="title">${p.title}</div><span class="badge">${p.band}</span></div>
+      <div class="demo-body demo-grid">
+        <div class="passage">${p.text}</div>
+        <div>
+          <div id="rdQArea"></div>
+          <div class="submit-row">
+            <button class="btn-submit" id="rdSubmitBtn">Submit answers</button>
+            <span class="score-out" id="rdScoreOut"></span>
+          </div>
+          <div class="expl" id="rdExplArea"></div>
+        </div>
+      </div>
+    </div>`;
+  const qArea = document.getElementById('rdQArea');
+  p.qs.forEach((q,i)=>{
+    const qd = document.createElement('div');
+    qd.className = 'q';
+    qd.innerHTML = `<p>${q.p}</p><div class="opts" data-correct="${q.correct}" data-idx="${i}">${q.opts.map(o=>`<div class="opt">${o}</div>`).join('')}</div>`;
+    qArea.appendChild(qd);
+  });
+  qArea.querySelectorAll('.opts .opt').forEach(opt=>{
+    opt.addEventListener('click',()=>{
+      const group = opt.parentElement;
+      group.querySelectorAll('.opt').forEach(o=>o.classList.remove('selected'));
+      opt.classList.add('selected');
+    });
+  });
+  document.getElementById('rdSubmitBtn').addEventListener('click',()=>{
+    let score = 0, explHtml = '';
+    qArea.querySelectorAll('.opts').forEach(group=>{
+      const correct = group.dataset.correct, qi = group.dataset.idx;
+      const selected = group.querySelector('.opt.selected');
+      group.querySelectorAll('.opt').forEach(o=>{
+        if(o.textContent === correct) o.classList.add('correct');
+        else if(o === selected) o.classList.add('incorrect');
+      });
+      if(selected && selected.textContent === correct) score++;
+      explHtml += `<p><b>${p.qs[qi].p.split('.')[0]}.</b> ${p.qs[qi].expl}</p>`;
+    });
+    const out = document.getElementById('rdScoreOut');
+    out.style.display = 'inline'; out.textContent = `Score: ${score}/${p.qs.length}`;
+    const ex = document.getElementById('rdExplArea');
+    ex.style.display = 'block';
+    ex.innerHTML = '<b style="color:var(--navy);">Explanations</b>' + explHtml;
+  });
+}
+passages.forEach((p,i)=>{
+  const b = document.createElement('button');
+  b.className = 'tabbtn' + (i===0?' active':'');
+  b.textContent = p.title;
+  b.addEventListener('click',()=>{
+    rdTabs.querySelectorAll('.tabbtn').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    renderPassage(i);
+  });
+  rdTabs.appendChild(b);
+});
+renderPassage(0);
+
+/* ============ FULL-LENGTH PRACTICE TEST (lettered passages, mixed types) ============ */
+const fullTest = [
+  { title:"Sleep and Memory Consolidation", band:"Passage 1 · Questions 1–10",
+    paras:{
+      A:"It has long been known that sleep restores the body, but only in the past few decades have researchers begun to understand what it does for the mind. The discovery that sleep plays an active role in strengthening memory came about partly by accident, when researchers noticed that participants who napped between learning sessions consistently outperformed those who stayed awake, even when the awake group had spent the same amount of time simply resting.",
+      B:"During slow-wave sleep, the deepest stage of non-REM sleep, the hippocampus appears to replay the neural activity patterns recorded while a person was awake, effectively rehearsing the day's experiences in compressed form. This replay is thought to help transfer information from the hippocampus, which stores memories only temporarily, to the cortex, where long-term memories are believed to reside.",
+      C:"REM sleep, by contrast, seems to play a different role, one more closely tied to emotional processing. Studies using brain imaging have found that emotionally charged memories are reactivated during REM sleep in ways that appear to soften their emotional intensity while preserving the factual content, which may explain why a distressing event often feels less overwhelming after a night's sleep, even though the details remain clear.",
+      D:"When sleep is cut short, this consolidation process is disrupted. Volunteers who were woken repeatedly during the night, even without losing much total sleep time, performed markedly worse on memory tasks the following day than those who slept without interruption, suggesting that the continuity of sleep matters as much as its duration.",
+      E:"These findings have practical implications well beyond the sleep laboratory. Universities have begun incorporating this research into study-skills guidance, and shift-work industries have started reconsidering rotating schedules that fragment employees' sleep, since the resulting memory and decision-making costs may outweigh the scheduling convenience such systems were designed to provide."
+    },
+    headingOptions:["A surprising benefit uncovered by chance","How the brain rehearses the day's events","The emotional dimension of dreaming","What happens when sleep is cut short","Turning research into everyday advice","The history of sleep laboratories","Debates over animal sleep patterns"],
+    headingAnswers:{A:"A surprising benefit uncovered by chance", B:"How the brain rehearses the day's events", C:"The emotional dimension of dreaming", D:"What happens when sleep is cut short", E:"Turning research into everyday advice"},
+    tfng:[
+      {p:"6. Slow-wave sleep is when the hippocampus replays recent experiences.", correct:"TRUE"},
+      {p:"7. All researchers agree on exactly how memory consolidation occurs during sleep.", correct:"NOT GIVEN"},
+      {p:"8. Interrupted sleep can harm memory performance even if total sleep time barely changes.", correct:"TRUE"},
+    ],
+    fill:[
+      {p:"9. During slow-wave sleep, information is thought to move from the hippocampus to the ___________, where long-term memories are stored.", accept:["cortex","the cortex"]},
+      {p:"10. ___________ sleep appears to soften the emotional intensity of memories while keeping the facts clear.", accept:["rem","rem sleep"]},
+    ]
+  },
+  { title:"The Economics of Urban Micro-Mobility", band:"Passage 2 · Questions 11–20",
+    paras:{
+      A:"Electric scooters and dockless bicycles have become a familiar sight in cities around the world, promising to fill the gap between walking and public transport for short urban journeys. For city governments struggling with congestion and emissions, the appeal is obvious: a single scooter can replace dozens of short car trips over its lifetime, at a fraction of the infrastructure cost of a new transit line.",
+      B:"Yet the economics of running a micro-mobility fleet have proven far more difficult than early investors anticipated. Vehicles left outdoors in all weather have a shorter working life than manufacturers initially projected, and the cost of collecting, charging and redistributing scooters each night frequently exceeds the revenue a single vehicle generates in a day, particularly in cities with strict operating regulations.",
+      C:"Several operators have responded by shifting from a purely usage-based model toward subscription plans, betting that predictable monthly revenue will offset the unpredictable wear and tear on their fleets. Others have pulled out of markets entirely, concluding that the underlying unit economics could not be fixed through pricing changes alone.",
+      D:"City planners, meanwhile, have grown more selective about which operators they permit to operate, favouring companies that can demonstrate lower vehicle turnover and more responsible parking practices over those offering the lowest initial fees. This shift has narrowed the field considerably, consolidating what was once a crowded market into a handful of larger operators in most major cities.",
+      E:"Whether micro-mobility ultimately proves to be a durable transport category or a temporary novelty may depend less on rider demand, which by most measures remains strong, than on whether operators and cities can agree on a regulatory and financial model that keeps vehicles both affordable and adequately maintained."
+    },
+    headingOptions:["Why cities were initially attracted to the idea","The gap between projected and actual costs","A shift toward more predictable revenue","Cities becoming more selective about operators","An uncertain long-term outlook","How micro-mobility began in Europe","Complaints from pedestrians about safety"],
+    headingAnswers:{A:"Why cities were initially attracted to the idea", B:"The gap between projected and actual costs", C:"A shift toward more predictable revenue", D:"Cities becoming more selective about operators", E:"An uncertain long-term outlook"},
+    tfng:[
+      {p:"14. Operating costs for scooter fleets have generally been lower than companies expected.", correct:"FALSE"},
+      {p:"15. Some operators have left certain city markets completely.", correct:"TRUE"},
+      {p:"16. Rider demand for micro-mobility has declined significantly in recent years.", correct:"NOT GIVEN"},
+    ],
+    fill:[
+      {p:"19. Some operators moved to a ___________ model to make monthly revenue more predictable.", accept:["subscription","subscription plan","subscription plans"]},
+      {p:"20. Cities now favour operators with lower vehicle turnover and more responsible ___________ practices.", accept:["parking"]},
+    ]
+  },
+  { title:"Coral Reefs and the Limits of Adaptation", band:"Passage 3 · Questions 21–30",
+    paras:{
+      A:"Coral reefs occupy less than one percent of the ocean floor yet support a disproportionate share of marine biodiversity, making their decline in the face of rising sea temperatures a matter of concern far beyond the communities that depend on them directly. When water temperatures rise even slightly above a coral's tolerance range for a sustained period, the coral expels the symbiotic algae living in its tissue, a process known as bleaching that leaves the coral pale and vulnerable to starvation.",
+      B:"Some researchers have proposed that corals might adapt to warming waters over time, either through natural selection favouring heat-tolerant individuals or through symbiosis with more thermally resilient algae strains. Laboratory experiments have shown that certain coral populations can indeed acquire greater heat tolerance within a few generations, lending some support to this view.",
+      C:"However, field observations complicate this optimistic picture considerably. The rate at which ocean temperatures are currently rising appears to outpace the rate at which most wild coral populations can adapt, and repeated bleaching events, occurring more frequently than in previous decades, leave reefs too little recovery time between episodes to consolidate any genetic gains.",
+      D:"Conservation strategies have consequently shifted toward more interventionist approaches, including the selective breeding of heat-resistant coral in nurseries for later transplantation onto damaged reefs, and, more controversially, research into assisted gene flow between geographically separated coral populations to accelerate the spread of heat-tolerant traits.",
+      E:"Critics of these interventions caution that they treat a symptom rather than the underlying cause, and that resources might be better spent reducing the emissions driving ocean warming in the first place. Proponents counter that, given the pace of decline, reefs may not survive long enough for emissions reductions alone to make a difference, making active intervention a necessary complement rather than a distraction."
+    },
+    headingOptions:["Why reefs matter beyond their small footprint","Evidence that adaptation may be possible","Why adaptation may not be happening fast enough","New, more hands-on conservation approaches","A disagreement over where to focus effort","The discovery of the first coral reef","How tourism affects reef health"],
+    headingAnswers:{A:"Why reefs matter beyond their small footprint", B:"Evidence that adaptation may be possible", C:"Why adaptation may not be happening fast enough", D:"New, more hands-on conservation approaches", E:"A disagreement over where to focus effort"},
+    tfng:[
+      {p:"26. Coral bleaching happens when coral expels the algae living inside it.", correct:"TRUE"},
+      {p:"27. Laboratory studies have found no evidence that corals can develop greater heat tolerance.", correct:"FALSE"},
+      {p:"28. All conservationists agree that selective breeding is the best use of limited resources.", correct:"NOT GIVEN"},
+    ],
+    fill:[
+      {p:"29. Field observations show that ocean warming is currently outpacing the rate of coral ___________.", accept:["adaptation"]},
+      {p:"30. One controversial strategy involves assisted gene flow to spread ___________ traits between coral populations.", accept:["heat-tolerant","heat tolerant"]},
+    ]
+  },
+];
+
+const fltTabs = document.getElementById('fltTabs');
+const fltDemo = document.getElementById('fltDemo');
+function renderFullTest(idx){
+  const t = fullTest[idx];
+  const letters = Object.keys(t.paras);
+  let paraHtml = letters.map(L => `<p><b>(${L})</b> ${t.paras[L]}</p>`).join('');
+  fltDemo.innerHTML = `
+    <div class="demo">
+      <div class="demo-head"><div class="title">${t.title}</div><span class="badge">${t.band}</span></div>
+      <div class="demo-body demo-grid">
+        <div class="passage" style="max-height:420px;">${paraHtml}<p style="font-size:11px;color:#8892A0;">Original IELTS-style practice activity created for ABOnlineEnglish.</p></div>
+        <div>
+          <h4 style="font-size:13.5px;color:var(--navy);margin-bottom:10px;">Questions 1–5 — Matching Headings</h4>
+          <p style="font-size:12px;color:#8A93A8;margin-bottom:10px;">Choose the correct heading for each paragraph from the list below.</p>
+          <div id="fltHeadings"></div>
+          <h4 style="font-size:13.5px;color:var(--navy);margin:18px 0 10px;">True / False / Not Given</h4>
+          <div id="fltTfng"></div>
+          <h4 style="font-size:13.5px;color:var(--navy);margin:18px 0 10px;">Sentence Completion — no more than two words</h4>
+          <div id="fltFill"></div>
+          <div class="submit-row">
+            <button class="btn-submit" id="fltSubmitBtn">Submit answers</button>
+            <span class="score-out" id="fltScoreOut"></span>
+          </div>
+        </div>
+      </div>
+    </div>`;
+
+  const headWrap = document.getElementById('fltHeadings');
+  letters.forEach(L=>{
+    const row = document.createElement('div');
+    row.className = 'q';
+    row.innerHTML = `<p>Paragraph ${L}</p>
+      <select data-letter="${L}" style="width:100%;padding:9px 12px;border:1.5px solid var(--line);border-radius:8px;font-size:12.8px;font-family:'Outfit';color:var(--navy);">
+        <option value="">— choose a heading —</option>
+        ${t.headingOptions.map(h=>`<option value="${h}">${h}</option>`).join('')}
+      </select>`;
+    headWrap.appendChild(row);
+  });
+
+  const tfngWrap = document.getElementById('fltTfng');
+  t.tfng.forEach((q,i)=>{
+    const qd = document.createElement('div');
+    qd.className = 'q';
+    qd.innerHTML = `<p>${q.p}</p><div class="opts row" data-correct="${q.correct}" data-kind="tfng">${["TRUE","FALSE","NOT GIVEN"].map(o=>`<div class="opt">${o}</div>`).join('')}</div>`;
+    tfngWrap.appendChild(qd);
+  });
+  tfngWrap.querySelectorAll('.opts .opt').forEach(opt=>{
+    opt.addEventListener('click',()=>{
+      const group = opt.parentElement;
+      group.querySelectorAll('.opt').forEach(o=>o.classList.remove('selected'));
+      opt.classList.add('selected');
+    });
+  });
+
+  const fillWrap = document.getElementById('fltFill');
+  t.fill.forEach((q,i)=>{
+    const qd = document.createElement('div');
+    qd.className = 'q';
+    qd.innerHTML = `<p>${q.p}</p><input type="text" data-accept='${JSON.stringify(q.accept)}' placeholder="Your answer" style="width:100%;padding:9px 12px;border:1.5px solid var(--line);border-radius:8px;font-size:12.8px;font-family:'Outfit';">`;
+    fillWrap.appendChild(qd);
+  });
+
+  document.getElementById('fltSubmitBtn').addEventListener('click',()=>{
+    let score = 0, total = 0;
+    headWrap.querySelectorAll('select').forEach(sel=>{
+      total++;
+      const L = sel.dataset.letter;
+      const correct = t.headingAnswers[L];
+      if(sel.value === correct){ score++; sel.style.borderColor = 'var(--green)'; }
+      else{ sel.style.borderColor = '#C6493D'; }
+    });
+    tfngWrap.querySelectorAll('.opts').forEach(group=>{
+      total++;
+      const correct = group.dataset.correct;
+      const selected = group.querySelector('.opt.selected');
+      group.querySelectorAll('.opt').forEach(o=>{
+        if(o.textContent === correct) o.classList.add('correct');
+        else if(o === selected) o.classList.add('incorrect');
+      });
+      if(selected && selected.textContent === correct) score++;
+    });
+    fillWrap.querySelectorAll('input').forEach(inp=>{
+      total++;
+      const accept = JSON.parse(inp.dataset.accept).map(a=>a.toLowerCase());
+      const val = inp.value.trim().toLowerCase();
+      if(accept.includes(val)){ score++; inp.style.borderColor = 'var(--green)'; inp.style.background = '#EAF6EF'; }
+      else{ inp.style.borderColor = '#C6493D'; inp.style.background = '#FBEBE9'; }
+    });
+    const out = document.getElementById('fltScoreOut');
+    out.style.display = 'inline';
+    out.textContent = `Score: ${score}/${total}`;
+  });
+}
+fullTest.forEach((t,i)=>{
+  const b = document.createElement('button');
+  b.className = 'tabbtn' + (i===0?' active':'');
+  b.textContent = t.title;
+  b.addEventListener('click',()=>{
+    fltTabs.querySelectorAll('.tabbtn').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    renderFullTest(i);
+  });
+  fltTabs.appendChild(b);
+});
+renderFullTest(0);
+
+/* ============ WRITING: 14 STEPS ============ */
+const steps = [
+  ["Understand the Question","Read it twice. Is it asking for an opinion, a discussion, or advantages/disadvantages?"],
+  ["Identify the Question Type","Task 2 has 7 types: Opinion, Discussion, Advantages/Disadvantages, Problem/Solution, Two-part, Positive/Negative Development, Agree/Disagree."],
+  ["Analyse Keywords","Underline every key word. Answering the wrong keyword directly lowers Task Response."],
+  ["Brainstorm Ideas","In 2 minutes, write 4–5 ideas related to the topic. Speed first, quality later."],
+  ["Choose Your Position","Pick your 2 strongest ideas and commit to a clear position. Sitting on the fence hurts your score."],
+  ["Create an Outline","4 paragraphs: Introduction / Body 1 / Body 2 / Conclusion."],
+  ["Write the Introduction","Paraphrase the question, then state your thesis. Never copy the question word-for-word."],
+  ["Write Body Paragraph 1","Topic sentence → explanation → example/evidence → concluding sentence."],
+  ["Write Body Paragraph 2","Same structure, second main idea. Use a clear transition from Body 1."],
+  ["Write the Conclusion","Restate your thesis in different words. No new ideas here."],
+  ["Check Grammar","Subject-verb agreement, tenses, articles. Re-read complex sentences carefully."],
+  ["Check Vocabulary","Did you repeat any word? Replace weak phrases with precise academic vocabulary."],
+  ["Check Coherence","Are transitions between paragraphs clear? Does every paragraph stay on one topic?"],
+  ["Final Band Check","Did I answer the question fully? Is it organised? Is my vocabulary varied? Is my grammar accurate?"],
+];
+const ladder = document.getElementById('ladder');
+steps.forEach(([t,d],i)=>{
+  const el = document.createElement('div');
+  el.className = 'step';
+  el.innerHTML = `<div class="step-num">${i+1}</div><div class="step-card"><h4>${t}</h4><p>${d}</p></div>`;
+  el.querySelector('.step-card').addEventListener('click',function(){this.classList.toggle('open');});
+  ladder.appendChild(el);
+});
+
+/* ============ WRITING: BAND COMPARISON ============ */
+const wrBandSamples = {
+  "5.0": {excerpt:"Nowadays many people have different opinion about children learn foreign language early or not. In this essay I will discuss about both opinion and give my opinion too. Some people think is good for children to learn language when they are young because childrens brain can learn fast and easy. They can copy the sound good and not forget easy. Other people think is better to wait because children need to learn own language first good, if not they will confuse two language together and make many mistake. In my opinion, I think is better children learn young because in my country now English very important for get good job in future. Many company want workers can speak English. So I think primary school must teach foreign language to children.", why:"Repetitive simple sentences, frequent grammar errors (childrens, is good, learn own language first good), organisation is present but mechanical, vocabulary is limited and repeated (good, is good, is better)."},
+  "6.0": {excerpt:"There are different opinions about whether children should start learning a foreign language in primary school or wait until secondary school. This essay will discuss both views before giving my opinion. On one hand, some people believe that early exposure helps children learn languages more naturally because their brains are still developing. Young learners often pick up pronunciation more easily and are less afraid of making mistakes than older students. On the other hand, others argue that children should first master their native language before adding a new one, otherwise they may become confused between grammar rules. They also say that primary school children have a lot to learn already, so adding another subject could be too much. In my opinion, I believe an early start is generally more beneficial, especially in countries where English is important for future careers, although schools should introduce it gradually and not put too much pressure on young learners.", why:"Clear paragraphing and an understandable position, but development is limited; relies on standard linkers like 'on one hand/on the other hand'; grammar is mostly accurate but sentence variety is fairly low and ideas stay fairly general."},
+  "6.5": {excerpt:"Whether children should be introduced to a foreign language during primary or secondary school remains a topic of ongoing debate. This essay will examine both perspectives before presenting my own view. Advocates of early language learning point to research suggesting that younger children acquire pronunciation and grammar more intuitively, largely because their cognitive flexibility has not yet been shaped by a single linguistic system. This is often used to explain why children raised bilingually tend to sound more natural than adult learners. Conversely, opponents argue that introducing a second language too early risks interfering with a child's development in their mother tongue, particularly in cases where the home environment already involves limited exposure to formal language use. They also suggest that older students, being more cognitively mature, can learn grammar rules more efficiently through explicit instruction. On balance, I would argue that the benefits of an early start generally outweigh the risks, provided that the foreign language is introduced alongside — rather than instead of — strong first-language support at home and school.", why:"More academic vocabulary and hedging language (advocates, cognitive flexibility, on balance), sentence structures are more varied, but consistency across the whole essay isn't fully sustained yet and some sentences are still longer than they need to be."},
+  "7.0": {excerpt:"The question of whether foreign-language instruction should begin in primary or secondary school continues to divide educators and parents alike. While early exposure is often championed for its cognitive benefits, a compelling case can also be made for delaying instruction until a child's first language is firmly established. This essay will weigh both positions before arguing that, on balance, an earlier start yields more durable long-term benefits. Proponents of early instruction point to a substantial body of research indicating that young children absorb pronunciation and grammatical patterns with a level of intuition that becomes progressively harder to replicate in adolescence or adulthood. Critics, meanwhile, contend that introducing a second language too soon can dilute a child's command of their native tongue, particularly in households where linguistic input is already limited. This concern, while valid in specific circumstances, tends to overlook the fact that most well-designed early-language programmes are supplementary rather than substitutive, meaning they run alongside — not instead of — native-language instruction. Taking this into account, I believe the evidence favours an earlier introduction, provided it is implemented thoughtfully and does not come at the expense of foundational literacy in the child's first language.", why:"Clear, consistent position sustained throughout; natural and varied vocabulary (championed, dilute, substitutive); complex sentences are almost entirely error-free; academic tone is maintained from the first sentence to the last."},
+  "8.0": {excerpt:"Few debates in language education generate as much disagreement as the question of when foreign-language instruction should begin. Proponents of an early start invoke the well-documented plasticity of the developing brain, while sceptics counter that premature exposure risks diluting a child's command of their mother tongue before it has fully taken root. This essay contends that, properly managed, an early start need not come at this cost — and that the evidence, on balance, favours introducing a second language well before secondary school. The case for early exposure rests on more than intuition: longitudinal studies consistently show that children who begin language learning before the age of seven tend to achieve markedly more native-like pronunciation than those who start later, a gap that narrows only partially with subsequent years of study. The countervailing concern — that early bilingual exposure might crowd out first-language development — is not without merit in specific, resource-constrained contexts, but it is frequently overstated when applied to well-resourced educational settings where native-language instruction remains robust. Properly sequenced, the two forms of instruction are complementary rather than competing, and it is this distinction, rather than any blanket rule about timing, that ultimately determines whether early language learning helps or hinders a child's overall linguistic development.", why:"Nuanced argument that anticipates and addresses the counter-position ('need not come at this cost'), sophisticated but entirely natural vocabulary (plasticity, countervailing, crowd out), fully error-free complex sentences, and a thesis that is both clear and genuinely subtle rather than simply asserted."},
+};
+const wrBandTabsEl = document.getElementById('wrBandTabs');
+const wrBandSampleEl = document.getElementById('wrBandSample');
+function renderWrBand(key){
+  const b = wrBandSamples[key];
+  wrBandSampleEl.innerHTML = `<div class="band-sample"><div class="excerpt">"${b.excerpt}"</div><div class="why"><b>Why Band ${key}:</b> ${b.why}</div></div>`;
+}
+Object.keys(wrBandSamples).forEach((k,i)=>{
+  const btn = document.createElement('button');
+  btn.className = 'tabbtn' + (i===2?' active':'');
+  btn.textContent = 'Band ' + k;
+  btn.addEventListener('click',()=>{
+    wrBandTabsEl.querySelectorAll('.tabbtn').forEach(x=>x.classList.remove('active'));
+    btn.classList.add('active');
+    renderWrBand(k);
+  });
+  wrBandTabsEl.appendChild(btn);
+});
+renderWrBand("6.5");
+
+/* ============ WRITING: PROMPT BANK ============ */
+const essayModels = {
+  "Discussion": "There are two common views on this issue, and both have some merit. Those who support the first position often point to its practical benefits — it tends to be more efficient, more equitable, or better suited to the resources available. Those who favour the second position, however, emphasise long-term outcomes and argue that short-term convenience should not outweigh deeper social or individual needs. Having considered both sides, I lean towards a balanced approach: neither extreme fully addresses the complexity of the issue, and a combination of the two views, adapted to local circumstances, is likely to produce the best outcome. Policymakers should therefore avoid treating this as an either/or choice and instead design flexible solutions that draw on the strengths of each perspective.",
+  "Opinion": "I do not fully agree with this statement, although I recognise the reasoning behind it. On one hand, there are clear benefits to the proposal — it could reduce costs, save time, or address a genuine problem. On the other hand, applying it too rigidly risks overlooking individual circumstances that a blanket rule cannot account for. A more effective approach would be to treat the idea as a general guideline rather than an absolute rule, allowing for exceptions where clearly justified. This way, the intended benefits are preserved without creating unnecessary rigidity. In conclusion, while I understand the appeal of the statement, a more flexible interpretation would serve people better in practice.",
+  "Advantages/Disadvantages": "This trend brings both benefits and drawbacks, and weighing them carefully is essential. On the positive side, it offers greater flexibility, can reduce costs, and often improves overall satisfaction for those involved. However, it also introduces risks: reduced oversight, potential inequality between those who can access it and those who cannot, and unintended consequences that only become apparent over time. On balance, I believe the advantages outweigh the disadvantages, provided appropriate safeguards are put in place to manage the risks. Ignoring the trend entirely would mean missing out on its genuine benefits, but adopting it without any regulation would be equally short-sighted.",
+  "Problem/Solution": "This problem has become increasingly common, largely due to a combination of economic pressure, changing social habits, and insufficient regulation. Its consequences are significant, ranging from direct costs to individuals to broader strain on public systems. Several solutions could help address this issue. Firstly, stronger regulation or clearer guidelines could reduce the more harmful effects. Secondly, public education campaigns could shift behaviour by raising awareness of the risks involved. Finally, investment in infrastructure or support services would help those most affected. While no single measure will resolve the problem entirely, a combination of regulation, education and investment offers the most realistic path forward.",
+  "Two-part Question": "There are several reasons behind this trend. Economic pressures, changing lifestyles, and shifts in public attitudes have all played a role in accelerating it. In particular, rising costs and greater awareness through media coverage have made the issue far more visible than it was a generation ago. To address it, a combination of measures would likely be most effective: clearer government policy, incentives for more sustainable behaviour, and greater public education about the long-term consequences of inaction. Addressing the root causes, rather than only the visible symptoms, is essential if any solution is to have a lasting impact.",
+  "Positive/Negative Development": "This can be considered a mixed development, with both encouraging and concerning aspects. On the positive side, it reflects greater individual freedom and often improves quality of life for those directly involved. It also places less strain on certain traditional structures that no longer suit everyone's circumstances. On the negative side, however, it can weaken social support networks that people have traditionally relied on, particularly in times of difficulty. Overall, I would characterise this as a broadly positive development, provided that alternative forms of support — whether from communities, employers, or public services — are strengthened to fill the gap left by changing traditional structures.",
+  "Agree/Disagree": "I largely agree with this statement, though with some reservations. The central argument is compelling: shifting responsibility in the way proposed could produce fairer outcomes and encourage more responsible behaviour overall. However, applying this principle without exception risks placing unreasonable burdens on those with limited resources or alternatives. A more balanced position would be to support the general direction of the statement while allowing for targeted exceptions in clearly justified cases. This approach preserves the core benefit of the proposal while avoiding the unintended harm that a completely rigid application might cause.",
+};
+
+const prompts = [
+  {cat:"Education", type:"Discussion", text:"Some believe university students should study whatever they like, while others think they should only study subjects useful for future employment. Discuss both views and give your opinion."},
+  {cat:"Education", type:"Opinion", text:"Homework should be banned in primary schools. To what extent do you agree or disagree?"},
+  {cat:"Technology", type:"Advantages/Disadvantages", text:"Children now spend more time using screens than playing outside. Do the disadvantages of this outweigh the advantages?"},
+  {cat:"Technology", type:"Problem/Solution", text:"Many people rely on GPS navigation and can no longer read a map. What problems does this cause and what solutions can you suggest?"},
+  {cat:"Environment", type:"Two-part Question", text:"Many countries are experiencing increased plastic waste. Why is this happening, and what can be done to reduce it?"},
+  {cat:"Environment", type:"Agree/Disagree", text:"Governments should tax activities that harm the environment, such as flying, rather than relying on individual choice. To what extent do you agree?"},
+  {cat:"Society", type:"Discussion", text:"Some people think social media has brought people closer together, while others believe it has made people more isolated. Discuss both views and give your opinion."},
+  {cat:"Society", type:"Positive/Negative Development", text:"More people are choosing to live alone rather than with family or a partner. Is this a positive or negative development?"},
+  {cat:"Government", type:"Opinion", text:"The government should provide free healthcare for all citizens regardless of income. To what extent do you agree or disagree?"},
+  {cat:"Government", type:"Problem/Solution", text:"Traffic congestion is a growing problem in many major cities. What are the causes and what measures could be taken to address it?"},
+  {cat:"Work", type:"Advantages/Disadvantages", text:"Many companies now allow employees to work remotely full-time. Do the advantages of this outweigh the disadvantages?"},
+  {cat:"Work", type:"Discussion", text:"Some people believe that a good salary is the most important factor in job satisfaction, while others think other factors matter more. Discuss both views and give your opinion."},
+  {cat:"Crime", type:"Two-part Question", text:"Crime rates among young people are rising in many cities. What are the reasons for this, and what can be done to address it?"},
+  {cat:"Globalisation", type:"Agree/Disagree", text:"As the world becomes more globalised, traditional cultures and languages are disappearing. To what extent do you agree that this is a serious problem?"},
+  {cat:"Advertising", type:"Opinion", text:"Advertising aimed at children should be banned. To what extent do you agree or disagree?"},
+];
+const promptCats = ["All", ...new Set(prompts.map(p=>p.cat))];
+const filterBar = document.getElementById('filterBar');
+const promptList = document.getElementById('promptList');
+function updateWordCount(idx){
+  const ta = document.getElementById('pta-'+idx);
+  const wc = document.getElementById('wc-'+idx);
+  const words = ta.value.trim().split(/\s+/).filter(Boolean).length;
+  wc.textContent = words + ' words' + (words < 250 ? ' (aim for 250+)' : ' ✓');
+}
+function toggleModel(idx){
+  const el = document.getElementById('model-'+idx);
+  el.style.display = el.style.display === 'block' ? 'none' : 'block';
+}
+function renderPrompts(cat){
+  promptList.innerHTML = '';
+  prompts.forEach((p,i)=>{
+    if(cat!=='All' && p.cat!==cat) return;
+    const el = document.createElement('div');
+    el.className = 'prompt-card';
+    el.innerHTML = `
+      <div class="tag">${p.type}</div>
+      <p>${p.text}</p>
+      <div class="cat">${p.cat}</div>
+      <textarea id="pta-${i}" placeholder="Write your essay here (aim for 250+ words, 40 minutes)..." style="width:100%;min-height:120px;margin-top:12px;padding:12px;border:1.5px solid var(--line);border-radius:8px;font-family:'Outfit';font-size:13px;resize:vertical;" oninput="updateWordCount(${i})"></textarea>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px;flex-wrap:wrap;gap:8px;">
+        <span id="wc-${i}" style="font-size:12px;color:#8A93A8;font-weight:600;">0 words (aim for 250+)</span>
+        <button onclick="toggleModel(${i})" style="background:var(--cream);border:1.5px solid var(--line);color:var(--navy);padding:7px 14px;border-radius:7px;font-size:12px;font-weight:600;cursor:pointer;">Show a Band 7 model answer</button>
+      </div>
+      <div id="model-${i}" style="display:none;margin-top:12px;padding:14px 16px;background:var(--cream);border-radius:8px;font-size:12.8px;line-height:1.7;color:#3A4658;font-style:italic;">${essayModels[p.type]}</div>
+    `;
+    promptList.appendChild(el);
+  });
+}
+promptCats.forEach((c,i)=>{
+  const b = document.createElement('button');
+  b.className = 'filterbtn' + (i===0?' active':'');
+  b.textContent = c;
+  b.addEventListener('click',()=>{
+    filterBar.querySelectorAll('.filterbtn').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    renderPrompts(c);
+  });
+  filterBar.appendChild(b);
+});
+renderPrompts('All');
+
+/* ============ WRITING: CHECKLIST ============ */
+const checklist = {
+  "Task Response": ["Did I answer every part of the question?","Is my position clear and consistent throughout?","Did I stay on topic in every paragraph?"],
+  "Coherence & Cohesion": ["Does every paragraph have one clear main idea?","Did I use a range of linking devices?","Do my reference words clearly point to something?"],
+  "Lexical Resource": ["Did I avoid repeating the same vocabulary?","Did I use topic-specific vocabulary accurately?","Are my collocations natural?"],
+  "Grammatical Range & Accuracy": ["Did I use a mix of simple and complex sentences?","Did I check subject-verb agreement?","Did I check article use (a/an/the)?"],
+};
+const checkGrid = document.getElementById('checkGrid');
+Object.entries(checklist).forEach(([title,items])=>{
+  const col = document.createElement('div');
+  col.className = 'check-col';
+  col.innerHTML = `<h4>${title}</h4>` + items.map(i=>`<label class="check-item"><input type="checkbox"><span>${i}</span></label>`).join('');
+  checkGrid.appendChild(col);
+});
+checkGrid.querySelectorAll('.check-item').forEach(item=>{
+  item.querySelector('input').addEventListener('change',function(){ item.classList.toggle('checked', this.checked); });
+});
+
+/* ============ SPEAKING: PART 1 ============ */
+const topics = {
+  "Home": {qs:["Do you live in a house or an apartment?","What do you like most about where you live?","Would you like to move somewhere else in the future?"], sample:"I live in a fairly small apartment in the city centre. What I like most about it is the location — everything I need, from shops to my workplace, is within walking distance. That said, I'd eventually like to move somewhere with a bit more outdoor space, maybe a house with a small garden."},
+  "Family": {qs:["Do you have a large or small family?","Who are you closest to in your family?","How often do you see your extended family?"], sample:"I'd say my family is fairly small — just my parents and one sibling. I'm probably closest to my sibling since we're close in age and grew up doing most things together. We don't see our extended family that often, maybe a few times a year during holidays."},
+  "Work": {qs:["What do you do for work?","Do you enjoy your job? Why/why not?","What was your first job?"], sample:"I currently work as a teacher. I genuinely enjoy it, mainly because every day is a bit different and I get to see real progress in my students over time. My very first job, actually, was much less glamorous — I worked part-time in a café while I was still studying."},
+  "Studies": {qs:["What subject are you studying?","Why did you choose that subject?","Do you plan to continue studying in the future?"], sample:"I studied English language teaching. I chose it partly because I've always enjoyed languages, and partly because I liked the idea of a job where I'm constantly learning alongside the people I teach. I'd definitely consider further study later, maybe a postgraduate qualification."},
+  "Hobbies": {qs:["Do you have a hobby? What is it?","How did you become interested in this hobby?","Do you think hobbies are important?"], sample:"I'd say reading is my main hobby. I got into it as a child, mostly because my parents always had books around the house. I think hobbies are genuinely important — they give you a break from routine and something to think about outside of work."},
+  "Food": {qs:["What kind of food do you like?","Do you prefer eating at home or eating out?","Has your taste in food changed since childhood?"], sample:"I have quite varied taste, but I particularly enjoy Mediterranean food. I generally prefer eating at home — it's healthier and I actually enjoy cooking. My taste has definitely changed since I was a child; I used to avoid anything spicy, and now it's one of my favourite things."},
+  "Travel": {qs:["Do you like travelling?","What's the most interesting place you've visited?","Do you prefer travelling alone or with others?"], sample:"I love travelling whenever I get the chance. Probably the most interesting place I've visited was a city with a really strong historical centre — walking through it felt like stepping back in time. I generally prefer travelling with others, mainly for the shared experience."},
+  "Technology": {qs:["How often do you use your phone?","What's your favourite piece of technology?","Do you think technology has made life easier?"], sample:"Honestly, probably more than I'd like to admit — it's almost constant throughout the day. My favourite piece of technology is probably my laptop, since I use it for both work and hobbies. Overall, I do think technology has made life easier, though it comes with its own distractions."},
+  "Weather": {qs:["What's the weather like in your country?","What's your favourite season?","Does weather affect your mood?"], sample:"The weather where I live varies quite a bit across the year, with hot summers and fairly mild winters. My favourite season is probably autumn — the temperature is comfortable and I like the change in scenery. Weather does affect my mood a little; I tend to feel more energetic on sunny days."},
+  "Friends": {qs:["Do you have a lot of friends?","What do you usually do with your friends?","Is it easy for you to make new friends?"], sample:"I wouldn't say I have a huge number of friends, but I have a close circle I see regularly. We usually just get together for coffee or dinner and catch up. Making new friends has become a bit harder as an adult, mainly due to time constraints rather than anything else."},
+  "Shopping": {qs:["Do you enjoy shopping?","Do you prefer shopping online or in stores?","How often do you go shopping?"], sample:"It depends on what I'm shopping for — I don't mind browsing for clothes, but grocery shopping feels more like a chore. These days I do most non-food shopping online, simply because it saves time. I probably go shopping for groceries once or twice a week."},
+  "Music": {qs:["What kind of music do you like?","Did you learn to play an instrument as a child?","Do you listen to music while working or studying?"], sample:"My taste is fairly broad, but I especially enjoy acoustic and singer-songwriter styles. I did learn piano briefly as a child, though I didn't stick with it. I do listen to music while working, but usually something without lyrics so it doesn't distract me."},
+  "Books": {qs:["Do you like reading?","What kind of books do you prefer?","Did you read a lot as a child?"], sample:"Yes, reading is something I genuinely enjoy. I tend to prefer non-fiction, especially anything related to history or psychology. I did read a lot as a child too — I remember always having a book on the go, even if it wasn't always age-appropriate."},
+  "Films": {qs:["Do you often watch films?","What kind of films do you enjoy most?","Do you prefer watching films at home or at the cinema?"], sample:"I watch films fairly regularly, maybe once a week. I particularly enjoy well-written dramas over big-budget action films. I do prefer the cinema when I can — there's something about the atmosphere that you just can't recreate at home."},
+  "Daily Routines": {qs:["What does a typical day look like for you?","What part of your day do you enjoy most?","Has your daily routine changed recently?"], sample:"A typical day for me starts fairly early with some quiet time before work, then a fairly packed schedule until the evening. I probably enjoy the mornings most, since that's when I feel most focused. My routine has changed a bit recently since I started working more flexible hours."},
+};
+const topicGrid = document.getElementById('topicGrid');
+Object.entries(topics).forEach(([t,data])=>{
+  const el = document.createElement('div');
+  el.className = 'topic-card';
+  el.innerHTML = `<h4>${t}</h4><ul>${data.qs.map(q=>`<li>${q}</li>`).join('')}</ul><div class="sample-answer" style="display:none;margin-top:10px;padding-top:10px;border-top:1px dashed var(--line);font-size:12px;font-style:italic;color:#4A5568;line-height:1.6;">"${data.sample}"</div>`;
+  el.addEventListener('click',()=>{
+    el.classList.toggle('open');
+    el.querySelector('.sample-answer').style.display = el.classList.contains('open') ? 'block' : 'none';
+  });
+  topicGrid.appendChild(el);
+});
+
+/* ============ SPEAKING: PART 2 CUE CARDS ============ */
+const cueCards = [
+  {title:"Describe a place you would like to visit.", points:["where it is","why you want to visit it","who you would go with"], prep:"...and explain why this place interests you."},
+  {title:"Describe a person who has influenced you.", points:["who this person is","how you know them","what they are like"], prep:"...and explain how they have influenced you."},
+  {title:"Describe a skill you learned that you found difficult.", points:["what the skill was","how you learned it","how long it took"], prep:"...and explain why you found it difficult."},
+  {title:"Describe a memorable trip you have taken.", points:["where you went","who you went with","what you did"], prep:"...and explain why it was memorable."},
+  {title:"Describe an object that is important to you.", points:["what it is","where you got it","how long you've had it"], prep:"...and explain why it is important."},
+  {title:"Describe a book you have read recently.", points:["what the book was about","why you chose it","what you liked or disliked"], prep:"...and explain whether you would recommend it."},
+  {title:"Describe a time you helped someone.", points:["who you helped","what you did","why they needed help"], prep:"...and explain how you felt about it."},
+  {title:"Describe a change you would like to make in your life.", points:["what the change is","why you want to make it","how you plan to do it"], prep:"...and explain how this change would affect you."},
+  {title:"Describe a piece of technology you find useful.", points:["what it is","how you use it","how often you use it"], prep:"...and explain why it is useful to you."},
+  {title:"Describe a decision that was difficult to make.", points:["what the decision was","when you made it","what the alternatives were"], prep:"...and explain why it was difficult."},
+];
+const cueTitle = document.getElementById('cueTitle');
+const cuePoints = document.getElementById('cuePoints');
+const cuePrep = document.getElementById('cuePrep');
+function renderCue(c){
+  cueTitle.textContent = c.title;
+  cuePoints.innerHTML = '<li>You should say:</li>' + c.points.map(p=>`<li style="margin-left:14px;">${p}</li>`).join('');
+  cuePrep.textContent = c.prep;
+}
+renderCue(cueCards[0]);
+document.getElementById('newCue').addEventListener('click',()=>{
+  renderCue(cueCards[Math.floor(Math.random()*cueCards.length)]);
+});
+let cueSeconds = 60, cueRunning = false;
+const cueTimerEl = document.getElementById('cueTimer');
+document.getElementById('startTimer').addEventListener('click',function(){
+  if(cueRunning) return;
+  cueRunning = true; cueSeconds = 60;
+  const interval = setInterval(()=>{
+    cueSeconds--;
+    const m = Math.floor(cueSeconds/60), s = String(cueSeconds%60).padStart(2,'0');
+    cueTimerEl.textContent = `${m}:${s}`;
+    if(cueSeconds<=0){
+      clearInterval(interval);
+      cueTimerEl.textContent = 'Speak now — 2:00';
+      cueRunning = false;
+    }
+  },1000);
+});
+
+/* ============ SPEAKING: PART 3 ============ */
+const part3 = [
+  {q:"Do you think tourism has more advantages or disadvantages for a country?", a:"I'd say tourism generally brings more advantages than disadvantages, mainly because it creates jobs and brings in foreign currency. For instance, in coastal towns that depend on seasonal visitors, entire local economies are built around tourism-related work. That said, this can also lead to overcrowding or rising living costs, so the balance really depends on how well a government manages the industry."},
+  {q:"How has the way people travel changed in the last few decades?", a:"Travel has become significantly more accessible, largely due to budget airlines and online booking platforms. In the past, international travel was often reserved for the wealthy, but now a much wider range of people can afford to travel regularly. That said, this shift has also contributed to overtourism in certain popular destinations."},
+  {q:"Do you think people rely too much on technology nowadays?", a:"In many ways, yes — I think there's a risk of losing certain basic skills, like reading a physical map, because we default to our phones. On the other hand, this reliance also frees up mental space for more complex tasks, so it's not entirely negative."},
+  {q:"Do you think books will eventually be replaced entirely by digital formats?", a:"I doubt it, actually. While e-books are undeniably more convenient for travel and storage, a lot of people still associate physical books with a particular kind of focus that's harder to replicate on a screen. So I'd expect the two formats to coexist rather than one fully replacing the other, at least for the foreseeable future."},
+  {q:"How important is it for children to learn practical skills at school, not just academic subjects?", a:"I'd argue it's just as important, if not more so in some cases. Academic knowledge matters, but practical skills like budgeting or basic cooking directly affect how well someone manages independent life afterwards. Schools that only focus on exams risk producing graduates who are well-qualified on paper but underprepared for everyday responsibilities."},
+];
+const part3List = document.getElementById('part3List');
+part3.forEach(p=>{
+  const el = document.createElement('div');
+  el.className = 'part3-card';
+  el.innerHTML = `<div class="q">${p.q}</div><div class="a">"${p.a}"</div>`;
+  part3List.appendChild(el);
+});
+
+/* ============ SPEAKING: BAND COMPARISON ============ */
+const spBandSamples = {
+  "5": {excerpt:"Yes, I think is important. Children can learn language easy when they young. My country many people not speak good English so is problem for job.", why:"Frequent grammar errors, limited vocabulary, no real idea development."},
+  "6": {excerpt:"Yes, I believe it's quite important. Children find it easier to learn languages when they're young, so starting early can be really helpful. In my country, for example, many jobs require good English.", why:"Clear and accurate but simply connected ideas; moderate vocabulary range."},
+  "6.5": {excerpt:"I'd say it's genuinely important, mainly because younger children seem to absorb new languages more naturally than adults do. Where I'm from, fluency in English is often tied directly to better job prospects.", why:"More natural phrasing and a clearer cause-effect link, though not yet fully sustained."},
+  "7": {excerpt:"I'd say it's genuinely important, both cognitively and practically. Younger children tend to pick up pronunciation and grammar more intuitively than adults, which gives them a real head start.", why:"Natural fluency, flexible grammar, rich but unforced vocabulary, consistent idea development."},
+  "8": {excerpt:"I'd argue it's important on more than one level. Cognitively, there's fairly strong evidence that early exposure sharpens general problem-solving skills, not just linguistic ones.", why:"Nuanced analysis, natural sophisticated connectors, effortless fluency, entirely error-free complex grammar."},
+};
+const spBandTabsEl = document.getElementById('spBandTabs');
+const spBandSampleEl = document.getElementById('spBandSample');
+function renderSpBand(key){
+  const b = spBandSamples[key];
+  spBandSampleEl.innerHTML = `<div class="band-sample"><div class="excerpt">"${b.excerpt}"</div><div class="why"><b>Why Band ${key}:</b> ${b.why}</div></div>`;
+}
+Object.keys(spBandSamples).forEach((k,i)=>{
+  const btn = document.createElement('button');
+  btn.className = 'tabbtn' + (i===3?' active':'');
+  btn.textContent = 'Band ' + k;
+  btn.addEventListener('click',()=>{
+    spBandTabsEl.querySelectorAll('.tabbtn').forEach(x=>x.classList.remove('active'));
+    btn.classList.add('active');
+    renderSpBand(k);
+  });
+  spBandTabsEl.appendChild(btn);
+});
+renderSpBand("7");
+
+/* ============ VOCABULARY ============ */
+const vocab = {
+  "Band 5": [
+    {w:"increase", ipa:"/ɪnˈkriːs/", type:"verb/noun", m:"to become or make larger", ex:"The population increased rapidly.", coll:"a sharp increase in"},
+    {w:"important", ipa:"/ɪmˈpɔːtənt/", type:"adjective", m:"having great value or significance", ex:"Education is important for children.", coll:"vitally important"},
+    {w:"problem", ipa:"/ˈprɒbləm/", type:"noun", m:"a difficulty", ex:"Traffic is a major problem in cities.", coll:"tackle a problem"},
+    {w:"government", ipa:"/ˈɡʌvənmənt/", type:"noun", m:"the group governing a country", ex:"The government introduced a new law.", coll:"local government"},
+    {w:"environment", ipa:"/ɪnˈvaɪərənmənt/", type:"noun", m:"the natural world", ex:"We must protect the environment.", coll:"harm the environment"},
+  ],
+  "Band 6": [
+    {w:"significant", ipa:"/sɪɡˈnɪfɪkənt/", type:"adjective", m:"notably large or important", ex:"There was a significant increase in sales.", coll:"a significant increase"},
+    {w:"contribute", ipa:"/kənˈtrɪbjuːt/", type:"verb", m:"to help cause or add to", ex:"Diet contributes to overall health.", coll:"contribute to a problem"},
+    {w:"require", ipa:"/rɪˈkwaɪə/", type:"verb", m:"to need", ex:"This task requires close attention.", coll:"require attention"},
+    {w:"beneficial", ipa:"/ˌbenɪˈfɪʃəl/", type:"adjective", m:"producing good results", ex:"Exercise is beneficial for health.", coll:"beneficial effects"},
+    {w:"impact", ipa:"/ˈɪmpækt/", type:"noun/verb", m:"a strong effect", ex:"Technology has a huge impact on society.", coll:"have an impact on"},
+  ],
+  "Band 6.5": [
+    {w:"mitigate", ipa:"/ˈmɪtɪɡeɪt/", type:"verb", m:"to reduce severity", ex:"Governments must act to mitigate climate change.", coll:"mitigate the effects of"},
+    {w:"prevalent", ipa:"/ˈprevələnt/", type:"adjective", m:"widespread", ex:"This problem is increasingly prevalent.", coll:"increasingly prevalent"},
+    {w:"substantial", ipa:"/səbˈstænʃəl/", type:"adjective", m:"considerable in amount", ex:"There was a substantial rise in costs.", coll:"a substantial increase"},
+    {w:"controversial", ipa:"/ˌkɒntrəˈvɜːʃəl/", type:"adjective", m:"causing disagreement", ex:"It remains a controversial issue.", coll:"a controversial issue"},
+    {w:"implement", ipa:"/ˈɪmplɪment/", type:"verb", m:"to put into effect", ex:"The city plans to implement the new policy.", coll:"implement a policy"},
+  ],
+  "Band 7": [
+    {w:"exacerbate", ipa:"/ɪɡˈzæsəbeɪt/", type:"verb", m:"to make worse", ex:"Poor planning can exacerbate the problem.", coll:"exacerbate a problem"},
+    {w:"unprecedented", ipa:"/ʌnˈpresɪdentɪd/", type:"adjective", m:"never done or known before", ex:"The city saw unprecedented growth.", coll:"unprecedented growth"},
+    {w:"discrepancy", ipa:"/dɪˈskrepənsi/", type:"noun", m:"a difference between things", ex:"There's a discrepancy between the two reports.", coll:"a discrepancy between"},
+    {w:"compelling", ipa:"/kəmˈpelɪŋ/", type:"adjective", m:"convincing", ex:"She made a compelling argument.", coll:"a compelling argument"},
+    {w:"underpin", ipa:"/ˌʌndəˈpɪn/", type:"verb", m:"to support or form the basis of", ex:"Evidence underpins the theory.", coll:"underpin a theory"},
+  ],
+  "Band 7.5+": [
+    {w:"corroborate", ipa:"/kəˈrɒbəreɪt/", type:"verb", m:"to confirm with evidence", ex:"The data corroborates the earlier findings.", coll:"corroborate a claim"},
+    {w:"nuanced", ipa:"/ˈnjuːɑːnst/", type:"adjective", m:"subtle, with fine distinctions", ex:"It was a nuanced and balanced argument.", coll:"a nuanced argument"},
+    {w:"pervasive", ipa:"/pəˈveɪsɪv/", type:"adjective", m:"spreading widely", ex:"Social media has a pervasive influence.", coll:"a pervasive influence"},
+    {w:"impetus", ipa:"/ˈɪmpɪtəs/", type:"noun", m:"a driving force", ex:"The crisis provided the impetus for reform.", coll:"provide the impetus for"},
+    {w:"circumvent", ipa:"/ˌsɜːkəmˈvent/", type:"verb", m:"to find a way around", ex:"Companies sometimes circumvent regulations.", coll:"circumvent a restriction"},
+  ],
+};
+const vocabTabs = document.getElementById('vocabTabs');
+const cardGrid = document.getElementById('cardGrid');
+function renderVocab(band){
+  cardGrid.innerHTML = '';
+  vocab[band].forEach(v=>{
+    const card = document.createElement('div');
+    card.className = 'flip-card';
+    card.innerHTML = `<div class="flip-inner">
+      <div class="flip-front"><div class="word">${v.w}</div><div class="ipa">${v.ipa}</div><div class="type">${v.type}</div></div>
+      <div class="flip-back"><div class="meaning">${v.m}</div><div class="ex">"${v.ex}"</div><div class="coll">Collocation: ${v.coll}</div></div>
+    </div>`;
+    card.addEventListener('click',()=>card.classList.toggle('flipped'));
+    cardGrid.appendChild(card);
+  });
+}
+Object.keys(vocab).forEach((b,i)=>{
+  const btn = document.createElement('button');
+  btn.className = 'tabbtn' + (i===1?' active':'');
+  btn.textContent = b;
+  btn.addEventListener('click',()=>{
+    vocabTabs.querySelectorAll('.tabbtn').forEach(x=>x.classList.remove('active'));
+    btn.classList.add('active');
+    renderVocab(b);
+  });
+  vocabTabs.appendChild(btn);
+});
+renderVocab("Band 6");
+
+/* ============ COLLOCATIONS ============ */
+const collocations = [
+  "make <b>a decision</b> (not do a decision)","have an <b>impact / effect</b> on","raise <b>awareness</b> of",
+  "play a significant <b>role</b> in","take <b>drastic / immediate</b> action","pose a <b>threat / challenge</b>",
+  "draw a <b>conclusion</b>","reach a <b>consensus</b>"
+];
+const collGrid = document.getElementById('collGrid');
+collocations.forEach(c=>{
+  const el = document.createElement('div');
+  el.className = 'coll-chip';
+  el.innerHTML = c;
+  collGrid.appendChild(el);
+});
+
+/* ============ GRAMMAR ============ */
+const grammar = {
+  "Band 5": [
+    ["Basic sentence structure","Subject + Verb + Object.", "The government built a new school."],
+    ["Tenses","Present simple, past simple, present continuous used correctly.", "She works in a hospital. / She worked there for five years."],
+    ["Articles","a/an for first mention, the for something already known.", "I saw a school. The school was new."],
+    ["Prepositions","in/on/at for time and place.", "The meeting is at 9am on Monday in the office."],
+    ["Subject-verb agreement","Match singular/plural subjects to the correct verb form.", "The number of students has increased."],
+  ],
+  "Band 6": [
+    ["Complex sentences","Join two ideas with although, because, while.", "Although the policy was controversial, it proved effective."],
+    ["Relative clauses","Add extra detail with which, who, that.", "The report, which was published last year, revealed a rise in costs."],
+    ["Conditionals","First and second conditional for real and hypothetical situations.", "If governments invest more, pollution will decrease."],
+    ["Passive voice","Shift emphasis away from the doer in academic writing.", "The study was conducted by researchers at the university."],
+    ["Modals","should/might/could for suggestion and possibility.", "The government should invest in public transport."],
+  ],
+  "Band 7+": [
+    ["Complex grammatical structures","Sentences with more than one dependent clause.", "While the policy was controversial, which many predicted, it ultimately proved effective."],
+    ["Reduced clauses","Participle clauses instead of a full clause.", "Having considered the evidence, the committee concluded..."],
+    ["Advanced conditionals","Third and mixed conditionals.", "Had the policy been implemented earlier, the crisis might have been avoided."],
+    ["Nominalisation","Turn a verb into a noun for a more academic tone.", "Their analysis of the data revealed a clear trend."],
+    ["Complex noun phrases","Stack multiple descriptive elements before the noun.", "The rapid and largely unforeseen decline in manufacturing output..."],
+  ],
+};
+const gramTabs = document.getElementById('gramTabs');
+const gramAcc = document.getElementById('gramAcc');
+function renderGrammar(band){
+  gramAcc.innerHTML = '';
+  grammar[band].forEach(([t,d,eg])=>{
+    const el = document.createElement('div');
+    el.className = 'acc-item';
+    el.innerHTML = `<div class="acc-head"><span>${t}</span><span class="chev">▾</span></div>
+      <div class="acc-body"><div class="acc-body-inner">${d}<div class="eg">"${eg}"</div></div></div>`;
+    el.querySelector('.acc-head').addEventListener('click',()=>el.classList.toggle('open'));
+    gramAcc.appendChild(el);
+  });
+}
+Object.keys(grammar).forEach((b,i)=>{
+  const btn = document.createElement('button');
+  btn.className = 'tabbtn' + (i===1?' active':'');
+  btn.textContent = b;
+  btn.addEventListener('click',()=>{
+    gramTabs.querySelectorAll('.tabbtn').forEach(x=>x.classList.remove('active'));
+    btn.classList.add('active');
+    renderGrammar(b);
+  });
+  gramTabs.appendChild(btn);
+});
+renderGrammar("Band 6");
+
+/* ============ VOCAB/GRAMMAR MINI TEST ============ */
+const testQs = [
+  {p:"1. The number of applicants ___ increased significantly this year.", opts:["has","have"], correct:"has"},
+  {p:"2. A number of solutions ___ been proposed by the committee.", opts:["has","have"], correct:"have"},
+  {p:"3. Neither the students nor the teacher ___ aware of the change.", opts:["was","were"], correct:"was"},
+  {p:"4. The data ___ a clear upward trend.", opts:["suggests","suggest"], correct:"suggests"},
+];
+const testArea = document.getElementById('testArea');
+testQs.forEach(q=>{
+  const qd = document.createElement('div');
+  qd.className = 'q';
+  qd.innerHTML = `<p>${q.p}</p><div class="opts row" data-correct="${q.correct}">${q.opts.map(o=>`<div class="opt">${o}</div>`).join('')}</div>`;
+  testArea.appendChild(qd);
+});
+testArea.querySelectorAll('.opts .opt').forEach(opt=>{
+  opt.addEventListener('click',()=>{
+    const group = opt.parentElement;
+    group.querySelectorAll('.opt').forEach(o=>o.classList.remove('selected'));
+    opt.classList.add('selected');
+  });
+});
+document.getElementById('vgSubmitBtn').addEventListener('click',()=>{
+  let score = 0;
+  testArea.querySelectorAll('.opts').forEach(group=>{
+    const correct = group.dataset.correct;
+    const selected = group.querySelector('.opt.selected');
+    group.querySelectorAll('.opt').forEach(o=>{
+      if(o.textContent === correct) o.classList.add('correct');
+      else if(o === selected) o.classList.add('incorrect');
+    });
+    if(selected && selected.textContent === correct) score++;
+  });
+  const out = document.getElementById('vgScoreOut');
+  out.style.display = 'inline';
+  out.textContent = `Score: ${score}/${testQs.length}`;
+});
+
+/* ============ TOOLS: BAND CALCULATOR ============ */
+// Raw-score-to-band table based on published IELTS Academic Reading conversion figures.
+const readingBandTable = [
+  [39,40,9],[37,38,8.5],[35,36,8],[33,34,7.5],[30,32,7],[27,29,6.5],
+  [23,26,6],[19,22,5.5],[15,18,5],[13,14,4.5],[10,12,4],[8,9,3.5],[6,7,3],[4,5,2.5],[0,3,2]
+];
+function rawToBand(raw){
+  for(const [min,max,band] of readingBandTable){ if(raw>=min && raw<=max) return band; }
+  return 9;
+}
+function roundToHalf(n){ return Math.round(n*2)/2; }
+document.getElementById('calcBtn').addEventListener('click',()=>{
+  const lRaw = parseFloat(document.getElementById('tlListening').value);
+  const rRaw = parseFloat(document.getElementById('tlReading').value);
+  const w = parseFloat(document.getElementById('tlWriting').value);
+  const s = parseFloat(document.getElementById('tlSpeaking').value);
+  if(isNaN(lRaw) || isNaN(rRaw)){
+    document.getElementById('breakdown').textContent = 'Please enter both Listening and Reading raw scores.';
+    return;
+  }
+  const lBand = rawToBand(Math.min(Math.max(lRaw,0),40));
+  const rBand = rawToBand(Math.min(Math.max(rRaw,0),40));
+  const overall = roundToHalf((lBand + rBand + w + s) / 4);
+  document.getElementById('resultBig').textContent = overall.toFixed(1);
+  document.getElementById('breakdown').innerHTML = `Listening ~${lBand} · Reading ~${rBand} · Writing ${w} · Speaking ${s}`;
+});
+
+/* ============ TOOLS: STUDY PLANS ============ */
+const plans = {
+  "4-Week": [
+    ["Week 1","All skills","Diagnostic: take a Reading & Writing mini test to confirm your current band","Learn 2 Reading strategies + Writing Steps 1–7"],
+    ["Week 2","Reading + Speaking","Cover 4 question types + Speaking Part 1 practice","Daily vocabulary flashcards"],
+    ["Week 3","Writing + Grammar","Full Task 2 essays using the 14-step process + grammar for your target band","Band comparison review — identify your gap"],
+    ["Week 4","Full review + Mock","Timed practice across all sections + review weak areas","Final mini tests in Reading, Writing, Speaking"],
+  ],
+  "8-Week": [
+    ["Weeks 1–2","Foundations","All 12 Reading strategies + Writing Steps 1–7 + Speaking Part 1","Vocabulary: Band 5–6 sets"],
+    ["Weeks 3–4","Question types","All 13 Reading question types + Writing Steps 8–14 + Speaking Part 2","Grammar: Band 6 structures"],
+    ["Weeks 5–6","Band push","Band 6→7 focused lessons across all skills + Speaking Part 3","Vocabulary: Band 6.5–7 sets"],
+    ["Weeks 7–8","Practice & polish","Full practice passages, essays, and mock speaking sessions","Timed mock sections + review"],
+  ],
+  "12-Week": [
+    ["Weeks 1–3","Foundations","Reading strategies, Writing Steps 1–7, Speaking Part 1 topics","Vocabulary Band 5 + Grammar Band 5"],
+    ["Weeks 4–6","Core skills","Reading question types, Writing Steps 8–14, Speaking Part 2 cue cards","Vocabulary Band 6 + Grammar Band 6"],
+    ["Weeks 7–9","Band 6→7 push","Targeted lessons on consistency, inference, and idea development","Vocabulary Band 6.5–7 + collocations"],
+    ["Weeks 10–12","Exam readiness","Full-length timed practice across all four skills, weekly mock sections","Final review + weak-area drilling"],
+  ],
+};
+const planTabs = document.getElementById('planTabs');
+const planTable = document.getElementById('planTable');
+function renderPlan(key){
+  const rows = plans[key];
+  planTable.innerHTML = `<tr><th>Period</th><th>Focus</th><th>Main Activities</th><th>Also This Week</th></tr>` +
+    rows.map(r=>`<tr><td class="wk">${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td><td>${r[3]}</td></tr>`).join('');
+}
+Object.keys(plans).forEach((k,i)=>{
+  const btn = document.createElement('button');
+  btn.className = 'plan-tab' + (i===1?' active':'');
+  btn.textContent = k + ' Plan';
+  btn.addEventListener('click',()=>{
+    planTabs.querySelectorAll('.plan-tab').forEach(x=>x.classList.remove('active'));
+    btn.classList.add('active');
+    renderPlan(k);
+  });
+  planTabs.appendChild(btn);
+});
+renderPlan("8-Week");
+
+/* ============ FREE MOCK TEST ============ */
+const mockQuestions = [
+  {p:"1. Vertical farming can reduce water use compared with traditional farming.", opts:["TRUE","FALSE","NOT GIVEN"], correct:"TRUE"},
+  {p:"2. Renewable energy is legally required for all vertical farms.", opts:["TRUE","FALSE","NOT GIVEN"], correct:"NOT GIVEN"},
+  {p:"3. One criticism is that vertical farming may increase carbon emissions if power isn't renewable.", opts:["TRUE","FALSE","NOT GIVEN"], correct:"TRUE"},
+  {p:"4. In darkness, bees use gravity instead of the sun as their reference point.", opts:["TRUE","FALSE","NOT GIVEN"], correct:"TRUE"},
+  {p:"5. Von Frisch's discovery has since been proven completely incorrect.", opts:["TRUE","FALSE","NOT GIVEN"], correct:"FALSE"},
+  {p:"6. Karl von Frisch was the first person ever to notice bee movement inside the hive.", opts:["TRUE","FALSE","NOT GIVEN"], correct:"NOT GIVEN"},
+];
+function startMock(){
+  document.getElementById('mockIntro').style.display = 'none';
+  document.getElementById('mockWrap').style.display = 'block';
+  const body = document.getElementById('mockReadingBody');
+  body.innerHTML = '<p style="font-size:12.5px;color:#8A93A8;margin-bottom:14px;">Based on the "Vertical Farming" and "Silent Language of Bees" passages from the Reading section.</p>';
+  mockQuestions.forEach((q,i)=>{
+    const qd = document.createElement('div');
+    qd.className = 'q';
+    qd.innerHTML = `<p>${q.p}</p><div class="opts row" data-correct="${q.correct}">${q.opts.map(o=>`<div class="opt">${o}</div>`).join('')}</div>`;
+    body.appendChild(qd);
+  });
+  body.querySelectorAll('.opts .opt').forEach(opt=>{
+    opt.addEventListener('click',()=>{
+      const group = opt.parentElement;
+      group.querySelectorAll('.opt').forEach(o=>o.classList.remove('selected'));
+      opt.classList.add('selected');
+    });
+  });
+  mockGoTo(1);
+}
+function mockGoTo(stage){
+  [1,2,3,4].forEach(s=>{
+    document.getElementById('mockStage'+s).style.display = s===stage ? 'block' : 'none';
+    document.getElementById('mockStepLabel'+s).classList.toggle('active', s===stage);
+  });
+  if(stage===4){
+    let score = 0;
+    document.querySelectorAll('#mockReadingBody .opts').forEach(group=>{
+      const correct = group.dataset.correct;
+      const selected = group.querySelector('.opt.selected');
+      group.querySelectorAll('.opt').forEach(o=>{
+        if(o.textContent === correct) o.classList.add('correct');
+        else if(o === selected) o.classList.add('incorrect');
+      });
+      if(selected && selected.textContent === correct) score++;
+    });
+    document.getElementById('mockScoreBig').textContent = score + '/6';
+    const wordCount = document.getElementById('mockWritingArea').value.trim().split(/\s+/).filter(Boolean).length;
+    document.getElementById('mockScoreText').textContent =
+      `Reading: ${score}/6 correct. Writing: ${wordCount} words drafted. Speaking: practice recorded. ` +
+      (score>=5 ? "Strong Reading result — you're ready for full-length practice passages." : score>=3 ? "Solid start — revisit the Reading strategies to sharpen accuracy." : "Reading needs more practice — start with the 12 core strategies.");
+  }
+  window.scrollTo({top: document.getElementById('mockWrap').offsetTop - 80, behavior:'smooth'});
+}
+function mockStartTimer(){
+  let s = 60;
+  const el = document.getElementById('mockCueTimer');
+  const interval = setInterval(()=>{
+    s--;
+    el.textContent = `0:${String(s).padStart(2,'0')}`;
+    if(s<=0){ clearInterval(interval); el.textContent = 'Speak now — 2:00'; }
+  },1000);
+}
+function resetMock(){
+  document.getElementById('mockIntro').style.display = 'flex';
+  document.getElementById('mockWrap').style.display = 'none';
+  document.getElementById('mockWritingArea').value = '';
+  document.getElementById('mockSpeakingArea').value = '';
+  document.getElementById('mockWc').textContent = '0 words';
+}
+</script>
+</body>
+</html>
