@@ -77,33 +77,60 @@ nav{
 /* Side quick-link circles — sit in the empty space left/right of the hero text on wide screens */
 .hero-side{
   position:absolute;top:50%;transform:translateY(-50%);
-  display:flex;flex-direction:column;gap:26px;z-index:2;
+  display:flex;flex-direction:column;gap:30px;z-index:2;
 }
-.hero-side.left{left:5%}
-.hero-side.right{right:5%}
+.hero-side.left{left:4%}
+.hero-side.right{right:4%}
 .hero-side a{
-  width:108px;height:108px;border-radius:50%;
-  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);
-  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;
-  text-decoration:none;color:rgba(255,255,255,.85);
-  font-size:.74rem;font-weight:600;text-align:center;line-height:1.25;
-  transition:all .25s;
+  width:138px;height:138px;border-radius:50%;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;
+  text-decoration:none;
+  font-size:.82rem;font-weight:700;text-align:center;line-height:1.25;
+  transition:all .28s cubic-bezier(.2,.8,.3,1.3);
 }
-.hero-side a .qi{font-size:1.9rem;line-height:1}
-.hero-side a:hover{
-  background:rgba(232,184,75,.16);border-color:rgba(232,184,75,.55);
-  transform:translateY(-4px);color:#fff;
+.hero-side a .qi{font-size:2.5rem;line-height:1;filter:drop-shadow(0 2px 6px rgba(0,0,0,.35))}
+.hero-side a:hover{ transform:translateY(-6px) scale(1.06); }
+
+.hero-side a.qc-learn{
+  background:radial-gradient(circle at 30% 25%, rgba(94,234,212,.28) 0%, rgba(20,184,166,.14) 55%, rgba(20,184,166,.06) 100%);
+  border:1.5px solid rgba(94,234,212,.5);color:#99f6e4;
+  box-shadow:0 0 0 1px rgba(94,234,212,.08), 0 10px 28px -10px rgba(45,212,191,.55);
+}
+.hero-side a.qc-learn:hover{
+  background:radial-gradient(circle at 30% 25%, rgba(94,234,212,.4) 0%, rgba(20,184,166,.2) 55%, rgba(20,184,166,.08) 100%);
+  border-color:#5eead4;color:#fff;
+  box-shadow:0 0 0 1px rgba(94,234,212,.15), 0 16px 36px -8px rgba(45,212,191,.7);
+}
+.hero-side a.qc-skills{
+  background:radial-gradient(circle at 30% 25%, rgba(167,139,250,.28) 0%, rgba(124,58,237,.14) 55%, rgba(124,58,237,.06) 100%);
+  border:1.5px solid rgba(167,139,250,.5);color:#ddd6fe;
+  box-shadow:0 0 0 1px rgba(167,139,250,.08), 0 10px 28px -10px rgba(124,58,237,.55);
+}
+.hero-side a.qc-skills:hover{
+  background:radial-gradient(circle at 30% 25%, rgba(167,139,250,.4) 0%, rgba(124,58,237,.2) 55%, rgba(124,58,237,.08) 100%);
+  border-color:#c4b5fd;color:#fff;
+  box-shadow:0 0 0 1px rgba(167,139,250,.15), 0 16px 36px -8px rgba(124,58,237,.7);
+}
+.hero-side a.qc-ielts{
+  background:radial-gradient(circle at 30% 25%, rgba(251,113,133,.28) 0%, rgba(225,29,72,.14) 55%, rgba(225,29,72,.06) 100%);
+  border:1.5px solid rgba(251,113,133,.5);color:#fecdd3;
+  box-shadow:0 0 0 1px rgba(251,113,133,.08), 0 10px 28px -10px rgba(225,29,72,.55);
+}
+.hero-side a.qc-ielts:hover{
+  background:radial-gradient(circle at 30% 25%, rgba(251,113,133,.4) 0%, rgba(225,29,72,.2) 55%, rgba(225,29,72,.08) 100%);
+  border-color:#fda4af;color:#fff;
+  box-shadow:0 0 0 1px rgba(251,113,133,.15), 0 16px 36px -8px rgba(225,29,72,.7);
 }
 .hero-side a.qcta{
-  background:linear-gradient(140deg,var(--gold) 0%,#a97612 100%);
-  border-color:var(--gold);color:var(--navy);
-  box-shadow:0 8px 24px -6px rgba(232,184,75,.5);
+  background:linear-gradient(145deg,var(--gold2) 0%,var(--gold) 55%,#a97612 100%);
+  border:1.5px solid var(--gold2);color:var(--navy);
+  box-shadow:0 0 0 1px rgba(232,184,75,.15), 0 10px 30px -6px rgba(232,184,75,.65);
 }
 .hero-side a.qcta:hover{
-  background:linear-gradient(140deg,var(--gold2) 0%,var(--gold) 100%);
-  border-color:var(--gold2);color:var(--navy);
-  transform:translateY(-4px) scale(1.04);
-  box-shadow:0 12px 30px -6px rgba(232,184,75,.65);
+  background:linear-gradient(145deg,#f4cd6e 0%,var(--gold2) 55%,var(--gold) 100%);
+  border-color:#f4cd6e;color:var(--navy);
+  transform:translateY(-6px) scale(1.08);
+  box-shadow:0 0 0 1px rgba(232,184,75,.2), 0 18px 40px -6px rgba(232,184,75,.8);
 }
 @media(max-width:1180px){ .hero-side{ display:none; } }
 
@@ -266,7 +293,7 @@ footer strong{color:var(--gold2)}
       <li><a href='/skills'>📚 Skills</a></li>
       <li><a href='/ielts'>🔴 IELTS Academy</a></li>
       <li><a href="/canli-ders">🔴 Canlı Ders</a></li>
-      <li><a class="nav-cta-btn" href="#iletisim">Online Ders</a></li>
+      <li><a class="nav-cta-btn" href="/ozel-ders">Online Ders</a></li>
     </ul>
     <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
   </div>
@@ -275,12 +302,12 @@ footer strong{color:var(--gold2)}
 <!-- HERO -->
 <section class="hero">
   <div class="hero-side left">
-    <a href="/"><span class="qi">📖</span>Kendin Öğren</a>
-    <a href="/skills"><span class="qi">📚</span>Skills</a>
+    <a href="/" class="qc-learn"><span class="qi">📖</span>Kendin Öğren</a>
+    <a href="/skills" class="qc-skills"><span class="qi">📚</span>Skills</a>
   </div>
   <div class="hero-side right">
-    <a href="/ielts"><span class="qi">🔴</span>IELTS Academy</a>
-    <a href="#iletisim" class="qcta"><span class="qi">💬</span>Ders Al</a>
+    <a href="/ielts" class="qc-ielts"><span class="qi">🔴</span>IELTS Academy</a>
+    <a href="/ozel-ders" class="qcta"><span class="qi">💬</span>Ders Al</a>
   </div>
   <div class="hero-inner">
     <div class="hero-tag">Online İngilizce · A1'den C1'e</div>
@@ -289,7 +316,7 @@ footer strong{color:var(--gold2)}
       <a href="/"><span class="qi">📖</span>Kendin Öğren</a>
       <a href="/skills"><span class="qi">📚</span>Skills</a>
       <a href="/ielts"><span class="qi">🔴</span>IELTS Academy</a>
-      <a href="#iletisim" class="qcta"><span class="qi">💬</span>Ders Al</a>
+      <a href="/ozel-ders" class="qcta"><span class="qi">💬</span>Ders Al</a>
     </div>
     <p class="hero-sub">
       Seviyene uygun içerikler, birebir dersler ve pratik materyallerle kendi hızında ilerle.
@@ -334,7 +361,7 @@ footer strong{color:var(--gold2)}
         <span class="card-arrow">Çalışmaya başla →</span>
       </a>
 
-      <a href="#iletisim" class="card">
+      <a href="/ozel-ders" class="card">
         <div class="card-icon">💬</div>
         <h3>Özel Ders</h3>
         <p>Birebir online ders almak istiyorsan bizimle iletişime geç. İlk ders ücretsiz.</p>
