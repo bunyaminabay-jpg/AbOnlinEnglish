@@ -68,11 +68,73 @@ nav{
 /* =================================================================== */
 
 /* HERO */
-.hero{background:var(--navy);min-height:88vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:80px 24px}
+.hero{background:var(--navy);min-height:88vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:80px 24px;position:relative;overflow:hidden}
 .hero-inner{max-width:680px}
 .hero-tag{font-size:.75rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold2);margin-bottom:20px}
 .hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,5.5vw,3.8rem);font-weight:600;color:var(--white);line-height:1.15;margin-bottom:22px;letter-spacing:-.3px}
 .hero h1 em{color:var(--gold2);font-style:italic}
+
+/* Side quick-link circles — sit in the empty space left/right of the hero text on wide screens */
+.hero-side{
+  position:absolute;top:50%;transform:translateY(-50%);
+  display:flex;flex-direction:column;gap:26px;z-index:2;
+}
+.hero-side.left{left:5%}
+.hero-side.right{right:5%}
+.hero-side a{
+  width:108px;height:108px;border-radius:50%;
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;
+  text-decoration:none;color:rgba(255,255,255,.85);
+  font-size:.74rem;font-weight:600;text-align:center;line-height:1.25;
+  transition:all .25s;
+}
+.hero-side a .qi{font-size:1.9rem;line-height:1}
+.hero-side a:hover{
+  background:rgba(232,184,75,.16);border-color:rgba(232,184,75,.55);
+  transform:translateY(-4px);color:#fff;
+}
+.hero-side a.qcta{
+  background:linear-gradient(140deg,var(--gold) 0%,#a97612 100%);
+  border-color:var(--gold);color:var(--navy);
+  box-shadow:0 8px 24px -6px rgba(232,184,75,.5);
+}
+.hero-side a.qcta:hover{
+  background:linear-gradient(140deg,var(--gold2) 0%,var(--gold) 100%);
+  border-color:var(--gold2);color:var(--navy);
+  transform:translateY(-4px) scale(1.04);
+  box-shadow:0 12px 30px -6px rgba(232,184,75,.65);
+}
+@media(max-width:1180px){ .hero-side{ display:none; } }
+
+/* Mobile/tablet fallback — bigger square cards below the title instead of side circles */
+.hero-quicklinks{ display:none; }
+@media(max-width:1180px){
+  .hero-quicklinks{
+    display:grid;grid-template-columns:1fr 1fr;gap:14px;
+    max-width:420px;margin:26px auto 0 auto;
+  }
+  .hero-quicklinks a{
+    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;
+    background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);
+    border-radius:18px;padding:22px 12px;text-decoration:none;
+    color:rgba(255,255,255,.85);font-size:.85rem;font-weight:600;
+    transition:all .2s;
+  }
+  .hero-quicklinks a .qi{font-size:1.7rem}
+  .hero-quicklinks a:hover{background:rgba(232,184,75,.16);border-color:rgba(232,184,75,.55);color:#fff}
+  .hero-quicklinks a.qcta{
+    grid-column:1 / -1;
+    background:linear-gradient(140deg,var(--gold) 0%,#a97612 100%);
+    border-color:var(--gold);color:var(--navy);
+    box-shadow:0 8px 22px -6px rgba(232,184,75,.5);
+    flex-direction:row;padding:16px 12px;
+  }
+  .hero-quicklinks a.qcta:hover{
+    background:linear-gradient(140deg,var(--gold2) 0%,var(--gold) 100%);
+    color:var(--navy);transform:translateY(-2px);
+  }
+}
 .hero-sub{font-size:1.05rem;color:rgba(255,255,255,.55);line-height:1.8;max-width:500px;margin:0 auto 40px;font-weight:300}
 .hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 .btn-gold{background:var(--gold);color:var(--navy);font-weight:600;padding:14px 28px;border-radius:8px;text-decoration:none;font-size:.9rem;transition:all .2s;display:inline-flex;align-items:center;gap:8px}
@@ -212,9 +274,23 @@ footer strong{color:var(--gold2)}
 
 <!-- HERO -->
 <section class="hero">
+  <div class="hero-side left">
+    <a href="/"><span class="qi">📖</span>Kendin Öğren</a>
+    <a href="/skills"><span class="qi">📚</span>Skills</a>
+  </div>
+  <div class="hero-side right">
+    <a href="/ielts"><span class="qi">🔴</span>IELTS Academy</a>
+    <a href="#iletisim" class="qcta"><span class="qi">💬</span>Ders Al</a>
+  </div>
   <div class="hero-inner">
     <div class="hero-tag">Online İngilizce · A1'den C1'e</div>
     <h1>İngilizce öğrenmek<br>için <em>doğru adres</em></h1>
+    <div class="hero-quicklinks">
+      <a href="/"><span class="qi">📖</span>Kendin Öğren</a>
+      <a href="/skills"><span class="qi">📚</span>Skills</a>
+      <a href="/ielts"><span class="qi">🔴</span>IELTS Academy</a>
+      <a href="#iletisim" class="qcta"><span class="qi">💬</span>Ders Al</a>
+    </div>
     <p class="hero-sub">
       Seviyene uygun içerikler, birebir dersler ve pratik materyallerle kendi hızında ilerle.
     </p>
