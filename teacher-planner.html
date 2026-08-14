@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Smart Teacher Planner — AbOnlinEnglish</title>
+<title>ELT Rehberi — AbOnlinEnglish</title>
 <style>
 :root{
   --navy:#0F2A4A;
@@ -53,7 +54,7 @@ a{color:var(--blue);}
   padding:12px 18px;
 }
 .topbar .brand{
-  font-family:var(--font-display);font-size:1.15rem;font-weight:600;
+  font-family:var(--font-display);font-size:1.5rem;font-weight:700;letter-spacing:-.01em;
   display:flex;align-items:center;gap:8px;
   cursor:pointer;
 }
@@ -111,6 +112,42 @@ a{color:var(--blue);}
   .nav-strip button:hover{transform:none;}
   .nav-strip a.nav-external{margin-left:0;text-align:left;}
 }
+
+/* ---------- Desktop: vertical sidebar navigation ---------- */
+@media(min-width:881px){
+  #app{display:grid;grid-template-columns:250px 1fr;grid-template-areas:"topbar topbar" "nav main";align-items:start;}
+  .topbar{grid-area:topbar;}
+  .nav-strip{
+    grid-area:nav;display:flex;flex-direction:column;align-items:stretch;
+    flex-wrap:nowrap;gap:8px;padding:24px 14px;
+    background:linear-gradient(180deg, var(--navy-2) 0%, #1E4A7A 100%);
+    border-radius:0 20px 20px 0;box-shadow:var(--shadow-hover);
+  }
+  .nav-strip button,.nav-strip a.nav-external{
+    width:100%;text-align:left;padding:14px 18px;font-size:.93rem;border-radius:12px;margin-left:0;
+  }
+  .nav-strip button::after{
+    left:0;right:auto;top:8px;bottom:8px;height:auto;width:3px;
+    transform:scaleY(0);transform-origin:top;
+  }
+  .nav-strip button:hover{transform:translateX(6px) scale(1.02);background:rgba(255,255,255,.12);box-shadow:0 0 0 1px rgba(47,191,159,.28), 0 10px 24px -8px rgba(47,191,159,.5);}
+  .nav-strip button:hover::after,.nav-strip button.active::after{transform:scaleY(1);}
+  .nav-strip button.active{box-shadow:inset 0 0 0 1px rgba(47,191,159,.4), 0 8px 20px -8px rgba(47,191,159,.35);}
+  .nav-strip a.nav-external:hover{transform:translateX(6px) scale(1.02);}
+}
+
+/* ---------- Dashboard main option panel (Seviye Belirle / Kaynak Bul / Planla) ---------- */
+.elt-panel-card{
+  padding:34px 22px;text-align:center;border-width:1px;
+  transition:transform .25s cubic-bezier(.2,.8,.3,1.3), box-shadow .25s ease, border-color .25s ease;
+}
+.elt-panel-card .icon{font-size:2.5rem;margin-bottom:12px;animation:eltFloat 3.2s ease-in-out infinite;}
+.elt-panel-card h3{font-size:1.12rem;}
+.elt-panel-card:hover{
+  transform:translateY(-6px) scale(1.03);border-color:var(--mint);
+  box-shadow:0 0 0 1px rgba(47,191,159,.3), 0 16px 34px -10px rgba(47,191,159,.55);
+}
+@keyframes eltFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-5px);}}
 
 main{flex:1;max-width:1180px;width:100%;margin:0 auto;padding:26px 18px 80px;}
 main.full-bleed{max-width:100%;padding:14px 14px 20px;}
@@ -416,12 +453,13 @@ th{color:var(--ink-soft);font-size:.72rem;text-transform:uppercase;letter-spacin
 <div id="app">
 
   <div class="topbar">
-    <div class="brand" onclick="nav('dashboard')"><span class="dot"></span>Smart Teacher Planner <span class="tagline">by AbOnlinEnglish</span></div>
+    <div class="brand" onclick="nav('dashboard')"><span class="dot"></span>ELT Rehberi <span class="tagline">by AbOnlinEnglish</span></div>
     <button class="topbar-icon-btn" title="Data & Backup" onclick="nav('dataSettings')">💾</button>
     <button class="menu-toggle" onclick="document.getElementById('navstrip').classList.toggle('open')">☰ Menu</button>
   </div>
   <div class="nav-strip" id="navstrip">
     <a class="nav-external" href="https://abonlinenglish.school/landing" target="_blank" rel="noopener">🌐 Ana Sayfa ↗</a>
+    <a class="nav-external" href="https://abonlinenglish.school/ozeldersrehberi" target="_blank" rel="noopener">📘 Rehberin ↗</a>
     <button data-view="dashboard" onclick="nav('dashboard')">🏠 Dashboard</button>
     <button data-view="teachersZone" onclick="nav('teachersZone')">👨‍🏫 Teachers</button>
     <a class="nav-external" href="https://abonlinenglish.school/" target="_blank" rel="noopener">🎓 DERS AL ↗</a>
@@ -1831,9 +1869,15 @@ function renderDashboard(){
   return `
   <div class="section-head">
     <span class="eyebrow">Dashboard</span>
-    <h1 class="hero-title">Welcome back.</h1>
     <p class="hero-sub">Here's where your students, plans and resources stand today.</p>
   </div>
+
+  <div class="grid grid-3" style="margin-bottom:26px;">
+    <div class="card clickable elt-panel-card" onclick="nav('placementHome')"><span class="icon">🎯</span><h3>Seviye Belirle</h3><p>Öğrencinin seviyesini hızlıca ölç.</p></div>
+    <div class="card clickable elt-panel-card" onclick="nav('resourceHome')"><span class="icon">📚</span><h3>Kaynak Bul</h3><p>Seviyeye uygun kaynakları keşfet.</p></div>
+    <div class="card clickable elt-panel-card" onclick="nav('plannerHome')"><span class="icon">🧠</span><h3>Planla</h3><p>Ders ve müfredat planı oluştur.</p></div>
+  </div>
+
   <div class="grid grid-4" style="margin-bottom:22px;">
     <div class="card"><span class="icon">👩‍🎓</span><h3>${students.length}</h3><p>Students being tracked</p></div>
     <div class="card"><span class="icon">📅</span><h3>${Object.keys(STATE.plans).length}</h3><p>Active teaching plans</p></div>
