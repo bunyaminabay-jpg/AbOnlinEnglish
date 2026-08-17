@@ -1,12 +1,60 @@
 
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kendin Öğren — AbOnlinEnglish</title>
-  <meta name="description" content="CEFR A1–C1 İngilizce öğrenme platformu. Kendin öğren, kendi hızında ilerle.">
+  <title>Kendin Öğren: A1-C1 Ücretsiz İngilizce Kursu | AbOnlinEnglish</title>
+  <meta name="description" content="CEFR A1-C1 seviyelerinde ücretsiz online İngilizce öğren. Grammar, reading, writing ve speaking alıştırmalarıyla kendi hızında, kendi sisteminde ilerle.">
   <meta name="google-site-verification" content="EE7xVEuBrpYs3EnM1alMLaT7TdJX4izyZn865jUW8gE">
+  <link rel="canonical" href="https://abonlinenglish.school/">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AbOnlinEnglish">
+  <meta property="og:title" content="Kendin Öğren: A1-C1 Ücretsiz İngilizce Kursu | AbOnlinEnglish">
+  <meta property="og:description" content="CEFR A1-C1 seviyelerinde ücretsiz online İngilizce öğren. Grammar, reading, writing ve speaking alıştırmalarıyla kendi hızında ilerle.">
+  <meta property="og:url" content="https://abonlinenglish.school/">
+  <meta property="og:locale" content="tr_TR">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Kendin Öğren: A1-C1 Ücretsiz İngilizce Kursu | AbOnlinEnglish">
+  <meta name="twitter:description" content="CEFR A1-C1 seviyelerinde ücretsiz online İngilizce öğren, kendi hızında ilerle.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "AbOnlinEnglish",
+        "alternateName": "AbOnlinEnglish Dil Eğitimi",
+        "url": "https://abonlinenglish.school/",
+        "email": "ingilizceogrensene@gmail.com",
+        "sameAs": [
+          "https://www.instagram.com/abonlinenglish"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "name": "AbOnlinEnglish",
+        "url": "https://abonlinenglish.school/"
+      },
+      {
+        "@type": "Course",
+        "name": "A1-C1 İngilizce Kendin Öğren Kursu",
+        "description": "CEFR A1'den C1'e 5 seviye, 50 ünite, 10 graded reader ve 1500'den fazla alıştırma içeren ücretsiz online İngilizce öğrenme kursu.",
+        "provider": {
+          "@type": "Organization",
+          "name": "AbOnlinEnglish",
+          "url": "https://abonlinenglish.school/"
+        },
+        "url": "https://abonlinenglish.school/"
+      }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
@@ -70,7 +118,7 @@ nav {
 .logo-text span { color: var(--accent); }
 .logo-sub  { font-size: .65rem; font-weight: 500; color: rgba(255,255,255,0.45); letter-spacing: 2px; text-transform: uppercase; margin-top: 2px; }
 .nav-links { display: flex; gap: 2px; list-style: none; }
-.nav-links a { color: rgba(255,255,255,0.80); text-decoration: none; font-size: .85rem; font-weight: 500; padding: 8px 13px; border-radius: 8px; transition: all .25s; position: relative; }
+.nav-links a { color: rgba(255,255,255,0.80); text-decoration: none; font-size: .85rem; font-weight: 500; padding: 8px 13px; border-radius: 8px; transition: all .25s; position: relative; white-space: nowrap; }
 .nav-links a::after { content: ''; position: absolute; bottom: 4px; left: 50%; right: 50%; height: 2px; background: #e8251a; border-radius: 2px; transition: all .25s; box-shadow: 0 0 6px #e8251a, 0 0 10px #e8251a; }
 .nav-links a:hover::after, .nav-links a.active::after { left: 10px; right: 10px; }
 .nav-links a:hover { color: #fff; background: rgba(232,37,26,0.15); text-shadow: 0 0 10px rgba(232,37,26,0.9), 0 0 22px rgba(232,37,26,0.5); }
@@ -82,6 +130,9 @@ nav {
 .nav-cta-btn { background: var(--accent)!important; color: var(--navy)!important; font-weight: 700!important; padding: 9px 18px!important; border-radius: 8px; animation: none!important; text-shadow: none!important; }
 .nav-cta-btn::after { display: none!important; }
 .nav-cta-btn:hover { background: var(--accent2)!important; }
+.nav-teachers-btn { background: rgba(56,189,248,0.16)!important; border:1px solid rgba(56,189,248,0.5); color:#7dd3fc!important; font-weight:700!important; }
+.nav-teachers-btn::after { display:none!important; }
+.nav-teachers-btn:hover { background: rgba(56,189,248,0.28)!important; color:#fff!important; text-shadow: 0 0 10px rgba(56,189,248,0.9), 0 0 22px rgba(56,189,248,0.5)!important; }
 .nav-user { display: none; align-items: center; gap: 8px; }
 .nav-user.visible { display: flex; }
 .nav-avatar { width: 32px; height: 32px; border-radius: 50%; background: var(--accent); color: var(--navy); font-weight: 800; font-size: .75rem; display: flex; align-items: center; justify-content: center; }
@@ -89,6 +140,12 @@ nav {
 .nav-logout { font-size: .75rem; cursor: pointer; text-decoration: underline; padding: 4px 8px; border: none; background: none; color: rgba(255,255,255,0.4); }
 .nav-logout:hover { color: var(--accent); }
 .hamburger { display: none; background: none; border: none; cursor: pointer; color: white; font-size: 1.5rem; line-height: 1; padding: 4px; }
+@media(max-width:1230px) and (min-width:701px) {
+  .nav-links { gap: 0; }
+  .nav-links a { font-size: .78rem; padding: 8px 9px; }
+  .nav-cta-btn { padding: 9px 13px !important; }
+  .logo-sub { display:none; }
+}
 @media(max-width:700px) {
   .nav-links { display: none; flex-direction: column; position: absolute; top: 68px; left: 0; right: 0; background: rgba(15,30,60,0.99); padding: 16px; gap: 4px; }
   .nav-links.open { display: flex; }
@@ -248,9 +305,6 @@ footer strong { color: var(--accent); }
 #toast.show { transform: translateY(0); opacity: 1; }
 #toast.success { background: var(--green); }
 
-/* ═══════════════════════════════════════════════════
-   LEVEL TABS
-═══════════════════════════════════════════════════ */
 .hero-level-tabs {
   display: flex;
   gap: .6rem;
@@ -292,31 +346,26 @@ footer strong { color: var(--accent); }
 .hlt-tab .hlt-label { color: rgba(255,255,255,.85); }
 .hlt-tab:hover .hlt-label { color: #fff; }
 
-/* A1 */
 .hlt-a1 { background: rgba(30,58,138,.35); border-color: rgba(59,130,246,.35); }
 .hlt-a1::before { background: linear-gradient(135deg, rgba(30,58,138,.6), rgba(26,86,219,.5)); }
 .hlt-a1 .hlt-badge { background: rgba(59,130,246,.3); color: #93c5fd; }
 .hlt-a1:hover { border-color: rgba(59,130,246,.8); box-shadow: 0 0 18px rgba(59,130,246,.4), 0 0 6px rgba(59,130,246,.3); transform: translateY(-2px); }
 
-/* A2 */
 .hlt-a2 { background: rgba(20,83,45,.35); border-color: rgba(34,197,94,.35); }
 .hlt-a2::before { background: linear-gradient(135deg, rgba(20,83,45,.6), rgba(22,163,74,.5)); }
 .hlt-a2 .hlt-badge { background: rgba(34,197,94,.3); color: #86efac; }
 .hlt-a2:hover { border-color: rgba(34,197,94,.8); box-shadow: 0 0 18px rgba(34,197,94,.4), 0 0 6px rgba(34,197,94,.3); transform: translateY(-2px); }
 
-/* B1 */
 .hlt-b1 { background: rgba(19,78,74,.35); border-color: rgba(20,184,166,.35); }
 .hlt-b1::before { background: linear-gradient(135deg, rgba(19,78,74,.6), rgba(13,148,136,.5)); }
 .hlt-b1 .hlt-badge { background: rgba(20,184,166,.3); color: #5eead4; }
 .hlt-b1:hover { border-color: rgba(20,184,166,.8); box-shadow: 0 0 18px rgba(20,184,166,.4), 0 0 6px rgba(20,184,166,.3); transform: translateY(-2px); }
 
-/* B2 */
 .hlt-b2 { background: rgba(59,7,100,.35); border-color: rgba(167,139,250,.35); }
 .hlt-b2::before { background: linear-gradient(135deg, rgba(59,7,100,.6), rgba(124,58,237,.5)); }
 .hlt-b2 .hlt-badge { background: rgba(167,139,250,.3); color: #c4b5fd; }
 .hlt-b2:hover { border-color: rgba(167,139,250,.8); box-shadow: 0 0 18px rgba(167,139,250,.4), 0 0 6px rgba(167,139,250,.3); transform: translateY(-2px); }
 
-/* C1 */
 .hlt-c1 { background: rgba(69,26,3,.35); border-color: rgba(251,191,36,.35); }
 .hlt-c1::before { background: linear-gradient(135deg, rgba(69,26,3,.6), rgba(217,119,6,.5)); }
 .hlt-c1 .hlt-badge { background: rgba(251,191,36,.3); color: #fde68a; }
@@ -347,10 +396,11 @@ footer strong { color: var(--accent); }
       <li><a href="/roadmap">Yol Haritası</a></li>
       <li><a href="/placement-test">Seviye Testi</a></li>
       <li><a href="/games">Oyunlar</a></li>
-      <li><a href="/skills.html">📚 Skills</a></li>
-      <li><a href="/IELTS.html">🔴 IELTS Academy</a></li>
+      <li><a href='/skills'>📚 Skills</a></li>
+      <li><a href='/ielts'>🔴 IELTS Academy</a></li>
       <li><a href="/canli-ders">🔴 Canlı Ders</a></li>
-      <li><a class="nav-cta-btn" href="/landing#pricing">Online Ders</a></li>
+      <li><a class="nav-teachers-btn" href="/teacher-planner">🧑‍🏫 Teachers</a></li>
+      <li><a class="nav-cta-btn" href="/ozel-ders">Online Ders</a></li>
     </ul>
     <div class="nav-user" id="nav-user">
       <div class="nav-avatar" id="nav-avatar">?</div>
@@ -409,7 +459,6 @@ footer strong { color: var(--accent); }
         <div><div class="hs-num">1500+</div><div class="hs-label">Alıştırma</div></div>
       </div>
 
-      <!-- HERO LEVEL TABS — doğrudan seviye kartına scroll -->
       <div class="hero-level-tabs">
         <a href="#level-a1" class="hlt-tab hlt-a1">
           <span class="hlt-badge">A1</span>
@@ -433,21 +482,14 @@ footer strong { color: var(--accent); }
         </a>
       </div>
 
-      <!-- HERO SKILLS — skills.html'e hızlı erişim -->
       <div class="hero-skills" style="margin-top:2rem;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-        <a href="/skills.html#reading" style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.25);border-radius:12px;padding:14px 22px;color:#fff;text-decoration:none;display:flex;align-items:center;gap:10px;font-size:.9rem;font-weight:600;transition:all .2s;backdrop-filter:blur(4px);"
-           onmouseover="this.style.background='rgba(232,160,32,0.25)';this.style.borderColor='rgba(232,160,32,0.6)'"
-           onmouseout="this.style.background='rgba(255,255,255,0.1)';this.style.borderColor='rgba(255,255,255,0.25)'">
+        <a href="/skills#reading" onmouseout="this.style.background='rgba(255,255,255,0.1)';this.style.borderColor='rgba(255,255,255,0.25)'" onmouseover="this.style.background='rgba(232,160,32,0.25)';this.style.borderColor='rgba(232,160,32,0.6)'" style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.25);border-radius:12px;padding:14px 22px;color:#fff;text-decoration:none;display:flex;align-items:center;gap:10px;font-size:.9rem;font-weight:600;transition:all .2s;backdrop-filter:blur(4px);">
           📖 <span>Reading <span style="font-size:.75rem;opacity:.7;display:block;font-weight:400">A1–B2 · 40 Ünite</span></span>
         </a>
-        <a href="/skills.html#writing" style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.25);border-radius:12px;padding:14px 22px;color:#fff;text-decoration:none;display:flex;align-items:center;gap:10px;font-size:.9rem;font-weight:600;transition:all .2s;backdrop-filter:blur(4px);"
-           onmouseover="this.style.background='rgba(232,160,32,0.25)';this.style.borderColor='rgba(232,160,32,0.6)'"
-           onmouseout="this.style.background='rgba(255,255,255,0.1)';this.style.borderColor='rgba(255,255,255,0.25)'">
+        <a href="/skills#writing" onmouseout="this.style.background='rgba(255,255,255,0.1)';this.style.borderColor='rgba(255,255,255,0.25)'" onmouseover="this.style.background='rgba(232,160,32,0.25)';this.style.borderColor='rgba(232,160,32,0.6)'" style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.25);border-radius:12px;padding:14px 22px;color:#fff;text-decoration:none;display:flex;align-items:center;gap:10px;font-size:.9rem;font-weight:600;transition:all .2s;backdrop-filter:blur(4px);">
           ✍️ <span>Writing <span style="font-size:.75rem;opacity:.7;display:block;font-weight:400">A1–B2 · 32 Ünite</span></span>
         </a>
-        <a href="/skills.html#speaking" style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.25);border-radius:12px;padding:14px 22px;color:#fff;text-decoration:none;display:flex;align-items:center;gap:10px;font-size:.9rem;font-weight:600;transition:all .2s;backdrop-filter:blur(4px);"
-           onmouseover="this.style.background='rgba(232,160,32,0.25)';this.style.borderColor='rgba(232,160,32,0.6)'"
-           onmouseout="this.style.background='rgba(255,255,255,0.1)';this.style.borderColor='rgba(255,255,255,0.25)'">
+        <a href="/skills#speaking" onmouseout="this.style.background='rgba(255,255,255,0.1)';this.style.borderColor='rgba(255,255,255,0.25)'" onmouseover="this.style.background='rgba(232,160,32,0.25)';this.style.borderColor='rgba(232,160,32,0.6)'" style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.25);border-radius:12px;padding:14px 22px;color:#fff;text-decoration:none;display:flex;align-items:center;gap:10px;font-size:.9rem;font-weight:600;transition:all .2s;backdrop-filter:blur(4px);">
           🎙️ <span>Speaking <span style="font-size:.75rem;opacity:.7;display:block;font-weight:400">Pre-A1–B2 · Soru Bankası</span></span>
         </a>
       </div>
