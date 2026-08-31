@@ -1,12 +1,14 @@
 
 
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kendin Öğren: A1-C1 Ücretsiz İngilizce Kursu | AbOnlinEnglish</title>
-  <meta name="description" content="CEFR A1-C1 seviyelerinde ücretsiz online İngilizce öğren. Grammar, reading, writing ve speaking alıştırmalarıyla kendi hızında, kendi sisteminde ilerle.">
+  <meta name="description" content="A1-C1 seviyelerinde tamamen ücretsiz online İngilizce öğren: 50 ünite, grammar, reading, writing ve speaking alıştırmalarıyla kendi hızında ilerle.">
+  <meta name="keywords" content="ücretsiz İngilizce öğren, online İngilizce kursu, A1 A2 B1 B2 C1 İngilizce, kendin öğren İngilizce">
   <meta name="google-site-verification" content="EE7xVEuBrpYs3EnM1alMLaT7TdJX4izyZn865jUW8gE">
   <link rel="canonical" href="https://abonlinenglish.school/">
   <meta name="robots" content="index, follow">
@@ -14,13 +16,13 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="AbOnlinEnglish">
   <meta property="og:title" content="Kendin Öğren: A1-C1 Ücretsiz İngilizce Kursu | AbOnlinEnglish">
-  <meta property="og:description" content="CEFR A1-C1 seviyelerinde ücretsiz online İngilizce öğren. Grammar, reading, writing ve speaking alıştırmalarıyla kendi hızında ilerle.">
+  <meta property="og:description" content="A1-C1 seviyelerinde tamamen ücretsiz online İngilizce öğren. Grammar, reading, writing ve speaking alıştırmalarıyla kendi hızında ilerle.">
   <meta property="og:url" content="https://abonlinenglish.school/">
   <meta property="og:locale" content="tr_TR">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Kendin Öğren: A1-C1 Ücretsiz İngilizce Kursu | AbOnlinEnglish">
-  <meta name="twitter:description" content="CEFR A1-C1 seviyelerinde ücretsiz online İngilizce öğren, kendi hızında ilerle.">
+  <meta name="twitter:description" content="A1-C1 seviyelerinde tamamen ücretsiz online İngilizce öğren, kendi hızında ilerle.">
 
   <script type="application/ld+json">
   {
@@ -44,13 +46,35 @@
       {
         "@type": "Course",
         "name": "A1-C1 İngilizce Kendin Öğren Kursu",
-        "description": "CEFR A1'den C1'e 5 seviye, 50 ünite, 10 graded reader ve 1500'den fazla alıştırma içeren ücretsiz online İngilizce öğrenme kursu.",
+        "description": "A1'den C1'e 5 seviye, 50 ünite, 10 graded reader ve 1500'den fazla alıştırma içeren ücretsiz online İngilizce öğrenme kursu.",
         "provider": {
           "@type": "Organization",
           "name": "AbOnlinEnglish",
           "url": "https://abonlinenglish.school/"
         },
-        "url": "https://abonlinenglish.school/"
+        "url": "https://abonlinenglish.school/",
+        "isAccessibleForFree": true,
+        "inLanguage": "tr"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Kendin Öğren platformu gerçekten ücretsiz mi?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Evet. A1'den C1'e tüm seviyeler, 50 ünite ve 1500'den fazla alıştırma tamamen ücretsizdir." }
+          },
+          {
+            "@type": "Question",
+            "name": "Hangi seviyeden başlamalıyım?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Seviyeni bilmiyorsan 15 dakikalık ücretsiz seviye testini çözerek doğru seviyeni bulabilirsin. Biliyorsan doğrudan o seviyeden başlayabilirsin." }
+          },
+          {
+            "@type": "Question",
+            "name": "Zorlandığım noktada ne yapabilirim?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Platformda ilerlerken zorlanırsan online İngilizce ders alarak öğretmen desteğiyle devam edebilirsin." }
+          }
+        ]
       }
     ]
   }
@@ -207,6 +231,20 @@ nav {
 .how-ttl { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: .3rem; }
 .how-txt { font-size: 13px; color: var(--muted); line-height: 1.6; }
 
+/* Dikkat çekici 3 adımlı yolculuk kartları */
+.journey-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; }
+@media(max-width:800px) { .journey-grid { grid-template-columns: 1fr; } }
+.journey-card { display: block; text-decoration: none; cursor: pointer; border-radius: var(--radius); padding: 2rem 1.75rem; color: #fff; box-shadow: var(--card-shadow); position: relative; transition: transform .25s ease, box-shadow .25s ease; }
+.journey-card:hover { transform: translateY(-6px); box-shadow: 0 16px 36px rgba(15,30,60,.2); }
+.journey-num { width: 34px; height: 34px; border-radius: 50%; background: rgba(255,255,255,.28); display: flex; align-items: center; justify-content: center; font-weight: 900; font-family: 'Playfair Display',serif; font-size: 14px; margin-bottom: 14px; }
+.journey-ico { font-size: 1.8rem; margin-bottom: .5rem; display: block; }
+.journey-ttl { font-size: 15px; font-weight: 800; letter-spacing: .4px; text-transform: uppercase; margin-bottom: .6rem; }
+.journey-txt { font-size: 13.5px; opacity: .94; line-height: 1.65; }
+.journey-1 { background: linear-gradient(135deg, var(--accent), var(--accent2)); color: var(--navy); }
+.journey-1 .journey-num { background: rgba(15,30,60,.16); color: var(--navy); }
+.journey-2 { background: linear-gradient(135deg, var(--teal), #0b7c72); }
+.journey-3 { background: linear-gradient(135deg, var(--coral), #9a1c1c); }
+
 .levels-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem; }
 .levels-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.25rem; }
 @media(max-width:900px) { .levels-2 { grid-template-columns: 1fr; } .levels-3 { grid-template-columns: 1fr 1fr; } }
@@ -307,7 +345,7 @@ footer strong { color: var(--accent); }
 
 .hero-level-tabs {
   display: flex;
-  gap: .6rem;
+  gap: .9rem;
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 1.5rem;
@@ -315,68 +353,73 @@ footer strong { color: var(--accent); }
 .hlt-tab {
   display: flex;
   align-items: center;
-  gap: 7px;
-  padding: 9px 18px;
-  border-radius: 50px;
+  gap: 11px;
+  padding: 15px 28px;
+  border-radius: 60px;
   text-decoration: none;
-  font-size: .78rem;
-  font-weight: 700;
+  font-size: .95rem;
+  font-weight: 800;
   letter-spacing: .4px;
-  border: 1.5px solid transparent;
-  transition: all .25s;
+  border: 2px solid transparent;
+  transition: transform .3s cubic-bezier(.34,1.56,.64,1), box-shadow .3s ease, border-color .3s ease, background .3s ease;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 .hlt-tab::before {
   content: '';
   position: absolute;
   inset: 0;
+  border-radius: 60px;
   opacity: 0;
-  transition: opacity .25s;
+  transition: opacity .3s;
 }
 .hlt-tab:hover::before { opacity: 1; }
+.hlt-tab:hover { transform: scale(1.1) translateY(-4px); }
 .hlt-tab .hlt-badge {
   font-family: 'Playfair Display', serif;
-  font-size: .72rem;
+  font-size: .88rem;
   font-weight: 900;
-  padding: 2px 7px;
+  padding: 4px 11px;
   border-radius: 20px;
   line-height: 1;
+  position: relative;
+  z-index: 1;
 }
-.hlt-tab .hlt-label { color: rgba(255,255,255,.85); }
+.hlt-tab .hlt-label { color: rgba(255,255,255,.92); position: relative; z-index: 1; }
 .hlt-tab:hover .hlt-label { color: #fff; }
 
-.hlt-a1 { background: rgba(30,58,138,.35); border-color: rgba(59,130,246,.35); }
-.hlt-a1::before { background: linear-gradient(135deg, rgba(30,58,138,.6), rgba(26,86,219,.5)); }
-.hlt-a1 .hlt-badge { background: rgba(59,130,246,.3); color: #93c5fd; }
-.hlt-a1:hover { border-color: rgba(59,130,246,.8); box-shadow: 0 0 18px rgba(59,130,246,.4), 0 0 6px rgba(59,130,246,.3); transform: translateY(-2px); }
+.hlt-a1 { background: rgba(59,130,246,.55); border-color: rgba(96,165,250,.7); }
+.hlt-a1::before { background: linear-gradient(135deg, rgba(37,99,235,.85), rgba(96,165,250,.75)); }
+.hlt-a1 .hlt-badge { background: rgba(255,255,255,.9); color: #1e40af; }
+.hlt-a1:hover { border-color: #93c5fd; box-shadow: 0 0 40px rgba(59,130,246,.85), 0 0 16px rgba(59,130,246,.6), 0 8px 24px rgba(0,0,0,.25); }
 
-.hlt-a2 { background: rgba(20,83,45,.35); border-color: rgba(34,197,94,.35); }
-.hlt-a2::before { background: linear-gradient(135deg, rgba(20,83,45,.6), rgba(22,163,74,.5)); }
-.hlt-a2 .hlt-badge { background: rgba(34,197,94,.3); color: #86efac; }
-.hlt-a2:hover { border-color: rgba(34,197,94,.8); box-shadow: 0 0 18px rgba(34,197,94,.4), 0 0 6px rgba(34,197,94,.3); transform: translateY(-2px); }
+.hlt-a2 { background: rgba(34,197,94,.55); border-color: rgba(74,222,128,.7); }
+.hlt-a2::before { background: linear-gradient(135deg, rgba(21,128,61,.85), rgba(74,222,128,.75)); }
+.hlt-a2 .hlt-badge { background: rgba(255,255,255,.9); color: #166534; }
+.hlt-a2:hover { border-color: #86efac; box-shadow: 0 0 40px rgba(34,197,94,.85), 0 0 16px rgba(34,197,94,.6), 0 8px 24px rgba(0,0,0,.25); }
 
-.hlt-b1 { background: rgba(19,78,74,.35); border-color: rgba(20,184,166,.35); }
-.hlt-b1::before { background: linear-gradient(135deg, rgba(19,78,74,.6), rgba(13,148,136,.5)); }
-.hlt-b1 .hlt-badge { background: rgba(20,184,166,.3); color: #5eead4; }
-.hlt-b1:hover { border-color: rgba(20,184,166,.8); box-shadow: 0 0 18px rgba(20,184,166,.4), 0 0 6px rgba(20,184,166,.3); transform: translateY(-2px); }
+.hlt-b1 { background: rgba(20,184,166,.55); border-color: rgba(45,212,191,.7); }
+.hlt-b1::before { background: linear-gradient(135deg, rgba(15,118,110,.85), rgba(45,212,191,.75)); }
+.hlt-b1 .hlt-badge { background: rgba(255,255,255,.9); color: #0f766e; }
+.hlt-b1:hover { border-color: #5eead4; box-shadow: 0 0 40px rgba(20,184,166,.85), 0 0 16px rgba(20,184,166,.6), 0 8px 24px rgba(0,0,0,.25); }
 
-.hlt-b2 { background: rgba(59,7,100,.35); border-color: rgba(167,139,250,.35); }
-.hlt-b2::before { background: linear-gradient(135deg, rgba(59,7,100,.6), rgba(124,58,237,.5)); }
-.hlt-b2 .hlt-badge { background: rgba(167,139,250,.3); color: #c4b5fd; }
-.hlt-b2:hover { border-color: rgba(167,139,250,.8); box-shadow: 0 0 18px rgba(167,139,250,.4), 0 0 6px rgba(167,139,250,.3); transform: translateY(-2px); }
+.hlt-b2 { background: rgba(167,139,250,.55); border-color: rgba(196,181,253,.7); }
+.hlt-b2::before { background: linear-gradient(135deg, rgba(124,58,237,.85), rgba(196,181,253,.75)); }
+.hlt-b2 .hlt-badge { background: rgba(255,255,255,.9); color: #5b21b6; }
+.hlt-b2:hover { border-color: #c4b5fd; box-shadow: 0 0 40px rgba(167,139,250,.85), 0 0 16px rgba(167,139,250,.6), 0 8px 24px rgba(0,0,0,.25); }
 
-.hlt-c1 { background: rgba(69,26,3,.35); border-color: rgba(251,191,36,.35); }
-.hlt-c1::before { background: linear-gradient(135deg, rgba(69,26,3,.6), rgba(217,119,6,.5)); }
-.hlt-c1 .hlt-badge { background: rgba(251,191,36,.3); color: #fde68a; }
-.hlt-c1:hover { border-color: rgba(251,191,36,.8); box-shadow: 0 0 18px rgba(251,191,36,.4), 0 0 6px rgba(251,191,36,.3); transform: translateY(-2px); }
+.hlt-c1 { background: rgba(251,191,36,.55); border-color: rgba(253,224,71,.7); }
+.hlt-c1::before { background: linear-gradient(135deg, rgba(217,119,6,.85), rgba(253,224,71,.75)); }
+.hlt-c1 .hlt-badge { background: rgba(255,255,255,.92); color: #92400e; }
+.hlt-c1:hover { border-color: #fde68a; box-shadow: 0 0 40px rgba(251,191,36,.85), 0 0 16px rgba(251,191,36,.6), 0 8px 24px rgba(0,0,0,.25); }
 
 @keyframes tabPulse {
   0%,100% { box-shadow: 0 0 8px rgba(232,160,32,.2); }
   50%      { box-shadow: 0 0 20px rgba(232,160,32,.5), 0 0 8px rgba(232,160,32,.3); }
 }
 @media(max-width:500px) {
-  .hlt-tab { padding: 7px 13px; font-size: .72rem; }
+  .hlt-tab { padding: 11px 18px; font-size: .82rem; }
+  .hlt-tab:hover { transform: scale(1.05) translateY(-2px); }
 }
   </style>
 </head>
@@ -449,11 +492,11 @@ footer strong { color: var(--accent); }
   <!-- HERO -->
   <section class="hero">
     <div class="hero-inner">
-      <div class="hero-badge">📚 CEFR A1 → C1 · Kendin Öğren Platformu</div>
+      <div class="hero-badge">📚 A1 → C1 · Kendin Öğren Platformu</div>
       <h1>Kendi hızında,<br><em>kendi sisteminde</em> öğren.</h1>
-      <p>A1'den C1'e tüm seviyeler. Coursebook metinleri, grammar referansları, reading pasajları ve interaktif alıştırmalar — tek platformda.</p>
+      <p>Tamamen ücretsiz: A1'den C1'e tüm seviyeler. Coursebook metinleri, grammar referansları, reading pasajları ve interaktif alıştırmalar — tek platformda.</p>
       <div class="hero-stats">
-        <div><div class="hs-num">5</div><div class="hs-label">CEFR Seviyesi</div></div>
+        <div><div class="hs-num">5</div><div class="hs-label">Seviye</div></div>
         <div><div class="hs-num">50</div><div class="hs-label">Ünite</div></div>
         <div><div class="hs-num">10</div><div class="hs-label">Graded Reader</div></div>
         <div><div class="hs-num">1500+</div><div class="hs-label">Alıştırma</div></div>
@@ -504,7 +547,7 @@ footer strong { color: var(--accent); }
         <div class="ps-ico">🎯</div>
         <div>
           <div class="ps-ttl">Hangi seviyeden başlayacağını bilmiyor musun?</div>
-          <div class="ps-sub">50 soruluk ücretsiz seviye testi ile CEFR düzeyini bul — 15 dakika yeter.</div>
+          <div class="ps-sub">50 soruluk ücretsiz seviye testi ile seviyeni bul — 15 dakika yeter.</div>
         </div>
       </div>
       <a class="btn-accent-sm" href="/placement-test">Seviye Testini Başlat →</a>
@@ -526,11 +569,25 @@ footer strong { color: var(--accent); }
       <div class="section-tag">Nasıl Çalışır</div>
       <h2 class="section-title">Sistemi 30 saniyede anla</h2>
     </div>
-    <div class="how-grid">
-      <div class="how-card"><div class="how-step">1</div><div class="how-ttl">Seviyeni seç</div><div class="how-txt">A1'den başla ya da seviye testi ile doğru noktayı bul.</div></div>
-      <div class="how-card"><div class="how-step">2</div><div class="how-ttl">Üniteye gir</div><div class="how-txt">Vocabulary, Grammar, Reading ve Exercises sekmeleri tam coursebook içeriğini yansıtır.</div></div>
-      <div class="how-card"><div class="how-step">3</div><div class="how-ttl">Alıştırmaları yap</div><div class="how-txt">Soruları yanıtla, anında kontrol et. İlerleme otomatik kaydedilir.</div></div>
-      <div class="how-card"><div class="how-step">4</div><div class="how-ttl">İlerlemeni izle</div><div class="how-txt">Günlük seri ve tamamlanma yüzdesi ile motivasyonunu koru.</div></div>
+    <div class="journey-grid">
+      <a class="journey-card journey-1" href="/placement-test">
+        <div class="journey-num">1</div>
+        <span class="journey-ico">🎯</span>
+        <div class="journey-ttl">Seviyeni Belirle</div>
+        <div class="journey-txt">A1'den başla ya da 15 dakikalık ücretsiz seviye testiyle tam yerini bul.</div>
+      </a>
+      <a class="journey-card journey-2" href="#levels">
+        <div class="journey-num">2</div>
+        <span class="journey-ico">📚</span>
+        <div class="journey-ttl">Kendin Öğren Platformunda Çalış</div>
+        <div class="journey-txt">50 ünite, grammar, reading, writing ve alıştırmalarla kendi hızında ilerle. İlerlemen otomatik kaydedilir.</div>
+      </a>
+      <a class="journey-card journey-3" href="/online-ders">
+        <div class="journey-num">3</div>
+        <span class="journey-ico">👨‍🏫</span>
+        <div class="journey-ttl">Online Ders Al</div>
+        <div class="journey-txt">Zorlandığın noktada öğretmen desteğiyle devam et, hedefine ve seviyene uygun programla ilerle.</div>
+      </a>
     </div>
   </div>
 
@@ -538,7 +595,7 @@ footer strong { color: var(--accent); }
   <div class="section" id="levels">
     <div class="sec-center">
       <div class="section-tag">Kurs İçerikleri</div>
-      <h2 class="section-title">A1'den C1'e tam müfredat</h2>
+      <h2 class="section-title">A1'den C1'e Planlı, Ünite Ünite İlerle</h2>
       <p class="section-sub sec-center">Her seviye PDF kaynak materyallerinden doldurulmuştur. Bir seviye seç, hemen çalışmaya başla.</p>
     </div>
 
@@ -675,10 +732,10 @@ footer strong { color: var(--accent); }
     </div>
   </div>
 
-  <!-- CEFR LADDER -->
+  <!-- SEVİYE YOL HARİTASI -->
   <div class="section">
     <div class="sec-center">
-      <div class="section-tag">CEFR Yol Haritası</div>
+      <div class="section-tag">Seviye Yol Haritası</div>
       <h2 class="section-title">Neredesin, nereye gidiyorsun?</h2>
       <p class="section-sub sec-center">Her seviyenin neyi kapsadığını gör, doğru noktadan başla.</p>
     </div>
@@ -695,7 +752,7 @@ footer strong { color: var(--accent); }
   </div>
 
   <footer>
-    <strong>AbOnlinEnglish</strong> · CEFR A1–C1 İngilizce Öğrenme Platformu
+    <strong>AbOnlinEnglish</strong> · A1–C1 İngilizce Öğrenme Platformu
     <div class="footer-socials">
       <a href="mailto:ingilizceogrensene@gmail.com" title="E-posta">✉</a>
       <a href="#" title="Instagram">📸</a>
@@ -706,6 +763,87 @@ footer strong { color: var(--accent); }
 </div><!-- /main-content -->
 
 <div id="toast"></div>
+
+<!-- ================= FAYDALI SİTELER — DİKKAT ÇEKİCİ FLOATING BUTON ================= -->
+<style>
+  .abo-fab-wrap {
+    position: fixed;
+    left: 22px;
+    bottom: 22px;
+    z-index: 1800;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .abo-fab {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    height: 58px;
+    padding: 0 22px 0 6px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--accent2) 0%, var(--accent) 60%, #d38c14 100%);
+    box-shadow: 0 10px 28px rgba(232,160,32,0.5), 0 2px 8px rgba(15,30,60,0.22);
+    text-decoration: none;
+    color: var(--navy);
+    white-space: nowrap;
+    animation: aboFabBounce 3.4s ease-in-out infinite;
+    transition: box-shadow .3s ease, transform .3s ease;
+  }
+  .abo-fab:hover, .abo-fab:focus-visible {
+    transform: translateY(-5px) scale(1.04);
+    box-shadow: 0 18px 36px rgba(232,160,32,0.6), 0 4px 12px rgba(15,30,60,0.26);
+    animation-play-state: paused;
+  }
+  .abo-fab:focus-visible { outline: 3px solid var(--navy); outline-offset: 3px; }
+  .abo-fab-icon {
+    flex-shrink: 0;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.35rem;
+  }
+  .abo-fab-label {
+    font-weight: 800;
+    font-size: .98rem;
+    letter-spacing: -.2px;
+  }
+  .abo-fab-pulse {
+    position: absolute; inset: 0; border-radius: 999px;
+    box-shadow: 0 0 0 0 rgba(232,160,32,0.6);
+    animation: aboFabPulse 2.4s ease-out infinite;
+    pointer-events: none;
+  }
+  @keyframes aboFabPulse {
+    0%   { box-shadow: 0 0 0 0 rgba(232,160,32,0.6); }
+    70%  { box-shadow: 0 0 0 20px rgba(232,160,32,0); }
+    100% { box-shadow: 0 0 0 0 rgba(232,160,32,0); }
+  }
+  @keyframes aboFabBounce {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-7px); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .abo-fab-pulse { animation: none; }
+    .abo-fab { animation: none; transition: none; }
+  }
+  @media (max-width: 600px) {
+    .abo-fab-wrap { left: 14px; bottom: 14px; }
+    .abo-fab { height: 50px; padding: 0 18px 0 6px; gap: 8px; }
+    .abo-fab-icon { width: 38px; height: 38px; font-size: 1.1rem; }
+    .abo-fab-label { font-size: .88rem; }
+  }
+</style>
+<div class="abo-fab-wrap">
+  <a href="/kaynaklar" class="abo-fab" aria-label="Faydalı Siteler sayfasına git">
+    <span class="abo-fab-pulse" aria-hidden="true"></span>
+    <span class="abo-fab-icon" aria-hidden="true">🌐</span>
+    <span class="abo-fab-label">Faydalı Siteler</span>
+  </a>
+</div>
 
 <script>
 const SHEETS_URL = 'https://script.google.com/macros/s/AKfycbxG70GUMS3bebYRcqm35uZ63I7PBpMgxjh9s4K3_BxqEacqf9wQriyQA_Yrllwqixml4g/exec';
