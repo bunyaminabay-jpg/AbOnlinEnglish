@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Online İngilizce Özel Ders — Birebir Eğitim | AbOnlinEnglish</title>
-<meta name="description" content="A1'den C1'e birebir online İngilizce özel ders. Seviyene özel program, esnek saat, ilk ders ücretsiz. WhatsApp'tan hemen ulaş.">
+<title>Online İngilizce Danışmanlığı — Sana Uygun Öğretmen | AbOnlinEnglish</title>
+<meta name="description" content="A1'den C1'e, sana en uygun öğretmenle eşleştiren ücretsiz danışmanlık süreci. Seviyene özel yönlendirme, esnek saat, ilk görüşme ücretsiz. WhatsApp'tan hemen ulaş.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -30,7 +31,6 @@
   a{color:inherit; text-decoration:none;}
   img{max-width:100%;}
   .wrap{max-width:1080px; margin:0 auto; padding:0 24px;}
-
   /* NAV */
   nav{
     background:var(--navy-deep);
@@ -45,7 +45,6 @@
   .navlinks{display:flex; gap:22px; font-size:0.92rem; opacity:0.85;}
   .navlinks a:hover{opacity:1; color:var(--orange-soft);}
   @media (max-width:760px){ .navlinks{display:none;} }
-
   .subbar{
     display:flex; align-items:center; justify-content:center; gap:10px;
     background:var(--orange); color:#fff; font-size:0.88rem; font-weight:600;
@@ -64,7 +63,6 @@
   @media (prefers-reduced-motion: reduce){
     .subbar-dot{ animation:none; }
   }
-
   /* floating sticky CTA */
   .float-cta{
     position:fixed; bottom:22px; right:22px; z-index:50;
@@ -79,7 +77,6 @@
   @media (max-width:600px){
     .float-cta{ left:16px; right:16px; justify-content:center; bottom:16px; }
   }
-
   /* HERO */
   .hero{
     background:linear-gradient(160deg, var(--navy-deep) 0%, var(--navy) 62%, #14406b 100%);
@@ -95,10 +92,8 @@
     background:radial-gradient(circle, rgba(232,114,44,0.18), transparent 70%);
   }
   .hero-grid{
-    display:grid; grid-template-columns:1.15fr 0.85fr; gap:48px; align-items:center;
-    position:relative; z-index:1;
+    position:relative; z-index:1; max-width:640px;
   }
-  @media (max-width:860px){ .hero-grid{grid-template-columns:1fr;} }
   .eyebrow{
     display:inline-block; font-size:0.78rem; letter-spacing:0.14em; text-transform:uppercase;
     color:var(--orange-soft); font-weight:600; margin-bottom:18px;
@@ -120,34 +115,6 @@
   }
   .btn-primary:hover{ transform:translateY(-2px); box-shadow:0 14px 30px rgba(232,114,44,0.45);}
   .micro{font-size:0.85rem; color:#A9BBD1;}
-
-  /* signature: weekly schedule widget */
-  .schedule-card{
-    background:#fff; border-radius:18px; padding:24px;
-    box-shadow:0 30px 60px rgba(0,0,0,0.35);
-    color:var(--ink);
-  }
-  .schedule-card h3{
-    font-family:'Outfit'; font-size:0.78rem; text-transform:uppercase; letter-spacing:0.08em;
-    color:#7A8699; font-weight:600; margin-bottom:14px;
-  }
-  .sched-row{display:flex; gap:8px; margin-bottom:8px;}
-  .sched-day{
-    flex:1; text-align:center; font-size:0.72rem; font-weight:600; color:#98A3B5;
-    padding:8px 0; border-radius:10px; background:#F2F0EA;
-  }
-  .sched-day.active{
-    background:var(--navy); color:#fff;
-  }
-  .sched-day.on{
-    background:var(--orange); color:#fff;
-  }
-  .sched-note{
-    margin-top:16px; padding-top:16px; border-top:1px dashed var(--line);
-    font-size:0.85rem; color:#5B6577;
-  }
-  .sched-note b{color:var(--navy);}
-
   /* STATS BAR */
   .stats{
     background:#fff; border-bottom:1px solid var(--line);
@@ -158,14 +125,26 @@
   .stat{ text-align:left; }
   .stat b{ font-family:'Cormorant Garamond'; font-size:1.8rem; color:var(--navy); display:block;}
   .stat span{ font-size:0.82rem; color:#7A8699; }
-
+  /* NETWORK / TEACHER COMMUNITY */
+  .network-section{ background:var(--cream); }
+  .network-grid{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:8px;
+  }
+  @media (max-width:760px){ .network-grid{grid-template-columns:1fr;} }
+  .network-card{
+    background:#fff; border:1px solid var(--line); border-radius:16px; padding:24px; text-align:center;
+  }
+  .network-card b{ font-family:'Cormorant Garamond'; font-size:1.9rem; color:var(--navy); display:block; margin-bottom:4px; }
+  .network-card span{ font-size:0.85rem; color:#5B6577; }
+  .network-note{
+    margin-top:22px; text-align:center; font-size:0.92rem; color:#5B6577; max-width:640px; margin-left:auto; margin-right:auto;
+  }
   /* SECTION generic */
   section{ padding:72px 0; }
   .section-head{ max-width:560px; margin-bottom:40px; }
   .section-eyebrow{ font-size:0.78rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--green); font-weight:600; margin-bottom:10px;}
   .section-head h2{ font-size:clamp(1.8rem, 3.2vw, 2.4rem); color:var(--navy); font-weight:600; }
   .section-head p{ color:#5B6577; margin-top:12px; font-size:1rem; }
-
   /* WHY GRID */
   .why-grid{
     display:grid; grid-template-columns:repeat(2, 1fr); gap:20px;
@@ -180,7 +159,6 @@
   }
   .why-card h4{ font-family:'Outfit'; font-size:1.02rem; font-weight:600; color:var(--navy); margin-bottom:8px;}
   .why-card p{ font-size:0.92rem; color:#5B6577; }
-
   /* STEPS */
   .steps{ background:var(--navy-deep); color:#fff; }
   .steps .section-eyebrow{ color:var(--orange-soft); }
@@ -200,7 +178,6 @@
   }
   .step h4{ font-size:1.02rem; font-weight:600; margin-bottom:8px; }
   .step p{ font-size:0.9rem; color:#B7C3D4; }
-
   /* FAQ */
   .faq-item{
     border-bottom:1px solid var(--line); padding:20px 0;
@@ -216,7 +193,6 @@
     font-size:0.92rem; color:#5B6577;
   }
   .faq-item.open .faq-a{ max-height:200px; padding-top:12px; }
-
   /* CTA BAND */
   .cta-band{
     background:linear-gradient(120deg, var(--green), #2E6E48);
@@ -228,12 +204,10 @@
     background:#fff; color:var(--green); font-weight:600; padding:15px 30px; border-radius:100px;
     display:inline-flex; gap:10px; align-items:center;
   }
-
   footer{
     background:var(--navy-deep); color:#8CA0BC; text-align:center; padding:28px 24px; font-size:0.85rem;
   }
   footer a{ color:var(--orange-soft); }
-
   /* FORM */
   .form-section{ background:#fff; }
   .form-card{
@@ -273,7 +247,6 @@
 </style>
 </head>
 <body>
-
 <nav>
   <div class="navbar">
     <div class="logo">AbOnlinEnglish <span>·</span> Dil Eğitimi</div>
@@ -282,89 +255,96 @@
       <a href="/">Kendin Öğren</a>
       <a href="/roadmap">Yol Haritası</a>
       <a href="/ielts">IELTS Academy</a>
-      <a href="/ozel-ders" style="color:#fff;">Özel Ders</a>
+      <a href="/ozel-ders" style="color:#fff;">Danışmanlık</a>
     </div>
   </div>
   <a href="#talep-formu" class="subbar">
     <span class="subbar-dot"></span>
-    Ders Talep Formu — hemen doldur, sana ulaşalım
+    Danışmanlık Formu — hemen doldur, seni doğru öğretmenle buluşturalım
     <span class="subbar-arrow">↓</span>
   </a>
 </nav>
-
 <header class="hero">
   <div class="wrap hero-grid">
     <div>
-      <span class="eyebrow">Birebir Online Eğitim</span>
-      <h1>Kendi öğretmenin,<br><em>kendi programın.</em></h1>
-      <p class="lead">A1'den C1'e, seviyene ve hedefine göre kurulan birebir dersler. Kalabalık sınıf yok, hazır müfredat yok — sadece senin eksiklerine odaklanan bir program.</p>
+      <span class="eyebrow">Öğretmen Eşleştirme Danışmanlığı</span>
+      <h1>Sana uygun öğretmen,<br><em>sana uygun program.</em></h1>
+      <p class="lead">Binlerce İngilizce öğretmenini bir araya getiren geniş bir öğretmen ağı arkanızda. İstediğiniz ve hedeflediğiniz şeye göre, bu ağdaki binlerce öğretmen arasından sana en uygun olanı buluruz. Kalabalık sınıf yok, hazır müfredat yok — istediğin an ücretsiz danışabilirsin.</p>
       <div class="cta-row">
-        <a class="btn-primary" href="#talep-formu">Ders Talep Formunu Doldur →</a>
-        <span class="micro">İlk ders ücretsiz · Taahhüt yok</span>
+        <a class="btn-primary" href="#talep-formu">Danışmanlık Talep Formunu Doldur →</a>
+        <span class="micro">İstediğin an ücretsiz danışabilirsin · Taahhüt yok</span>
       </div>
-    </div>
-    <div class="schedule-card">
-      <h3>Örnek Haftalık Program</h3>
-      <div class="sched-row">
-        <div class="sched-day">Pzt</div>
-        <div class="sched-day on">Sal</div>
-        <div class="sched-day">Çar</div>
-        <div class="sched-day on">Per</div>
-        <div class="sched-day">Cum</div>
-        <div class="sched-day active">Cmt</div>
-        <div class="sched-day">Paz</div>
-      </div>
-      <div class="sched-note"><b>Sen belirlersin.</b> Ders günleri ve saatleri senin programına göre ayarlanır, sabit bir takvime bağlı değilsin.</div>
     </div>
   </div>
 </header>
-
 <div class="stats">
   <div class="wrap">
     <div class="stat"><b>A1 – C1</b><span>Tüm seviyeler</span></div>
-    <div class="stat"><b>1:1</b><span>Birebir ders formatı</span></div>
+    <div class="stat"><b>1:1</b><span>Birebir öğretmen eşleştirme</span></div>
     <div class="stat"><b>Esnek</b><span>Kendi saatini seç</span></div>
-    <div class="stat"><b>Ücretsiz</b><span>İlk deneme dersi</span></div>
+    <div class="stat"><b>Ücretsiz</b><span>İstediğin an danış</span></div>
   </div>
 </div>
-
+<section class="network-section">
+  <div class="wrap">
+    <div class="section-head" style="margin:0 auto 24px; text-align:center; max-width:640px;">
+      <div class="section-eyebrow" style="text-align:center;">Arkanızdaki Ağ</div>
+      <h2>Binlerce öğretmenden oluşan bir ağ arkanızda.</h2>
+      <p>İstediğiniz ve hedeflediğiniz şeye göre, bu geniş öğretmen ağı içinden size en uygun olanı buluruz — istediğiniz an ücretsiz danışabilirsiniz.</p>
+    </div>
+    <div class="network-grid">
+      <div class="network-card">
+        <b>42,2 B+</b>
+        <span>İngilizce Öğretmenleri Dayanışma Grubu üyesi</span>
+      </div>
+      <div class="network-card">
+        <b>28,5 B+</b>
+        <span>Öğretmen topluluğu Instagram takipçisi</span>
+      </div>
+      <div class="network-card">
+        <b>7,96 B+</b>
+        <span>YouTube abonesi</span>
+      </div>
+    </div>
+    <p class="network-note">Bu geniş öğretmen ağı, ihtiyacınıza en uygun öğretmeni bulmanızı kolaylaştırır. Genel İngilizce, konuşma pratiği, LGS, IELTS ya da başka bir hedefiniz olsun — istediğiniz an ücretsiz danışabilirsiniz.</p>
+  </div>
+</section>
 <section>
   <div class="wrap">
     <div class="section-head">
-      <div class="section-eyebrow">Neden Özel Ders</div>
+      <div class="section-eyebrow">Neden Danışmanlık</div>
       <h2>Grup dersinde kaybolan şey: sen.</h2>
-      <p>Özel derste program sana göre şekillenir — sen programa göre değil.</p>
+      <p>Danışmanlık sürecinde program sana göre şekillenir — sen programa göre değil.</p>
     </div>
     <div class="why-grid">
       <div class="why-card">
         <div class="ico">✎</div>
         <h4>Kişiye özel program</h4>
-        <p>Seviye testiyle belirlenen, sadece senin eksiklerine odaklanan bir müfredat. Genel bir ders kitabı takip edilmez.</p>
+        <p>Seviye testiyle belirlenen, sadece senin eksiklerine odaklanan bir yönlendirme. Genel bir ders kitabı takip edilmez.</p>
       </div>
       <div class="why-card">
         <div class="ico">🕓</div>
-        <h4>Esnek ders saatleri</h4>
+        <h4>Esnek görüşme saatleri</h4>
         <p>İş, okul ya da diğer programlarına göre gün ve saat sen belirlersin. Sabit bir takvime bağlı kalmazsın.</p>
       </div>
       <div class="why-card">
         <div class="ico">💬</div>
-        <h4>Hedefe göre içerik</h4>
-        <p>Konuşma pratiği, gramer, IELTS ya da YDS hazırlığı — hangi hedefin varsa ders içeriği ona göre kurulur.</p>
+        <h4>Hedefe göre yönlendirme</h4>
+        <p>Konuşma pratiği, gramer, IELTS ya da YDS hazırlığı — hangi hedefin varsa, ağımızdaki binlerce öğretmen arasından ona en uygun olana yönlendirilirsin.</p>
       </div>
       <div class="why-card">
         <div class="ico">🎁</div>
         <h4>Risk almadan başla</h4>
-        <p>İlk ders ücretsiz. Öğretmeni ve dersin işleyişini görmeden hiçbir ödeme yapmazsın.</p>
+        <p>İlk görüşme ücretsiz. Sana önerilen öğretmeni ve sürecin işleyişini görmeden hiçbir ödeme yapmazsın.</p>
       </div>
     </div>
   </div>
 </section>
-
 <section class="steps">
   <div class="wrap">
     <div class="section-head">
       <div class="section-eyebrow">Nasıl Başlarım</div>
-      <h2>Üç adımda ilk dersine kadar</h2>
+      <h2>Üç adımda doğru öğretmene ulaş</h2>
       <p>Kayıt formu yok, uzun süreç yok. WhatsApp üzerinden başlıyor.</p>
     </div>
     <div class="step-line">
@@ -376,17 +356,16 @@
       <div class="step">
         <span class="num">02</span>
         <h4>WhatsApp'tan yaz</h4>
-        <p>Sonucunu bize ilet, uygun gün ve saatleri birlikte konuşalım.</p>
+        <p>Sonucunu ve hedefini bize ilet; sahip olduğumuz öğretmen toplulukları aracılığıyla sana en uygun öğretmeni ve uygun gün/saatleri birlikte konuşalım.</p>
       </div>
       <div class="step">
         <span class="num">03</span>
-        <h4>İlk dersini dene</h4>
-        <p>Ücretsiz ilk dersle öğretmeni ve ders akışını gör, sonra karar ver.</p>
+        <h4>İlk dersini ücretsiz dene</h4>
+        <p>Önerilen öğretmenle ücretsiz ilk derste süreç sana uygun mu gör, sonra karar ver.</p>
       </div>
     </div>
   </div>
 </section>
-
 <section>
   <div class="wrap" style="max-width:760px;">
     <div class="section-head">
@@ -395,7 +374,11 @@
     </div>
     <div class="faq">
       <div class="faq-item">
-        <div class="faq-q">Özel ders ne kadar sürer, haftada kaç ders önerilir? <span class="plus">+</span></div>
+        <div class="faq-q">Öğretmen ağınız ne kadar büyük, eşleştirmeyi nasıl yapıyorsunuz? <span class="plus">+</span></div>
+        <div class="faq-a">Binlerce İngilizce öğretmenini bir araya getiren geniş bir topluluğun parçasıyız. İhtiyacınızı ve hedefinizi anladıktan sonra bu ağdaki en uygun öğretmene yönlendiriyoruz; istediğiniz an ücretsiz danışabilirsiniz.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Dersler ne kadar sürer, haftada kaç ders önerilir? <span class="plus">+</span></div>
         <div class="faq-a">Dersler genellikle 45–60 dakika sürer. Çoğu öğrenci için haftada 2 ders ilerlemeyi görmek açısından yeterli, yoğun hazırlıklarda (IELTS/YDS gibi) 3 derse çıkılabilir.</div>
       </div>
       <div class="faq-item">
@@ -404,36 +387,27 @@
       </div>
       <div class="faq-item">
         <div class="faq-q">Ders materyali platformdaki içeriklerle bağlantılı mı? <span class="plus">+</span></div>
-        <div class="faq-a">Evet. Kendin Öğren platformundaki grammar, reading ve hikâye içerikleri özel ders programının da temelini oluşturur — dersler bu içeriklerle desteklenir.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">Fiyatlandırma nasıl? <span class="plus">+</span></div>
-        <div class="faq-a">Ders paketine ve sıklığına göre değişiyor. Güncel fiyatları öğrenmek için WhatsApp'tan yazman yeterli.</div>
+        <div class="faq-a">Evet. Kendin Öğren platformundaki grammar, reading ve hikâye içerikleri danışmanlık sürecinin de temelini oluşturur — dersler bu içeriklerle desteklenir.</div>
       </div>
     </div>
   </div>
 </section>
-
-
 <section class="form-section" id="talep-formu">
   <div class="wrap" style="max-width:760px;">
     <div class="section-head" style="margin:0 auto 32px; text-align:center;">
-      <div class="section-eyebrow" style="text-align:center;">Ders Talep Formu</div>
-      <h2>Bilgilerini bırak, biz sana ulaşalım.</h2>
-      <p>Formu doldur — mesaj hazır şekilde WhatsApp'a düşsün, sana en uygun saatleri konuşalım.</p>
+      <div class="section-eyebrow" style="text-align:center;">Danışmanlık Formu</div>
+      <h2>Bilgilerini bırak, seni doğru öğretmenle buluşturalım.</h2>
+      <p>Formu doldur — mesajın hazır şekilde WhatsApp'a düşsün, sana en uygun öğretmeni ve saatleri birlikte belirleyelim.</p>
     </div>
-
     <form class="form-card form-grid" id="dersForm">
       <div class="field full">
         <label for="adsoyad">Ad Soyad</label>
         <input type="text" id="adsoyad" name="adsoyad" placeholder="Adın Soyadın" required>
       </div>
-
       <div class="field">
         <label for="yas">Yaş</label>
         <input type="number" id="yas" name="yas" placeholder="Örn. 24" min="5" max="99" required>
       </div>
-
       <div class="field">
         <label for="seviye">Seviye</label>
         <select id="seviye" name="seviye" required>
@@ -446,7 +420,6 @@
           <option value="C1 - İleri">C1 — İleri</option>
         </select>
       </div>
-
       <div class="field">
         <label for="haftalik">Haftada Kaç Ders</label>
         <select id="haftalik" name="haftalik" required>
@@ -457,9 +430,8 @@
           <option value="3+ ders / hafta">3+ ders / hafta</option>
         </select>
       </div>
-
       <div class="field">
-        <label for="sebep-secim">Ders Talep Sebebi</label>
+        <label for="sebep-secim">Danışmanlık Talep Sebebi</label>
         <select id="sebep-secim" name="sebep-secim" required>
           <option value="" disabled selected>Seç</option>
           <option value="Genel İngilizce / Konuşma">Genel İngilizce / Konuşma</option>
@@ -469,54 +441,44 @@
           <option value="Diğer">Diğer</option>
         </select>
       </div>
-
       <div class="field full">
         <label for="not">Eklemek istediğin bir şey var mı? (opsiyonel)</label>
         <textarea id="not" name="not" placeholder="Örn. hafta içi akşamları uygunum, konuşma pratiğine ağırlık vermek istiyorum..."></textarea>
       </div>
-
       <button type="submit" class="form-submit">WhatsApp'ta Gönder →</button>
       <div class="form-foot">Gönder'e bastığında WhatsApp açılır, mesajın hazır şekilde gelir — sadece onaylayıp yollaman yeterli.</div>
     </form>
   </div>
 </section>
-
 <div class="cta-band">
-  <h2>İlk dersini bugün dene.</h2>
-  <p>Taahhüt yok, risk yok — sadece bir WhatsApp mesajı uzağında.</p>
+  <h2>Danışmanlığına bugün başla.</h2>
+  <p>Binlerce öğretmenden oluşan ağımızla, istediğin an ücretsiz danışabilirsin — taahhüt yok, risk yok, sadece bir WhatsApp mesajı uzağında.</p>
   <a class="btn-white" href="https://wa.me/905446405749" target="_blank">WhatsApp'tan Yaz →</a>
 </div>
-
 <footer>
-  AbOnlinEnglish · Online İngilizce Özel Ders &nbsp;·&nbsp; <a href="mailto:ingilizceogrensene@gmail.com">ingilizceogrensene@gmail.com</a>
+  AbOnlinEnglish · Online İngilizce Danışmanlığı &nbsp;·&nbsp; <a href="mailto:ingilizceogrensene@gmail.com">ingilizceogrensene@gmail.com</a>
 </footer>
-
-<a href="#talep-formu" class="float-cta" id="floatCta">📋 Ders Talep Formu</a>
-
+<a href="#talep-formu" class="float-cta" id="floatCta">📋 Danışmanlık Formu</a>
 <script>
   document.querySelectorAll('.faq-q').forEach(q=>{
     q.addEventListener('click', ()=>{
       q.parentElement.classList.toggle('open');
     });
   });
-
   document.getElementById('dersForm').addEventListener('submit', function(e){
     e.preventDefault();
     const f = new FormData(this);
     const msg =
-`Merhaba, özel ders talebim var:
-
+`Merhaba, danışmanlık talebim var:
 Ad Soyad: ${f.get('adsoyad')}
 Yaş: ${f.get('yas')}
 Seviye: ${f.get('seviye')}
 Haftada Kaç Ders: ${f.get('haftalik')}
-Ders Talep Sebebi: ${f.get('sebep-secim')}
+Danışmanlık Talep Sebebi: ${f.get('sebep-secim')}
 Not: ${f.get('not') || '-'}`;
-
     const url = 'https://wa.me/905446405749?text=' + encodeURIComponent(msg);
     window.open(url, '_blank');
   });
-
   // floating CTA: show after scrolling past hero, hide once form itself is in view
   const floatCta = document.getElementById('floatCta');
   const formSection = document.getElementById('talep-formu');
@@ -528,6 +490,5 @@ Not: ${f.get('not') || '-'}`;
     floatCta.classList.toggle('show', pastHero && !formVisible);
   });
 </script>
-
 </body>
 </html>
