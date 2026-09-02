@@ -30,7 +30,7 @@
       "name": "Seviyemi bilmiyorsam ne yapmalıyım?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Seviyeni belirlemekte zorlanıyorsan online İngilizce ders veya özel ders seçenekleriyle bir öğretmenden destek alabilirsin. Öğretmenimiz seviyeni belirleyip sana özel bir yol haritası çizer."
+        "text": "15 dakikalık ücretsiz seviye tespit sınavını çözerek tam seviyeni öğrenebilirsin. İstersen ayrıca online İngilizce ders veya özel ders seçenekleriyle bir öğretmenden destek alabilirsin."
       }
     },
     {
@@ -39,6 +39,14 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Online İngilizce ders daha genel bir müfredat izlerken, özel ders senin hedeflerine (sınav, iş İngilizcesi, konuşma pratiği vb.) göre birebir hazırlanır."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "İngilizce kısa hikayeler okumak reading becerimi geliştirir mi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Evet. Kısa hikayeler, yeni kelimeleri gerçek bir bağlam içinde öğrenmenin, okuma hızını artırmanın ve dilbilgisi yapılarını doğal şekilde pekiştirmenin en etkili yollarından biridir."
       }
     },
     {
@@ -383,9 +391,9 @@
   .abo-resource-page .abo-message h2 .abo-hl-orange { color: #FFA45C; }
   .abo-resource-page .abo-message p { font-size: 1.08rem; opacity: 0.92; }
 
-  /* ---------- YOL SEÇ (4 kart) ---------- */
+  /* ---------- YOL SEÇ (6 kart, sıralı) ---------- */
   .abo-resource-page .abo-path-grid {
-    max-width: 1000px;
+    max-width: 1120px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -399,17 +407,41 @@
     border-top: 5px solid var(--abo-orange);
     display: flex;
     flex-direction: column;
+    position: relative;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
   }
-  .abo-resource-page .abo-path-card:nth-child(2) { border-top-color: var(--abo-navy); }
-  .abo-resource-page .abo-path-card:nth-child(3) { border-top-color: var(--abo-green); }
-  .abo-resource-page .abo-path-card:nth-child(4) { border-top-color: #C9412E; }
   .abo-resource-page .abo-path-card:hover { transform: translateY(-6px); box-shadow: var(--abo-shadow-lg); }
   .abo-resource-page .abo-path-card .abo-icon { font-size: 2.1rem; margin-bottom: 14px; }
   .abo-resource-page .abo-path-card h3 { color: var(--abo-navy); margin: 0 0 10px; font-size: 1.15rem; }
   .abo-resource-page .abo-path-card p { color: var(--abo-muted); font-size: 0.92rem; flex-grow: 1; margin: 0 0 18px; }
   .abo-resource-page .abo-path-card .abo-path-link { font-weight: 700; color: var(--abo-orange-dark); }
   .abo-resource-page .abo-path-card .abo-path-link:hover { text-decoration: underline; }
+  .abo-resource-page .abo-path-c1 { border-top-color: var(--abo-orange); }
+  .abo-resource-page .abo-path-c2 { border-top-color: #1F6FEB; }
+  .abo-resource-page .abo-path-c3 { border-top-color: var(--abo-green); }
+  .abo-resource-page .abo-path-c4 { border-top-color: #7B2CBF; }
+  .abo-resource-page .abo-path-c5 { border-top-color: #0D9488; }
+  .abo-resource-page .abo-path-c6 { border-top-color: #C9412E; }
+  /* Öne çıkan ilk kart: Ücretsiz Kaynaklar */
+  .abo-resource-page .abo-path-featured {
+    background: linear-gradient(160deg, #FFF6EC 0%, var(--abo-white) 55%);
+    border: 2px solid rgba(255,122,26,0.35);
+    border-top: 5px solid var(--abo-orange);
+    box-shadow: 0 14px 32px rgba(255,122,26,0.18);
+  }
+  .abo-resource-page .abo-path-featured:hover { box-shadow: 0 20px 42px rgba(255,122,26,0.26); }
+  .abo-resource-page .abo-path-badge {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    background: var(--abo-orange);
+    color: var(--abo-white);
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.03em;
+    padding: 5px 11px;
+    border-radius: 999px;
+  }
   @media (max-width: 980px) { .abo-resource-page .abo-path-grid { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 560px) { .abo-resource-page .abo-path-grid { grid-template-columns: 1fr; } }
 
@@ -860,27 +892,6 @@
     </div>
   </section>
 
-  <!-- ================= HIZLI ERİŞİM ================= -->
-  <section class="abo-quick">
-    <div class="abo-quick-grid">
-      <a href="#abo-kaynaklar" class="abo-quick-card">
-        <div class="abo-icon">📚</div>
-        <h3>Ücretsiz Kaynaklar</h3>
-        <p>Dünyanın en iyi ücretsiz kaynakları</p>
-      </a>
-      <a href="https://abonlinenglish.school/a1-a2-b1-b2-c1-c2#a1" class="abo-quick-card">
-        <div class="abo-icon">🌱</div>
-        <h3>Kendin Öğren</h3>
-        <p>Ücretsiz AbOnlinEnglish içerikleri</p>
-      </a>
-      <a href="https://abonlinenglish.school/ozel-ders#talep-formu" class="abo-quick-card">
-        <div class="abo-icon">👨‍🏫</div>
-        <h3>Online Ders</h3>
-        <p>Hedefine ve seviyene uygun program ve kaynaklarla</p>
-      </a>
-    </div>
-  </section>
-
   <!-- ================= ANA MESAJ ================= -->
   <section class="abo-message">
     <div class="abo-message-inner">
@@ -897,22 +908,41 @@
       <p>Nereden başlayacağını sana bırakmıyoruz — ama son kararı sen veriyorsun.</p>
     </div>
     <div class="abo-path-grid">
-      <div class="abo-path-card">
-        <div class="abo-icon">🌱</div>
-        <h3>Kendin Öğren</h3>
-        <p>Ücretsiz içeriklerle kendi hızında öğren.</p>
-        <a href="https://abonlinenglish.school/a1-a2-b1-b2-c1-c2#a1" class="abo-path-link">Kendin Öğren →</a>
-      </div>
-      <div class="abo-path-card">
+      <div class="abo-path-card abo-path-c1 abo-path-featured">
+        <span class="abo-path-badge">★ 50+ Kaynak</span>
         <div class="abo-icon">📚</div>
         <h3>Ücretsiz Kaynaklar</h3>
-        <p>Listening, Speaking, Reading, Writing, Grammar ve Vocabulary için dünyanın farklı yerlerindeki ücretsiz kaynakları keşfet.</p>
+        <p>YouTube kanalları, podcastler ve web sitelerini seviyene ve amacına göre filtrele.</p>
         <a href="#abo-kaynaklar" class="abo-path-link">Kaynakları Keşfet →</a>
       </div>
-      <div class="abo-path-card">
+      <div class="abo-path-card abo-path-c2">
+        <div class="abo-icon">🎯</div>
+        <h3>Seviye Tespit Sınavı</h3>
+        <p>Nereden başlayacağını bilmiyorsan 15 dakikalık ücretsiz testle tam seviyeni öğren.</p>
+        <a href="https://abonlinenglish.school/placement-test" class="abo-path-link">Teste Başla →</a>
+      </div>
+      <div class="abo-path-card abo-path-c3">
+        <div class="abo-icon">🌱</div>
+        <h3>Kendin Öğren</h3>
+        <p>A1'den C1'e 50 ünite, ücretsiz coursebook içerikleriyle kendi hızında ilerle.</p>
+        <a href="https://abonlinenglish.school/a1-a2-b1-b2-c1-c2#a1" class="abo-path-link">Kendin Öğren →</a>
+      </div>
+      <div class="abo-path-card abo-path-c4">
+        <div class="abo-icon">🧩</div>
+        <h3>Skills</h3>
+        <p>Reading, Writing ve Speaking becerilerini ayrı ayrı, hedefe yönelik çalış.</p>
+        <a href="https://abonlinenglish.school/skills" class="abo-path-link">Skills'e Git →</a>
+      </div>
+      <div class="abo-path-card abo-path-c5">
+        <div class="abo-icon">📖</div>
+        <h3>Hikayeler</h3>
+        <p>Kısa hikayeler okumak; yeni kelimeleri gerçek bağlamda öğrenmenin ve reading hızını artırmanın en etkili yollarından biri.</p>
+        <a href="https://abonlinenglish.school/hikayeler" class="abo-path-link">Hikayeleri Oku →</a>
+      </div>
+      <div class="abo-path-card abo-path-c6">
         <div class="abo-icon">👨‍🏫</div>
-        <h3>Online Ders</h3>
-        <p>Hedefine ve seviyene uygun program ve kaynaklarla</p>
+        <h3>Online Ders Al</h3>
+        <p>Hedefine ve seviyene uygun program ve kaynaklarla, öğretmen desteğiyle ilerle.</p>
         <a href="https://abonlinenglish.school/ozel-ders#talep-formu" class="abo-path-link">Online Ders Al →</a>
       </div>
     </div>
@@ -938,7 +968,6 @@
       <div class="abo-bulb">💡</div>
       <h2 class="abo-display">Unutma: Kendin Öğren, Zorlanırsan Destek Al!</h2>
       <p>Her gün düzenli çalış. Anlamadığın yerde pes etme. Farklı kaynaklar ve yöntemler dene. Yine de zorlanıyorsan bir öğretmenden destek almak öğrenme sürecini kolaylaştırabilir.</p>
-      <a href="https://abonlinenglish.school/ozel-ders#talep-formu" class="abo-btn abo-btn-primary">Online Ders Seçeneklerini İncele →</a>
     </div>
   </section>
 
@@ -1158,7 +1187,8 @@
     { name: "Conversation Exchange", domain: "conversationexchange.com", brand:"#FF7A1A", desc: "Dünyanın dört bir yanından native konuşmacılarla yazışarak, sesli veya görüntülü konuşma pratiği yapmanı sağlayan platform.", levels:["A1","A2","B1","B2","C1","C2"], skills:["Speaking"], purposes:["Genel İngilizce","Self Study"], free:"Tamamen ücretsiz", url:"https://www.conversationexchange.com" },
     { name: "Forvo", domain: "forvo.com", brand:"#4A90D9", desc: "Milyonlarca kelimenin native konuşmacılar tarafından seslendirildiği telaffuz sözlüğü.", levels:["A1","A2","B1","B2","C1","C2"], skills:["Pronunciation"], purposes:["Self Study"], free:"Tamamen ücretsiz", url:"https://forvo.com" },
     { name: "Perfect English Grammar", domain: "perfect-english-grammar.com", brand:"#6D4C41", desc: "Karmaşık gramer konularını sade örneklerle anlatan, alıştırmalarla pekiştiren kaynak.", levels:["A1","A2","B1","B2","C1"], skills:["Grammar"], purposes:["Genel İngilizce","Self Study"], free:"Tamamen ücretsiz", url:"https://www.perfect-english-grammar.com" },
-    { name: "ManyThings", domain: "manythings.org", brand:"#F9A825", desc: "Kelime, dilbilgisi ve dinleme konularında kısa quiz ve oyunlarla pratik yapmanı sağlayan basit ama etkili site.", levels:["A1","A2","B1","B2"], skills:["Vocabulary","Grammar","Listening"], purposes:["Self Study","Children"], free:"Tamamen ücretsiz", url:"https://www.manythings.org" }
+    { name: "ManyThings", domain: "manythings.org", brand:"#F9A825", desc: "Kelime, dilbilgisi ve dinleme konularında kısa quiz ve oyunlarla pratik yapmanı sağlayan basit ama etkili site.", levels:["A1","A2","B1","B2"], skills:["Vocabulary","Grammar","Listening"], purposes:["Self Study","Children"], free:"Tamamen ücretsiz", url:"https://www.manythings.org" },
+    { name: "Cambridge Grammar", domain: "dictionary.cambridge.org", brand:"#A3343B", desc: "Cambridge Sözlük'ün gramer bölümü; 500'den fazla konu, örnek cümle ve alıştırmayla kapsamlı bir gramer referansı.", levels:["A1","A2","B1","B2","C1","C2"], skills:["Grammar"], purposes:["Genel İngilizce","Self Study"], free:"Tamamen ücretsiz", url:"https://dictionary.cambridge.org/grammar/british-grammar/" }
   ];
 
   var LEVELS = ["A1","A2","B1","B2","C1","C2"];
@@ -1299,14 +1329,64 @@
     { name:"British Council LearnEnglish", type:"YouTube", domain:"britishcouncil.org", brand:"#E4067E", levelLabel:"A1–C1", levels:["A1","A2","B1","B2","C1"], skills:["Grammar","Vocabulary","Listening","Speaking"], purposes:["General English","Grammar","Vocabulary","Listening"], free:"Tamamen ücretsiz", url:"https://learnenglish.britishcouncil.org", ytUrl:"https://www.youtube.com/@BritishCouncilLearnEnglish", recommended:true },
     { name:"English with Lucy", type:"YouTube", domain:"englishwithlucy.co.uk", brand:"#D63384", levelLabel:"B1–C1", levels:["B1","B2","C1"], skills:["Pronunciation","Vocabulary","Grammar"], purposes:["Pronunciation","Vocabulary","Grammar","General English"], free:"Tamamen ücretsiz", url:"https://englishwithlucy.co.uk", ytUrl:"https://www.youtube.com/@EnglishwithLucy", recommended:true },
     { name:"Speak English With Vanessa", type:"YouTube", domain:"speakenglishwithvanessa.com", brand:"#FF7A1A", levelLabel:"A2–B2", levels:["A2","B1","B2"], skills:["Speaking","Listening"], purposes:["Speaking","General English"], free:"Tamamen ücretsiz", url:"https://www.speakenglishwithvanessa.com", ytUrl:"https://www.youtube.com/@SpeakEnglishWithVanessa", recommended:true },
+    { name:"English Addict with Mr Steve", type:"YouTube", domain:"youtube.com", brand:"#E63946", levelLabel:"A1–B1", levels:["A1","A2","B1"], skills:["Grammar","Vocabulary","Listening"], purposes:["Grammar","Vocabulary","General English"], free:"Tamamen ücretsiz", url:"https://www.youtube.com/@EnglishAddict", ytUrl:"https://www.youtube.com/@EnglishAddict", recommended:false },
+    { name:"Rachel's English", type:"YouTube", domain:"rachelsenglish.com", brand:"#457B9D", levelLabel:"B1–C1", levels:["B1","B2","C1"], skills:["Pronunciation"], purposes:["Pronunciation","General English"], free:"Tamamen ücretsiz", url:"https://www.rachelsenglish.com", ytUrl:"https://www.youtube.com/@rachelsenglish", recommended:false },
+    { name:"Learn English with TV Series", type:"YouTube", domain:"youtube.com", brand:"#6A4C93", levelLabel:"B1–B2", levels:["B1","B2"], skills:["Listening","Vocabulary"], purposes:["Listening","Vocabulary","General English"], free:"Tamamen ücretsiz", url:"https://www.youtube.com/@LearnEnglishwithTVSeries", ytUrl:"https://www.youtube.com/@LearnEnglishwithTVSeries", recommended:false },
+    { name:"Oxford Online English", type:"YouTube", domain:"oxfordonlineenglish.com", brand:"#002147", levelLabel:"A2–C1", levels:["A2","B1","B2","C1"], skills:["Listening","Grammar","Vocabulary","Speaking"], purposes:["General English","Grammar","Listening"], free:"Tamamen ücretsiz", url:"https://www.oxfordonlineenglish.com", ytUrl:"https://www.youtube.com/@oxfordonlineenglish", recommended:false },
+    { name:"Speak English with Mr. Duncan", type:"YouTube", domain:"youtube.com", brand:"#2A9D8F", levelLabel:"A2–B2", levels:["A2","B1","B2"], skills:["Listening","Speaking"], purposes:["Speaking","General English"], free:"Tamamen ücretsiz", url:"https://www.youtube.com/@DuncanInEngland", ytUrl:"https://www.youtube.com/@DuncanInEngland", recommended:false },
+    { name:"Accent's Way English with Hadar", type:"YouTube", domain:"accentsway.com", brand:"#9D4EDD", levelLabel:"B1–C1", levels:["B1","B2","C1"], skills:["Pronunciation"], purposes:["Pronunciation","General English"], free:"Tamamen ücretsiz", url:"https://www.accentsway.com", ytUrl:"https://www.youtube.com/@AccentsWay", recommended:false },
+    { name:"FluentU English", type:"YouTube", domain:"fluentu.com", brand:"#FFB703", levelLabel:"A2–B2", levels:["A2","B1","B2"], skills:["Listening","Vocabulary"], purposes:["Listening","Vocabulary","General English"], free:"Geniş ücretsiz içerik • Premium seçenek mevcut", url:"https://www.fluentu.com", ytUrl:"https://www.youtube.com/@FluentUEnglish", recommended:false },
     { name:"mmmEnglish", type:"YouTube", domain:"mmmenglish.com", brand:"#8E44AD", levelLabel:"A2–B2", levels:["A2","B1","B2"], skills:["Speaking","Vocabulary","Pronunciation"], purposes:["Speaking","Vocabulary","General English"], free:"Tamamen ücretsiz", url:"https://www.mmmenglish.com", ytUrl:"https://www.youtube.com/@mmmEnglish", recommended:false },
     { name:"RealLife English", type:"YouTube", domain:"reallifeglobal.com", brand:"#2E7D32", levelLabel:"B1–C1", levels:["B1","B2","C1"], skills:["Speaking","Vocabulary"], purposes:["Speaking","General English"], free:"Tamamen ücretsiz", url:"https://reallifeglobal.com", ytUrl:"https://www.youtube.com/@RealLifeEnglish", recommended:false },
     { name:"Luke's English Podcast", type:"Podcast", domain:"teacherluke.co.uk", brand:"#1565C0", levelLabel:"B2–C1+", levels:["B2","C1","C2"], skills:["Listening","Vocabulary"], purposes:["Listening","General English"], free:"Tamamen ücretsiz", url:"https://teacherluke.co.uk", ytUrl:"https://www.youtube.com/@LukesEnglishPodcast", recommended:true },
-    { name:"All Ears English", type:"Podcast", domain:"allearsenglish.com", brand:"#C0392B", levelLabel:"B1–B2", levels:["B1","B2"], skills:["Listening","Speaking"], purposes:["Listening","Speaking","General English"], free:"Tamamen ücretsiz", url:"https://www.allearsenglish.com", ytUrl:"https://www.youtube.com/@AllEarsEnglish", recommended:false },
+    { name:"All Ears English", type:"Podcast", domain:"allearsenglish.com", brand:"#C0392B", levelLabel:"B1–B2", levels:["B1","B2"], skills:["Listening","Speaking"], purposes:["Listening","Speaking","General English"], free:"Tamamen ücretsiz", url:"https://www.allearsenglish.com", ytUrl:"https://www.youtube.com/@AllEarsEnglish", recommended:true },
     { name:"BBC 6 Minute English", type:"Podcast", domain:"bbc.co.uk", brand:"#1B1B1B", levelLabel:"B1–B2", levels:["B1","B2"], skills:["Listening","Vocabulary"], purposes:["Listening","Vocabulary","General English"], free:"Tamamen ücretsiz", url:"https://www.bbc.co.uk/learningenglish/english/features/6-minute-english", ytUrl:"", recommended:true },
     { name:"BBC The English We Speak", type:"Podcast", domain:"bbc.co.uk", brand:"#1B1B1B", levelLabel:"B1–C1", levels:["B1","B2","C1"], skills:["Vocabulary","Listening"], purposes:["Vocabulary","Listening","General English"], free:"Tamamen ücretsiz", url:"https://www.bbc.co.uk/learningenglish/english/features/the-english-we-speak", ytUrl:"", recommended:false },
-    { name:"British Council LearnEnglish Podcasts", type:"Podcast", domain:"britishcouncil.org", brand:"#E4067E", levelLabel:"B1–B2", levels:["B1","B2"], skills:["Listening"], purposes:["Listening","General English"], free:"Tamamen ücretsiz", url:"https://learnenglish.britishcouncil.org/general-english/podcasts", ytUrl:"", recommended:false },
-    { name:"Culips English Podcast", type:"Podcast", domain:"culips.com", brand:"#F5A623", levelLabel:"A2–B2", levels:["A2","B1","B2"], skills:["Listening","Vocabulary"], purposes:["Listening","General English"], free:"Geniş ücretsiz içerik • Premium seçenek mevcut", url:"https://www.culips.com", ytUrl:"", recommended:false }
+    { name:"British Council LearnEnglish Podcasts", type:"Podcast", domain:"britishcouncil.org", brand:"#E4067E", levelLabel:"A1–B2", levels:["A1","A2","B1","B2"], skills:["Listening"], purposes:["Listening","General English"], free:"Tamamen ücretsiz", url:"https://learnenglish.britishcouncil.org/general-english/podcasts", ytUrl:"", recommended:true },
+    { name:"Culips English Podcast", type:"Podcast", domain:"culips.com", brand:"#F5A623", levelLabel:"A2–B2", levels:["A2","B1","B2"], skills:["Listening","Vocabulary"], purposes:["Listening","General English"], free:"Geniş ücretsiz içerik • Premium seçenek mevcut", url:"https://www.culips.com", ytUrl:"", recommended:true },
+    { name:"Coffee Break English", type:"Podcast", domain:"coffeebreaklanguages.com", brand:"#6F4E37", levelLabel:"A1–B1", levels:["A1","A2","B1"], skills:["Listening","Grammar","Vocabulary"], purposes:["Listening","General English"], free:"Geniş ücretsiz içerik • Premium seçenek mevcut", url:"https://coffeebreaklanguages.com", ytUrl:"", recommended:true },
+    { name:"EnglishClass101", type:"Podcast", domain:"englishclass101.com", brand:"#D62828", levelLabel:"A1–B2", levels:["A1","A2","B1","B2"], skills:["Listening","Vocabulary","Pronunciation"], purposes:["Listening","General English"], free:"Geniş ücretsiz içerik • Premium seçenek mevcut", url:"https://www.englishclass101.com", ytUrl:"", recommended:false },
+    { name:"Espresso English Podcast", type:"Podcast", domain:"espressoenglish.net", brand:"#8B4513", levelLabel:"A2–B2", levels:["A2","B1","B2"], skills:["Listening","Grammar","Vocabulary"], purposes:["Listening","Grammar","General English"], free:"Tamamen ücretsiz", url:"https://www.espressoenglish.net", ytUrl:"", recommended:false },
+    { name:"Easy English", type:"Podcast", domain:"easyenglish.fm", brand:"#2E7D32", levelLabel:"A2–B1", levels:["A2","B1"], skills:["Listening","Speaking"], purposes:["Listening","General English"], free:"Tamamen ücretsiz", url:"https://easyenglish.fm", ytUrl:"", recommended:false },
+    { name:"English Made Simple", type:"Podcast", domain:"englishmadesimplepodcast.com", brand:"#1F4E96", levelLabel:"A1–B1", levels:["A1","A2","B1"], skills:["Listening","Vocabulary"], purposes:["Listening","General English"], free:"Tamamen ücretsiz", url:"https://englishmadesimplepodcast.com", ytUrl:"", recommended:false },
+    { name:"English Learning for Curious Minds", type:"Podcast", domain:"leonardoenglish.com", brand:"#0B7C72", levelLabel:"B1–C1", levels:["B1","B2","C1"], skills:["Listening","Vocabulary"], purposes:["Listening","General English"], free:"Tamamen ücretsiz", url:"https://www.leonardoenglish.com", ytUrl:"", recommended:false },
+    { name:"ESLPod", type:"Podcast", domain:"eslpod.com", brand:"#264653", levelLabel:"A2–B2", levels:["A2","B1","B2"], skills:["Listening","Vocabulary"], purposes:["Listening","General English"], free:"Geniş ücretsiz içerik • Premium seçenek mevcut", url:"https://www.eslpod.com", ytUrl:"", recommended:false },
+    { name:"Spotlight English", type:"Podcast", domain:"spotlightenglish.com", brand:"#E76F51", levelLabel:"A2–B1", levels:["A2","B1"], skills:["Listening"], purposes:["Listening","General English"], free:"Tamamen ücretsiz", url:"https://spotlightenglish.com", ytUrl:"", recommended:true },
+    { name:"Slow English", type:"Podcast", domain:"slow-english.info", brand:"#457B9D", levelLabel:"A2–B1", levels:["A2","B1"], skills:["Listening"], purposes:["Listening","General English"], free:"Tamamen ücretsiz", url:"https://slow-english.info", ytUrl:"", recommended:false },
+    { name:"Learn English Through Listening", type:"Podcast", domain:"learnenglishthroughlistening.com", brand:"#3A86FF", levelLabel:"A2–B2", levels:["A2","B1","B2"], skills:["Listening","Vocabulary"], purposes:["Listening","General English"], free:"Tamamen ücretsiz", url:"https://learnenglishthroughlistening.com", ytUrl:"", recommended:false },
+    { name:"Easy Stories in English", type:"Podcast", domain:"easystoriesinenglish.com", brand:"#F4A261", levelLabel:"A2–C1", levels:["A2","B1","B2","C1"], skills:["Listening","Vocabulary"], purposes:["Listening","General English"], free:"Tamamen ücretsiz", url:"https://easystoriesinenglish.com", ytUrl:"", recommended:false },
+    { name:"English with Dane", type:"Podcast", domain:"englishwithdane.com", brand:"#588157", levelLabel:"A2–B2", levels:["A2","B1","B2"], skills:["Listening","Pronunciation"], purposes:["Listening","General English"], free:"Tamamen ücretsiz", url:"https://englishwithdane.com", ytUrl:"", recommended:false },
+    { name:"BBC 6 Minute Vocabulary", type:"Podcast", domain:"bbc.co.uk", brand:"#1B1B1B", levelLabel:"A2–B2", levels:["A2","B1","B2"], skills:["Listening","Vocabulary"], purposes:["Vocabulary","Listening","General English"], free:"Tamamen ücretsiz", url:"https://www.bbc.co.uk/learningenglish/english/features/6-minute-vocabulary", ytUrl:"", recommended:false },
+    { name:"BBC 6 Minute Grammar", type:"Podcast", domain:"bbc.co.uk", brand:"#1B1B1B", levelLabel:"A2–B2", levels:["A2","B1","B2"], skills:["Listening","Grammar"], purposes:["Grammar","Listening","General English"], free:"Tamamen ücretsiz", url:"https://www.bbc.co.uk/learningenglish/english/features/6-minute-grammar", ytUrl:"", recommended:false },
+    { name:"BBC Learning English Stories", type:"Podcast", domain:"bbc.co.uk", brand:"#1B1B1B", levelLabel:"A2–B2", levels:["A2","B1","B2"], skills:["Listening","Vocabulary"], purposes:["Listening","General English"], free:"Tamamen ücretsiz", url:"https://www.bbc.co.uk/learningenglish/english/features/storiesconnect", ytUrl:"", recommended:false },
+    { name:"RealLife English Podcast", type:"Podcast", domain:"reallifeglobal.com", brand:"#2E7D32", levelLabel:"B1–C1", levels:["B1","B2","C1"], skills:["Listening","Speaking"], purposes:["Listening","Speaking","General English"], free:"Tamamen ücretsiz", url:"https://reallifeglobal.com/podcast", ytUrl:"", recommended:true },
+    { name:"Think in English", type:"Podcast", domain:"thinkinenglish.blog", brand:"#9B2226", levelLabel:"B1–C1", levels:["B1","B2","C1"], skills:["Listening","Vocabulary"], purposes:["Listening","General English"], free:"Tamamen ücretsiz", url:"https://thinkinenglish.blog", ytUrl:"", recommended:false },
+    { name:"Plain English", type:"Podcast", domain:"plainenglish.com", brand:"#606C38", levelLabel:"B1–B2", levels:["B1","B2"], skills:["Listening","Vocabulary"], purposes:["Listening","News","General English"], free:"Tamamen ücretsiz", url:"https://plainenglish.com", ytUrl:"", recommended:false },
+    { name:"The British English Podcast", type:"Podcast", domain:"thebritishenglishpodcast.com", brand:"#003049", levelLabel:"B1–C1", levels:["B1","B2","C1"], skills:["Listening","Vocabulary"], purposes:["Listening","General English"], free:"Geniş ücretsiz içerik • Premium seçenek mevcut", url:"https://thebritishenglishpodcast.com", ytUrl:"", recommended:false },
+    { name:"Speak Better English with Harry", type:"Podcast", domain:"speakenglishwithharry.com", brand:"#BC6C25", levelLabel:"B1–C1", levels:["B1","B2","C1"], skills:["Listening","Grammar","Vocabulary"], purposes:["Listening","Grammar","General English"], free:"Tamamen ücretsiz", url:"https://speakenglishwithharry.com", ytUrl:"", recommended:false },
+    { name:"The Level Up English Podcast", type:"Podcast", domain:"levelupenglish.school", brand:"#7209B7", levelLabel:"B1–C1", levels:["B1","B2","C1"], skills:["Listening","Vocabulary"], purposes:["Listening","General English"], free:"Tamamen ücretsiz", url:"https://levelupenglish.school", ytUrl:"", recommended:false },
+    { name:"Rock n' Roll English", type:"Podcast", domain:"rocknrollenglish.com", brand:"#D00000", levelLabel:"B1–C1", levels:["B1","B2","C1"], skills:["Listening","Speaking"], purposes:["Listening","Speaking","General English"], free:"Tamamen ücretsiz", url:"https://www.rocknrollenglish.com", ytUrl:"", recommended:false },
+    { name:"English Vocabulary Booster", type:"Podcast", domain:"englishvocabularybooster.com", brand:"#FB8500", levelLabel:"A2–B2", levels:["A2","B1","B2"], skills:["Listening","Vocabulary"], purposes:["Vocabulary","Listening","General English"], free:"Tamamen ücretsiz", url:"https://englishvocabularybooster.com", ytUrl:"", recommended:false },
+    { name:"American English Podcast", type:"Podcast", domain:"americanenglishpodcast.com", brand:"#023E8A", levelLabel:"B1–C1", levels:["B1","B2","C1"], skills:["Listening","Vocabulary","Pronunciation"], purposes:["Listening","General English"], free:"Tamamen ücretsiz", url:"https://americanenglishpodcast.com", ytUrl:"", recommended:false },
+    { name:"English with Kirsty", type:"Podcast", domain:"englishwithkirsty.com", brand:"#AE2012", levelLabel:"B1–C1", levels:["B1","B2","C1"], skills:["Listening","Speaking"], purposes:["Listening","Speaking","General English"], free:"Tamamen ücretsiz", url:"https://englishwithkirsty.com", ytUrl:"", recommended:false },
+    { name:"Adequate English", type:"Podcast", domain:"adequateenglish.com", brand:"#3D5A80", levelLabel:"B1–C1", levels:["B1","B2","C1"], skills:["Listening","Speaking"], purposes:["Listening","Speaking","General English"], free:"Tamamen ücretsiz", url:"https://adequateenglish.com", ytUrl:"", recommended:false },
+    { name:"Business English Pod", type:"Podcast", domain:"businessenglishpod.com", brand:"#14213D", levelLabel:"B1–C1", levels:["B1","B2","C1"], skills:["Listening","Vocabulary"], purposes:["Business","Listening"], free:"Geniş ücretsiz içerik • Premium seçenek mevcut", url:"https://www.businessenglishpod.com", ytUrl:"", recommended:false },
+    { name:"IELTS Energy English", type:"Podcast", domain:"ieltsenergy.com", brand:"#C0392B", levelLabel:"B1–C1", levels:["B1","B2","C1"], skills:["Listening","Speaking","Vocabulary"], purposes:["Exam","Listening"], free:"Tamamen ücretsiz", url:"https://ieltsenergy.com", ytUrl:"", recommended:false },
+    { name:"StoryLearning Podcast", type:"Podcast", domain:"storylearning.com", brand:"#5F0F40", levelLabel:"B1–C1", levels:["B1","B2","C1"], skills:["Listening","Vocabulary"], purposes:["Listening","General English"], free:"Tamamen ücretsiz", url:"https://storylearning.com", ytUrl:"", recommended:false },
+    { name:"Grammar Girl", type:"Podcast", domain:"quickanddirtytips.com", brand:"#6A4C93", levelLabel:"B2–C1", levels:["B2","C1"], skills:["Grammar"], purposes:["Grammar","Listening"], free:"Tamamen ücretsiz", url:"https://www.quickanddirtytips.com/grammar-girl", ytUrl:"", recommended:false },
+    { name:"Aussie English", type:"Podcast", domain:"aussieenglish.com.au", brand:"#FFB703", levelLabel:"B1–C1", levels:["B1","B2","C1"], skills:["Listening","Speaking"], purposes:["Listening","Speaking","General English"], free:"Geniş ücretsiz içerik • Premium seçenek mevcut", url:"https://aussieenglish.com.au", ytUrl:"", recommended:false },
+    { name:"Thinking in English", type:"Podcast", domain:"thinkinginenglish.blog", brand:"#293241", levelLabel:"B1–C1", levels:["B1","B2","C1"], skills:["Listening","Vocabulary"], purposes:["Listening","General English"], free:"Tamamen ücretsiz", url:"https://thinkinginenglish.blog", ytUrl:"", recommended:false },
+    { name:"Better at English", type:"Podcast", domain:"betteratenglish.com", brand:"#2A9D8F", levelLabel:"B1–C1", levels:["B1","B2","C1"], skills:["Listening","Vocabulary"], purposes:["Listening","General English"], free:"Tamamen ücretsiz", url:"https://www.betteratenglish.com", ytUrl:"", recommended:false },
+    { name:"Splendid Speaking", type:"Podcast", domain:"splendid-speaking.com", brand:"#9D4EDD", levelLabel:"B2–C1", levels:["B2","C1"], skills:["Speaking","Listening"], purposes:["Speaking","Exam"], free:"Geniş ücretsiz içerik • Premium seçenek mevcut", url:"https://splendid-speaking.com", ytUrl:"", recommended:false },
+    { name:"Effortless English Podcast", type:"Podcast", domain:"effortlessenglishclub.com", brand:"#F77F00", levelLabel:"A2–B2", levels:["A2","B1","B2"], skills:["Listening","Speaking"], purposes:["Listening","Speaking","General English"], free:"Tamamen ücretsiz", url:"https://effortlessenglishclub.com", ytUrl:"", recommended:false },
+    { name:"English Across the Pond", type:"Podcast", domain:"englishacrossthepond.com", brand:"#005F73", levelLabel:"B1–C1", levels:["B1","B2","C1"], skills:["Listening","Vocabulary"], purposes:["Listening","General English"], free:"Tamamen ücretsiz", url:"https://englishacrossthepond.com", ytUrl:"", recommended:false },
+    { name:"Happy English Podcast", type:"Podcast", domain:"happyenglish.com", brand:"#EE9B00", levelLabel:"A2–B2", levels:["A2","B1","B2"], skills:["Listening","Vocabulary","Grammar"], purposes:["Listening","General English"], free:"Tamamen ücretsiz", url:"https://happyenglish.com", ytUrl:"", recommended:false },
+    { name:"Down to Business English", type:"Podcast", domain:"downtobusinessenglish.com", brand:"#001219", levelLabel:"B1–C1", levels:["B1","B2","C1"], skills:["Listening","Vocabulary"], purposes:["Business","Listening"], free:"Tamamen ücretsiz", url:"https://www.downtobusinessenglish.com", ytUrl:"", recommended:false },
+    { name:"Stuff You Should Know", type:"Podcast", domain:"stuffyoushouldknow.com", brand:"#BB3E03", levelLabel:"B2–C1", levels:["B2","C1"], skills:["Listening"], purposes:["Listening","General English"], free:"Tamamen ücretsiz", url:"https://www.stuffyoushouldknow.com", ytUrl:"", recommended:true },
+    { name:"TED Talks Daily", type:"Podcast", domain:"ted.com", brand:"#E62B1E", levelLabel:"B2–C2", levels:["B2","C1","C2"], skills:["Listening","Vocabulary"], purposes:["Listening","General English"], free:"Tamamen ücretsiz", url:"https://www.ted.com/talks", ytUrl:"", recommended:true },
+    { name:"The Daily", type:"Podcast", domain:"nytimes.com", brand:"#000000", levelLabel:"B2–C2", levels:["B2","C1","C2"], skills:["Listening"], purposes:["Listening","News"], free:"Tamamen ücretsiz", url:"https://www.nytimes.com/column/the-daily", ytUrl:"", recommended:true },
+    { name:"Science Vs", type:"Podcast", domain:"gimletmedia.com", brand:"#4361EE", levelLabel:"B2–C1", levels:["B2","C1"], skills:["Listening"], purposes:["Listening","General English"], free:"Tamamen ücretsiz", url:"https://gimletmedia.com/shows/science-vs", ytUrl:"", recommended:false },
+    { name:"No Such Thing As A Fish", type:"Podcast", domain:"nosuchthingasafish.com", brand:"#3A0CA3", levelLabel:"B2–C2", levels:["B2","C1","C2"], skills:["Listening"], purposes:["Listening","General English"], free:"Tamamen ücretsiz", url:"https://www.nosuchthingasafish.com", ytUrl:"", recommended:false }
   ];
 
   var IELTS_MEDIA = [
@@ -1314,7 +1394,10 @@
     { name:"British Council TakeIELTS", org:"British Council (resmî sınav ortağı)", domain:"takeielts.britishcouncil.org", brand:"#E4067E", badge:"official", skills:["Listening","Reading","Writing","Speaking"], levelLabel:"B1–C2", free:"Geniş ücretsiz içerik • Premium seçenek mevcut", desc:"British Council'ın resmî IELTS hazırlık kaynakları: örnek sorular, video ipuçları ve sınav rehberi.", url:"https://takeielts.britishcouncil.org", ytUrl:"https://www.youtube.com/@BritishCouncilLearnEnglish", recommended:true },
     { name:"IELTS Liz", org:"Liz (bağımsız IELTS öğretmeni)", domain:"ieltsliz.com", brand:"#FF7A1A", badge:"teacher", skills:["Listening","Reading","Writing","Speaking"], levelLabel:"B1–C1", free:"Geniş ücretsiz içerik • Premium seçenek mevcut", desc:"Deneyimli bir IELTS öğretmeninden band puanını yükseltmeye yönelik pratik yazma ve konuşma stratejileri.", url:"https://ieltsliz.com", ytUrl:"https://www.youtube.com/@ieltsliz", recommended:true },
     { name:"IELTS Advantage", org:"IELTS Advantage (öğretmen platformu)", domain:"ieltsadvantage.com", brand:"#2E7D32", badge:"teacher", skills:["Writing","Speaking","Reading"], levelLabel:"B1–C1", free:"Geniş ücretsiz içerik • Premium seçenek mevcut", desc:"Yüksek band hedefleyen öğrenciler için writing ve speaking'e odaklanan strateji rehberleri.", url:"https://www.ieltsadvantage.com", ytUrl:"https://www.youtube.com/@IELTSAdvantage", recommended:true },
-    { name:"E2 IELTS", org:"E2 Language (öğretmen platformu)", domain:"e2language.com", brand:"#1565C0", badge:"teacher", skills:["Listening","Reading","Writing","Speaking"], levelLabel:"B1–C2", free:"Geniş ücretsiz içerik • Premium seçenek mevcut", desc:"Dört skill için video dersler ve örnek sorularla yapılandırılmış IELTS hazırlık materyalleri.", url:"https://www.e2language.com", ytUrl:"https://www.youtube.com/@E2IELTS", recommended:false }
+    { name:"E2 IELTS", org:"E2 Language (öğretmen platformu)", domain:"e2language.com", brand:"#1565C0", badge:"teacher", skills:["Listening","Reading","Writing","Speaking"], levelLabel:"B1–C2", free:"Geniş ücretsiz içerik • Premium seçenek mevcut", desc:"Dört skill için video dersler ve örnek sorularla yapılandırılmış IELTS hazırlık materyalleri.", url:"https://www.e2language.com", ytUrl:"https://www.youtube.com/@E2IELTS", recommended:false },
+    { name:"IELTS Podcast", org:"Ben Worthington (bağımsız IELTS öğretmeni)", domain:"ieltspodcast.com", brand:"#3A0CA3", badge:"teacher", skills:["Listening","Speaking"], levelLabel:"B1–C1", free:"Geniş ücretsiz içerik • Premium seçenek mevcut", desc:"Podcast formatında IELTS stratejileri, gerçek öğrenci örnekleri ve listening pratiği.", url:"https://www.ieltspodcast.com", ytUrl:"https://www.youtube.com/@IELTSPodcast", recommended:false },
+    { name:"Cathoven IELTS", org:"Cathoven (yapay zeka destekli IELTS aracı)", domain:"cathoven.com", brand:"#7209B7", badge:"teacher", skills:["Writing","Speaking"], levelLabel:"B1–C1", free:"Geniş ücretsiz içerik • Premium seçenek mevcut", desc:"Yazma ve konuşma cevaplarına yapay zeka destekli anında geri bildirim ve band tahmini sunar.", url:"https://www.cathoven.com", ytUrl:"", recommended:false },
+    { name:"IELTSbuddy", org:"IELTSbuddy (öğretmen platformu)", domain:"ieltsbuddy.com", brand:"#BC6C25", badge:"teacher", skills:["Writing","Reading"], levelLabel:"B1–C1", free:"Tamamen ücretsiz", desc:"Örnek writing cevapları, model denemeler ve reading pratiğiyle band puanını yükseltmeye odaklanır.", url:"https://www.ieltsbuddy.com", ytUrl:"", recommended:false }
   ];
 
   var TOEFL_MEDIA = [
@@ -1363,7 +1446,7 @@
     var state = { type: null, level: null, purpose: null };
     var LEVELS = ["A1","A2","B1","B2","C1","C2"];
     var TYPES = ["Website","YouTube","Podcast"];
-    var PURPOSES = ["General English","Listening","Speaking","Grammar","Vocabulary","Pronunciation","News"];
+    var PURPOSES = ["General English","Listening","Speaking","Grammar","Vocabulary","Pronunciation","News","Business","Exam"];
 
     function buildChips(containerId, items, group){
       var container = document.getElementById(containerId);
