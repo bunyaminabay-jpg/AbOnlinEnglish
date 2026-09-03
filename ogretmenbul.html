@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Özel Ders & Öğretmen Bul | AbOnlinEnglish</title>
+<meta name="description" content="Seviyenize, hedeflerinize ve ders tercihlerinize uygun İngilizce öğretmenlerini keşfedin.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://ortqjhxoqydzhmimaily.supabase.co">
+<link rel="dns-prefetch" href="https://ortqjhxoqydzhmimaily.supabase.co">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<style>
+:root{
+  --navy:#0F1E3D;
+  --navy-800:#16294D;
+  --navy-700:#1E3560;
+  --orange:#E8720C;
+  --orange-700:#C55E06;
+  --orange-50:#FDF1E4;
+  --green:#1E7D42;
+  --green-50:#E9F6EE;
+  --red:#C0342C;
+  --red-50:#FBEAE9;
+  --ink:#1B2230;
+  --ink-soft:#667085;
+  --ink-faint:#98A2B3;
+  --bg:#F7F7F5;
+  --surface:#FFFFFF;
+  --border:#E4E7EB;
+  --border-strong:#D0D5DD;
+  --shadow-sm:0 1px 2px rgba(16,24,40,.05);
+  --shadow-md:0 4px 12px rgba(16,24,40,.08);
+  --shadow-lg:0 12px 32px rgba(16,24,40,.12);
+  --r-sm:8px; --r-md:12px; --r-lg:18px;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+button:focus{outline:none;}
+button:focus-visible{outline:2px solid var(--orange);outline-offset:2px;border-radius:4px;}
+a:focus-visible{outline:2px solid var(--orange);outline-offset:2px;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:'Inter',system-ui,sans-serif;
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.55;
+  font-size:15px;
+}
+h1,h2,h3,h4{
+  font-family:'Manrope',system-ui,sans-serif;
+  color:var(--navy);
+  margin:0 0 .5em;
+  line-height:1.2;
+  letter-spacing:-.01em;
+}
+a{color:inherit;}
+button{font-family:inherit;cursor:pointer;}
+img{max-width:100%;display:block;}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px;}
+.icon{width:16px;height:16px;flex-shrink:0;vertical-align:-3px;}
+.icon-lg{width:20px;height:20px;}
+
+/* -------- Header -------- */
+header.site{
+  position:sticky;top:0;z-index:40;
+  background:rgba(255,255,255,.95);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--border);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:12px 24px;max-width:1200px;margin:0 auto;gap:20px;}
+.brand{display:flex;align-items:center;gap:10px;font-family:'Manrope';font-weight:700;font-size:1.02rem;color:var(--navy);text-decoration:none;cursor:pointer;background:none;border:none;padding:4px 0;}
+.brand .mark{width:38px;height:38px;border-radius:50%;flex-shrink:0;overflow:hidden;box-shadow:0 0 0 1px var(--border);}
+.brand .mark img{width:100%;height:100%;object-fit:cover;}
+.navlinks{display:flex;gap:2px;align-items:center;flex-wrap:wrap;}
+.navlinks button,.navlinks a{background:none;border:none;color:var(--ink-soft);font-weight:600;font-size:.87rem;padding:9px 13px;border-radius:8px;text-decoration:none;display:inline-flex;align-items:center;transition:background .16s ease,color .16s ease,transform .12s ease;}
+.navlinks button:hover,.navlinks a:hover{background:var(--orange-50);color:var(--orange-700);transform:translateY(-1px);}
+.navlinks button.active{color:var(--orange-700);background:var(--orange-50);font-weight:700;}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;border-radius:9px;padding:9px 16px;font-weight:600;font-size:.87rem;border:1.5px solid transparent;text-decoration:none;transition:all .12s ease;white-space:nowrap;}
+.btn:active{transform:scale(.97);}
+.btn-primary{background:var(--orange);color:#fff;box-shadow:0 1px 2px rgba(0,0,0,.05);}
+.btn-primary:hover{background:var(--orange-700);}
+.btn-outline{background:var(--surface);border-color:var(--border-strong);color:var(--navy);}
+.btn-outline:hover{border-color:var(--navy);background:var(--bg);}
+.btn-green{background:var(--green);color:#fff;}
+.btn-green:hover{background:#166536;}
+.btn-ghost{background:none;border:none;color:var(--ink-soft);font-weight:600;}
+.btn-ghost:hover{color:var(--navy);}
+.btn-sm{padding:6px 12px;font-size:.8rem;}
+.btn-danger{background:var(--red);color:#fff;}
+.btn-danger:hover{background:#9B241D;}
+.btn-block{width:100%;}
+
+/* -------- Hero -------- */
+.hero{padding:60px 24px 48px;background:linear-gradient(180deg,#FCFBF8 0%,var(--bg) 100%);}
+.hero-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center;}
+.eyebrow{display:inline-flex;align-items:center;gap:6px;font-size:.78rem;font-weight:600;color:var(--orange-700);background:var(--orange-50);padding:5px 12px;border-radius:20px;margin-bottom:16px;}
+.hero h1{font-size:2.5rem;max-width:14ch;}
+.hero p.lead{color:var(--ink-soft);font-size:1.02rem;max-width:44ch;margin-bottom:26px;}
+.hero-ctas{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:30px;}
+.hero-trust{display:flex;gap:30px;flex-wrap:wrap;border-top:1px solid var(--border);padding-top:20px;}
+.hero-trust div{display:flex;align-items:flex-start;gap:8px;}
+.hero-trust div .icon{color:var(--green);margin-top:2px;}
+.hero-trust div b{display:block;font-family:'Manrope';font-size:.86rem;color:var(--navy);}
+.hero-trust div span{font-size:.78rem;color:var(--ink-soft);}
+.hero-visual{position:relative;background:var(--navy);border-radius:20px;padding:28px;color:#fff;min-height:360px;box-shadow:var(--shadow-lg);}
+.hero-visual::after{content:"";position:absolute;inset:0;border-radius:20px;background:radial-gradient(circle at 85% 8%,rgba(232,114,12,.28),transparent 55%);pointer-events:none;}
+.hv-label{font-size:.72rem;text-transform:none;color:rgba(255,255,255,.55);font-weight:600;margin-bottom:10px;}
+.match-card{position:relative;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:16px;margin-bottom:14px;}
+.match-card b{font-family:'Manrope';font-size:.95rem;}
+.match-card .sub{color:rgba(255,255,255,.62);font-size:.82rem;margin-top:4px;}
+.match-line{display:flex;align-items:center;gap:8px;margin:14px 0;color:rgba(255,255,255,.72);font-size:.84rem;padding-left:4px;}
+.match-line .icon{color:var(--orange);}
+.mini-avatars{display:flex;gap:-8px;margin-top:10px;}
+.mini-avatars span{width:26px;height:26px;border-radius:50%;background:var(--orange);border:2px solid var(--navy);display:flex;align-items:center;justify-content:center;font-size:.65rem;font-weight:700;margin-left:-8px;}
+.mini-avatars span:first-child{margin-left:0;}
+
+/* -------- Sections general -------- */
+section.page{padding:44px 24px 72px;}
+.page-head{max-width:640px;margin-bottom:8px;}
+.page-head p{color:var(--ink-soft);margin-top:4px;}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);padding:20px;box-shadow:var(--shadow-sm);}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.form-section{margin-bottom:8px;}
+.form-section + .form-section{margin-top:26px;padding-top:22px;border-top:1px solid var(--border);}
+.form-section h4{font-size:.92rem;display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+.form-section h4 .icon{color:var(--orange);}
+label{display:block;font-size:.8rem;font-weight:600;color:var(--navy);margin:12px 0 6px;}
+input,select,textarea{
+  width:100%;padding:9px 12px;border-radius:8px;border:1.5px solid var(--border);
+  font-family:inherit;font-size:.9rem;background:#fff;color:var(--ink);
+}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--orange);box-shadow:0 0 0 3px var(--orange-50);}
+textarea{resize:vertical;min-height:78px;}
+.check-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px;}
+.chip-check{display:flex;align-items:center;gap:6px;border:1.5px solid var(--border);padding:6px 11px;border-radius:20px;font-size:.8rem;cursor:pointer;background:#fff;font-weight:500;}
+.chip-check:has(input:checked){border-color:var(--orange);background:var(--orange-50);color:var(--orange-700);}
+.chip-check input{width:auto;margin:0;accent-color:var(--orange);}
+.form-actions{margin-top:22px;display:flex;gap:12px;padding-top:18px;border-top:1px solid var(--border);}
+.hint{font-size:.78rem;color:var(--ink-soft);margin-top:6px;}
+.hint a{color:var(--orange-700);font-weight:600;text-decoration:none;}
+.msg{padding:12px 14px;border-radius:10px;font-size:.86rem;margin-bottom:16px;display:flex;align-items:center;gap:8px;}
+.msg-ok{background:var(--green-50);color:var(--green);border:1px solid #C6E8D3;}
+.msg-err{background:var(--red-50);color:var(--red);border:1px solid #F0C9C6;}
+.msg-info{background:var(--orange-50);color:var(--orange-700);border:1px solid #F5DAB6;}
+
+/* -------- Teacher search: sidebar + list -------- */
+.search-shell{display:grid;grid-template-columns:264px 1fr;gap:32px;align-items:start;}
+.filter-panel{position:sticky;top:82px;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);padding:18px;box-shadow:var(--shadow-sm);}
+.filter-panel h4{font-size:.82rem;text-transform:none;color:var(--navy);margin-bottom:16px;display:flex;align-items:center;gap:6px;}
+.filter-group{margin-bottom:16px;}
+.filter-group label{margin:0 0 6px;font-size:.76rem;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.03em;font-weight:700;}
+.filter-group select{font-size:.85rem;padding:8px 10px;}
+.results-bar{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;}
+.results-count{font-size:.86rem;color:var(--ink-soft);}
+.results-count b{color:var(--navy);}
+.teacher-list{display:flex;flex-direction:column;gap:14px;}
+.trow{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);padding:20px;display:grid;grid-template-columns:64px 1fr auto;gap:18px;box-shadow:var(--shadow-sm);transition:box-shadow .15s,border-color .15s;}
+.trow:hover{box-shadow:var(--shadow-md);border-color:var(--border-strong);}
+.avatar{width:64px;height:64px;border-radius:50%;background:var(--orange-50);border:2px solid #fff;box-shadow:0 0 0 1px var(--border);display:flex;align-items:center;justify-content:center;font-family:'Manrope';font-weight:700;color:var(--orange-700);font-size:1.25rem;overflow:hidden;flex-shrink:0;}
+.avatar img{width:100%;height:100%;object-fit:cover;}
+.trow-name{display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+.trow-name h3{font-size:1.02rem;margin:0;}
+.verified{display:inline-flex;align-items:center;gap:3px;font-size:.72rem;font-weight:700;color:var(--green);background:var(--green-50);padding:2px 8px;border-radius:10px;}
+.trow-meta{display:flex;gap:14px;flex-wrap:wrap;font-size:.82rem;color:var(--ink-soft);margin:5px 0 9px;}
+.trow-meta span{display:flex;align-items:center;gap:5px;}
+.trow-meta .icon{color:var(--ink-faint);}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0;}
+.tag{background:var(--bg);color:var(--navy);font-size:.72rem;font-weight:600;padding:4px 10px;border-radius:6px;border:1px solid var(--border);}
+.trow-bio{font-size:.85rem;color:var(--ink-soft);margin-top:6px;max-width:60ch;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;}
+.trow-side{display:flex;flex-direction:column;align-items:flex-end;justify-content:space-between;text-align:right;gap:10px;min-width:130px;}
+.rating{font-size:.82rem;color:var(--ink-soft);display:flex;align-items:center;gap:4px;}
+.rating .icon{color:#F5A623;}
+.price{font-family:'Manrope';font-weight:700;color:var(--navy);font-size:1.05rem;}
+.price span{display:block;font-family:'Inter';font-weight:400;font-size:.72rem;color:var(--ink-faint);}
+.empty{text-align:center;padding:60px 20px;color:var(--ink-soft);background:var(--surface);border:1px dashed var(--border-strong);border-radius:var(--r-md);}
+
+/* -------- Modal -------- */
+.overlay{position:fixed;inset:0;background:rgba(15,30,61,.55);display:none;align-items:flex-start;justify-content:center;z-index:80;padding:40px 20px;overflow-y:auto;}
+.overlay.open{display:flex;}
+.modal{background:#fff;border-radius:18px;max-width:600px;width:100%;overflow:hidden;position:relative;box-shadow:var(--shadow-lg);}
+.modal .close{position:absolute;top:16px;right:16px;background:rgba(255,255,255,.9);border:1px solid var(--border);width:30px;height:30px;border-radius:50%;color:var(--ink-soft);z-index:2;display:flex;align-items:center;justify-content:center;}
+.modal-banner{background:var(--navy);padding:28px;color:#fff;display:flex;gap:16px;align-items:center;}
+.modal-banner .avatar{width:72px;height:72px;font-size:1.6rem;box-shadow:0 0 0 3px rgba(255,255,255,.2);}
+.modal-body{padding:24px 28px 28px;}
+.modal-section{margin-bottom:18px;}
+.modal-section h5{font-size:.76rem;text-transform:uppercase;letter-spacing:.04em;color:var(--ink-faint);font-weight:700;margin-bottom:8px;}
+.modal-footer{padding:18px 28px;border-top:1px solid var(--border);background:var(--bg);}
+
+/* -------- App shell (dashboards) -------- */
+.app-shell{display:grid;grid-template-columns:248px 1fr;min-height:calc(100vh - 200px);border-top:1px solid var(--border);}
+.sidebar{background:var(--surface);border-right:1px solid var(--border);padding:28px 16px;}
+.sidebar-title{font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-faint);padding:0 10px 12px;font-weight:700;}
+.sidebar button{width:100%;display:flex;align-items:center;gap:11px;text-align:left;background:none;border:none;padding:10px 12px;border-radius:9px;font-weight:600;color:var(--ink-soft);font-size:.87rem;margin-bottom:3px;}
+.sidebar button .icon{flex-shrink:0;color:var(--ink-faint);}
+.sidebar button:hover{background:var(--bg);color:var(--navy);}
+.sidebar button.active{background:var(--orange-50);color:var(--orange-700);}
+.sidebar button.active .icon{color:var(--orange-700);}
+.dash-content{padding:36px 44px;}
+.page-title-row{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:28px;flex-wrap:wrap;gap:12px;padding-bottom:20px;border-bottom:1px solid var(--border);}
+.stat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:28px;}
+.stat{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);padding:18px;box-shadow:var(--shadow-sm);display:flex;align-items:center;gap:14px;}
+.stat .stat-icon{width:40px;height:40px;border-radius:10px;background:var(--orange-50);color:var(--orange-700);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.stat b{display:block;font-family:'Manrope';font-size:1.5rem;color:var(--navy);line-height:1.1;}
+.stat span{font-size:.76rem;color:var(--ink-soft);}
+table{width:100%;border-collapse:collapse;font-size:.86rem;}
+th,td{text-align:left;padding:12px 10px;border-bottom:1px solid var(--border);}
+th{color:var(--ink-faint);font-weight:700;font-size:.72rem;text-transform:uppercase;letter-spacing:.03em;background:var(--bg);}
+tbody tr:hover{background:var(--bg);}
+.badge{padding:3px 10px;border-radius:6px;font-size:.72rem;font-weight:700;display:inline-block;}
+.badge-pending{background:#FEF2DA;color:#95610C;}
+.badge-approved{background:var(--green-50);color:var(--green);}
+.badge-rejected{background:var(--red-50);color:var(--red);}
+.badge-suspended{background:#EDE9DF;color:var(--ink-soft);}
+.badge-new{background:#E4ECFB;color:#2354A6;}
+.row-actions{display:flex;gap:6px;flex-wrap:wrap;}
+.msg-thread{display:flex;flex-direction:column;gap:9px;height:360px;overflow-y:auto;padding:16px;background:var(--bg);border-radius:10px 10px 0 0;border:1px solid var(--border);border-bottom:none;}
+.bubble{max-width:72%;padding:9px 13px;border-radius:14px;font-size:.86rem;line-height:1.4;}
+.bubble.mine{align-self:flex-end;background:var(--navy);color:#fff;border-bottom-right-radius:4px;}
+.bubble.theirs{align-self:flex-start;background:#fff;border:1px solid var(--border);border-bottom-left-radius:4px;}
+.msg-compose{display:flex;gap:8px;border:1px solid var(--border);border-top:none;border-radius:0 0 10px 10px;padding:10px;background:#fff;}
+.msg-compose input{border:none;padding:6px;}
+.msg-compose input:focus{box-shadow:none;}
+.thread-item{padding:12px;border-radius:10px;cursor:pointer;border:1px solid transparent;}
+.thread-item:hover{background:var(--bg);}
+.thread-item.active{background:var(--orange-50);border-color:#F5DAB6;}
+.thread-item b{font-size:.87rem;}
+.thread-item .meta{font-size:.72rem;color:var(--ink-faint);margin:2px 0 4px;}
+.thread-item .snippet{font-size:.8rem;color:var(--ink-soft);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+
+footer.site{background:var(--navy);color:rgba(255,255,255,.7);padding:32px 24px;margin-top:60px;}
+footer.site .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.8rem;}
+footer.site a{color:rgba(255,255,255,.7);text-decoration:none;}
+footer.site a:hover{color:#fff;}
+
+.hidden{display:none !important;}
+
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr;}
+  .grid-2,.grid-3,.stat-row{grid-template-columns:1fr;}
+  .search-shell{grid-template-columns:1fr;}
+  .filter-panel{position:static;}
+  .trow{grid-template-columns:52px 1fr;}
+  .trow-side{grid-column:1/-1;flex-direction:row;align-items:center;justify-content:space-between;margin-top:10px;padding-top:10px;border-top:1px solid var(--border);}
+  .app-shell{grid-template-columns:1fr;border-top:none;}
+  .sidebar{display:flex;overflow-x:auto;padding:12px;gap:4px;border-right:none;border-bottom:1px solid var(--border);}
+  .sidebar-title{display:none;}
+  .sidebar button{width:auto;white-space:nowrap;}
+  .dash-content{padding:24px 18px;}
+  .nav{flex-wrap:wrap;padding:10px 16px;}
+  .nav > .brand{order:1;}
+  .nav > #authArea{order:2;margin-left:auto;flex-wrap:nowrap;}
+  .nav > #navlinks{order:3;width:100%;flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;gap:2px;margin-top:10px;padding-top:10px;border-top:1px solid var(--border);-ms-overflow-style:none;scrollbar-width:none;}
+  .nav > #navlinks::-webkit-scrollbar{display:none;}
+  .nav > #navlinks button,.nav > #navlinks a{flex-shrink:0;padding:8px 12px;}
+}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav">
+    <button class="brand" onclick="go('home')">
+      <span class="mark"><img id="brandLogo" alt="AbOnlinEnglish logo"></span>
+      AbOnlinEnglish
+    </button>
+    <nav class="navlinks" id="navlinks">
+      <a href="https://abonlinenglish.school/" title="AbOnlinEnglish Ana Sayfa">Ana Sayfa</a>
+      <a href="https://abonlinenglish.school/hakkimizda.html" title="Hakkımızda">Hakkımızda</a>
+      <button onclick="go('search')" data-route="search">Öğretmen Bul</button>
+      <button onclick="go('request')" data-route="request">Özel Ders Talebi</button>
+      <button onclick="go('teacher-apply')" data-route="teacher-apply">Öğretmen Ol</button>
+    </nav>
+    <div id="authArea" class="navlinks"></div>
+  </div>
+</header>
+
+<main id="app"></main>
+
+<footer class="site">
+  <div class="wrap">
+    <span>© <span id="year"></span> AbOnlinEnglish — İçten bir eğitim, güçlü bir gelecek.</span>
+    <span>
+      <a href="#" onclick="go('privacy');return false;">Gizlilik Politikası</a> ·
+      <a href="#" onclick="go('kvkk');return false;">KVKK Aydınlatma Metni</a> ·
+      <a href="#" onclick="go('terms');return false;">Kullanım Koşulları</a>
+    </span>
+  </div>
+</footer>
+
+<div class="overlay" id="overlay"><div class="modal" id="modalBody"></div></div>
+<div id="topLoader" style="position:fixed;top:0;left:0;height:3px;width:0%;background:var(--orange);z-index:200;transition:width .25s ease,opacity .3s ease;opacity:0;"></div>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* ============================================================
+   ICONS — minimal stroke-style inline SVGs (feather-like)
+   ============================================================ */
+const ICN = {
+  search:'<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>',
+  file:'<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>',
+  users:'<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
+  link:'<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>',
+  chat:'<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>',
+  list:'<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>',
+  grid:'<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>',
+  user:'<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>',
+  pin:'<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>',
+  clock:'<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>',
+  star:'<svg class="icon" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8 5.8 21l1.2-6.9-5-4.9 6.9-1z"/></svg>',
+  shield:'<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>',
+  lock:'<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>',
+  check:'<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>',
+  award:'<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M8.7 13.5L7 22l5-3 5 3-1.7-8.5"/></svg>',
+  book:'<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V2H6.5A2.5 2.5 0 0 0 4 4.5z"/></svg>',
+  tag:'<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 12.9L12.6 21a2 2 0 0 1-2.8 0l-7-7a2 2 0 0 1 0-2.8L11 3h8v8z"/><circle cx="15.5" cy="7.5" r="1.5"/></svg>',
+  target:'<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg>',
+  logout:'<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg>',
+  send:'<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4z"/></svg>',
+};
+
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* ============================================================
+   SUPABASE INIT
+   ============================================================ */
+const SUPABASE_URL = 'https://ortqjhxoqydzhmimaily.supabase.co';
+const SUPABASE_KEY = 'sb_publishable_W5I4c7I9cjbR2610kNQeyQ_0brayHYn';
+const LOGO_URL = 'data:image/png;base64,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';
+document.getElementById('brandLogo').src = LOGO_URL;
+(function(){
+  const link = document.createElement('link');
+  link.rel = 'icon';
+  link.type = 'image/png';
+  link.href = LOGO_URL;
+  document.head.appendChild(link);
+})();
+
+const sb = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+let currentUser = null;
+let currentProfile = null;
+let preselectedTeacherId = null;
+
+const LEVELS = ['A1','A2','B1','B2','C1','C2'];
+const AGE_GROUPS = ['Çocuk (6-11)','Genç (12-17)','Yetişkin (18+)'];
+const SPECIALTIES = ['Genel İngilizce','IELTS','YDS/YÖKDİL','Konuşma Pratiği','Çocuk İngilizcesi','Sınav Hazırlık','İş İngilizcesi','Gramer'];
+const DAYS = ['Pazartesi','Salı','Çarşamba','Perşembe','Cuma','Cumartesi','Pazar'];
+const CITIES_TR = ['Adana','Adıyaman','Afyonkarahisar','Ağrı','Aksaray','Amasya','Ankara','Antalya','Ardahan','Artvin','Aydın','Balıkesir','Bartın','Batman','Bayburt','Bilecik','Bingöl','Bitlis','Bolu','Burdur','Bursa','Çanakkale','Çankırı','Çorum','Denizli','Diyarbakır','Düzce','Edirne','Elazığ','Erzincan','Erzurum','Eskişehir','Gaziantep','Giresun','Gümüşhane','Hakkari','Hatay','Iğdır','Isparta','İstanbul','İzmir','Kahramanmaraş','Karabük','Karaman','Kars','Kastamonu','Kayseri','Kırıkkale','Kırklareli','Kırşehir','Kilis','Kocaeli','Konya','Kütahya','Malatya','Manisa','Mardin','Mersin','Muğla','Muş','Nevşehir','Niğde','Ordu','Osmaniye','Rize','Sakarya','Samsun','Siirt','Sinop','Sivas','Şanlıurfa','Şırnak','Tekirdağ','Tokat','Trabzon','Tunceli','Uşak','Van','Yalova','Yozgat','Zonguldak'];
+const CITIES_AZ = ['Bakı','Gəncə','Sumqayıt','Mingəçevir','Şəki','Lənkəran','Naxçıvan','Şirvan','Şuşa','Xankəndi','Yevlax','Naftalan','Qəbələ','Quba','Zaqatala','İsmayıllı','Qusar','Astara','Şamaxı'];
+function cityOptionsHTML(selectedCity){
+  const opt = c => `<option ${selectedCity===c?'selected':''}>${esc(c)}</option>`;
+  return `
+    <option ${selectedCity==='Online / Şehir farketmez'?'selected':''}>Online / Şehir farketmez</option>
+    <optgroup label="Türkiye">${CITIES_TR.map(opt).join('')}</optgroup>
+    <optgroup label="Azerbaycan">${CITIES_AZ.map(opt).join('')}</optgroup>
+    <option ${selectedCity==='Diğer'?'selected':''}>Diğer</option>
+  `;
+}
+
+function esc(s){ return (s??'').toString().replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+function checklistHTML(name, options, selected=[]){
+  return `<div class="check-row">${options.map(o=>`
+    <label class="chip-check"><input type="checkbox" name="${name}" value="${esc(o)}" ${selected.includes(o)?'checked':''}> ${esc(o)}</label>
+  `).join('')}</div>`;
+}
+function getChecked(form, name){
+  return Array.from(form.querySelectorAll(`input[name="${name}"]:checked`)).map(i=>i.value);
+}
+function openModal(html){
+  document.getElementById('modalBody').innerHTML = `<button class="close" onclick="closeModal()">✕</button>${html}`;
+  document.getElementById('overlay').classList.add('open');
+}
+function closeModal(){ document.getElementById('overlay').classList.remove('open'); }
+document.getElementById('overlay').addEventListener('click', e=>{ if(e.target.id==='overlay') closeModal(); });
+
+/* ============================================================
+   ROUTER
+   ============================================================ */
+const routes = {};
+function route(name, fn){ routes[name] = fn; }
+async function go(name, params={}){
+  window.location.hash = name;
+  document.querySelectorAll('#navlinks button').forEach(b=>b.classList.toggle('active', b.dataset.route===name));
+  const app = document.getElementById('app');
+  const loader = document.getElementById('topLoader');
+  loader.style.opacity = '1';
+  loader.style.width = '30%';
+  window.scrollTo({top:0,behavior:'instant'});
+  try{
+    if(routes[name]) await routes[name](params);
+    else app.innerHTML = `<div class="wrap" style="padding:80px 24px;">Sayfa bulunamadı.</div>`;
+  }catch(err){
+    console.error(err);
+    app.innerHTML = `<div class="wrap" style="padding:80px 24px;"><div class="msg msg-err">Bir hata oluştu: ${esc(err.message||err)}</div></div>`;
+  }
+  loader.style.width = '100%';
+  setTimeout(()=>{ loader.style.opacity = '0'; setTimeout(()=>{ loader.style.width = '0%'; }, 300); }, 150);
+}
+window.addEventListener('hashchange', ()=>{
+  const name = window.location.hash.replace('#','') || 'home';
+  go(name);
+});
+
+/* ============================================================
+   AUTH
+   ============================================================ */
+async function refreshAuth(){
+  const { data: { user } } = await sb.auth.getUser();
+  currentUser = user;
+  if(user){
+    const { data: profile } = await sb.from('profiles').select('*').eq('id', user.id).maybeSingle();
+    currentProfile = profile;
+  } else {
+    currentProfile = null;
+  }
+  renderAuthArea();
+}
+function renderAuthArea(){
+  const el = document.getElementById('authArea');
+  if(currentUser && currentProfile){
+    const dashRoute = currentProfile.role === 'admin' ? 'admin' : (currentProfile.role === 'teacher' ? 'teacher-dash' : 'student-dash');
+    el.innerHTML = `
+      <button class="btn btn-outline btn-sm" onclick="go('${dashRoute}')">${ICN.user} Panelim</button>
+      <button class="btn btn-ghost btn-sm" onclick="doLogout()">Çıkış</button>
+    `;
+  } else {
+    el.innerHTML = `<button class="btn btn-primary btn-sm" onclick="go('login')">Giriş / Kayıt</button>`;
+  }
+}
+async function doLogout(){
+  await sb.auth.signOut();
+  await refreshAuth();
+  go('home');
+}
+sb.auth.onAuthStateChange((_event, _session)=>{ refreshAuth(); });
+
+function requireAuth(role=null){
+  if(!currentUser){ go('login'); return false; }
+  if(role && currentProfile?.role !== role){
+    alert('Bu sayfaya erişim yetkiniz yok.');
+    go('home');
+    return false;
+  }
+  return true;
+}
+
+/* ============================================================
+   HOME
+   ============================================================ */
+route('home', async ()=>{
+  document.getElementById('app').innerHTML = `
+    <section class="hero">
+      <div class="hero-grid">
+        <div>
+          <span class="eyebrow">${ICN.shield} Güvenilir bir yerdesin</span>
+          <h1>İhtiyacına uygun öğretmeni bul.</h1>
+          <p class="lead">İngilizce öğrenme hedefine uygun, deneyimli öğretmenleri keşfet. İletişim bilgilerin ve öğretmenin bilgileri her zaman platform tarafından korunur.</p>
+          <div class="hero-ctas">
+            <button class="btn btn-primary" onclick="go('search')">${ICN.search} Öğretmen Bul</button>
+            <button class="btn btn-outline" onclick="go('request')">${ICN.target} Özel Ders Talebi Oluştur</button>
+            <button class="btn btn-outline" onclick="go('teacher-apply')">${ICN.award} Öğretmen Olarak Başvur</button>
+          </div>
+          <div class="hero-trust">
+            <div>${ICN.check}<div><b>Onaylı</b><span>Her öğretmen admin incelemesinden geçer</span></div></div>
+            <div>${ICN.lock}<div><b>Gizli</b><span>İletişim bilgisi hiçbir zaman ifşa edilmez</span></div></div>
+            <div>${ICN.shield}<div><b>Kontrollü</b><span>İlk temas platform üzerinden</span></div></div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img src="${LOGO_URL}" style="width:34px;height:34px;border-radius:50%;box-shadow:0 0 0 2px rgba(255,255,255,.25);margin-bottom:16px;">
+          <div class="hv-label">TOPLULUĞUMUZ</div>
+          <p style="color:#fff;font-size:1.05rem;font-weight:700;font-family:'Manrope';line-height:1.4;margin:0 0 6px;">Bu sistemin arkasında güçlü bir öğretmen ağı var.</p>
+          <p style="color:rgba(255,255,255,.75);font-size:.86rem;line-height:1.6;margin:0 0 18px;">Öğretmen toplulukları aracılığıyla binlerce öğretmene ulaşma imkanına sahip AbOnlinEnglish ailesinin bir parçasısın.</p>
+          <div class="match-card"><b>42.200+</b><div class="sub">Facebook topluluk üyesi</div></div>
+          <div class="match-card"><b>28.500+</b><div class="sub">Instagram takipçisi (@abonlinenglish)</div></div>
+          <div class="match-card"><b>7.960+</b><div class="sub">YouTube abonesi</div></div>
+          <a href="https://abonlinenglish.school/hakkimizda.html" class="btn btn-outline btn-sm" style="width:100%;margin-top:6px;border-color:rgba(255,255,255,.3);color:#fff;">AbOnlinEnglish Hakkında →</a>
+        </div>
+      </div>
+    </section>
+  `;
+});
+
+/* ============================================================
+   TEACHER SEARCH
+   ============================================================ */
+route('search', async ()=>{
+  const app = document.getElementById('app');
+  app.innerHTML = `
+    <section class="page wrap">
+      <div class="page-head">
+        <h2>İngilizce Öğretmeni Bul</h2>
+        <p>Seviyenize ve hedeflerinize uygun onaylı öğretmenleri filtreleyerek inceleyin.</p>
+      </div>
+      <div class="search-shell" style="margin-top:24px;">
+        <aside class="filter-panel">
+          <h4>${ICN.search} Filtrele</h4>
+          <div class="filter-group"><label>Seviye</label><select id="fLevel"><option value="">Tümü</option>${LEVELS.map(l=>`<option>${l}</option>`).join('')}</select></div>
+          <div class="filter-group"><label>Yaş Grubu</label><select id="fAge"><option value="">Tümü</option>${AGE_GROUPS.map(a=>`<option>${a}</option>`).join('')}</select></div>
+          <div class="filter-group"><label>Uzmanlık</label><select id="fSpec"><option value="">Tümü</option>${SPECIALTIES.map(s=>`<option>${s}</option>`).join('')}</select></div>
+          <div class="filter-group"><label>Ders Türü</label><select id="fType"><option value="">Tümü</option><option value="online">Online</option><option value="yuz_yuze">Yüz Yüze</option><option value="ikisi_de">İkisi de</option></select></div>
+          <div class="filter-group"><label>Şehir</label><select id="fCity"><option value="">Tümü</option>${cityOptionsHTML()}</select></div>
+          <div class="filter-group" style="margin-bottom:0;"><label>Sırala</label><select id="fSort"><option value="rating">Puana göre</option><option value="price_asc">Fiyat: Düşükten yükseğe</option><option value="exp">Deneyime göre</option></select></div>
+        </aside>
+        <div>
+          <div class="results-bar"><span class="results-count" id="resultsCount">Yükleniyor…</span></div>
+          <div id="teacherResults" class="teacher-list"></div>
+        </div>
+      </div>
+    </section>
+  `;
+  ['fLevel','fAge','fSpec','fType','fCity','fSort'].forEach(id=>document.getElementById(id).addEventListener('change', loadTeachers));
+  loadTeachers();
+});
+
+async function loadTeachers(){
+  const resEl = document.getElementById('teacherResults');
+  const countEl = document.getElementById('resultsCount');
+  let q = sb.from('teacher_profiles_public').select('*');
+  const level = document.getElementById('fLevel').value;
+  const age = document.getElementById('fAge').value;
+  const spec = document.getElementById('fSpec').value;
+  const type = document.getElementById('fType').value;
+  const city = document.getElementById('fCity').value;
+  const sort = document.getElementById('fSort').value;
+  if(level) q = q.contains('levels', [level]);
+  if(age) q = q.contains('age_groups', [age]);
+  if(spec) q = q.contains('specialties', [spec]);
+  if(type) q = q.eq('lesson_type', type);
+  if(city) q = q.eq('city', city);
+  const { data, error } = await q;
+  if(error){ resEl.innerHTML = `<div class="msg msg-err">${esc(error.message)}</div>`; countEl.textContent=''; return; }
+  let list = data || [];
+  if(sort==='rating') list.sort((a,b)=> (b.rating_avg||0)-(a.rating_avg||0));
+  else if(sort==='exp') list.sort((a,b)=> (b.experience_years||0)-(a.experience_years||0));
+  else if(sort==='price_asc') list.sort((a,b)=> (parseInt(a.price_range)||9999)-(parseInt(b.price_range)||9999));
+  countEl.innerHTML = `<b>${list.length}</b> öğretmen bulundu`;
+  if(list.length===0){ resEl.innerHTML = `<div class="empty">Bu kriterlere uygun öğretmen bulunamadı.<br>Bir <a href="#" onclick="go('request');return false;" style="color:var(--orange-700);font-weight:600;">özel ders talebi</a> oluşturabilirsiniz, sizin için arayalım.</div>`; return; }
+  resEl.innerHTML = list.map(t=>`
+    <div class="trow">
+      <div class="avatar">${t.photo_url ? `<img src="${esc(t.photo_url)}">` : esc((t.display_name||'?')[0])}</div>
+      <div>
+        <div class="trow-name"><h3>${esc(t.display_name)}</h3>${t.rating_count>0?`<span class="verified">${ICN.check} Onaylı</span>`:''}</div>
+        <div class="trow-meta">
+          ${t.city?`<span>${ICN.pin} ${esc(t.city)}</span>`:''}
+          ${t.experience_years?`<span>${ICN.award} ${t.experience_years} yıl deneyim</span>`:''}
+          <span>${ICN.book} ${({online:'Online',yuz_yuze:'Yüz yüze',ikisi_de:'Online / Yüz yüze'})[t.lesson_type]||'Online'}</span>
+        </div>
+        <div class="tags">${(t.levels||[]).map(l=>`<span class="tag">${esc(l)}</span>`).join('')}${(t.specialties||[]).slice(0,3).map(s=>`<span class="tag">${esc(s)}</span>`).join('')}</div>
+        ${t.bio?`<div class="trow-bio">${esc(t.bio)}</div>`:''}
+      </div>
+      <div class="trow-side">
+        <div>
+          <div class="rating">${t.rating_count>0 ? `${ICN.star} ${t.rating_avg} <span style="color:var(--ink-faint);">(${t.rating_count})</span>` : `<span style="color:var(--ink-faint);">Yeni öğretmen</span>`}</div>
+          <div class="price">${esc(t.price_range||'Sorunuz')}<span>${t.price_range?'ders başına':''}</span></div>
+        </div>
+        <button class="btn btn-primary btn-sm" onclick="goTeacherProfile('${t.id}')">Profili İncele</button>
+      </div>
+    </div>
+  `).join('');
+}
+
+let viewingTeacherId = null;
+function goTeacherProfile(id){ viewingTeacherId = id; go('teacher-profile'); }
+function videoEmbedHTML(url){
+  if(!url) return '';
+  const ytMatch = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/shorts\/)([a-zA-Z0-9_-]{6,})/);
+  if(ytMatch){
+    return `<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;margin-top:8px;"><iframe src="https://www.youtube.com/embed/${ytMatch[1]}" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allowfullscreen></iframe></div>`;
+  }
+  return `<a href="${esc(url)}" target="_blank" rel="noopener" class="btn btn-outline btn-sm" style="margin-top:8px;">${ICN.check} Tanıtım Videosunu İzle</a>`;
+}
+
+route('teacher-profile', async ()=>{
+  const app = document.getElementById('app');
+  if(!viewingTeacherId){ go('search'); return; }
+  const isOwn = currentUser && currentUser.id === viewingTeacherId;
+  const { data: t, error } = isOwn
+    ? await sb.from('teacher_profiles').select('*').eq('id', viewingTeacherId).single()
+    : await sb.from('teacher_profiles_public').select('*').eq('id', viewingTeacherId).single();
+  if(error || !t){ app.innerHTML = `<section class="page wrap"><div class="msg msg-err">Profil bulunamadı.</div></section>`; return; }
+  app.innerHTML = `
+    <section class="page wrap" style="max-width:760px;">
+      <button class="btn btn-ghost btn-sm" style="margin-bottom:16px;" onclick="go('${isOwn?'teacher-dash':'search'}')">← ${isOwn?'Panelime dön':'Öğretmen aramaya dön'}</button>
+      ${isOwn ? `<div class="msg msg-info">${ICN.user} Bu, profilinizin öğrencilere nasıl göründüğünün önizlemesi. Durum: <span class="badge badge-${t.status}">${statusLabel(t.status)}</span></div>` : ''}
+      <div class="card" style="padding:0;overflow:hidden;">
+        <div class="modal-banner">
+          <div class="avatar">${t.photo_url?`<img src="${esc(t.photo_url)}">`:esc((t.display_name||'?')[0])}</div>
+          <div>
+            <h2 style="color:#fff;margin-bottom:2px;">${esc(t.display_name)}</h2>
+            <div style="color:rgba(255,255,255,.7);font-size:.86rem;display:flex;gap:12px;flex-wrap:wrap;">
+              ${t.city?`<span>${ICN.pin} ${esc(t.city)}</span>`:''}
+              ${t.experience_years?`<span>${ICN.award} ${t.experience_years} yıl</span>`:''}
+              ${t.rating_count>0?`<span>${ICN.star} ${t.rating_avg} (${t.rating_count})</span>`:''}
+            </div>
+          </div>
+        </div>
+        <div class="modal-body">
+          ${t.intro_video_url ? `<div class="modal-section"><h5>Tanıtım</h5>${videoEmbedHTML(t.intro_video_url)}</div>` : ''}
+          <div class="modal-section">
+            <h5>Hakkında</h5>
+            <p style="margin:0;">${esc(t.bio||'—')}</p>
+          </div>
+          <div class="modal-section">
+            <h5>Uzmanlık & Seviyeler</h5>
+            <div class="tags">
+              ${(t.levels||[]).map(l=>`<span class="tag">${esc(l)}</span>`).join('')}
+              ${(t.age_groups||[]).map(a=>`<span class="tag">${esc(a)}</span>`).join('')}
+              ${(t.specialties||[]).map(s=>`<span class="tag">${esc(s)}</span>`).join('')}
+            </div>
+          </div>
+          ${t.certificates?`<div class="modal-section"><h5>Sertifikalar</h5><p style="margin:0;">${esc(t.certificates)}</p></div>`:''}
+          <div class="grid-2">
+            <div class="modal-section">
+              <h5>Ders Türü</h5>
+              <p style="margin:0;">${({online:'Online',yuz_yuze:'Yüz yüze',ikisi_de:'Online / Yüz yüze'})[t.lesson_type]||'-'}</p>
+            </div>
+            <div class="modal-section">
+              <h5>Ücret</h5>
+              <p style="margin:0;" class="price">${esc(t.price_range||'Sorunuz')}</p>
+            </div>
+          </div>
+          <div class="modal-section">
+            <h5>Uygunluk</h5>
+            <p style="margin:0;">${(t.available_days||[]).join(', ')||'-'} ${t.available_hours?`· ${esc(t.available_hours)}`:''}</p>
+          </div>
+          <div class="msg msg-info">${ICN.lock} İletişime geçmek için bir özel ders talebi oluşturun — güvenliğiniz için ilk temas platform üzerinden yürütülür.</div>
+        </div>
+        <div class="modal-footer">
+          ${isOwn
+            ? `<button class="btn btn-primary btn-block" onclick="go('teacher-apply')">Profilimi Düzenle</button>`
+            : `<button class="btn btn-primary btn-block" onclick="preselectedTeacherId='${t.id}';go('request')">Bu Öğretmen İçin Talep Oluştur</button>`}
+        </div>
+      </div>
+    </section>
+  `;
+});
+
+/* ============================================================
+   STUDENT REQUEST FORM
+   ============================================================ */
+route('request', async ()=>{
+  const { data: teacherOptions } = await sb.from('teacher_profiles_public').select('id, display_name, city').order('display_name');
+  document.getElementById('app').innerHTML = `
+    <section class="page wrap" style="max-width:720px;">
+      <div class="page-head">
+        <h2>Özel Ders Talebi Oluştur</h2>
+        <p>Formu doldurun, size en uygun öğretmenleri admin ekibimiz belirleyip sizinle platform üzerinden iletişime geçirsin.</p>
+      </div>
+      <div id="reqMsg" style="margin-top:20px;"></div>
+      <form class="card" id="reqForm" style="margin-top:16px;">
+        <div class="form-section">
+          <h4>${ICN.user} Kişisel Bilgiler</h4>
+          <div class="grid-2">
+            <div><label>Ad Soyad</label><input name="ad" required></div>
+            <div><label>Öğrenci Yaşı</label><input name="ogrenci_yasi" type="number" min="3" max="99"></div>
+          </div>
+          <div class="grid-2">
+            <div><label>Telefon</label><input name="telefon" required placeholder="05xx xxx xx xx"></div>
+            <div><label>E-posta</label><input name="email" type="email" required></div>
+          </div>
+          <p class="hint">${ICN.lock} Telefon ve e-posta bilgileriniz hiçbir öğretmene gösterilmez, yalnızca admin ekibimiz tarafından görülür.</p>
+        </div>
+
+        <div class="form-section">
+          <h4>${ICN.target} Ders Tercihleri</h4>
+          <div class="grid-2">
+            <div>
+              <label>İngilizce Seviyesi</label>
+              <select name="seviye"><option value="">Bilmiyorum</option>${LEVELS.map(l=>`<option>${l}</option>`).join('')}</select>
+              <p class="hint">${ICN.target} Bilmiyor musunuz? <a href="https://abonlinenglish.school/placement-test.html" target="_blank" rel="noopener">Ücretsiz seviye tespit sınavı</a> yeni sekmede açılır.</p>
+            </div>
+            <div><label>Şehir</label><select name="sehir">${cityOptionsHTML()}</select></div>
+          </div>
+          <label>Hedef</label><input name="hedef" placeholder="Örn: IELTS 7.0, konuşma pratiği, okul desteği...">
+          <div class="grid-2">
+            <div><label>Ders Türü</label><select name="lesson_type"><option value="online">Online</option><option value="yuz_yuze">Yüz yüze</option><option value="ikisi_de">Farketmez</option></select></div>
+            <div><label>Haftalık Ders Sayısı</label><input name="haftalik_ders_sayisi" type="number" min="1" max="7" value="2"></div>
+          </div>
+          <div class="grid-2">
+            <div><label>Ders Süresi</label><select name="ders_suresi"><option>45 dk</option><option>60 dk</option><option>90 dk</option></select></div>
+            <div><label>Bütçe (ders başına)</label><input name="butce" placeholder="Örn: 750-1500 TL"></div>
+          </div>
+          <label>Tercih Edilen Günler</label>
+          ${checklistHTML('gunler', DAYS)}
+          <label>Tercih Edilen Saatler</label><input name="tercih_saatler" placeholder="Örn: Hafta içi akşam">
+        </div>
+
+        <div class="form-section">
+          <h4>${ICN.award} Öğretmen Tercihi</h4>
+          <label>Tercih Ettiğiniz Öğretmen (opsiyonel)</label>
+          <select name="preferred_teacher_id">
+            <option value="">Farketmez — admin uygun öğretmeni bulsun</option>
+            ${(teacherOptions||[]).map(t=>`<option value="${t.id}">${esc(t.display_name)}${t.city?` — ${esc(t.city)}`:''}</option>`).join('')}
+          </select>
+          <p class="hint">Öğretmen listesinden birini incelediyseniz burada işaretleyebilirsiniz.</p>
+        </div>
+
+        <div class="form-section">
+          <h4>${ICN.file} Ek Bilgi</h4>
+          <label>Açıklama</label><textarea name="aciklama" placeholder="Eklemek istediğiniz notlar"></textarea>
+        </div>
+
+        <p class="hint">Devam ederek <a href="#" onclick="go('kvkk');return false;">KVKK Aydınlatma Metni</a>'ni kabul etmiş olursunuz.</p>
+        <div class="form-actions">
+          <button class="btn btn-primary" type="submit">Talebi Gönder</button>
+        </div>
+      </form>
+    </section>
+  `;
+  if(preselectedTeacherId){
+    const sel = document.querySelector('#reqForm select[name="preferred_teacher_id"]');
+    if(sel) sel.value = preselectedTeacherId;
+    preselectedTeacherId = null;
+  }
+  document.getElementById('reqForm').addEventListener('submit', async e=>{
+    e.preventDefault();
+    const f = e.target;
+    const payload = {
+      student_id: currentUser ? currentUser.id : null,
+      ad: f.ad.value, telefon: f.telefon.value, email: f.email.value,
+      preferred_teacher_id: f.preferred_teacher_id.value || null,
+      ogrenci_yasi: f.ogrenci_yasi.value ? parseInt(f.ogrenci_yasi.value) : null,
+      seviye: f.seviye.value, hedef: f.hedef.value,
+      lesson_type: f.lesson_type.value, sehir: f.sehir.value,
+      haftalik_ders_sayisi: parseInt(f.haftalik_ders_sayisi.value)||null,
+      ders_suresi: f.ders_suresi.value,
+      tercih_gunler: getChecked(f,'gunler'),
+      tercih_saatler: f.tercih_saatler.value,
+      butce: f.butce.value, aciklama: f.aciklama.value
+    };
+    const { error } = await sb.from('student_requests').insert(payload);
+    const msgEl = document.getElementById('reqMsg');
+    if(error){ msgEl.innerHTML = `<div class="msg msg-err">Gönderilemedi: ${esc(error.message)}</div>`; return; }
+    msgEl.innerHTML = `<div class="msg msg-ok">${ICN.check} Talebiniz alındı! Size uygun öğretmenler belirlendiğinde ${currentUser? 'panelinizden ve':''} platform üzerinden bilgilendirileceksiniz.</div>`;
+    f.reset();
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+});
+
+/* ============================================================
+   TEACHER APPLY / REGISTER
+   ============================================================ */
+route('teacher-apply', async ()=>{
+  if(!currentUser){
+    document.getElementById('app').innerHTML = `
+      <section class="page wrap" style="max-width:480px;text-align:center;">
+        <h2>Öğretmen Olarak Başvur</h2>
+        <p style="color:var(--ink-soft);">Başvuru yapabilmek için önce bir öğretmen hesabı oluşturmalısınız.</p>
+        <button class="btn btn-primary" onclick="go('register-teacher')">Öğretmen Hesabı Oluştur</button>
+        <p class="hint">Zaten hesabınız var mı? <a href="#" onclick="go('login');return false;">Giriş yapın</a></p>
+      </section>`;
+    return;
+  }
+  if(currentProfile?.role !== 'teacher'){
+    document.getElementById('app').innerHTML = `<section class="page wrap"><div class="msg msg-err">Bu hesap öğretmen rolünde değil.</div></section>`;
+    return;
+  }
+  const [{ data: existing }, { data: priv }] = await Promise.all([
+    sb.from('teacher_profiles').select('*').eq('id', currentUser.id).maybeSingle(),
+    sb.from('teacher_private').select('*').eq('teacher_id', currentUser.id).maybeSingle()
+  ]);
+  renderTeacherForm(existing, priv);
+});
+
+function renderTeacherForm(t={}, priv={}){
+  t = t || {};
+  priv = priv || {};
+  document.getElementById('app').innerHTML = `
+    <section class="page wrap" style="max-width:720px;">
+      <div class="page-head">
+        <h2>${t.id ? 'Profilimi Düzenle' : 'Öğretmen Profili Oluştur'}</h2>
+        <p>Profiliniz admin onayından sonra yayınlanır. Telefon ve e-posta bilginiz asla public profilde gösterilmez.</p>
+      </div>
+      ${t.id ? `<div class="msg msg-info" style="margin-top:16px;">Durum: <span class="badge badge-${t.status}">${statusLabel(t.status)}</span></div>` : ''}
+      <div id="tMsg"></div>
+      <form class="card" id="tForm" style="margin-top:16px;">
+        <div class="form-section">
+          <h4>${ICN.user} Temel Bilgiler</h4>
+          <div class="grid-2">
+            <div><label>Görünen İsim</label><input name="display_name" required value="${esc(t.display_name)}"></div>
+            <div>
+              <label>Profil Fotoğrafı</label>
+              <input type="file" id="photoFileInput" accept="image/*">
+              <input name="photo_url" id="photoUrlInput" value="${esc(t.photo_url)}" placeholder="veya bağlantı yapıştırın" style="margin-top:6px;">
+              <div id="photoUploadStatus" class="hint"></div>
+            </div>
+          </div>
+          <label>Kısa Tanıtım / Ders Anlatım Videosu</label>
+          <input type="file" id="videoFileInput" accept="video/*">
+          <input name="intro_video_url" id="videoUrlInput" value="${esc(t.intro_video_url)}" placeholder="veya YouTube/Instagram bağlantısı yapıştırın" style="margin-top:6px;">
+          <div id="videoUploadStatus" class="hint"></div>
+          <p class="hint">${ICN.award} Zorunlu değil ama profil fotoğrafı ve kısa bir ders anlatım videosu eklemeniz önerilir (video dosyası maks. ~50MB) — öğrenciler size çok daha kolay güvenir ve daha hızlı eşleşirsiniz.</p>
+          <div class="grid-2">
+            <div><label>Telefon (gizli)</label><input name="phone" required value="${esc(priv.phone)}"></div>
+            <div><label>E-posta (gizli)</label><input name="email" type="email" required value="${esc(priv.email || currentUser.email)}"></div>
+          </div>
+          <p class="hint">${ICN.lock} Telefon ve e-postanız public profilinizde asla gösterilmez.</p>
+        </div>
+
+        <div class="form-section">
+          <h4>${ICN.award} Deneyim & Eğitim</h4>
+          <div class="grid-2">
+            <div><label>Şehir</label><select name="city">${cityOptionsHTML(t.city)}</select></div>
+            <div><label>Branş</label><input name="branch" value="${esc(t.branch)}" placeholder="Örn: İngilizce Öğretmeni"></div>
+          </div>
+          <div class="grid-2">
+            <div><label>Deneyim (yıl)</label><input name="experience_years" type="number" min="0" value="${t.experience_years||''}"></div>
+            <div><label>Ders Türü</label><select name="lesson_type">
+              <option value="online" ${t.lesson_type==='online'?'selected':''}>Online</option>
+              <option value="yuz_yuze" ${t.lesson_type==='yuz_yuze'?'selected':''}>Yüz yüze</option>
+              <option value="ikisi_de" ${t.lesson_type==='ikisi_de'?'selected':''}>İkisi de</option>
+            </select></div>
+          </div>
+          <label>Eğitim Bilgileri</label><input name="education" value="${esc(t.education)}">
+          <label>Sertifikalar</label><input name="certificates" value="${esc(t.certificates)}" placeholder="Örn: CELTA, TESOL...">
+        </div>
+
+        <div class="form-section">
+          <h4>${ICN.target} Uzmanlık</h4>
+          <label>Uzmanlık Alanları</label>
+          ${checklistHTML('specialties', SPECIALTIES, t.specialties||[])}
+          <label>Seviyeler</label>
+          ${checklistHTML('levels', LEVELS, t.levels||[])}
+          <label>Yaş Grupları</label>
+          ${checklistHTML('age_groups', AGE_GROUPS, t.age_groups||[])}
+        </div>
+
+        <div class="form-section">
+          <h4>${ICN.clock} Uygunluk & Ücret</h4>
+          <div class="grid-2">
+            <div><label>Ders Ücreti</label><input name="price_range" value="${esc(t.price_range)}" placeholder="Örn: 400-600 TL/saat"></div>
+            <div><label>Uygun Saatler</label><input name="available_hours" value="${esc(t.available_hours)}" placeholder="Örn: Hafta içi 18:00-22:00"></div>
+          </div>
+          <label>Uygun Günler</label>
+          ${checklistHTML('available_days', DAYS, t.available_days||[])}
+        </div>
+
+        <div class="form-section">
+          <h4>${ICN.file} Profil Açıklaması</h4>
+          <textarea name="bio">${esc(t.bio)}</textarea>
+        </div>
+
+        <p class="hint">Kayıt olarak <a href="#" onclick="go('kvkk');return false;">KVKK Aydınlatma Metni</a>'ni ve <a href="#" onclick="go('terms');return false;">Kullanım Koşulları</a>'nı kabul etmiş olursunuz.</p>
+        <div class="form-actions">
+          <button class="btn btn-primary" type="submit">${t.id ? 'Güncelle' : 'Başvuruyu Gönder'}</button>
+        </div>
+      </form>
+    </section>
+  `;
+  async function handleMediaUpload(e, urlInputId, statusId, kind){
+    const file = e.target.files[0];
+    if(!file) return;
+    const statusEl = document.getElementById(statusId);
+    const maxMB = kind==='video' ? 50 : 8;
+    if(file.size > maxMB*1024*1024){
+      statusEl.innerHTML = `<span style="color:var(--red);">Dosya çok büyük (maks ${maxMB}MB). Bağlantı yapıştırmayı deneyin.</span>`;
+      e.target.value = '';
+      return;
+    }
+    statusEl.textContent = 'Yükleniyor…';
+    const ext = (file.name.split('.').pop()||'dat').toLowerCase();
+    const path = `${currentUser.id}/${kind}-${Date.now()}.${ext}`;
+    const { error } = await sb.storage.from('teacher-media').upload(path, file, { upsert: true });
+    if(error){ statusEl.innerHTML = `<span style="color:var(--red);">Yüklenemedi: ${esc(error.message)}</span>`; return; }
+    const { data } = sb.storage.from('teacher-media').getPublicUrl(path);
+    document.getElementById(urlInputId).value = data.publicUrl;
+    statusEl.innerHTML = `<span style="color:var(--green);">${ICN.check} Yüklendi</span>`;
+  }
+  document.getElementById('photoFileInput').addEventListener('change', e=>handleMediaUpload(e,'photoUrlInput','photoUploadStatus','photo'));
+  document.getElementById('videoFileInput').addEventListener('change', e=>handleMediaUpload(e,'videoUrlInput','videoUploadStatus','video'));
+
+  document.getElementById('tForm').addEventListener('submit', async e=>{
+    e.preventDefault();
+    const f = e.target;
+    const profileData = {
+      id: currentUser.id,
+      display_name: f.display_name.value,
+      photo_url: f.photo_url.value || null,
+      intro_video_url: f.intro_video_url.value || null,
+      city: f.city.value, branch: f.branch.value,
+      experience_years: f.experience_years.value?parseInt(f.experience_years.value):null,
+      education: f.education.value, certificates: f.certificates.value,
+      specialties: getChecked(f,'specialties'), levels: getChecked(f,'levels'),
+      age_groups: getChecked(f,'age_groups'), lesson_type: f.lesson_type.value,
+      price_range: f.price_range.value, available_hours: f.available_hours.value,
+      available_days: getChecked(f,'available_days'), bio: f.bio.value,
+      updated_at: new Date().toISOString()
+    };
+    if(!t.id){ profileData.status = 'pending'; }
+    const { error: e1 } = await sb.from('teacher_profiles').upsert(profileData);
+    const { error: e2 } = await sb.from('teacher_private').upsert({
+      teacher_id: currentUser.id, phone: f.phone.value, email: f.email.value, updated_at: new Date().toISOString()
+    });
+    const msgEl = document.getElementById('tMsg');
+    if(e1 || e2){ msgEl.innerHTML = `<div class="msg msg-err">Kaydedilemedi: ${esc((e1||e2).message)}</div>`; return; }
+    msgEl.innerHTML = `<div class="msg msg-ok">${ICN.check} Kaydedildi! ${!t.id?'Profiliniz admin onayına gönderildi.':''}</div>`;
+    setTimeout(()=>go('teacher-apply'), 900);
+  });
+}
+function statusLabel(s){
+  return ({pending:'Onay Bekliyor', approved:'Onaylandı', rejected:'Reddedildi', suspended:'Askıya Alındı'})[s] || s;
+}
+
+/* ============================================================
+   LOGIN / REGISTER
+   ============================================================ */
+route('login', async ()=>{
+  document.getElementById('app').innerHTML = `
+    <section class="page wrap" style="max-width:400px;">
+      <img src="${LOGO_URL}" style="width:52px;height:52px;border-radius:50%;box-shadow:0 0 0 1px var(--border);margin-bottom:16px;">
+      <h2>Giriş Yap</h2>
+      <div id="loginMsg"></div>
+      <form class="card" id="loginForm" style="margin-top:12px;">
+        <label>E-posta</label><input name="email" type="email" required>
+        <label>Şifre</label><input name="password" type="password" required>
+        <div class="form-actions"><button class="btn btn-primary btn-block" type="submit">Giriş Yap</button></div>
+      </form>
+      <div style="text-align:center;color:var(--ink-faint);font-size:.78rem;margin:16px 0;">veya</div>
+      ${googleButtonHTML(null)}
+      <p class="hint" style="text-align:center;margin-top:16px;">
+        Hesabınız yok mu?
+        <a href="#" onclick="go('register-student');return false;">Öğrenci olarak kayıt ol</a> ·
+        <a href="#" onclick="go('register-teacher');return false;">Öğretmen olarak kayıt ol</a>
+      </p>
+    </section>
+  `;
+  document.getElementById('loginForm').addEventListener('submit', async e=>{
+    e.preventDefault();
+    const f = e.target;
+    const { error } = await sb.auth.signInWithPassword({ email:f.email.value, password:f.password.value });
+    const msgEl = document.getElementById('loginMsg');
+    if(error){ msgEl.innerHTML = `<div class="msg msg-err">${esc(error.message)}</div>`; return; }
+    await refreshAuth();
+    await postLoginRedirect();
+  });
+});
+
+const GOOGLE_ICON = '<svg class="icon" viewBox="0 0 48 48"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.3 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.1 8 3l5.7-5.7C34.6 6.1 29.6 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.7-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.6 15.8 18.9 13 24 13c3.1 0 5.8 1.1 8 3l5.7-5.7C34.6 6.1 29.6 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.5 0 10.4-2.1 14.1-5.5l-6.5-5.5C29.6 34.7 26.9 36 24 36c-5.3 0-9.7-3.3-11.3-8l-6.6 5C9.6 39.6 16.3 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.3-2.3 4.2-4.2 5.6l6.5 5.5C41.5 35.6 44 30.2 44 24c0-1.3-.1-2.7-.4-3.5z"/></svg>';
+function googleButtonHTML(role){
+  return `<button type="button" class="btn btn-outline btn-block" disabled style="gap:10px;opacity:.5;cursor:not-allowed;" title="Yakında aktif olacak">${GOOGLE_ICON} Google ile devam et (Yakında)</button>`;
+}
+function signInWithGoogle(role){
+  if(role) localStorage.setItem('ao_pending_role', role);
+  localStorage.setItem('ao_oauth_flow', '1');
+  const base = window.location.origin + window.location.pathname;
+  sb.auth.signInWithOAuth({ provider:'google', options:{ redirectTo: base } });
+}
+async function resolvePendingGoogleRole(){
+  const pending = localStorage.getItem('ao_pending_role');
+  if(!pending || !currentUser || !currentProfile) return;
+  localStorage.removeItem('ao_pending_role');
+  if(pending==='teacher' && currentProfile.role==='student'){
+    await sb.rpc('set_initial_role', { new_role: 'teacher' });
+    await refreshAuth();
+  }
+}
+
+async function postLoginRedirect(){
+  if(currentProfile?.role==='admin'){ go('admin'); return; }
+  if(currentProfile?.role==='teacher'){
+    const { data: profile } = await sb.from('teacher_profiles').select('id').eq('id', currentUser.id).maybeSingle();
+    go(profile ? 'teacher-dash' : 'teacher-apply');
+    return;
+  }
+  go('student-dash');
+}
+
+function registerForm(role){
+  const title = role==='teacher' ? 'Öğretmen Hesabı Oluştur' : 'Öğrenci Hesabı Oluştur';
+  document.getElementById('app').innerHTML = `
+    <section class="page wrap" style="max-width:400px;">
+      <img src="${LOGO_URL}" style="width:52px;height:52px;border-radius:50%;box-shadow:0 0 0 1px var(--border);margin-bottom:16px;">
+      <h2>${title}</h2>
+      <div id="regMsg"></div>
+      <form class="card" id="regForm" style="margin-top:12px;">
+        <label>Ad Soyad</label><input name="full_name" required>
+        <label>E-posta</label><input name="email" type="email" required>
+        <label>Şifre</label><input name="password" type="password" minlength="8" required>
+        <p class="hint">Şifreniz en az 8 karakter olmalı. Kayıt olarak <a href="#" onclick="go('kvkk');return false;">KVKK Aydınlatma Metni</a>'ni kabul etmiş olursunuz.</p>
+        <div class="form-actions"><button class="btn btn-primary btn-block" type="submit">Kayıt Ol</button></div>
+      </form>
+      <div style="text-align:center;color:var(--ink-faint);font-size:.78rem;margin:16px 0;">veya</div>
+      ${googleButtonHTML(role)}
+      <p class="hint" style="text-align:center;margin-top:16px;">Zaten hesabınız var mı? <a href="#" onclick="go('login');return false;">Giriş yapın</a></p>
+    </section>
+  `;
+  document.getElementById('regForm').addEventListener('submit', async e=>{
+    e.preventDefault();
+    const f = e.target;
+    const { error } = await sb.auth.signUp({
+      email: f.email.value, password: f.password.value,
+      options: { data: { role, full_name: f.full_name.value } }
+    });
+    const msgEl = document.getElementById('regMsg');
+    if(error){ msgEl.innerHTML = `<div class="msg msg-err">${esc(error.message)}</div>`; return; }
+    msgEl.innerHTML = `<div class="msg msg-ok">${ICN.check} Kayıt başarılı! E-postanıza gelen doğrulama bağlantısına tıklayıp giriş yapabilirsiniz.</div>`;
+    setTimeout(()=>go('login'), 1600);
+  });
+}
+route('register-teacher', async ()=>registerForm('teacher'));
+route('register-student', async ()=>registerForm('student'));
+
+/* ============================================================
+   DASHBOARD SHELL helper
+   ============================================================ */
+function dashShell(navItemsHTML, contentId, roleLabel){
+  return `
+    <div class="app-shell wrap" style="padding:0 24px;">
+      <aside class="sidebar">
+        <div style="display:flex;align-items:center;gap:10px;padding:6px 10px 20px;border-bottom:1px solid var(--border);margin-bottom:16px;">
+          <div style="width:36px;height:36px;border-radius:50%;background:var(--orange-50);color:var(--orange-700);display:flex;align-items:center;justify-content:center;font-weight:700;font-family:'Manrope';flex-shrink:0;">${esc((currentProfile?.full_name||'?')[0])}</div>
+          <div style="min-width:0;">
+            <div style="font-weight:700;font-size:.87rem;color:var(--navy);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${esc(currentProfile?.full_name||'Hesabım')}</div>
+            <div style="font-size:.74rem;color:var(--ink-faint);">${esc(roleLabel||'')}</div>
+          </div>
+        </div>
+        ${navItemsHTML}
+      </aside>
+      <div class="dash-content" id="${contentId}"></div>
+    </div>
+  `;
+}
+
+/* ============================================================
+   STUDENT DASHBOARD
+   ============================================================ */
+route('student-dash', async ()=>{
+  if(!requireAuth('student')) return;
+  document.getElementById('app').innerHTML = dashShell(`
+    <button class="active" data-tab="requests" onclick="studentTab('requests')">${ICN.file} Taleplerim</button>
+    <button data-tab="messages" onclick="studentTab('messages')">${ICN.chat} Mesajlar</button>
+  `, 'studentTabBody', 'Öğrenci');
+  studentTab('requests');
+});
+async function studentTab(tab){
+  document.querySelectorAll('.sidebar button').forEach(b=>b.classList.toggle('active', b.dataset.tab===tab));
+  const body = document.getElementById('studentTabBody');
+  if(tab==='requests'){
+    const { data: reqs } = await sb.from('student_requests').select('*').eq('student_id', currentUser.id).order('created_at',{ascending:false});
+    body.innerHTML = `
+      <div class="page-title-row"><div><h2>Taleplerim</h2><p style="color:var(--ink-soft);margin:0;">Oluşturduğunuz özel ders talepleri ve durumları.</p></div></div>
+      ` + (!reqs || reqs.length===0 ? `<div class="empty">Henüz talebiniz yok. <a href="#" onclick="go('request');return false;" style="color:var(--orange-700);font-weight:600;">Talep oluşturun</a>.</div>` :
+      `<div class="card" style="padding:0;overflow-x:auto;"><table><thead><tr><th>Tarih</th><th>Hedef</th><th>Seviye</th><th>Durum</th></tr></thead><tbody>
+        ${reqs.map(r=>`<tr><td>${new Date(r.created_at).toLocaleDateString('tr-TR')}</td><td>${esc(r.hedef)}</td><td>${esc(r.seviye)}</td><td><span class="badge badge-new">${esc(r.status)}</span></td></tr>`).join('')}
+      </tbody></table></div>`);
+  } else {
+    body.innerHTML = `<div class="page-title-row"><div><h2>Mesajlar</h2><p style="color:var(--ink-soft);margin:0;">Mesajlarınız sadece AbOnlinEnglish admin ekibine ulaşır.</p></div></div>` + userMessagesHTML();
+    wireUserMessages();
+  }
+}
+
+/* ============================================================
+   TEACHER DASHBOARD
+   ============================================================ */
+route('teacher-dash', async ()=>{
+  if(!requireAuth('teacher')) return;
+  document.getElementById('app').innerHTML = dashShell(`
+    <button class="active" data-tab="profile" onclick="teacherTab('profile')">${ICN.user} Profilim</button>
+    <button data-tab="requests" onclick="teacherTab('requests')">${ICN.file} Gelen Talepler</button>
+    <button data-tab="messages" onclick="teacherTab('messages')">${ICN.chat} Mesajlar</button>
+  `, 'teacherTabBody', 'Öğretmen');
+  teacherTab('profile');
+});
+async function teacherTab(tab){
+  document.querySelectorAll('.sidebar button').forEach(b=>b.classList.toggle('active', b.dataset.tab===tab));
+  const body = document.getElementById('teacherTabBody');
+  if(tab==='profile'){
+    body.innerHTML = `<div class="page-title-row"><div><h2>Profilim</h2><p style="color:var(--ink-soft);margin:0;">Public profilinizi güncelleyin.</p></div>
+      <div class="row-actions">
+        <button class="btn btn-outline" onclick="goTeacherProfile(currentUser.id)">Profilimi Önizle</button>
+        <button class="btn btn-primary" onclick="go('teacher-apply')">Profilimi Düzenle</button>
+      </div></div>`;
+  } else if(tab==='requests'){
+    const { data: matches } = await sb.from('teacher_matched_requests').select('*').order('matched_at',{ascending:false});
+    body.innerHTML = `
+      <div class="page-title-row"><div><h2>Size Yönlendirilen Talepler</h2><p style="color:var(--ink-soft);margin:0;">Bilgi amaçlıdır — iletişim admin tarafından yürütülür.</p></div></div>
+      ` + (!matches || matches.length===0 ? `<div class="empty">Şu an size yönlendirilen bir talep yok.</div>` :
+      `<div class="card" style="padding:0;overflow-x:auto;"><table><thead><tr><th>Hedef</th><th>Seviye</th><th>Şehir</th><th>Durum</th></tr></thead><tbody>
+      ${matches.map(m=>`<tr><td>${esc(m.hedef)}</td><td>${esc(m.seviye)}</td><td>${esc(m.sehir)}</td><td><span class="badge badge-new">${esc(m.match_status)}</span></td></tr>`).join('')}
+      </tbody></table></div>`);
+  } else {
+    body.innerHTML = `<div class="page-title-row"><div><h2>Mesajlar</h2><p style="color:var(--ink-soft);margin:0;">Mesajlarınız sadece AbOnlinEnglish admin ekibine ulaşır.</p></div></div>` + userMessagesHTML();
+    wireUserMessages();
+  }
+}
+
+/* ============================================================
+   MESSAGES — sadece kullanıcı <-> admin
+   ============================================================ */
+function userMessagesHTML(){
+  return `
+    <div style="max-width:560px;">
+      <div id="msgThread" class="msg-thread"></div>
+      <form id="msgForm" class="msg-compose">
+        <input id="msgInput" placeholder="Admin ekibine mesajınızı yazın...">
+        <button class="btn btn-primary btn-sm" type="submit">${ICN.send} Gönder</button>
+      </form>
+    </div>
+  `;
+}
+function wireUserMessages(){
+  const loadThread = async ()=>{
+    const { data: msgs } = await sb.from('admin_messages').select('*').eq('user_id', currentUser.id).order('created_at',{ascending:true});
+    const thread = document.getElementById('msgThread');
+    thread.innerHTML = (msgs||[]).map(m=>`<div class="bubble ${m.sender_id===currentUser.id?'mine':'theirs'}">${esc(m.content)}</div>`).join('') || `<div class="hint">Henüz mesaj yok. Admin ekibine sormak istediğiniz bir şey varsa buradan yazabilirsiniz.</div>`;
+    thread.scrollTop = thread.scrollHeight;
+  };
+  document.getElementById('msgForm').addEventListener('submit', async e=>{
+    e.preventDefault();
+    const input = document.getElementById('msgInput');
+    if(!input.value.trim()) return;
+    const { error } = await sb.from('admin_messages').insert({ user_id: currentUser.id, sender_id: currentUser.id, content: input.value.trim() });
+    if(error){ alert('Gönderilemedi: '+error.message); return; }
+    input.value = '';
+    loadThread();
+  });
+  loadThread();
+}
+
+/* ============================================================
+   ADMIN PANEL
+   ============================================================ */
+route('admin', async ()=>{
+  if(!requireAuth('admin')) return;
+  document.getElementById('app').innerHTML = dashShell(`
+    <button class="active" data-tab="dashboard" onclick="adminTab('dashboard')">${ICN.grid} Dashboard</button>
+    <button data-tab="teachers" onclick="adminTab('teachers')">${ICN.users} Öğretmenler</button>
+    <button data-tab="requests" onclick="adminTab('requests')">${ICN.file} Öğrenci Talepleri</button>
+    <button data-tab="matches" onclick="adminTab('matches')">${ICN.link} Eşleşmeler</button>
+    <button data-tab="messages" onclick="adminTab('messages')">${ICN.chat} Mesajlar</button>
+    <button data-tab="logs" onclick="adminTab('logs')">${ICN.list} Admin Logları</button>
+  `, 'adminTabBody', 'Admin');
+  adminTab('dashboard');
+});
+
+async function logAdmin(action, target_type, target_id){
+  await sb.from('admin_logs').insert({ admin_id: currentUser.id, action, target_type, target_id: String(target_id) });
+}
+
+async function adminTab(tab){
+  document.querySelectorAll('.sidebar button').forEach(b=>b.classList.toggle('active', b.dataset.tab===tab));
+  const body = document.getElementById('adminTabBody');
+  body.innerHTML = '<div class="empty">Yükleniyor…</div>';
+
+  if(tab==='dashboard'){
+    const [{count:totalT},{count:pendingT},{count:activeT},{count:totalR},{count:newR},{count:matchedR},{count:doneR}] = await Promise.all([
+      sb.from('teacher_profiles').select('*',{count:'exact',head:true}),
+      sb.from('teacher_profiles').select('*',{count:'exact',head:true}).eq('status','pending'),
+      sb.from('teacher_profiles').select('*',{count:'exact',head:true}).eq('status','approved'),
+      sb.from('student_requests').select('*',{count:'exact',head:true}),
+      sb.from('student_requests').select('*',{count:'exact',head:true}).eq('status','yeni'),
+      sb.from('student_requests').select('*',{count:'exact',head:true}).eq('status','eslestirildi'),
+      sb.from('student_requests').select('*',{count:'exact',head:true}).eq('status','tamamlandi'),
+    ]);
+    body.innerHTML = `
+      <div class="page-title-row"><div><h2>Dashboard</h2><p style="color:var(--ink-soft);margin:0;">Sistem geneline hızlı bakış.</p></div></div>
+      <div class="stat-row">
+        <div class="stat"><div class="stat-icon">${ICN.users}</div><div><b>${totalT||0}</b><span>Toplam Öğretmen</span></div></div>
+        <div class="stat"><div class="stat-icon">${ICN.clock}</div><div><b>${pendingT||0}</b><span>Onay Bekleyen</span></div></div>
+        <div class="stat"><div class="stat-icon">${ICN.check}</div><div><b>${activeT||0}</b><span>Aktif Öğretmen</span></div></div>
+        <div class="stat"><div class="stat-icon">${ICN.file}</div><div><b>${totalR||0}</b><span>Toplam Talep</span></div></div>
+      </div>
+      <div class="stat-row">
+        <div class="stat"><div class="stat-icon">${ICN.target}</div><div><b>${newR||0}</b><span>Yeni Talepler</span></div></div>
+        <div class="stat"><div class="stat-icon">${ICN.link}</div><div><b>${matchedR||0}</b><span>Eşleştirilen Talepler</span></div></div>
+        <div class="stat"><div class="stat-icon">${ICN.award}</div><div><b>${doneR||0}</b><span>Tamamlanan Eşleşmeler</span></div></div>
+        <div class="stat" style="visibility:hidden;"></div>
+      </div>
+    `;
+  }
+
+  else if(tab==='teachers'){
+    const { data: teachers } = await sb.from('teacher_profiles').select('*').order('created_at',{ascending:false});
+    body.innerHTML = `
+      <div class="page-title-row"><div><h2>Öğretmenler</h2><p style="color:var(--ink-soft);margin:0;">Başvuruları inceleyin ve profilleri yönetin.</p></div></div>
+      <div class="card" style="padding:0;overflow-x:auto;">
+      <table><thead><tr><th>İsim</th><th>Şehir</th><th>Durum</th><th>İşlemler</th></tr></thead><tbody>
+      ${(teachers||[]).map(t=>`<tr>
+        <td>${esc(t.display_name)}</td><td>${esc(t.city)}</td>
+        <td><span class="badge badge-${t.status}">${statusLabel(t.status)}</span></td>
+        <td class="row-actions">
+          <button class="btn btn-outline btn-sm" onclick="adminViewTeacher('${t.id}')">İncele</button>
+          ${t.status!=='approved'?`<button class="btn btn-green btn-sm" onclick="setTeacherStatus('${t.id}','approved')">Onayla</button>`:''}
+          ${t.status!=='rejected'?`<button class="btn btn-danger btn-sm" onclick="setTeacherStatus('${t.id}','rejected')">Reddet</button>`:''}
+          ${t.status==='approved'?`<button class="btn btn-ghost btn-sm" onclick="setTeacherStatus('${t.id}','suspended')">Askıya Al</button>`:''}
+        </td>
+      </tr>`).join('') || `<tr><td colspan="4">Kayıt yok.</td></tr>`}
+      </tbody></table></div>`;
+  }
+
+  else if(tab==='requests'){
+    const { data: reqs } = await sb.from('student_requests').select('*').order('created_at',{ascending:false});
+    body.innerHTML = `
+      <div class="page-title-row"><div><h2>Öğrenci Talepleri</h2><p style="color:var(--ink-soft);margin:0;">Gelen talepleri inceleyin ve öğretmen eşleştirin.</p></div></div>
+      <div class="card" style="padding:0;overflow-x:auto;">
+      <table><thead><tr><th>Ad</th><th>Hedef</th><th>Seviye</th><th>Şehir</th><th>Durum</th><th></th></tr></thead><tbody>
+      ${(reqs||[]).map(r=>`<tr>
+        <td>${esc(r.ad)}</td><td>${esc(r.hedef)}</td><td>${esc(r.seviye)}</td><td>${esc(r.sehir)}</td>
+        <td><span class="badge badge-new">${esc(r.status)}</span></td>
+        <td><button class="btn btn-outline btn-sm" onclick="adminViewRequest('${r.id}')">İncele / Eşleştir</button></td>
+      </tr>`).join('') || `<tr><td colspan="6">Kayıt yok.</td></tr>`}
+      </tbody></table></div>`;
+  }
+
+  else if(tab==='matches'){
+    const { data: matches } = await sb.from('matches').select('*, student_requests(ad,hedef), teacher_profiles(display_name)').order('created_at',{ascending:false});
+    body.innerHTML = `
+      <div class="page-title-row"><div><h2>Eşleşmeler</h2><p style="color:var(--ink-soft);margin:0;">Yapılan tüm öğretmen-öğrenci eşleştirmeleri.</p></div></div>
+      <div class="card" style="padding:0;overflow-x:auto;">
+      <table><thead><tr><th>Öğrenci</th><th>Öğretmen</th><th>Hedef</th><th>Durum</th></tr></thead><tbody>
+      ${(matches||[]).map(m=>`<tr><td>${esc(m.student_requests?.ad)}</td><td>${esc(m.teacher_profiles?.display_name)}</td><td>${esc(m.student_requests?.hedef)}</td><td><span class="badge badge-new">${esc(m.status)}</span></td></tr>`).join('') || `<tr><td colspan="4">Kayıt yok.</td></tr>`}
+      </tbody></table></div>`;
+  }
+
+  else if(tab==='messages'){
+    const { data: msgs } = await sb.from('admin_messages').select('*, profiles!admin_messages_user_id_fkey(full_name, role)').order('created_at',{ascending:false}).limit(500);
+    const byUser = {};
+    (msgs||[]).forEach(m=>{
+      if(!byUser[m.user_id]) byUser[m.user_id] = { user_id:m.user_id, profile:m.profiles, last:m };
+    });
+    const threads = Object.values(byUser).sort((a,b)=> new Date(b.last.created_at) - new Date(a.last.created_at));
+    body.innerHTML = `
+      <div class="page-title-row"><div><h2>Mesajlar</h2><p style="color:var(--ink-soft);margin:0;">Öğretmen ve öğrencilerle olan tüm yazışmalar.</p></div></div>
+      <div class="grid-2">
+        <div class="card" style="max-height:460px;overflow-y:auto;padding:10px;">
+          ${threads.length===0 ? '<div class="empty">Henüz mesaj yok.</div>' : threads.map(t=>`
+            <div class="thread-item" id="thread-${t.user_id}" onclick="adminOpenThread('${t.user_id}')">
+              <b>${esc(t.profile?.full_name || 'Kullanıcı')}</b>
+              <div class="meta">${t.profile?.role==='teacher'?'Öğretmen':'Öğrenci'}</div>
+              <div class="snippet">${esc(t.last.content)}</div>
+            </div>
+          `).join('')}
+        </div>
+        <div>
+          <div id="adminMsgThread" class="msg-thread"><div class="hint" style="padding:20px;">Soldan bir konuşma seçin.</div></div>
+          <form id="adminMsgForm" class="msg-compose">
+            <input id="adminMsgInput" placeholder="Cevap yazın..." disabled>
+            <button class="btn btn-primary btn-sm" type="submit" disabled>${ICN.send} Gönder</button>
+          </form>
+        </div>
+      </div>
+    `;
+    document.getElementById('adminMsgForm').addEventListener('submit', async e=>{
+      e.preventDefault();
+      if(!window.__adminThreadUser) return;
+      const input = document.getElementById('adminMsgInput');
+      if(!input.value.trim()) return;
+      const { error } = await sb.from('admin_messages').insert({ user_id: window.__adminThreadUser, sender_id: currentUser.id, content: input.value.trim() });
+      if(error){ alert('Gönderilemedi: '+error.message); return; }
+      input.value = '';
+      adminOpenThread(window.__adminThreadUser);
+    });
+  }
+
+  else if(tab==='logs'){
+    const { data: logs } = await sb.from('admin_logs').select('*').order('created_at',{ascending:false}).limit(100);
+    body.innerHTML = `
+      <div class="page-title-row"><div><h2>Admin Logları</h2><p style="color:var(--ink-soft);margin:0;">Son 100 işlem.</p></div></div>
+      <div class="card" style="padding:0;overflow-x:auto;">
+      <table><thead><tr><th>Tarih</th><th>İşlem</th><th>Hedef</th></tr></thead><tbody>
+      ${(logs||[]).map(l=>`<tr><td>${new Date(l.created_at).toLocaleString('tr-TR')}</td><td>${esc(l.action)}</td><td>${esc(l.target_type)} #${esc((l.target_id||'').toString().slice(0,8))}</td></tr>`).join('') || `<tr><td colspan="3">Kayıt yok.</td></tr>`}
+      </tbody></table></div>`;
+  }
+}
+
+async function adminOpenThread(userId){
+  window.__adminThreadUser = userId;
+  document.querySelectorAll('.thread-item').forEach(el=>el.classList.toggle('active', el.id===`thread-${userId}`));
+  const { data: msgs } = await sb.from('admin_messages').select('*').eq('user_id', userId).order('created_at',{ascending:true});
+  const thread = document.getElementById('adminMsgThread');
+  thread.innerHTML = (msgs||[]).map(m=>`<div class="bubble ${m.sender_id===currentUser.id?'mine':'theirs'}">${esc(m.content)}</div>`).join('') || `<div class="hint" style="padding:20px;">Henüz mesaj yok.</div>`;
+  thread.scrollTop = thread.scrollHeight;
+  document.getElementById('adminMsgInput').disabled = false;
+  document.querySelector('#adminMsgForm button').disabled = false;
+}
+
+async function setTeacherStatus(id, status){
+  const { error } = await sb.from('teacher_profiles').update({status}).eq('id', id);
+  if(error){ alert('Güncellenemedi: '+error.message); return; }
+  await logAdmin(`teacher_status_${status}`, 'teacher_profiles', id);
+  adminTab('teachers');
+}
+
+async function adminViewTeacher(id){
+  const [{ data: t }, { data: priv }] = await Promise.all([
+    sb.from('teacher_profiles').select('*').eq('id', id).single(),
+    sb.from('teacher_private').select('*').eq('teacher_id', id).maybeSingle()
+  ]);
+  openModal(`
+    <div class="modal-body" style="padding-top:28px;">
+      <div class="page-title-row" style="margin-bottom:14px;">
+        <h2 style="margin:0;">${esc(t.display_name)}</h2>
+        <span class="badge badge-${t.status}">${statusLabel(t.status)}</span>
+      </div>
+      <div class="modal-section"><h5>İletişim (gizli)</h5><p style="margin:0;">${esc(priv?.phone||'-')} · ${esc(priv?.email||'-')}</p></div>
+      <div class="grid-2">
+        <div class="modal-section"><h5>Şehir</h5><p style="margin:0;">${esc(t.city)||'-'}</p></div>
+        <div class="modal-section"><h5>Deneyim</h5><p style="margin:0;">${t.experience_years||'-'} yıl</p></div>
+      </div>
+      <div class="modal-section"><h5>Eğitim</h5><p style="margin:0;">${esc(t.education)||'-'}</p></div>
+      <div class="modal-section"><h5>Sertifikalar</h5><p style="margin:0;">${esc(t.certificates)||'-'}</p></div>
+      <div class="modal-section"><h5>Bio</h5><p style="margin:0;">${esc(t.bio)||'-'}</p></div>
+    </div>
+    <div class="modal-footer row-actions">
+      <button class="btn btn-green btn-sm" onclick="setTeacherStatus('${t.id}','approved');closeModal();">Onayla</button>
+      <button class="btn btn-danger btn-sm" onclick="setTeacherStatus('${t.id}','rejected');closeModal();">Reddet</button>
+      <button class="btn btn-ghost btn-sm" onclick="setTeacherStatus('${t.id}','suspended');closeModal();">Askıya Al</button>
+    </div>
+  `);
+}
+
+async function adminViewRequest(id){
+  const [{ data: r }, { data: candidates }] = await Promise.all([
+    sb.from('student_requests').select('*').eq('id', id).single(),
+    sb.from('teacher_profiles').select('*').eq('status','approved')
+  ]);
+  const filtered = (candidates||[]).filter(t=>
+    (!r.seviye || (t.levels||[]).includes(r.seviye)) &&
+    (!r.lesson_type || t.lesson_type===r.lesson_type || t.lesson_type==='ikisi_de')
+  );
+  let pool = filtered.length ? filtered : (candidates||[]);
+  if(r.preferred_teacher_id){
+    pool = [...pool].sort((a,b)=> (a.id===r.preferred_teacher_id?-1:0) - (b.id===r.preferred_teacher_id?-1:0));
+  }
+  const preferred = (candidates||[]).find(t=>t.id===r.preferred_teacher_id);
+  openModal(`
+    <div class="modal-body" style="padding-top:28px;">
+      <h2 style="margin-bottom:14px;">${esc(r.ad)} — Talep Detayı</h2>
+      <div class="grid-2">
+        <div class="modal-section"><h5>Telefon</h5><p style="margin:0;">${esc(r.telefon)}</p></div>
+        <div class="modal-section"><h5>E-posta</h5><p style="margin:0;">${esc(r.email)}</p></div>
+      </div>
+      <div class="grid-2">
+        <div class="modal-section"><h5>Hedef</h5><p style="margin:0;">${esc(r.hedef)||'-'}</p></div>
+        <div class="modal-section"><h5>Seviye / Yaş</h5><p style="margin:0;">${esc(r.seviye)||'-'} · ${r.ogrenci_yasi||'-'}</p></div>
+      </div>
+      <div class="grid-2">
+        <div class="modal-section"><h5>Şehir / Tür</h5><p style="margin:0;">${esc(r.sehir)||'-'} · ${esc(r.lesson_type)}</p></div>
+        <div class="modal-section"><h5>Haftalık</h5><p style="margin:0;">${r.haftalik_ders_sayisi||'-'} ders · ${esc(r.ders_suresi)}</p></div>
+      </div>
+      <div class="modal-section"><h5>Bütçe</h5><p style="margin:0;">${esc(r.butce)||'-'}</p></div>
+      <div class="modal-section"><h5>Tercih Günler/Saatler</h5><p style="margin:0;">${(r.tercih_gunler||[]).join(', ')||'-'} — ${esc(r.tercih_saatler)}</p></div>
+      <div class="modal-section"><h5>Açıklama</h5><p style="margin:0;">${esc(r.aciklama)||'-'}</p></div>
+      ${preferred ? `<div class="msg msg-info">${ICN.star} Öğrencinin tercih ettiği öğretmen: <b>${esc(preferred.display_name)}</b></div>` : ''}
+      <label>Durum</label>
+      <select id="reqStatusSel">
+        ${['yeni','inceleniyor','ogretmen_araniyor','eslestirildi','iletisime_gecildi','tamamlandi','iptal'].map(s=>`<option value="${s}" ${r.status===s?'selected':''}>${s}</option>`).join('')}
+      </select>
+      <button class="btn btn-outline btn-sm" style="margin-top:10px;" onclick="updateReqStatus('${r.id}')">Durumu Güncelle</button>
+      <div class="modal-section" style="margin-top:20px;border-top:1px solid var(--border);padding-top:16px;">
+        <h5>Bu talebe uygun ${pool.length} öğretmen</h5>
+        <div style="max-height:220px;overflow-y:auto;">
+          ${pool.map(t=>`<div class="card" style="margin-bottom:8px;display:flex;justify-content:space-between;align-items:center;${t.id===r.preferred_teacher_id?'border-color:var(--orange);':''}">
+            <span>${t.id===r.preferred_teacher_id?`${ICN.star} `:''}${esc(t.display_name)} — ${esc(t.city)} ${t.price_range?`· ${esc(t.price_range)}`:''}</span>
+            <button class="btn btn-primary btn-sm" onclick="createMatch('${r.id}','${t.id}')">Eşleştir</button>
+          </div>`).join('') || '<div class="hint">Uygun onaylı öğretmen bulunamadı.</div>'}
+        </div>
+      </div>
+    </div>
+  `);
+}
+async function updateReqStatus(reqId){
+  const status = document.getElementById('reqStatusSel').value;
+  const { error } = await sb.from('student_requests').update({status}).eq('id', reqId);
+  if(error){ alert('Güncellenemedi: '+error.message); return; }
+  await logAdmin(`request_status_${status}`, 'student_requests', reqId);
+  closeModal(); adminTab('requests');
+}
+async function createMatch(requestId, teacherId){
+  const { error } = await sb.from('matches').insert({ request_id: requestId, teacher_id: teacherId, matched_by: currentUser.id, status:'onerildi' });
+  if(error){ alert('Eşleştirilemedi: '+error.message); return; }
+  await sb.from('student_requests').update({status:'ogretmen_araniyor'}).eq('id', requestId);
+  await sb.from('notifications').insert({ user_id: teacherId, message: 'Size uygun yeni bir özel ders talebi var.' });
+  await logAdmin('match_created', 'matches', requestId+'->'+teacherId);
+  closeModal();
+  alert('Eşleştirme oluşturuldu.');
+  adminTab('requests');
+}
+
+/* ============================================================
+   LEGAL PAGES
+   ============================================================ */
+route('privacy', async ()=>{
+  document.getElementById('app').innerHTML = legalPage('Gizlilik Politikası', `
+    <p>AbOnlinEnglish olarak kişisel verilerinizin güvenliğine önem veriyoruz. Bu Özel Ders & Öğretmen Bul sistemi kapsamında topladığımız bilgiler yalnızca öğretmen-öğrenci eşleştirmesi amacıyla kullanılır.</p>
+    <p>Öğretmenlerin ve öğrencilerin telefon/e-posta gibi iletişim bilgileri hiçbir zaman diğer tarafa doğrudan gösterilmez; ilk iletişim platform üzerinden, admin ekibimiz aracılığıyla kurulur.</p>
+    <p>Verileriniz Supabase altyapısında şifrelenmiş şekilde saklanır; şifreler geri döndürülemez biçimde hashlenir.</p>
+  `);
+});
+route('kvkk', async ()=>{
+  document.getElementById('app').innerHTML = legalPage('KVKK Aydınlatma Metni', `
+    <p>6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") uyarınca, bu platform üzerinden topladığımız ad-soyad, iletişim bilgisi, eğitim tercihleri gibi kişisel verileriniz; öğretmen-öğrenci eşleştirme hizmetinin yürütülmesi amacıyla, veri sorumlusu sıfatıyla işlenmektedir.</p>
+    <p>Verileriniz yalnızca yetkili admin ekibi tarafından görüntülenebilir, üçüncü taraflarla rızanız dışında paylaşılmaz.</p>
+    <p>KVKK kapsamındaki haklarınız (bilgi talep etme, düzeltme, silme dahil) için hesap ayarlarınızdan veya <a href="mailto:ingilizceogrensene@gmail.com">ingilizceogrensene@gmail.com</a> adresinden bize ulaşabilirsiniz.</p>
+  `);
+});
+route('terms', async ()=>{
+  document.getElementById('app').innerHTML = legalPage('Kullanım Koşulları', `
+    <p>Bu platformu kullanarak, sağladığınız bilgilerin doğru olduğunu ve platformun öğretmen-öğrenci eşleştirme kurallarına uyacağınızı kabul etmiş olursunuz.</p>
+    <p>İletişim bilgilerinin platform dışında paylaşılması ve doğrudan temas kurulması, eşleştirme güvenliği tamamlanana kadar önerilmez.</p>
+    <p>AbOnlinEnglish, uygun görmediği profil veya talepleri onaylamama, askıya alma veya kaldırma hakkını saklı tutar.</p>
+  `);
+});
+function legalPage(title, html){
+  return `<section class="page wrap" style="max-width:680px;"><h2>${title}</h2>${html}</section>`;
+}
+
+/* ============================================================
+   INIT
+   ============================================================ */
+(async function init(){
+  await refreshAuth();
+  if(localStorage.getItem('ao_oauth_flow')){
+    localStorage.removeItem('ao_oauth_flow');
+    await resolvePendingGoogleRole();
+    if(currentUser){ await postLoginRedirect(); return; }
+  }
+  const initial = window.location.hash.replace('#','') || 'home';
+  go(initial);
+})();
+</script>
+</body>
+</html>
