@@ -1,12 +1,52 @@
 
 
 
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AbOnlinEnglish — Yol Haritası</title>
+<title>AbOnlinEnglish — Yol Haritası | Online İngilizce Kursu Fiyatları ve Paketleri</title>
+<meta name="description" content="A1'den C1'e kadar online İngilizce kurs paketleri: Yoğun, Standart veya Esnek program seç. Ücretsiz seviye testi, kişiye özel yol haritası ve öğretmen eşleştirme ile İngilizce öğrenmeye hemen başla.">
+<meta name="keywords" content="online ingilizce kursu, ingilizce özel ders, ingilizce yol haritası, ingilizce fiyatları, online ingilizce öğretmeni, ingilizce seviye testi, A1 ingilizce kursu, B1 ingilizce kursu, IELTS hazırlık, ingilizce konuşma pratiği, AbOnlinEnglish">
+<meta name="author" content="AbOnlinEnglish">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0e1c38">
+<link rel="canonical" href="https://abonlinenglish.school/roadmap">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AbOnlinEnglish">
+<meta property="og:title" content="Online İngilizce Kursu Yol Haritası ve Fiyatları | AbOnlinEnglish">
+<meta property="og:description" content="Seviyeni öğren, kendi hızında ilerle veya sana uygun bir öğretmenle çalış. A1'den C1'e kadar esnek paketler ve ücretsiz danışmanlık.">
+<meta property="og:url" content="https://abonlinenglish.school/roadmap">
+<meta property="og:locale" content="tr_TR">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Online İngilizce Kursu Yol Haritası ve Fiyatları | AbOnlinEnglish">
+<meta name="twitter:description" content="Seviyeni öğren, kendi hızında ilerle veya sana uygun bir öğretmenle çalış. Ücretsiz danışmanlık ve esnek paketler.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "name": "AbOnlinEnglish",
+  "url": "https://abonlinenglish.school/",
+  "logo": "https://abonlinenglish.school/logo.png",
+  "sameAs": [
+    "https://www.instagram.com/abonlinenglish"
+  ],
+  "description": "Online İngilizce eğitimi: ücretsiz seviye testi, kendi kendine öğrenme kaynakları ve birebir öğretmen destekli kurslar.",
+  "email": "ingilizceogrensene@gmail.com"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Anasayfa","item":"https://abonlinenglish.school/landing"},
+    {"@type":"ListItem","position":2,"name":"Yol Haritası","item":"https://abonlinenglish.school/roadmap"}
+  ]
+}
+</script>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
@@ -96,6 +136,49 @@ nav {
              var(--navy);
   border-bottom:1px solid var(--border);
 }
+/* 3 adım yönlendirme şeridi */
+.path-steps{max-width:1000px;margin:44px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.path-step{position:relative;background:var(--card);border:1.5px solid var(--border);border-radius:16px;padding:26px 20px;text-decoration:none;display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;transition:all .2s ease;}
+.path-step:hover{transform:translateY(-4px);border-color:var(--acc);}
+.path-num{position:absolute;top:-14px;left:50%;transform:translateX(-50%);width:30px;height:30px;border-radius:50%;background:var(--navy);border:2px solid var(--acc);color:var(--acc);font-weight:800;font-size:.85rem;display:flex;align-items:center;justify-content:center;}
+.path-icon{font-size:2.1rem;margin-top:8px;}
+.path-title{font-family:'Sora',sans-serif;font-weight:800;font-size:1.02rem;color:#fff;letter-spacing:.02em;}
+.path-desc{font-size:.82rem;color:var(--muted);line-height:1.5;}
+.path-step.glow{
+  border-color:var(--acc);background:linear-gradient(160deg,rgba(245,166,35,.16),var(--card));
+  animation:pathGlow 2s ease-in-out infinite;
+}
+@keyframes pathGlow{
+  0%,100%{box-shadow:0 0 0 0 rgba(245,166,35,.5),0 0 16px 2px rgba(245,166,35,.35);}
+  50%{box-shadow:0 0 0 8px rgba(245,166,35,0),0 0 32px 8px rgba(245,166,35,.75);}
+}
+.path-arrow{display:flex;align-items:center;justify-content:center;color:var(--faint);font-size:1.4rem;}
+@media(max-width:760px){
+  .path-steps{grid-template-columns:1fr;}
+}
+/* Adım adım rehber */
+.guide-wrap{max-width:760px;margin:0 auto;}
+.guide-step{display:flex;gap:18px;padding:20px 0;border-bottom:1px solid var(--border);}
+.guide-step:last-child{border-bottom:none;}
+.guide-num{flex-shrink:0;width:40px;height:40px;border-radius:50%;background:var(--card2);border:1.5px solid var(--acc);color:var(--acc);font-weight:800;display:flex;align-items:center;justify-content:center;font-family:'Sora',sans-serif;}
+.guide-body h4{font-size:1rem;color:#fff;margin:0 0 6px;font-weight:700;}
+.guide-body p{font-size:.9rem;color:var(--muted);line-height:1.65;margin:0;}
+.guide-body a{color:var(--acc);text-decoration:none;font-weight:600;}
+.guide-body a:hover{text-decoration:underline;}
+/* Kaynaklar pill'leri */
+.res-pills{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;max-width:820px;margin:28px auto 20px;}
+.res-pill{display:flex;align-items:center;gap:8px;padding:12px 20px;border-radius:100px;background:var(--card);border:1.5px solid var(--border);color:var(--text);text-decoration:none;font-weight:700;font-size:.88rem;transition:all .18s ease;}
+.res-pill:hover{border-color:var(--acc);background:var(--card2);transform:translateY(-2px);}
+.res-pill .ico{font-size:1.1rem;}
+/* Final: Danış + Öğretmen Bul */
+.final-two{max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.final-card{border-radius:18px;padding:32px 26px;text-align:center;}
+.final-card.consult{background:var(--card);border:1.5px solid var(--border);}
+.final-card.teacher{background:linear-gradient(160deg,rgba(74,222,128,.15),var(--card));border:1.5px solid rgba(74,222,128,.4);}
+.final-card h3{font-family:'Sora',sans-serif;font-size:1.15rem;color:#fff;margin:10px 0 8px;}
+.final-card p{font-size:.86rem;color:var(--muted);margin:0 0 18px;line-height:1.6;}
+.final-ico{font-size:2.4rem;}
+@media(max-width:700px){.final-two{grid-template-columns:1fr;}}
 .hero-table-wrap{max-width:960px;margin:36px auto 0;background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;overflow-x:auto;}
 .hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(245,166,35,.2);border:1px solid rgba(245,166,35,.5);color:var(--acc);font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 14px;border-radius:100px;margin-bottom:24px;}
 .hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,6vw,4rem);color:#fff;line-height:1.1;margin-bottom:16px;}
@@ -252,6 +335,82 @@ footer strong{color:var(--acc);}
 <!-- HERO -->
 <div class="hero">
   <h1>İngilizce<br><span>Yol Haritanız</span></h1>
+  <p style="max-width:520px;margin:0 auto 8px;color:var(--muted);font-size:.98rem;">Nereden başlayacağını bilmiyor musun? Üç basit adım — hangisinden başlaman gerektiğini aşağıda göstereceğiz.</p>
+  <div class="path-steps">
+    <a class="path-step glow" href="/placement-test">
+      <div class="path-num">1</div>
+      <div class="path-icon">🎯</div>
+      <div class="path-title">ÖNCE SEVİYENİ ÖĞREN</div>
+      <div class="path-desc">5 dakikada ücretsiz seviye testini çöz, tam olarak nereden başlayacağını öğren.</div>
+    </a>
+    <a class="path-step" href="/">
+      <div class="path-num">2</div>
+      <div class="path-icon">📚</div>
+      <div class="path-title">KENDİN ÖĞREN</div>
+      <div class="path-desc">Seviyene uygun ücretsiz içeriklerle kendi hızında, kayıt olmadan çalışmaya başla.</div>
+    </a>
+    <a class="path-step" href="/ogretmenbul.html">
+      <div class="path-num">3</div>
+      <div class="path-icon">🧑‍🏫</div>
+      <div class="path-title">ÖĞRETMEN ARA</div>
+      <div class="path-desc">Kendi başına zorlanıyorsan, sana uygun bir öğretmenle pratik yapmaya başla.</div>
+    </a>
+  </div>
+</div>
+
+<!-- ADIM ADIM REHBER -->
+<div class="section">
+  <p class="section-label">Sıfırdan Başlayanlar İçin</p>
+  <h2 class="section-heading">Adım Adım Ne Yapmalısın?</h2>
+  <p class="section-sub">İhtiyacın olan şey burada. Adım adım, tam sana göre.</p>
+  <div class="guide-wrap">
+    <div class="guide-step">
+      <div class="guide-num">1</div>
+      <div class="guide-body"><h4>Seviyeni öğren</h4><p>Hiçbir şey bilmesen de olur — <a href="/placement-test">ücretsiz seviye testini</a> çöz, A1'den C1'e kadar tam olarak neredesin gör.</p></div>
+    </div>
+    <div class="guide-step">
+      <div class="guide-num">2</div>
+      <div class="guide-body"><h4>En sık kullanılan kelimelerle başla</h4><p>İlk aşamada dilbilgisinden çok, günlük hayatta en çok geçen 300–500 kelimeye odaklan. Az kelimeyle çok iş yaparsın.</p></div>
+    </div>
+    <div class="guide-step">
+      <div class="guide-num">3</div>
+      <div class="guide-body"><h4>Kısa ve düzenli çalış</h4><p>Haftada bir kez 3 saat çalışmaktansa, her gün 15–20 dakika ayır. Dil öğrenimi süreklilikle ilerler, yoğunlukla değil.</p></div>
+    </div>
+    <div class="guide-step">
+      <div class="guide-num">4</div>
+      <div class="guide-body"><h4>Kendin öğren sayfasından ilerle</h4><p><a href="/">Kendin Öğren</a> sayfasındaki seviyene uygun ünitelerle gramer, kelime ve okuma çalışmalarını sırayla tamamla.</p></div>
+    </div>
+    <div class="guide-step">
+      <div class="guide-num">5</div>
+      <div class="guide-body"><h4>Hatadan korkma, cümle kurmaya başla</h4><p>Doğru cümle kurmak değil, iletişim kurmaya çalışmak önemli. Öğrendiğin kelimeleri hemen cümlede kullan.</p></div>
+    </div>
+    <div class="guide-step">
+      <div class="guide-num">6</div>
+      <div class="guide-body"><h4>Ek kaynaklarla pekiştir</h4><p>Dilbilgisi, okuma, yazma, konuşma veya ücretsiz podcast/site önerileri mi lazım? <a href="https://abonlinenglish.school/abonlinenglish-kaynaklar">Kaynaklar sayfasından</a> ihtiyacına uygun olanı seç.</p></div>
+    </div>
+    <div class="guide-step">
+      <div class="guide-num">7</div>
+      <div class="guide-body"><h4>Konuşma pratiği yap</h4><p>Okuma ve gramer tek başına yetmez — bir <a href="/ogretmenbul.html">öğretmenle</a> düzenli konuşma pratiği yapman gelişimini ciddi hızlandırır.</p></div>
+    </div>
+    <div class="guide-step">
+      <div class="guide-num">8</div>
+      <div class="guide-body"><h4>İlerlemeni tekrar ölç</h4><p>Birkaç ay sonra <a href="/placement-test">seviye testini</a> tekrar çöz, ne kadar ilerlediğini gör ve bir sonraki seviyeye geç.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- KAYNAKLAR -->
+<div class="section">
+  <p class="section-label">Daha Fazlasına mı İhtiyacın Var?</p>
+  <h2 class="section-heading">Ne Yapmak İstiyorsun?</h2>
+  <p class="section-sub">Dilbilgisi, okuma, yazma, konuşma veya ücretsiz site ve podcast önerileri — ihtiyacın olan şey Kaynaklar sayfasında.</p>
+  <div class="res-pills">
+    <a class="res-pill" href="https://abonlinenglish.school/abonlinenglish-kaynaklar"><span class="ico">📐</span> Dilbilgisi</a>
+    <a class="res-pill" href="https://abonlinenglish.school/abonlinenglish-kaynaklar"><span class="ico">📖</span> Okuma</a>
+    <a class="res-pill" href="https://abonlinenglish.school/abonlinenglish-kaynaklar"><span class="ico">✍️</span> Yazma</a>
+    <a class="res-pill" href="https://abonlinenglish.school/abonlinenglish-kaynaklar"><span class="ico">🗣️</span> Konuşma</a>
+    <a class="res-pill" href="https://abonlinenglish.school/abonlinenglish-kaynaklar"><span class="ico">🎧</span> Ücretsiz Site &amp; Podcasts</a>
+  </div>
 </div>
 
 <!-- LEVEL OVERVIEW -->
@@ -262,10 +421,9 @@ footer strong{color:var(--acc);}
   <div class="levels-grid">
     <a class="level-card a1" href="#packages-A1"><div class="lc-stripe"></div><div class="lc-top"><div><div class="lc-badge">A1</div><div class="lc-name">Başlangıç</div><div class="lc-tr">Starter · Sıfırdan başlangıç</div></div><div class="lc-pill">Yeni Başlayan</div></div><div class="lc-desc">Sıfırdan başlıyorsun, sorun yok. Selamlaşmadan kendini tanıtmaya, sayılardan basit cümlelere — her şey adım adım.</div><div class="lc-stats"><div class="lcs"><div class="lcs-label">Yoğun</div><div class="lcs-val">~3 ay</div></div><div class="lcs"><div class="lcs-label">Standart</div><div class="lcs-val">~5 ay</div></div><div class="lcs"><div class="lcs-label">Esnek</div><div class="lcs-val">~7 ay</div></div><div class="lcs"><div class="lcs-label">Kelime</div><div class="lcs-val">~500</div></div></div></a>
     <a class="level-card a2" href="#packages-A2"><div class="lc-stripe"></div><div class="lc-top"><div><div class="lc-badge">A2</div><div class="lc-name">Temel</div><div class="lc-tr">Elementary · Günlük konuşma temelleri</div></div><div class="lc-pill">Temel Seviye</div></div><div class="lc-desc">Günlük hayatta temel konuşmaları yapabilir, seyahatte işini görebilir hale gelirsin.</div><div class="lc-stats"><div class="lcs"><div class="lcs-label">Yoğun</div><div class="lcs-val">~3 ay</div></div><div class="lcs"><div class="lcs-label">Standart</div><div class="lcs-val">~5 ay</div></div><div class="lcs"><div class="lcs-label">Esnek</div><div class="lcs-val">~7 ay</div></div><div class="lcs"><div class="lcs-label">Kelime</div><div class="lcs-val">~1.000</div></div></div></a>
-    <a class="level-card b1" href="#packages-B1"><div class="lc-stripe"></div><div class="lc-top"><div><div class="lc-badge">B1</div><div class="lc-name">Orta Öncesi</div><div class="lc-tr">Pre-Intermediate · Bağımsız konuşma</div></div><div class="lc-pill">Bağımsız</div></div><div class="lc-desc">Fikirlerini ifade eder, seyahat ve iş ortamlarında kendini idare eder hale gelirsin. PET / IELTS 4–5 hazırlığı için uygundur.</div><div class="lc-stats"><div class="lcs"><div class="lcs-label">Yoğun</div><div class="lcs-val">~5 ay</div></div><div class="lcs"><div class="lcs-label">Standart</div><div class="lcs-val">~7 ay</div></div><div class="lcs"><div class="lcs-label">Esnek</div><div class="lcs-val">~10 ay</div></div><div class="lcs"><div class="lcs-label">Kelime</div><div class="lcs-val">~2.000</div></div></div></a>
+    <a class="level-card b1" href="#packages-B1"><div class="lc-stripe"></div><div class="lc-top"><div><div class="lc-badge">B1</div><div class="lc-name">Orta Öncesi</div><div class="lc-tr">Pre-Intermediate · Bağımsız konuşma</div></div><div class="lc-pill">Bağımsız</div></div><div class="lc-desc">Fikirlerini ifade eder, seyahat ve iş ortamlarında kendini idare eder hale gelirsin. PET / IELTS 4–5 hazırlığı için uygundur.</div><div class="lc-stats"><div class="lcs"><div class="lcs-label">Yoğun</div><div class="lcs-val">~6 ay</div></div><div class="lcs"><div class="lcs-label">Standart</div><div class="lcs-val">~8 ay</div></div><div class="lcs"><div class="lcs-label">Esnek</div><div class="lcs-val">~12 ay</div></div><div class="lcs"><div class="lcs-label">Kelime</div><div class="lcs-val">~2.000</div></div></div></a>
     <a class="level-card b2" href="#packages-B2"><div class="lc-stripe"></div><div class="lc-top"><div><div class="lc-badge">B2</div><div class="lc-name">Orta Üstü</div><div class="lc-tr">Upper-Intermediate · Akademik dil</div></div><div class="lc-pill">Yetkin</div></div><div class="lc-desc">Daha derin konularda konuşur, akademik metinler yazarsın. FCE veya IELTS 5.5–6.5 hedefliyorsan tam burası.</div><div class="lcs-stats"></div><div class="lc-stats"><div class="lcs"><div class="lcs-label">Yoğun</div><div class="lcs-val">~6 ay</div></div><div class="lcs"><div class="lcs-label">Standart</div><div class="lcs-val">~8 ay</div></div><div class="lcs"><div class="lcs-label">Esnek</div><div class="lcs-val">~12 ay</div></div><div class="lcs"><div class="lcs-label">Kelime</div><div class="lcs-val">~3.500</div></div></div></a>
     <a class="level-card c1" href="#packages-C1"><div class="lc-stripe"></div><div class="lc-top"><div><div class="lc-badge">C1</div><div class="lc-name">İleri</div><div class="lc-tr">Advanced · Akıcı ve doğal kullanım</div></div><div class="lc-pill">İleri Düzey</div></div><div class="lc-desc">İngilizceyi gerçekten iyi kullanmak isteyenler için. CAE veya IELTS 7–8 hedefleyenler burada hazırlanıyor.</div><div class="lc-stats"><div class="lcs"><div class="lcs-label">Yoğun</div><div class="lcs-val">~7 ay</div></div><div class="lcs"><div class="lcs-label">Standart</div><div class="lcs-val">~9 ay</div></div><div class="lcs"><div class="lcs-label">Esnek</div><div class="lcs-val">~13 ay</div></div><div class="lcs"><div class="lcs-label">Kelime</div><div class="lcs-val">~5.000</div></div></div></a>
-    <a class="level-card c2" href="#packages-C2"><div class="lc-stripe"></div><div class="lc-top"><div><div class="lc-badge">C2</div><div class="lc-name">Ustalık</div><div class="lc-tr">Proficiency · Anadile yakın hakimiyet</div></div><div class="lc-pill">Ustalık</div></div><div class="lc-desc">İngilizceyi anadil düzeyinde kullanmak isteyenler için. CPE, IELTS 8.5+ veya akademik kariyer hedefleyenler buraya.</div><div class="lc-stats"><div class="lcs"><div class="lcs-label">Yoğun</div><div class="lcs-val">~7 ay</div></div><div class="lcs"><div class="lcs-label">Standart</div><div class="lcs-val">~10 ay</div></div><div class="lcs"><div class="lcs-label">Esnek</div><div class="lcs-val">~15 ay</div></div><div class="lcs"><div class="lcs-label">Kelime</div><div class="lcs-val">8.000+</div></div></div></a>
   </div>
 </div>
 
@@ -280,14 +438,14 @@ footer strong{color:var(--acc);}
       <div class="lb-badge" style="color:var(--a1-c)">A1</div>
       <div class="lb-info"><h3>Starter · Başlangıç</h3><p>Cambridge Starters · Pearson GSE 10–22 · ~500 hedef kelime</p></div>
       <div class="lb-exam"><strong>Sınavlar</strong><br>Cambridge Starters · Pearson GSE 10–22</div>
-      <div class="lb-hours"><strong>Bu Seviye</strong><br>~100 saat çalışma</div>
+      
     </div>
     <div class="packages-grid">
       <div class="pkg-card">
         <div class="pkg-header"><div class="pkg-type" style="color:var(--a1-c)">⚡ Yoğun</div><div class="pkg-duration">3 <span style="font-size:1rem;font-weight:400;color:var(--muted)">ay</span></div><div class="pkg-dur-label">~15 hafta · haftada 3 ders</div></div>
         <div class="pkg-body">
           <div class="pkg-goal">Her gün biraz zaman ayırabiliyorsan ve hızlı ilerlemek istiyorsan bu plan tam sana göre.</div>
-          <div class="pkg-weekly"><div class="pw-label">📅 Haftalık Program</div><div class="pw-row"><span class="pw-item">Canlı Ders (Öğretmenle)</span><span class="pw-val">3 × 50 dk</span></div><div class="pw-row"><span class="pw-item">Bireysel Çalışma</span><span class="pw-val">~4.5 saat</span></div><div class="pw-total"><span class="pw-total-label">⏱ Haftalık Toplam</span><span class="pw-total-val">~7 saat</span></div><div class="pw-hours"><span class="pw-hours-label">🎯 Seviye Toplamı</span><span class="pw-hours-val">~100 saat</span></div></div>
+          <div class="pkg-weekly"><div class="pw-label">📅 Haftalık Program</div><div class="pw-row"><span class="pw-item">Canlı Ders (Öğretmenle)</span><span class="pw-val">3 × 50 dk</span></div><div class="pw-row"><span class="pw-item">Bireysel Çalışma</span><span class="pw-val">~4.5 saat</span></div><div class="pw-total"><span class="pw-total-label">⏱ Haftalık Toplam</span><span class="pw-total-val">~7 saat</span></div></div>
           <button class="cta-btn" onclick="selectPkg('A1-yogun', 'A1 · Yoğun (3 ay)')">Bu Paketi Seç →</button>
         </div>
       </div>
@@ -295,7 +453,7 @@ footer strong{color:var(--acc);}
         <div class="pkg-header"><div class="pkg-type" style="color:var(--acc)"><span class="feat-star">★</span> Standart <span style="font-size:.58rem;opacity:.6;font-weight:400">En Popüler</span></div><div class="pkg-duration">5 <span style="font-size:1rem;font-weight:400;color:var(--muted)">ay</span></div><div class="pkg-dur-label">~20 hafta · haftada 2 ders</div></div>
         <div class="pkg-body">
           <div class="pkg-goal">En çok tercih edilen plan. Haftada iki ders, düzenli bireysel çalışma — ne çok hızlı ne çok yavaş.</div>
-          <div class="pkg-weekly"><div class="pw-label">📅 Haftalık Program</div><div class="pw-row"><span class="pw-item">Canlı Ders (Öğretmenle)</span><span class="pw-val">2 × 50 dk</span></div><div class="pw-row"><span class="pw-item">Bireysel Çalışma</span><span class="pw-val">~3.5 saat</span></div><div class="pw-total"><span class="pw-total-label">⏱ Haftalık Toplam</span><span class="pw-total-val">~5 saat</span></div><div class="pw-hours"><span class="pw-hours-label">🎯 Seviye Toplamı</span><span class="pw-hours-val">~100 saat</span></div></div>
+          <div class="pkg-weekly"><div class="pw-label">📅 Haftalık Program</div><div class="pw-row"><span class="pw-item">Canlı Ders (Öğretmenle)</span><span class="pw-val">2 × 50 dk</span></div><div class="pw-row"><span class="pw-item">Bireysel Çalışma</span><span class="pw-val">~3.5 saat</span></div><div class="pw-total"><span class="pw-total-label">⏱ Haftalık Toplam</span><span class="pw-total-val">~5 saat</span></div></div>
           <button class="cta-btn" onclick="selectPkg('A1-standart', 'A1 · Standart (5 ay)')">Bu Paketi Seç →</button>
         </div>
       </div>
@@ -303,7 +461,7 @@ footer strong{color:var(--acc);}
         <div class="pkg-header"><div class="pkg-type" style="color:var(--a1-c)">🌙 Esnek</div><div class="pkg-duration">7 <span style="font-size:1rem;font-weight:400;color:var(--muted)">ay</span></div><div class="pkg-dur-label">~29 hafta · haftada 1 ders</div></div>
         <div class="pkg-body">
           <div class="pkg-goal">Haftan yoğun mu? Haftada bir ders bile seni ilerletir. Yavaş ama düzenli — en güvenli yol.</div>
-          <div class="pkg-weekly"><div class="pw-label">📅 Haftalık Program</div><div class="pw-row"><span class="pw-item">Canlı Ders (Öğretmenle)</span><span class="pw-val">1 × 50 dk</span></div><div class="pw-row"><span class="pw-item">Bireysel Çalışma</span><span class="pw-val">~2.5 saat</span></div><div class="pw-total"><span class="pw-total-label">⏱ Haftalık Toplam</span><span class="pw-total-val">~3.5 saat</span></div><div class="pw-hours"><span class="pw-hours-label">🎯 Seviye Toplamı</span><span class="pw-hours-val">~100 saat</span></div></div>
+          <div class="pkg-weekly"><div class="pw-label">📅 Haftalık Program</div><div class="pw-row"><span class="pw-item">Canlı Ders (Öğretmenle)</span><span class="pw-val">1 × 50 dk</span></div><div class="pw-row"><span class="pw-item">Bireysel Çalışma</span><span class="pw-val">~2.5 saat</span></div><div class="pw-total"><span class="pw-total-label">⏱ Haftalık Toplam</span><span class="pw-total-val">~3.5 saat</span></div></div>
           <button class="cta-btn" onclick="selectPkg('A1-esnek', 'A1 · Esnek (7 ay)')">Bu Paketi Seç →</button>
         </div>
       </div>
@@ -315,14 +473,14 @@ footer strong{color:var(--acc);}
       <div class="lb-badge" style="color:var(--a2-c)">A2</div>
       <div class="lb-info"><h3>Elementary · Temel</h3><p>KET · Movers · GSE 23–42 · ~1.000 hedef kelime</p></div>
       <div class="lb-exam"><strong>Sınavlar</strong><br>KET · Movers · GSE 23–42</div>
-      <div class="lb-hours"><strong>Bu Seviye</strong><br>~100 saat çalışma</div>
+      
     </div>
     <div class="packages-grid">
       <div class="pkg-card">
         <div class="pkg-header"><div class="pkg-type" style="color:var(--a2-c)">⚡ Yoğun</div><div class="pkg-duration">3 <span style="font-size:1rem;font-weight:400;color:var(--muted)">ay</span></div><div class="pkg-dur-label">~15 hafta · haftada 3 ders</div></div>
         <div class="pkg-body">
           <div class="pkg-goal">Her gün biraz zaman ayırabiliyorsan ve hızlı ilerlemek istiyorsan bu plan tam sana göre.</div>
-          <div class="pkg-weekly"><div class="pw-label">📅 Haftalık Program</div><div class="pw-row"><span class="pw-item">Canlı Ders (Öğretmenle)</span><span class="pw-val">3 × 50 dk</span></div><div class="pw-row"><span class="pw-item">Bireysel Çalışma</span><span class="pw-val">~4.5 saat</span></div><div class="pw-total"><span class="pw-total-label">⏱ Haftalık Toplam</span><span class="pw-total-val">~7 saat</span></div><div class="pw-hours"><span class="pw-hours-label">🎯 Seviye Toplamı</span><span class="pw-hours-val">~100 saat</span></div></div>
+          <div class="pkg-weekly"><div class="pw-label">📅 Haftalık Program</div><div class="pw-row"><span class="pw-item">Canlı Ders (Öğretmenle)</span><span class="pw-val">3 × 50 dk</span></div><div class="pw-row"><span class="pw-item">Bireysel Çalışma</span><span class="pw-val">~4.5 saat</span></div><div class="pw-total"><span class="pw-total-label">⏱ Haftalık Toplam</span><span class="pw-total-val">~7 saat</span></div></div>
           <button class="cta-btn" onclick="selectPkg('A2-yogun', 'A2 · Yoğun (3 ay)')">Bu Paketi Seç →</button>
         </div>
       </div>
@@ -330,7 +488,7 @@ footer strong{color:var(--acc);}
         <div class="pkg-header"><div class="pkg-type" style="color:var(--acc)"><span class="feat-star">★</span> Standart <span style="font-size:.58rem;opacity:.6;font-weight:400">En Popüler</span></div><div class="pkg-duration">5 <span style="font-size:1rem;font-weight:400;color:var(--muted)">ay</span></div><div class="pkg-dur-label">~20 hafta · haftada 2 ders</div></div>
         <div class="pkg-body">
           <div class="pkg-goal">En çok tercih edilen plan. Haftada iki ders, düzenli bireysel çalışma — ne çok hızlı ne çok yavaş.</div>
-          <div class="pkg-weekly"><div class="pw-label">📅 Haftalık Program</div><div class="pw-row"><span class="pw-item">Canlı Ders (Öğretmenle)</span><span class="pw-val">2 × 50 dk</span></div><div class="pw-row"><span class="pw-item">Bireysel Çalışma</span><span class="pw-val">~3.5 saat</span></div><div class="pw-total"><span class="pw-total-label">⏱ Haftalık Toplam</span><span class="pw-total-val">~5 saat</span></div><div class="pw-hours"><span class="pw-hours-label">🎯 Seviye Toplamı</span><span class="pw-hours-val">~100 saat</span></div></div>
+          <div class="pkg-weekly"><div class="pw-label">📅 Haftalık Program</div><div class="pw-row"><span class="pw-item">Canlı Ders (Öğretmenle)</span><span class="pw-val">2 × 50 dk</span></div><div class="pw-row"><span class="pw-item">Bireysel Çalışma</span><span class="pw-val">~3.5 saat</span></div><div class="pw-total"><span class="pw-total-label">⏱ Haftalık Toplam</span><span class="pw-total-val">~5 saat</span></div></div>
           <button class="cta-btn" onclick="selectPkg('A2-standart', 'A2 · Standart (5 ay)')">Bu Paketi Seç →</button>
         </div>
       </div>
@@ -338,7 +496,7 @@ footer strong{color:var(--acc);}
         <div class="pkg-header"><div class="pkg-type" style="color:var(--a2-c)">🌙 Esnek</div><div class="pkg-duration">7 <span style="font-size:1rem;font-weight:400;color:var(--muted)">ay</span></div><div class="pkg-dur-label">~29 hafta · haftada 1 ders</div></div>
         <div class="pkg-body">
           <div class="pkg-goal">Haftan yoğun mu? Haftada bir ders bile seni ilerletir. Yavaş ama düzenli — en güvenli yol.</div>
-          <div class="pkg-weekly"><div class="pw-label">📅 Haftalık Program</div><div class="pw-row"><span class="pw-item">Canlı Ders (Öğretmenle)</span><span class="pw-val">1 × 50 dk</span></div><div class="pw-row"><span class="pw-item">Bireysel Çalışma</span><span class="pw-val">~2.5 saat</span></div><div class="pw-total"><span class="pw-total-label">⏱ Haftalık Toplam</span><span class="pw-total-val">~3.5 saat</span></div><div class="pw-hours"><span class="pw-hours-label">🎯 Seviye Toplamı</span><span class="pw-hours-val">~100 saat</span></div></div>
+          <div class="pkg-weekly"><div class="pw-label">📅 Haftalık Program</div><div class="pw-row"><span class="pw-item">Canlı Ders (Öğretmenle)</span><span class="pw-val">1 × 50 dk</span></div><div class="pw-row"><span class="pw-item">Bireysel Çalışma</span><span class="pw-val">~2.5 saat</span></div><div class="pw-total"><span class="pw-total-label">⏱ Haftalık Toplam</span><span class="pw-total-val">~3.5 saat</span></div></div>
           <button class="cta-btn" onclick="selectPkg('A2-esnek', 'A2 · Esnek (7 ay)')">Bu Paketi Seç →</button>
         </div>
       </div>
@@ -350,31 +508,31 @@ footer strong{color:var(--acc);}
       <div class="lb-badge" style="color:var(--b1-c)">B1</div>
       <div class="lb-info"><h3>Pre-Intermediate · Orta Öncesi</h3><p>PET · IELTS 4–5 · TOEFL 42–71 · ~2.000 hedef kelime</p></div>
       <div class="lb-exam"><strong>Sınavlar</strong><br>PET · IELTS 4–5 · TOEFL 42–71</div>
-      <div class="lb-hours"><strong>Bu Seviye</strong><br>~150 saat çalışma</div>
+      
     </div>
     <div class="packages-grid">
       <div class="pkg-card">
-        <div class="pkg-header"><div class="pkg-type" style="color:var(--b1-c)">⚡ Yoğun</div><div class="pkg-duration">5 <span style="font-size:1rem;font-weight:400;color:var(--muted)">ay</span></div><div class="pkg-dur-label">~22 hafta · haftada 3 ders</div></div>
+        <div class="pkg-header"><div class="pkg-type" style="color:var(--b1-c)">⚡ Yoğun</div><div class="pkg-duration">6 <span style="font-size:1rem;font-weight:400;color:var(--muted)">ay</span></div><div class="pkg-dur-label">~26 hafta · haftada 3 ders</div></div>
         <div class="pkg-body">
           <div class="pkg-goal">Her gün biraz zaman ayırabiliyorsan ve hızlı ilerlemek istiyorsan bu plan tam sana göre.</div>
-          <div class="pkg-weekly"><div class="pw-label">📅 Haftalık Program</div><div class="pw-row"><span class="pw-item">Canlı Ders (Öğretmenle)</span><span class="pw-val">3 × 50 dk</span></div><div class="pw-row"><span class="pw-item">Bireysel Çalışma</span><span class="pw-val">~4.5 saat</span></div><div class="pw-total"><span class="pw-total-label">⏱ Haftalık Toplam</span><span class="pw-total-val">~7 saat</span></div><div class="pw-hours"><span class="pw-hours-label">🎯 Seviye Toplamı</span><span class="pw-hours-val">~150 saat</span></div></div>
-          <button class="cta-btn" onclick="selectPkg('B1-yogun', 'B1 · Yoğun (5 ay)')">Bu Paketi Seç →</button>
+          <div class="pkg-weekly"><div class="pw-label">📅 Haftalık Program</div><div class="pw-row"><span class="pw-item">Canlı Ders (Öğretmenle)</span><span class="pw-val">3 × 50 dk</span></div><div class="pw-row"><span class="pw-item">Bireysel Çalışma</span><span class="pw-val">~4.5 saat</span></div><div class="pw-total"><span class="pw-total-label">⏱ Haftalık Toplam</span><span class="pw-total-val">~7 saat</span></div></div>
+          <button class="cta-btn" onclick="selectPkg('B1-yogun', 'B1 · Yoğun (6 ay)')">Bu Paketi Seç →</button>
         </div>
       </div>
       <div class="pkg-card featured">
-        <div class="pkg-header"><div class="pkg-type" style="color:var(--acc)"><span class="feat-star">★</span> Standart <span style="font-size:.58rem;opacity:.6;font-weight:400">En Popüler</span></div><div class="pkg-duration">7 <span style="font-size:1rem;font-weight:400;color:var(--muted)">ay</span></div><div class="pkg-dur-label">~30 hafta · haftada 2 ders</div></div>
+        <div class="pkg-header"><div class="pkg-type" style="color:var(--acc)"><span class="feat-star">★</span> Standart <span style="font-size:.58rem;opacity:.6;font-weight:400">En Popüler</span></div><div class="pkg-duration">8 <span style="font-size:1rem;font-weight:400;color:var(--muted)">ay</span></div><div class="pkg-dur-label">~36 hafta · haftada 2 ders</div></div>
         <div class="pkg-body">
           <div class="pkg-goal">En çok tercih edilen plan. Haftada iki ders, düzenli bireysel çalışma — ne çok hızlı ne çok yavaş.</div>
-          <div class="pkg-weekly"><div class="pw-label">📅 Haftalık Program</div><div class="pw-row"><span class="pw-item">Canlı Ders (Öğretmenle)</span><span class="pw-val">2 × 50 dk</span></div><div class="pw-row"><span class="pw-item">Bireysel Çalışma</span><span class="pw-val">~3.5 saat</span></div><div class="pw-total"><span class="pw-total-label">⏱ Haftalık Toplam</span><span class="pw-total-val">~5 saat</span></div><div class="pw-hours"><span class="pw-hours-label">🎯 Seviye Toplamı</span><span class="pw-hours-val">~150 saat</span></div></div>
-          <button class="cta-btn" onclick="selectPkg('B1-standart', 'B1 · Standart (7 ay)')">Bu Paketi Seç →</button>
+          <div class="pkg-weekly"><div class="pw-label">📅 Haftalık Program</div><div class="pw-row"><span class="pw-item">Canlı Ders (Öğretmenle)</span><span class="pw-val">2 × 50 dk</span></div><div class="pw-row"><span class="pw-item">Bireysel Çalışma</span><span class="pw-val">~3.5 saat</span></div><div class="pw-total"><span class="pw-total-label">⏱ Haftalık Toplam</span><span class="pw-total-val">~5 saat</span></div></div>
+          <button class="cta-btn" onclick="selectPkg('B1-standart', 'B1 · Standart (8 ay)')">Bu Paketi Seç →</button>
         </div>
       </div>
       <div class="pkg-card">
-        <div class="pkg-header"><div class="pkg-type" style="color:var(--b1-c)">🌙 Esnek</div><div class="pkg-duration">10 <span style="font-size:1rem;font-weight:400;color:var(--muted)">ay</span></div><div class="pkg-dur-label">~43 hafta · haftada 1 ders</div></div>
+        <div class="pkg-header"><div class="pkg-type" style="color:var(--b1-c)">🌙 Esnek</div><div class="pkg-duration">12 <span style="font-size:1rem;font-weight:400;color:var(--muted)">ay</span></div><div class="pkg-dur-label">~51 hafta · haftada 1 ders</div></div>
         <div class="pkg-body">
           <div class="pkg-goal">Haftan yoğun mu? Haftada bir ders bile seni ilerletir. Yavaş ama düzenli — en güvenli yol.</div>
-          <div class="pkg-weekly"><div class="pw-label">📅 Haftalık Program</div><div class="pw-row"><span class="pw-item">Canlı Ders (Öğretmenle)</span><span class="pw-val">1 × 50 dk</span></div><div class="pw-row"><span class="pw-item">Bireysel Çalışma</span><span class="pw-val">~2.5 saat</span></div><div class="pw-total"><span class="pw-total-label">⏱ Haftalık Toplam</span><span class="pw-total-val">~3.5 saat</span></div><div class="pw-hours"><span class="pw-hours-label">🎯 Seviye Toplamı</span><span class="pw-hours-val">~150 saat</span></div></div>
-          <button class="cta-btn" onclick="selectPkg('B1-esnek', 'B1 · Esnek (10 ay)')">Bu Paketi Seç →</button>
+          <div class="pkg-weekly"><div class="pw-label">📅 Haftalık Program</div><div class="pw-row"><span class="pw-item">Canlı Ders (Öğretmenle)</span><span class="pw-val">1 × 50 dk</span></div><div class="pw-row"><span class="pw-item">Bireysel Çalışma</span><span class="pw-val">~2.5 saat</span></div><div class="pw-total"><span class="pw-total-label">⏱ Haftalık Toplam</span><span class="pw-total-val">~3.5 saat</span></div></div>
+          <button class="cta-btn" onclick="selectPkg('B1-esnek', 'B1 · Esnek (12 ay)')">Bu Paketi Seç →</button>
         </div>
       </div>
     </div>
@@ -385,14 +543,14 @@ footer strong{color:var(--acc);}
       <div class="lb-badge" style="color:var(--b2-c)">B2</div>
       <div class="lb-info"><h3>Upper-Intermediate · Orta Üstü</h3><p>FCE · IELTS 5.5–6.5 · TOEFL 72–94 · ~3.500 hedef kelime</p></div>
       <div class="lb-exam"><strong>Sınavlar</strong><br>FCE · IELTS 5.5–6.5 · TOEFL 72–94</div>
-      <div class="lb-hours"><strong>Bu Seviye</strong><br>~180 saat çalışma</div>
+      
     </div>
     <div class="packages-grid">
       <div class="pkg-card">
         <div class="pkg-header"><div class="pkg-type" style="color:var(--b2-c)">⚡ Yoğun</div><div class="pkg-duration">6 <span style="font-size:1rem;font-weight:400;color:var(--muted)">ay</span></div><div class="pkg-dur-label">~26 hafta · haftada 3 ders</div></div>
         <div class="pkg-body">
           <div class="pkg-goal">Her gün biraz zaman ayırabiliyorsan ve hızlı ilerlemek istiyorsan bu plan tam sana göre.</div>
-          <div class="pkg-weekly"><div class="pw-label">📅 Haftalık Program</div><div class="pw-row"><span class="pw-item">Canlı Ders (Öğretmenle)</span><span class="pw-val">3 × 50 dk</span></div><div class="pw-row"><span class="pw-item">Bireysel Çalışma</span><span class="pw-val">~4.5 saat</span></div><div class="pw-total"><span class="pw-total-label">⏱ Haftalık Toplam</span><span class="pw-total-val">~7 saat</span></div><div class="pw-hours"><span class="pw-hours-label">🎯 Seviye Toplamı</span><span class="pw-hours-val">~180 saat</span></div></div>
+          <div class="pkg-weekly"><div class="pw-label">📅 Haftalık Program</div><div class="pw-row"><span class="pw-item">Canlı Ders (Öğretmenle)</span><span class="pw-val">3 × 50 dk</span></div><div class="pw-row"><span class="pw-item">Bireysel Çalışma</span><span class="pw-val">~4.5 saat</span></div><div class="pw-total"><span class="pw-total-label">⏱ Haftalık Toplam</span><span class="pw-total-val">~7 saat</span></div></div>
           <button class="cta-btn" onclick="selectPkg('B2-yogun', 'B2 · Yoğun (6 ay)')">Bu Paketi Seç →</button>
         </div>
       </div>
@@ -400,7 +558,7 @@ footer strong{color:var(--acc);}
         <div class="pkg-header"><div class="pkg-type" style="color:var(--acc)"><span class="feat-star">★</span> Standart <span style="font-size:.58rem;opacity:.6;font-weight:400">En Popüler</span></div><div class="pkg-duration">8 <span style="font-size:1rem;font-weight:400;color:var(--muted)">ay</span></div><div class="pkg-dur-label">~36 hafta · haftada 2 ders</div></div>
         <div class="pkg-body">
           <div class="pkg-goal">En çok tercih edilen plan. Haftada iki ders, düzenli bireysel çalışma — ne çok hızlı ne çok yavaş.</div>
-          <div class="pkg-weekly"><div class="pw-label">📅 Haftalık Program</div><div class="pw-row"><span class="pw-item">Canlı Ders (Öğretmenle)</span><span class="pw-val">2 × 50 dk</span></div><div class="pw-row"><span class="pw-item">Bireysel Çalışma</span><span class="pw-val">~3.5 saat</span></div><div class="pw-total"><span class="pw-total-label">⏱ Haftalık Toplam</span><span class="pw-total-val">~5 saat</span></div><div class="pw-hours"><span class="pw-hours-label">🎯 Seviye Toplamı</span><span class="pw-hours-val">~180 saat</span></div></div>
+          <div class="pkg-weekly"><div class="pw-label">📅 Haftalık Program</div><div class="pw-row"><span class="pw-item">Canlı Ders (Öğretmenle)</span><span class="pw-val">2 × 50 dk</span></div><div class="pw-row"><span class="pw-item">Bireysel Çalışma</span><span class="pw-val">~3.5 saat</span></div><div class="pw-total"><span class="pw-total-label">⏱ Haftalık Toplam</span><span class="pw-total-val">~5 saat</span></div></div>
           <button class="cta-btn" onclick="selectPkg('B2-standart', 'B2 · Standart (8 ay)')">Bu Paketi Seç →</button>
         </div>
       </div>
@@ -408,7 +566,7 @@ footer strong{color:var(--acc);}
         <div class="pkg-header"><div class="pkg-type" style="color:var(--b2-c)">🌙 Esnek</div><div class="pkg-duration">12 <span style="font-size:1rem;font-weight:400;color:var(--muted)">ay</span></div><div class="pkg-dur-label">~52 hafta · haftada 1 ders</div></div>
         <div class="pkg-body">
           <div class="pkg-goal">Haftan yoğun mu? Haftada bir ders bile seni ilerletir. Yavaş ama düzenli — en güvenli yol.</div>
-          <div class="pkg-weekly"><div class="pw-label">📅 Haftalık Program</div><div class="pw-row"><span class="pw-item">Canlı Ders (Öğretmenle)</span><span class="pw-val">1 × 50 dk</span></div><div class="pw-row"><span class="pw-item">Bireysel Çalışma</span><span class="pw-val">~2.5 saat</span></div><div class="pw-total"><span class="pw-total-label">⏱ Haftalık Toplam</span><span class="pw-total-val">~3.5 saat</span></div><div class="pw-hours"><span class="pw-hours-label">🎯 Seviye Toplamı</span><span class="pw-hours-val">~180 saat</span></div></div>
+          <div class="pkg-weekly"><div class="pw-label">📅 Haftalık Program</div><div class="pw-row"><span class="pw-item">Canlı Ders (Öğretmenle)</span><span class="pw-val">1 × 50 dk</span></div><div class="pw-row"><span class="pw-item">Bireysel Çalışma</span><span class="pw-val">~2.5 saat</span></div><div class="pw-total"><span class="pw-total-label">⏱ Haftalık Toplam</span><span class="pw-total-val">~3.5 saat</span></div></div>
           <button class="cta-btn" onclick="selectPkg('B2-esnek', 'B2 · Esnek (12 ay)')">Bu Paketi Seç →</button>
         </div>
       </div>
@@ -420,14 +578,14 @@ footer strong{color:var(--acc);}
       <div class="lb-badge" style="color:var(--c1-c)">C1</div>
       <div class="lb-info"><h3>Advanced · İleri</h3><p>CAE · IELTS 7–8 · TOEFL 95–113 · ~5.000 hedef kelime</p></div>
       <div class="lb-exam"><strong>Sınavlar</strong><br>CAE · IELTS 7–8 · TOEFL 95–113</div>
-      <div class="lb-hours"><strong>Bu Seviye</strong><br>~200 saat çalışma</div>
+      
     </div>
     <div class="packages-grid">
       <div class="pkg-card">
         <div class="pkg-header"><div class="pkg-type" style="color:var(--c1-c)">⚡ Yoğun</div><div class="pkg-duration">7 <span style="font-size:1rem;font-weight:400;color:var(--muted)">ay</span></div><div class="pkg-dur-label">~29 hafta · haftada 3 ders</div></div>
         <div class="pkg-body">
           <div class="pkg-goal">Her gün biraz zaman ayırabiliyorsan ve hızlı ilerlemek istiyorsan bu plan tam sana göre.</div>
-          <div class="pkg-weekly"><div class="pw-label">📅 Haftalık Program</div><div class="pw-row"><span class="pw-item">Canlı Ders (Öğretmenle)</span><span class="pw-val">3 × 50 dk</span></div><div class="pw-row"><span class="pw-item">Bireysel Çalışma</span><span class="pw-val">~4.5 saat</span></div><div class="pw-total"><span class="pw-total-label">⏱ Haftalık Toplam</span><span class="pw-total-val">~7 saat</span></div><div class="pw-hours"><span class="pw-hours-label">🎯 Seviye Toplamı</span><span class="pw-hours-val">~200 saat</span></div></div>
+          <div class="pkg-weekly"><div class="pw-label">📅 Haftalık Program</div><div class="pw-row"><span class="pw-item">Canlı Ders (Öğretmenle)</span><span class="pw-val">3 × 50 dk</span></div><div class="pw-row"><span class="pw-item">Bireysel Çalışma</span><span class="pw-val">~4.5 saat</span></div><div class="pw-total"><span class="pw-total-label">⏱ Haftalık Toplam</span><span class="pw-total-val">~7 saat</span></div></div>
           <button class="cta-btn" onclick="selectPkg('C1-yogun', 'C1 · Yoğun (7 ay)')">Bu Paketi Seç →</button>
         </div>
       </div>
@@ -435,7 +593,7 @@ footer strong{color:var(--acc);}
         <div class="pkg-header"><div class="pkg-type" style="color:var(--acc)"><span class="feat-star">★</span> Standart <span style="font-size:.58rem;opacity:.6;font-weight:400">En Popüler</span></div><div class="pkg-duration">9 <span style="font-size:1rem;font-weight:400;color:var(--muted)">ay</span></div><div class="pkg-dur-label">~40 hafta · haftada 2 ders</div></div>
         <div class="pkg-body">
           <div class="pkg-goal">En çok tercih edilen plan. Haftada iki ders, düzenli bireysel çalışma — ne çok hızlı ne çok yavaş.</div>
-          <div class="pkg-weekly"><div class="pw-label">📅 Haftalık Program</div><div class="pw-row"><span class="pw-item">Canlı Ders (Öğretmenle)</span><span class="pw-val">2 × 50 dk</span></div><div class="pw-row"><span class="pw-item">Bireysel Çalışma</span><span class="pw-val">~3.5 saat</span></div><div class="pw-total"><span class="pw-total-label">⏱ Haftalık Toplam</span><span class="pw-total-val">~5 saat</span></div><div class="pw-hours"><span class="pw-hours-label">🎯 Seviye Toplamı</span><span class="pw-hours-val">~200 saat</span></div></div>
+          <div class="pkg-weekly"><div class="pw-label">📅 Haftalık Program</div><div class="pw-row"><span class="pw-item">Canlı Ders (Öğretmenle)</span><span class="pw-val">2 × 50 dk</span></div><div class="pw-row"><span class="pw-item">Bireysel Çalışma</span><span class="pw-val">~3.5 saat</span></div><div class="pw-total"><span class="pw-total-label">⏱ Haftalık Toplam</span><span class="pw-total-val">~5 saat</span></div></div>
           <button class="cta-btn" onclick="selectPkg('C1-standart', 'C1 · Standart (9 ay)')">Bu Paketi Seç →</button>
         </div>
       </div>
@@ -443,48 +601,33 @@ footer strong{color:var(--acc);}
         <div class="pkg-header"><div class="pkg-type" style="color:var(--c1-c)">🌙 Esnek</div><div class="pkg-duration">13 <span style="font-size:1rem;font-weight:400;color:var(--muted)">ay</span></div><div class="pkg-dur-label">~58 hafta · haftada 1 ders</div></div>
         <div class="pkg-body">
           <div class="pkg-goal">Haftan yoğun mu? Haftada bir ders bile seni ilerletir. Yavaş ama düzenli — en güvenli yol.</div>
-          <div class="pkg-weekly"><div class="pw-label">📅 Haftalık Program</div><div class="pw-row"><span class="pw-item">Canlı Ders (Öğretmenle)</span><span class="pw-val">1 × 50 dk</span></div><div class="pw-row"><span class="pw-item">Bireysel Çalışma</span><span class="pw-val">~2.5 saat</span></div><div class="pw-total"><span class="pw-total-label">⏱ Haftalık Toplam</span><span class="pw-total-val">~3.5 saat</span></div><div class="pw-hours"><span class="pw-hours-label">🎯 Seviye Toplamı</span><span class="pw-hours-val">~200 saat</span></div></div>
+          <div class="pkg-weekly"><div class="pw-label">📅 Haftalık Program</div><div class="pw-row"><span class="pw-item">Canlı Ders (Öğretmenle)</span><span class="pw-val">1 × 50 dk</span></div><div class="pw-row"><span class="pw-item">Bireysel Çalışma</span><span class="pw-val">~2.5 saat</span></div><div class="pw-total"><span class="pw-total-label">⏱ Haftalık Toplam</span><span class="pw-total-val">~3.5 saat</span></div></div>
           <button class="cta-btn" onclick="selectPkg('C1-esnek', 'C1 · Esnek (13 ay)')">Bu Paketi Seç →</button>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="level-block" id="packages-C2">
-    <div class="level-block-header">
-      <div class="lb-badge" style="color:var(--c2-c)">C2</div>
-      <div class="lb-info"><h3>Proficiency · Ustalık</h3><p>CPE · IELTS 8.5+ · TOEFL 114+ · 8.000+ hedef kelime</p></div>
-      <div class="lb-exam"><strong>Sınavlar</strong><br>CPE · IELTS 8.5+ · TOEFL 114+</div>
-      <div class="lb-hours"><strong>Bu Seviye</strong><br>~220 saat çalışma</div>
-    </div>
-    <div class="packages-grid">
-      <div class="pkg-card">
-        <div class="pkg-header"><div class="pkg-type" style="color:var(--c2-c)">⚡ Yoğun</div><div class="pkg-duration">7 <span style="font-size:1rem;font-weight:400;color:var(--muted)">ay</span></div><div class="pkg-dur-label">~32 hafta · haftada 3 ders</div></div>
-        <div class="pkg-body">
-          <div class="pkg-goal">Her gün biraz zaman ayırabiliyorsan ve hızlı ilerlemek istiyorsan bu plan tam sana göre.</div>
-          <div class="pkg-weekly"><div class="pw-label">📅 Haftalık Program</div><div class="pw-row"><span class="pw-item">Canlı Ders (Öğretmenle)</span><span class="pw-val">3 × 50 dk</span></div><div class="pw-row"><span class="pw-item">Bireysel Çalışma</span><span class="pw-val">~4.5 saat</span></div><div class="pw-total"><span class="pw-total-label">⏱ Haftalık Toplam</span><span class="pw-total-val">~7 saat</span></div><div class="pw-hours"><span class="pw-hours-label">🎯 Seviye Toplamı</span><span class="pw-hours-val">~220 saat</span></div></div>
-          <button class="cta-btn" onclick="selectPkg('C2-yogun', 'C2 · Yoğun (7 ay)')">Bu Paketi Seç →</button>
-        </div>
-      </div>
-      <div class="pkg-card featured">
-        <div class="pkg-header"><div class="pkg-type" style="color:var(--acc)"><span class="feat-star">★</span> Standart <span style="font-size:.58rem;opacity:.6;font-weight:400">En Popüler</span></div><div class="pkg-duration">10 <span style="font-size:1rem;font-weight:400;color:var(--muted)">ay</span></div><div class="pkg-dur-label">~44 hafta · haftada 2 ders</div></div>
-        <div class="pkg-body">
-          <div class="pkg-goal">En çok tercih edilen plan. Haftada iki ders, düzenli bireysel çalışma — ne çok hızlı ne çok yavaş.</div>
-          <div class="pkg-weekly"><div class="pw-label">📅 Haftalık Program</div><div class="pw-row"><span class="pw-item">Canlı Ders (Öğretmenle)</span><span class="pw-val">2 × 50 dk</span></div><div class="pw-row"><span class="pw-item">Bireysel Çalışma</span><span class="pw-val">~3.5 saat</span></div><div class="pw-total"><span class="pw-total-label">⏱ Haftalık Toplam</span><span class="pw-total-val">~5 saat</span></div><div class="pw-hours"><span class="pw-hours-label">🎯 Seviye Toplamı</span><span class="pw-hours-val">~220 saat</span></div></div>
-          <button class="cta-btn" onclick="selectPkg('C2-standart', 'C2 · Standart (10 ay)')">Bu Paketi Seç →</button>
-        </div>
-      </div>
-      <div class="pkg-card">
-        <div class="pkg-header"><div class="pkg-type" style="color:var(--c2-c)">🌙 Esnek</div><div class="pkg-duration">14 <span style="font-size:1rem;font-weight:400;color:var(--muted)">ay</span></div><div class="pkg-dur-label">~63 hafta · haftada 1 ders</div></div>
-        <div class="pkg-body">
-          <div class="pkg-goal">Haftan yoğun mu? Haftada bir ders bile seni ilerletir. Yavaş ama düzenli — en güvenli yol.</div>
-          <div class="pkg-weekly"><div class="pw-label">📅 Haftalık Program</div><div class="pw-row"><span class="pw-item">Canlı Ders (Öğretmenle)</span><span class="pw-val">1 × 50 dk</span></div><div class="pw-row"><span class="pw-item">Bireysel Çalışma</span><span class="pw-val">~2.5 saat</span></div><div class="pw-total"><span class="pw-total-label">⏱ Haftalık Toplam</span><span class="pw-total-val">~3.5 saat</span></div><div class="pw-hours"><span class="pw-hours-label">🎯 Seviye Toplamı</span><span class="pw-hours-val">~220 saat</span></div></div>
-          <button class="cta-btn" onclick="selectPkg('C2-esnek', 'C2 · Esnek (14 ay)')">Bu Paketi Seç →</button>
-        </div>
-      </div>
-    </div>
   </div>
 
+<!-- SON ADIM: DANIŞ + ÖĞRETMEN BUL -->
+<div class="section">
+  <p class="section-label">Hâlâ Zorlanıyorsan</p>
+  <h2 class="section-heading">Yalnız İlerlemek Zorunda Değilsin</h2>
+  <div class="final-two">
+    <div class="final-card consult">
+      <div class="final-ico">💬</div>
+      <h3>Ücretsiz Danış</h3>
+      <p>Nereden başlayacağından emin değilsen, sana özel bir yol haritası çıkaralım. Tamamen ücretsiz, taahhüt yok.</p>
+      <a class="cta-btn" href="#ders-talep" style="text-decoration:none;display:inline-block;">Ücretsiz Danış →</a>
+    </div>
+    <div class="final-card teacher">
+      <div class="final-ico">🧑‍🏫</div>
+      <h3>Sana Uygun Öğretmeni Bul</h3>
+      <p>Seviyene, hedefine ve programına uygun bir öğretmenle birebir çalışmaya başla — eşleştirme ücretsizdir.</p>
+      <a class="cta-btn" href="/ogretmenbul.html" style="text-decoration:none;display:inline-block;background:#4ade80;border-color:#4ade80;">Öğretmeni Bul →</a>
+    </div>
+  </div>
 </div>
 
 <!-- DERS TALEP FORMU -->
@@ -514,7 +657,6 @@ footer strong{color:var(--acc);}
           <option value="B1">B1 — Orta Öncesi</option>
           <option value="B2">B2 — Orta Üstü</option>
           <option value="C1">C1 — İleri</option>
-          <option value="C2">C2 — Ustalık</option>
         </select>
       </div>
       <div class="form-row">
