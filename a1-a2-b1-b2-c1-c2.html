@@ -1,11 +1,42 @@
 
 
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AbOnline English — A1 · A2 · B1 · B2 · C1</title>
+<meta name="description" content="Ücretsiz ve kayıtsız online İngilizce öğren: A1'den C1'e kadar tüm seviyelerde gramer, kelime, okuma, dinleme ve yazma alıştırmaları. Seviyene uygun içerikle kendi hızında ilerle.">
+<meta name="keywords" content="online ingilizce öğren, ücretsiz ingilizce, ingilizce gramer, A1 ingilizce, A2 ingilizce, B1 ingilizce, B2 ingilizce, C1 ingilizce, ingilizce seviye testi, ingilizce hikayeler, ingilizce reading, ingilizce kelime ezberleme, AbOnlinEnglish">
+<meta name="author" content="AbOnlinEnglish">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://abonlinenglish.school/a1-a2-b1-b2-c1-c2">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AbOnlinEnglish">
+<meta property="og:title" content="Ücretsiz Online İngilizce Öğren — A1'den C1'e Tüm Seviyeler | AbOnlinEnglish">
+<meta property="og:description" content="Kayıt olmadan, ücretsiz olarak A1'den C1'e kadar İngilizce gramer, kelime, okuma ve yazma çalış. Seviyeni seç, kendi hızında ilerle.">
+<meta property="og:url" content="https://abonlinenglish.school/a1-a2-b1-b2-c1-c2">
+<meta property="og:locale" content="tr_TR">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Ücretsiz Online İngilizce Öğren — A1'den C1'e Tüm Seviyeler">
+<meta name="twitter:description" content="Kayıt olmadan, ücretsiz olarak A1'den C1'e kadar İngilizce gramer, kelime, okuma ve yazma çalış.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "AbOnlinEnglish — A1-C1 Online İngilizce Kursu",
+  "description": "Ücretsiz ve kayıtsız online İngilizce öğrenme platformu. A1'den C1'e kadar gramer, kelime, okuma ve yazma içerikleri.",
+  "provider": {
+    "@type": "Organization",
+    "name": "AbOnlinEnglish",
+    "sameAs": "https://abonlinenglish.school/"
+  },
+  "isAccessibleForFree": true,
+  "inLanguage": "tr",
+  "educationalLevel": "A1,A2,B1,B2,C1"
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
 <style>
@@ -28,6 +59,7 @@ button{font-family:inherit;cursor:pointer;}
   --b1:#0d9488;--b1l:#ccfbf1;--b1d:#0f766e;
   --b2:#7c3aed;--b2l:#ede9fe;--b2d:#5b21b6;
   --c1:#d97706;--c1l:#fef3c7;--c1d:#92400e;
+  --c2:#b91c1c;--c2l:#fee2e2;--c2d:#7f1d1d;
   /* Status */
   --ok:#16a34a;--err:#dc2626;--retry-c:#2563eb;--xp:#f59e0b;--streak:#f97316;
 }
@@ -49,16 +81,17 @@ nav{
 .logo-text span{color:#e8a020;}
 .nav-levels{display:flex;gap:3px;margin-left:8px;}
 .nl{
-  padding:4px 10px;border-radius:6px;font-size:.7rem;font-weight:700;
-  background:none;border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.45);
+  padding:5px 12px;border-radius:6px;font-size:.72rem;font-weight:800;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.18);color:rgba(255,255,255,.75);
   transition:all .15s;letter-spacing:.4px;text-transform:uppercase;
 }
-.nl:hover{color:#fff;border-color:rgba(255,255,255,.3);background:rgba(255,255,255,.07);}
-.nl.on-a1{color:var(--a1);border-color:var(--a1);background:rgba(59,130,246,.12);}
-.nl.on-a2{color:var(--a2);border-color:var(--a2);background:rgba(34,197,94,.12);}
-.nl.on-b1{color:var(--b1);border-color:var(--b1);background:rgba(13,148,136,.12);}
-.nl.on-b2{color:var(--b2);border-color:var(--b2);background:rgba(124,58,237,.12);}
-.nl.on-c1{color:var(--c1);border-color:var(--c1);background:rgba(217,119,6,.12);}
+.nl:hover{color:#fff;border-color:rgba(255,255,255,.5);background:rgba(255,255,255,.14);transform:translateY(-1px);}
+.nl.on-a1{color:#fff;border-color:var(--a1);background:var(--a1);box-shadow:0 2px 10px rgba(59,130,246,.5);}
+.nl.on-a2{color:#fff;border-color:var(--a2);background:var(--a2);box-shadow:0 2px 10px rgba(34,197,94,.5);}
+.nl.on-b1{color:#fff;border-color:var(--b1);background:var(--b1);box-shadow:0 2px 10px rgba(13,148,136,.5);}
+.nl.on-b2{color:#fff;border-color:var(--b2);background:var(--b2);box-shadow:0 2px 10px rgba(124,58,237,.5);}
+.nl.on-c1{color:#fff;border-color:var(--c1);background:var(--c1);box-shadow:0 2px 10px rgba(217,119,6,.5);}
+.nl.on-c2{color:#fff;border-color:var(--c2);background:var(--c2);box-shadow:0 2px 10px rgba(185,28,28,.5);}
 .nav-right{margin-left:auto;display:flex;align-items:center;gap:10px;}
 .nav-flame{font-size:.75rem;font-weight:700;color:#f97316;display:flex;align-items:center;gap:3px;}
 .nav-xp{font-size:.75rem;font-weight:700;color:#f59e0b;display:flex;align-items:center;gap:3px;}
@@ -104,21 +137,26 @@ nav{
 .sb-pf.b1{background:linear-gradient(90deg,var(--b1d),var(--b1));}
 .sb-pf.b2{background:linear-gradient(90deg,var(--b2d),var(--b2));}
 .sb-pf.c1{background:linear-gradient(90deg,var(--c1d),var(--c1));}
+.sb-pf.c2{background:linear-gradient(90deg,var(--c2d),var(--c2));}
 .sb-pp{font-size:.6rem;font-weight:700;color:rgba(255,255,255,.4);width:28px;text-align:right;}
-.sb-body{flex:1;overflow-y:auto;padding:6px 0 12px;}
-.sb-body::-webkit-scrollbar{width:3px;}
-.sb-body::-webkit-scrollbar-thumb{background:rgba(255,255,255,.12);border-radius:2px;}
+.sb-body{flex:1;overflow-y:auto;padding:6px 0 12px;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;touch-action:pan-y;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.35) transparent;}
+.sb-body::-webkit-scrollbar{width:6px;}
+.sb-body::-webkit-scrollbar-thumb{background:rgba(255,255,255,.35);border-radius:3px;}
+.sb-body::-webkit-scrollbar-thumb:hover{background:rgba(255,255,255,.5);}
 
 /* Accordion seviye header - ÇARPıCı */
 .sb-lvl-hdr{
   width:100%;border:none;background:none;text-align:left;cursor:pointer;
-  padding:0;margin:4px 0 0;
+  padding:0;margin:6px 8px 0;width:calc(100% - 16px);
   transition:all .15s;
 }
 .sb-lvl-inner{
   display:flex;align-items:center;gap:0;
-  padding:10px 12px;position:relative;overflow:hidden;
+  padding:12px 14px;position:relative;overflow:hidden;
+  border-radius:10px;box-shadow:0 1px 4px rgba(0,0,0,.2);
 }
+.sb-lvl-hdr:active .sb-lvl-inner{transform:scale(.98);}
+.sb-lvl-hdr.open .sb-lvl-inner{box-shadow:0 3px 12px rgba(0,0,0,.35);}
 .sb-lvl-inner::before{
   content:'';position:absolute;inset:0;opacity:.12;
   background:linear-gradient(135deg,#fff,transparent);
@@ -129,16 +167,18 @@ nav{
 .sb-lvl-hdr.b1 .sb-lvl-inner{background:linear-gradient(135deg,rgba(13,148,136,.3),rgba(15,118,110,.2));}
 .sb-lvl-hdr.b2 .sb-lvl-inner{background:linear-gradient(135deg,rgba(124,58,237,.3),rgba(91,33,182,.2));}
 .sb-lvl-hdr.c1 .sb-lvl-inner{background:linear-gradient(135deg,rgba(217,119,6,.3),rgba(146,64,14,.2));}
+.sb-lvl-hdr.c2 .sb-lvl-inner{background:linear-gradient(135deg,rgba(185,28,28,.3),rgba(127,29,29,.2));}
 .sb-lvl-hdr:hover .sb-lvl-inner{filter:brightness(1.15);}
 .sb-lvl-badge{
-  font-size:.62rem;font-weight:900;padding:3px 9px;border-radius:6px;
-  letter-spacing:.6px;text-transform:uppercase;flex-shrink:0;margin-right:8px;
+  font-size:.68rem;font-weight:900;padding:4px 10px;border-radius:6px;
+  letter-spacing:.6px;text-transform:uppercase;flex-shrink:0;margin-right:9px;
 }
 .a1 .sb-lvl-badge{background:var(--a1);color:#fff;}
 .a2 .sb-lvl-badge{background:var(--a2);color:#fff;}
 .b1 .sb-lvl-badge{background:var(--b1);color:#fff;}
 .b2 .sb-lvl-badge{background:var(--b2);color:#fff;}
 .c1 .sb-lvl-badge{background:var(--c1);color:#fff;}
+.c2 .sb-lvl-badge{background:var(--c2);color:#fff;}
 .sb-lvl-name{font-size:.75rem;font-weight:700;color:#fff;flex:1;letter-spacing:-.2px;}
 .sb-lvl-sub{font-size:.58rem;color:rgba(255,255,255,.45);margin-top:1px;}
 .sb-lvl-meta{display:flex;flex-direction:column;gap:1px;flex:1;}
@@ -147,8 +187,8 @@ nav{
 .sb-lvl-hdr.open .sb-lvl-arrow{transform:rotate(90deg);}
 
 /* Ünite listesi */
-.sb-units{display:none;padding:3px 0;}
-.sb-units.open{display:block;}
+.sb-units{max-height:0;overflow:hidden;transition:max-height .35s cubic-bezier(.4,0,.2,1),padding .35s ease;padding:0 0;}
+.sb-units.open{padding:3px 0;}
 
 /* Bölüm ayırıcı (Units / Reader / Workbook) */
 .sb-section-lbl{
@@ -157,7 +197,7 @@ nav{
 }
 
 .ub{
-  width:100%;padding:6px 12px 6px 18px;display:flex;align-items:center;gap:7px;
+  width:100%;padding:9px 12px 9px 18px;display:flex;align-items:center;gap:7px;
   border:none;background:none;text-align:left;transition:all .12s;
   border-left:2px solid transparent;cursor:pointer;
 }
@@ -205,6 +245,7 @@ nav{
 .ov-h.b1{background:linear-gradient(135deg,#0f2044,#0d4a40);}
 .ov-h.b2{background:linear-gradient(135deg,#1e0838,#2a1558);}
 .ov-h.c1{background:linear-gradient(135deg,#1c0f04,#3d1f00);}
+.ov-h.c2{background:linear-gradient(135deg,#1c0505,#3d0f0f);}
 .ov-badge{
   display:inline-block;font-size:.62rem;font-weight:800;text-transform:uppercase;
   letter-spacing:1px;padding:3px 10px;border-radius:50px;margin-bottom:10px;
@@ -214,6 +255,7 @@ nav{
 .ov-badge.b1{background:rgba(13,148,136,.2);color:#5eead4;border:1px solid rgba(13,148,136,.3);}
 .ov-badge.b2{background:rgba(124,58,237,.2);color:#c4b5fd;border:1px solid rgba(124,58,237,.3);}
 .ov-badge.c1{background:rgba(217,119,6,.2);color:#fde68a;border:1px solid rgba(217,119,6,.3);}
+.ov-badge.c2{background:rgba(185,28,28,.2);color:#fecaca;border:1px solid rgba(185,28,28,.3);}
 .ov-title{
   font-family:'Playfair Display',Georgia,serif;
   font-size:clamp(1.4rem,3vw,2rem);font-weight:900;color:#fff;
@@ -238,7 +280,7 @@ nav{
 .uc-bar{height:3px;background:var(--border);border-radius:2px;overflow:hidden;margin-top:2px;}
 .uc-bf{height:100%;border-radius:2px;transition:width .5s;}
 .ucf-a1{background:var(--a1);} .ucf-a2{background:var(--a2);}
-.ucf-b1{background:var(--b1);} .ucf-b2{background:var(--b2);} .ucf-c1{background:var(--c1);}
+.ucf-b1{background:var(--b1);} .ucf-b2{background:var(--b2);} .ucf-c1{background:var(--c1);} .ucf-c2{background:var(--c2);}
 .uc-ck{font-size:.85rem;text-align:right;display:none;}
 .uc.done .uc-ck{display:block;}
 
@@ -250,6 +292,7 @@ nav{
 .uh.b1{background:linear-gradient(135deg,#0f2044,#0d4a40);}
 .uh.b2{background:linear-gradient(135deg,#1e0838,#2a1558);}
 .uh.c1{background:linear-gradient(135deg,#1c0f04,#3d1f00);}
+.uh.c2{background:linear-gradient(135deg,#1c0505,#3d0f0f);}
 .uh-cr{font-size:.62rem;color:rgba(255,255,255,.38);margin-bottom:5px;letter-spacing:.5px;text-transform:uppercase;}
 .uh-t{font-family:'Playfair Display',Georgia,serif;font-size:clamp(1.2rem,3vw,1.8rem);font-weight:900;color:#fff;line-height:1.15;margin-bottom:6px;}
 .uh-g{font-size:.78rem;color:rgba(255,255,255,.48);margin-bottom:12px;}
@@ -261,14 +304,24 @@ nav{
 .utabs{display:flex;border-bottom:2px solid var(--border);background:#fff;position:sticky;top:0;z-index:50;overflow-x:auto;}
 .utabs::-webkit-scrollbar{display:none;}
 .utab{
-  padding:10px 16px;font-size:.73rem;font-weight:700;color:var(--muted);
+  padding:11px 18px;font-size:.76rem;font-weight:800;color:var(--muted);
   border:none;background:none;white-space:nowrap;
-  border-bottom:3px solid transparent;margin-bottom:-2px;transition:all .12s;
-  display:flex;align-items:center;gap:4px;
+  border-bottom:4px solid transparent;margin-bottom:-2px;transition:all .15s;
+  display:flex;align-items:center;gap:5px;
 }
-.utab:hover{color:var(--text);}
-.utab.on{color:var(--navy);border-bottom-color:var(--acc);}
-.tbadge{font-size:.58rem;font-weight:800;padding:1px 5px;border-radius:50px;background:var(--navy);color:#fff;}
+.utab:hover{color:var(--navy);background:rgba(0,0,0,.03);}
+.utab.on{color:#fff;background:var(--navy);border-bottom-color:var(--acc);border-radius:8px 8px 0 0;}
+.utab-vocab.on{background:#0284c7;border-bottom-color:#7dd3fc;box-shadow:0 2px 10px rgba(2,132,199,.4);}
+.utab-grammar.on{background:#7c3aed;border-bottom-color:#c4b5fd;box-shadow:0 2px 10px rgba(124,58,237,.4);}
+.utab-reading.on{background:#d97706;border-bottom-color:#fcd34d;box-shadow:0 2px 10px rgba(217,119,6,.4);}
+.utab-ex.on{background:#db2777;border-bottom-color:#f9a8d4;box-shadow:0 2px 10px rgba(219,39,119,.4);}
+.utab-write.on{background:#16a34a;border-bottom-color:#86efac;box-shadow:0 2px 10px rgba(22,163,74,.4);}
+.utab-vocab:hover{color:#0284c7;background:rgba(2,132,199,.08);}
+.utab-grammar:hover{color:#7c3aed;background:rgba(124,58,237,.08);}
+.utab-reading:hover{color:#d97706;background:rgba(217,119,6,.08);}
+.utab-ex:hover{color:#db2777;background:rgba(219,39,119,.08);}
+.utab-write:hover{color:#16a34a;background:rgba(22,163,74,.08);}
+.tbadge{font-size:.6rem;font-weight:800;padding:2px 6px;border-radius:50px;background:var(--navy);color:#fff;}
 .utab.on .tbadge{background:var(--acc);color:var(--navy);}
 /* Tab tamamlanma işaretleri */
 .utab.tab-done{color:var(--ok);}
@@ -369,12 +422,14 @@ nav{
   .page{padding-bottom:52px;}
   /* Sidebar drawer — DİK KONUMDA DA AÇILIR */
   .sidebar{
-    position:fixed;top:54px;left:0;bottom:52px;z-index:700;width:280px;
+    position:fixed;top:54px;left:0;bottom:52px;height:auto;z-index:700;width:280px;
     transform:translateX(-100%);transition:transform .25s cubic-bezier(.4,0,.2,1);
     box-shadow:4px 0 20px rgba(0,0,0,.35);
     display:flex!important;flex-direction:column;overflow:hidden;
   }
   .sb-body{overflow-y:auto!important;-webkit-overflow-scrolling:touch;}
+  /* Menü açıkken arkadaki sayfanın kaymasını engelle */
+  body.sidebar-lock{overflow:hidden;position:fixed;width:100%;}
   .sidebar.open{transform:translateX(0);}
   .sidebar-overlay{
     display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:699;
@@ -390,6 +445,11 @@ nav{
   /* Reader ve Workbook paneller - alt nav kapatmasın */
   #reader-panel,#workbook-panel{padding-bottom:60px!important;}
   .rv-body,.wb-sections{padding-bottom:60px!important;}
+  /* Mobilde üst nav taşıyordu ve hamburger ekran dışına itiliyordu — bunu önle */
+  .nav-levels{display:none!important;}
+  .xp-bar-w{display:none!important;}
+  .hamburger{flex-shrink:0;}
+  nav{overflow:hidden;}
 }
 @media(min-width:821px){
   .mobile-bottom-nav{display:none;}
@@ -469,6 +529,7 @@ nav{
 .rtag.b1{background:var(--b1l);color:var(--b1d);}
 .rtag.b2{background:var(--b2l);color:var(--b2d);}
 .rtag.c1{background:var(--c1l);color:var(--c1d);}
+.rtag.c2{background:var(--c2l);color:var(--c2d);}
 .r-card{background:#fff;border:1px solid var(--border);border-radius:var(--r);overflow:hidden;box-shadow:var(--shd);}
 .r-hdr{padding:11px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px;background:#fafbfc;}
 .r-ttl{font-size:.92rem;font-weight:700;color:var(--navy);}
@@ -497,6 +558,7 @@ nav{
 .crb.b2{color:var(--b2d);background:var(--b2l);border-color:rgba(124,58,237,.2);}
 .crb.b2:hover{background:var(--b2);color:#fff;}
 .crb.c1{color:var(--c1d);background:var(--c1l);border-color:rgba(217,119,6,.2);}
+.crb.c2{color:var(--c2d);background:var(--c2l);border-color:rgba(185,28,28,.2);}
 .crb.c1:hover{background:var(--c1);color:#fff;}
 .cans{display:none;margin-top:4px;font-size:.8rem;color:#166534;background:#dcfce7;padding:6px 9px;border-radius:6px;border-left:3px solid var(--ok);}
 .cans.on{display:block;}
@@ -533,6 +595,7 @@ nav{
 .sc-bf.b1{background:linear-gradient(90deg,var(--b1d),#34d399);}
 .sc-bf.b2{background:linear-gradient(90deg,var(--b2d),#a78bfa);}
 .sc-bf.c1{background:linear-gradient(90deg,var(--c1d),#fbbf24);}
+.sc-bf.c2{background:linear-gradient(90deg,var(--c2d),#f87171);}
 .ex-btns{display:flex;gap:6px;margin-left:auto;}
 .btn-rst{padding:6px 11px;border-radius:7px;font-size:.75rem;font-weight:700;background:var(--border);color:var(--text);border:none;cursor:pointer;}
 .btn-rst:hover{background:#d1d5db;}
@@ -622,6 +685,8 @@ nav{
 .comp-reveal-btn.b2:hover{background:var(--b2);color:#fff;}
 .comp-reveal-btn.c1{color:var(--c1d);background:var(--c1l);border-color:rgba(217,119,6,.2);}
 .comp-reveal-btn.c1:hover{background:var(--c1);color:#fff;}
+.comp-reveal-btn.c2{color:var(--c2d);background:var(--c2l);border-color:rgba(185,28,28,.2);}
+.comp-reveal-btn.c2:hover{background:var(--c2);color:#fff;}
 .comp-answer{
   display:none;margin-top:4px;font-size:.8rem;color:#166534;
   background:#dcfce7;padding:6px 9px;border-radius:6px;border-left:3px solid var(--ok);
@@ -653,6 +718,7 @@ nav{
 .rc-cover.b1{background:linear-gradient(135deg,#ccfbf1,#99f6e4);}
 .rc-cover.b2{background:linear-gradient(135deg,#ede9fe,#ddd6fe);}
 .rc-cover.c1{background:linear-gradient(135deg,#fef3c7,#fde68a);}
+.rc-cover.c2{background:linear-gradient(135deg,#fee2e2,#fecaca);}
 .rc-info{padding:11px 13px;}
 .rc-num{font-size:.58rem;font-weight:800;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);margin-bottom:3px;}
 .rc-ttl{font-size:.88rem;font-weight:700;color:var(--navy);margin-bottom:4px;line-height:1.3;}
@@ -798,7 +864,7 @@ nav{
     <div class="logo-mark">Ab</div>
     <div class="logo-text">AbOnline <span>English</span></div>
   </div>
-  <div class="nav-levels"><button class="nl" id="nl-a1" onclick="showLevel('a1')">A1</button><button class="nl" id="nl-a2" onclick="showLevel('a2')">A2</button><button class="nl" id="nl-b1" onclick="showLevel('b1')">B1</button><button class="nl" id="nl-b2" onclick="showLevel('b2')">B2</button><button class="nl" id="nl-c1" onclick="showLevel('c1')">C1</button></div>
+  <div class="nav-levels"><button class="nl" id="nl-a1" onclick="showLevel('a1')">A1</button><button class="nl" id="nl-a2" onclick="showLevel('a2')">A2</button><button class="nl" id="nl-b1" onclick="showLevel('b1')">B1</button><button class="nl" id="nl-b2" onclick="showLevel('b2')">B2</button><button class="nl" id="nl-c1" onclick="showLevel('c1')">C1</button><button class="nl" id="nl-c2" onclick="showLevel('c2')">C2</button></div>
   <div class="nav-right">
     <a href="/" class="nav-home">🏠 Ana Sayfa</a>
     <span class="nav-free-badge">✅ Ücretsiz — Giriş Gerekmez</span>
@@ -840,6 +906,10 @@ nav{
     <span class="mbn-icon">🟠</span>
     <span>C1</span>
   </button>
+  <button class="mbn-btn" onclick="showLevel('c2');closeSidebar()" id="mbn-c2">
+    <span class="mbn-icon">🔴</span>
+    <span>C2</span>
+  </button>
   <a class="mbn-btn" href="/" style="text-decoration:none">
     <span class="mbn-icon">🏠</span>
     <span>Ana Sayfa</span>
@@ -854,6 +924,7 @@ nav{
     <div class="sb-pr"><div class="sb-pl">B1</div><div class="sb-pw"><div class="sb-pf b1" id="sbpf-b1" style="width:0%"></div></div><div class="sb-pp" id="sbpp-b1">0%</div></div>
     <div class="sb-pr"><div class="sb-pl">B2</div><div class="sb-pw"><div class="sb-pf b2" id="sbpf-b2" style="width:0%"></div></div><div class="sb-pp" id="sbpp-b2">0%</div></div>
     <div class="sb-pr"><div class="sb-pl">C1</div><div class="sb-pw"><div class="sb-pf c1" id="sbpf-c1" style="width:0%"></div></div><div class="sb-pp" id="sbpp-c1">0%</div></div>
+    <div class="sb-pr"><div class="sb-pl">C2</div><div class="sb-pw"><div class="sb-pf c2" id="sbpf-c2" style="width:0%"></div></div><div class="sb-pp" id="sbpp-c2">0%</div></div>
   </div>
   <div class="sb-body">
 
@@ -985,6 +1056,21 @@ nav{
       <button class="sb-extra-btn" onclick="showReader('c1');closeSidebar()"><span class="sb-extra-ico">📖</span><span class="sb-extra-txt">The Cartographer</span></button>
       <button class="sb-extra-btn" onclick="showReader('c1',1);closeSidebar()"><span class="sb-extra-ico">📖</span><span class="sb-extra-txt">A Reliable Narrator</span></button>
       <button class="sb-extra-btn" onclick="showWorkbook('c1');closeSidebar()"><span class="sb-extra-ico">📝</span><span class="sb-extra-txt">C1 Workbook</span></button>
+    </div>
+
+    <!-- C2 -->
+    <button class="sb-lvl-hdr c2" onclick="toggleAccordion(this,'acc-c2')">
+      <div class="sb-lvl-inner">
+        <span class="sb-lvl-badge">C2</span>
+        <div class="sb-lvl-meta"><div class="sb-lvl-name">Proficiency</div><div class="sb-lvl-sub">10 ünite</div></div>
+        <span class="sb-lvl-arrow">▶</span>
+      </div>
+    </button>
+    <div class="sb-units" id="acc-c2">
+      <div class="sb-section-lbl">📚 Üniteler</div>
+      <button class="ub" id="ub-c2u1" onclick="showUnit('c2','c2u1')" data-lvl="c2"><span class="un">01</span><span class="ut">The Nature of Genius</span><span class="uck"></span></button>
+      <button class="ub" id="ub-c2u2" onclick="showUnit('c2','c2u2')" data-lvl="c2"><span class="un">02</span><span class="ut">Memory, Myth &amp; National Identity</span><span class="uck"></span></button>
+      <button class="ub" id="ub-c2u3" onclick="showUnit('c2','c2u3')" data-lvl="c2"><span class="un">03</span><span class="ut">The Ethics of Silence</span><span class="uck"></span></button>
     </div>
 
   </div>
@@ -1167,6 +1253,26 @@ nav{
 <div id="up-c1u8" class="up"></div>
 <div id="up-c1u9" class="up"></div>
 <div id="up-c1u10" class="up"></div>
+</div>
+<div id="lv-c2" class="lv">
+<div class="ov-h c2">
+  <div class="ov-badge c2">C2 · Proficiency</div>
+  <h1 class="ov-title">👑 C2 — Proficiency</h1>
+  <p class="ov-sub">CEFR C2 seviyesi — anadil düzeyine en yakın seviye. Gerçek içerik, interaktif alıştırmalar, XP ve streak. <strong style="color:#4ade80">Giriş gerekmez.</strong> Dilediğin üniteden başla.</p>
+  <div class="ov-stats">
+    <div class="os"><div class="os-n">10</div><div class="os-l">Ünite</div></div>
+    <div class="os"><div class="os-n">150</div><div class="os-l">Egzersiz</div></div>
+    <div class="os"><div class="os-n">100+</div><div class="os-l">Vocab</div></div>
+    <div class="os"><div class="os-n">∞</div><div class="os-l">XP</div></div>
+  </div>
+</div>
+<div class="ov-grid"><div class="uc" id="uc-c2u1" onclick="showUnit('c2','c2u1')" data-lvl="c2" data-key="c2u1"><div class="uc-n">Unit 01</div><div class="uc-t">The Nature of Genius</div><div class="uc-g">Cleft &amp; Pseudo-Cleft Sentences for Emphasis</div><div class="uc-bar"><div class="uc-bf ucf-c2" id="ucbf-c2u1" style="width:0%"></div></div><div class="uc-ck">✅</div></div>
+<div class="uc" id="uc-c2u2" onclick="showUnit('c2','c2u2')" data-lvl="c2" data-key="c2u2"><div class="uc-n">Unit 02</div><div class="uc-t">Memory, Myth &amp; National Identity</div><div class="uc-g">Subjunctive Mood in Formal Register</div><div class="uc-bar"><div class="uc-bf ucf-c2" id="ucbf-c2u2" style="width:0%"></div></div><div class="uc-ck">✅</div></div>
+<div class="uc" id="uc-c2u3" onclick="showUnit('c2','c2u3')" data-lvl="c2" data-key="c2u3"><div class="uc-n">Unit 03</div><div class="uc-t">The Ethics of Silence</div><div class="uc-g">Advanced Inversion &amp; Rhetorical Fronting</div><div class="uc-bar"><div class="uc-bf ucf-c2" id="ucbf-c2u3" style="width:0%"></div></div><div class="uc-ck">✅</div></div>
+</div>
+<div id="up-c2u1" class="up"></div>
+<div id="up-c2u2" class="up"></div>
+<div id="up-c2u3" class="up"></div>
 </div>
 </div>
 </div>
@@ -1797,7 +1903,44 @@ const UM_B={
   compHTML:'<div class="comp-item"><div class="comp-q"><span class="comp-q-num">1</span>What consistent pattern did Bronnie Ware find in people\\\'s end-of-life regrets?</div><button class="comp-reveal-btn c1" onclick="this.nextElementSibling.classList.add(\'show\');this.style.display=\'none\'">Cevabı Göster</button><div class="comp-answer">The regrets were about failures of authenticity and connection — not living truthfully, not expressing feelings, not maintaining friendships — not failures of ambition.</div></div><div class="comp-item"><div class="comp-q"><span class="comp-q-num">2</span>What does the text suggest \\\'what we leave unlived\\\' might mean?</div><button class="comp-reveal-btn c1" onclick="this.nextElementSibling.classList.add(\'show\');this.style.display=\'none\'">Cevabı Göster</button><div class="comp-answer">The things we didn\\\'t do, the authentic self we didn\\\'t express — possibly as important as our achievements.</div></div><div class="comp-item"><div class="comp-q"><span class="comp-q-num">3</span>Find one example of inversion, one nominal clause, one participial phrase, and one advanced concessive structure.</div><button class="comp-reveal-btn c1" onclick="this.nextElementSibling.classList.add(\'show\');this.style.display=\'none\'">Cevabı Göster</button><div class="comp-answer">Inversion: \\\'Never has the pressure been greater\\\' / Nominal: \\\'What constitutes a life well-lived\\\' / Participial: \\\'Having spent decades studying\\\' / Concessive: \\\'Compelling though the case for ambition may be\\\'</div></div><div class="comp-item"><div class="comp-q"><span class="comp-q-num">4</span>Find 2 stance adverbials and explain what each signals about the writer\\\'s position.</div><button class="comp-reveal-btn c1" onclick="this.nextElementSibling.classList.add(\'show\');this.style.display=\'none\'">Cevabı Göster</button><div class="comp-answer">e.g. \\\'Arguably\\\' (debatable but probable) / \\\'Notably\\\' (drawing attention to surprising finding) / \\\'Strikingly\\\' (emphatically notable)</div></div>',
   writingHTML:'<div class="writing-task"><div class="writing-task-hdr"><div class="writing-task-num">1</div><div class="writing-task-title">Tam sentez — zorunlu</div></div><div class="writing-task-body"><div class="writing-prompt">Write a paragraph of 150–200 words on what constitutes a life well-lived. You MUST use at least 6 different C1 structures:\\n• Inversion (Never/Rarely...)\\n• Nominal clause (What...)\\n• Participial phrase (Having.../V3...)\\n• Advanced concession (Compelling though.../Much as...)\\n• Formal conditional (Had... / Were... to)\\n• Stance adverbial (Arguably/Notably/Strikingly)</div><textarea class="writing-area" rows="6" placeholder="Cevabını buraya yaz..." oninput="updateWC(this)"></textarea><div class="writing-wc">0 kelime</div></div></div><div class="writing-task"><div class="writing-task-hdr"><div class="writing-task-num">2</div><div class="writing-task-title">Kişisel yansıma</div></div><div class="writing-task-body"><div class="writing-prompt">Write your own \\\'list of regrets I am committed to not having\\\' — things you don\\\'t want to look back on with regret. Use advanced C1 grammar throughout.</div><textarea class="writing-area" rows="6" placeholder="Cevabını buraya yaz..." oninput="updateWC(this)"></textarea><div class="writing-wc">0 kelime</div></div></div>',
   qs:[{q:'___ constitutes genuine success remains deeply personal and contested.',opts:["That","What","Which"],ans:'What',exp:'Nominal clause as subject: What + clause + IS (tekil fiil)'},{q:'Never ___ such philosophical pressure on a single generation.',opts:["has there been", "there has been", "was there"],ans:'has there been',exp:'Inversion after \'Never\': Never + has + subject + V3'},{q:'___ having neglected so many relationships, he resolved to change course.',opts:["Realising","Having realised","Realised"],ans:'Having realised',exp:'Perfect participial: Having + V3 = önce fark etti, sonra karar verdi'},{q:'Much ___ we may regret past choices, dwelling on them helps no one.',opts:["though","as","like"],ans:'as',exp:'Much as + clause = literary concession (ne kadar...olsa da)'},{q:'The fact ___ we have finite time should concentrate our priorities powerfully.',opts:["which","of","that"],ans:'that',exp:'Abstract noun (fact) + that-clause = nominal clause'},{q:'___ though the case for relentless ambition may be, balance matters more.',opts:["Compellingly","Compelled","Compelling"],ans:'Compelling',exp:'Adj + though + subject + verb (concessive fronting)'},{q:'___ she decides to do now, the earlier choices will always have been made.',opts:["However","Wherever","Whatever"],ans:'Whatever',exp:'Whatever + clause = ne olursa olsun (concessive)'},{q:'___ time had been spent more wisely, the outcome might have been very different.',opts:["Were","Should","Had"],ans:'Had',exp:'Formal 3rd conditional: Had + subject + V3'},{q:'___ the very real difficulty of the path ahead, the journey is worth taking.',opts:["Notwithstanding", "For all that", "Despite of"],ans:'Notwithstanding',exp:'Notwithstanding + noun phrase = formal \'despite\''},{q:'___ she said in that final speech moved everyone who was present.',opts:["That","Which","What"],ans:'What',exp:'What-clause as subject = the things she said'},{q:'___ his many documented achievements, he spoke most movingly of his regrets.',opts:["Notwithstanding","For all","Despite all of"],ans:'For all',exp:'For all + noun phrase = tüm başarılarına rağmen'},{q:'Having ___ deeply on these questions, she arrived at an unexpected peace. (reflect)',opts:["reflecting","reflected","to reflect"],ans:'reflected',exp:'Having + V3 = perfect participial (önce düşündü, sonra huzura erdi)'},{q:'___ we define a worthwhile life shapes everything else about how we live it.',opts:["What","Whether","How"],ans:'How',exp:'How-clause as subject = the way in which we define it'},{q:'Rarely ___ such honest engagement with these questions among policymakers.',opts:["do we find", "we find", "have we find"],ans:'do we find',exp:'Inversion after \'Rarely\': Rarely + do + subject + V1 (present)'},{q:'___ opportunities remain available to us, they must be used with intention.',opts:["However","Wherever","Whatever"],ans:'Whatever',exp:'Whatever + noun clause = hangi fırsatlar olursa olsun'}]
-}
+},
+  'c2u1':{
+  title:'The Nature of Genius',emoji:'🧩',grammar:'Cleft & Pseudo-Cleft Sentences for Emphasis',
+  level:'c2',num:'1',levelName:'Proficiency',
+  hero:'c2h',
+  vocab:'<table class="vtbl"><thead><tr><th>Chunk / Phrase</th><th>Türkçe Açıklama</th></tr></thead><tbody><tr><td><span class="ven">an innate gift</span></td><td class="vtr">doğuştan gelen bir yetenek</td></tr><tr><td><span class="ven">attributed to</span></td><td class="vtr">...ye atfedilmiş</td></tr><tr><td><span class="ven">a flash of insight</span></td><td class="vtr">ani bir kavrayış anı</td></tr><tr><td><span class="ven">painstaking</span></td><td class="vtr">son derece özenli, yorucu bir titizlikle</td></tr><tr><td><span class="ven">a far cry from</span></td><td class="vtr">...den çok farklı, hiç benzemeyen</td></tr><tr><td><span class="ven">to labour over something</span></td><td class="vtr">bir şey üzerinde uzun uzun uğraşmak</td></tr><tr><td><span class="ven">self-evident</span></td><td class="vtr">kendiliğinden apaçık</td></tr><tr><td><span class="ven">to eclipse</span></td><td class="vtr">gölgede bırakmak</td></tr><tr><td><span class="ven">a fraction of</span></td><td class="vtr">...nin küçük bir kısmı</td></tr></tbody></table>',
+  grammarHTML:'<div class="grammar-intro"><h2 class="g-main-title">Cleft Sentences — Vurgu Cümleleri</h2><p class="g-intro-text">C1 seviyesinde <strong>nominal clause</strong> (What + clause + is) yapısını öğrenmiştin. C2 seviyesinde bu yapı, cümlenin herhangi bir öğesini seçerek vurgulayabildiğin tam bir sisteme dönüşür: <strong>cleft sentences</strong> (yarılmış cümleler). Bu yapılar İngilizce\'de bir bilgiyi diğerlerinden ayırıp ön plana çıkarmanın en doğal, en profesyonel yoludur.</p></div><h3 class="g-section-title">📌 It-cleft: It is/was + X + that...</h3><table class="gtable"><thead><tr><th>Sade cümle</th><th>It-cleft ile vurgu</th></tr></thead><tbody><tr><td>Edison invented the phonograph.</td><td><strong>It was Edison</strong> who invented the phonograph.</td></tr><tr><td>Hard work makes genius, not talent.</td><td><strong>It is hard work</strong> that makes genius, not talent.</td></tr><tr><td>She realised the truth in that moment.</td><td><strong>It was in that moment that</strong> she realised the truth.</td></tr></tbody></table><h3 class="g-section-title">📌 Pseudo-cleft (Wh-cleft): What/All + clause + is + X</h3><div class="g-examples-grid"><div class="g-example-card"><div class="g-ex-label">What-cleft</div><div class="g-ex-line"><span class="g-hi">What made him a genius</span> was relentless practice.</div><div class="g-ex-line"><span class="g-hi">What people forget</span> is the years of failure behind every breakthrough.</div></div><div class="g-example-card"><div class="g-ex-label">All-cleft — daraltma vurgusu</div><div class="g-ex-line"><span class="g-hi">All it takes</span> is patience and repetition.</div><div class="g-ex-line"><span class="g-hi">All that separates</span> the amateur from the master is practice.</div></div></div><div class="gbox tip"><span class="gbox-ico">💡</span><div class="gbox-body"><div class="gbox-title">TIP — Reverse pseudo-cleft</div>Pseudo-cleft\'i ters çevirebilirsin, ikisi de doğrudur:<br><strong>What surprised me was her patience.</strong><br><strong>Her patience was what surprised me.</strong><br><br>It-cleft genelde <em>kişi/nesne/zaman/yer</em> vurgular; What-cleft genelde <em>eylem/sebep/sonuç</em> vurgular.</div></div>',
+  readingTitle:'The Myth of Effortless Genius',
+  readingHTML:'<p><mark>It is a comforting story</mark>: the genius who produces a masterpiece in a single flash of insight, untouched by struggle. <mark>What the popular imagination rarely acknowledges</mark> is quite how misleading this picture is.</p><p>Take Mozart, so often held up as proof of pure, innate gift. <mark>It was not raw talent alone that</mark> produced his mature symphonies — <mark>it was</mark> more than a decade of gruelling, painstaking training under his father\'s relentless supervision, beginning before the age of five. <mark>What separated Mozart from his contemporaries</mark> was not some mysterious spark but thousands of hours others simply never logged.</p><p>Psychologists who have studied exceptional performers across fields — chess, music, mathematics — arrive again and again at the same uncomfortable conclusion. <mark>All that seems to distinguish</mark> the eventual master from the merely competent is an almost unreasonable quantity of deliberate, effortful practice. <mark>It is this labour</mark>, largely invisible and rarely glamorous, that popular biography quietly edits out.</p><p>None of this is to say that innate aptitude counts for nothing — <mark>it would be naive to claim that</mark> everyone could become Mozart given enough hours. But <mark>what the myth of effortless genius does</mark> is far more damaging than simply getting the history wrong: it discourages the very people who might otherwise persist, by suggesting that talent, not effort, is what ultimately matters. <mark>It is precisely this belief</mark> — self-evident to almost no one who has studied the matter closely — that keeps so many gifted amateurs from ever becoming masters.</p>',
+  compHTML:'<div class="comp-item"><div class="comp-q"><span class="comp-q-num">1</span>According to the text, what actually separated Mozart from his contemporaries?</div><button class="comp-reveal-btn c2" onclick="this.nextElementSibling.classList.add(\'show\');this.style.display=\'none\'">Cevabı Göster</button><div class="comp-answer">Not innate talent, but over a decade of painstaking, deliberate training that others never undertook.</div></div><div class="comp-item"><div class="comp-q"><span class="comp-q-num">2</span>Why does the writer say the myth of effortless genius is damaging?</div><button class="comp-reveal-btn c2" onclick="this.nextElementSibling.classList.add(\'show\');this.style.display=\'none\'">Cevabı Göster</button><div class="comp-answer">Because it discourages people from persisting, by suggesting talent rather than effort determines success.</div></div><div class="comp-item"><div class="comp-q"><span class="comp-q-num">3</span>Find 2 it-cleft sentences and 2 pseudo-cleft (What/All) sentences in the text and identify what each one emphasises.</div><button class="comp-reveal-btn c2" onclick="this.nextElementSibling.classList.add(\'show\');this.style.display=\'none\'">Cevabı Göster</button><div class="comp-answer">It-cleft examples emphasise the TRAINING and the LABOUR as the true cause; What/All-cleft examples emphasise WHAT separated Mozart from others and WHAT the myth actually does.</div></div>',
+  writingHTML:'<div class="writing-task"><div class="writing-task-hdr"><div class="writing-task-num">1</div><div class="writing-task-title">Cleft sentence alıştırması</div></div><div class="writing-task-body"><div class="writing-prompt">Rewrite these 4 plain sentences using cleft structures (It is/was... that / What... is / All... is):\\n1) Practice makes the difference, not talent.\\n2) I first understood this idea at university.\\n3) Curiosity drives real learning.\\n4) You need consistency, nothing more.</div><textarea class="writing-area" rows="6" placeholder="Cevabını buraya yaz..." oninput="updateWC(this)"></textarea><div class="writing-wc">0 kelime</div></div></div><div class="writing-task"><div class="writing-task-hdr"><div class="writing-task-num">2</div><div class="writing-task-title">Kendi deneyimin</div></div><div class="writing-task-body"><div class="writing-prompt">Write 120-150 words about a skill you worked hard to develop. Use at least 4 cleft sentences (mix of it-cleft and pseudo-cleft) to emphasise what mattered most in your progress.</div><textarea class="writing-area" rows="6" placeholder="Cevabını buraya yaz..." oninput="updateWC(this)"></textarea><div class="writing-wc">0 kelime</div></div></div>',
+  qs:[{q:'___ hard work that ultimately produces mastery, not raw talent.',opts:["It is","What is","This is"],ans:'It is',exp:'It-cleft: It is + X + that... — X\'i vurgular'},{q:'___ surprised the committee was her calm under pressure.',opts:["That","It","What"],ans:'What',exp:'Pseudo-cleft: What + clause + is + X'},{q:'It was in 1969 ___ humans first walked on the Moon.',opts:["which","that","when"],ans:'that',exp:'It-cleft zaman zarfını vurgular: It was + zaman + that...'},{q:'___ it takes to succeed here is patience and consistency.',opts:["All","What","That"],ans:'All',exp:'All-cleft: All + clause + is + X (daraltıcı vurgu)'},{q:'___ was Marie Curie who won Nobel Prizes in two different sciences.',opts:["It","This","What"],ans:'It',exp:'It-cleft ile özneyi (kişi) vurgulama'},{q:'___ the data actually shows is far more complicated than the headlines suggest.',opts:["It","What","That"],ans:'What',exp:'Pseudo-cleft ile \'ne\' vurgusu: What the data shows IS...'},{q:'It wasn\'t until she failed twice ___ she finally understood the lesson.',opts:["that","when","then"],ans:'that',exp:'It-cleft: It wasn\'t until X that... (zaman zarfı vurgusu)'},{q:'___ this experiment reveals is a pattern nobody expected.',opts:["What","It","That"],ans:'What',exp:'Pseudo-cleft özne konumunda: What + clause + IS'},{q:'Her patience, more than anything else, ___ what impressed the panel.',opts:["was","were","is being"],ans:'was',exp:'Reverse pseudo-cleft: X + was + what + clause'},{q:'___ was not the prize itself but the recognition that mattered to her.',opts:["It","What","This"],ans:'It',exp:'It-cleft negatif karşıtlıkla: It was not X but Y that...'},{q:'___ genuinely distinguishes an expert from a novice is the quality of practice, not its quantity alone.',opts:["What","It","That"],ans:'What',exp:'Pseudo-cleft özne: What + verb + is + complement'},{q:'It is precisely this kind of discipline ___ separates amateurs from professionals.',opts:["who","which","that"],ans:'that',exp:'It-cleft: \'that\' cansız/soyut kavramlar için de kullanılır'}]
+  },
+  'c2u2':{
+  title:'Memory, Myth & National Identity',emoji:'🏛',grammar:'The Subjunctive Mood in Formal Register',
+  level:'c2',num:'2',levelName:'Proficiency',
+  hero:'c2h',
+  vocab:'<table class="vtbl"><thead><tr><th>Chunk / Phrase</th><th>Türkçe Açıklama</th></tr></thead><tbody><tr><td><span class="ven">collective memory</span></td><td class="vtr">toplumsal/kolektif hafıza</td></tr><tr><td><span class="ven">to enshrine</span></td><td class="vtr">yasa veya gelenekle koruma altına almak, kutsallaştırmak</td></tr><tr><td><span class="ven">a contested narrative</span></td><td class="vtr">tartışmalı, üzerinde uzlaşılmamış bir anlatı</td></tr><tr><td><span class="ven">to whitewash</span></td><td class="vtr">(tarihi) temize çekmek, kusurları örtmek</td></tr><tr><td><span class="ven">selective amnesia</span></td><td class="vtr">seçici unutkanlık</td></tr><tr><td><span class="ven">to invoke</span></td><td class="vtr">(bir geleneği/anıyı) çağrıştırmak, anmak</td></tr><tr><td><span class="ven">deeply ingrained</span></td><td class="vtr">derinden kök salmış, yerleşmiş</td></tr><tr><td><span class="ven">to reckon with something</span></td><td class="vtr">bir şeyle yüzleşmek, hesaplaşmak</td></tr></tbody></table>',
+  grammarHTML:'<div class="grammar-intro"><h2 class="g-main-title">The Subjunctive — Dilek-Şart Kipi</h2><p class="g-intro-text">C1\'de <em>I wish / If only / It\'s high time</em> yapılarını görmüştün. C2 seviyesinde subjunctive, çok daha geniş ve resmi bir sisteme yayılır: <strong>mandative subjunctive</strong> (zorunluluk bildiren fiillerden sonra) ve <strong>formulaic subjunctive</strong> (kalıplaşmış, edebi/resmi ifadeler). Bu yapıların ortak özelliği: fiil, özneden bağımsız olarak her zaman <strong>yalın hâlde (base form)</strong> kalır — 3. tekil şahısta bile "-s" almaz.</p></div><h3 class="g-section-title">📌 Mandative subjunctive — zorunluluk bildiren fiil/sıfatlardan sonra</h3><table class="gtable"><thead><tr><th>Tetikleyici</th><th>Yapı</th><th>Örnek</th></tr></thead><tbody><tr><td>essential / vital / imperative</td><td>It is + adj + that + S + base verb</td><td>It is essential <strong>that</strong> every voice <strong>be heard</strong>.</td></tr><tr><td>recommend / insist / demand / propose</td><td>S + verb + that + S + base verb</td><td>The committee insisted <strong>that</strong> the report <strong>be revised</strong>.</td></tr><tr><td>suggest / require</td><td>...that + S + (not) + base verb</td><td>Historians suggest <strong>that</strong> the archive <strong>not be destroyed</strong>.</td></tr></tbody></table><h3 class="g-section-title">📌 Formulaic (kalıplaşmış) subjunctive</h3><div class="g-examples-grid"><div class="g-example-card"><div class="g-ex-label">Edebi / resmi kalıplar</div><div class="g-ex-line"><span class="g-hi">Suffice it to say</span> that the truth was far more complicated.</div><div class="g-ex-line"><span class="g-hi">Be that as it may</span>, the decision still stands.</div><div class="g-ex-line"><span class="g-hi">Come what may</span>, the archive will be preserved.</div></div><div class="g-example-card"><div class="g-ex-label">Dilek / tören ifadeleri</div><div class="g-ex-line"><span class="g-hi">So be it</span> — we accept the consequences.</div><div class="g-ex-line"><span class="g-hi">Long live</span> the memory of those who resisted.</div><div class="g-ex-line">If truth <span class="g-hi">be told</span>, the record was never neutral.</div></div></div><div class="gbox tip"><span class="gbox-ico">💡</span><div class="gbox-body"><div class="gbox-title">TIP — Neden "-s" yok?</div>Subjunctive fiil her zaman <strong>base form</strong>dır, özne ne olursa olsun:<br>"It is vital that he <strong>attend</strong>" (attends DEĞİL)<br>"It is vital that she <strong>be present</strong>" (is DEĞİL)<br>Bu, C2 sınavlarında ve akademik/hukuki metinlerde çok sık görülen, ama günlük konuşmada nadir kullanılan çok resmi bir yapıdır.</div></div>',
+  readingTitle:'Whose History Is It?',
+  readingHTML:'<p>Every nation, <mark>be it</mark> ancient or newly formed, constructs a version of its own past that it can live with. Historians increasingly insist <mark>that this process be examined</mark> as carefully as the events it claims to record — for collective memory is rarely a neutral archive. It is, more often, a contested narrative, shaped as much by what a society chooses to forget as by what it remembers.</p><p>It is essential <mark>that this distinction be understood</mark>: history is what happened; collective memory is what a society has decided is worth enshrining. Monuments are raised, anniversaries observed, textbooks written — and in each of these acts, a quiet argument is made about which version of events deserves to survive. Where a nation\'s past includes episodes of violence or injustice, officials frequently propose <mark>that the record not dwell</mark> on them, preferring instead a narrative of unbroken progress.</p><p><mark>Suffice it to say</mark> that this selective amnesia rarely serves the descendants of those who suffered. Truth commissions in dozens of countries have demanded <mark>that painful chapters be reckoned with</mark> rather than whitewashed, arguing that reconciliation without honesty is merely amnesia dressed up as healing. <mark>Be that as it may</mark>, the political appetite for such reckoning is often thin; comfortable myths, once deeply ingrained, are not easily dislodged.</p><p><mark>Come what may</mark> in the decades ahead, the argument over whose history gets told — and whose gets quietly edited out — will remain one of the most consequential a society can have with itself. If truth <mark>be told</mark>, a nation that cannot reckon honestly with its past is unlikely to navigate its future with any greater clarity.</p>',
+  compHTML:'<div class="comp-item"><div class="comp-q"><span class="comp-q-num">1</span>According to the text, what is the difference between history and collective memory?</div><button class="comp-reveal-btn c2" onclick="this.nextElementSibling.classList.add(\'show\');this.style.display=\'none\'">Cevabı Göster</button><div class="comp-answer">History is what happened; collective memory is what a society has chosen to enshrine and remember, which is often selective.</div></div><div class="comp-item"><div class="comp-q"><span class="comp-q-num">2</span>Why do truth commissions insist that painful chapters be reckoned with rather than whitewashed?</div><button class="comp-reveal-btn c2" onclick="this.nextElementSibling.classList.add(\'show\');this.style.display=\'none\'">Cevabı Göster</button><div class="comp-answer">Because they argue reconciliation without honesty is simply amnesia disguised as healing.</div></div><div class="comp-item"><div class="comp-q"><span class="comp-q-num">3</span>Find 3 examples of the mandative subjunctive (after essential/insist/propose/demand) and 2 formulaic subjunctive expressions in the text.</div><button class="comp-reveal-btn c2" onclick="this.nextElementSibling.classList.add(\'show\');this.style.display=\'none\'">Cevabı Göster</button><div class="comp-answer">Mandative: \\"that this process be examined\\", \\"that this distinction be understood\\", \\"that the record not dwell\\", \\"that painful chapters be reckoned with\\". Formulaic: \\"Suffice it to say\\", \\"Be that as it may\\", \\"Come what may\\", \\"If truth be told\\".</div></div>',
+  writingHTML:'<div class="writing-task"><div class="writing-task-hdr"><div class="writing-task-num">1</div><div class="writing-task-title">Subjunctive alıştırması</div></div><div class="writing-task-body"><div class="writing-prompt">Complete these 4 sentences using the correct subjunctive form:\\n1) It is essential that every student ___ (submit) the form on time.\\n2) The board demanded that the policy ___ (be) reviewed immediately.\\n3) ___ that as it may, we still need an answer today. (fixed phrase)\\n4) Historians recommend that the archive ___ (not / be) destroyed.</div><textarea class="writing-area" rows="6" placeholder="Cevabını buraya yaz..." oninput="updateWC(this)"></textarea><div class="writing-wc">0 kelime</div></div></div><div class="writing-task"><div class="writing-task-hdr"><div class="writing-task-num">2</div><div class="writing-task-title">Kişisel görüş</div></div><div class="writing-task-body"><div class="writing-prompt">Write 120-150 words on whether you think history taught in schools should include uncomfortable, painful events. Use at least 3 subjunctive structures (mandative or formulaic) in your answer.</div><textarea class="writing-area" rows="6" placeholder="Cevabını buraya yaz..." oninput="updateWC(this)"></textarea><div class="writing-wc">0 kelime</div></div></div>',
+  qs:[{q:'It is essential that every witness ___ present at the hearing.',opts:["is","be","will be"],ans:'be',exp:'Mandative subjunctive: essential that + S + base form (be, DEĞİL is)'},{q:'The committee insisted that the report ___ rewritten before publication.',opts:["is","was","be"],ans:'be',exp:'insist that + S + base form (edilgen yapıda da base form: be + V3)'},{q:'___ that as it may, the decision has already been made.',opts:["Being","Be","Is"],ans:'Be',exp:'Kalıplaşmış ifade: Be that as it may (öyle de olsa)'},{q:'Historians propose that the museum ___ the original documents rather than replicas.',opts:["displays","display","displayed"],ans:'display',exp:'propose that + S + base form (3. tekil şahısta bile -s yok)'},{q:'___ it to say, the truth was far more complicated than the official story.',opts:["Suffices","Suffice","Sufficed"],ans:'Suffice',exp:'Kalıplaşmış ifade: Suffice it to say (kısacası, özetle)'},{q:'It is vital that the ceremony ___ on the anniversary itself, not before.',opts:["takes place","take place","took place"],ans:'take place',exp:'Mandative subjunctive: vital that + S + base form'},{q:'___ what may, the archive will remain open to the public.',opts:["Come","Comes","Coming"],ans:'Come',exp:'Kalıplaşmış ifade: Come what may (ne olursa olsun)'},{q:'The court demanded that the evidence ___ reviewed by an independent panel.',opts:["is","be","was"],ans:'be',exp:'demand that + S + base form (edilgen: be + V3)'},{q:'If truth ___ told, nobody in the room fully believed the official account.',opts:["is","be","was"],ans:'be',exp:'Kalıplaşmış subjunctive: If truth be told (doğrusunu söylemek gerekirse)'},{q:'It is imperative that the government ___ transparent about the archive\'s contents.',opts:["is","be","will be"],ans:'be',exp:'Mandative subjunctive: imperative that + S + base form'},{q:'Long ___ the memory of those who fought for the truth.',opts:["live","lives","lived"],ans:'live',exp:'Kalıplaşmış dilek ifadesi: Long live... (yaşasın...)'},{q:'The panel recommended that the textbook ___ revised to include the omitted chapter.',opts:["is","be","was"],ans:'be',exp:'recommend that + S + base form'}]
+  },
+  'c2u3':{
+  title:'The Ethics of Silence',emoji:'🤐',grammar:'Advanced Inversion & Rhetorical Fronting',
+  level:'c2',num:'3',levelName:'Proficiency',
+  hero:'c2h',
+  vocab:'<table class="vtbl"><thead><tr><th>Chunk / Phrase</th><th>Türkçe Açıklama</th></tr></thead><tbody><tr><td><span class="ven">complicit in something</span></td><td class="vtr">bir şeyde suç ortağı, işbirlikçi</td></tr><tr><td><span class="ven">to turn a blind eye to</span></td><td class="vtr">göz yummak</td></tr><tr><td><span class="ven">a moral imperative</span></td><td class="vtr">ahlaki bir zorunluluk</td></tr><tr><td><span class="ven">to bear witness to</span></td><td class="vtr">tanıklık etmek</td></tr><tr><td><span class="ven">tacit approval</span></td><td class="vtr">üstü kapalı, zımni onay</td></tr><tr><td><span class="ven">culpable</span></td><td class="vtr">kusurlu, suçlu (özellikle ihmalden dolayı)</td></tr><tr><td><span class="ven">complicit by omission</span></td><td class="vtr">eylemsizlikle suç ortağı olma</td></tr><tr><td><span class="ven">an uncomfortable truth</span></td><td class="vtr">rahatsız edici bir gerçek</td></tr></tbody></table>',
+  grammarHTML:'<div class="grammar-intro"><h2 class="g-main-title">İleri Devrik Yapılar (Advanced Inversion)</h2><p class="g-intro-text">C1\'de <em>Never / Rarely / No sooner</em> ile başlayan temel devrikleri gördün. C2 seviyesinde devrik yapı, çok daha zengin bir üslup aracına dönüşür: koşul cümlelerinde "if" olmadan devrik kurma, "Only" ile zaman/yol zarflarını vurgulama ve edebi anlatımda "Little did..." / "Such was..." gibi kalıplarla dramatik vurgu yaratma.</p></div><h3 class="g-section-title">📌 "If" olmadan koşul devrikleri</h3><table class="gtable"><thead><tr><th>Normal koşul</th><th>Devrik (resmi/edebi)</th></tr></thead><tbody><tr><td>If you should have any doubts...</td><td><strong>Should you</strong> have any doubts...</td></tr><tr><td>If it were not for her courage...</td><td><strong>Were it not for</strong> her courage...</td></tr><tr><td>If it had not been for their silence...</td><td><strong>Had it not been for</strong> their silence...</td></tr></tbody></table><h3 class="g-section-title">📌 "Only" ile zarf vurgusu + devrik</h3><div class="g-examples-grid"><div class="g-example-card"><div class="g-ex-label">Only when / Only after</div><div class="g-ex-line"><span class="g-hi">Only when the archive was opened</span> did the truth emerge.</div><div class="g-ex-line"><span class="g-hi">Only after decades of silence</span> did she speak publicly.</div></div><div class="g-example-card"><div class="g-ex-label">Only by / Little did</div><div class="g-ex-line"><span class="g-hi">Only by speaking out</span> can real change occur.</div><div class="g-ex-line"><span class="g-hi">Little did they know</span> that their silence would be remembered.</div></div></div><h3 class="g-section-title">📌 Edebi vurgu: Such was... / So + sıfat + was...</h3><div class="gbox tip"><span class="gbox-ico">💡</span><div class="gbox-body"><div class="gbox-title">TIP — Dramatik etki için fronting</div><strong>Such was</strong> the fear of retaliation <strong>that</strong> nobody dared to speak.<br><strong>So complete was</strong> the silence <strong>that</strong> the crime went unrecorded for years.<br><br>Bu yapılar özellikle edebi anlatım, tarih yazımı ve resmi konuşmalarda "derece + sonuç" ilişkisini çok güçlü şekilde vurgular.</div></div>',
+  readingTitle:'The Complicity of Silence',
+  readingHTML:'<p><mark>Only when survivors finally began to speak</mark> did the full scale of the institution\'s failures become impossible to ignore. For decades, colleagues who had turned a blind eye to what was happening around them told themselves a comforting story: that watching was not the same as doing, that silence was neutral.</p><p><mark>Had it not been for</mark> a handful of individuals willing to bear witness, the pattern might never have surfaced at all. <mark>Little did those who stayed silent realise</mark> that their omission would later be judged as harshly as any direct act — that tacit approval, however unspoken, is still a form of participation.</p><p>Moral philosophers have long argued that we are complicit by omission when we possess both the knowledge and the power to intervene, yet choose not to. <mark>Only by acknowledging this</mark> can institutions begin to build cultures where silence is no longer the safest option. <mark>Were it not for</mark> the courage of those who eventually broke ranks, an uncomfortable truth might have remained buried indefinitely.</p><p><mark>Such was</mark> the culture of self-protection within the institution <mark>that</mark> even sympathetic colleagues found it easier to say nothing than to risk their own position. <mark>So deeply entrenched was</mark> this instinct <mark>that</mark> it took an external investigation, rather than an internal reckoning, to finally force the issue into daylight. The lesson, uncomfortable as it is, endures: <mark>should</mark> a similar moment arise again, silence will once more be a choice — and, this time, a culpable one.</p>',
+  compHTML:'<div class="comp-item"><div class="comp-q"><span class="comp-q-num">1</span>What comforting story did silent colleagues tell themselves, according to the text?</div><button class="comp-reveal-btn c2" onclick="this.nextElementSibling.classList.add(\'show\');this.style.display=\'none\'">Cevabı Göster</button><div class="comp-answer">That watching was not the same as doing, and that their silence was neutral rather than a form of participation.</div></div><div class="comp-item"><div class="comp-q"><span class="comp-q-num">2</span>According to moral philosophers mentioned in the text, when are we complicit by omission?</div><button class="comp-reveal-btn c2" onclick="this.nextElementSibling.classList.add(\'show\');this.style.display=\'none\'">Cevabı Göster</button><div class="comp-answer">When we have both the knowledge and the power to intervene, yet choose not to act.</div></div><div class="comp-item"><div class="comp-q"><span class="comp-q-num">3</span>Find one example each of: conditional inversion without if, Only-fronting, Little did-inversion, and Such was.../So...was... structure.</div><button class="comp-reveal-btn c2" onclick="this.nextElementSibling.classList.add(\'show\');this.style.display=\'none\'">Cevabı Göster</button><div class="comp-answer">Conditional: \\"Had it not been for\\" / \\"Were it not for\\". Only-fronting: \\"Only when survivors finally began to speak\\" / \\"Only by acknowledging this\\". Little did: \\"Little did those who stayed silent realise\\". Such/So: \\"Such was the culture...that\\" / \\"So deeply entrenched was this instinct that\\".</div></div>',
+  writingHTML:'<div class="writing-task"><div class="writing-task-hdr"><div class="writing-task-num">1</div><div class="writing-task-title">Devrik yapı alıştırması</div></div><div class="writing-task-body"><div class="writing-prompt">Rewrite these 4 sentences using inversion:\\n1) If it had not been for her testimony, the truth would never have come out.\\n2) The public only understood the danger after the report was published.\\n3) He didn\'t know at the time that the decision would define his career. (Little did...)\\n4) The silence was so complete that nobody noticed the pattern for years. (Such was...)</div><textarea class="writing-area" rows="6" placeholder="Cevabını buraya yaz..." oninput="updateWC(this)"></textarea><div class="writing-wc">0 kelime</div></div></div><div class="writing-task"><div class="writing-task-hdr"><div class="writing-task-num">2</div><div class="writing-task-title">Ahlaki bir ikilem</div></div><div class="writing-task-body"><div class="writing-prompt">Write 120-150 words about a situation (real or imagined) where staying silent would be a form of complicity. Use at least 4 advanced inversion structures from this unit.</div><textarea class="writing-area" rows="6" placeholder="Cevabını buraya yaz..." oninput="updateWC(this)"></textarea><div class="writing-wc">0 kelime</div></div></div>',
+  qs:[{q:'___ it not been for the journalist\'s persistence, the story would never have been told.',opts:["Had","Were","Should"],ans:'Had',exp:'Koşul devriği: Had it not been for + isim/isim öbeği (past perfect koşul)'},{q:'___ you have any concerns, please contact the ethics committee directly.',opts:["Should","Were","Had"],ans:'Should',exp:'Koşul devriği: Should + subject + base verb (if you should)'},{q:'Only when the report was finally published ___ the scale of the cover-up become clear.',opts:["it did","did it","it was"],ans:'did it',exp:'Only when + clause + AUX + subject + verb (devrik yardımcı fiil)'},{q:'___ did she realise that her silence had been noticed by everyone in the room.',opts:["Little","Small","Never"],ans:'Little',exp:'Little did + subject + verb = fark etmedi ki... (dramatik vurgu)'},{q:'___ it not for their courage, the truth might still be buried today.',opts:["Was","Were","Had"],ans:'Were',exp:'Koşul devriği: Were it not for + isim (present/genel koşul, if it were not for)'},{q:'Only by speaking openly ___ we begin to change the culture of silence.',opts:["can","we can","could we"],ans:'can',exp:'Only by + gerund + AUX + subject + verb (devrik)'},{q:'___ was the fear of retaliation that no one dared to file a complaint.',opts:["So","Such","That"],ans:'Such',exp:'Such was + noun + that + clause (derece-sonuç, edebi vurgu)'},{q:'So deeply entrenched ___ the culture of silence that reform took a full decade.',opts:["was","is","were"],ans:'was',exp:'So + adj + was + subject + that... (derece-sonuç devriği)'},{q:'Only after the archive was opened to researchers ___ historians piece together the full picture.',opts:["did","could","they could"],ans:'could',exp:'Only after + clause + AUX(devrik) + subject + verb'},{q:'___ it not been for a handful of whistleblowers, the pattern might never have surfaced.',opts:["Was","Had","Were"],ans:'Had',exp:'Had it not been for + isim (past koşul, geçmişte gerçekleşmemiş durum)'},{q:'Little ___ the committee know that the report had already been leaked to the press.',opts:["did","does","had"],ans:'did',exp:'Little did + subject + base verb (geçmiş zaman anlamı taşır)'},{q:'So complete ___ the silence that the events went unrecorded for a generation.',opts:["was","were","is"],ans:'was',exp:'So + adj + was + subject + that-clause'}]
+  }
+
 };
 </script>
 <script>
@@ -1892,7 +2035,7 @@ if(!P.xp)P.xp=0;
 let curLvl='a1', curKey=null, wQ={}, ans={};
 
 // ── Level colours map
-const LC={a1:'on-a1',a2:'on-a2',b1:'on-b1',b2:'on-b2',c1:'on-c1'};
+const LC={a1:'on-a1',a2:'on-a2',b1:'on-b1',b2:'on-b2',c1:'on-c1',c2:'on-c2'};
 
 // ── showLevel: show overview only
 function showLevel(lvl){
@@ -2011,11 +2154,11 @@ function renderUnit(key){
   <span class="upb-item" id="upb-write-${key}" data-tab="write"><span class="upb-icon">✍️</span>Writing</span>
 </div>
 <div class="utabs">
-  <button class="utab on" id="tab-btn-vocab-${key}" onclick="sTab('${key}','vocab',this)">📚 Vocab</button>
-  <button class="utab" id="tab-btn-grammar-${key}" onclick="sTab('${key}','grammar',this)">📐 Grammar</button>
-  <button class="utab" id="tab-btn-reading-${key}" onclick="sTab('${key}','reading',this)">📖 Reading</button>
-  <button class="utab" id="tab-btn-ex-${key}" onclick="sTab('${key}','ex',this)">✏️ Alıştırmalar <span class="tbadge">15</span></button>
-  <button class="utab" id="tab-btn-write-${key}" onclick="sTab('${key}','write',this)">✍️ Writing</button>
+  <button class="utab utab-vocab on" id="tab-btn-vocab-${key}" onclick="sTab('${key}','vocab',this)">📚 Vocab</button>
+  <button class="utab utab-grammar" id="tab-btn-grammar-${key}" onclick="sTab('${key}','grammar',this)">📐 Grammar</button>
+  <button class="utab utab-reading" id="tab-btn-reading-${key}" onclick="sTab('${key}','reading',this)">📖 Reading</button>
+  <button class="utab utab-ex" id="tab-btn-ex-${key}" onclick="sTab('${key}','ex',this)">✏️ Alıştırmalar <span class="tbadge">15</span></button>
+  <button class="utab utab-write" id="tab-btn-write-${key}" onclick="sTab('${key}','write',this)">✍️ Writing</button>
 </div>`;
 
   const tabVocab=`<div id="${key}-vocab" class="tp on">
@@ -2348,7 +2491,7 @@ function restoreDone(key){
 
 // ── Progress bars
 function updateProgress(){
-  ['a1','a2','b1','b2','c1'].forEach(lv=>{
+  ['a1','a2','b1','b2','c1','c2'].forEach(lv=>{
     const keys=Array.from({length:10},(_,i)=>`${lv}u${i+1}`);
     const done=keys.filter(k=>P.completed[k]).length;
     const pct=Math.round(done/keys.length*100);
@@ -2640,9 +2783,23 @@ function buildWriting(html, samplesArg, key){
 
 // ── Accordion toggle
 function toggleAccordion(btn,id){
-  btn.classList.toggle('open');
-  const el=document.getElementById(id);
-  if(el)el.classList.toggle('open');
+  const willOpen = !btn.classList.contains('open');
+  document.querySelectorAll('.sb-lvl-hdr').forEach(b=>b.classList.remove('open'));
+  document.querySelectorAll('.sb-units').forEach(u=>{
+    u.classList.remove('open');
+    u.style.maxHeight='0px';
+  });
+  if(willOpen){
+    btn.classList.add('open');
+    const el=document.getElementById(id);
+    if(el){
+      el.classList.add('open');
+      el.style.maxHeight = el.scrollHeight + 'px';
+      setTimeout(()=>{
+        btn.scrollIntoView({behavior:'smooth', block:'start'});
+      }, 60);
+    }
+  }
 }
 
 // ── Tüm panelleri gizle
@@ -3033,12 +3190,18 @@ function openSidebar(){
   const ov=document.getElementById('sb-overlay');
   if(sb)sb.classList.add('open');
   if(ov)ov.classList.add('on');
+  window.__sbScrollY = window.scrollY || document.documentElement.scrollTop || 0;
+  document.body.style.top = (-window.__sbScrollY) + 'px';
+  document.body.classList.add('sidebar-lock');
 }
 function closeSidebar(){
   const sb=document.getElementById('main-sidebar');
   const ov=document.getElementById('sb-overlay');
   if(sb)sb.classList.remove('open');
   if(ov)ov.classList.remove('on');
+  document.body.classList.remove('sidebar-lock');
+  document.body.style.top = '';
+  window.scrollTo(0, window.__sbScrollY || 0);
 }
 
 // Sidebar'daki unit butonlarına tıklayınca mobilde kapansın
