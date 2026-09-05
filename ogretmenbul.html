@@ -1070,6 +1070,8 @@ async function studentTab(tab){
    ============================================================ */
 route('teacher-dash', async ()=>{
   if(!requireAuth('teacher')) return;
+  const { data: existingProfile } = await sb.from('teacher_profiles').select('id').eq('id', currentUser.id).maybeSingle();
+  if(!existingProfile){ go('teacher-apply'); return; }
   document.getElementById('app').innerHTML = dashShell(`
     <button class="active" data-tab="profile" onclick="teacherTab('profile')">${ICN.user} Profilim</button>
     <button data-tab="requests" onclick="teacherTab('requests')">${ICN.file} Gelen Talepler</button>
