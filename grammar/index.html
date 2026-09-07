@@ -175,7 +175,10 @@
 .gr-hero .gr-breadcrumb li[aria-current] { color: #fff; }
 
 /* ---- Hero ---- */
-.gr-hero { padding: 56px 0 40px; background: linear-gradient(160deg, var(--ab-navy) 0%, var(--ab-navy-soft) 100%); color: #fff; }
+.gr-hero { padding: 56px 0 40px; background: linear-gradient(160deg, var(--ab-navy) 0%, var(--ab-navy-soft) 100%); color: #fff; position: relative; overflow: hidden; }
+.gr-hero::before { content: ''; position: absolute; top: -60%; right: -10%; width: 480px; height: 480px; border-radius: 50%; background: radial-gradient(circle, rgba(255,255,255,.07) 0%, transparent 70%); pointer-events: none; }
+.gr-hero::after { content: ''; position: absolute; bottom: -40%; left: 5%; width: 320px; height: 320px; border-radius: 50%; background: radial-gradient(circle, rgba(232,160,32,.10) 0%, transparent 70%); pointer-events: none; }
+.gr-hero .gr-container { position: relative; z-index: 1; }
 .gr-hero h1 { color: #fff; font-size: clamp(2rem, 4vw, 3rem); }
 .gr-hero p.gr-lead { max-width: 62ch; color: #dbe6f2; font-size: 1.1rem; }
 .gr-hero-badges { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
@@ -196,10 +199,16 @@
 .gr-level-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 16px; margin: 28px 0; }
 .gr-level-card {
   background: var(--n-0); border-radius: var(--radius-lg); padding: 22px;
-  box-shadow: var(--shadow-sm); border: 1px solid var(--n-100);
-  text-decoration: none; color: inherit; display: block; transition: transform .15s ease, box-shadow .15s ease;
+  box-shadow: var(--shadow-sm); border: 1px solid var(--n-100); border-top: 3px solid var(--n-100);
+  text-decoration: none; color: inherit; display: block; transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  position: relative;
 }
-.gr-level-card:hover, .gr-level-card:focus-visible { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.gr-level-card:hover, .gr-level-card:focus-visible { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.gr-level-card.gr-lvl-A1 { border-top-color: #16a34a; }
+.gr-level-card.gr-lvl-A2 { border-top-color: #147a72; }
+.gr-level-card.gr-lvl-B1 { border-top-color: #2563a8; }
+.gr-level-card.gr-lvl-B2 { border-top-color: #6b3fa0; }
+.gr-level-card.gr-lvl-C1 { border-top-color: #b8621f; }
 .gr-level-card h3 { font-size: 1.6rem; margin-bottom: 4px; }
 .gr-level-card .gr-level-name { font-family: var(--font-body); font-weight: 600; color: var(--n-600); font-size: 0.85rem; }
 .gr-level-card .gr-progress { margin-top: 14px; }
@@ -241,10 +250,11 @@
 .gr-map { display: flex; flex-direction: column; gap: 4px; align-items: stretch; }
 .gr-map-row { display: flex; align-items: center; gap: 14px; }
 .gr-map-node {
-  flex: 1; background: var(--n-0); border: 1px solid var(--n-100); border-radius: var(--radius-md);
-  padding: 12px 16px; box-shadow: var(--shadow-sm);
+  flex: 1; background: var(--n-0); border: 1px solid var(--n-100); border-left: 4px solid var(--ab-orange); border-radius: var(--radius-md);
+  padding: 12px 16px; box-shadow: var(--shadow-sm); transition: transform .15s ease, box-shadow .15s ease;
 }
-.gr-map-arrow { color: var(--n-400); font-size: 1.3rem; text-align: center; padding: 2px 0; }
+.gr-map-node:hover { transform: translateX(3px); box-shadow: var(--shadow-md); }
+.gr-map-arrow { color: var(--ab-orange); font-size: 1.3rem; text-align: center; padding: 2px 0; opacity: .55; }
 
 /* ---- Search box ---- */
 .gr-search { position: relative; max-width: 560px; }
@@ -1214,8 +1224,8 @@ window.GR_BREADCRUMB = [
   var SITE_LINKS = [
     { label: "Anasayfa", href: ROOT + "index.html" },
     { label: "Landing", href: ROOT + "landing.html" },
-    { label: "Hakkımızda", href: ROOT + "hakkimizda.html" },
-    { label: "Öğretmen Bul", href: ROOT + "ogretmenbul.html" }
+    { label: "Hakkımızda", href: ROOT + "hakkimizda" },
+    { label: "Öğretmen Bul", href: ROOT + "ogretmenbul" }
   ];
 
   function renderBridge() {
@@ -1342,8 +1352,7 @@ window.GR_BREADCRUMB = [
     var topics = G.byLevel(lvl);
     var built = topics.filter(function (t) { return t.status === "built"; }).length;
     var prog = P.levelProgress(lvl);
-    return '<a class="gr-level-card" href="' + levelHref(lvl) + '">' +
-      '<span class="gr-level-name">CEFR</span>' +
+    return '<a class="gr-level-card gr-lvl-' + lvl + '" href="' + levelHref(lvl) + '">' +
       '<h3><span class="gr-level-badge gr-level-' + lvl + '">' + lvl + '</span></h3>' +
       '<div style="font-size:.85rem;color:var(--n-600)">' + topics.length + ' konu · ' + built + ' hazır ders</div>' +
       '<div class="gr-progress">' +

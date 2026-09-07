@@ -1,9 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>AbOnlinEnglish | İngilizce Hikâyeler Serisi</title>
+
+<meta name="description" content="CEFR seviyelerine göre hazırlanmış ücretsiz İngilizce hikâyeler ve okuduğunu anlama alıştırmalarıyla okuma pratiği yap.">
+<meta name="author" content="AbOnlinEnglish">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0e1c38">
+<link rel="canonical" href="https://abonlinenglish.school/hikayeler">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AbOnlinEnglish">
+<meta property="og:title" content="İngilizce Hikâyeler Serisi | AbOnlinEnglish">
+<meta property="og:description" content="CEFR seviyelerine göre hazırlanmış ücretsiz İngilizce hikâyeler ve okuduğunu anlama alıştırmalarıyla okuma pratiği yap.">
+<meta property="og:url" content="https://abonlinenglish.school/hikayeler">
+<meta property="og:locale" content="tr_TR">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="İngilizce Hikâyeler Serisi | AbOnlinEnglish">
+<meta name="twitter:description" content="CEFR seviyelerine göre hazırlanmış ücretsiz İngilizce hikâyeler ve okuduğunu anlama alıştırmalarıyla okuma pratiği yap.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -63,6 +78,21 @@
   .gnav-link.gnav-current{
     background:var(--orange); color:#fff; font-weight:700;
   }
+  .gnav-more-wrap{ position:relative; flex:0 0 auto; }
+  .gnav-more-btn{
+    background:transparent; border:1px solid rgba(255,255,255,0.25); color:rgba(255,255,255,0.75);
+    font:inherit; font-family:'Outfit',sans-serif; font-size:12.5px; font-weight:500;
+    padding:6px 11px; border-radius:8px; cursor:pointer; white-space:nowrap;
+  }
+  .gnav-more-btn:hover{ background:rgba(255,255,255,0.08); color:#fff; }
+  .gnav-more-menu{
+    display:none; position:absolute; top:calc(100% + 8px); left:0; background:#0c1626;
+    border:1px solid rgba(255,255,255,0.14); border-radius:10px; padding:6px; min-width:190px;
+    box-shadow:0 18px 40px rgba(0,0,0,.4); z-index:700;
+  }
+  .gnav-more-wrap.open .gnav-more-menu{ display:block; }
+  .gnav-more-menu a{ display:block; padding:9px 12px; font-size:12.5px; border-radius:7px; white-space:nowrap; }
+  .gnav-more-menu a:hover{ background:rgba(255,255,255,0.08); color:#fff; }
 
   /* ===== HEADER ===== */
   header.site-head{
@@ -386,16 +416,27 @@
 
 <nav class="global-nav" id="globalNav">
   <div class="global-nav-inner">
-    <a href="https://abonlinenglish.school/landing" class="gnav-link">Anasayfa</a>
-    <a href="https://abonlinenglish.school/" class="gnav-link">Kendin Öğren</a>
-    <a href="https://abonlinenglish.school/roadmap" class="gnav-link">Yol Haritası</a>
-    <a href="https://abonlinenglish.school/placement-test" class="gnav-link">Seviye Testi</a>
-    <a href="https://abonlinenglish.school/games" class="gnav-link">Oyunlar</a>
-    <a href="https://abonlinenglish.school/skills" class="gnav-link">📚 Skills</a>
-    <a href="#" class="gnav-link gnav-current">📖 Hikâyeler</a>
-    <a href="https://abonlinenglish.school/ielts" class="gnav-link">🔴 IELTS Academy</a>
-    <a href="https://abonlinenglish.school/canli-ders" class="gnav-link">🔴 Canlı Ders</a>
-    <a href="https://abonlinenglish.school/landing#iletisim" class="gnav-link">Online Ders</a>
+    <a href="https://abonlinenglish.school/" class="gnav-link">Anasayfa</a>
+    <div class="gnav-more-wrap">
+      <button type="button" class="gnav-more-btn" onclick="this.parentElement.classList.toggle('open')">Öğren <span style="font-size:.7em;">▾</span></button>
+      <div class="gnav-more-menu">
+        <a href="https://abonlinenglish.school/kendin-ogren">Kendin Öğren</a>
+        <a href="https://abonlinenglish.school/grammar">Grammar</a>
+        <a href="https://abonlinenglish.school/skills">📚 Skills</a>
+        <a href="#" class="gnav-current" style="display:block;padding:9px 12px;border-radius:7px;background:var(--orange);color:#fff;font-weight:700;">📖 Hikâyeler</a>
+        <a href="https://abonlinenglish.school/games">Oyunlar</a>
+      </div>
+    </div>
+    <div class="gnav-more-wrap">
+      <button type="button" class="gnav-more-btn" onclick="this.parentElement.classList.toggle('open')">Seviyeni Bul <span style="font-size:.7em;">▾</span></button>
+      <div class="gnav-more-menu">
+        <a href="https://abonlinenglish.school/placement-test">Seviye Testi</a>
+        <a href="https://abonlinenglish.school/roadmap">Yol Haritası</a>
+      </div>
+    </div>
+    <a href="https://abonlinenglish.school/ielts" class="gnav-link">IELTS</a>
+    <a href="https://abonlinenglish.school/hakkimizda" class="gnav-link">Hakkımızda</a>
+    <a href="https://abonlinenglish.school/ozel-ders" class="gnav-link">Bilgi Al</a>
   </div>
 </nav>
 

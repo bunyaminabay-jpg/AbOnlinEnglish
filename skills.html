@@ -1,9 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Skills Centre — AbOnlinEnglish</title>
+
+<meta name="description" content="Reading, Listening, Speaking ve Writing becerilerini seviyene göre ücretsiz alıştırmalarla geliştir.">
+<meta name="author" content="AbOnlinEnglish">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0e1c38">
+<link rel="canonical" href="https://abonlinenglish.school/skills">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AbOnlinEnglish">
+<meta property="og:title" content="Skills Centre | AbOnlinEnglish">
+<meta property="og:description" content="Reading, Listening, Speaking ve Writing becerilerini seviyene göre ücretsiz alıştırmalarla geliştir.">
+<meta property="og:url" content="https://abonlinenglish.school/skills">
+<meta property="og:locale" content="tr_TR">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Skills Centre | AbOnlinEnglish">
+<meta name="twitter:description" content="Reading, Listening, Speaking ve Writing becerilerini seviyene göre ücretsiz alıştırmalarla geliştir.">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -38,6 +53,13 @@ textarea,input{font-family:inherit}
 .sn-link{padding:7px 13px;border-radius:8px;font-size:13.5px;font-weight:600;color:var(--muted);transition:background .12s,color .12s}
 .sn-link:hover{background:var(--bg2);color:var(--ink)}
 .sn-link.on{background:var(--bg2);color:var(--ink)}
+.sn-more-wrap{position:relative}
+.sn-more-btn{background:transparent;border:1px solid var(--border2);color:var(--ink2);padding:7px 13px;border-radius:8px;font:inherit;font-size:13.5px;font-weight:600;cursor:pointer}
+.sn-more-btn:hover{background:var(--bg2);color:var(--ink)}
+.sn-more-menu{display:none;position:absolute;top:calc(100% + 8px);right:0;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:6px;min-width:180px;box-shadow:0 18px 40px rgba(0,0,0,.14);z-index:700}
+.sn-more-wrap.open .sn-more-menu{display:block}
+.sn-more-menu a{display:block;padding:9px 12px;color:var(--ink2);text-decoration:none;font-size:13.5px;font-weight:600;border-radius:7px;white-space:nowrap}
+.sn-more-menu a:hover,.sn-more-menu a.on{background:var(--bg2);color:var(--ink)}
 .sn-cta{background:var(--a2);color:#fff!important;padding:8px 18px;border-radius:8px;font-weight:700;font-size:13.5px;transition:background .15s}
 .sn-cta:hover{background:#2060a0}
 .sn-xp{background:var(--bg2);border:1px solid var(--border);border-radius:20px;padding:5px 12px;font-size:12.5px;font-weight:700;color:var(--ink2)}
@@ -272,38 +294,42 @@ textarea.wa:focus{border-color:var(--red)}
 <body>
   <nav class="sitenav">
   <div class="sn-inner">
-    <a href="/landing" class="sn-brand"><span class="sn-logo">AB</span>AbOnlinEnglish</a>
+    <a href="/" class="sn-brand"><span class="sn-logo">AB</span>AbOnlinEnglish</a>
     <div class="sn-links">
-      <a href="/" class="sn-link">🏠 Kendin Öğren</a>
-      <a href="/landing" class="sn-link">🏡 Anasayfa</a>
-      <a href="/roadmap" class="sn-link">🗺️ Yol Haritası</a>
-      <a href="/placement-test" class="sn-link">🎯 Seviye Testi</a>
-      <a href="/games" class="sn-link">🎮 Oyunlar</a>
-      <a href="/skills.html" class="sn-link on">📚 Skills</a>
-      <a href="https://wa.me/onlineelt1" target="_blank" class="sn-cta">🎓 Online Ders</a>
+      <a href="/" class="sn-link">🏡 Anasayfa</a>
+      <div class="sn-more-wrap">
+        <button type="button" class="sn-more-btn" onclick="this.parentElement.classList.toggle('open')">Öğren <span style="font-size:.7em;">▾</span></button>
+        <div class="sn-more-menu">
+          <a href="/kendin-ogren">🏠 Kendin Öğren</a>
+          <a href="/grammar">📘 Grammar</a>
+          <a href="/skills" class="on">📚 Skills</a>
+          <a href="/hikayeler">📖 Hikâyeler</a>
+          <a href="/games">🎮 Oyunlar</a>
+        </div>
+      </div>
+      <div class="sn-more-wrap">
+        <button type="button" class="sn-more-btn" onclick="this.parentElement.classList.toggle('open')">Seviyeni Bul <span style="font-size:.7em;">▾</span></button>
+        <div class="sn-more-menu">
+          <a href="/placement-test">🎯 Seviye Testi</a>
+          <a href="/roadmap">🗺️ Yol Haritası</a>
+        </div>
+      </div>
+      <a href="/hakkimizda" class="sn-link">Hakkımızda</a>
+      <a href="/ozel-ders" class="sn-cta">🎓 Bilgi Al</a>
     </div>
     <button class="sn-ham" onclick="document.getElementById('sn-mob').classList.toggle('open')" aria-label="Menü">☰</button>
   </div>
   <div class="sn-mob" id="sn-mob">
-    <a href="/">🏠 Kendin Öğren</a>
-    <a href="/landing">🏡 Anasayfa</a>
-    <a href="/roadmap">🗺️ Yol Haritası</a>
-    <a href="/placement-test">🎯 Seviye Testi</a>
+    <a href="/">🏡 Anasayfa</a>
+    <a href="/kendin-ogren">🏠 Kendin Öğren</a>
+    <a href="/grammar">📘 Grammar</a>
+    <a href="/skills">📚 Skills</a>
+    <a href="/hikayeler">📖 Hikâyeler</a>
     <a href="/games">🎮 Oyunlar</a>
-    <a href="/skills.html">📚 Skills</a>
-    <a href="https://wa.me/onlineelt1" target="_blank" class="mc">🎓 Online Ders</a>
-  </div>
-</nav>
-    <button class="sn-ham" onclick="document.getElementById('sn-mob').classList.toggle('open')" aria-label="Menü">☰</button>
-  </div>
-  <div class="sn-mob" id="sn-mob">
-    <a href="/">🏠 Kendin Öğren</a>
-    <a href="/landing">🏡 Anasayfa</a>
-    <a href="/roadmap">🗺️ Yol Haritası</a>
     <a href="/placement-test">🎯 Seviye Testi</a>
-    <a href="/games">🎮 Oyunlar</a>
-    <a href="/skills.html">📚 Skills</a>
-    <a href="/private-lessons.html" class="mc">🎓 Private Lessons</a>
+    <a href="/roadmap">🗺️ Yol Haritası</a>
+    <a href="/hakkimizda">Hakkımızda</a>
+    <a href="/ozel-ders" class="mc">🎓 Bilgi Al</a>
   </div>
 </nav>
 <div class="skill-bar">
@@ -9674,6 +9700,7 @@ What makes [X] stand out is...
 </div>
 </div>
 <script>
+document.addEventListener('click', function(e){ var mw = document.querySelector('.sn-more-wrap.open'); if(mw && !mw.contains(e.target)) mw.classList.remove('open'); });
 const $=id=>document.getElementById(id);
 const sv=(k,v)=>{try{localStorage.setItem('ab_'+k,JSON.stringify(v))}catch(e){}};
 const ld=(k,d)=>{try{const v=localStorage.getItem('ab_'+k);return v!=null?JSON.parse(v):d}catch(e){return d}};

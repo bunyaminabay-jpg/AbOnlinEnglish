@@ -6,6 +6,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>IELTS Academy | ABOnlineEnglish</title>
 <meta name="description" content="Prepare for IELTS Academic with structured lessons, band-targeted practice and original IELTS-style tests for Reading, Writing, Speaking, Vocabulary and Grammar.">
+<meta name="author" content="AbOnlinEnglish">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0B1F3A">
+<link rel="canonical" href="https://abonlinenglish.school/ielts">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AbOnlinEnglish">
+<meta property="og:title" content="IELTS Academy | AbOnlinEnglish">
+<meta property="og:description" content="Prepare for IELTS Academic with structured lessons, band-targeted practice and original IELTS-style tests for Reading, Writing, Speaking, Vocabulary and Grammar.">
+<meta property="og:url" content="https://abonlinenglish.school/ielts">
+<meta property="og:locale" content="tr_TR">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="IELTS Academy | AbOnlinEnglish">
+<meta name="twitter:description" content="Structured IELTS Academic prep: Reading, Writing, Speaking, Vocabulary and Grammar, organized by target band.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -73,6 +86,26 @@
   }
   .site-nav-cta-btn::after{ display:none !important; }
   .site-nav-cta-btn:hover{ background:#f0c060 !important; }
+
+  .site-nav-more-wrap{ position:relative; }
+  .site-nav-more-btn{
+    background:transparent; border:1px solid rgba(255,255,255,0.25); color:rgba(255,255,255,0.80);
+    padding:8px 13px; border-radius:8px; font:inherit; font-size:.85rem; font-weight:500;
+    cursor:pointer; white-space:nowrap;
+  }
+  .site-nav-more-btn:hover{ color:#fff; background:rgba(255,255,255,0.10); }
+  .site-nav-more-menu{
+    display:none; position:absolute; top:calc(100% + 10px); right:0; background:#142240;
+    border:1px solid rgba(255,255,255,0.14); border-radius:12px; padding:6px; min-width:200px;
+    list-style:none; box-shadow:0 20px 45px rgba(0,0,0,0.45); z-index:700;
+  }
+  .site-nav-more-wrap.open .site-nav-more-menu{ display:block; }
+  .site-nav-more-menu a{
+    display:block; padding:10px 13px; color:rgba(255,255,255,0.85); text-decoration:none;
+    font-size:.85rem; font-weight:500; border-radius:8px; white-space:nowrap;
+  }
+  .site-nav-more-menu a:hover, .site-nav-more-menu a.site-active{ background: rgba(232,37,26,0.18); color:#fff; }
+
 
   .site-hamburger{ display:none; background:none; border:none; cursor:pointer; color:#fff; font-size:1.5rem; line-height:1; padding:4px; }
 
@@ -364,14 +397,26 @@
     </a>
     <ul class="site-nav-links" id="siteNavLinks">
       <li><a href="https://abonlinenglish.school/">Anasayfa</a></li>
-      <li><a href="https://abonlinenglish.school/">Kendin Öğren</a></li>
-      <li><a href="https://abonlinenglish.school/roadmap">Yol Haritası</a></li>
-      <li><a href="https://abonlinenglish.school/placement-test">Seviye Testi</a></li>
-      <li><a href="https://abonlinenglish.school/games">Oyunlar</a></li>
-      <li><a href="https://abonlinenglish.school/skills.html">📚 Skills</a></li>
+      <li class="site-nav-more-wrap">
+        <button type="button" class="site-nav-more-btn" onclick="this.parentElement.classList.toggle('open')">Öğren <span style="font-size:.7em;">▾</span></button>
+        <ul class="site-nav-more-menu">
+          <li><a href="https://abonlinenglish.school/kendin-ogren">Kendin Öğren</a></li>
+          <li><a href="https://abonlinenglish.school/grammar">Grammar</a></li>
+          <li><a href="https://abonlinenglish.school/skills">Skills</a></li>
+          <li><a href="https://abonlinenglish.school/hikayeler">Hikâyeler</a></li>
+          <li><a href="https://abonlinenglish.school/games">Oyunlar</a></li>
+        </ul>
+      </li>
+      <li class="site-nav-more-wrap">
+        <button type="button" class="site-nav-more-btn" onclick="this.parentElement.classList.toggle('open')">Seviyeni Bul <span style="font-size:.7em;">▾</span></button>
+        <ul class="site-nav-more-menu">
+          <li><a href="https://abonlinenglish.school/placement-test">Seviye Testi</a></li>
+          <li><a href="https://abonlinenglish.school/roadmap">Yol Haritası</a></li>
+        </ul>
+      </li>
       <li><a href="#" class="site-active">🔴 IELTS Academy</a></li>
-      <li><a href="https://abonlinenglish.school/canli-ders">🔴 Canlı Ders</a></li>
-      <li><a class="site-nav-cta-btn" href="https://abonlinenglish.school/landing#pricing">Online Ders</a></li>
+      <li><a href="https://abonlinenglish.school/hakkimizda">Hakkımızda</a></li>
+      <li><a class="site-nav-cta-btn" href="https://abonlinenglish.school/ozel-ders">Bilgi Al</a></li>
     </ul>
     <button class="site-hamburger" onclick="toggleSiteMenu()">&#9776;</button>
   </div>
@@ -770,7 +815,7 @@
       <div>
         <h5>Contact</h5>
         <ul>
-          <li><a href="https://wa.me/905446405749">WhatsApp</a></li>
+          <li><a href="https://wa.me/onlineelt1">WhatsApp</a></li>
           <li><a href="https://instagram.com/abonlinenglish">@abonlinenglish</a></li>
         </ul>
       </div>
@@ -780,6 +825,7 @@
 </footer>
 
 <script>
+document.addEventListener('click', function(e){ var mw = document.querySelector('.site-nav-more-wrap.open'); if(mw && !mw.contains(e.target)) mw.classList.remove('open'); });
 /* ============ SITE HEADER (main-site replica) — mobile hamburger ============ */
 function toggleSiteMenu(){
   document.getElementById('siteNavLinks').classList.toggle('open');

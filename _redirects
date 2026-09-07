@@ -1,0 +1,4 @@
+/landing      /              301
+/landing/*    /:splat        301
+/IELTS        /ielts         301
+/IELTS.html   /ielts         301

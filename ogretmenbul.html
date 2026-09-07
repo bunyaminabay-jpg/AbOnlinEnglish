@@ -5,6 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Özel Ders & Öğretmen Bul | AbOnlinEnglish</title>
 <meta name="description" content="Seviyenize, hedeflerinize ve ders tercihlerinize uygun İngilizce öğretmenlerini keşfedin.">
+
+<link rel="canonical" href="https://abonlinenglish.school/ogretmenbul">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AbOnlinEnglish">
+<meta property="og:title" content="Özel Ders & Öğretmen Bul | AbOnlinEnglish">
+<meta property="og:description" content="Seviyenize, hedeflerinize ve ders tercihlerinize uygun İngilizce öğretmenlerini keşfedin.">
+<meta property="og:url" content="https://abonlinenglish.school/ogretmenbul">
+<meta property="og:locale" content="tr_TR">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Özel Ders & Öğretmen Bul | AbOnlinEnglish">
+<meta name="twitter:description" content="Seviyenize, hedeflerinize ve ders tercihlerinize uygun İngilizce öğretmenlerini keşfedin.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://ortqjhxoqydzhmimaily.supabase.co">
 <link rel="dns-prefetch" href="https://ortqjhxoqydzhmimaily.supabase.co">
@@ -279,7 +290,7 @@ footer.site a:hover{color:#fff;}
     </button>
     <nav class="navlinks" id="navlinks">
       <a href="https://abonlinenglish.school/" title="AbOnlinEnglish Ana Sayfa">Ana Sayfa</a>
-      <a href="https://abonlinenglish.school/hakkimizda.html" title="Hakkımızda">Hakkımızda</a>
+      <a href="https://abonlinenglish.school/hakkimizda" title="Hakkımızda">Hakkımızda</a>
       <button onclick="go('search')" data-route="search">Öğretmen Bul</button>
       <button onclick="go('request')" data-route="request">Özel Ders Talebi</button>
       <button class="nav-teacher-glow" onclick="go('teacher-apply')" data-route="teacher-apply">Öğretmen Ol</button>
@@ -489,7 +500,7 @@ route('home', async ()=>{
           <div class="match-card"><b>42.200+</b><div class="sub">Facebook topluluk üyesi</div></div>
           <div class="match-card"><b>28.500+</b><div class="sub">Instagram takipçisi (@abonlinenglish)</div></div>
           <div class="match-card"><b>7.960+</b><div class="sub">YouTube abonesi</div></div>
-          <a href="https://abonlinenglish.school/hakkimizda.html" class="btn btn-outline btn-sm" style="width:100%;margin-top:6px;border-color:rgba(255,255,255,.3);color:#fff;">AbOnlinEnglish Hakkında →</a>
+          <a href="https://abonlinenglish.school/hakkimizda" class="btn btn-outline btn-sm" style="width:100%;margin-top:6px;border-color:rgba(255,255,255,.3);color:#fff;">AbOnlinEnglish Hakkında →</a>
         </div>
       </div>
     </section>
@@ -683,7 +694,7 @@ route('request', async ()=>{
             <div>
               <label>İngilizce Seviyesi</label>
               <select name="seviye"><option value="">Bilmiyorum</option>${LEVELS.map(l=>`<option>${l}</option>`).join('')}</select>
-              <p class="hint">${ICN.target} Bilmiyor musunuz? <a href="https://abonlinenglish.school/placement-test.html" target="_blank" rel="noopener">Ücretsiz seviye tespit sınavı</a> yeni sekmede açılır.</p>
+              <p class="hint">${ICN.target} Bilmiyor musunuz? <a href="https://abonlinenglish.school/placement-test" target="_blank" rel="noopener">Ücretsiz seviye tespit sınavı</a> yeni sekmede açılır.</p>
             </div>
             <div><label>Şehir</label><select name="sehir">${cityOptionsHTML()}</select></div>
           </div>
