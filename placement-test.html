@@ -164,6 +164,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:2000;background:rgba(15,30,60,0.
 .prog-inner{max-width:680px;margin:0 auto}
 .prog-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:5px}
 .prog-left{display:flex;align-items:center;gap:7px}
+.prog-exit{background:none;border:none;cursor:pointer;color:var(--ink4);
+  font-size:1.05rem;line-height:1;padding:4px 6px;border-radius:7px;
+  display:flex;align-items:center;transition:var(--tr)}
+.prog-exit:hover{background:var(--mist2);color:var(--ink)}
 .stag{padding:2px 8px;border-radius:4px;font-size:10px;font-weight:700;
   letter-spacing:.8px;text-transform:uppercase;font-family:'JetBrains Mono',monospace}
 .sg{background:var(--azure-pale);color:var(--azure)}
@@ -182,8 +186,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:2000;background:rgba(15,30,60,0.
 .dot.done{background:var(--jade)}
 .dot.cur{background:var(--azure);transform:scale(1.6)}
 /* QUESTION AREA */
-.q-area{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:1rem}
-.q-wrap{max-width:680px;margin:0 auto}
+.q-area{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:1rem;
+  display:flex;flex-direction:column;justify-content:safe center}
+.q-wrap{max-width:680px;margin:0 auto;width:100%}
 .q-card{background:white;border:1px solid var(--mist3);border-radius:var(--r3);
   padding:1.5rem;box-shadow:var(--sh)}
 @keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
@@ -280,6 +285,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:2000;background:rgba(15,30,60,0.
 .res-score{font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(255,255,255,.4);margin-bottom:1.25rem}
 .res-desc{max-width:480px;margin:0 auto 1.75rem;color:rgba(255,255,255,.6);font-size:14px;line-height:1.8;font-weight:300}
 .res-acts{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+@media(max-width:520px){
+  .res-acts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .res-acts .rbtn{width:100%}
+}
 .rbtn{padding:10px 22px;border-radius:var(--r);font-size:13px;font-weight:700;
   cursor:pointer;border:none;font-family:'Outfit',sans-serif;transition:var(--tr)}
 .rbtn-gold{background:var(--gold2);color:var(--ink)}
@@ -295,8 +304,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:2000;background:rgba(15,30,60,0.
   background:white;transition:var(--tr)}
 .res-link-card:hover{border-color:var(--azure);transform:translateY(-2px);box-shadow:var(--sh)}
 .res-link-ico{font-size:1.4rem}
-.res-link-name{font-size:12px;font-weight:700;color:var(--ink)}
+.res-link-name{display:flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--ink)}
+.res-link-ext{font-size:9px;color:var(--ink4)}
 .res-link-desc{font-size:10px;color:var(--ink4);line-height:1.4}
+.res-sub-t{font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;
+  color:var(--ink4);margin:1rem 0 .5rem}
 /* WA CARD */
 .wa-card{background:linear-gradient(135deg,#064e3b,#065f46);border-radius:var(--r3);
   padding:1.75rem 1.5rem;color:white;margin-bottom:1rem;position:relative;overflow:hidden}
@@ -524,6 +536,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:2000;background:rgba(15,30,60,0.
     <div class="prog-inner">
       <div class="prog-top">
         <div class="prog-left">
+          <button class="prog-exit" onclick="exitTest()" title="Testten çık" aria-label="Testten çık">&#8592;</button>
           <span class="stag sg" id="stag">Grammar</span>
           <span class="prog-num" id="qnum">1 / 51</span>
         </div>
@@ -592,8 +605,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:2000;background:rgba(15,30,60,0.
       <div class="rec-list" id="recList"></div>
     </div>
     <div class="res-sec">
+      <div class="res-sec-t">📅 Kişisel Çalışma Planınız</div>
+      <div class="rec-list" id="planList"></div>
+    </div>
+    <div class="res-sec">
       <div class="res-sec-t">🔗 Önerilen Kaynaklar</div>
       <div class="res-links-grid" id="resLinksGrid"></div>
+      <div class="res-sub-t">🎧 Podcast &amp; 📚 Kitap Önerileri</div>
+      <div class="res-links-grid" id="resExtGrid"></div>
     </div>
     <div class="premium" id="lessonCard">
       <!-- JS tarafından doldurulur -->
@@ -750,6 +769,189 @@ var LEVEL_TESTS = {
 };
 var LEVEL_ORDER = ["prea1","starters","movers","flyers","a2ket","teen","adult"];
 
+/* ============================================================
+   LEVEL_QUESTION_BANKS — teacher-planner.html'in placementQuestions
+   bankasindan transplante edilmis, yasa/seviyeye ozgu soru setleri.
+   Her banka kendi basina bagimsizdir (Adult havuzundan FILTRELENMEZ).
+   Alanlar: q(soru), opts(secenekler), a(dogru cevap index),
+   diff(CEFR rozet: A1/A2/B1/B2), type(sg/sv/sr icin grammar/vocab/reading),
+   skill(orijinal teacher-planner beceri etiketi), topic, explanation.
+============================================================ */
+var LEVEL_QUESTION_BANKS = {
+  prea1: [
+    {q:"Choose the correct word: This is a ___.",opts:["cat","blue","happy","run"],a:0,diff:"A1",type:"vocab",skill:"vocabulary",topic:"nouns",explanation:"'Cat' is a noun naming a thing/animal — it fits 'This is a ___.'"},
+    {q:"Pick the color: 🔴",opts:["red","run","big","dog"],a:0,diff:"A1",type:"vocab",skill:"vocabulary",topic:"colors",explanation:"The circle is red."},
+    {q:"How many? 🍎🍎🍎",opts:["two","three","five","one"],a:1,diff:"A1",type:"vocab",skill:"vocabulary",topic:"numbers",explanation:"There are three apples."},
+    {q:"I ___ a boy.",opts:["be","is","are","am"],a:3,diff:"A1",type:"grammar",skill:"grammar",topic:"verb to be",explanation:"'I' takes 'am'."},
+    {q:"She ___ my mother.",opts:["are","am","be","is"],a:3,diff:"A1",type:"grammar",skill:"grammar",topic:"verb to be",explanation:"'She' takes 'is'."},
+    {q:"This ___ my dog.",opts:["be","am","are","is"],a:3,diff:"A1",type:"grammar",skill:"grammar",topic:"verb to be",explanation:"Singular subject 'This' takes 'is'."},
+    {q:"Point to the animal: 🐶",opts:["book","apple","dog","chair"],a:2,diff:"A1",type:"vocab",skill:"vocabulary",topic:"animals",explanation:"🐶 is a dog."},
+    {q:"Which word is a family member?",opts:["table","jump","mother","pen"],a:2,diff:"A1",type:"vocab",skill:"vocabulary",topic:"family",explanation:"'Mother' is a family word."},
+    {q:"Read: 'It is a big house.' What is big?",opts:["the house","the cat","the dog","the book"],a:0,diff:"A1",type:"reading",skill:"reading",topic:"simple sentence",explanation:"The sentence says the house is big."},
+    {q:"Read: 'I have a red pen.' What color is the pen?",opts:["red","green","blue","yellow"],a:0,diff:"A1",type:"reading",skill:"reading",topic:"simple sentence",explanation:"The pen is red."},
+    {q:"What do you say when you meet someone?",opts:["Sorry!","Goodbye!","Hello!","Thank you!"],a:2,diff:"A1",type:"vocab",skill:"functional",topic:"greetings",explanation:"'Hello' is used to greet someone."},
+    {q:"Someone gives you a gift. You say:",opts:["No!","Sorry!","Goodbye!","Thank you!"],a:3,diff:"A1",type:"vocab",skill:"meaning",topic:"polite expressions",explanation:"We say 'thank you' to show gratitude."},
+    {q:"Which is a body part?",opts:["chair","apple","car","hand"],a:3,diff:"A1",type:"vocab",skill:"vocabulary",topic:"body",explanation:"'Hand' is a part of the body."},
+    {q:"You ___ my friend.",opts:["are","is","am","be"],a:0,diff:"A1",type:"grammar",skill:"grammar",topic:"verb to be",explanation:"'You' takes 'are'."},
+    {q:"They ___ happy.",opts:["be","are","am","is"],a:1,diff:"A1",type:"grammar",skill:"grammar",topic:"verb to be",explanation:"Plural subject 'they' takes 'are'."},
+    {q:"We ___ students.",opts:["am","are","is","be"],a:1,diff:"A1",type:"grammar",skill:"grammar",topic:"verb to be",explanation:"'We' takes 'are'."},
+    {q:"Read: 'This is my ball. It is yellow.' What color is the ball?",opts:["blue","green","yellow","red"],a:2,diff:"A1",type:"reading",skill:"reading",topic:"simple sentence",explanation:"The text says the ball is yellow."},
+    {q:"Read: 'I have two cats.' How many cats?",opts:["three","one","four","two"],a:3,diff:"A1",type:"reading",skill:"reading",topic:"simple sentence",explanation:"The text says two cats."},
+    {q:"You want to leave the room. What do you say?",opts:["Hello!","Thank you!","Goodbye!","Yes please!"],a:2,diff:"A1",type:"vocab",skill:"functional",topic:"farewells",explanation:"'Goodbye' is used when leaving."},
+    {q:"Your friend falls down. What do you say?",opts:["Are you OK?","Goodbye!","Thank you!","Yes!"],a:0,diff:"A1",type:"vocab",skill:"meaning",topic:"showing care",explanation:"This shows concern for a friend who is hurt."},
+    {q:"Which is a toy?",opts:["chair","ball","spoon","banana"],a:1,diff:"A1",type:"vocab",skill:"vocabulary",topic:"toys",explanation:"'Ball' is a toy."},
+    {q:"How many? 🐟🐟🐟🐟🐟",opts:["four","three","six","five"],a:3,diff:"A1",type:"vocab",skill:"vocabulary",topic:"numbers",explanation:"There are five fish."},
+    {q:"He ___ my brother.",opts:["be","am","are","is"],a:3,diff:"A1",type:"grammar",skill:"grammar",topic:"verb to be",explanation:"'He' takes 'is'."},
+    {q:"I have ___ apple.",opts:["some","an","a","the"],a:1,diff:"A1",type:"grammar",skill:"grammar",topic:"articles",explanation:"'Apple' starts with a vowel sound, so we use 'an'."},
+    {q:"Choose the clothes word.",opts:["apple","shoes","book","dog"],a:1,diff:"A1",type:"vocab",skill:"vocabulary",topic:"clothes",explanation:"'Shoes' is clothing."},
+    {q:"Read: 'The sun is hot today.' What is hot?",opts:["the moon","the rain","the sun","the wind"],a:2,diff:"A1",type:"reading",skill:"reading",topic:"simple sentence",explanation:"The text says the sun is hot."},
+    {q:"Read: 'My mother is a teacher.' What is my mother's job?",opts:["driver","cook","doctor","teacher"],a:3,diff:"A1",type:"reading",skill:"reading",topic:"simple sentence",explanation:"The text says she is a teacher."},
+    {q:"You want to eat. What do you say?",opts:["I'm happy.","I'm hungry.","I'm cold.","I'm tired."],a:1,diff:"A1",type:"vocab",skill:"functional",topic:"expressing needs",explanation:"'I'm hungry' expresses the need to eat."}
+  ],
+  starters: [
+    {q:"I ___ ten years old.",opts:["be","are","am","is"],a:2,diff:"A1",type:"grammar",skill:"grammar",topic:"verb to be",explanation:"'I' + am."},
+    {q:"There ___ two books on the table.",opts:["is","be","are","am"],a:2,diff:"A1",type:"grammar",skill:"grammar",topic:"there is/are",explanation:"Plural noun 'books' takes 'are'."},
+    {q:"My father ___ a car.",opts:["having","has got","have got","has"],a:1,diff:"A1",type:"grammar",skill:"grammar",topic:"have got",explanation:"Third person singular uses 'has got'."},
+    {q:"Choose the school word.",opts:["classroom","umbrella","banana","river"],a:0,diff:"A1",type:"vocab",skill:"vocabulary",topic:"school",explanation:"'Classroom' is a school-related word."},
+    {q:"Which one is a fruit?",opts:["chair","car","shoe","banana"],a:3,diff:"A1",type:"vocab",skill:"vocabulary",topic:"food",explanation:"A banana is a fruit."},
+    {q:"What is the opposite of 'big'?",opts:["happy","tall","small","fast"],a:2,diff:"A1",type:"vocab",skill:"vocabulary",topic:"adjectives",explanation:"'Small' is the opposite of 'big'."},
+    {q:"Choose the clothes word.",opts:["jacket","spoon","pencil","cloud"],a:0,diff:"A1",type:"vocab",skill:"vocabulary",topic:"clothes",explanation:"A jacket is clothing."},
+    {q:"Read: 'Tom has a small dog. The dog is white.' What color is Tom's dog?",opts:["black","red","brown","white"],a:3,diff:"A1",type:"reading",skill:"reading",topic:"short text",explanation:"The text says the dog is white."},
+    {q:"Read: 'Anna likes apples. She does not like bananas.' Does Anna like bananas?",opts:["She likes only bananas.","She has no fruit.","No, she doesn't.","Yes, she does."],a:2,diff:"A1",type:"reading",skill:"reading",topic:"short text",explanation:"The text says she does not like bananas."},
+    {q:"You want a pencil. What do you say?",opts:["Where is the door?","Can I have a pencil, please?","This is my house.","I don't like pencils."],a:1,diff:"A1",type:"vocab",skill:"functional",topic:"requests",explanation:"This is the polite way to ask for something."},
+    {q:"Your friend is sad. What can you say?",opts:["Are you OK?","Close the door!","I'm hungry.","Give me that!"],a:0,diff:"A1",type:"vocab",skill:"meaning",topic:"showing care",explanation:"This shows concern for a friend."},
+    {q:"Choose the correct question: ___ is your name?",opts:["When","What","Who","Where"],a:1,diff:"A1",type:"grammar",skill:"grammar",topic:"question words",explanation:"We ask 'What is your name?'"},
+    {q:"He ___ two brothers.",opts:["has got","have got","has","having"],a:0,diff:"A1",type:"grammar",skill:"grammar",topic:"have got",explanation:"Third person singular uses 'has got'."},
+    {q:"This is my dog. ___ name is Max.",opts:["Its","He","His","It's"],a:0,diff:"A1",type:"grammar",skill:"grammar",topic:"possessive adjectives",explanation:"'Its' shows possession for an animal/thing."},
+    {q:"There ___ a cat under the table.",opts:["am","are","is","be"],a:2,diff:"A1",type:"grammar",skill:"grammar",topic:"there is/are",explanation:"Singular noun 'cat' takes 'is'."},
+    {q:"Choose the sports word.",opts:["yellow","Monday","football","kitchen"],a:2,diff:"A1",type:"vocab",skill:"vocabulary",topic:"sports",explanation:"'Football' is a sport."},
+    {q:"Choose the weather word.",opts:["sunny","quickly","happy","teacher"],a:0,diff:"A1",type:"vocab",skill:"vocabulary",topic:"weather",explanation:"'Sunny' describes weather."},
+    {q:"Read: 'Ben has a big garden. There are many flowers in it.' What is in Ben's garden?",opts:["a car","a big dog","many flowers","a swimming pool"],a:2,diff:"A1",type:"reading",skill:"reading",topic:"short text",explanation:"The text says there are many flowers."},
+    {q:"Read: 'It is Saturday. Mia does not go to school today.' Why doesn't Mia go to school?",opts:["It's Saturday","She is ill","She doesn't like school","The school is closed for holiday"],a:0,diff:"A1",type:"reading",skill:"reading",topic:"short text",explanation:"The text tells us it is Saturday, a non-school day."},
+    {q:"You want to know the time. What do you ask?",opts:["What is your name?","What time is it?","How old are you?","Where do you live?"],a:1,diff:"A1",type:"vocab",skill:"functional",topic:"asking for information",explanation:"This question asks for the time."},
+    {q:"My grandmother ___ in a small village.",opts:["live","living","lives","lived"],a:2,diff:"A1",type:"grammar",skill:"grammar",topic:"present simple",explanation:"Third person singular adds -s: lives."},
+    {q:"___ your sister like ice cream?",opts:["Are","Do","Does","Is"],a:2,diff:"A1",type:"grammar",skill:"grammar",topic:"present simple questions",explanation:"Third person singular questions use 'does'."},
+    {q:"Choose the number word for 15.",opts:["five","fifteen","fourteen","fifty"],a:1,diff:"A1",type:"vocab",skill:"vocabulary",topic:"numbers",explanation:"'Fifteen' is the number 15."},
+    {q:"Choose the animal word.",opts:["Tuesday","elephant","kitchen","yellow"],a:1,diff:"A1",type:"vocab",skill:"vocabulary",topic:"animals",explanation:"'Elephant' is an animal."},
+    {q:"Read: 'Jack plays the guitar every evening.' When does Jack play the guitar?",opts:["only on Sundays","he doesn't play","every evening","every morning"],a:2,diff:"A1",type:"reading",skill:"reading",topic:"short text",explanation:"The text says every evening."},
+    {q:"Read: 'The classroom has twenty desks and one big window.' How many desks are in the classroom?",opts:["one","twenty","twelve","two"],a:1,diff:"A1",type:"reading",skill:"reading",topic:"short text",explanation:"The text says twenty desks."},
+    {q:"You don't understand something. What do you say?",opts:["Goodbye!","Yes, thank you.","I understand everything.","Can you say that again, please?"],a:3,diff:"A1",type:"vocab",skill:"functional",topic:"asking for clarification",explanation:"This politely asks the speaker to repeat."},
+    {q:"Choose the sentence that congratulates someone.",opts:["Goodbye!","Well done!","Excuse me.","I'm sorry."],a:1,diff:"A1",type:"vocab",skill:"meaning",topic:"congratulating",explanation:"'Well done!' congratulates someone on an achievement."}
+  ],
+  movers: [
+    {q:"He ___ football every Saturday.",opts:["plays","playing","played","play"],a:0,diff:"A1",type:"grammar",skill:"grammar",topic:"present simple",explanation:"Third person singular adds -s: plays."},
+    {q:"Look! It ___ outside.",opts:["rain","rains","is raining","rained"],a:2,diff:"A1",type:"grammar",skill:"grammar",topic:"present continuous",explanation:"An action happening now uses present continuous."},
+    {q:"___ you like pizza?",opts:["Are","Does","Do","Is"],a:2,diff:"A1",type:"grammar",skill:"grammar",topic:"present simple questions",explanation:"'You' takes 'do' in questions."},
+    {q:"There isn't ___ milk in the fridge.",opts:["any","a","an","some"],a:0,diff:"A2",type:"grammar",skill:"grammar",topic:"some/any",explanation:"Negative sentences use 'any' with uncountable nouns."},
+    {q:"Choose the weather word.",opts:["hungry","cloudy","kitchen","bicycle"],a:1,diff:"A1",type:"vocab",skill:"vocabulary",topic:"weather",explanation:"'Cloudy' describes weather."},
+    {q:"Which word is a job?",opts:["forest","sleep","yellow","doctor"],a:3,diff:"A1",type:"vocab",skill:"vocabulary",topic:"jobs",explanation:"'Doctor' is a job."},
+    {q:"Choose the place word.",opts:["spoon","library","quickly","laugh"],a:1,diff:"A1",type:"vocab",skill:"vocabulary",topic:"places",explanation:"A library is a place."},
+    {q:"Read: 'Lucy goes to school by bus. Her brother walks to school.' How does Lucy get to school?",opts:["she walks","by bike","by bus","by car"],a:2,diff:"A1",type:"reading",skill:"reading",topic:"short text",explanation:"The text states Lucy goes by bus."},
+    {q:"Read: 'The shop opens at nine and closes at six.' How many hours is the shop open?",opts:["nine","three","six","fifteen"],a:0,diff:"A2",type:"reading",skill:"reading",topic:"short text",explanation:"From 9 to 6 is nine hours."},
+    {q:"You bump into someone by accident. What do you say?",opts:["Excuse me, please!","Sorry!","Thank you!","Well done!"],a:1,diff:"A1",type:"vocab",skill:"functional",topic:"apologies",explanation:"We say 'sorry' after a small accident."},
+    {q:"Which sentence offers help?",opts:["Give it to me now.","I don't want it.","That's not mine.","Can I help you?"],a:3,diff:"A1",type:"vocab",skill:"meaning",topic:"offering help",explanation:"This offers assistance politely."},
+    {q:"My sister is ___ than me.",opts:["more tall","tallest","tall","taller"],a:3,diff:"A1",type:"grammar",skill:"grammar",topic:"comparatives",explanation:"Short adjectives add -er for comparatives."},
+    {q:"We ___ to the cinema last weekend.",opts:["go","going","went","goes"],a:2,diff:"A1",type:"grammar",skill:"grammar",topic:"past simple",explanation:"'Went' is the irregular past form of 'go'."},
+    {q:"She can swim, ___ she can't ride a bike.",opts:["because","and","so","but"],a:3,diff:"A1",type:"grammar",skill:"grammar",topic:"connectors",explanation:"'But' links two contrasting ideas."},
+    {q:"There aren't ___ apples left.",opts:["much","some","any","a"],a:2,diff:"A1",type:"grammar",skill:"grammar",topic:"some/any",explanation:"Negative sentences with countable nouns use 'any'."},
+    {q:"Choose the transport word.",opts:["kitchen","Monday","angry","bicycle"],a:3,diff:"A1",type:"vocab",skill:"vocabulary",topic:"transport",explanation:"'Bicycle' is a means of transport."},
+    {q:"Choose the feelings word.",opts:["excited","classroom","yellow","Sunday"],a:0,diff:"A1",type:"vocab",skill:"vocabulary",topic:"feelings",explanation:"'Excited' describes a feeling."},
+    {q:"Read: 'Sam wakes up at seven, has breakfast, then walks to school.' What does Sam do first?",opts:["wakes up","goes to bed","walks to school","has breakfast"],a:0,diff:"A1",type:"reading",skill:"reading",topic:"sequencing",explanation:"The text lists waking up as the first action."},
+    {q:"Read: 'The zoo has lions, but it doesn't have any elephants.' Does the zoo have elephants?",opts:["No, it doesn't.","It only has elephants.","Yes, it does.","The text doesn't say."],a:0,diff:"A1",type:"reading",skill:"reading",topic:"short text",explanation:"The text says the zoo doesn't have elephants."},
+    {q:"You want to suggest an activity to a friend. What do you say?",opts:["Shall we play a game?","Where is it?","Give me that.","I don't want to."],a:0,diff:"A1",type:"vocab",skill:"functional",topic:"suggestions",explanation:"'Shall we...?' is used to suggest doing something together."},
+    {q:"She is the girl ___ sits next to me.",opts:["who","where","whose","which"],a:0,diff:"A2",type:"grammar",skill:"grammar",topic:"relative clauses",explanation:"'Who' introduces a clause about a person."},
+    {q:"I ___ my homework before I watched TV.",opts:["finish","finished","had finished","have finished"],a:2,diff:"A2",type:"grammar",skill:"grammar",topic:"past perfect (intro)",explanation:"An action completed before another past action can use past perfect."},
+    {q:"You ___ eat in the library — it isn't allowed.",opts:["mustn't","should","can","don't have to"],a:0,diff:"A2",type:"grammar",skill:"grammar",topic:"modals of prohibition",explanation:"'Mustn't' expresses that something is forbidden."},
+    {q:"Choose the correct meaning of 'furious'.",opts:["very hungry","very tired","very angry","very happy"],a:2,diff:"A1",type:"vocab",skill:"vocabulary",topic:"feelings",explanation:"'Furious' means extremely angry."},
+    {q:"Choose the house word.",opts:["Thursday","excited","cloudy","basement"],a:3,diff:"A1",type:"vocab",skill:"vocabulary",topic:"house",explanation:"'Basement' is part of a house."},
+    {q:"Read: 'Although it was raining, the match continued.' What is surprising?",opts:["It wasn't raining","The players went home","The match continued despite the rain","The match was cancelled"],a:2,diff:"A2",type:"reading",skill:"reading",topic:"inference",explanation:"'Although' signals the match went on despite the rain."},
+    {q:"Read: 'First mix the flour and sugar, then add the eggs.' What do you do first?",opts:["add the eggs","mix the flour and sugar","eat the cake","bake the cake"],a:1,diff:"A1",type:"reading",skill:"reading",topic:"sequencing",explanation:"The text says 'first mix the flour and sugar'."}
+  ],
+  flyers: [
+    {q:"By the time we arrived, the film ___.",opts:["was already starting","already started","has already started","had already started"],a:3,diff:"A2",type:"grammar",skill:"grammar",topic:"past perfect",explanation:"An earlier past action uses past perfect."},
+    {q:"If it rains tomorrow, we ___ the picnic.",opts:["cancel","will cancel","cancelled","would cancel"],a:1,diff:"A2",type:"grammar",skill:"grammar",topic:"first conditional",explanation:"First conditional: if + present, will + verb."},
+    {q:"She ___ to the gym twice a week.",opts:["go","goes","going","gone"],a:1,diff:"A2",type:"grammar",skill:"grammar",topic:"present simple",explanation:"Third person singular: goes."},
+    {q:"This book is ___ interesting than that one.",opts:["most","much","very","more"],a:3,diff:"A2",type:"grammar",skill:"grammar",topic:"comparatives",explanation:"Long adjectives use 'more' for comparison."},
+    {q:"Choose the correct phrasal verb: Please ___ the form before Friday.",opts:["fill in","fill for","fill up","fill on"],a:0,diff:"A2",type:"vocab",skill:"vocabulary",topic:"phrasal verbs",explanation:"'Fill in' means to complete a form."},
+    {q:"Choose the correct meaning of 'exhausted'.",opts:["very fast","very hungry","very tired","very happy"],a:2,diff:"A2",type:"vocab",skill:"vocabulary",topic:"feelings",explanation:"'Exhausted' means extremely tired."},
+    {q:"Choose the correct word: The scientist made an important ___.",opts:["discovered","discovering","discover","discovery"],a:3,diff:"A2",type:"vocab",skill:"vocabulary",topic:"word forms",explanation:"'Discovery' is the noun form."},
+    {q:"Read: 'Although it was cold, the children played outside all afternoon.' Why is this surprising?",opts:["Because it was cold and they still played outside","Because the children stayed inside","Because they don't like playing","Because it was warm outside"],a:0,diff:"A2",type:"reading",skill:"reading",topic:"inference",explanation:"'Although' signals a contrast: cold weather, but they still played."},
+    {q:"Read: 'The museum was free on Sundays until last month, when it started charging a small fee.' Is the museum still free on Sundays?",opts:["It is free every day.","Yes, it is always free.","No, it now charges a fee.","It was never free."],a:2,diff:"A2",type:"reading",skill:"reading",topic:"inference",explanation:"The text shows a change: it used to be free, now it charges."},
+    {q:"You disagree politely in a discussion. What do you say?",opts:["I don't care.","You are completely wrong.","I see your point, but I think...","That's a stupid idea."],a:2,diff:"A2",type:"vocab",skill:"functional",topic:"agreeing/disagreeing",explanation:"This disagrees while staying polite."},
+    {q:"Choose the sentence that expresses a suggestion.",opts:["We are going to the park.","The park is closed.","Why don't we go to the park?","I went to the park."],a:2,diff:"A2",type:"vocab",skill:"meaning",topic:"suggestions",explanation:"'Why don't we...' is used to suggest an activity."},
+    {q:"Choose the correct passive form: The letter ___ yesterday.",opts:["sent","was sent","is sent","has sent"],a:1,diff:"A2",type:"grammar",skill:"grammar",topic:"passive voice",explanation:"Past passive: was/were + past participle."},
+    {q:"She said she ___ tired.",opts:["were","was","be","is"],a:1,diff:"A2",type:"grammar",skill:"grammar",topic:"reported speech",explanation:"Reported speech shifts 'is' back to 'was'."},
+    {q:"This is the book ___ I told you about.",opts:["whose","that","where","who"],a:1,diff:"A2",type:"grammar",skill:"grammar",topic:"relative clauses",explanation:"'That' introduces a defining relative clause for a thing."},
+    {q:"I have lived here ___ five years.",opts:["ago","at","for","since"],a:2,diff:"A2",type:"grammar",skill:"grammar",topic:"present perfect",explanation:"'For' is used with a period of time."},
+    {q:"Choose the correct meaning of 'enormous'.",opts:["very big","very fast","very small","very quiet"],a:0,diff:"A2",type:"vocab",skill:"vocabulary",topic:"adjectives",explanation:"'Enormous' means extremely large."},
+    {q:"Choose the correct phrasal verb: Please ___ your shoes before entering.",opts:["take in","take on","take off","take up"],a:2,diff:"A2",type:"vocab",skill:"vocabulary",topic:"phrasal verbs",explanation:"'Take off' means to remove (clothing/shoes)."},
+    {q:"Read: 'Even though she practised every day, she didn't win the competition.' What is surprising here?",opts:["She practised a lot but still didn't win","She won without practising","She never practised","She didn't want to win"],a:0,diff:"A2",type:"reading",skill:"reading",topic:"inference",explanation:"'Even though' signals a contrast between effort and outcome."},
+    {q:"Choose the sentence that politely asks permission.",opts:["Could I open the window, please?","Why is the window closed?","Open the window now.","I want the window open."],a:0,diff:"A2",type:"vocab",skill:"functional",topic:"asking permission",explanation:"'Could I...please?' is a polite way to ask permission."},
+    {q:"By next year, they ___ in this house for a decade.",opts:["will live","lived","have lived","will have lived"],a:3,diff:"B1",type:"grammar",skill:"grammar",topic:"future perfect",explanation:"Future perfect describes completion by a future point."},
+    {q:"I'd rather you ___ that in front of the guests.",opts:["didn't mention","won't mention","not mention","don't mention"],a:0,diff:"B1",type:"grammar",skill:"grammar",topic:"I'd rather + past",explanation:"'I'd rather you' is followed by the past simple for a present/future preference."},
+    {q:"Neither of the answers ___ correct.",opts:["is","are","were","be"],a:0,diff:"A2",type:"grammar",skill:"grammar",topic:"neither/nor agreement",explanation:"'Neither' takes a singular verb."},
+    {q:"Choose the closest meaning to 'reluctant'.",opts:["not willing to do something","very confident","very willing","very tired"],a:0,diff:"A2",type:"vocab",skill:"vocabulary",topic:"adjectives",explanation:"'Reluctant' means hesitant or unwilling."},
+    {q:"Choose the correct phrasal verb: She ___ her old habits.",opts:["gave up","gave out","gave in","gave away"],a:0,diff:"A2",type:"vocab",skill:"vocabulary",topic:"phrasal verbs",explanation:"'Give up' means to stop doing something."},
+    {q:"Read: 'The museum, which opened in 1990, now attracts thousands of visitors a year.' What extra information is given about the museum?",opts:["When it opened","How much it costs","Where it is located","Who built it"],a:0,diff:"A2",type:"reading",skill:"reading",topic:"relative clauses in text",explanation:"The relative clause 'which opened in 1990' gives the opening date."},
+    {q:"Read: 'Despite losing the first match, the team went on to win the championship.' What happened in the end?",opts:["The team quit","The team never played again","The team lost the championship","The team won the championship"],a:3,diff:"A2",type:"reading",skill:"reading",topic:"inference",explanation:"'Went on to win' shows they eventually won despite the early loss."}
+  ],
+  a2ket: [
+    {q:"I ___ my homework before dinner yesterday.",opts:["had finished","have finished","finished","finish"],a:0,diff:"B1",type:"grammar",skill:"grammar",topic:"past perfect",explanation:"An action finished before another past action uses past perfect."},
+    {q:"She ___ in this company for five years.",opts:["was working","worked","has worked","works"],a:2,diff:"A2",type:"grammar",skill:"grammar",topic:"present perfect",explanation:"Present perfect connects the past to now with 'for'."},
+    {q:"You ___ wear a seatbelt in the car — it's the law.",opts:["must","would","can","might"],a:0,diff:"A2",type:"grammar",skill:"grammar",topic:"modals of obligation",explanation:"'Must' expresses strong obligation."},
+    {q:"If I ___ more free time, I would learn to paint.",opts:["has","have","will have","had"],a:3,diff:"B1",type:"grammar",skill:"grammar",topic:"second conditional",explanation:"Second conditional uses past simple in the if-clause."},
+    {q:"Choose the correct meaning of 'affordable'.",opts:["free of charge","impossible to buy","not too expensive","very expensive"],a:2,diff:"A2",type:"vocab",skill:"vocabulary",topic:"adjectives",explanation:"'Affordable' means reasonably priced."},
+    {q:"Choose the correct phrasal verb: I need to ___ my alarm for 7 am.",opts:["turn up","set up","look up","give up"],a:1,diff:"A2",type:"vocab",skill:"vocabulary",topic:"phrasal verbs",explanation:"'Set up' an alarm means to program it."},
+    {q:"Choose the odd one out.",opts:["kitchen","delighted","furious","relieved"],a:0,diff:"A2",type:"vocab",skill:"vocabulary",topic:"feelings",explanation:"The other three are feelings; 'kitchen' is a place."},
+    {q:"Read: 'The flight was delayed by two hours because of bad weather, so passengers waited in the lounge.' Why did passengers wait?",opts:["Because the lounge was closed","Because the flight was delayed","Because the weather was good","Because they missed the flight"],a:1,diff:"A2",type:"reading",skill:"reading",topic:"cause and effect",explanation:"The delay caused the wait."},
+    {q:"Read: 'Maria used to hate vegetables as a child, but now she eats them every day.' What changed?",opts:["Her school","Her house","Her attitude toward vegetables","Her job"],a:2,diff:"A2",type:"reading",skill:"reading",topic:"used to",explanation:"'Used to hate... but now' signals a change in habit/attitude."},
+    {q:"You want to politely interrupt a meeting. What do you say?",opts:["Stop talking now.","Sorry to interrupt, but...","Listen to me!","I don't agree with anyone."],a:1,diff:"A2",type:"vocab",skill:"functional",topic:"interrupting politely",explanation:"This is the standard polite way to interrupt."},
+    {q:"Choose the sentence that gives advice.",opts:["You rested yesterday.","You will rest.","You should get some rest.","You are resting."],a:2,diff:"A2",type:"vocab",skill:"meaning",topic:"giving advice",explanation:"'Should' is used to give advice."},
+    {q:"The report ___ by the manager next week.",opts:["reviews","will review","will be reviewed","is reviewing"],a:2,diff:"B1",type:"grammar",skill:"grammar",topic:"future passive",explanation:"Future passive: will be + past participle."},
+    {q:"By the time she called, I ___ already left.",opts:["had","was","has","have"],a:0,diff:"B1",type:"grammar",skill:"grammar",topic:"past perfect",explanation:"An earlier past action uses past perfect."},
+    {q:"He suggested ___ a break.",opts:["take","took","taking","to take"],a:2,diff:"A2",type:"grammar",skill:"grammar",topic:"gerunds",explanation:"'Suggest' is followed by a gerund (-ing form)."},
+    {q:"This car is ___ expensive than that one.",opts:["most","more","very","much"],a:1,diff:"A2",type:"grammar",skill:"grammar",topic:"comparatives",explanation:"Long adjectives use 'more' for comparison."},
+    {q:"Choose the correct meaning of 'reliable'.",opts:["something old","something/someone you can trust","something expensive","something colourful"],a:1,diff:"A2",type:"vocab",skill:"vocabulary",topic:"adjectives",explanation:"'Reliable' means dependable and trustworthy."},
+    {q:"Choose the correct phrasal verb: The meeting was ___ until Friday.",opts:["put out","put off","put up","put on"],a:1,diff:"A2",type:"vocab",skill:"vocabulary",topic:"phrasal verbs",explanation:"'Put off' means to postpone."},
+    {q:"Read: 'The company cut prices, so sales increased quickly.' Why did sales increase?",opts:["Because prices were cut","Because prices went up","Because of bad weather","Because the shop closed"],a:0,diff:"A2",type:"reading",skill:"reading",topic:"cause and effect",explanation:"The lower prices caused the rise in sales."},
+    {q:"You want to make a suggestion at work. Which is most appropriate?",opts:["Do it my way.","Maybe we could try a different approach.","I don't like this.","This is wrong."],a:1,diff:"A2",type:"vocab",skill:"functional",topic:"making suggestions",explanation:"This phrase suggests an idea diplomatically."},
+    {q:"If she ___ harder, she would pass the exam.",opts:["will study","studies","studied","study"],a:2,diff:"B1",type:"grammar",skill:"grammar",topic:"second conditional",explanation:"Second conditional uses past simple in the if-clause."},
+    {q:"The email ___ tomorrow morning.",opts:["is sending","sends","will be sent","will send"],a:2,diff:"B1",type:"grammar",skill:"grammar",topic:"future passive",explanation:"Future passive: will be + past participle."},
+    {q:"She told me she ___ tired.",opts:["was","were","be","is"],a:0,diff:"B1",type:"grammar",skill:"grammar",topic:"reported speech",explanation:"Reported speech shifts 'is' back to 'was'."},
+    {q:"This is the app ___ I use every day.",opts:["where","that","whose","who"],a:1,diff:"A2",type:"grammar",skill:"grammar",topic:"relative clauses",explanation:"'That' introduces a defining relative clause for a thing."},
+    {q:"Choose the closest meaning to 'postpone'.",opts:["to start immediately","to cancel completely","to finish early","to delay to a later time"],a:3,diff:"A2",type:"vocab",skill:"vocabulary",topic:"verbs",explanation:"'Postpone' means to move to a later time."},
+    {q:"Choose the correct collocation: to ___ a mistake",opts:["take","do","have","make"],a:3,diff:"A2",type:"vocab",skill:"vocabulary",topic:"collocations",explanation:"'Make a mistake' is the standard collocation."},
+    {q:"Read: 'The new policy, introduced last month, has already reduced traffic in the city centre.' What effect has the policy had?",opts:["It has no effect","It has been cancelled","It has increased traffic","It has reduced traffic"],a:3,diff:"A2",type:"reading",skill:"reading",topic:"cause and effect",explanation:"The text says the policy has already reduced traffic."}
+  ],
+  teen: [
+    {q:"By next June, I ___ from high school.",opts:["will have graduated","graduate","graduated","will graduate"],a:0,diff:"B1",type:"grammar",skill:"grammar",topic:"future perfect",explanation:"Future perfect: an action completed before a future point."},
+    {q:"I wish I ___ more time to study for exams.",opts:["have","will have","has","had"],a:3,diff:"B1",type:"grammar",skill:"grammar",topic:"wish + past simple",explanation:"'Wish' + past simple expresses a present regret."},
+    {q:"He asked me where ___.",opts:["I live","did I live","do I live","I lived"],a:3,diff:"B1",type:"grammar",skill:"grammar",topic:"reported speech",explanation:"Reported questions use statement word order and back-shift the tense."},
+    {q:"Choose the correct meaning of 'procrastinate'.",opts:["to delay doing something","to finish early","to study hard","to help someone"],a:0,diff:"B1",type:"vocab",skill:"vocabulary",topic:"academic vocabulary",explanation:"'Procrastinate' means to put off tasks."},
+    {q:"Choose the correct phrasal verb: She decided to ___ smoking for good.",opts:["give in","give out","give away","give up"],a:3,diff:"B1",type:"vocab",skill:"vocabulary",topic:"phrasal verbs",explanation:"'Give up' means to quit a habit."},
+    {q:"Choose the word closest in meaning to 'peer pressure'.",opts:["pressure from teachers","fear of failure","stress about exams","influence from friends your age"],a:3,diff:"B1",type:"vocab",skill:"vocabulary",topic:"social vocabulary",explanation:"Peer pressure is influence from people of a similar age."},
+    {q:"Read: 'Many teenagers feel torn between spending time with friends and keeping up with schoolwork.' What is the main conflict described?",opts:["Finding a part-time job","Deciding what to eat","Choosing a career","Balancing social life and study"],a:3,diff:"B1",type:"reading",skill:"reading",topic:"main idea",explanation:"The sentence directly contrasts friends versus schoolwork."},
+    {q:"Read: 'Social media can connect people, yet excessive use is often linked to increased anxiety.' What does 'yet' signal here?",opts:["An example","A reason","A result","A contrast"],a:3,diff:"B1",type:"reading",skill:"reading",topic:"discourse markers",explanation:"'Yet' introduces a contrasting idea, like 'but'."},
+    {q:"You want to ask a teacher for an extension. What's the most appropriate opener?",opts:["Would it be possible to have a bit more time?","Give me more time.","Why is the deadline so soon?","I need more time now."],a:0,diff:"B1",type:"vocab",skill:"functional",topic:"polite requests",explanation:"This is a polite, indirect request suitable for a teacher."},
+    {q:"Choose the sentence that expresses disappointment.",opts:["I was really hoping this would go differently.","I don't mind either way.","I'm so excited about this!","This is exactly what I wanted."],a:0,diff:"B1",type:"vocab",skill:"meaning",topic:"expressing feelings",explanation:"This phrase conveys disappointment."},
+    {q:"Neither of my parents ___ university.",opts:["have gone to","went to","goes to","go to"],a:1,diff:"B1",type:"grammar",skill:"grammar",topic:"neither/nor agreement",explanation:"'Neither' takes a singular verb; here in the simple past."},
+    {q:"This essay needs to be ___ before submission.",opts:["proofread","proofreading","proofreaded","proofreads"],a:0,diff:"B1",type:"grammar",skill:"grammar",topic:"passive/participle",explanation:"'Proofread' is used as a past participle here (irregular, same form)."},
+    {q:"If I ___ you, I would apologise.",opts:["were","am","was","be"],a:0,diff:"B1",type:"grammar",skill:"grammar",topic:"second conditional",explanation:"Second conditional formally uses 'were' for all subjects in the if-clause."},
+    {q:"She's the girl ___ won the competition.",opts:["where","whose","which","who"],a:3,diff:"B1",type:"grammar",skill:"grammar",topic:"relative clauses",explanation:"'Who' refers to a person in a defining relative clause."},
+    {q:"I'm used to ___ up early for school.",opts:["get","got","gets","getting"],a:3,diff:"B1",type:"grammar",skill:"grammar",topic:"used to / be used to",explanation:"'Be used to' is followed by a gerund."},
+    {q:"Choose the closest meaning to 'ambitious'.",opts:["feeling afraid","feeling bored","having strong goals for success","feeling lazy"],a:2,diff:"B1",type:"vocab",skill:"vocabulary",topic:"personality adjectives",explanation:"'Ambitious' describes someone determined to succeed."},
+    {q:"Choose the correct phrasal verb: I need to ___ this project by Friday.",opts:["hand down","hand over","hand out","hand in"],a:3,diff:"B1",type:"vocab",skill:"vocabulary",topic:"phrasal verbs",explanation:"'Hand in' means to submit."},
+    {q:"Read: 'Despite feeling nervous, she delivered a confident presentation.' What is contrasted here?",opts:["Her confidence and her success","Her fear and her absence","Her presentation and her homework","Her nervousness and her confident delivery"],a:3,diff:"B1",type:"reading",skill:"reading",topic:"discourse markers",explanation:"'Despite' contrasts feeling nervous with performing confidently."},
+    {q:"You disagree with a friend's opinion but want to stay polite. What do you say?",opts:["I get what you mean, but I see it differently.","You're wrong.","That's a bad idea.","I don't care what you think."],a:0,diff:"B1",type:"vocab",skill:"functional",topic:"disagreeing politely",explanation:"This disagrees while acknowledging the other person's view."},
+    {q:"If I had studied harder, I ___ the test.",opts:["would have passed","will pass","passed","would pass"],a:0,diff:"B2",type:"grammar",skill:"grammar",topic:"third conditional",explanation:"Third conditional describes an unreal past situation and its result."},
+    {q:"The homework ___ by tomorrow.",opts:["finishes","must finish","is finishing","must be finished"],a:3,diff:"B1",type:"grammar",skill:"grammar",topic:"modal passive",explanation:"Modal passive: must + be + past participle."},
+    {q:"He asked if I ___ him with the project.",opts:["can help","helping","could help","help"],a:2,diff:"B1",type:"grammar",skill:"grammar",topic:"reported speech",explanation:"Reported speech backshifts 'can' to 'could'."},
+    {q:"Choose the closest meaning to 'overwhelmed'.",opts:["feeling proud","feeling very calm","feeling like you can't cope with too much","feeling bored"],a:2,diff:"B1",type:"vocab",skill:"vocabulary",topic:"feelings",explanation:"'Overwhelmed' describes being unable to cope with a large amount."},
+    {q:"Choose the correct phrasal verb: I need to ___ the information before the exam.",opts:["look over","look up","look out","look after"],a:0,diff:"B1",type:"vocab",skill:"vocabulary",topic:"phrasal verbs",explanation:"'Look over' means to review."},
+    {q:"Read: 'While some students thrive under pressure, others find it paralysing.' What contrast is drawn?",opts:["Different reactions to pressure among students","Different teachers' styles","Different subjects students study","Different exam formats"],a:0,diff:"B1",type:"reading",skill:"reading",topic:"contrast",explanation:"'While some... others' contrasts two different reactions to pressure."}
+  ]
+};
+
 var QS = QS_ALL.slice();          // aktif soru dizisi — testin turune gore yeniden kurulur
 var REAL_QS, TOTAL;
 function recomputeMeta(){
@@ -762,16 +964,11 @@ function buildLevelQS(key){
   var cfg = LEVEL_TESTS[key];
   if(!cfg) return QS_ALL.slice();
   if(key === 'adult') return QS_ALL.slice(); // ana test — degismez, tamami
-  var pool = QS_ALL.filter(function(q){
-    if(q.type === 'sep' || q.type === 'writing') return false;
-    if(q.type === 'reading' && !cfg.includeReading) return false;
-    if(cfg.types.indexOf(q.type) === -1) return false;
-    if(cfg.diffs.indexOf(q.diff) === -1) return false;
-    return true;
-  });
-  // Kolay -> zor sirala (A1 once), boylece kisa testler bile ilerlemeyi hissettirsin
+  var bank = LEVEL_QUESTION_BANKS[key];
+  if(!bank || !bank.length) return QS_ALL.slice(); // guvenlik agi — banka bulunamazsa ana teste dus
+  // Kolay -> zor sirala (dusuk zorluk once), boylece kisa testler bile ilerlemeyi hissettirsin
   var order = {A1:0,A2:1,B1:2,B2:3,C1:4};
-  pool.sort(function(a,b){ return (order[a.diff]||0) - (order[b.diff]||0); });
+  var pool = bank.slice().sort(function(a,b){ return (order[a.diff]||0) - (order[b.diff]||0); });
   var picked = pool.slice(0, cfg.maxQ);
   if(cfg.includeWriting){
     picked.push({q:"",opts:[],a:-1,diff:"",type:"sep",sepType:"writing"});
@@ -997,26 +1194,10 @@ function submitAll(){
   save();
   calc();
 }
-function calc(){
-  var g=0,v=0,r=0,gt=0,vt=0,rt=0;
-  QS.forEach(function(q,i){
-    if(q.type==='sep'||q.type==='writing') return;
-    if(q.type==='grammar') gt++;
-    if(q.type==='vocab')   vt++;
-    if(q.type==='reading') rt++;
-    if(S.ans[i]===q.a){
-      if(q.type==='grammar') g++;
-      if(q.type==='vocab')   v++;
-      if(q.type==='reading') r++;
-    }
-  });
-  var total = g+v+r;
-  var pct = (total/TOTAL)*100;
-  // Seviye tespiti — CEFR ağırlıklı skor bandı
-  // A1(8)+A2(10) = 18 soru → A1/A2 tabanı
-  // B1(14)+B2(12) = 26 soru → orta bant
-  // C1(6) = 6 soru → üst bant
-  // Okuma(10) ayrıca değerlendiriliyor
+/* Adult/genel tarama testi (QS_ALL, 60 soru, A1→C1) için sabit skor bandı.
+   Bu bant, havuzun kendi zorluk dağılımına göre kalibre edilmiştir ve
+   sadece S.levelKey==='adult' iken kullanılır. */
+function calcAdultResult(pct){
   var lv, nm, em, cefr_desc, cefr_note;
   if(pct < 20){
     lv='A1'; nm='Başlangıç (Beginner)'; em='🌱';
@@ -1039,6 +1220,63 @@ function calc(){
     cefr_desc='Örtük anlam içeren uzun metinleri okuyabilir, spontane ve akıcı biçimde kendinizi ifade edebilirsiniz. Üst düzey sözcük seçimi ve stilistik farkındalığı daha da geliştirebilirsiniz.';
     cefr_note='Akademik, mesleki ve sosyal bağlamlarda etkin dil kullanımı mevcut.';
   }
+  return {lv:lv, nm:nm, em:em, cefr_desc:cefr_desc, cefr_note:cefr_note};
+}
+/* Belirli yaş/seviye testleri (Pre-A1…Teen) için CEFR tahmini.
+   teacherplanner.html'deki estimateCEFR() mantığının aynısı: bandın
+   "taban" CEFR'i alınır, güçlü performans (%85+) bir basamak yukarı,
+   zayıf performans (%40 altı) bir basamak aşağı kaydırılır. Sitenin
+   sonuç ekranı Pre-A1 rozetini desteklemediği için taban her zaman
+   en az A1'e sabitlenir (bkz. rapor notu). */
+var LEVELS5 = ['A1','A2','B1','B2','C1'];
+var LEVEL_TEST_BASE_CEFR = {prea1:'A1', starters:'A1', movers:'A1', flyers:'A2', a2ket:'A2', teen:'B1'};
+var LEVEL_RESULT_COPY = {
+  A1:{nm:'Başlangıç (Beginner)', em:'🌱',
+    desc:'İlk adımlarınızı atıyorsunuz — temel kelimeler ve çok basit cümlelerle kendinizi ifade edebiliyorsunuz.',
+    note:'Bol tekrar ve oyun temelli pratikle bu seviyede özgüven hızla artar.'},
+  A2:{nm:'Temel (Elementary)', em:'🌿',
+    desc:'Günlük konularda basit cümleler kurabiliyor, tanıdık ifadeleri anlayabiliyorsunuz.',
+    note:'Şimdi sırada; öğrendiklerinizi daha uzun cümlelerde birleştirmek var.'},
+  B1:{nm:'Orta (Intermediate)', em:'🌳',
+    desc:'Günlük durumların çoğunda kendinizi rahatça ifade edebiliyor, fikirlerinizi anlatabiliyorsunuz.',
+    note:'Karmaşık zaman yapıları ve bağlaçlarla dilinizi bir üst seviyeye taşıyabilirsiniz.'},
+  B2:{nm:'Orta Üstü (Upper-Intermediate)', em:'🔥',
+    desc:'Akıcı ve kendinden emin bir İngilizceniz var; soyut konularda da tartışabiliyorsunuz.',
+    note:'İleri düzey kelime hazinesi ve akademik/mesleki dil üzerine odaklanabilirsiniz.'},
+  C1:{nm:'İleri (Advanced)', em:'⚡',
+    desc:'Bu yaş grubu için beklenenin oldukça üzerinde, akıcı ve doğru bir İngilizce kullanıyorsunuz.',
+    note:'Bir üst yaş/seviye testini deneyerek sınırlarınızı daha da keşfedebilirsiniz.'}
+};
+function calcLevelTestResult(key, pct){
+  var base = LEVEL_TEST_BASE_CEFR[key] || 'A1';
+  var idx = LEVELS5.indexOf(base);
+  if(pct >= 85) idx = Math.min(idx + 1, LEVELS5.length - 1);
+  else if(pct < 40) idx = Math.max(idx - 1, 0);
+  var lv = LEVELS5[idx];
+  var copy = LEVEL_RESULT_COPY[lv];
+  var cfg = LEVEL_TESTS[key];
+  var testLabel = cfg ? cfg.label : '';
+  var cefr_desc = copy.desc + ' (' + testLabel + ' testi sonucuna göre.)';
+  return {lv:lv, nm:copy.nm, em:copy.em, cefr_desc:cefr_desc, cefr_note:copy.note};
+}
+function calc(){
+  var g=0,v=0,r=0,gt=0,vt=0,rt=0;
+  QS.forEach(function(q,i){
+    if(q.type==='sep'||q.type==='writing') return;
+    if(q.type==='grammar') gt++;
+    if(q.type==='vocab')   vt++;
+    if(q.type==='reading') rt++;
+    if(S.ans[i]===q.a){
+      if(q.type==='grammar') g++;
+      if(q.type==='vocab')   v++;
+      if(q.type==='reading') r++;
+    }
+  });
+  var total = g+v+r;
+  var pct = TOTAL > 0 ? (total/TOTAL)*100 : 0;
+  var isAdult = (S.levelKey === 'adult' || !S.levelKey || !LEVEL_QUESTION_BANKS[S.levelKey]);
+  var res = isAdult ? calcAdultResult(pct) : calcLevelTestResult(S.levelKey, pct);
+  var lv = res.lv, nm = res.nm, em = res.em, cefr_desc = res.cefr_desc, cefr_note = res.cefr_note;
   // Yazma görevi için seviyeye göre prompt seç
   var wpIdx = lv==='A1'||lv==='A2' ? 0 : lv==='B1' ? 1 : lv==='B2' ? 2 : 3;
   S._wpIdx = wpIdx; save();
@@ -1051,15 +1289,9 @@ function showResult(lv,nm,em,cefr_desc,cefr_note,total,g,v,r,gt,vt,rt){
   document.getElementById('rName').textContent=nm;
   document.getElementById('rScore').textContent=total+' / '+TOTAL+' · %'+Math.round(total/TOTAL*100);
   document.getElementById('rDesc').textContent=cefr_desc;
-  // Kendin öğren sayfası — seviyeye göre anchor
-  var selfStudyLinks = {
-    A1:'https://abonlinenglish.school/?level=a1',
-    A2:'https://abonlinenglish.school/?level=a2',
-    B1:'https://abonlinenglish.school/?level=b1',
-    B2:'https://abonlinenglish.school/?level=b2',
-    C1:'https://abonlinenglish.school/?level=c1'
-  };
-  var selfStudyLink = selfStudyLinks[lv] || 'https://abonlinenglish.school/';
+  // Kendin öğren sayfası — sitenin gerçek nav'ındaki adres (bkz. <nav> / "Öğren" menüsü)
+  var selfStudyLinks = {A1:'/kendin-ogren', A2:'/kendin-ogren', B1:'/kendin-ogren', B2:'/kendin-ogren', C1:'/kendin-ogren'};
+  var selfStudyLink = selfStudyLinks[lv] || '/kendin-ogren';
   var pb = document.getElementById('rPrimBtn');
   pb.textContent = '📖 Kendin Öğren — ' + lv + ' Materyalleri';
   pb.onclick = function(){ window.location.href = selfStudyLink; };
@@ -1149,6 +1381,24 @@ function showResult(lv,nm,em,cefr_desc,cefr_note,total,g,v,r,gt,vt,rt){
   document.getElementById('recList').innerHTML=recs.map(function(r){
     return '<div class="rec-item"><div class="rec-ico">'+r.i+'</div><div>'+r.t+'</div></div>';
   }).join('');
+  // --- Kişisel Çalışma Planı (haftalık odak) — zayıf alanlara göre kurulur ---
+  var skillPageBySlug = {'Gramer':'/grammar','Kelime':'/skills','Okuma':'/skills'};
+  var focusOrder = secs.slice().sort(function(a,b){
+    return (pcts[secs.indexOf(a)]) - (pcts[secs.indexOf(b)]);
+  });
+  var focus1 = focusOrder[0], focus2 = focusOrder[1];
+  var testCtx = (S.levelLabel && S.levelKey!=='adult') ? (S.levelLabel+' testi sonucunuza göre, ') : '';
+  var plan=[];
+  plan.push({i:'1️⃣',t:testCtx+'<strong>1–2. Hafta:</strong> <a href="'+(skillPageBySlug[focus1.lb]||'/skills')+'" style="color:var(--azure);font-weight:600;">'+focus1.lb+'</a> alanına ağırlık verin (şu an %'+pcts[secs.indexOf(focus1)]+') — günde 15–20 dakika hedefli alıştırma yeterli.'});
+  plan.push({i:'2️⃣',t:'<strong>3–4. Hafta:</strong> <a href="'+(skillPageBySlug[focus2.lb]||'/skills')+'" style="color:var(--azure);font-weight:600;">'+focus2.lb+'</a> ile devam edip, '+lv+' seviyesindeki <a href="'+selfStudyLink+'" style="color:var(--azure);font-weight:600;">Kendin Öğren</a> ünitelerini sırayla tamamlayın.'});
+  plan.push({i:'3️⃣',t:'<strong>5. Hafta ve sonrası:</strong> Öğrendiklerinizi <a href="/hikayeler" style="color:var(--azure);font-weight:600;">Hikâyeler</a> ve <a href="/games" style="color:var(--azure);font-weight:600;">Oyunlar</a> bölümleriyle pekiştirin; hazır olduğunuzda bir üst seviyeyi hedefleyin.'});
+  plan.push({i:'💬',t:'Planı hızlandırmak isterseniz, bir <a href="https://abonlinenglish.school/#pricing" style="color:var(--azure);font-weight:600;">ücretsiz deneme dersinde</a> öğretmeninizle bu plana birlikte göz atabilirsiniz.'});
+  var planEl = document.getElementById('planList');
+  if(planEl){
+    planEl.innerHTML = plan.map(function(p){
+      return '<div class="rec-item"><div class="rec-ico">'+p.i+'</div><div>'+p.t+'</div></div>';
+    }).join('');
+  }
   // --- Önerilen Kaynaklar ---
   var resLinks=[
     {ico:'🎯',name:'Kendin Öğren',desc:lv+' seviyesi müfredatı',href:selfStudyLink},
@@ -1159,6 +1409,25 @@ function showResult(lv,nm,em,cefr_desc,cefr_note,total,g,v,r,gt,vt,rt){
   document.getElementById('resLinksGrid').innerHTML=resLinks.map(function(r){
     return '<a class="res-link-card" href="'+r.href+'"><div class="res-link-ico">'+r.ico+'</div>'+
       '<div class="res-link-name">'+r.name+'</div><div class="res-link-desc">'+r.desc+'</div></a>';
+  }).join('');
+  // --- Podcast & Kitap Önerileri (seviyeye göre, gerçek/doğrulanmış kaynaklar) ---
+  var extByLevel = {
+    A1:{podDesc:'Basit, günlük diyaloglarla dinleme pratiğine başlayın.',bookDesc:'Starter / Stage 1 seviyesinden okumaya başlayın.'},
+    A2:{podDesc:'Kısa, günlük konularda dinleme pratiği yapın.',bookDesc:'Stage 1–2 seviyesinden kitaplar seçin.'},
+    B1:{podDesc:'Güncel konularda orta seviye dinleme pratiği yapın.',bookDesc:'Stage 3 seviyesinden kitaplar seçin.'},
+    B2:{podDesc:'Daha akıcı, doğal konuşmalarla kelime dağarcığınızı genişletin.',bookDesc:'Stage 4–5 seviyesinden kitaplar seçin.'},
+    C1:{podDesc:'İleri seviye tartışma ve deyimsel ifadelerle pratik yapın.',bookDesc:'Stage 5–6 / ileri seviye kitaplar seçin.'}
+  };
+  var extInfo = extByLevel[lv] || extByLevel.B1;
+  var extLinks=[
+    {ico:'🎧',name:'British Council — LearnEnglish Podcasts',desc:extInfo.podDesc,href:'https://learnenglish.britishcouncil.org/general-english/audio-series/podcasts'},
+    {ico:'📚',name:'Oxford Bookworms Library',desc:extInfo.bookDesc,href:'https://elt.oup.com/catalogue/items/global/graded_readers/oxford_bookworms_library/?cc=global&selLanguage=en&mode=hub'}
+  ];
+  document.getElementById('resExtGrid').innerHTML=extLinks.map(function(r){
+    return '<a class="res-link-card" href="'+r.href+'" target="_blank" rel="noopener">'+
+      '<div class="res-link-ico">'+r.ico+'</div>'+
+      '<div class="res-link-name">'+r.name+' <span class="res-link-ext">↗</span></div>'+
+      '<div class="res-link-desc">'+r.desc+'</div></a>';
   }).join('');
   toast('✅ Test tamamlandı · Seviyeniz: '+lv,'tok');
 }
@@ -1222,6 +1491,14 @@ function buildWALink(lv, nm, score){
   var url = 'https://wa.me/onlineelt1?text=' + encodeURIComponent(msg);
   var waLink = document.getElementById('waLink');
   if(waLink) waLink.href = url;
+}
+function exitTest(){
+  if(confirm('Testten çıkmak istediğinize emin misiniz? İlerlemeniz kaydedilmeyecek.')){
+    sessionStorage.removeItem('tye_v3');
+    QS = QS_ALL.slice(); recomputeMeta();
+    S.idx=0; S.ans={}; S.writingText=''; S.started=false; S.levelKey='adult'; S.levelLabel='';
+    showPanel('introPanel');
+  }
 }
 function retake(){
   if(typeof speechSynthesis !== 'undefined' && speechSynthesis.speaking) speechSynthesis.cancel();
