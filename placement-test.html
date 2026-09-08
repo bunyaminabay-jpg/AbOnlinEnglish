@@ -1,12 +1,10 @@
 
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
 <title>Test Your English — AbOnlinEnglish</title>
-
 <meta name="description" content="5 dakikada ücretsiz İngilizce seviye testini çöz, CEFR seviyeni (A1-C1) öğren ve sana uygun içeriklerle hemen başla.">
 <meta name="author" content="AbOnlinEnglish">
 <meta name="robots" content="index, follow">
@@ -42,7 +40,6 @@ html,body{height:100%;overflow:hidden}
 body{font-family:'Outfit',sans-serif;background:var(--mist);color:var(--ink)}
 ::-webkit-scrollbar{width:4px}
 ::-webkit-scrollbar-thumb{background:var(--mist3);border-radius:2px}
-
 /* ===== AbOnlinEnglish Shared Nav — landing/index/roadmap ile standart ===== */
 nav{position:fixed;top:0;left:0;right:0;z-index:2000;background:rgba(15,30,60,0.97);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,0.07);}
 .nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 28px;height:68px;}
@@ -63,7 +60,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:2000;background:rgba(15,30,60,0.
 .nav-teachers-btn{background:rgba(56,189,248,0.16)!important;border:1px solid rgba(56,189,248,0.5);color:#7dd3fc!important;font-weight:700!important;}
 .nav-teachers-btn::after{display:none!important;}
 .nav-teachers-btn:hover{background:rgba(56,189,248,0.28)!important;color:#fff!important;text-shadow:0 0 10px rgba(56,189,248,0.9),0 0 22px rgba(56,189,248,0.5)!important;}
-
 .nav-more-wrap{ position: relative; }
 .nav-more-btn{ background: transparent; border: none; color: rgba(255,255,255,0.80); padding: 8px 13px; border-radius: 8px; font: inherit; font-size: .85rem; font-weight: 500; cursor: pointer; white-space: nowrap; transition: all .25s; display:flex; align-items:center; gap:5px; }
 .nav-more-btn::after{ content:''; width:6px; height:6px; border-right:1.5px solid currentColor; border-bottom:1.5px solid currentColor; transform: rotate(45deg) translateY(-2px); transition: transform .2s; }
@@ -79,7 +75,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:2000;background:rgba(15,30,60,0.
   .nav-more-menu{ position: static; box-shadow: none; border: none; padding: 0 0 0 12px; margin-top: 6px; background: transparent; }
   .nav-more-wrap.open .nav-more-menu{ display: flex; flex-direction: column; gap: 2px; }
 }
-
 .hamburger{display:none;background:none;border:none;cursor:pointer;color:white;font-size:1.5rem;line-height:1;padding:4px;}
 @media(max-width:1230px) and (min-width:701px){
   .nav-links{gap:0;}
@@ -93,14 +88,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:2000;background:rgba(15,30,60,0.
   .hamburger{display:block;}
 }
 /* ===== END Shared Nav ===== */
-
 /* PANELS */
 .panel{position:fixed;top:68px;left:0;right:0;bottom:0;display:none;flex-direction:column}
 .panel.on{display:flex}
-
 /* INTRO */
 #introPanel{align-items:center;justify-content:center;background:var(--mist);overflow:hidden}
-.intro-box{width:100%;max-width:580px;padding:1.5rem 1.25rem;text-align:center;
+#introPanel.scrollable{overflow-y:auto;-webkit-overflow-scrolling:touch;align-items:flex-start;justify-content:flex-start}
+.intro-box{width:100%;max-width:580px;margin:0 auto;padding:1.5rem 1.25rem;text-align:center;
   display:flex;flex-direction:column;align-items:center}
 .eyebrow{display:inline-flex;align-items:center;gap:6px;padding:4px 14px;
   background:var(--ink2);color:rgba(255,255,255,.9);border-radius:100px;
@@ -127,7 +121,43 @@ nav{position:fixed;top:0;left:0;right:0;z-index:2000;background:rgba(15,30,60,0.
   transition:var(--tr);box-shadow:0 4px 20px rgba(13,17,23,.2)}
 .btn-start:hover{background:var(--ink);transform:translateY(-2px)}
 .intro-note{margin-top:.6rem;font-size:11px;color:var(--ink4)}
-
+/* SEVIYE SECICI (level picker) */
+.lvl-divider{display:flex;align-items:center;gap:12px;width:100%;max-width:480px;margin:1.6rem auto .2rem}
+.lvl-divider::before,.lvl-divider::after{content:'';flex:1;height:1px;background:var(--mist3)}
+.lvl-divider span{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--ink4)}
+.lvl-toggle{display:inline-flex;align-items:center;gap:6px;background:none;border:none;
+  color:var(--azure);font-family:'Outfit',sans-serif;font-size:13px;font-weight:600;
+  cursor:pointer;padding:6px 4px;margin-top:.3rem}
+.lvl-toggle svg{width:13px;height:13px;transition:transform .2s}
+.lvl-toggle.open svg{transform:rotate(180deg)}
+.lvl-panel{display:none;width:100%;max-width:900px;margin:0.6rem auto 0;text-align:left}
+.lvl-panel.open{display:block}
+.lvl-age-box{background:white;border:1px solid var(--mist3);border-radius:var(--r2);
+  padding:1rem 1.1rem;margin-bottom:1rem;box-shadow:var(--sh)}
+.lvl-age-label{font-size:13px;font-weight:600;color:var(--ink);margin-bottom:.6rem}
+.lvl-age-row{display:flex;gap:8px;flex-wrap:wrap}
+.lvl-age-row input{flex:1;min-width:120px;padding:10px 12px;border:1.5px solid var(--mist3);
+  border-radius:var(--r);font-family:'Outfit',sans-serif;font-size:14px;outline:none;transition:var(--tr)}
+.lvl-age-row input:focus{border-color:var(--azure)}
+.lvl-age-row button{padding:10px 18px;background:var(--ink2);color:white;border:none;
+  border-radius:var(--r);font-size:13px;font-weight:700;cursor:pointer;font-family:'Outfit',sans-serif;transition:var(--tr)}
+.lvl-age-row button:hover{background:var(--ink)}
+.lvl-age-hint{font-size:11px;color:var(--azure);margin-top:.5rem;font-weight:600}
+.lvl-pick-label{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--ink4);margin-bottom:.7rem}
+.lvl-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+@media(max-width:820px){.lvl-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.lvl-grid{grid-template-columns:1fr}}
+.lvl-card{background:white;border:1.5px solid var(--mist3);border-radius:var(--r2);
+  padding:1.1rem 1rem;cursor:pointer;transition:var(--tr);text-align:left}
+.lvl-card:hover{border-color:var(--azure);transform:translateY(-2px);box-shadow:var(--sh)}
+.lvl-card.suggested{border-color:var(--jade);background:var(--jade-pale)}
+.lvl-ico{font-size:1.5rem;margin-bottom:.6rem}
+.lvl-name{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:700;color:var(--ink);margin-bottom:.25rem}
+.lvl-desc{font-size:12px;color:var(--ink4);margin-bottom:.7rem;line-height:1.5;min-height:32px}
+.lvl-tags{display:flex;gap:5px;flex-wrap:wrap}
+.lvl-tag{font-size:10px;font-weight:700;padding:3px 8px;border-radius:100px;
+  background:var(--mist);color:var(--ink3);font-family:'JetBrains Mono',monospace}
 /* TEST */
 #testPanel{background:var(--mist)}
 .prog{flex-shrink:0;background:white;border-bottom:1px solid var(--mist3);padding:8px 1rem}
@@ -151,7 +181,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:2000;background:rgba(15,30,60,0.
 .dot{width:5px;height:5px;border-radius:50%;background:var(--mist3);transition:var(--tr);flex-shrink:0}
 .dot.done{background:var(--jade)}
 .dot.cur{background:var(--azure);transform:scale(1.6)}
-
 /* QUESTION AREA */
 .q-area{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:1rem}
 .q-wrap{max-width:680px;margin:0 auto}
@@ -199,7 +228,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:2000;background:rgba(15,30,60,0.
 .btn-next:hover{background:var(--ink);transform:translateY(-1px)}
 .btn-next:disabled{background:var(--mist3);cursor:not-allowed;color:var(--ink3);transform:none}
 .btn-submit{background:linear-gradient(135deg,var(--jade),#22a880)!important}
-
 /* PASSAGE */
 .passage-card{background:var(--mist);border:1px solid var(--mist3);border-radius:var(--r2);
   padding:1.1rem 1.25rem;margin-bottom:1rem;position:relative}
@@ -211,14 +239,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:2000;background:rgba(15,30,60,0.
 .pass-title{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:700;color:var(--ink)}
 .pass-text{font-size:13px;color:var(--ink3);line-height:1.85;max-height:160px;overflow-y:auto}
 .pass-text p+p{margin-top:.6rem}
-
 /* SECTION SEP */
 .sec-sep{background:linear-gradient(135deg,#0d1b3e,#1a3a6e);border-radius:var(--r3);
   padding:1.75rem 1.5rem;text-align:center;color:white;margin-bottom:1rem}
 .sec-sep .ss-ico{font-size:2rem;margin-bottom:.5rem}
 .sec-sep h2{font-family:'Cormorant Garamond',serif;font-size:1.75rem;margin-bottom:.3rem}
 .sec-sep p{font-size:13px;color:rgba(255,255,255,.5);line-height:1.6}
-
 /* WRITING */
 .writing-card{background:white;border:1px solid var(--mist3);border-radius:var(--r3);
   padding:1.5rem;box-shadow:var(--sh)}
@@ -237,7 +263,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:2000;background:rgba(15,30,60,0.
 .wc-tip{font-size:11px;color:var(--ink4)}
 .wc-low{color:#dc2626}
 .wc-ok{color:var(--jade)}
-
 /* RESULT */
 #resultPanel{overflow-y:auto;-webkit-overflow-scrolling:touch;background:var(--mist)}
 .res-wrap{max-width:700px;margin:0 auto;padding:1.5rem 1rem}
@@ -262,7 +287,16 @@ nav{position:fixed;top:0;left:0;right:0;z-index:2000;background:rgba(15,30,60,0.
 .rbtn-out{background:rgba(255,255,255,.1);color:rgba(255,255,255,.75);
   border:1.5px solid rgba(255,255,255,.2)}
 .rbtn-out:hover{background:rgba(255,255,255,.18);color:white}
-
+.rbtn-cta{background:#e8a020;color:#0f1e3c}
+.rbtn-cta:hover{background:#f7b13a;transform:translateY(-1px)}
+.res-links-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px}
+.res-link-card{display:flex;flex-direction:column;align-items:center;gap:5px;padding:1rem .75rem;
+  border:1px solid var(--mist3);border-radius:var(--r2);text-align:center;text-decoration:none;
+  background:white;transition:var(--tr)}
+.res-link-card:hover{border-color:var(--azure);transform:translateY(-2px);box-shadow:var(--sh)}
+.res-link-ico{font-size:1.4rem}
+.res-link-name{font-size:12px;font-weight:700;color:var(--ink)}
+.res-link-desc{font-size:10px;color:var(--ink4);line-height:1.4}
 /* WA CARD */
 .wa-card{background:linear-gradient(135deg,#064e3b,#065f46);border-radius:var(--r3);
   padding:1.75rem 1.5rem;color:white;margin-bottom:1rem;position:relative;overflow:hidden}
@@ -290,7 +324,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:2000;background:rgba(15,30,60,0.
   max-height:100px;overflow:hidden;position:relative}
 .writing-preview::after{content:'';position:absolute;bottom:0;left:0;right:0;height:30px;
   background:linear-gradient(transparent,rgba(6,78,59,.8))}
-
 .res-sec{background:white;border:1px solid var(--mist3);border-radius:var(--r3);
   padding:1.5rem;margin-bottom:1rem;box-shadow:var(--sh)}
 .res-sec-t{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;
@@ -364,7 +397,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:2000;background:rgba(15,30,60,0.
 .res-footer a{color:var(--ink4);text-decoration:none}
 .res-footer a:hover{color:var(--azure)}
 .res-footer strong{color:#c9920a}
-
 /* REVIEW — Tüm Sorular ve Cevaplar */
 .review-toggle{display:flex;align-items:center;justify-content:space-between;cursor:pointer;user-select:none}
 .review-toggle-t{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:8px}
@@ -404,7 +436,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:2000;background:rgba(15,30,60,0.
 </style>
 </head>
 <body>
-
 <!-- AbOnlinEnglish Shared Nav — landing/index/roadmap ile standart -->
 <nav>
   <div class="nav-inner">
@@ -449,9 +480,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:2000;background:rgba(15,30,60,0.
     <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
   </div>
 </nav>
-
 <!-- INTRO -->
-<div class="panel on" id="introPanel">
+<div class="panel on scrollable" id="introPanel">
   <div class="intro-box">
     <div class="eyebrow">&#127891; CEFR Assessment &middot; A1 &rarr; C1</div>
     <h1 class="intro-title">Test Your <em>English</em></h1>
@@ -471,9 +501,23 @@ nav{position:fixed;top:0;left:0;right:0;z-index:2000;background:rgba(15,30,60,0.
     </div>
     <button class="btn-start" onclick="startTest()">Begin Test &rarr;</button>
     <p class="intro-note">60 questions &middot; Free &middot; No registration &middot; Writing evaluated by a teacher via WhatsApp</p>
+
+    <div class="lvl-divider"><span>veya</span></div>
+
+    <div class="lvl-panel open" id="lvlPanel">
+      <div class="lvl-age-box">
+        <div class="lvl-age-label">Öğrencinin yaşını girin:</div>
+        <div class="lvl-age-row">
+          <input type="number" id="ageInput" placeholder="ör. 11" min="3" max="99">
+          <button onclick="suggestByAge()">Suggest a test</button>
+        </div>
+        <div class="lvl-age-hint" id="ageHint"></div>
+      </div>
+      <div class="lvl-pick-label">OR PICK A SPECIFIC LEVEL TEST</div>
+      <div class="lvl-grid" id="lvlGrid"></div>
+    </div>
   </div>
 </div>
-
 <!-- TEST -->
 <div class="panel" id="testPanel">
   <div class="prog">
@@ -493,7 +537,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:2000;background:rgba(15,30,60,0.
     <div class="q-wrap" id="qContent"></div>
   </div>
 </div>
-
 <!-- RESULT -->
 <div class="panel" id="resultPanel">
   <div class="res-wrap">
@@ -505,11 +548,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:2000;background:rgba(15,30,60,0.
       <p class="res-desc" id="rDesc"></p>
       <div class="res-acts">
         <button class="rbtn rbtn-gold" id="rPrimBtn">&#128218; Seviyeme Git</button>
+        <button class="rbtn rbtn-cta" onclick="location.href='/ozel-ders'">&#128172; Destek Al — Bilgi Al</button>
         <button class="rbtn rbtn-out" onclick="retake()">&#8635; Tekrar Al</button>
         <button class="rbtn rbtn-out" onclick="location.href='https://abonlinenglish.school/'">&#127968; Ana Sayfa</button>
       </div>
     </div>
-
     <div class="wa-card" id="waCard">
       <div class="wa-badge">&#128172; WhatsApp Değerlendirme</div>
       <div class="wa-title">Yazma Görevinizi Değerlendirelim</div>
@@ -527,7 +570,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:2000;background:rgba(15,30,60,0.
       </a>
       <p class="wa-note">Ücretsiz değerlendirme &middot; 24 saat içinde yanıt &middot; +90 544 640 5749</p>
     </div>
-
     <div class="res-sec">
       <div class="res-sec-t">&#128161; Strengths &amp; Weaknesses</div>
       <div class="sw-grid" id="swGrid"></div>
@@ -549,12 +591,16 @@ nav{position:fixed;top:0;left:0;right:0;z-index:2000;background:rgba(15,30,60,0.
       <div class="res-sec-t">📋 Sonraki Adımlar</div>
       <div class="rec-list" id="recList"></div>
     </div>
+    <div class="res-sec">
+      <div class="res-sec-t">🔗 Önerilen Kaynaklar</div>
+      <div class="res-links-grid" id="resLinksGrid"></div>
+    </div>
     <div class="premium" id="lessonCard">
       <!-- JS tarafından doldurulur -->
     </div>
     <div class="res-sec">
       <div class="review-toggle" id="reviewToggle" onclick="toggleReview()">
-        <div class="review-toggle-t">📝 Tüm Sorular ve Cevaplar</div>
+        <div class="review-toggle-t">📝 Cevap Anahtarı — Tüm Sorular ve Cevaplar</div>
         <div class="review-toggle-r"><span id="reviewToggleLabel">Göster</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
       </div>
       <div class="rv-summary" id="reviewSummary"></div>
@@ -562,16 +608,15 @@ nav{position:fixed;top:0;left:0;right:0;z-index:2000;background:rgba(15,30,60,0.
     </div>
     <div class="res-footer">
       <a href='https://abonlinenglish.school/'>Ana Sayfa</a> &nbsp;&middot;&nbsp;
-      <a href='https://abonlinenglish.school/'>Kendin Öğren</a> &nbsp;&middot;&nbsp;
+      <a href='/kendin-ogren'>Kendin Öğren</a> &nbsp;&middot;&nbsp;
+      <a href='/ozel-ders'>Bilgi Al</a> &nbsp;&middot;&nbsp;
       <a href="mailto:ingilizceogrensene@gmail.com">İletişim</a> &nbsp;&middot;&nbsp;
       <a href="https://www.instagram.com/abonlinenglish" target="_blank">Instagram</a><br>
       <strong>AbOnlinEnglish</strong> Dil Eğitimi &copy; 2025
     </div>
   </div>
 </div>
-
 <div class="toast" id="toast"></div>
-
 <script>
 /* Nav toggle */
 function toggleMenu(){document.getElementById('navLinks').classList.toggle('open');}
@@ -582,13 +627,11 @@ function toggleNavMenu(id){
   if(!wasOpen) wrap.classList.add('open');
 }
 document.addEventListener('click', function(e){ var mw = document.querySelector('.nav-more-wrap.open'); if(mw && !mw.contains(e.target)) mw.classList.remove('open'); });
-
 function closeMenu(){document.getElementById('navLinks').classList.remove('open');}
-
 /* ============================================================
    QUESTIONS
 ============================================================ */
-var QS = [
+var QS_ALL = [
   {q:"She ___ to school every day by bus.",opts:["go","is going","gone","goes"],a:3,diff:"A1",type:"grammar"},
   {q:"'___ you like a glass of water?' — 'Yes, please.'",opts:["Are","Do","Would","Have"],a:2,diff:"A1",type:"grammar"},
   {q:"There ___ two cats sitting in the garden.",opts:["is","be","am","are"],a:3,diff:"A1",type:"grammar"},
@@ -652,31 +695,98 @@ var QS = [
   {q:"",opts:[],a:-1,diff:"",type:"sep",sepType:"writing"},
   {q:"writing",opts:[],a:-1,diff:"",type:"writing"}
 ];
-
 var PASSAGES = {
   p1:{title:"The Science of Sleep",text:"Sleep is one of the most fundamental biological needs, yet it remains one of the least understood aspects of human health. Scientists now believe that sleep serves several critical functions: it allows the brain to consolidate memories, repair cellular damage, and flush out harmful waste products that accumulate during waking hours.\n\nThe recommended amount of sleep for adults is between seven and nine hours per night. However, studies show that more than one third of adults in developed countries regularly sleep fewer than six hours. This chronic sleep deprivation has been linked to serious health problems, including obesity, heart disease, and impaired cognitive function.\n\nThe quality of sleep matters as much as the quantity. Sleep consists of several stages, including REM sleep during which most dreaming occurs, and deep slow-wave sleep which is important for physical restoration. Disrupting these cycles reduces the benefits of sleep even when total hours seem adequate."},
   p2:{title:"Artificial Intelligence and the Future of Work",text:"The rapid advancement of artificial intelligence is prompting economists to reconsider traditional assumptions about labour markets. While previous automation primarily displaced routine manual tasks, modern AI can perform complex cognitive work from legal research to medical diagnostics.\n\nProponents argue that technological disruption ultimately creates more jobs than it destroys, pointing to precedents such as the Industrial Revolution. Critics contend that this time may be different: the pace of change is unprecedented, leaving insufficient time for workers to adapt through retraining. The gains from AI productivity may also accrue disproportionately to capital owners.\n\nCertain skills will become increasingly valuable: critical thinking, creativity, emotional intelligence, and complex problem-solving. These remain difficult for machines to replicate. Education systems and labour policies will need to evolve if societies are to manage this transition equitably."}
 };
-
 var WRITING_PROMPTS = [
   {level:"A1-A2", prompt:"Write about your daily routine. What do you do in the morning, afternoon and evening? (Write 50-80 words)", words:[50,80]},
   {level:"B1",   prompt:"Describe a memorable trip or holiday you have taken. Where did you go? What did you do? What made it special? (Write 80-120 words)", words:[80,120]},
   {level:"B2",   prompt:"Some people believe that technology has made our lives easier, while others think it has created new problems. Discuss both views and give your own opinion. (Write 120-180 words)", words:[120,180]},
   {level:"C1",   prompt:"To what extent do you agree that social media has had a negative effect on society? Use specific examples and evidence to support your argument. (Write 150-200 words)", words:[150,200]}
 ];
+/* ============================================================
+   BELIRLI SEVIYE TESTLERI — teacher-planner ile ayni kart seti
+   Her biri, ana soru bankasindan (QS_ALL) uygun zorluk/turdeki
+   sorulari filtreleyip kisa, o yasa/seviyeye uygun bir test kurar.
+   "Adult Placement" ana testin tamamidir (60 soru, degismez).
+============================================================ */
+var LEVEL_TESTS = {
+  prea1:{
+    label:"Pre-A1", ico:"🌱", ageMin:5, ageMax:7,
+    desc:"Very first steps in English", ages:"Age 5–7",
+    diffs:["A1"], types:["grammar","vocab"], includeReading:false, includeWriting:false, maxQ:10
+  },
+  starters:{
+    label:"Starters", ico:"⭐", ageMin:7, ageMax:9,
+    desc:"Cambridge Starters style", ages:"Age 7–9",
+    diffs:["A1"], types:["grammar","vocab"], includeReading:false, includeWriting:false, maxQ:14
+  },
+  movers:{
+    label:"Movers", ico:"🚀", ageMin:8, ageMax:10,
+    desc:"Cambridge Movers style", ages:"Age 8–10",
+    diffs:["A1","A2"], types:["grammar","vocab"], includeReading:false, includeWriting:false, maxQ:16
+  },
+  flyers:{
+    label:"Flyers", ico:"🦋", ageMin:9, ageMax:12,
+    desc:"Cambridge Flyers style", ages:"Age 9–12",
+    diffs:["A2"], types:["grammar","vocab","reading"], includeReading:true, includeWriting:false, maxQ:18
+  },
+  a2ket:{
+    label:"A2 / KET-style", ico:"📘", ageMin:10, ageMax:13,
+    desc:"Pre-teen to teen A2", ages:"Age 10–13",
+    diffs:["A2","B1"], types:["grammar","vocab","reading"], includeReading:true, includeWriting:false, maxQ:20
+  },
+  teen:{
+    label:"Teen Placement", ico:"🎒", ageMin:12, ageMax:16,
+    desc:"General teen English", ages:"Age 12–16",
+    diffs:["A1","A2","B1","B2"], types:["grammar","vocab","reading"], includeReading:true, includeWriting:false, maxQ:28
+  },
+  adult:{
+    label:"Adult Placement", ico:"🎓", ageMin:16, ageMax:99,
+    desc:"Teen / Adult General English", ages:"Age 16+",
+    diffs:["A1","A2","B1","B2","C1"], types:["grammar","vocab","reading"], includeReading:true, includeWriting:true, maxQ:9999
+  }
+};
+var LEVEL_ORDER = ["prea1","starters","movers","flyers","a2ket","teen","adult"];
 
-var REAL_QS = QS.filter(function(q){return q.type !== 'sep' && q.type !== 'writing';});
-var TOTAL = REAL_QS.length;
-var S = {idx:0, ans:{}, writingText:'', started:false};
+var QS = QS_ALL.slice();          // aktif soru dizisi — testin turune gore yeniden kurulur
+var REAL_QS, TOTAL;
+function recomputeMeta(){
+  REAL_QS = QS.filter(function(q){return q.type !== 'sep' && q.type !== 'writing';});
+  TOTAL = REAL_QS.length;
+}
+recomputeMeta();
 
+function buildLevelQS(key){
+  var cfg = LEVEL_TESTS[key];
+  if(!cfg) return QS_ALL.slice();
+  if(key === 'adult') return QS_ALL.slice(); // ana test — degismez, tamami
+  var pool = QS_ALL.filter(function(q){
+    if(q.type === 'sep' || q.type === 'writing') return false;
+    if(q.type === 'reading' && !cfg.includeReading) return false;
+    if(cfg.types.indexOf(q.type) === -1) return false;
+    if(cfg.diffs.indexOf(q.diff) === -1) return false;
+    return true;
+  });
+  // Kolay -> zor sirala (A1 once), boylece kisa testler bile ilerlemeyi hissettirsin
+  var order = {A1:0,A2:1,B1:2,B2:3,C1:4};
+  pool.sort(function(a,b){ return (order[a.diff]||0) - (order[b.diff]||0); });
+  var picked = pool.slice(0, cfg.maxQ);
+  if(cfg.includeWriting){
+    picked.push({q:"",opts:[],a:-1,diff:"",type:"sep",sepType:"writing"});
+    picked.push({q:"writing",opts:[],a:-1,diff:"",type:"writing"});
+  }
+  return picked;
+}
+
+var S = {idx:0, ans:{}, writingText:'', started:false, levelKey:'adult', levelLabel:''};
 function save(){try{sessionStorage.setItem('tye_v3', JSON.stringify(S));}catch(e){}}
 function load(){try{var d=sessionStorage.getItem('tye_v3');if(d){Object.assign(S,JSON.parse(d));return true;}}catch(e){}return false;}
-
 function showPanel(id){
   document.querySelectorAll('.panel').forEach(function(p){p.classList.remove('on');});
   document.getElementById(id).classList.add('on');
 }
-
 function buildDots(){
   var row = document.getElementById('dotsRow');
   row.innerHTML = REAL_QS.map(function(_,i){return '<div class="dot" id="dt'+i+'"></div>';}).join('');
@@ -696,7 +806,6 @@ function realIdx(){
   }
   return ri;
 }
-
 function render(){
   var q = QS[S.idx];
   var ri = realIdx();
@@ -717,7 +826,6 @@ function render(){
   var content = document.getElementById('qContent');
   document.getElementById('qArea').scrollTop = 0;
   currentAudIdx = -1;
-
   if(q.type === 'sep'){
     content.innerHTML = '<div class="sec-sep" style="background:linear-gradient(135deg,#312e81,#4c1d95)"><div class="ss-ico">&#9997;</div><h2>Writing Task</h2><p>One written response.<br>Your writing will be evaluated by a teacher via WhatsApp.</p></div>' +
       '<div class="q-card" style="margin-top:1rem"><div class="q-nav">' +
@@ -726,7 +834,6 @@ function render(){
     animCard(content.querySelector('.q-card'));
     return;
   }
-
   if(q.type === 'writing'){
     var promptObj = chooseWritingPrompt();
     var wc = countWords(S.writingText);
@@ -748,7 +855,6 @@ function render(){
     if(wa) wa.focus();
     return;
   }
-
   var audHTML = '';
   if(q.aud){
     currentAudIdx = S.idx;
@@ -770,7 +876,6 @@ function render(){
       '</details>' +
     '</div>';
   }
-
   var passHTML = '';
   if(q.pass && PASSAGES[q.pass]){
     var p = PASSAGES[q.pass];
@@ -780,7 +885,6 @@ function render(){
       '<div class="pass-text">'+p.text.split('\n\n').map(function(t){return '<p>'+t+'</p>';}).join('')+'</div>' +
       '</div>';
   }
-
   var qtext = q.q.replace(/___/g,'<span class="blank"></span>');
   var diffClass = 'd' + q.diff.toLowerCase().replace('-','');
   var typeLabel = {grammar:'Grammar',vocab:'Vocabulary',reading:'Reading'}[q.type] || '';
@@ -807,7 +911,6 @@ function render(){
     '</div></div>';
   animCard(content.querySelector('.q-card'));
 }
-
 function animCard(el){
   if(el){ el.classList.add('anim'); setTimeout(function(){el.classList.remove('anim');},300); }
 }
@@ -820,7 +923,6 @@ function onWritingInput(el){
 }
 function countWords(t){ return t.trim() === '' ? 0 : t.trim().split(/\s+/).length; }
 function chooseWritingPrompt(){ return WRITING_PROMPTS[1]; }
-
 function pick(i){
   S.ans[S.idx] = i;
   save();
@@ -832,14 +934,62 @@ function pick(i){
 }
 function next(){ if(S.idx < QS.length-1){ S.idx++; save(); render(); } }
 function prev(){ if(S.idx > 0){ S.idx--; save(); render(); } }
-
 function startTest(){
-  S.idx=0; S.ans={}; S.writingText=''; S.started=true; save();
+  QS = QS_ALL.slice();
+  recomputeMeta();
+  S.idx=0; S.ans={}; S.writingText=''; S.started=true; S.levelKey='adult'; S.levelLabel=''; save();
   showPanel('testPanel');
   buildDots();
   render();
 }
+function startLevelTest(key){
+  var cfg = LEVEL_TESTS[key];
+  if(!cfg) return;
+  QS = buildLevelQS(key);
+  recomputeMeta();
+  S.idx=0; S.ans={}; S.writingText=''; S.started=true; S.levelKey=key; S.levelLabel=cfg.label; save();
+  showPanel('testPanel');
+  buildDots();
+  render();
+}
+/* ===== Seviye Secici (Level Picker) ===== */
+function buildLevelGrid(suggestedKey){
+  var grid = document.getElementById('lvlGrid');
+  grid.innerHTML = LEVEL_ORDER.map(function(key){
+    var c = LEVEL_TESTS[key];
+    return '<div class="lvl-card'+(key===suggestedKey?' suggested':'')+'" onclick="startLevelTest(\''+key+'\')">' +
+      '<div class="lvl-ico">'+c.ico+'</div>' +
+      '<div class="lvl-name">'+c.label+'</div>' +
+      '<div class="lvl-desc">'+c.desc+'</div>' +
+      '<div class="lvl-tags"><span class="lvl-tag">'+c.ages+'</span>' +
+      (key!=='adult' ? '<span class="lvl-tag">'+buildLevelQS(key).filter(function(q){return q.type!=='sep'&&q.type!=='writing';}).length+' questions</span>' : '<span class="lvl-tag">'+TOTAL+' questions</span>') +
+      '</div></div>';
+  }).join('');
+}
+function suggestByAge(){
+  var age = parseInt(document.getElementById('ageInput').value, 10);
+  var hint = document.getElementById('ageHint');
+  if(!age || age < 3 || age > 99){
+    hint.textContent = 'Lütfen geçerli bir yaş girin.';
+    return;
+  }
+  var best = null;
+  for(var i=0;i<LEVEL_ORDER.length;i++){
+    var k = LEVEL_ORDER[i];
+    var c = LEVEL_TESTS[k];
+    if(age >= c.ageMin && age <= c.ageMax){ best = k; break; }
+  }
+  if(!best) best = age < LEVEL_TESTS.prea1.ageMin ? 'prea1' : 'adult';
+  buildLevelGrid(best);
+  hint.textContent = 'Önerilen: ' + LEVEL_TESTS[best].label + ' — aşağıda yeşille işaretlendi.';
+  var card = document.querySelector('.lvl-card.suggested');
+  if(card) card.scrollIntoView({behavior:'smooth', block:'center'});
+}
 function submitAll(){
+  if(S.levelKey !== 'adult' || !LEVEL_TESTS[S.levelKey] || !LEVEL_TESTS[S.levelKey].includeWriting){
+    // yazma bolumu olmayan kisa seviye testleri dogrudan sonuclanir
+    if(QS[QS.length-1] && QS[QS.length-1].type !== 'writing'){ calc(); return; }
+  }
   if(S.writingText.trim() === ''){
     toast('Please write at least a few sentences before submitting.','tinfo');
     return;
@@ -847,7 +997,6 @@ function submitAll(){
   save();
   calc();
 }
-
 function calc(){
   var g=0,v=0,r=0,gt=0,vt=0,rt=0;
   QS.forEach(function(q,i){
@@ -863,7 +1012,6 @@ function calc(){
   });
   var total = g+v+r;
   var pct = (total/TOTAL)*100;
-
   // Seviye tespiti — CEFR ağırlıklı skor bandı
   // A1(8)+A2(10) = 18 soru → A1/A2 tabanı
   // B1(14)+B2(12) = 26 soru → orta bant
@@ -891,14 +1039,11 @@ function calc(){
     cefr_desc='Örtük anlam içeren uzun metinleri okuyabilir, spontane ve akıcı biçimde kendinizi ifade edebilirsiniz. Üst düzey sözcük seçimi ve stilistik farkındalığı daha da geliştirebilirsiniz.';
     cefr_note='Akademik, mesleki ve sosyal bağlamlarda etkin dil kullanımı mevcut.';
   }
-
   // Yazma görevi için seviyeye göre prompt seç
   var wpIdx = lv==='A1'||lv==='A2' ? 0 : lv==='B1' ? 1 : lv==='B2' ? 2 : 3;
   S._wpIdx = wpIdx; save();
-
   showResult(lv,nm,em,cefr_desc,cefr_note,total,g,v,r,gt,vt,rt);
 }
-
 function showResult(lv,nm,em,cefr_desc,cefr_note,total,g,v,r,gt,vt,rt){
   showPanel('resultPanel');
   document.getElementById('rEmoji').textContent=em;
@@ -906,7 +1051,6 @@ function showResult(lv,nm,em,cefr_desc,cefr_note,total,g,v,r,gt,vt,rt){
   document.getElementById('rName').textContent=nm;
   document.getElementById('rScore').textContent=total+' / '+TOTAL+' · %'+Math.round(total/TOTAL*100);
   document.getElementById('rDesc').textContent=cefr_desc;
-
   // Kendin öğren sayfası — seviyeye göre anchor
   var selfStudyLinks = {
     A1:'https://abonlinenglish.school/?level=a1',
@@ -916,14 +1060,11 @@ function showResult(lv,nm,em,cefr_desc,cefr_note,total,g,v,r,gt,vt,rt){
     C1:'https://abonlinenglish.school/?level=c1'
   };
   var selfStudyLink = selfStudyLinks[lv] || 'https://abonlinenglish.school/';
-
   var pb = document.getElementById('rPrimBtn');
   pb.textContent = '📖 Kendin Öğren — ' + lv + ' Materyalleri';
   pb.onclick = function(){ window.location.href = selfStudyLink; };
-
   buildWALink(lv, nm, total);
   buildReview();
-
   // --- Özel Ders Kartı ---
   var lessonCard = document.getElementById('lessonCard');
   if(lessonCard){
@@ -936,7 +1077,6 @@ function showResult(lv,nm,em,cefr_desc,cefr_note,total,g,v,r,gt,vt,rt){
       '<button class="pbtn-o" onclick="window.open(\'https://wa.me/onlineelt1?text=Merhaba%2C+seviye+testinde+'+lv+'+çıktım.+Özel+ders+hakkında+bilgi+almak+istiyorum.\',\'_blank\')">💬 WhatsApp ile Yaz</button>' +
       '</div>';
   }
-
   // --- Güçlü / Zayıf ---
   var secs=[{lb:'Gramer',s:g,m:gt,c:'#0969da'},{lb:'Kelime',s:v,m:vt,c:'#9a6700'},{lb:'Okuma',s:r,m:rt,c:'#1a7f64'}];
   var pcts=secs.map(function(x){return x.m>0?Math.round(x.s/x.m*100):0;});
@@ -954,7 +1094,6 @@ function showResult(lv,nm,em,cefr_desc,cefr_note,total,g,v,r,gt,vt,rt){
   if(weak.length)   sum+='<strong>'+weak.map(function(x){return x.lb;}).join(' ve ')+'</strong> daha fazla çalışma gerektiriyor.';
   if(!sum) sum='Üç alanda performansınız dengeli.';
   document.getElementById('swSum').innerHTML=sum;
-
   // --- Skor Dağılımı ---
   document.getElementById('bdGrid').innerHTML=secs.map(function(s,i){
     var note = pcts[i]>=75 ? '✓ Güçlü' : pcts[i]>=50 ? '→ Gelişiyor' : '↑ Odak Gerektiriyor';
@@ -966,7 +1105,6 @@ function showResult(lv,nm,em,cefr_desc,cefr_note,total,g,v,r,gt,vt,rt){
   setTimeout(function(){
     document.querySelectorAll('.bd-fill').forEach(function(el){el.style.width=el.dataset.pct+'%';});
   },200);
-
   // --- CEFR Çizelgesi ---
   var lvls=['A1','A2','B1','B2','C1'];
   var li=lvls.indexOf(lv);
@@ -975,7 +1113,6 @@ function showResult(lv,nm,em,cefr_desc,cefr_note,total,g,v,r,gt,vt,rt){
       '<div class="cn-c">'+l+'</div>' +
       '<div class="cn-l">'+['Başlangıç','Temel','Orta','Üst Orta','İleri'][i]+'</div></div>';
   }).join('');
-
   // --- Öğrenme Yolu ---
   var pd=[
     {l:'A1',n:'Başlangıç',c:'#166534',bg:'#f0fdf4',bd:'#bbf7d0'},
@@ -994,7 +1131,6 @@ function showResult(lv,nm,em,cefr_desc,cefr_note,total,g,v,r,gt,vt,rt){
       '<button class="path-go" style="color:'+p.c+';border-color:'+p.bd+';background:'+(me?p.bg:'transparent')+'">'+
       (me?'Başla →':'İncele')+'</button></div>';
   }).join('');
-
   // --- Sonraki Adımlar ---
   var recs=[];
   // Gramer zayıfsa
@@ -1010,14 +1146,22 @@ function showResult(lv,nm,em,cefr_desc,cefr_note,total,g,v,r,gt,vt,rt){
   recs.push({i:'🎯',t:'<strong>Kendin Öğren</strong> bölümünde <a href="'+selfStudyLink+'" style="color:var(--azure);font-weight:600;">'+lv+' müfredatına</a> erişin — yapılandırılmış ünite ve alıştırmalar.'});
   recs.push({i:'👨‍🏫',t:'En hızlı ilerleme için <a href="https://abonlinenglish.school/#pricing" style="color:var(--azure);font-weight:600;">ücretsiz deneme dersi</a> alın. Öğretmen, testte ortaya çıkan eksiklerinize göre ders planlar.'});
   recs.push({i:'📅',t:'Haftada 20-30 dakika düzenli çalışma, uzun ama seyrek seanslardan çok daha etkilidir. Tutarlılık seviye atlatır.'});
-
   document.getElementById('recList').innerHTML=recs.map(function(r){
     return '<div class="rec-item"><div class="rec-ico">'+r.i+'</div><div>'+r.t+'</div></div>';
   }).join('');
-
+  // --- Önerilen Kaynaklar ---
+  var resLinks=[
+    {ico:'🎯',name:'Kendin Öğren',desc:lv+' seviyesi müfredatı',href:selfStudyLink},
+    {ico:'📐',name:'Grammar',desc:'Gramer konuları ve alıştırmalar',href:'/grammar'},
+    {ico:'🧩',name:'Skills',desc:'Kelime, okuma, yazma becerileri',href:'/skills'},
+    {ico:'📚',name:'Hikâyeler',desc:'Seviyene uygun okuma metinleri',href:'/hikayeler'}
+  ];
+  document.getElementById('resLinksGrid').innerHTML=resLinks.map(function(r){
+    return '<a class="res-link-card" href="'+r.href+'"><div class="res-link-ico">'+r.ico+'</div>'+
+      '<div class="res-link-name">'+r.name+'</div><div class="res-link-desc">'+r.desc+'</div></a>';
+  }).join('');
   toast('✅ Test tamamlandı · Seviyeniz: '+lv,'tok');
 }
-
 function buildReview(){
   var letters = ['A','B','C','D'];
   var typeLabelMap = {grammar:'Gramer',vocab:'Kelime',reading:'Okuma'};
@@ -1058,7 +1202,6 @@ function buildReview(){
     '<span class="rv-sum-item">✗ <strong>'+wrongCount+'</strong> yanlış</span>' +
     (blankCount > 0 ? '<span class="rv-sum-item">— <strong>'+blankCount+'</strong> boş</span>' : '');
 }
-
 function toggleReview(){
   var list = document.getElementById('reviewList');
   var toggle = document.getElementById('reviewToggle');
@@ -1067,7 +1210,6 @@ function toggleReview(){
   toggle.classList.toggle('open', isOpen);
   label.textContent = isOpen ? 'Gizle' : 'Göster';
 }
-
 function buildWALink(lv, nm, score){
   var writing = S.writingText.trim();
   var preview = document.getElementById('writingPreview');
@@ -1081,20 +1223,19 @@ function buildWALink(lv, nm, score){
   var waLink = document.getElementById('waLink');
   if(waLink) waLink.href = url;
 }
-
 function retake(){
-  if(speechSynthesis.speaking) speechSynthesis.cancel();
+  if(typeof speechSynthesis !== 'undefined' && speechSynthesis.speaking) speechSynthesis.cancel();
   sessionStorage.removeItem('tye_v3');
-  S.idx=0; S.ans={}; S.writingText=''; S.started=false;
+  QS = QS_ALL.slice();
+  recomputeMeta();
+  S.idx=0; S.ans={}; S.writingText=''; S.started=false; S.levelKey='adult'; S.levelLabel='';
   showPanel('introPanel');
 }
-
 function toast(msg,type){
   var el=document.getElementById('toast');
   el.innerHTML=msg; el.className='toast '+type+' show';
   setTimeout(function(){el.classList.remove('show');},4000);
 }
-
 document.addEventListener('keydown',function(e){
   if(!S.started) return;
   var q=QS[S.idx];
@@ -1105,9 +1246,11 @@ document.addEventListener('keydown',function(e){
   if(e.key==='ArrowRight'){var bn=document.getElementById('bnext');if(bn&&!bn.disabled)bn.click();}
   if(e.key==='ArrowLeft') prev();
 });
-
 window.addEventListener('DOMContentLoaded',function(){
+  buildLevelGrid();
   if(load()&&S.started){
+    QS = S.levelKey && S.levelKey !== 'adult' ? buildLevelQS(S.levelKey) : QS_ALL.slice();
+    recomputeMeta();
     showPanel('testPanel');
     buildDots();
     render();
