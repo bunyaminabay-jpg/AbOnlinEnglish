@@ -458,7 +458,10 @@ async function doLogout(){
   await refreshAuth();
   go('home');
 }
-sb.auth.onAuthStateChange((_event, _session)=>{ refreshAuth(); });
+sb.auth.onAuthStateChange((_event, _session)=>{
+  if(_event === 'PASSWORD_RECOVERY'){ refreshAuth().then(()=>go('reset-password')); return; }
+  refreshAuth();
+});
 
 function requireAuth(role=null){
   if(!currentUser){ go('login'); return false; }
@@ -942,6 +945,7 @@ route('login', async ()=>{
         <label>Şifre</label><input name="password" type="password" required>
         <div class="form-actions"><button class="btn btn-primary btn-block" type="submit">Giriş Yap</button></div>
       </form>
+      <p class="hint" style="text-align:center;margin-top:10px;"><a href="#" onclick="go('forgot-password');return false;">Şifremi unuttum</a></p>
       <div style="text-align:center;color:var(--ink-faint);font-size:.78rem;margin:16px 0;">veya</div>
       ${googleButtonHTML(null)}
       <p class="hint" style="text-align:center;margin-top:16px;">
@@ -954,11 +958,86 @@ route('login', async ()=>{
   document.getElementById('loginForm').addEventListener('submit', async e=>{
     e.preventDefault();
     const f = e.target;
-    const { error } = await sb.auth.signInWithPassword({ email:f.email.value, password:f.password.value });
+    const email = f.email.value.trim().toLowerCase();
+    const { error } = await sb.auth.signInWithPassword({ email, password:f.password.value });
     const msgEl = document.getElementById('loginMsg');
-    if(error){ msgEl.innerHTML = `<div class="msg msg-err">${esc(error.message)}</div>`; return; }
+    if(error){
+      const friendly = error.message === 'Invalid login credentials'
+        ? 'E-posta veya şifre hatalı. Şifrenizi mi unuttunuz?'
+        : esc(error.message);
+      msgEl.innerHTML = `<div class="msg msg-err">${friendly}</div>`;
+      return;
+    }
     await refreshAuth();
     await postLoginRedirect();
+  });
+});
+
+route('forgot-password', async ()=>{
+  document.getElementById('app').innerHTML = `
+    <section class="page wrap" style="max-width:400px;">
+      <img src="${LOGO_URL}" style="width:52px;height:52px;border-radius:50%;box-shadow:0 0 0 1px var(--border);margin-bottom:16px;">
+      <h2>Şifremi Unuttum</h2>
+      <p class="hint">Kayıtlı e-posta adresinizi girin, size şifre sıfırlama bağlantısı gönderelim.</p>
+      <div id="forgotMsg"></div>
+      <form class="card" id="forgotForm" style="margin-top:12px;">
+        <label>E-posta</label><input name="email" type="email" required>
+        <div class="form-actions"><button class="btn btn-primary btn-block" type="submit">Sıfırlama Bağlantısı Gönder</button></div>
+      </form>
+      <p class="hint" style="text-align:center;margin-top:16px;"><a href="#" onclick="go('login');return false;">Girişe dön</a></p>
+    </section>
+  `;
+  document.getElementById('forgotForm').addEventListener('submit', async e=>{
+    e.preventDefault();
+    const f = e.target;
+    const email = f.email.value.trim().toLowerCase();
+    const btn = f.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    const redirectTo = window.location.origin + window.location.pathname + '#reset-password';
+    const { error } = await sb.auth.resetPasswordForEmail(email, { redirectTo });
+    const msgEl = document.getElementById('forgotMsg');
+    btn.disabled = false;
+    if(error){ msgEl.innerHTML = `<div class="msg msg-err">${esc(error.message)}</div>`; return; }
+    msgEl.innerHTML = `<div class="msg msg-ok">${ICN.check} Bu e-posta kayıtlıysa, sıfırlama bağlantısı gönderildi. Gelen kutunuzu (ve spam klasörünü) kontrol edin.</div>`;
+    f.reset();
+  });
+});
+
+route('reset-password', async ()=>{
+  if(!currentUser){
+    document.getElementById('app').innerHTML = `
+      <section class="page wrap" style="max-width:400px;">
+        <div class="msg msg-err">Bu bağlantı geçersiz veya süresi dolmuş. Lütfen şifre sıfırlamayı tekrar isteyin.</div>
+        <p class="hint" style="text-align:center;margin-top:16px;"><a href="#" onclick="go('forgot-password');return false;">Şifremi unuttum</a></p>
+      </section>
+    `;
+    return;
+  }
+  document.getElementById('app').innerHTML = `
+    <section class="page wrap" style="max-width:400px;">
+      <img src="${LOGO_URL}" style="width:52px;height:52px;border-radius:50%;box-shadow:0 0 0 1px var(--border);margin-bottom:16px;">
+      <h2>Yeni Şifre Belirle</h2>
+      <div id="resetMsg"></div>
+      <form class="card" id="resetForm" style="margin-top:12px;">
+        <label>Yeni Şifre</label><input name="password" type="password" minlength="8" required>
+        <label>Yeni Şifre (Tekrar)</label><input name="password2" type="password" minlength="8" required>
+        <div class="form-actions"><button class="btn btn-primary btn-block" type="submit">Şifreyi Güncelle</button></div>
+      </form>
+    </section>
+  `;
+  document.getElementById('resetForm').addEventListener('submit', async e=>{
+    e.preventDefault();
+    const f = e.target;
+    const msgEl = document.getElementById('resetMsg');
+    if(f.password.value !== f.password2.value){
+      msgEl.innerHTML = `<div class="msg msg-err">Şifreler eşleşmiyor.</div>`;
+      return;
+    }
+    const { error } = await sb.auth.updateUser({ password: f.password.value });
+    if(error){ msgEl.innerHTML = `<div class="msg msg-err">${esc(error.message)}</div>`; return; }
+    msgEl.innerHTML = `<div class="msg msg-ok">${ICN.check} Şifreniz güncellendi! Yönlendiriliyorsunuz...</div>`;
+    await refreshAuth();
+    setTimeout(()=>postLoginRedirect(), 1200);
   });
 });
 
@@ -1015,7 +1094,7 @@ function registerForm(role){
     e.preventDefault();
     const f = e.target;
     const { error } = await sb.auth.signUp({
-      email: f.email.value, password: f.password.value,
+      email: f.email.value.trim().toLowerCase(), password: f.password.value,
       options: { data: { role, full_name: f.full_name.value }, emailRedirectTo: window.location.origin + window.location.pathname }
     });
     const msgEl = document.getElementById('regMsg');
@@ -1440,6 +1519,10 @@ function legalPage(title, html){
 (async function init(){
   await refreshAuth();
   const hash = window.location.hash;
+  if(hash.includes('type=recovery')){
+    go('reset-password');
+    return;
+  }
   if(localStorage.getItem('ao_oauth_flow') || hash.includes('access_token')){
     localStorage.removeItem('ao_oauth_flow');
     await resolvePendingGoogleRole();
