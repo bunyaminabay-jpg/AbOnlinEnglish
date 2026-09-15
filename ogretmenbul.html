@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -362,6 +363,15 @@ document.getElementById('brandLogo').src = LOGO_URL;
 })();
 
 const sb = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+// Captured immediately, before any of our own router code ever touches
+// window.location.hash (go() below rewrites the hash on every navigation).
+// This is the ONLY reliable copy of the original URL fragment the user's
+// e-mail link arrived with (e.g. "#access_token=...&type=recovery" or
+// "#error=...&type=recovery" for a used/expired link) — used later by
+// init() and the reset-password route instead of re-reading a live hash
+// that our own router has since overwritten.
+const INITIAL_HASH = window.location.hash;
 
 let currentUser = null;
 let currentProfile = null;
@@ -993,7 +1003,18 @@ route('forgot-password', async ()=>{
     const email = f.email.value.trim().toLowerCase();
     const btn = f.querySelector('button[type="submit"]');
     btn.disabled = true;
-    const redirectTo = window.location.origin + window.location.pathname + '#reset-password';
+    // IMPORTANT: no "#reset-password" (or any fragment) here. Supabase
+    // appends the recovery tokens to this URL as its own hash fragment
+    // ("...#access_token=...&refresh_token=...&type=recovery"). A redirectTo
+    // that already ends in "#reset-password" gets those tokens glued onto
+    // the SAME fragment ("#reset-password#access_token=...") which is not
+    // valid key=value&key=value syntax any more — supabase-js can no longer
+    // pull access_token/refresh_token back out of it, so it never creates a
+    // recovery session. That mismatch was the actual cause of every "Bu
+    // bağlantı geçersiz veya süresi dolmuş" error. Routing to the reset
+    // form is handled by app code (the PASSWORD_RECOVERY auth event / init()
+    // below), not by baking a route name into the redirect URL.
+    const redirectTo = window.location.origin + window.location.pathname;
     const { error } = await sb.auth.resetPasswordForEmail(email, { redirectTo });
     const msgEl = document.getElementById('forgotMsg');
     btn.disabled = false;
@@ -1004,16 +1025,41 @@ route('forgot-password', async ()=>{
 });
 
 route('reset-password', async ()=>{
-  if(!currentUser){
-    document.getElementById('app').innerHTML = `
+  const app = document.getElementById('app');
+  function showInvalidLinkMessage(){
+    app.innerHTML = `
       <section class="page wrap" style="max-width:400px;">
         <div class="msg msg-err">Bu bağlantı geçersiz veya süresi dolmuş. Lütfen şifre sıfırlamayı tekrar isteyin.</div>
         <p class="hint" style="text-align:center;margin-top:16px;"><a href="#" onclick="go('forgot-password');return false;">Şifremi unuttum</a></p>
       </section>
     `;
+  }
+
+  // go() already overwrote window.location.hash with "#reset-password" by
+  // the time this runs, so the original recovery params (or a GoTrue error
+  // like "#error=access_denied&error_code=otp_expired..." for an
+  // already-used or expired link) must come from the hash captured at
+  // script load, not a live read here.
+  const hashParams = new URLSearchParams(INITIAL_HASH.replace(/^#/, ''));
+  if(hashParams.get('error') || hashParams.get('error_description')){
+    showInvalidLinkMessage();
     return;
   }
-  document.getElementById('app').innerHTML = `
+
+  // Ask Supabase Auth directly whether a session actually exists, instead of
+  // gating on the app's own `currentUser` variable. currentUser is only set
+  // by refreshAuth(), which also waits on a `profiles` table lookup that has
+  // nothing to do with whether the recovery link worked — using it here was
+  // why a perfectly valid link could still flash "invalid or expired" if the
+  // app's state hadn't caught up yet. getSession() itself awaits Supabase's
+  // own URL-token processing internally, so this is always the current truth.
+  const { data: { session } } = await sb.auth.getSession();
+  if(!session){
+    showInvalidLinkMessage();
+    return;
+  }
+
+  app.innerHTML = `
     <section class="page wrap" style="max-width:400px;">
       <img src="${LOGO_URL}" style="width:52px;height:52px;border-radius:50%;box-shadow:0 0 0 1px var(--border);margin-bottom:16px;">
       <h2>Yeni Şifre Belirle</h2>
@@ -1033,9 +1079,15 @@ route('reset-password', async ()=>{
       msgEl.innerHTML = `<div class="msg msg-err">Şifreler eşleşmiyor.</div>`;
       return;
     }
+    const btn = f.querySelector('button[type="submit"]');
+    btn.disabled = true;
     const { error } = await sb.auth.updateUser({ password: f.password.value });
+    btn.disabled = false;
     if(error){ msgEl.innerHTML = `<div class="msg msg-err">${esc(error.message)}</div>`; return; }
     msgEl.innerHTML = `<div class="msg msg-ok">${ICN.check} Şifreniz güncellendi! Yönlendiriliyorsunuz...</div>`;
+    // The recovery tokens have done their job — no reason to leave them
+    // sitting in the address bar / browser history any longer.
+    history.replaceState(null, '', window.location.pathname);
     await refreshAuth();
     setTimeout(()=>postLoginRedirect(), 1200);
   });
@@ -1518,15 +1570,29 @@ function legalPage(title, html){
    ============================================================ */
 (async function init(){
   await refreshAuth();
-  const hash = window.location.hash;
-  if(hash.includes('type=recovery')){
+  // Use the hash exactly as it arrived (see INITIAL_HASH definition above) —
+  // go() below immediately overwrites window.location.hash with a route
+  // name, so a live read at this point could already be stale.
+  const hash = INITIAL_HASH;
+  // A recovery link lands back on this page either as
+  // "#access_token=...&refresh_token=...&type=recovery" (fresh, valid link)
+  // or "#error=...&error_code=...&type=recovery" (GoTrue's own response for
+  // a link that was already used or has expired). Either case is a
+  // password-recovery visit, so send it straight to reset-password — that
+  // route does its own session/error check and shows the right message
+  // either way, rather than deciding anything based on the hash itself here.
+  if(hash.includes('type=recovery') || hash.includes('error=')){
     go('reset-password');
     return;
   }
   if(localStorage.getItem('ao_oauth_flow') || hash.includes('access_token')){
     localStorage.removeItem('ao_oauth_flow');
     await resolvePendingGoogleRole();
-    if(currentUser){ await postLoginRedirect(); return; }
+    if(currentUser){
+      history.replaceState(null, '', window.location.pathname);
+      await postLoginRedirect();
+      return;
+    }
   }
   const initial = hash.replace('#','') || 'home';
   go(initial);
