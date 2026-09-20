@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -441,6 +442,18 @@ a:focus-visible,button:focus-visible,input:focus-visible{
   .mobile-nav-actions{margin-top:22px;display:flex;flex-direction:column;gap:12px}
   .mobile-nav-actions .btn{width:100%}
 }
+
+/* Ortaokul bölümü */
+.ortaokul-card{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(24px,4vw,56px);align-items:center;background:linear-gradient(135deg,var(--bg-tint),#fff);border:1px solid var(--line);border-radius:28px;padding:clamp(20px,3vw,36px);box-shadow:var(--shadow-md)}
+.ortaokul-media{display:block;border-radius:20px;overflow:hidden;box-shadow:var(--shadow-md)}
+.ortaokul-media img{width:100%;height:auto;display:block;transition:transform .5s ease}
+.ortaokul-card:hover .ortaokul-media img{transform:scale(1.03)}
+.ortaokul-body .section-sub{margin-top:14px}
+.ortaokul-body .hero-actions{margin-top:24px;display:flex;flex-wrap:wrap;gap:12px}
+.ortaokul-grades{list-style:none;padding:0;margin:22px 0 0;display:flex;flex-wrap:wrap;gap:10px}
+.ortaokul-grades a{display:inline-block;padding:8px 18px;border-radius:999px;background:#fff;border:1px solid var(--line);font-weight:600;font-size:15px;color:var(--navy);text-decoration:none;transition:border-color .18s ease,color .18s ease,transform .18s ease}
+.ortaokul-grades a:hover{border-color:var(--blue);color:var(--blue);transform:translateY(-2px)}
+@media(max-width:860px){.ortaokul-card{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -457,6 +470,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{
           <button aria-expanded="false" aria-haspopup="true">Öğren<span class="chevron"></span></button>
           <div class="dropdown">
             <a href="/kendin-ogren"><b>Kendin Öğren</b><span>Seviyene göre, kendi hızında ücretsiz çalışma</span></a>
+            <a href="/ortaokul-serisi/"><b>Ortaokul İngilizce</b><span>5–8. sınıf, ünite ünite görsel konu anlatımı</span></a>
             <a href="/grammar"><b>Detaylı Dilbilgisi</b><span>İnteraktif gramer alıştırmaları</span></a>
             <a href="/gramer-serisi/"><b>Görsel Dilbilgisi</b><span>İndirilebilir posterler, A1–B2</span></a>
             <a href="/fonetik"><b>Fonetik</b><span>İngilizce sesler ve telaffuz</span></a>
@@ -539,6 +553,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{
           <a href="/a1-a2-b1-b2-c1-c2">A1–C2 Kapsamlı Program</a>
         </div>
       </li>
+      <li><a href="/ortaokul-serisi/">Ortaokul</a></li>
       <li class="mobile-has-dropdown" data-open="false">
         <button aria-expanded="false">Öğretmenler<span class="chevron"></span></button>
         <div class="mobile-sub">
@@ -583,6 +598,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{
           <a class="btn btn-outline" href="#teacher-zone">Öğretmen Bölümü</a>
         </div>
         <nav class="hero-quicklinks" aria-label="Hızlı erişim">
+          <a href="/ortaokul-serisi/">Ortaokul İngilizce</a>
           <a href="/hikayeler">Hikâyeler</a>
           <a href="/games">Oyunlarla İngilizce</a>
           <a href="/gramer-serisi/">Görsel Dilbilgisi</a>
@@ -638,6 +654,32 @@ a:focus-visible,button:focus-visible,input:focus-visible{
           </div>
         </a>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- ORTAOKUL SERİSİ -->
+  <section class="section" aria-labelledby="ortaokul-title">
+    <div class="container">
+      <div class="ortaokul-card">
+        <a class="ortaokul-media" href="/ortaokul-serisi/" tabindex="-1" aria-hidden="true">
+          <img src="/ortaokul-serisi/images/ortaokul/cover.jpg" alt="Ortaokul İngilizce Serisi: 5, 6, 7 ve 8. sınıf konu anlatımı görselleri" loading="lazy" width="1200" height="630">
+        </a>
+        <div class="ortaokul-body">
+          <span class="eyebrow">Ortaokul · 5, 6, 7, 8. Sınıf</span>
+          <h2 id="ortaokul-title" class="section-title">Ortaokul İngilizce Konu Anlatımı</h2>
+          <p class="section-sub">36 ünite için görsel konu anlatımı, kelime bankası, gramer özeti ve alıştırmalar. Her ünite tek bir görselde; ücretsiz indir, sınıfta ve evde kullan.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="/ortaokul-serisi/">Ortaokul İngilizce'yi Keşfet →</a>
+            <a class="btn btn-outline" href="/meboyunmerkezi">Ortaokul Oyunları</a>
+          </div>
+          <ul class="ortaokul-grades" aria-label="Sınıflar">
+            <li><a href="/ortaokul-serisi/#grade-5">5. Sınıf</a></li>
+            <li><a href="/ortaokul-serisi/#grade-6">6. Sınıf</a></li>
+            <li><a href="/ortaokul-serisi/#grade-7">7. Sınıf</a></li>
+            <li><a href="/ortaokul-serisi/#grade-8">8. Sınıf</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -932,6 +974,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{
           <li><a href="/skills">4 Temel Beceri</a></li>
           <li><a href="/games">Oyunlarla İngilizce</a></li>
           <li><a href="/a1-a2-b1-b2-c1-c2">A1–C2 Kapsamlı Program</a></li>
+          <li><a href="/ortaokul-serisi/">Ortaokul İngilizce (5–8. Sınıf)</a></li>
         </ul>
       </div>
 
@@ -1028,6 +1071,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{
     {label:'Sana Uygun Öğretmeni Bul', url:'/ogretmenbul'},
     {label:'Özel Ders Rehberi', url:'/teacher-planner'},
     {label:'Öğretmen Kaynakları', url:'/ozeldersrehberi'},
+    {label:'Ortaokul İngilizce · 5, 6, 7, 8. Sınıf Konu Anlatımı', url:'/ortaokul-serisi/'},
     {label:'MEB Oyun Merkezi', url:'/meboyunmerkezi'},
     {label:'Hakkımızda', url:'/hakkimizda'}
   ];
