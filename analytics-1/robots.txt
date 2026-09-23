@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://abonlinenglish.school/sitemap.xml
-Sitemap: https://abonlinenglish.school/ortaokul-serisi/sitemap-ortaokul.xml
