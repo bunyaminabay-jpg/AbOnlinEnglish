@@ -1,0 +1,529 @@
+
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online İngilizce Danışmanlığı — Sana Uygun Öğretmen | AbOnlinEnglish</title>
+<meta name="description" content="A1'den C1'e, sana en uygun öğretmenle eşleştiren ücretsiz danışmanlık süreci. Seviyene özel yönlendirme, esnek saat, ilk görüşme ücretsiz. WhatsApp'tan hemen ulaş.">
+
+<link rel="canonical" href="https://abonlinenglish.school/ozel-ders">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AbOnlinEnglish">
+<meta property="og:title" content="Online İngilizce Danışmanlığı | AbOnlinEnglish">
+<meta property="og:description" content="A1'den C1'e, sana en uygun öğretmenle eşleştiren ücretsiz danışmanlık süreci. İlk görüşme ücretsiz.">
+<meta property="og:url" content="https://abonlinenglish.school/ozel-ders">
+<meta property="og:locale" content="tr_TR">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Online İngilizce Danışmanlığı | AbOnlinEnglish">
+<meta name="twitter:description" content="A1'den C1'e, sana en uygun öğretmenle eşleştiren ücretsiz danışmanlık süreci. İlk görüşme ücretsiz.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0F2A4A;
+    --navy-deep:#0A1D33;
+    --orange:#E8722C;
+    --orange-soft:#F3A469;
+    --green:#3F8F5F;
+    --cream:#FBF8F3;
+    --ink:#1B2431;
+    --line:#E4DFD5;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Outfit', sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    line-height:1.55;
+  }
+  h1,h2,h3,.serif{ font-family:'Cormorant Garamond', serif; }
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%;}
+  .wrap{max-width:1080px; margin:0 auto; padding:0 24px;}
+  /* NAV */
+  nav{
+    background:var(--navy-deep);
+    color:#fff;
+  }
+  .navbar{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:16px 24px; max-width:1080px; margin:0 auto;
+  }
+  .logo{font-family:'Cormorant Garamond', serif; font-weight:700; font-size:1.3rem; color:#fff; display:flex; align-items:center; gap:10px;}
+  .logo img{width:36px; height:36px; border-radius:50%; flex-shrink:0; box-shadow:0 0 0 1px rgba(255,255,255,.25);}
+  .logo span{color:var(--orange-soft);}
+  .navlinks{display:flex; gap:22px; font-size:0.92rem; opacity:0.85; align-items:center;}
+  .navlinks a:hover{opacity:1; color:var(--orange-soft);}
+  .nav-teachers-link{background:linear-gradient(135deg,#9fc2ff,#3e6fd9);color:#fff !important;opacity:1 !important;padding:7px 16px;border-radius:100px;font-weight:700;animation:navGlow 1.8s ease-in-out infinite;}
+  @keyframes navGlow{0%,100%{box-shadow:0 0 0 0 rgba(62,111,217,.6),0 0 10px 1px rgba(62,111,217,.5)}50%{box-shadow:0 0 0 6px rgba(62,111,217,0),0 0 20px 5px rgba(62,111,217,.9)}}
+  .hamburger{display:none; background:none; border:none; color:#fff; font-size:1.5rem; line-height:1; cursor:pointer; padding:4px;}
+  @media (max-width:760px){
+    .navlinks{display:none; flex-direction:column; align-items:flex-start; gap:2px; position:absolute; top:64px; left:0; right:0; background:var(--navy-deep); padding:14px; z-index:50; max-height:80vh; overflow-y:auto;}
+    .navlinks.open{display:flex;}
+    .navlinks a{width:100%; padding:10px 6px; border-bottom:1px solid rgba(255,255,255,.08);}
+    .nav-teachers-link{display:inline-block; width:auto;}
+    .hamburger{display:block;}
+    .navbar{position:relative;}
+  }
+  .subbar{
+    display:flex; align-items:center; justify-content:center; gap:10px;
+    background:var(--orange); color:#fff; font-size:0.88rem; font-weight:600;
+    padding:11px 20px; text-align:center;
+  }
+  .subbar:hover{ background:#D9631A; }
+  .subbar-dot{
+    width:7px; height:7px; border-radius:50%; background:#fff;
+    animation:pulse 1.6s infinite;
+  }
+  .subbar-arrow{ font-size:0.8rem; }
+  @keyframes pulse{
+    0%,100%{ opacity:1; transform:scale(1); }
+    50%{ opacity:0.5; transform:scale(1.3); }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .subbar-dot{ animation:none; }
+  }
+  /* floating sticky CTA */
+  .float-cta{
+    position:fixed; bottom:22px; right:22px; z-index:50;
+    background:var(--navy); color:#fff; font-weight:600; font-size:0.9rem;
+    padding:14px 22px; border-radius:100px; display:flex; align-items:center; gap:8px;
+    box-shadow:0 12px 28px rgba(15,42,74,0.35);
+    opacity:0; transform:translateY(12px); pointer-events:none;
+    transition:opacity .25s ease, transform .25s ease;
+  }
+  .float-cta.show{ opacity:1; transform:translateY(0); pointer-events:auto; }
+  .float-cta:hover{ background:var(--orange); }
+  @media (max-width:600px){
+    .float-cta{ left:16px; right:16px; justify-content:center; bottom:16px; }
+  }
+  /* HERO */
+  .hero{
+    background:linear-gradient(160deg, var(--navy-deep) 0%, var(--navy) 62%, #14406b 100%);
+    color:#fff;
+    padding:64px 0 88px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero::after{
+    content:"";
+    position:absolute; right:-120px; top:-120px;
+    width:420px; height:420px; border-radius:50%;
+    background:radial-gradient(circle, rgba(232,114,44,0.18), transparent 70%);
+  }
+  .hero-grid{
+    position:relative; z-index:1; max-width:640px;
+  }
+  .eyebrow{
+    display:inline-block; font-size:0.78rem; letter-spacing:0.14em; text-transform:uppercase;
+    color:var(--orange-soft); font-weight:600; margin-bottom:18px;
+  }
+  .hero h1{
+    font-size:clamp(2.3rem, 5vw, 3.4rem);
+    font-weight:600; line-height:1.12; margin-bottom:20px;
+  }
+  .hero h1 em{ font-style:italic; color:var(--orange-soft); font-weight:600;}
+  .hero p.lead{
+    font-size:1.08rem; color:#D9E2ED; max-width:480px; margin-bottom:32px;
+  }
+  .cta-row{display:flex; align-items:center; gap:18px; flex-wrap:wrap;}
+  .btn-primary{
+    background:var(--orange); color:#fff; font-weight:600; font-size:0.98rem;
+    padding:15px 28px; border-radius:100px; display:inline-flex; align-items:center; gap:10px;
+    box-shadow:0 10px 24px rgba(232,114,44,0.35);
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn-primary:hover{ transform:translateY(-2px); box-shadow:0 14px 30px rgba(232,114,44,0.45);}
+  .btn-teachers{
+    background:linear-gradient(135deg,#9fc2ff,#3e6fd9 60%,#1d3a7a); color:#fff; font-weight:700; font-size:0.98rem;
+    padding:15px 28px; border-radius:100px; display:inline-flex; align-items:center; gap:10px;
+    animation:btnTeachGlow 1.8s ease-in-out infinite; transition:transform .15s ease;
+  }
+  .btn-teachers:hover{ transform:translateY(-2px) scale(1.03); animation:none; box-shadow:0 0 0 10px rgba(62,111,217,.18),0 0 46px 10px rgba(62,111,217,.85);}
+  @keyframes btnTeachGlow{0%,100%{box-shadow:0 0 0 0 rgba(62,111,217,.55),0 0 18px 2px rgba(62,111,217,.45)}50%{box-shadow:0 0 0 9px rgba(62,111,217,0),0 0 34px 8px rgba(62,111,217,.9)}}
+  .micro{font-size:0.85rem; color:#A9BBD1;}
+  /* STATS BAR */
+  .stats{
+    background:#fff; border-bottom:1px solid var(--line);
+  }
+  .stats .wrap{
+    display:flex; justify-content:space-between; padding:26px 24px; flex-wrap:wrap; gap:20px;
+  }
+  .stat{ text-align:left; }
+  .stat b{ font-family:'Cormorant Garamond'; font-size:1.8rem; color:var(--navy); display:block;}
+  .stat span{ font-size:0.82rem; color:#7A8699; }
+  /* NETWORK / TEACHER COMMUNITY */
+  .network-section{ background:var(--cream); }
+  .network-grid{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:8px;
+  }
+  @media (max-width:760px){ .network-grid{grid-template-columns:1fr;} }
+  .network-card{
+    background:#fff; border:1px solid var(--line); border-radius:16px; padding:24px; text-align:center;
+  }
+  .network-card b{ font-family:'Cormorant Garamond'; font-size:1.9rem; color:var(--navy); display:block; margin-bottom:4px; }
+  .network-card span{ font-size:0.85rem; color:#5B6577; }
+  .network-note{
+    margin-top:22px; text-align:center; font-size:0.92rem; color:#5B6577; max-width:640px; margin-left:auto; margin-right:auto;
+  }
+  /* SECTION generic */
+  section{ padding:72px 0; }
+  .section-head{ max-width:560px; margin-bottom:40px; }
+  .section-eyebrow{ font-size:0.78rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--green); font-weight:600; margin-bottom:10px;}
+  .section-head h2{ font-size:clamp(1.8rem, 3.2vw, 2.4rem); color:var(--navy); font-weight:600; }
+  .section-head p{ color:#5B6577; margin-top:12px; font-size:1rem; }
+  /* WHY GRID */
+  .why-grid{
+    display:grid; grid-template-columns:repeat(2, 1fr); gap:20px;
+  }
+  @media (max-width:700px){ .why-grid{grid-template-columns:1fr;} }
+  .why-card{
+    background:#fff; border:1px solid var(--line); border-radius:16px; padding:26px;
+  }
+  .why-card .ico{
+    width:40px; height:40px; border-radius:10px; background:var(--navy); color:#fff;
+    display:flex; align-items:center; justify-content:center; font-size:1.1rem; margin-bottom:14px;
+  }
+  .why-card h4{ font-family:'Outfit'; font-size:1.02rem; font-weight:600; color:var(--navy); margin-bottom:8px;}
+  .why-card p{ font-size:0.92rem; color:#5B6577; }
+  /* STEPS */
+  .steps{ background:var(--navy-deep); color:#fff; }
+  .steps .section-eyebrow{ color:var(--orange-soft); }
+  .steps .section-head h2{ color:#fff; }
+  .steps .section-head p{ color:#B7C3D4; }
+  .step-line{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:24px; position:relative;
+  }
+  @media (max-width:760px){ .step-line{grid-template-columns:1fr;} }
+  .step{
+    background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.12);
+    border-radius:16px; padding:26px; position:relative;
+  }
+  .step .num{
+    font-family:'Cormorant Garamond'; font-size:2.2rem; color:var(--orange-soft); font-weight:700; line-height:1;
+    margin-bottom:12px; display:block;
+  }
+  .step h4{ font-size:1.02rem; font-weight:600; margin-bottom:8px; }
+  .step p{ font-size:0.9rem; color:#B7C3D4; }
+  /* FAQ */
+  .faq-item{
+    border-bottom:1px solid var(--line); padding:20px 0;
+  }
+  .faq-q{
+    display:flex; justify-content:space-between; align-items:center; cursor:pointer;
+    font-weight:600; color:var(--navy); font-size:1rem;
+  }
+  .faq-q .plus{ font-size:1.3rem; color:var(--orange); transition:transform .2s ease; }
+  .faq-item.open .plus{ transform:rotate(45deg); }
+  .faq-a{
+    max-height:0; overflow:hidden; transition:max-height .25s ease;
+    font-size:0.92rem; color:#5B6577;
+  }
+  .faq-item.open .faq-a{ max-height:200px; padding-top:12px; }
+  /* CTA BAND */
+  .cta-band{
+    background:linear-gradient(120deg, var(--green), #2E6E48);
+    color:#fff; text-align:center; padding:64px 24px;
+  }
+  .cta-band h2{ font-size:clamp(1.8rem, 3.5vw, 2.6rem); margin-bottom:14px; }
+  .cta-band p{ color:#DCEFE2; margin-bottom:26px; }
+  .btn-white{
+    background:#fff; color:var(--green); font-weight:600; padding:15px 30px; border-radius:100px;
+    display:inline-flex; gap:10px; align-items:center;
+  }
+  footer{
+    background:var(--navy-deep); color:#8CA0BC; text-align:center; padding:28px 24px; font-size:0.85rem;
+  }
+  footer a{ color:var(--orange-soft); }
+  /* FORM */
+  .form-section{ background:#fff; }
+  .form-card{
+    background:var(--cream); border:1px solid var(--line); border-radius:20px;
+    padding:40px; max-width:640px; margin:0 auto;
+  }
+  .form-grid{
+    display:grid; grid-template-columns:1fr 1fr; gap:18px;
+  }
+  @media (max-width:600px){ .form-grid{grid-template-columns:1fr;} }
+  .field{ display:flex; flex-direction:column; gap:6px; }
+  .field.full{ grid-column:1 / -1; }
+  .field label{
+    font-size:0.82rem; font-weight:600; color:var(--navy);
+  }
+  .field input, .field select, .field textarea{
+    font-family:'Outfit'; font-size:0.95rem; color:var(--ink);
+    background:#fff; border:1px solid var(--line); border-radius:10px;
+    padding:12px 14px; outline:none; transition:border-color .15s ease;
+  }
+  .field input:focus, .field select:focus, .field textarea:focus{
+    border-color:var(--orange);
+  }
+  .field textarea{ resize:vertical; min-height:90px; }
+  .form-submit{
+    grid-column:1 / -1; margin-top:6px;
+    background:var(--orange); color:#fff; font-weight:600; font-size:0.98rem;
+    padding:15px 28px; border:none; border-radius:100px; cursor:pointer;
+    display:inline-flex; align-items:center; justify-content:center; gap:10px;
+    box-shadow:0 10px 24px rgba(232,114,44,0.3);
+    transition:transform .15s ease;
+  }
+  .form-submit:hover{ transform:translateY(-2px); }
+  .form-foot{
+    grid-column:1 / -1; font-size:0.82rem; color:#7A8699; text-align:center; margin-top:2px;
+  }
+</style>
+</head>
+<body>
+<nav>
+  <div class="navbar">
+    <div class="logo"><img src="data:image/jpeg;base64,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" alt="AbOnlinEnglish logo">AbOnlinEnglish <span>·</span> Dil Eğitimi</div>
+    <div class="navlinks" id="navLinks">
+      <a href="/">Anasayfa</a>
+      <a href="/kendin-ogren">Kendin Öğren</a>
+      <a href="/roadmap">Yol Haritası</a>
+      <a href="/ielts">IELTS Academy</a>
+      <a href="/hakkimizda">Hakkımızda</a>
+      <a href="/ozel-ders" style="color:#fff;">Danışmanlık</a>
+      <a href="/ogretmenbul" class="nav-teachers-link">Öğretmen Bul</a>
+    </div>
+    <button class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menü">&#9776;</button>
+  </div>
+  <a href="#talep-formu" class="subbar">
+    <span class="subbar-dot"></span>
+    Danışmanlık Formu — hemen doldur, seni doğru öğretmenle buluşturalım
+    <span class="subbar-arrow">↓</span>
+  </a>
+</nav>
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Öğretmen Eşleştirme Danışmanlığı</span>
+      <h1>Sana uygun öğretmen,<br><em>sana uygun program.</em></h1>
+      <p class="lead">Binlerce İngilizce öğretmenini bir araya getiren geniş bir öğretmen ağı arkanızda. İstediğiniz ve hedeflediğiniz şeye göre, bu ağdaki binlerce öğretmen arasından sana en uygun olanı buluruz. Kalabalık sınıf yok, hazır müfredat yok — istediğin an ücretsiz danışabilirsin.</p>
+      <div class="cta-row">
+        <a class="btn-primary" href="#talep-formu">Danışmanlık Talep Formunu Doldur →</a>
+        <a class="btn-teachers" href="/ogretmenbul">Öğretmen Bul →</a>
+        <span class="micro">İstediğin an ücretsiz danışabilirsin · Taahhüt yok</span>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="stats">
+  <div class="wrap">
+    <div class="stat"><b>A1 – C1</b><span>Tüm seviyeler</span></div>
+    <div class="stat"><b>1:1</b><span>Birebir öğretmen eşleştirme</span></div>
+    <div class="stat"><b>Esnek</b><span>Kendi saatini seç</span></div>
+    <div class="stat"><b>Ücretsiz</b><span>İstediğin an danış</span></div>
+  </div>
+</div>
+<section class="network-section">
+  <div class="wrap">
+    <div class="section-head" style="margin:0 auto 24px; text-align:center; max-width:640px;">
+      <div class="section-eyebrow" style="text-align:center;">Arkanızdaki Ağ</div>
+      <h2>Binlerce öğretmenden oluşan bir ağ arkanızda.</h2>
+      <p>İstediğiniz ve hedeflediğiniz şeye göre, bu geniş öğretmen ağı içinden size en uygun olanı buluruz — istediğiniz an ücretsiz danışabilirsiniz.</p>
+    </div>
+    <div class="network-grid">
+      <div class="network-card">
+        <b>42,2 B+</b>
+        <span>İngilizce Öğretmenleri Dayanışma Grubu üyesi</span>
+      </div>
+      <div class="network-card">
+        <b>28,5 B+</b>
+        <span>Öğretmen topluluğu Instagram takipçisi</span>
+      </div>
+      <div class="network-card">
+        <b>7,96 B+</b>
+        <span>YouTube abonesi</span>
+      </div>
+    </div>
+    <p class="network-note">Bu geniş öğretmen ağı, ihtiyacınıza en uygun öğretmeni bulmanızı kolaylaştırır. Genel İngilizce, konuşma pratiği, LGS, IELTS ya da başka bir hedefiniz olsun — istediğiniz an ücretsiz danışabilirsiniz.</p>
+  </div>
+</section>
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow">Neden Danışmanlık</div>
+      <h2>Grup dersinde kaybolan şey: sen.</h2>
+      <p>Danışmanlık sürecinde program sana göre şekillenir — sen programa göre değil.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="ico">✎</div>
+        <h4>Kişiye özel program</h4>
+        <p>Seviye testiyle belirlenen, sadece senin eksiklerine odaklanan bir yönlendirme. Genel bir ders kitabı takip edilmez.</p>
+      </div>
+      <div class="why-card">
+        <div class="ico">🕓</div>
+        <h4>Esnek görüşme saatleri</h4>
+        <p>İş, okul ya da diğer programlarına göre gün ve saat sen belirlersin. Sabit bir takvime bağlı kalmazsın.</p>
+      </div>
+      <div class="why-card">
+        <div class="ico">💬</div>
+        <h4>Hedefe göre yönlendirme</h4>
+        <p>Konuşma pratiği, gramer, IELTS ya da YDS hazırlığı — hangi hedefin varsa, ağımızdaki binlerce öğretmen arasından ona en uygun olana yönlendirilirsin.</p>
+      </div>
+      <div class="why-card">
+        <div class="ico">🎁</div>
+        <h4>Risk almadan başla</h4>
+        <p>İlk görüşme ücretsiz. Sana önerilen öğretmeni ve sürecin işleyişini görmeden hiçbir ödeme yapmazsın.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="steps">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow">Nasıl Başlarım</div>
+      <h2>Üç adımda doğru öğretmene ulaş</h2>
+      <p>Kayıt formu yok, uzun süreç yok. WhatsApp üzerinden başlıyor.</p>
+    </div>
+    <div class="step-line">
+      <div class="step">
+        <span class="num">01</span>
+        <h4>Seviye testini çöz</h4>
+        <p>15 dakikalık ücretsiz test ile A1'den C1'e hangi seviyede olduğunu öğren.</p>
+      </div>
+      <div class="step">
+        <span class="num">02</span>
+        <h4>WhatsApp'tan yaz</h4>
+        <p>Sonucunu ve hedefini bize ilet; sahip olduğumuz öğretmen toplulukları aracılığıyla sana en uygun öğretmeni ve uygun gün/saatleri birlikte konuşalım.</p>
+      </div>
+      <div class="step">
+        <span class="num">03</span>
+        <h4>İlk dersini ücretsiz dene</h4>
+        <p>Önerilen öğretmenle ücretsiz ilk derste süreç sana uygun mu gör, sonra karar ver.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="wrap" style="max-width:760px;">
+    <div class="section-head">
+      <div class="section-eyebrow">Sıkça Sorulanlar</div>
+      <h2>Merak ettiklerin</h2>
+    </div>
+    <div class="faq">
+      <div class="faq-item">
+        <div class="faq-q">Öğretmen ağınız ne kadar büyük, eşleştirmeyi nasıl yapıyorsunuz? <span class="plus">+</span></div>
+        <div class="faq-a">Binlerce İngilizce öğretmenini bir araya getiren geniş bir topluluğun parçasıyız. İhtiyacınızı ve hedefinizi anladıktan sonra bu ağdaki en uygun öğretmene yönlendiriyoruz; istediğiniz an ücretsiz danışabilirsiniz.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Dersler ne kadar sürer, haftada kaç ders önerilir? <span class="plus">+</span></div>
+        <div class="faq-a">Dersler genellikle 45–60 dakika sürer. Çoğu öğrenci için haftada 2 ders ilerlemeyi görmek açısından yeterli, yoğun hazırlıklarda (IELTS/YDS gibi) 3 derse çıkılabilir.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Hangi seviyeden başlayabilirim? <span class="plus">+</span></div>
+        <div class="faq-a">Sıfırdan başlayabileceğin gibi, mevcut seviyeni de geliştirebilirsin. Ücretsiz seviye testi tam olarak nereden başlaman gerektiğini gösterir.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Ders materyali platformdaki içeriklerle bağlantılı mı? <span class="plus">+</span></div>
+        <div class="faq-a">Evet. Kendin Öğren platformundaki grammar, reading ve hikâye içerikleri danışmanlık sürecinin de temelini oluşturur — dersler bu içeriklerle desteklenir.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="form-section" id="talep-formu">
+  <div class="wrap" style="max-width:760px;">
+    <div class="section-head" style="margin:0 auto 32px; text-align:center;">
+      <div class="section-eyebrow" style="text-align:center;">Danışmanlık Formu</div>
+      <h2>Bilgilerini bırak, seni doğru öğretmenle buluşturalım.</h2>
+      <p>Formu doldur — mesajın hazır şekilde WhatsApp'a düşsün, sana en uygun öğretmeni ve saatleri birlikte belirleyelim.</p>
+    </div>
+    <form class="form-card form-grid" id="dersForm">
+      <div class="field full">
+        <label for="adsoyad">Ad Soyad</label>
+        <input type="text" id="adsoyad" name="adsoyad" placeholder="Adın Soyadın" required>
+      </div>
+      <div class="field">
+        <label for="yas">Yaş</label>
+        <input type="number" id="yas" name="yas" placeholder="Örn. 24" min="5" max="99" required>
+      </div>
+      <div class="field">
+        <label for="seviye">Seviye</label>
+        <select id="seviye" name="seviye" required>
+          <option value="" disabled selected>Seç</option>
+          <option value="Bilmiyorum / Seviye testi lazım">Bilmiyorum / Seviye testi lazım</option>
+          <option value="A1 - Başlangıç">A1 — Başlangıç</option>
+          <option value="A2 - Temel">A2 — Temel</option>
+          <option value="B1 - Orta">B1 — Orta</option>
+          <option value="B2 - Üst Orta">B2 — Üst Orta</option>
+          <option value="C1 - İleri">C1 — İleri</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="haftalik">Haftada Kaç Ders</label>
+        <select id="haftalik" name="haftalik" required>
+          <option value="" disabled selected>Seç</option>
+          <option value="1 ders / hafta">1 ders / hafta</option>
+          <option value="2 ders / hafta">2 ders / hafta</option>
+          <option value="3 ders / hafta">3 ders / hafta</option>
+          <option value="3+ ders / hafta">3+ ders / hafta</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="sebep-secim">Danışmanlık Talep Sebebi</label>
+        <select id="sebep-secim" name="sebep-secim" required>
+          <option value="" disabled selected>Seç</option>
+          <option value="Genel İngilizce / Konuşma">Genel İngilizce / Konuşma</option>
+          <option value="Sınav Hazırlığı (IELTS/YDS vb.)">Sınav Hazırlığı (IELTS/YDS vb.)</option>
+          <option value="Okul / Ödev Desteği">Okul / Ödev Desteği</option>
+          <option value="İş / Kariyer">İş / Kariyer</option>
+          <option value="Diğer">Diğer</option>
+        </select>
+      </div>
+      <div class="field full">
+        <label for="not">Eklemek istediğin bir şey var mı? (opsiyonel)</label>
+        <textarea id="not" name="not" placeholder="Örn. hafta içi akşamları uygunum, konuşma pratiğine ağırlık vermek istiyorum..."></textarea>
+      </div>
+      <button type="submit" class="form-submit">WhatsApp'ta Gönder →</button>
+      <div class="form-foot">Gönder'e bastığında WhatsApp açılır, mesajın hazır şekilde gelir — sadece onaylayıp yollaman yeterli.</div>
+    </form>
+  </div>
+</section>
+<div class="cta-band">
+  <h2>Danışmanlığına bugün başla.</h2>
+  <p>Binlerce öğretmenden oluşan ağımızla, istediğin an ücretsiz danışabilirsin — taahhüt yok, risk yok, sadece bir WhatsApp mesajı uzağında.</p>
+  <a class="btn-white" href="https://wa.me/onlineelt1" target="_blank">WhatsApp'tan Yaz →</a>
+</div>
+<footer>
+  AbOnlinEnglish · Online İngilizce Danışmanlığı &nbsp;·&nbsp; <a href="mailto:ingilizceogrensene@gmail.com">ingilizceogrensene@gmail.com</a>
+</footer>
+<a href="#talep-formu" class="float-cta" id="floatCta">📋 Danışmanlık Formu</a>
+<script>
+  document.querySelectorAll('.faq-q').forEach(q=>{
+    q.addEventListener('click', ()=>{
+      q.parentElement.classList.toggle('open');
+    });
+  });
+  document.getElementById('dersForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const f = new FormData(this);
+    const msg =
+`Merhaba, danışmanlık talebim var:
+Ad Soyad: ${f.get('adsoyad')}
+Yaş: ${f.get('yas')}
+Seviye: ${f.get('seviye')}
+Haftada Kaç Ders: ${f.get('haftalik')}
+Danışmanlık Talep Sebebi: ${f.get('sebep-secim')}
+Not: ${f.get('not') || '-'}`;
+    const url = 'https://wa.me/onlineelt1?text=' + encodeURIComponent(msg);
+    window.open(url, '_blank');
+  });
+  // floating CTA: show after scrolling past hero, hide once form itself is in view
+  const floatCta = document.getElementById('floatCta');
+  const formSection = document.getElementById('talep-formu');
+  const heroEl = document.querySelector('.hero');
+  window.addEventListener('scroll', ()=>{
+    const pastHero = window.scrollY > heroEl.offsetHeight * 0.7;
+    const formRect = formSection.getBoundingClientRect();
+    const formVisible = formRect.top < window.innerHeight && formRect.bottom > 0;
+    floatCta.classList.toggle('show', pastHero && !formVisible);
+  });
+</script>
+</body>
+</html>
+<script src="/assets/ko/consent.js?v=2" defer></script>

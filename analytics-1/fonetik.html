@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fonetik | AbOnlinEnglish</title>
+<meta name="description" content="İngilizce fonetik: sesleri öğren, dinle ve pratik yap. IPA sembolleri, telaffuz ipuçları ve 20 farklı alıştırma türüyle interaktif fonetik merkezi.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0B2545; --navy-2:#13345f; --orange:#E8804A; --orange-2:#d96f39;
+  --green:#2E7D5B; --green-bg:#e7f4ee; --red:#c0392b; --red-bg:#fbeaea;
+  --cream:#FBF9F4; --card:#ffffff; --line:#e7e1d4; --muted:#6b6459;
+  --radius:14px; --shadow:0 2px 14px rgba(11,37,69,.07);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--navy);font-family:'Outfit',sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.display{font-family:'Cormorant Garamond',serif}
+a{color:inherit}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px}
+:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
+
+/* header */
+header.site{background:var(--navy);color:#fff;padding:16px 0}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:1.35rem;text-decoration:none;color:#fff}
+.brand span{color:var(--orange)}
+.back-link{color:#e8e2d3;text-decoration:none;font-size:.92rem;border:1px solid rgba(255,255,255,.25);padding:7px 14px;border-radius:999px;transition:background .15s}
+.back-link:hover{background:rgba(255,255,255,.08)}
+
+/* hero */
+.hero{padding:52px 0 36px;border-bottom:1px solid var(--line)}
+.hero .kicker{color:var(--orange-2);font-weight:600;font-size:.95rem;margin:0 0 6px}
+.hero h1{font-size:clamp(2.1rem,4vw,3rem);margin:0 0 14px;font-weight:700;color:var(--navy)}
+.hero p{max-width:62ch;color:var(--muted);font-size:1.05rem;margin:0 0 22px}
+.hero-actions{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:999px;border:none;font-family:inherit;font-size:.97rem;font-weight:600;cursor:pointer;text-decoration:none;transition:transform .12s,box-shadow .12s}
+.btn:active{transform:scale(.97)}
+.btn-primary{background:var(--orange);color:#fff}
+.btn-primary:hover{background:var(--orange-2)}
+.btn-outline{background:transparent;color:var(--navy);border:1.5px solid var(--navy)}
+.btn-outline:hover{background:var(--navy);color:#fff}
+.btn-ghost{background:var(--green-bg);color:var(--green)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+/* sections */
+section{padding:44px 0}
+.section-head{margin-bottom:22px}
+.section-head .eyebrow{color:var(--green);font-weight:600;font-size:.85rem;margin:0 0 4px}
+.section-head h2{font-size:1.9rem;margin:0 0 6px;color:var(--navy)}
+.section-head p{color:var(--muted);margin:0;max-width:65ch}
+
+/* phoneme grid */
+.phoneme-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.pcard{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow);cursor:pointer}
+.pcard-top{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.pcard .symbol{font-family:'Cormorant Garamond',serif;font-size:2.1rem;font-weight:700;color:var(--navy)}
+.tag{font-size:.72rem;font-weight:600;padding:3px 9px;border-radius:999px;background:var(--green-bg);color:var(--green)}
+.tag.cons{background:#fdeee2;color:var(--orange-2)}
+.pcard .word-ex{margin-top:8px;color:var(--muted);font-size:.92rem}
+.pcard .word-ex b{color:var(--navy)}
+
+/* phoneme detail (expanded) */
+.pdetail{display:none;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;margin-top:14px;box-shadow:var(--shadow)}
+.pdetail.open{display:block}
+.pdetail h3{margin:0 0 6px;font-size:1.6rem}
+.pdetail .tip{background:var(--green-bg);color:#245942;padding:12px 14px;border-radius:10px;font-size:.94rem;margin:12px 0}
+.wordlist{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px;margin:14px 0}
+.level-group{margin-bottom:4px}
+.level-badge{display:inline-block;font-size:.72rem;font-weight:700;color:var(--orange-2);background:#fdeee2;border-radius:999px;padding:3px 11px;margin-bottom:8px}
+.wchip{display:flex;align-items:center;gap:8px;background:var(--cream);border:1px solid var(--line);border-radius:10px;padding:8px 10px;font-size:.9rem}
+.wchip .play{border:none;background:var(--navy);color:#fff;width:26px;height:26px;border-radius:50%;cursor:pointer;flex:none;font-size:.75rem;display:flex;align-items:center;justify-content:center}
+.wchip .play:hover{background:var(--orange)}
+.mp-row{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0}
+.mp-pill{background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px 12px;font-size:.88rem;display:flex;gap:6px;align-items:center}
+.detail-actions{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+.audio-note{font-size:.78rem;color:var(--muted);margin-top:10px}
+
+/* test mode picker */
+.mode-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
+.mode-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px;text-align:left;cursor:pointer;font-family:inherit}
+.mode-card h4{margin:0 0 4px;font-size:1.05rem;color:var(--navy)}
+.mode-card p{margin:0;color:var(--muted);font-size:.85rem}
+.mode-card:hover{border-color:var(--orange)}
+.settings-row{display:flex;align-items:center;gap:10px;margin:14px 0 22px;flex-wrap:wrap}
+.switch{display:flex;align-items:center;gap:8px;font-size:.9rem;color:var(--muted)}
+
+/* quiz */
+#quizArea{display:none}
+#quizArea.open{display:block}
+.quiz-panel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow)}
+.quiz-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px}
+.quiz-count{font-weight:600;color:var(--navy)}
+.score-mini{display:flex;gap:14px;font-size:.85rem;color:var(--muted)}
+.score-mini b{color:var(--navy)}
+.progress-track{height:8px;background:var(--line);border-radius:999px;overflow:hidden;margin-bottom:22px}
+.progress-fill{height:100%;background:var(--orange);border-radius:999px;transition:width .25s}
+.q-category{font-size:.78rem;font-weight:600;color:var(--green);text-transform:none;margin-bottom:6px}
+.q-text{font-size:1.25rem;color:var(--navy);margin:0 0 18px;font-weight:600}
+.q-audio-btn{display:inline-flex;align-items:center;gap:8px;background:var(--navy);color:#fff;border:none;border-radius:999px;padding:10px 18px;cursor:pointer;margin-bottom:16px;font-family:inherit;font-size:.9rem}
+.q-audio-btn:hover{background:var(--navy-2)}
+.options{display:grid;gap:10px}
+.opt{display:flex;align-items:center;gap:10px;text-align:left;background:var(--cream);border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;cursor:pointer;font-family:inherit;font-size:1rem;color:var(--navy)}
+.opt:hover{border-color:var(--orange)}
+.opt .letter{width:26px;height:26px;border-radius:50%;background:#fff;border:1.5px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:700;flex:none}
+.opt.selected{border-color:var(--navy)}
+.opt.correct{background:var(--green-bg);border-color:var(--green)}
+.opt.correct .letter{background:var(--green);color:#fff;border-color:var(--green)}
+.opt.wrong{background:var(--red-bg);border-color:var(--red)}
+.opt.wrong .letter{background:var(--red);color:#fff;border-color:var(--red)}
+.opt[disabled]{cursor:default}
+@keyframes shake{10%,90%{transform:translateX(-1px)}20%,80%{transform:translateX(2px)}30%,50%,70%{transform:translateX(-4px)}40%,60%{transform:translateX(4px)}}
+.opt.wrong.shake{animation:shake .35s}
+@media (prefers-reduced-motion:reduce){.opt.wrong.shake{animation:none}}
+
+.feedback{margin-top:18px;padding:16px 18px;border-radius:12px;display:none}
+.feedback.show{display:block}
+.feedback.correct{background:var(--green-bg);border:1px solid var(--green)}
+.feedback.wrong{background:var(--red-bg);border:1px solid var(--red)}
+.feedback .fb-head{font-weight:700;display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.feedback.correct .fb-head{color:var(--green)}
+.feedback.wrong .fb-head{color:var(--red)}
+.feedback .fb-correct{font-weight:600;color:var(--navy);margin:4px 0}
+.feedback .fb-why{color:var(--navy);font-size:.94rem}
+.feedback .fb-example{font-size:.85rem;color:var(--muted);margin-top:6px}
+.teacher-box{margin-top:10px;padding:10px 12px;background:#fff;border:1px dashed var(--orange);border-radius:10px;font-size:.85rem;color:var(--navy)}
+.teacher-box b{color:var(--orange-2)}
+
+.quiz-nav{display:flex;justify-content:flex-end;margin-top:20px}
+
+/* matching */
+.match-wrap{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media (max-width:560px){.match-wrap{grid-template-columns:1fr}}
+.match-col h5{font-size:.8rem;color:var(--muted);margin:0 0 8px;font-weight:600}
+.match-item{width:100%;text-align:left;margin-bottom:8px;background:var(--cream);border:1.5px solid var(--line);border-radius:10px;padding:12px 14px;cursor:pointer;font-family:inherit;font-size:.98rem;color:var(--navy)}
+.match-item.active{border-color:var(--orange);background:#fdeee2}
+.match-item.done-correct{background:var(--green-bg);border-color:var(--green);cursor:default}
+.match-item.done-wrong{background:var(--red-bg);border-color:var(--red);cursor:default}
+.match-item[disabled]{cursor:default}
+
+/* phonemic alphabet chart */
+.chart-group{margin-bottom:26px}
+.chart-group h4{color:#f0c9a8;font-size:.85rem;font-weight:600;margin:0 0 10px;text-transform:none}
+.chart-cells{display:grid;grid-template-columns:repeat(auto-fill,minmax(108px,1fr));gap:8px}
+.chart-cell{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:10px 8px;text-align:center;cursor:pointer;font-family:inherit;color:#fff}
+.chart-cell:hover{background:rgba(255,255,255,.12);border-color:var(--orange)}
+.chart-cell .sym{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;display:block}
+.chart-cell .exw{font-size:.72rem;color:#cdd6e3;display:block;margin-top:2px}
+.chart-tooltip{margin-top:16px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:12px;padding:16px 18px;display:none}
+.chart-tooltip.show{display:block}
+.chart-tooltip h5{margin:0 0 6px;font-size:1.2rem;color:#fff}
+.chart-tooltip p{margin:4px 0;color:#e3e8ef;font-size:.92rem}
+.chart-tooltip .ct-actions{margin-top:8px;display:flex;gap:8px;flex-wrap:wrap}
+
+/* results */
+#resultArea{display:none}
+#resultArea.open{display:block}
+.result-panel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:32px;box-shadow:var(--shadow);text-align:center}
+.result-score{font-family:'Cormorant Garamond',serif;font-size:3.4rem;font-weight:700;color:var(--navy);margin:6px 0}
+.result-pct{font-size:1.2rem;color:var(--orange-2);font-weight:600}
+.result-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:26px 0;text-align:left}
+@media (max-width:560px){.result-grid{grid-template-columns:1fr}}
+.result-box{background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:16px}
+.result-box h5{margin:0 0 8px;font-size:.8rem;text-transform:none;color:var(--muted);font-weight:600}
+.result-box ul{margin:0;padding-left:18px;font-size:.92rem}
+.result-box.weak{border-color:var(--orange)}
+.diagnostic{text-align:left;background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:18px;margin:16px 0}
+.diagnostic h5{margin:0 0 10px;color:var(--navy)}
+.diag-item{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--line);font-size:.92rem}
+.diag-item:last-child{border-bottom:none}
+.diag-item .steps{color:var(--muted);font-size:.85rem}
+.result-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:10px}
+
+footer.site{padding:28px 0;color:var(--muted);font-size:.85rem;text-align:center;border-top:1px solid var(--line);margin-top:20px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html">AbOnlin<span>English</span></a>
+    <a class="back-link" href="index.html">← Siteye dön</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="kicker">Fonetik Merkezi</p>
+    <h1>İngilizce sesleri doğru öğren, doğru duy, doğru söyle</h1>
+    <p>Her ses için önce açıklama ve telaffuz ipucu, sonra örnek kelimeler, sonra pratik. Aşağıdan bir sesi seç, nasıl söylendiğini öğren, sonra o ses için kendini test et — ya da direkt genel bir teste başla.</p>
+    <div class="hero-actions">
+      <a href="#seslervi" class="btn btn-primary">Sesleri Öğren</a>
+      <a href="#testler" class="btn btn-outline">Teste Başla</a>
+    </div>
+  </div>
+</section>
+
+<section id="seslervi">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Öğren</p>
+      <h2>10 temel ses, tek tek</h2>
+      <p>Türk öğrencilerin en sık karıştırdığı ses çiftlerine odaklandık: kısa/uzun ünlüler, sesli/sessiz ünsüzler ve v/w gibi klasik karışıklıklar. Bir karta tıkla, detayları gör.</p>
+    </div>
+    <div class="phoneme-grid" id="phonemeGrid"></div>
+    <div id="phonemeDetailHost"></div>
+  </div>
+</section>
+
+<section id="alfabe" style="background:var(--navy);color:#fff">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow" style="color:#f0c9a8">Tam Referans</p>
+      <h2 style="color:#fff">İngilizce Fonemik Alfabe — 44 ses</h2>
+      <p style="color:#cdd6e3">Standart İngiliz İngilizcesi (RP) fonemik haritası: 20 ünlü (7 kısa + 5 uzun + 8 diftong) ve 24 ünsüz. Herhangi bir sembole tıkla, örnek kelimeyi dinle.</p>
+    </div>
+    <div id="alphabetChart"></div>
+  </div>
+</section>
+
+<section id="testler">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Pratik Yap</p>
+      <h2>Bir test modu seç</h2>
+      <p>20 farklı alıştırma türünden oluşan geniş bir soru bankasından üretiliyor. İstersen tek bir sese odaklan, istersen karışık bir test çöz.</p>
+    </div>
+    <div class="settings-row">
+      <label class="switch"><input type="checkbox" id="teacherModeToggle"> Öğretmen Modu (ekstra tanı bilgisi göster)</label>
+    </div>
+    <div class="mode-grid" id="modeGrid"></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div id="quizArea">
+      <div class="quiz-panel">
+        <div class="quiz-top">
+          <div class="quiz-count" id="quizCount">Soru 1 / 10</div>
+          <div class="score-mini"><span>Doğru: <b id="scoreCorrect">0</b></span><span>Yanlış: <b id="scoreWrong">0</b></span></div>
+        </div>
+        <div class="progress-track"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+        <div id="questionHost"></div>
+        <div class="quiz-nav">
+          <button class="btn btn-primary" id="nextBtn" style="display:none">Sonraki Soru</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="resultArea">
+      <div class="result-panel">
+        <p class="eyebrow" style="color:var(--green)">Test Tamamlandı</p>
+        <div class="result-score" id="resultScoreText">0 / 0</div>
+        <div class="result-pct" id="resultPct">%0</div>
+        <div class="result-grid">
+          <div class="result-box"><h5>Güçlü Olduğun Alan</h5><ul id="strongList"></ul></div>
+          <div class="result-box weak"><h5>Daha Fazla Pratiğe İhtiyacın Var</h5><ul id="weakList"></ul></div>
+        </div>
+        <div class="diagnostic">
+          <h5>Önerilen Sonraki Adımlar</h5>
+          <div id="diagList"></div>
+        </div>
+        <div class="result-actions">
+          <button class="btn btn-primary" id="retryBtn">Tekrar Dene</button>
+          <button class="btn btn-outline" id="reviewBtn">Hataları Gözden Geçir</button>
+          <button class="btn btn-ghost" id="weakBtn">Zayıf Alanları Çalış</button>
+          <button class="btn btn-outline" id="newTestBtn">Yeni Test</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    Sesler tarayıcının kendi seslendirme özelliğiyle (Web Speech API) okunur — profesyonel ses kaydı değildir. Telaffuzlar İngiliz İngilizcesi (RP) esas alınarak hazırlanmıştır. · AbOnlinEnglish
+  </div>
+</footer>
+
+<script>
+/* =========================================================
+   FONETIK ENGINE — data-driven question bank + test runner
+   ========================================================= */
+(function(){
+"use strict";
+
+/* ---------- 1. PHONEME DATA ---------- */
+const PHONEMES = [
+  { id:'i', symbol:'ɪ', ipa:'/ɪ/', name:'kısa i', category:'short_vowel', voicing:null,
+    description:'Kısa, gevşek bir ünlü. Türkçe "i" den daha kısa ve daha gevşek söylenir.',
+    tip:'Dudaklar gevşek kalsın, çene çok açılmasın. Sesi uzatmadan, hızlıca bırak.',
+    teacherNote:'Türkçe konuşanlar genelde /ɪ/ yerine Türkçe "i" (yani /iː/ ye yakın bir ses) kullanır. "ship" kelimesi "sheep" gibi duyulabilir.',
+    level:'beginner',
+    words:[
+      {word:'ship',ipa:'/ʃɪp/',tr:'gemi',level:'beginner'},
+      {word:'sit',ipa:'/sɪt/',tr:'oturmak',level:'beginner'},
+      {word:'big',ipa:'/bɪɡ/',tr:'büyük',level:'beginner'},
+      {word:'pin',ipa:'/pɪn/',tr:'iğne',level:'a1'},
+      {word:'hit',ipa:'/hɪt/',tr:'vurmak',level:'a1'},
+      {word:'city',ipa:'/ˈsɪti/',tr:'şehir',level:'a2'},
+      {word:'different',ipa:'/ˈdɪfrənt/',tr:'farklı',level:'a2'},
+      {word:'business',ipa:'/ˈbɪznəs/',tr:'iş / ticaret',level:'b1'},
+      {word:'system',ipa:'/ˈsɪstəm/',tr:'sistem',level:'b1'},
+      {word:'symbolic',ipa:'/sɪmˈbɒlɪk/',tr:'sembolik',level:'b2'},
+      {word:'physical',ipa:'/ˈfɪzɪkl/',tr:'fiziksel',level:'b2'}
+    ],
+    minimalPairs:[
+      {a:{word:'ship',ipa:'/ʃɪp/'},b:{word:'sheep',ipa:'/ʃiːp/'}},
+      {a:{word:'sit',ipa:'/sɪt/'},b:{word:'seat',ipa:'/siːt/'}},
+      {a:{word:'live',ipa:'/lɪv/'},b:{word:'leave',ipa:'/liːv/'}}
+    ]
+  },
+  { id:'iy', symbol:'iː', ipa:'/iː/', name:'uzun i', category:'long_vowel', voicing:null,
+    description:'Uzun bir ünlü. Türkçe "i" ye yakındır ama belirgin biçimde uzatılır.',
+    tip:'Dudakları hafifçe gerip dili öne-yukarı götür; sesi /ɪ/ den daha uzun tut.',
+    teacherNote:'Kelime sonundaki uzunluk genelde göz ardı edilir; öğrenciye "sheep" derken sesi gerçekten uzatmasını hissettir.',
+    level:'beginner',
+    words:[
+      {word:'sheep',ipa:'/ʃiːp/',tr:'koyun',level:'beginner'},
+      {word:'see',ipa:'/siː/',tr:'görmek',level:'beginner'},
+      {word:'tea',ipa:'/tiː/',tr:'çay',level:'beginner'},
+      {word:'feet',ipa:'/fiːt/',tr:'ayaklar',level:'a1'},
+      {word:'need',ipa:'/niːd/',tr:'ihtiyaç duymak',level:'a1'},
+      {word:'reason',ipa:'/ˈriːzn/',tr:'sebep',level:'a2'},
+      {word:'increase',ipa:'/ɪnˈkriːs/',tr:'artmak',level:'a2'},
+      {word:'achieve',ipa:'/əˈtʃiːv/',tr:'başarmak',level:'b1'},
+      {word:'previous',ipa:'/ˈpriːviəs/',tr:'önceki',level:'b1'},
+      {word:'complete',ipa:'/kəmˈpliːt/',tr:'tamamlamak',level:'b2'},
+      {word:'extreme',ipa:'/ɪkˈstriːm/',tr:'aşırı',level:'b2'}
+    ],
+    minimalPairs:[
+      {a:{word:'sheep',ipa:'/ʃiːp/'},b:{word:'ship',ipa:'/ʃɪp/'}},
+      {a:{word:'feel',ipa:'/fiːl/'},b:{word:'fill',ipa:'/fɪl/'}}
+    ]
+  },
+  { id:'ae', symbol:'æ', ipa:'/æ/', name:'açık e / a', category:'short_vowel', voicing:null,
+    description:'"e" ile "a" arası, ağız daha açık söylenen kısa bir ünlü.',
+    tip:'Çeneni /e/ dediğinden biraz daha aşağı indir; sesi kısa tut.',
+    teacherNote:'Öğrenciler genelde /æ/ yerine Türkçe "e" kullanır, "bad" ile "bed" karışır.',
+    level:'a1',
+    words:[
+      {word:'cat',ipa:'/kæt/',tr:'kedi',level:'beginner'},
+      {word:'bad',ipa:'/bæd/',tr:'kötü',level:'beginner'},
+      {word:'hat',ipa:'/hæt/',tr:'şapka',level:'beginner'},
+      {word:'bag',ipa:'/bæɡ/',tr:'çanta',level:'a1'},
+      {word:'back',ipa:'/bæk/',tr:'sırt / geri',level:'a1'},
+      {word:'exactly',ipa:'/ɪɡˈzæktli/',tr:'tam olarak',level:'a2'},
+      {word:'imagine',ipa:'/ɪˈmædʒɪn/',tr:'hayal etmek',level:'a2'},
+      {word:'attitude',ipa:'/ˈætɪtjuːd/',tr:'tutum',level:'b1'},
+      {word:'practical',ipa:'/ˈpræktɪkl/',tr:'pratik',level:'b1'},
+      {word:'fantastic',ipa:'/fænˈtæstɪk/',tr:'harika',level:'b2'},
+      {word:'characteristic',ipa:'/ˌkærəktəˈrɪstɪk/',tr:'karakteristik',level:'b2'}
+    ],
+    minimalPairs:[
+      {a:{word:'bad',ipa:'/bæd/'},b:{word:'bed',ipa:'/bed/'}},
+      {a:{word:'man',ipa:'/mæn/'},b:{word:'men',ipa:'/men/'}}
+    ]
+  },
+  { id:'e', symbol:'e', ipa:'/e/', name:'kısa e', category:'short_vowel', voicing:null,
+    description:'Türkçe "e" ye yakın ama biraz daha kapalı, kısa bir ünlü.',
+    tip:'Türkçe "e" gibi başla ama sesi kısa ve net bitir.',
+    teacherNote:'/æ/ ile karıştırılır; "bed" ile "bad" çifti bu konuda en faydalı pratik.',
+    level:'beginner',
+    words:[
+      {word:'bed',ipa:'/bed/',tr:'yatak',level:'beginner'},
+      {word:'ten',ipa:'/ten/',tr:'on',level:'beginner'},
+      {word:'pen',ipa:'/pen/',tr:'kalem',level:'beginner'},
+      {word:'red',ipa:'/red/',tr:'kırmızı',level:'a1'},
+      {word:'yes',ipa:'/jes/',tr:'evet',level:'a1'},
+      {word:'better',ipa:'/ˈbetə/',tr:'daha iyi',level:'a2'},
+      {word:'again',ipa:'/əˈɡen/',tr:'tekrar',level:'a2'},
+      {word:'general',ipa:'/ˈdʒenrəl/',tr:'genel',level:'b1'},
+      {word:'effect',ipa:'/ɪˈfekt/',tr:'etki',level:'b1'},
+      {word:'essential',ipa:'/ɪˈsenʃl/',tr:'gerekli / temel',level:'b2'},
+      {word:'method',ipa:'/ˈmeθəd/',tr:'yöntem',level:'b2'}
+    ],
+    minimalPairs:[
+      {a:{word:'bed',ipa:'/bed/'},b:{word:'bad',ipa:'/bæd/'}},
+      {a:{word:'men',ipa:'/men/'},b:{word:'man',ipa:'/mæn/'}}
+    ]
+  },
+  { id:'th1', symbol:'θ', ipa:'/θ/', name:'sessiz th', category:'voiceless_consonant', voicing:'voiceless',
+    description:'Dil ucu üst dişlere değer, hava ses telleri titremeden çıkar (sessiz).',
+    tip:'Dilinin ucunu üst dişlerinin arasına hafifçe koy ve üfler gibi hava ver — sesin telleri titremesin.',
+    teacherNote:'Türkçe\'de karşılığı yoktur; çoğu öğrenci /t/ veya /s/ kullanır ("think" → "tink"/"sink"). Ayna karşısında dil pozisyonunu gösterin.',
+    level:'a1',
+    words:[
+      {word:'three',ipa:'/θriː/',tr:'üç',level:'beginner'},
+      {word:'thanks',ipa:'/θæŋks/',tr:'teşekkürler',level:'beginner'},
+      {word:'month',ipa:'/mʌnθ/',tr:'ay',level:'beginner'},
+      {word:'think',ipa:'/θɪŋk/',tr:'düşünmek',level:'a1'},
+      {word:'thin',ipa:'/θɪn/',tr:'ince',level:'a1'},
+      {word:'bath',ipa:'/bɑːθ/',tr:'banyo',level:'a2'},
+      {word:'mouth',ipa:'/maʊθ/',tr:'ağız',level:'a2'},
+      {word:'theory',ipa:'/ˈθɪəri/',tr:'teori',level:'b1'},
+      {word:'healthy',ipa:'/ˈhelθi/',tr:'sağlıklı',level:'b1'},
+      {word:'theoretical',ipa:'/ˌθɪəˈretɪkl/',tr:'teorik',level:'b2'},
+      {word:'enthusiasm',ipa:'/ɪnˈθjuːziæzəm/',tr:'coşku',level:'b2'}
+    ],
+    minimalPairs:[
+      {a:{word:'thin',ipa:'/θɪn/'},b:{word:'tin',ipa:'/tɪn/'}},
+      {a:{word:'three',ipa:'/θriː/'},b:{word:'tree',ipa:'/triː/'}}
+    ]
+  },
+  { id:'th2', symbol:'ð', ipa:'/ð/', name:'sesli th', category:'voiced_consonant', voicing:'voiced',
+    description:'Dil ucu üst dişlere değer, tıpkı /θ/ gibi — ama bu kez ses telleri titrer (sesli).',
+    tip:'Aynı dil pozisyonunu /θ/ ile kullan, ama bu sefer ses tellerini titret; boğazına elini koyarsan titreşimi hissedersin.',
+    teacherNote:'"this, that, the, mother" gibi çok sık kullanılan kelimelerde geçer; /d/ ile karıştırılır ("this" → "dis").',
+    level:'beginner',
+    words:[
+      {word:'mother',ipa:'/ˈmʌðə/',tr:'anne',level:'beginner'},
+      {word:'father',ipa:'/ˈfɑːðə/',tr:'baba',level:'beginner'},
+      {word:'brother',ipa:'/ˈbrʌðə/',tr:'erkek kardeş',level:'beginner'},
+      {word:'this',ipa:'/ðɪs/',tr:'bu',level:'a1'},
+      {word:'that',ipa:'/ðæt/',tr:'şu',level:'a1'},
+      {word:'though',ipa:'/ðəʊ/',tr:'yine de',level:'a2'},
+      {word:'together',ipa:'/təˈɡeðə/',tr:'birlikte',level:'a2'},
+      {word:'weather',ipa:'/ˈweðə/',tr:'hava durumu',level:'b1'},
+      {word:'rather',ipa:'/ˈrɑːðə/',tr:'oldukça / tercihen',level:'b1'},
+      {word:'otherwise',ipa:'/ˈʌðəwaɪz/',tr:'aksi takdirde',level:'b2'},
+      {word:'nevertheless',ipa:'/ˌnevəðəˈles/',tr:'yine de / bununla birlikte',level:'b2'}
+    ],
+    minimalPairs:[
+      {a:{word:'though',ipa:'/ðəʊ/'},b:{word:'dough',ipa:'/dəʊ/'}},
+      {a:{word:'there',ipa:'/ðeə/'},b:{word:'dare',ipa:'/deə/'}}
+    ]
+  },
+  { id:'v', symbol:'v', ipa:'/v/', name:'v sesi', category:'voiced_consonant', voicing:'voiced',
+    description:'Alt dudak üst dişlere hafifçe değer, ses telleri titrer.',
+    tip:'Türkçe "v" ile hemen hemen aynıdır — asıl zorluk /w/ ile karıştırmamaktır.',
+    teacherNote:'Türk öğrenciler /v/ konusunda değil, /v/-/w/ ayrımında zorlanır. "vet" ile "wet" karışır.',
+    level:'beginner',
+    words:[
+      {word:'van',ipa:'/væn/',tr:'kamyonet',level:'beginner'},
+      {word:'very',ipa:'/ˈveri/',tr:'çok',level:'beginner'},
+      {word:'love',ipa:'/lʌv/',tr:'sevmek',level:'beginner'},
+      {word:'live',ipa:'/lɪv/',tr:'yaşamak',level:'a1'},
+      {word:'seven',ipa:'/ˈsevn/',tr:'yedi',level:'a1'},
+      {word:'vet',ipa:'/vet/',tr:'veteriner',level:'a2'},
+      {word:'travel',ipa:'/ˈtrævl/',tr:'seyahat etmek',level:'a2'},
+      {word:'however',ipa:'/haʊˈevə/',tr:'ancak',level:'b1'},
+      {word:'develop',ipa:'/dɪˈveləp/',tr:'geliştirmek',level:'b1'},
+      {word:'individual',ipa:'/ˌɪndɪˈvɪdʒuəl/',tr:'birey',level:'b2'},
+      {word:'evidence',ipa:'/ˈevɪdəns/',tr:'kanıt',level:'b2'}
+    ],
+    minimalPairs:[
+      {a:{word:'van',ipa:'/væn/'},b:{word:'fan',ipa:'/fæn/'}},
+      {a:{word:'vet',ipa:'/vet/'},b:{word:'wet',ipa:'/wet/'}}
+    ]
+  },
+  { id:'w', symbol:'w', ipa:'/w/', name:'w sesi', category:'voiced_consonant', voicing:'voiced',
+    description:'Dudaklar yuvarlanıp öne uzatılır, dil arkaya çekilir; kayan bir ses.',
+    tip:'Dudaklarını bir ıslık çalar gibi yuvarlayıp öne uzat, sonra hızlıca bir sonraki sese geç.',
+    teacherNote:'Türkçede tam karşılığı yoktur ve genelde /v/ ile telaffuz edilir ("wet" → "vet"). Dudak yuvarlamasını abartarak gösterin.',
+    level:'a1',
+    words:[
+      {word:'wet',ipa:'/wet/',tr:'ıslak',level:'beginner'},
+      {word:'window',ipa:'/ˈwɪndəʊ/',tr:'pencere',level:'beginner'},
+      {word:'swim',ipa:'/swɪm/',tr:'yüzmek',level:'beginner'},
+      {word:'wait',ipa:'/weɪt/',tr:'beklemek',level:'a1'},
+      {word:'west',ipa:'/west/',tr:'batı',level:'a1'},
+      {word:'away',ipa:'/əˈweɪ/',tr:'uzakta',level:'a2'},
+      {word:'weekend',ipa:'/ˈwiːkend/',tr:'hafta sonu',level:'a2'},
+      {word:'network',ipa:'/ˈnetwɜːk/',tr:'ağ',level:'b1'},
+      {word:'forward',ipa:'/ˈfɔːwəd/',tr:'ileri',level:'b1'},
+      {word:'worthwhile',ipa:'/ˌwɜːθˈwaɪl/',tr:'değer / faydalı',level:'b2'},
+      {word:'awkward',ipa:'/ˈɔːkwəd/',tr:'garip / uygunsuz',level:'b2'}
+    ],
+    minimalPairs:[
+      {a:{word:'wet',ipa:'/wet/'},b:{word:'vet',ipa:'/vet/'}},
+      {a:{word:'west',ipa:'/west/'},b:{word:'vest',ipa:'/vest/'}}
+    ]
+  },
+  { id:'s', symbol:'s', ipa:'/s/', name:'s sesi', category:'voiceless_consonant', voicing:'voiceless',
+    description:'Dil ucu üst diş etine yaklaşır, dar bir boşluktan sessiz, ıslık gibi bir hava çıkar.',
+    tip:'Dişlerini birbirine yaklaştır ve ince bir ıslık sesi çıkar gibi üfle; ses tellerin titremesin.',
+    teacherNote:'/z/ ile sesli/sessiz çiftidir; özellikle kelime sonunda ("bags" gibi çoğullarda) öğrenciler /s/ ve /z/ yi karıştırır.',
+    level:'beginner',
+    words:[
+      {word:'sun',ipa:'/sʌn/',tr:'güneş',level:'beginner'},
+      {word:'sock',ipa:'/sɒk/',tr:'çorap',level:'beginner'},
+      {word:'bus',ipa:'/bʌs/',tr:'otobüs',level:'beginner'},
+      {word:'rice',ipa:'/raɪs/',tr:'pirinç',level:'a1'},
+      {word:'ice',ipa:'/aɪs/',tr:'buz',level:'a1'},
+      {word:'sense',ipa:'/sens/',tr:'anlam / duyu',level:'a2'},
+      {word:'possible',ipa:'/ˈpɒsəbl/',tr:'mümkün',level:'a2'},
+      {word:'success',ipa:'/səkˈses/',tr:'başarı',level:'b1'},
+      {word:'scientist',ipa:'/ˈsaɪəntɪst/',tr:'bilim insanı',level:'b1'},
+      {word:'consequence',ipa:'/ˈkɒnsɪkwəns/',tr:'sonuç',level:'b2'},
+      {word:'sufficient',ipa:'/səˈfɪʃnt/',tr:'yeterli',level:'b2'}
+    ],
+    minimalPairs:[
+      {a:{word:'sue',ipa:'/suː/'},b:{word:'zoo',ipa:'/zuː/'}},
+      {a:{word:'ice',ipa:'/aɪs/'},b:{word:'eyes',ipa:'/aɪz/'}}
+    ]
+  },
+  { id:'z', symbol:'z', ipa:'/z/', name:'z sesi', category:'voiced_consonant', voicing:'voiced',
+    description:'/s/ ile aynı ağız pozisyonu, ama ses telleri titrer (sesli).',
+    tip:'Aynı dil pozisyonunu /s/ ile kullan, sonra ses tellerini titret — bir arı vızıltısı gibi.',
+    teacherNote:'Kelime sonundaki -s eki sesli bir sesten sonra genelde /z/ okunur (dogs, bags); öğrenciler her zaman /s/ okuma eğilimindedir.',
+    level:'a1',
+    words:[
+      {word:'zoo',ipa:'/zuː/',tr:'hayvanat bahçesi',level:'beginner'},
+      {word:'nose',ipa:'/nəʊz/',tr:'burun',level:'beginner'},
+      {word:'cheese',ipa:'/tʃiːz/',tr:'peynir',level:'beginner'},
+      {word:'rose',ipa:'/rəʊz/',tr:'gül',level:'a1'},
+      {word:'zebra',ipa:'/ˈziːbrə/',tr:'zebra',level:'a1'},
+      {word:'because',ipa:'/bɪˈkɒz/',tr:'çünkü',level:'a2'},
+      {word:'reason',ipa:'/ˈriːzn/',tr:'sebep',level:'a2'},
+      {word:'organize',ipa:'/ˈɔːɡənaɪz/',tr:'organize etmek',level:'b1'},
+      {word:'realize',ipa:'/ˈrɪəlaɪz/',tr:'farkına varmak',level:'b1'},
+      {word:'phase',ipa:'/feɪz/',tr:'aşama',level:'b2'},
+      {word:'phrase',ipa:'/freɪz/',tr:'ifade / cümlecik',level:'b2'}
+    ],
+    minimalPairs:[
+      {a:{word:'zoo',ipa:'/zuː/'},b:{word:'sue',ipa:'/suː/'}},
+      {a:{word:'eyes',ipa:'/aɪz/'},b:{word:'ice',ipa:'/aɪs/'}}
+    ]
+  },
+  { id:'ei', symbol:'eɪ', ipa:'/eɪ/', name:'ey diftongu', category:'diphthong', voicing:null,
+    description:'İki ünlünün kayarak birleşmesiyle oluşan bir diftong: /e/ ile başlar, /ɪ/ ye doğru kayar.',
+    tip:'"e" ile başla, ağzını hafifçe kapatarak "i" ye doğru kaydır — tek hece içinde, kesmeden.',
+    teacherNote:'Öğrenciler genelde bunu düz bir /e/ olarak okur ("day" → "de"). Kaymayı abartarak gösterin.',
+    level:'a1',
+    words:[
+      {word:'day',ipa:'/deɪ/',tr:'gün',level:'beginner'},
+      {word:'play',ipa:'/pleɪ/',tr:'oynamak',level:'beginner'},
+      {word:'cake',ipa:'/keɪk/',tr:'kek',level:'beginner'},
+      {word:'say',ipa:'/seɪ/',tr:'söylemek',level:'a1'},
+      {word:'rain',ipa:'/reɪn/',tr:'yağmur',level:'a1'},
+      {word:'late',ipa:'/leɪt/',tr:'geç',level:'a2'},
+      {word:'change',ipa:'/tʃeɪndʒ/',tr:'değişim',level:'a2'},
+      {word:'explain',ipa:'/ɪkˈspleɪn/',tr:'açıklamak',level:'b1'},
+      {word:'nature',ipa:'/ˈneɪtʃə/',tr:'doğa',level:'b1'},
+      {word:'stage',ipa:'/steɪdʒ/',tr:'aşama / sahne',level:'b2'},
+      {word:'behaviour',ipa:'/bɪˈheɪvjə/',tr:'davranış',level:'b2'}
+    ],
+    minimalPairs:[
+      {a:{word:'late',ipa:'/leɪt/'},b:{word:'let',ipa:'/let/'}},
+      {a:{word:'wait',ipa:'/weɪt/'},b:{word:'wet',ipa:'/wet/'}}
+    ]
+  }
+];
+const FEATURED_IDS = PHONEMES.map(p=>p.id); // the 11 "deep dive" sounds with full lesson cards
+
+// The remaining 33 sounds needed to complete the standard 44-sound English phonemic chart
+// (7 short vowels + 5 long vowels + 8 diphthongs + 24 consonants = 44 total).
+// These get a shorter description/tip (used in the reference chart + generic question types)
+// rather than a full lesson card with minimal pairs.
+const EXTRA_PHONEMES = [
+  // --- short vowels ---
+  { id:'uh', symbol:'ʌ', ipa:'/ʌ/', name:'kısa a/ö', category:'short_vowel', voicing:null,
+    description:'Kısa, merkezi bir ünlü; ağız yarı açık, dudaklar nötr.',
+    tip:'Türkçe "a" dan daha kısa ve daha merkezi bir sestir; çeneni çok açma.', teacherNote:'',
+    level:'a1', words:[{word:'cup',ipa:'/kʌp/',tr:'fincan',level:'beginner'},{word:'love',ipa:'/lʌv/',tr:'sevmek',level:'beginner'},{word:'young',ipa:'/jʌŋ/',tr:'genç',level:'a1'},{word:'much',ipa:'/mʌtʃ/',tr:'çok',level:'a1'},{word:'enough',ipa:'/ɪˈnʌf/',tr:'yeterli',level:'a2'}] },
+  { id:'ao', symbol:'ɒ', ipa:'/ɒ/', name:'kısa o', category:'short_vowel', voicing:null,
+    description:'Kısa, arkada ve dudakların hafif yuvarlandığı bir ünlü.',
+    tip:'Dudaklarını yuvarlayıp Türkçe "o" ya yakın ama kısa bir ses çıkar.', teacherNote:'',
+    level:'a1', words:[{word:'shop',ipa:'/ʃɒp/',tr:'dükkan',level:'beginner'},{word:'hot',ipa:'/hɒt/',tr:'sıcak',level:'beginner'},{word:'dog',ipa:'/dɒɡ/',tr:'köpek',level:'beginner'},{word:'box',ipa:'/bɒks/',tr:'kutu',level:'beginner'},{word:'model',ipa:'/ˈmɒdl/',tr:'model',level:'a2'}] },
+  { id:'oo', symbol:'ʊ', ipa:'/ʊ/', name:'kısa u', category:'short_vowel', voicing:null,
+    description:'Kısa, arkada, dudakların hafif yuvarlandığı bir ünlü.',
+    tip:'Türkçe "u" dan daha gevşek ve kısa; dudaklarını çok ileri uzatma.', teacherNote:'',
+    level:'a1', words:[{word:'put',ipa:'/pʊt/',tr:'koymak',level:'beginner'},{word:'book',ipa:'/bʊk/',tr:'kitap',level:'beginner'},{word:'good',ipa:'/ɡʊd/',tr:'iyi',level:'beginner'},{word:'could',ipa:'/kʊd/',tr:'yapabilirdi',level:'a1'},{word:'look',ipa:'/lʊk/',tr:'bakmak',level:'beginner'}] },
+  { id:'schwa', symbol:'ə', ipa:'/ə/', name:'schwa', category:'short_vowel', voicing:null,
+    description:'İngilizcenin en sık kullanılan sesi; vurgusuz hecelerde ortaya çıkan çok kısa, nötr bir ünlü.',
+    tip:'Ağzını gevşek bırak, neredeyse hiç çaba harcamadan çok kısa, belirsiz bir ses çıkar.',
+    teacherNote:'Türkçede vurgusuz heceler tam telaffuz edilir; İngilizcede schwa\'yı atlamak veya güçlü okumak İngilizceyi "hecelenmiş" gibi duyurur.',
+    level:'a2', words:[{word:'about',ipa:'/əˈbaʊt/',tr:'hakkında',level:'a1'},{word:'letter',ipa:'/ˈletə/',tr:'mektup / harf',level:'a1'},{word:'teacher',ipa:'/ˈtiːtʃə/',tr:'öğretmen',level:'beginner'},{word:'famous',ipa:'/ˈfeɪməs/',tr:'ünlü',level:'a2'},{word:'sofa',ipa:'/ˈsəʊfə/',tr:'kanepe',level:'a1'}] },
+  // --- long vowels ---
+  { id:'ah', symbol:'ɑː', ipa:'/ɑː/', name:'uzun a', category:'long_vowel', voicing:null,
+    description:'Uzun, arkada söylenen açık bir ünlü.',
+    tip:'Ağzını iyice aç, dilini geriye çek ve sesi uzat.', teacherNote:'',
+    level:'a1', words:[{word:'class',ipa:'/klɑːs/',tr:'sınıf',level:'beginner'},{word:'car',ipa:'/kɑː/',tr:'araba',level:'beginner'},{word:'father',ipa:'/ˈfɑːðə/',tr:'baba',level:'beginner'},{word:'answer',ipa:'/ˈɑːnsə/',tr:'cevap',level:'a1'},{word:'park',ipa:'/pɑːk/',tr:'park',level:'beginner'}] },
+  { id:'or', symbol:'ɔː', ipa:'/ɔː/', name:'uzun o', category:'long_vowel', voicing:null,
+    description:'Uzun, arkada, dudakların belirgin yuvarlandığı bir ünlü.',
+    tip:'Dudaklarını yuvarla, Türkçe "o" ya yakın ama belirgin biçimde uzat.', teacherNote:'',
+    level:'a1', words:[{word:'door',ipa:'/dɔː/',tr:'kapı',level:'beginner'},{word:'ball',ipa:'/bɔːl/',tr:'top',level:'beginner'},{word:'morning',ipa:'/ˈmɔːnɪŋ/',tr:'sabah',level:'beginner'},{word:'talk',ipa:'/tɔːk/',tr:'konuşmak',level:'a1'},{word:'important',ipa:'/ɪmˈpɔːtnt/',tr:'önemli',level:'a2'}] },
+  { id:'oow', symbol:'uː', ipa:'/uː/', name:'uzun u', category:'long_vowel', voicing:null,
+    description:'Uzun, arkada, dudakların belirgin biçimde yuvarlandığı bir ünlü.',
+    tip:'Dudaklarını ileri uzat ve yuvarla, Türkçe "u" dan daha uzun söyle.', teacherNote:'',
+    level:'a1', words:[{word:'school',ipa:'/skuːl/',tr:'okul',level:'beginner'},{word:'food',ipa:'/fuːd/',tr:'yemek',level:'beginner'},{word:'blue',ipa:'/bluː/',tr:'mavi',level:'beginner'},{word:'shoe',ipa:'/ʃuː/',tr:'ayakkabı',level:'beginner'},{word:'improve',ipa:'/ɪmˈpruːv/',tr:'geliştirmek',level:'b1'}] },
+  { id:'er', symbol:'ɜː', ipa:'/ɜː/', name:'uzun ö', category:'long_vowel', voicing:null,
+    description:'Uzun, merkezi bir ünlü; dudaklar nötr.',
+    tip:'Çeneni yarı açık bırak, dilini ortada tut ve sesi uzat.',
+    teacherNote:'Yazımdaki "ir/er/ur/or" harflerine bakıp farklı okumaya çalışmak yaygın bir hata — hepsi genelde aynı /ɜː/ sesine gider (bird, her, turn, work).',
+    level:'a2', words:[{word:'bird',ipa:'/bɜːd/',tr:'kuş',level:'a1'},{word:'girl',ipa:'/ɡɜːl/',tr:'kız',level:'beginner'},{word:'first',ipa:'/fɜːst/',tr:'ilk',level:'a1'},{word:'work',ipa:'/wɜːk/',tr:'çalışmak',level:'beginner'},{word:'return',ipa:'/rɪˈtɜːn/',tr:'dönmek',level:'a2'}] },
+  // --- diphthongs ---
+  { id:'ai', symbol:'aɪ', ipa:'/aɪ/', name:'ay diftongu', category:'diphthong', voicing:null,
+    description:'İki sesli: /a/ dan /ɪ/ ye kayan bir diftong.',
+    tip:'Geniş bir "a" ile başla, çeneni kapatarak "i" ye doğru kaydır.', teacherNote:'',
+    level:'a1', words:[{word:'life',ipa:'/laɪf/',tr:'hayat',level:'beginner'},{word:'time',ipa:'/taɪm/',tr:'zaman',level:'beginner'},{word:'like',ipa:'/laɪk/',tr:'sevmek / gibi',level:'beginner'},{word:'five',ipa:'/faɪv/',tr:'beş',level:'beginner'},{word:'decide',ipa:'/dɪˈsaɪd/',tr:'karar vermek',level:'a2'}] },
+  { id:'oi', symbol:'ɔɪ', ipa:'/ɔɪ/', name:'oy diftongu', category:'diphthong', voicing:null,
+    description:'İki sesli: /ɔ/ dan /ɪ/ ye kayan bir diftong.',
+    tip:'Yuvarlak bir "o" ile başla, sonra hızlıca "i" ye kay.', teacherNote:'',
+    level:'a2', words:[{word:'boy',ipa:'/bɔɪ/',tr:'erkek çocuk',level:'beginner'},{word:'toy',ipa:'/tɔɪ/',tr:'oyuncak',level:'beginner'},{word:'enjoy',ipa:'/ɪnˈdʒɔɪ/',tr:'keyif almak',level:'a1'},{word:'voice',ipa:'/vɔɪs/',tr:'ses',level:'a1'},{word:'point',ipa:'/pɔɪnt/',tr:'nokta / anlam',level:'a2'}] },
+  { id:'ow', symbol:'əʊ', ipa:'/əʊ/', name:'ov diftongu', category:'diphthong', voicing:null,
+    description:'İki sesli: /ə/ dan /ʊ/ ya kayan bir diftong.',
+    tip:'Nötr bir sesle başla, dudaklarını yuvarlayarak "u" ya doğru kaydır.', teacherNote:'',
+    level:'a1', words:[{word:'go',ipa:'/ɡəʊ/',tr:'gitmek',level:'beginner'},{word:'open',ipa:'/ˈəʊpən/',tr:'açık / açmak',level:'beginner'},{word:'home',ipa:'/həʊm/',tr:'ev',level:'beginner'},{word:'know',ipa:'/nəʊ/',tr:'bilmek',level:'beginner'},{word:'social',ipa:'/ˈsəʊʃl/',tr:'sosyal',level:'a2'}] },
+  { id:'ow2', symbol:'aʊ', ipa:'/aʊ/', name:'av diftongu', category:'diphthong', voicing:null,
+    description:'İki sesli: /a/ dan /ʊ/ ya kayan bir diftong.',
+    tip:'Geniş bir "a" ile başla, dudaklarını yuvarlayarak "u" ya doğru kaydır.', teacherNote:'',
+    level:'a1', words:[{word:'how',ipa:'/haʊ/',tr:'nasıl',level:'beginner'},{word:'now',ipa:'/naʊ/',tr:'şimdi',level:'beginner'},{word:'house',ipa:'/haʊs/',tr:'ev',level:'beginner'},{word:'around',ipa:'/əˈraʊnd/',tr:'çevresinde',level:'a1'},{word:'found',ipa:'/faʊnd/',tr:'buldu',level:'a1'}] },
+  { id:'ear', symbol:'ɪə', ipa:'/ɪə/', name:'ıı diftongu', category:'diphthong', voicing:null,
+    description:'İki sesli: /ɪ/ dan schwa /ə/ ya kayan bir diftong (İngiliz İngilizcesinde "r" okunmaz).',
+    tip:'Kısa bir "i" ile başla ve sesi gevşek bir "ı" ile bitir.', teacherNote:'',
+    level:'a2', words:[{word:'here',ipa:'/hɪə/',tr:'burada',level:'beginner'},{word:'near',ipa:'/nɪə/',tr:'yakın',level:'a1'},{word:'idea',ipa:'/aɪˈdɪə/',tr:'fikir',level:'a2'},{word:'clear',ipa:'/klɪə/',tr:'net',level:'a2'},{word:'beer',ipa:'/bɪə/',tr:'bira',level:'a2'}] },
+  { id:'air', symbol:'eə', ipa:'/eə/', name:'ee diftongu', category:'diphthong', voicing:null,
+    description:'İki sesli: /e/ den schwa /ə/ ya kayan bir diftong.',
+    tip:'"e" ile başla ve gevşek bir "ı" ile bitir.', teacherNote:'',
+    level:'a2', words:[{word:'where',ipa:'/weə/',tr:'nerede',level:'beginner'},{word:'hair',ipa:'/heə/',tr:'saç',level:'a1'},{word:'chair',ipa:'/tʃeə/',tr:'sandalye',level:'beginner'},{word:'care',ipa:'/keə/',tr:'önemsemek',level:'a1'},{word:'compare',ipa:'/kəmˈpeə/',tr:'karşılaştırmak',level:'b1'}] },
+  { id:'oor', symbol:'ʊə', ipa:'/ʊə/', name:'uu diftongu', category:'diphthong', voicing:null,
+    description:'İki sesli: /ʊ/ dan schwa /ə/ ya kayan bir diftong.',
+    tip:'"u" ile başla ve gevşek bir "ı" ile bitir.',
+    teacherNote:'Günümüz İngilizcesinde bu ses birçok kelimede /ɔː/ ile yer değiştiriyor (örn. "sure" bazen /ʃɔː/ okunur); ikisini de duyurmakta fayda var.',
+    level:'b1', words:[{word:'tour',ipa:'/tʊə/',tr:'tur / gezi',level:'a2'},{word:'sure',ipa:'/ʃʊə/',tr:'emin',level:'a1'},{word:'pure',ipa:'/pjʊə/',tr:'saf',level:'b1'},{word:'during',ipa:'/ˈdjʊərɪŋ/',tr:'sırasında',level:'b1'}] },
+  // --- consonants ---
+  { id:'p', symbol:'p', ipa:'/p/', name:'p sesi', category:'voiceless_consonant', voicing:'voiceless',
+    description:'Dudaklar kapanır, hava aniden ve sessizce (titreşimsiz) patlar.',
+    tip:'Dudaklarını sıkıca kapat, sonra havayı aniden bırak — ses tellerin titremesin.', teacherNote:'',
+    level:'beginner', words:[{word:'people',ipa:'/ˈpiːpl/',tr:'insanlar',level:'beginner'},{word:'pen',ipa:'/pen/',tr:'kalem',level:'beginner'},{word:'stop',ipa:'/stɒp/',tr:'durmak',level:'beginner'},{word:'cup',ipa:'/kʌp/',tr:'fincan',level:'beginner'},{word:'especially',ipa:'/ɪˈspeʃəli/',tr:'özellikle',level:'b1'}] },
+  { id:'b', symbol:'b', ipa:'/b/', name:'b sesi', category:'voiced_consonant', voicing:'voiced',
+    description:'/p/ ile aynı dudak hareketi, ama ses telleri titrer (sesli).',
+    tip:'Aynı dudak pozisyonunu /p/ ile kullan, bu kez ses tellerini titret.', teacherNote:'',
+    level:'beginner', words:[{word:'big',ipa:'/bɪɡ/',tr:'büyük',level:'beginner'},{word:'book',ipa:'/bʊk/',tr:'kitap',level:'beginner'},{word:'bad',ipa:'/bæd/',tr:'kötü',level:'beginner'},{word:'because',ipa:'/bɪˈkɒz/',tr:'çünkü',level:'a1'},{word:'probably',ipa:'/ˈprɒbəbli/',tr:'muhtemelen',level:'b1'}] },
+  { id:'t', symbol:'t', ipa:'/t/', name:'t sesi', category:'voiceless_consonant', voicing:'voiceless',
+    description:'Dil ucu üst diş etine değer, hava aniden ve sessizce patlar.',
+    tip:'Dilinin ucunu diş etine değdir, sonra havayı bırak — titreşimsiz.', teacherNote:'',
+    level:'beginner', words:[{word:'ten',ipa:'/ten/',tr:'on',level:'beginner'},{word:'time',ipa:'/taɪm/',tr:'zaman',level:'beginner'},{word:'water',ipa:'/ˈwɔːtə/',tr:'su',level:'beginner'},{word:'cat',ipa:'/kæt/',tr:'kedi',level:'beginner'},{word:'important',ipa:'/ɪmˈpɔːtnt/',tr:'önemli',level:'a2'}] },
+  { id:'d', symbol:'d', ipa:'/d/', name:'d sesi', category:'voiced_consonant', voicing:'voiced',
+    description:'/t/ ile aynı dil pozisyonu, ama sesli.',
+    tip:'Aynı dil pozisyonunu /t/ ile kullan, ses tellerini titret.', teacherNote:'',
+    level:'beginner', words:[{word:'dog',ipa:'/dɒɡ/',tr:'köpek',level:'beginner'},{word:'door',ipa:'/dɔː/',tr:'kapı',level:'beginner'},{word:'good',ipa:'/ɡʊd/',tr:'iyi',level:'beginner'},{word:'dance',ipa:'/dɑːns/',tr:'dans etmek',level:'a1'},{word:'decide',ipa:'/dɪˈsaɪd/',tr:'karar vermek',level:'a2'}] },
+  { id:'k', symbol:'k', ipa:'/k/', name:'k sesi', category:'voiceless_consonant', voicing:'voiceless',
+    description:'Dilin arkası yumuşak damağa değer, hava sessizce patlar.',
+    tip:'Dilinin arkasını yumuşak damağa değdir, sonra havayı bırak.', teacherNote:'',
+    level:'beginner', words:[{word:'cat',ipa:'/kæt/',tr:'kedi',level:'beginner'},{word:'book',ipa:'/bʊk/',tr:'kitap',level:'beginner'},{word:'key',ipa:'/kiː/',tr:'anahtar',level:'beginner'},{word:'quick',ipa:'/kwɪk/',tr:'hızlı',level:'a1'},{word:'increase',ipa:'/ɪnˈkriːs/',tr:'artmak',level:'b1'}] },
+  { id:'g', symbol:'g', ipa:'/g/', name:'g sesi', category:'voiced_consonant', voicing:'voiced',
+    description:'/k/ ile aynı pozisyon, ama sesli.',
+    tip:'Aynı dil pozisyonunu /k/ ile kullan, ses tellerini titret.', teacherNote:'',
+    level:'beginner', words:[{word:'go',ipa:'/ɡəʊ/',tr:'gitmek',level:'beginner'},{word:'big',ipa:'/bɪɡ/',tr:'büyük',level:'beginner'},{word:'girl',ipa:'/ɡɜːl/',tr:'kız',level:'beginner'},{word:'again',ipa:'/əˈɡen/',tr:'tekrar',level:'a1'},{word:'together',ipa:'/təˈɡeðə/',tr:'birlikte',level:'a2'}] },
+  { id:'ch', symbol:'tʃ', ipa:'/tʃ/', name:'ch sesi', category:'voiceless_consonant', voicing:'voiceless',
+    description:'/t/ ve /ʃ/ nin birleşimi; sessiz bir patlama-sürtünme sesi.',
+    tip:'Dilini /t/ için hazırla, sonra /ʃ/ ye doğru sürterek bırak.', teacherNote:'Türkçe "ç" sesine çok yakındır, genelde sorun çıkarmaz.',
+    level:'beginner', words:[{word:'chair',ipa:'/tʃeə/',tr:'sandalye',level:'beginner'},{word:'child',ipa:'/tʃaɪld/',tr:'çocuk',level:'beginner'},{word:'much',ipa:'/mʌtʃ/',tr:'çok',level:'a1'},{word:'teacher',ipa:'/ˈtiːtʃə/',tr:'öğretmen',level:'beginner'},{word:'change',ipa:'/tʃeɪndʒ/',tr:'değişim',level:'a2'}] },
+  { id:'j', symbol:'dʒ', ipa:'/dʒ/', name:'j sesi', category:'voiced_consonant', voicing:'voiced',
+    description:'/d/ ve /ʒ/ nin birleşimi; sesli bir patlama-sürtünme sesi.',
+    tip:'/tʃ/ ile aynı hareket, ama sesli.', teacherNote:'Türkçe "c" sesine çok yakındır.',
+    level:'a1', words:[{word:'job',ipa:'/dʒɒb/',tr:'iş',level:'beginner'},{word:'large',ipa:'/lɑːdʒ/',tr:'büyük',level:'a1'},{word:'age',ipa:'/eɪdʒ/',tr:'yaş',level:'a1'},{word:'juice',ipa:'/dʒuːs/',tr:'meyve suyu',level:'beginner'},{word:'manage',ipa:'/ˈmænɪdʒ/',tr:'yönetmek',level:'b1'}] },
+  { id:'f', symbol:'f', ipa:'/f/', name:'f sesi', category:'voiceless_consonant', voicing:'voiceless',
+    description:'Alt dudak üst dişlere değer, hava sessizce sürtünerek çıkar.',
+    tip:'Alt dudağını üst dişlerine hafifçe değdir ve üfle — ses tellerin titremesin.', teacherNote:'',
+    level:'beginner', words:[{word:'fish',ipa:'/fɪʃ/',tr:'balık',level:'beginner'},{word:'food',ipa:'/fuːd/',tr:'yemek',level:'beginner'},{word:'family',ipa:'/ˈfæməli/',tr:'aile',level:'beginner'},{word:'five',ipa:'/faɪv/',tr:'beş',level:'beginner'},{word:'effect',ipa:'/ɪˈfekt/',tr:'etki',level:'b1'}] },
+  { id:'sh', symbol:'ʃ', ipa:'/ʃ/', name:'sh sesi', category:'voiceless_consonant', voicing:'voiceless',
+    description:'Dil ucu diş etine yaklaşır, dudaklar hafif yuvarlanır; sessiz, ıslığa benzer bir sürtünme sesi.',
+    tip:'Dudaklarını hafif yuvarlayıp Türkçe "ş" der gibi uzun bir sürtünme sesi çıkar.', teacherNote:'Türkçe "ş" sesine çok yakındır.',
+    level:'beginner', words:[{word:'ship',ipa:'/ʃɪp/',tr:'gemi',level:'beginner'},{word:'fish',ipa:'/fɪʃ/',tr:'balık',level:'beginner'},{word:'wash',ipa:'/wɒʃ/',tr:'yıkamak',level:'beginner'},{word:'shoe',ipa:'/ʃuː/',tr:'ayakkabı',level:'beginner'},{word:'especially',ipa:'/ɪˈspeʃəli/',tr:'özellikle',level:'b1'}] },
+  { id:'zh', symbol:'ʒ', ipa:'/ʒ/', name:'zh sesi', category:'voiced_consonant', voicing:'voiced',
+    description:'/ʃ/ ile aynı ağız pozisyonu ama sesli; İngilizce\'de nadirdir, genelde kelime ortasında görülür.',
+    tip:'/ʃ/ pozisyonunu kullan, ses tellerini titret.', teacherNote:'Türkçe "j" sesine (jandarma) çok yakındır ama İngilizce\'de çok az kelimede geçer.',
+    level:'b1', words:[{word:'television',ipa:'/ˈtelɪvɪʒn/',tr:'televizyon',level:'a2'},{word:'measure',ipa:'/ˈmeʒə/',tr:'ölçmek',level:'b1'},{word:'usually',ipa:'/ˈjuːʒuəli/',tr:'genellikle',level:'a2'},{word:'vision',ipa:'/ˈvɪʒn/',tr:'görüş',level:'b1'},{word:'decision',ipa:'/dɪˈsɪʒn/',tr:'karar',level:'b1'}] },
+  { id:'h', symbol:'h', ipa:'/h/', name:'h sesi', category:'voiceless_consonant', voicing:'voiceless',
+    description:'Ses telleri gevşek, hava serbestçe çıkar; nefes verir gibi bir ses.',
+    tip:'Ağzını bir sonraki sesin şekline getir ve sadece nefes ver.', teacherNote:'Türkçe "h" den daha hafiftir; kelime başında çoğu öğrenci ya atlar ya da çok sert söyler.',
+    level:'beginner', words:[{word:'hot',ipa:'/hɒt/',tr:'sıcak',level:'beginner'},{word:'happy',ipa:'/ˈhæpi/',tr:'mutlu',level:'beginner'},{word:'here',ipa:'/hɪə/',tr:'burada',level:'beginner'},{word:'house',ipa:'/haʊs/',tr:'ev',level:'beginner'},{word:'however',ipa:'/haʊˈevə/',tr:'ancak',level:'b1'}] },
+  { id:'m', symbol:'m', ipa:'/m/', name:'m sesi', category:'voiced_consonant', voicing:'voiced',
+    description:'Dudaklar kapanır, ses burundan çıkar.',
+    tip:'Dudaklarını kapat, sesi burnundan ver — mırıldanır gibi.', teacherNote:'',
+    level:'beginner', words:[{word:'much',ipa:'/mʌtʃ/',tr:'çok',level:'a1'},{word:'make',ipa:'/meɪk/',tr:'yapmak',level:'beginner'},{word:'man',ipa:'/mæn/',tr:'adam',level:'beginner'},{word:'home',ipa:'/həʊm/',tr:'ev',level:'beginner'},{word:'moment',ipa:'/ˈməʊmənt/',tr:'an',level:'a2'}] },
+  { id:'n', symbol:'n', ipa:'/n/', name:'n sesi', category:'voiced_consonant', voicing:'voiced',
+    description:'Dil ucu diş etine değer, ses burundan çıkar.',
+    tip:'Dilini /t/-/d/ pozisyonuna koy ama sesi burnundan ver.', teacherNote:'',
+    level:'beginner', words:[{word:'nose',ipa:'/nəʊz/',tr:'burun',level:'beginner'},{word:'nice',ipa:'/naɪs/',tr:'güzel',level:'beginner'},{word:'near',ipa:'/nɪə/',tr:'yakın',level:'a1'},{word:'now',ipa:'/naʊ/',tr:'şimdi',level:'beginner'},{word:'necessary',ipa:'/ˈnesəsəri/',tr:'gerekli',level:'b1'}] },
+  { id:'ng', symbol:'ŋ', ipa:'/ŋ/', name:'ng sesi', category:'voiced_consonant', voicing:'voiced',
+    description:'Dilin arkası yumuşak damağa değer, ses burundan çıkar.',
+    tip:'"sing" derken dilinin arkasını /k/-/g/ pozisyonuna götür ama sesi burundan ver.',
+    teacherNote:'Türkçe konuşanlar genelde bunu /n/ + /g/ olarak iki ayrı ses gibi okur ("sing" → "singi"); tek, kesintisiz bir burun sesi olmalı.',
+    level:'a1', words:[{word:'sing',ipa:'/sɪŋ/',tr:'şarkı söylemek',level:'a1'},{word:'young',ipa:'/jʌŋ/',tr:'genç',level:'a1'},{word:'strong',ipa:'/strɒŋ/',tr:'güçlü',level:'a1'},{word:'morning',ipa:'/ˈmɔːnɪŋ/',tr:'sabah',level:'beginner'},{word:'think',ipa:'/θɪŋk/',tr:'düşünmek',level:'a1'}] },
+  { id:'l', symbol:'l', ipa:'/l/', name:'l sesi', category:'voiced_consonant', voicing:'voiced',
+    description:'Dil ucu diş etine değer, hava dilin yanlarından geçer.',
+    tip:'Dilinin ucunu diş etine değdir, havayı dilinin iki yanından geçir.', teacherNote:'',
+    level:'beginner', words:[{word:'love',ipa:'/lʌv/',tr:'sevmek',level:'beginner'},{word:'like',ipa:'/laɪk/',tr:'sevmek / gibi',level:'beginner'},{word:'look',ipa:'/lʊk/',tr:'bakmak',level:'beginner'},{word:'late',ipa:'/leɪt/',tr:'geç',level:'a1'},{word:'level',ipa:'/ˈlevl/',tr:'seviye',level:'a2'}] },
+  { id:'r', symbol:'r', ipa:'/r/', name:'r sesi', category:'voiced_consonant', voicing:'voiced',
+    description:'Dil ucu ağız içinde yukarı kıvrılır, hiçbir yere değmez.',
+    tip:'Dilini geriye kıvır ama hiçbir yere değdirme — Türkçe "r" gibi titretme.',
+    teacherNote:'Türkçe "r" titrek (rolled) bir sestir; İngilizce /r/ dilin hiçbir yere değmediği, titremeyen bir sestir. Bu en çok fark edilen aksan işaretlerinden biridir.',
+    level:'a1', words:[{word:'red',ipa:'/red/',tr:'kırmızı',level:'beginner'},{word:'right',ipa:'/raɪt/',tr:'doğru / sağ',level:'beginner'},{word:'rain',ipa:'/reɪn/',tr:'yağmur',level:'a1'},{word:'run',ipa:'/rʌn/',tr:'koşmak',level:'beginner'},{word:'result',ipa:'/rɪˈzʌlt/',tr:'sonuç',level:'b1'}] },
+  { id:'y', symbol:'j', ipa:'/j/', name:'y sesi', category:'voiced_consonant', voicing:'voiced',
+    description:'Dil öne-yukarı kalkar; hızlı bir kayma sesi, "y" ye benzer.',
+    tip:'Dilini "i" pozisyonuna götür ve hemen bir sonraki sese kay.',
+    teacherNote:'Yazımda "y" veya "u" ile başlayan bazı kelimelerde (yes, you, university) bu sesin var olduğunu fark etmemek yaygındır.',
+    level:'beginner', words:[{word:'yes',ipa:'/jes/',tr:'evet',level:'beginner'},{word:'yellow',ipa:'/ˈjeləʊ/',tr:'sarı',level:'beginner'},{word:'you',ipa:'/juː/',tr:'sen',level:'beginner'},{word:'year',ipa:'/jɪə/',tr:'yıl',level:'a1'},{word:'usually',ipa:'/ˈjuːʒuəli/',tr:'genellikle',level:'a2'}] }
+];
+
+const PHONEMES_ALL = PHONEMES.concat(EXTRA_PHONEMES);
+const PHONEME_MAP = Object.fromEntries(PHONEMES_ALL.map(p=>[p.id,p]));
+
+const STRESS_WORDS = [
+  {word:'window',ipa:'/ˈwɪndəʊ/',syll:['win','dow'],stressed:0,tr:'pencere',level:'beginner'},
+  {word:'believe',ipa:'/bɪˈliːv/',syll:['be','lieve'],stressed:1,tr:'inanmak',level:'a2'},
+  {word:'about',ipa:'/əˈbaʊt/',syll:['a','bout'],stressed:1,tr:'hakkında',level:'a1'},
+  {word:'yesterday',ipa:'/ˈjestədeɪ/',syll:['yes','ter','day'],stressed:0,tr:'dün',level:'a1'},
+  {word:'important',ipa:'/ɪmˈpɔːtnt/',syll:['im','por','tant'],stressed:1,tr:'önemli',level:'b1'},
+  {word:'holiday',ipa:'/ˈhɒlədeɪ/',syll:['ho','li','day'],stressed:0,tr:'tatil',level:'a1'},
+  {word:'because',ipa:'/bɪˈkɒz/',syll:['be','cause'],stressed:1,tr:'çünkü',level:'a1'},
+  {word:'family',ipa:'/ˈfæməli/',syll:['fa','mi','ly'],stressed:0,tr:'aile',level:'beginner'}
+];
+
+/* ---------- 2. QUESTION BANK GENERATION ---------- */
+let qId = 0;
+const nextId = ()=> 'q'+(++qId);
+function shuffle(arr){const a=arr.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+function pick(arr,n){return shuffle(arr).slice(0,n);}
+function one(arr){return arr[Math.floor(Math.random()*arr.length)];}
+function levelToDiff(lv){return {beginner:1,a1:2,a2:3,b1:4,b2:5}[lv]||2;}
+function otherPhonemes(id,n){return pick(PHONEMES_ALL.filter(p=>p.id!==id),n);}
+
+const TYPES = {
+  MC:'MULTIPLE_CHOICE', LISTEN_CHOOSE:'LISTEN_AND_CHOOSE', CHOOSE_IPA:'CHOOSE_CORRECT_IPA',
+  CHOOSE_WORD:'CHOOSE_CORRECT_WORD', SOUND_ID:'SOUND_IDENTIFICATION', MIN_PAIR:'MINIMAL_PAIR_TEST',
+  ODD_ONE:'ODD_ONE_OUT', MATCH_SOUND:'MATCH_THE_SOUND', MATCH_IPA_WORD:'MATCH_IPA_TO_WORD',
+  MATCH_WORD_IPA:'MATCH_WORD_TO_IPA', VOICED:'VOICED_VOICELESS', SHORT_LONG:'SHORT_LONG_VOWEL',
+  VOWEL_CONS:'VOWEL_CONSONANT', DIPHTHONG:'DIPHTHONG_IDENTIFICATION', STRESS:'STRESS_IDENTIFICATION',
+  PRONUNCIATION:'CORRECT_PRONUNCIATION', DIFF_SOUND:'FIND_THE_DIFFERENT_SOUND', COMPARE:'LISTEN_AND_COMPARE'
+};
+
+const bank = [];
+
+// 1. MULTIPLE_CHOICE — "which sound is in word X"
+PHONEMES_ALL.forEach(p=>{
+  pick(p.words,2).forEach(w=>{
+    const distractors = pick(PHONEMES_ALL.filter(x=>x.id!==p.id).map(x=>x.ipa),3);
+    bank.push({
+      id:nextId(), type:TYPES.MC, level:w.level, category:'Çoklu Seçim',
+      question:`"${w.word}" kelimesinde hangi ses var?`,
+      options:shuffle([p.ipa,...distractors]), correctAnswer:p.ipa,
+      explanation:`"${w.word}" ${p.ipa} sesini içerir. ${p.description}`,
+      targetSound:p.id, relatedSounds:[p.id], difficulty:levelToDiff(w.level),
+      audioText:w.word, example:`${w.word} ${w.ipa} — ${w.tr}`, teacherNote:p.teacherNote
+    });
+  });
+});
+
+// 2. LISTEN_AND_CHOOSE — options must all be plausible/coherent for what's being tested:
+// prefer other words that contain the SAME target sound (so the exercise genuinely tests
+// recognising the specific word, not just eliminating an unrelated random word by ear),
+// falling back to the minimal-pair partner, then same-category sounds only if truly needed.
+PHONEMES_ALL.forEach(p=>{
+  const w = one(p.words);
+  const sameSoundPool = shuffle(p.words.map(x=>x.word).filter(x=>x!==w.word));
+  let distractors = sameSoundPool.slice(0,3);
+  if(distractors.length<3){
+    const filler = [];
+    (p.minimalPairs||[]).forEach(mp=>{ [mp.a.word,mp.b.word].forEach(word=>{ if(word!==w.word) filler.push(word); }); });
+    PHONEMES_ALL.filter(x=>x.id!==p.id && x.category===p.category).forEach(x=>filler.push(one(x.words).word));
+    filler.forEach(word=>{ if(distractors.length<3 && word!==w.word && !distractors.includes(word)) distractors.push(word); });
+  }
+  const optSet = shuffle([w.word, ...distractors]);
+  bank.push({
+    id:nextId(), type:TYPES.LISTEN_CHOOSE, level:w.level, category:'Dinle ve Seç',
+    question:'Hangi kelimeyi duyuyorsun? Dinlemek için ▶ tuşuna bas.',
+    options:optSet, correctAnswer:w.word,
+    explanation:`Duyduğun kelime "${w.word}" ${w.ipa} — hedef ses ${p.ipa}. Diğer seçenekler de aynı veya benzer sesi içeren kelimelerdir, bu yüzden dikkatle dinlemek gerekir.`,
+    targetSound:p.id, relatedSounds:[p.id], difficulty:levelToDiff(w.level),
+    audioText:w.word, example:`${w.word} ${w.ipa} — ${w.tr}`, teacherNote:p.teacherNote, hasAudio:true
+  });
+});
+
+// 3. CHOOSE_CORRECT_IPA — description-based symbol pick
+PHONEMES_ALL.forEach(p=>{
+  const distractors = pick(PHONEMES_ALL.filter(x=>x.id!==p.id).map(x=>x.symbol),3);
+  bank.push({
+    id:nextId(), type:TYPES.CHOOSE_IPA, level:p.level, category:'Doğru IPA Sembolünü Seç',
+    question:`Şu tanım hangi sesi ifade ediyor: "${p.description}"`,
+    options:shuffle([p.symbol,...distractors]), correctAnswer:p.symbol,
+    explanation:`Doğru sembol ${p.ipa}. ${p.tip}`,
+    targetSound:p.id, relatedSounds:[p.id], difficulty:levelToDiff(p.level),
+    audioText:null, example:`Örnek: ${one(p.words).word}`, teacherNote:p.teacherNote
+  });
+});
+
+// 4. CHOOSE_CORRECT_WORD
+PHONEMES_ALL.forEach(p=>{
+  const correctWord = one(p.words).word;
+  // a word can legitimately illustrate more than one phoneme (e.g. "hot" shows both /h/
+  // and /ɒ/), so guard against picking a distractor whose text collides with another option
+  const usedWords = new Set([correctWord]);
+  const distractorWords = [];
+  const candidatePhonemes = shuffle(PHONEMES_ALL.filter(x=>x.id!==p.id));
+  for(const cp of candidatePhonemes){
+    if(distractorWords.length>=3) break;
+    const candidateWord = one(cp.words).word;
+    if(!usedWords.has(candidateWord)){ distractorWords.push(candidateWord); usedWords.add(candidateWord); }
+  }
+  bank.push({
+    id:nextId(), type:TYPES.CHOOSE_WORD, level:p.level, category:'Doğru Kelimeyi Seç',
+    question:`Hangi kelime ${p.ipa} sesini içerir?`,
+    options:shuffle([correctWord,...distractorWords]), correctAnswer:correctWord,
+    explanation:`"${correctWord}" ${p.ipa} sesini içerir. Diğer kelimeler farklı sesler içerir.`,
+    targetSound:p.id, relatedSounds:[p.id], difficulty:levelToDiff(p.level),
+    audioText:correctWord, example:null, teacherNote:p.teacherNote
+  });
+});
+
+// 5. SOUND_IDENTIFICATION — true/false contains-sound
+PHONEMES_ALL.forEach(p=>{
+  const trueW = one(p.words);
+  const falseP = one(PHONEMES_ALL.filter(x=>x.id!==p.id));
+  const falseW = one(falseP.words);
+  [{w:trueW,answer:'Evet'},{w:falseW,answer:'Hayır'}].forEach(item=>{
+    bank.push({
+      id:nextId(), type:TYPES.SOUND_ID, level:item.w.level, category:'Ses Tanıma',
+      question:`"${item.w.word}" kelimesinde ${p.ipa} sesi var mı?`,
+      options:['Evet','Hayır'], correctAnswer:item.answer,
+      explanation: item.answer==='Evet'
+        ? `Evet, "${item.w.word}" (${item.w.ipa}) ${p.ipa} sesini içerir.`
+        : `Hayır, "${item.w.word}" (${item.w.ipa}) ${p.ipa} değil, ${falseP.ipa} sesini içerir.`,
+      targetSound:p.id, relatedSounds:[p.id,falseP.id], difficulty:levelToDiff(item.w.level),
+      audioText:item.w.word, example:null, teacherNote:p.teacherNote
+    });
+  });
+});
+
+// 6. MINIMAL_PAIR_TEST
+PHONEMES_ALL.forEach(p=>{
+  (p.minimalPairs||[]).forEach(mp=>{
+    const target = Math.random()<0.5 ? mp.a : mp.b;
+    bank.push({
+      id:nextId(), type:TYPES.MIN_PAIR, level:'a1', category:'Minimal Pair Testi',
+      question:'Hangi kelimeyi duyuyorsun?',
+      options:[mp.a.word, mp.b.word], correctAnswer:target.word,
+      explanation:`Duyduğun kelime "${target.word}" ${target.ipa}. "${mp.a.word}" ${mp.a.ipa} ile "${mp.b.word}" ${mp.b.ipa} arasındaki fark ünlü/ünsüz sesin kalitesi ve (varsa) uzunluğudur.`,
+      targetSound:p.id, relatedSounds:[p.id], difficulty:2,
+      audioText:target.word, example:`${mp.a.word} ${mp.a.ipa} 🆚 ${mp.b.word} ${mp.b.ipa}`, teacherNote:p.teacherNote, hasAudio:true
+    });
+  });
+});
+
+// 7. ODD_ONE_OUT — vowel phonemes
+PHONEMES_ALL.filter(p=>p.category!=='voiced_consonant'&&p.category!=='voiceless_consonant').forEach(p=>{
+  const same = pick(p.words,3);
+  const oddPhoneme = one(PHONEMES_ALL.filter(x=>x.id!==p.id && (x.category==='short_vowel'||x.category==='long_vowel'||x.category==='diphthong')));
+  const odd = one(oddPhoneme.words);
+  const opts = shuffle([...same.map(w=>w.word), odd.word]);
+  bank.push({
+    id:nextId(), type:TYPES.ODD_ONE, level:'a2', category:'Tek Farklı Olanı Bul',
+    question:'Hangi kelimenin ünlü sesi farklı?',
+    options:opts, correctAnswer:odd.word,
+    explanation:`${same.map(w=>'"'+w.word+'"').join(', ')} kelimeleri ${p.ipa} sesini paylaşır. "${odd.word}" ise ${oddPhoneme.ipa} sesini içerir.`,
+    targetSound:p.id, relatedSounds:[p.id,oddPhoneme.id], difficulty:3,
+    audioText:null, example:null, teacherNote:p.teacherNote
+  });
+});
+
+// 8/9/10. MATCH types — build small 4-pair matching challenges
+function buildMatchQuestion(type, label, leftKind, rightKind){
+  const chosen = pick(PHONEMES_ALL,4);
+  const pairs = chosen.map((p,i)=>{
+    const w = one(p.words);
+    // For audio-based matching, never reveal the word in the label — only a play
+    // button — otherwise the exercise can be solved by reading instead of listening.
+    return { left: leftKind==='ipa'? p.ipa : (leftKind==='audio'? '▶ Ses '+(i+1) : w.word),
+             right: rightKind==='ipa'? p.ipa : w.word,
+             audioText:w.word, phonemeId:p.id, word:w.word, isAudioLeft:leftKind==='audio' };
+  });
+  bank.push({
+    id:nextId(), type:type, level:'a1', category:label,
+    question:label+': eşleştir.',
+    matchPairs:pairs,
+    correctAnswer:null, options:null,
+    explanation:'Her ses kendi doğru eşiyle birleşir.',
+    targetSound:chosen.map(p=>p.id).join(','), relatedSounds:chosen.map(p=>p.id), difficulty:3,
+    audioText:null, example:null, teacherNote:'Eşleştirmede hâlâ hata varsa, ilgili sesin "Öğren" kartına dönün.'
+  });
+}
+for(let i=0;i<3;i++) buildMatchQuestion(TYPES.MATCH_SOUND,'Sesi Eşleştir','audio','word');
+for(let i=0;i<3;i++) buildMatchQuestion(TYPES.MATCH_IPA_WORD,'IPA → Kelime Eşleştir','ipa','word');
+for(let i=0;i<3;i++) buildMatchQuestion(TYPES.MATCH_WORD_IPA,'Kelime → IPA Eşleştir','word','ipa');
+
+// 11. VOICED_VOICELESS — consonants only
+PHONEMES_ALL.filter(p=>p.voicing).forEach(p=>{
+  bank.push({
+    id:nextId(), type:TYPES.VOICED, level:'a1', category:'Sesli / Sessiz',
+    question:`${p.ipa} sesi sesli mi (voiced) yoksa sessiz mi (voiceless)?`,
+    options:['Sesli (Voiced)','Sessiz (Voiceless)'], correctAnswer: p.voicing==='voiced'?'Sesli (Voiced)':'Sessiz (Voiceless)',
+    explanation:`${p.ipa} ${p.voicing==='voiced'?'sesli bir sestir — ses telleri titrer.':'sessiz bir sestir — ses telleri titremez.'} ${p.tip}`,
+    targetSound:p.id, relatedSounds:[p.id], difficulty:3,
+    audioText:one(p.words).word, example:null, teacherNote:p.teacherNote
+  });
+});
+
+// 12. SHORT_LONG_VOWEL — non-diphthong vowels
+PHONEMES_ALL.filter(p=>p.category==='short_vowel'||p.category==='long_vowel').forEach(p=>{
+  bank.push({
+    id:nextId(), type:TYPES.SHORT_LONG, level:'beginner', category:'Kısa / Uzun Ünlü',
+    question:`${p.ipa} kısa bir ünlü mü yoksa uzun bir ünlü mü?`,
+    options:['Kısa ünlü (Short)','Uzun ünlü (Long)'], correctAnswer: p.category==='short_vowel'?'Kısa ünlü (Short)':'Uzun ünlü (Long)',
+    explanation:`${p.ipa} ${p.category==='short_vowel'?'kısa':'uzun (: işaretine dikkat)'} bir ünlüdür. Örnek: ${one(p.words).word}.`,
+    targetSound:p.id, relatedSounds:[p.id], difficulty:2,
+    audioText:one(p.words).word, example:null, teacherNote:p.teacherNote
+  });
+});
+
+// 13. VOWEL_CONSONANT
+PHONEMES_ALL.forEach(p=>{
+  const isVowel = p.category!=='voiced_consonant'&&p.category!=='voiceless_consonant';
+  bank.push({
+    id:nextId(), type:TYPES.VOWEL_CONS, level:'beginner', category:'Ünlü / Ünsüz',
+    question:`${p.ipa} bir ünlü (vowel) sesi mi yoksa ünsüz (consonant) sesi mi?`,
+    options:['Ünlü (Vowel)','Ünsüz (Consonant)'], correctAnswer: isVowel?'Ünlü (Vowel)':'Ünsüz (Consonant)',
+    explanation:`${p.ipa} bir ${isVowel?'ünlü':'ünsüz'} sesidir.`,
+    targetSound:p.id, relatedSounds:[p.id], difficulty:1,
+    audioText:one(p.words).word, example:null, teacherNote:p.teacherNote
+  });
+});
+
+// 14. DIPHTHONG_IDENTIFICATION
+const eiPhoneme = PHONEME_MAP['ei'];
+for(let i=0;i<2;i++){
+  const correctW = one(eiPhoneme.words);
+  const others = otherPhonemes('ei',3).map(x=>one(x.words).word);
+  bank.push({
+    id:nextId(), type:TYPES.DIPHTHONG, level:'a2', category:'Diftong Tanımlama',
+    question:'Hangi kelime bir diftong (kayan ikili ünlü) içerir?',
+    options:shuffle([correctW.word,...others]), correctAnswer:correctW.word,
+    explanation:`"${correctW.word}" ${correctW.ipa} — ${eiPhoneme.ipa} bir diftongdur, /e/ den /ɪ/ ye doğru kayar. Diğerleri tek, sabit bir ünlü içerir.`,
+    targetSound:'ei', relatedSounds:['ei'], difficulty:3,
+    audioText:correctW.word, example:null, teacherNote:eiPhoneme.teacherNote
+  });
+}
+
+// 15. STRESS_IDENTIFICATION
+STRESS_WORDS.forEach(sw=>{
+  const labeled = sw.syll.map((s,i)=>`${i+1}. ${s}`);
+  bank.push({
+    id:nextId(), type:TYPES.STRESS, level:sw.level, category:'Vurgu Tanımlama',
+    question:`"${sw.word}" kelimesinde vurgu hangi hecede?`,
+    options:labeled, correctAnswer:labeled[sw.stressed],
+    explanation:`"${sw.word}" ${sw.ipa} — vurgu ${sw.stressed+1}. hecede ("${sw.syll[sw.stressed]}").`,
+    targetSound:null, relatedSounds:[], difficulty:levelToDiff(sw.level),
+    audioText:sw.word, example:`${sw.word} — ${sw.tr}`, teacherNote:'Vurgu hatası genelde anlaşılırlığı sesli/sessiz hatalarından daha çok etkiler.'
+  });
+});
+
+// 16. CORRECT_PRONUNCIATION — whole-word transcription selection
+function isVowelCat(p){ return p.category!=='voiced_consonant' && p.category!=='voiceless_consonant'; }
+PHONEMES_ALL.forEach(p=>{
+  const w = one(p.words);
+  // keep swaps within the same broad category (vowel<->vowel, consonant<->consonant)
+  // so every distractor still reads as a plausible word transcription
+  const swapPool = pick(PHONEMES_ALL.filter(x=>x.id!==p.id && isVowelCat(x)===isVowelCat(p)),3);
+  const wrongTranscriptions = swapPool.map(sp=> w.ipa.includes(p.symbol) ? w.ipa.split(p.symbol).join(sp.symbol) : w.ipa.replace(/[a-zæðθŋʃʒː]/,sp.symbol));
+  const opts = shuffle([w.ipa, ...wrongTranscriptions]).filter((v,i,a)=>a.indexOf(v)===i);
+  if(!opts.includes(w.ipa)) opts.push(w.ipa);
+  bank.push({
+    id:nextId(), type:TYPES.PRONUNCIATION, level:w.level, category:'Doğru Telaffuzu Seç',
+    question:`"${w.word}" kelimesinin doğru IPA transkripsiyonu hangisi?`,
+    options:opts.slice(0,4), correctAnswer:w.ipa,
+    explanation:`Doğru transkripsiyon ${w.ipa}. Hedef ses ${p.ipa}: ${p.description}`,
+    targetSound:p.id, relatedSounds:[p.id], difficulty:levelToDiff(w.level)+1,
+    audioText:w.word, example:null, teacherNote:p.teacherNote
+  });
+});
+
+// 17. FIND_THE_DIFFERENT_SOUND — word-initial consonant version
+PHONEMES_ALL.filter(p=>p.voicing).forEach(p=>{
+  const same = pick(p.words.filter(w=>w.word[0].toLowerCase()===p.symbol[0] || w.word.toLowerCase().startsWith('th')),3);
+  if(same.length<3) return;
+  const oddP = one(PHONEMES_ALL.filter(x=>x.voicing && x.id!==p.id));
+  const oddCand = oddP.words.filter(w=>w.word[0].toLowerCase()===oddP.symbol[0] || w.word.toLowerCase().startsWith('th'));
+  if(!oddCand.length) return;
+  const odd = one(oddCand);
+  bank.push({
+    id:nextId(), type:TYPES.DIFF_SOUND, level:'a2', category:'Farklı Sesi Bul',
+    question:'Hangi kelime farklı bir sesle başlıyor?',
+    options:shuffle([...same.map(w=>w.word),odd.word]), correctAnswer:odd.word,
+    explanation:`${same.map(w=>'"'+w.word+'"').join(', ')} kelimeleri ${p.ipa} ile başlar. "${odd.word}" ise ${oddP.ipa} ile başlar.`,
+    targetSound:p.id, relatedSounds:[p.id,oddP.id], difficulty:3,
+    audioText:null, example:null, teacherNote:p.teacherNote
+  });
+});
+
+// 18. LISTEN_AND_COMPARE — same/different using minimal pairs + same-sound pairs
+PHONEMES_ALL.forEach(p=>{
+  const sameSound = Math.random()<0.5;
+  let wordA, wordB, answer, explain;
+  if(sameSound && p.words.length>=2){
+    const two = pick(p.words,2);
+    wordA=two[0]; wordB=two[1]; answer='Aynı';
+    explain=`"${wordA.word}" (${wordA.ipa}) ve "${wordB.word}" (${wordB.ipa}) ikisi de ${p.ipa} sesini içerir.`;
+  } else if(p.minimalPairs && p.minimalPairs.length){
+    const mp = one(p.minimalPairs);
+    wordA={word:mp.a.word,ipa:mp.a.ipa}; wordB={word:mp.b.word,ipa:mp.b.ipa}; answer='Farklı';
+    explain=`"${mp.a.word}" (${mp.a.ipa}) ve "${mp.b.word}" (${mp.b.ipa}) farklı seslere sahip.`;
+  } else return;
+  bank.push({
+    id:nextId(), type:TYPES.COMPARE, level:'a1', category:'Dinle ve Karşılaştır',
+    question:'İki kelimeyi de dinle: aynı ses mi, farklı ses mi?',
+    options:['Aynı','Farklı'], correctAnswer:answer,
+    explanation:explain, targetSound:p.id, relatedSounds:[p.id], difficulty:3,
+    audioText:wordA.word+' / '+wordB.word, compareWords:[wordA.word,wordB.word], example:null, teacherNote:p.teacherNote, hasAudio:true
+  });
+});
+
+// ---- Final QA pass: guarantee every non-matching question has unique,
+// non-empty options that include the correct answer. A shared example word
+// (like "hot" illustrating both /h/ and /ɒ/) can otherwise produce two
+// visually identical options — this repairs or, failing that, drops the question. ----
+(function finalQA(){
+  const cleaned = [];
+  bank.forEach(q=>{
+    if(q.matchPairs){ cleaned.push(q); return; }
+    if(!q.options || !q.correctAnswer){ return; }
+    const seen = new Set();
+    const deduped = q.options.filter(o=>{ if(seen.has(o)) return false; seen.add(o); return true; });
+    if(!deduped.includes(q.correctAnswer)) return; // shouldn't happen, but drop rather than ship a broken question
+    if(deduped.length < 2) return; // need at least 2 choices to be a valid question
+    q.options = deduped;
+    cleaned.push(q);
+  });
+  bank.length = 0;
+  bank.push(...cleaned);
+})();
+
+/* ---------- 3. TEST MODES ---------- */
+const MODES = [
+  {id:'quick', title:'Hızlı Test', desc:'10 soru, karışık', n:10, filter:()=>true},
+  {id:'standard', title:'Standart Test', desc:'20 soru, karışık', n:20, filter:()=>true},
+  {id:'full', title:'Tam Test', desc:'40 soru, kapsamlı', n:40, filter:()=>true},
+  {id:'mixed', title:'Karışık Fonetik Testi', desc:'Tüm kategorilerden rastgele', n:20, filter:()=>true},
+  {id:'beginner', title:'Başlangıç Testi', desc:'Sadece temel seviye sorular', n:15, filter:q=>q.level==='beginner'||q.level==='a1'},
+  {id:'minimalpairs', title:'Minimal Pairs Testi', desc:'Sadece ses karşıtlıkları', n:14, filter:q=>q.type===TYPES.MIN_PAIR||q.type===TYPES.COMPARE},
+  {id:'listening', title:'Dinleme Testi', desc:'Sadece sesli sorular', n:12, filter:q=>q.hasAudio}
+];
+
+function prefersReducedMotion(){
+  return typeof window.matchMedia === 'function' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+}
+
+/* ---------- 4. AUDIO (Web Speech API) ---------- */
+function speak(text){
+  if(!text) return;
+  if(!('speechSynthesis' in window)) return;
+  const clean = text.replace(/[\/ˈˌː]/g,'');
+  const u = new SpeechSynthesisUtterance(clean);
+  u.lang='en-GB'; u.rate=0.92;
+  const voices = speechSynthesis.getVoices();
+  const gb = voices.find(v=>v.lang==='en-GB') || voices.find(v=>v.lang&&v.lang.startsWith('en'));
+  if(gb) u.voice=gb;
+  speechSynthesis.cancel();
+  speechSynthesis.speak(u);
+}
+
+/* ---------- 5. UI: phoneme cards ---------- */
+const grid = document.getElementById('phonemeGrid');
+const detailHost = document.getElementById('phonemeDetailHost');
+let openId = null;
+
+function renderGrid(){
+  grid.innerHTML = PHONEMES.map(p=>{
+    const isCons = p.voicing;
+    return `<button class="pcard" data-id="${p.id}" type="button">
+      <div class="pcard-top">
+        <span class="symbol">${p.ipa}</span>
+        <span class="tag ${isCons?'cons':''}">${isCons? (p.voicing==='voiced'?'sesli ünsüz':'sessiz ünsüz') : (p.category==='diphthong'?'diftong':p.category==='long_vowel'?'uzun ünlü':'kısa ünlü')}</span>
+      </div>
+      <div class="word-ex"><b>${one(p.words).word}</b> — ${p.name}</div>
+    </button>`;
+  }).join('');
+  grid.querySelectorAll('.pcard').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      openId = openId===btn.dataset.id ? null : btn.dataset.id;
+      renderDetail();
+    });
+  });
+}
+
+const LEVEL_LABELS = {beginner:'Başlangıç', a1:'A1', a2:'A2', b1:'B1', b2:'B2'};
+const LEVEL_ORDER = ['beginner','a1','a2','b1','b2'];
+
+function renderDetail(){
+  if(!openId){ detailHost.innerHTML=''; return; }
+  const p = PHONEME_MAP[openId];
+  const byLevel = LEVEL_ORDER.map(lv=>({lv, words:p.words.filter(w=>w.level===lv)})).filter(g=>g.words.length);
+  detailHost.innerHTML = `
+    <div class="pdetail open">
+      <h3>${p.ipa} — ${p.name}</h3>
+      <p>${p.description}</p>
+      <div class="tip"><b>Nasıl söylenir?</b> ${p.tip}</div>
+      <p style="font-weight:600;margin:16px 0 4px">Örnekler: başlangıçtan ileri seviyeye</p>
+      ${byLevel.map(g=>`
+        <div class="level-group">
+          <span class="level-badge">${LEVEL_LABELS[g.lv]}</span>
+          <div class="wordlist">
+            ${g.words.map(w=>`<div class="wchip"><button class="play" data-word="${w.word}" aria-label="${w.word} kelimesini dinle" type="button">▶</button><span>${w.word} <span style="color:var(--muted)">${w.ipa}</span><br><span style="font-size:.8rem;color:var(--muted)">${w.tr}</span></span></div>`).join('')}
+          </div>
+        </div>`).join('')}
+      ${p.minimalPairs && p.minimalPairs.length ? `<p style="font-weight:600;margin-bottom:6px">Minimal pairs (karıştırılan çiftler):</p>
+      <div class="mp-row">${p.minimalPairs.map(mp=>`<div class="mp-pill"><button class="play" data-word="${mp.a.word}" type="button" aria-label="${mp.a.word} dinle" style="border:none;background:var(--navy);color:#fff;width:22px;height:22px;border-radius:50%;cursor:pointer;font-size:.7rem">▶</button>${mp.a.word} ${mp.a.ipa} 🆚 <button class="play" data-word="${mp.b.word}" type="button" aria-label="${mp.b.word} dinle" style="border:none;background:var(--navy);color:#fff;width:22px;height:22px;border-radius:50%;cursor:pointer;font-size:.7rem">▶</button>${mp.b.word} ${mp.b.ipa}</div>`).join('')}</div>` : ''}
+      <p class="audio-note">Sesler tarayıcı seslendirmesiyle (TTS) okunur, profesyonel kayıt değildir.</p>
+      <div class="detail-actions">
+        <button class="btn btn-primary" data-testsound="${p.id}" type="button">Bu Sesi Test Et</button>
+        <button class="btn btn-outline" data-close="1" type="button">Kapat</button>
+      </div>
+    </div>`;
+  detailHost.querySelectorAll('.play').forEach(b=>b.addEventListener('click',e=>{e.stopPropagation();speak(b.dataset.word);}));
+  detailHost.querySelector('[data-close]').addEventListener('click',()=>{openId=null;renderDetail();});
+  detailHost.querySelector('[data-testsound]').addEventListener('click',()=>{
+    startSoundTest(p.id);
+  });
+  detailHost.scrollIntoView({behavior: prefersReducedMotion()?'auto':'smooth', block:'nearest'});
+}
+
+
+
+/* ---------- 5b. UI: full 44-sound phonemic chart ---------- */
+const CHART_GROUPS = [
+  {label:'Kısa Ünlüler (7)', cat:'short_vowel'},
+  {label:'Uzun Ünlüler (5)', cat:'long_vowel'},
+  {label:'Diftonglar (8)', cat:'diphthong'},
+  {label:'Sessiz Ünsüzler (9)', cat:'voiceless_consonant'},
+  {label:'Sesli Ünsüzler (15)', cat:'voiced_consonant'}
+];
+const chartHost = document.getElementById('alphabetChart');
+function renderAlphabetChart(){
+  chartHost.innerHTML = CHART_GROUPS.map(g=>{
+    const items = PHONEMES_ALL.filter(p=>p.category===g.cat);
+    return `<div class="chart-group"><h4>${g.label}</h4><div class="chart-cells">
+      ${items.map(p=>`<button class="chart-cell" data-id="${p.id}" type="button"><span class="sym">${p.ipa}</span><span class="exw">${one(p.words).word}</span></button>`).join('')}
+    </div></div>`;
+  }).join('') + `<div class="chart-tooltip" id="chartTooltip"></div>`;
+
+  chartHost.querySelectorAll('.chart-cell').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const p = PHONEME_MAP[btn.dataset.id];
+      const tip = document.getElementById('chartTooltip');
+      const w = p.words[0];
+      tip.classList.add('show');
+      tip.innerHTML = `<h5>${p.ipa} — ${p.name}</h5>
+        <p>${p.description}</p>
+        <p><b>${w.word}</b> ${w.ipa} — ${w.tr}</p>
+        <div class="ct-actions">
+          <button class="btn btn-primary" id="chartPlay" type="button">▶ Dinle</button>
+          ${FEATURED_IDS.includes(p.id) ? `<button class="btn btn-outline" id="chartGoLesson" type="button">Detaylı Dersi Aç</button>` : ''}
+          <button class="btn btn-ghost" id="chartTestSound" type="button">Bu Sesi Test Et</button>
+        </div>`;
+      document.getElementById('chartPlay').addEventListener('click',()=>speak(w.word));
+      const lessonBtn = document.getElementById('chartGoLesson');
+      if(lessonBtn) lessonBtn.addEventListener('click',()=>{
+        openId = p.id; renderDetail();
+        document.getElementById('seslervi').scrollIntoView({behavior: prefersReducedMotion()?'auto':'smooth'});
+      });
+      document.getElementById('chartTestSound').addEventListener('click',()=>startSoundTest(p.id));
+      tip.scrollIntoView({behavior: prefersReducedMotion()?'auto':'smooth', block:'nearest'});
+    });
+  });
+}
+
+/* ---------- 6. UI: mode cards ---------- */
+const modeGrid = document.getElementById('modeGrid');
+modeGrid.innerHTML = MODES.map(m=>`<button class="mode-card" data-mode="${m.id}" type="button"><h4>${m.title}</h4><p>${m.desc}</p></button>`).join('');
+modeGrid.querySelectorAll('.mode-card').forEach(btn=>{
+  btn.addEventListener('click',()=>startMode(btn.dataset.mode));
+});
+
+let teacherMode = false;
+document.getElementById('teacherModeToggle').addEventListener('change',e=>{teacherMode=e.target.checked;});
+
+/* ---------- 7. QUIZ STATE & RUNNER ---------- */
+const state = { questions:[], idx:0, correct:0, wrong:0, answers:[], weakSounds:{}, currentMode:null };
+
+function startMode(modeId){
+  const mode = MODES.find(m=>m.id===modeId);
+  let pool = bank.filter(mode.filter);
+  if(modeId==='mixed'){
+    // ensure variety: sample across distinct types first
+    const byType = {};
+    pool.forEach(q=>{(byType[q.type]=byType[q.type]||[]).push(q);});
+    const mixed = [];
+    Object.values(byType).forEach(arr=>mixed.push(...pick(arr,2)));
+    pool = shuffle(mixed);
+  }
+  launchQuiz(pick(pool, Math.min(mode.n, pool.length)));
+}
+function startSoundTest(phonemeId){
+  const pool = bank.filter(q=> q.targetSound===phonemeId || (typeof q.targetSound==='string' && q.targetSound.split(',').includes(phonemeId)));
+  launchQuiz(pick(pool, Math.min(12,pool.length)));
+}
+
+function launchQuiz(questions){
+  state.questions = questions;
+  state.idx = 0; state.correct=0; state.wrong=0; state.answers=[]; state.weakSounds={};
+  document.getElementById('resultArea').classList.remove('open');
+  document.getElementById('quizArea').classList.add('open');
+  document.getElementById('quizArea').scrollIntoView({behavior: prefersReducedMotion()?'auto':'smooth'});
+  renderQuestion();
+}
+
+const questionHost = document.getElementById('questionHost');
+const nextBtn = document.getElementById('nextBtn');
+
+function updateTop(){
+  document.getElementById('quizCount').textContent = `Soru ${state.idx+1} / ${state.questions.length}`;
+  document.getElementById('scoreCorrect').textContent = state.correct;
+  document.getElementById('scoreWrong').textContent = state.wrong;
+  document.getElementById('progressFill').style.width = ((state.idx)/state.questions.length*100)+'%';
+}
+
+function renderQuestion(){
+  updateTop();
+  nextBtn.style.display='none';
+  const q = state.questions[state.idx];
+  if(q.matchPairs){ renderMatchQuestion(q); return; }
+
+  let html = `<div class="q-category">${q.category}</div><p class="q-text">${q.question}</p>`;
+  if(q.hasAudio){
+    html += `<button class="q-audio-btn" id="playAudioBtn" type="button">▶ Dinle</button>`;
+  }
+  html += `<div class="options" role="group">`;
+  q.options.forEach((opt,i)=>{
+    html += `<button class="opt" data-opt="${encodeURIComponent(opt)}" type="button"><span class="letter">${String.fromCharCode(65+i)}</span><span>${opt}</span></button>`;
+  });
+  html += `</div><div class="feedback" id="fb"></div>`;
+  questionHost.innerHTML = html;
+
+  if(q.hasAudio){
+    document.getElementById('playAudioBtn').addEventListener('click',()=>{
+      if(q.compareWords){ speak(q.compareWords[0]); setTimeout(()=>speak(q.compareWords[1]), 1300); }
+      else speak(q.audioText);
+    });
+  }
+  questionHost.querySelectorAll('.opt').forEach(btn=>{
+    btn.addEventListener('click',()=>answerSelected(q,decodeURIComponent(btn.dataset.opt),btn));
+  });
+}
+
+function answerSelected(q, chosen, btnEl){
+  const opts = questionHost.querySelectorAll('.opt');
+  opts.forEach(b=>b.setAttribute('disabled','true'));
+  const isCorrect = chosen === q.correctAnswer;
+  opts.forEach(b=>{
+    const val = decodeURIComponent(b.dataset.opt);
+    if(val===q.correctAnswer) b.classList.add('correct');
+    if(val===chosen && !isCorrect){ b.classList.add('wrong','shake'); }
+  });
+  recordAnswer(q, isCorrect);
+  showFeedback(q, isCorrect);
+}
+
+function recordAnswer(q,isCorrect){
+  if(isCorrect) state.correct++; else {
+    state.wrong++;
+    if(q.targetSound){
+      String(q.targetSound).split(',').forEach(id=>{
+        state.weakSounds[id] = (state.weakSounds[id]||0)+1;
+      });
+    }
+  }
+  state.answers.push({q,isCorrect});
+}
+
+function showFeedback(q,isCorrect){
+  const fb = document.getElementById('fb');
+  fb.classList.add('show', isCorrect?'correct':'wrong');
+  let html = `<div class="fb-head">${isCorrect? '✓ Doğru!' : '✗ Bunu değil.'}</div>`;
+  if(!isCorrect) html += `<div class="fb-correct">Doğru cevap: ${q.correctAnswer}</div>`;
+  html += `<div class="fb-why">${q.explanation}</div>`;
+  if(q.example) html += `<div class="fb-example">${q.example}</div>`;
+  if(teacherMode){
+    html += `<div class="teacher-box"><b>Öğretmen notu:</b> ${q.teacherNote||'—'}<br><b>Hedef ses:</b> ${q.targetSound||'—'}</div>`;
+  }
+  fb.innerHTML = html;
+  nextBtn.style.display='inline-flex';
+  nextBtn.textContent = state.idx+1 < state.questions.length ? 'Sonraki Soru' : 'Sonuçları Gör';
+}
+
+function renderMatchQuestion(q){
+  const leftItems = shuffle(q.matchPairs.map((pr,i)=>({...pr, key:i})));
+  const rightItems = shuffle(q.matchPairs.map((pr,i)=>({...pr, key:i})));
+  let selectedLeft = null;
+  let matchedCount = 0;
+  let wrongAttempts = 0;
+
+  let html = `<div class="q-category">${q.category}</div><p class="q-text">${q.question}</p>
+  <div class="match-wrap">
+    <div class="match-col"><h5>Sol</h5>${leftItems.map(it=>`<button class="match-item" data-side="L" data-key="${it.key}" type="button">${it.left}</button>`).join('')}</div>
+    <div class="match-col"><h5>Sağ</h5>${rightItems.map(it=>`<button class="match-item" data-side="R" data-key="${it.key}" type="button">${it.right}</button>`).join('')}</div>
+  </div>
+  <div class="feedback" id="fb"></div>`;
+  questionHost.innerHTML = html;
+
+  const leftBtns = [...questionHost.querySelectorAll('[data-side="L"]')];
+  const rightBtns = [...questionHost.querySelectorAll('[data-side="R"]')];
+
+  leftBtns.forEach(b=> b.addEventListener('click',()=>{
+    if(b.disabled) return;
+    leftBtns.forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    selectedLeft = b;
+    if(b.dataset.key && q.matchPairs[b.dataset.key].audioText) speak(q.matchPairs[b.dataset.key].audioText);
+  }));
+  rightBtns.forEach(b=> b.addEventListener('click',()=>{
+    if(b.disabled || !selectedLeft) return;
+    const correct = selectedLeft.dataset.key === b.dataset.key;
+    if(correct){
+      selectedLeft.classList.add('done-correct'); selectedLeft.disabled=true;
+      b.classList.add('done-correct'); b.disabled=true;
+      matchedCount++;
+    } else {
+      wrongAttempts++;
+      b.classList.add('done-wrong');
+      if(!prefersReducedMotion()){ b.classList.add('shake'); setTimeout(()=>b.classList.remove('shake','done-wrong'),400); }
+      else setTimeout(()=>b.classList.remove('done-wrong'),400);
+    }
+    selectedLeft.classList.remove('active');
+    selectedLeft = null;
+    if(matchedCount===q.matchPairs.length){
+      const isCorrect = wrongAttempts===0;
+      recordAnswer(q,isCorrect);
+      showFeedback(q,isCorrect);
+    }
+  }));
+}
+
+nextBtn.addEventListener('click',()=>{
+  state.idx++;
+  if(state.idx>=state.questions.length){ finishQuiz(); }
+  else renderQuestion();
+});
+
+/* ---------- 8. RESULTS & DIAGNOSTICS ---------- */
+function finishQuiz(){
+  document.getElementById('quizArea').classList.remove('open');
+  const area = document.getElementById('resultArea');
+  area.classList.add('open');
+  area.scrollIntoView({behavior: prefersReducedMotion()?'auto':'smooth'});
+
+  const total = state.questions.length;
+  document.getElementById('resultScoreText').textContent = `${state.correct} / ${total}`;
+  document.getElementById('resultPct').textContent = `%${Math.round(state.correct/total*100)}`;
+
+  // category performance
+  const catStats = {};
+  state.answers.forEach(({q,isCorrect})=>{
+    catStats[q.category] = catStats[q.category] || {c:0,w:0};
+    catStats[q.category][isCorrect?'c':'w']++;
+  });
+  const cats = Object.entries(catStats).map(([cat,s])=>({cat,acc:s.c/(s.c+s.w)}));
+  cats.sort((a,b)=>b.acc-a.acc);
+  const strong = cats.slice(0,2).filter(c=>c.acc>0);
+  const weak = cats.slice(-2).filter(c=>c.acc<1);
+
+  document.getElementById('strongList').innerHTML = strong.length? strong.map(c=>`<li>${c.cat}</li>`).join('') : '<li>Henüz yeterli veri yok</li>';
+  document.getElementById('weakList').innerHTML = weak.length? weak.map(c=>`<li>${c.cat}</li>`).join('') : '<li>Zayıf alan tespit edilmedi 🎉</li>';
+
+  // diagnostic by weak phoneme
+  const weakSoundEntries = Object.entries(state.weakSounds).sort((a,b)=>b[1]-a[1]).slice(0,4);
+  const diagHost = document.getElementById('diagList');
+  if(!weakSoundEntries.length){
+    diagHost.innerHTML = `<div class="diag-item">Bu testte hiçbir sesle ilgili tekrarlanan hata görülmedi. Harika iş!</div>`;
+  } else {
+    diagHost.innerHTML = weakSoundEntries.map(([id,count])=>{
+      const p = PHONEME_MAP[id];
+      if(!p) return '';
+      const partner = p.minimalPairs && p.minimalPairs[0] ? `${p.minimalPairs[0].a.word} / ${p.minimalPairs[0].b.word}` : null;
+      return `<div class="diag-item"><span><b>${p.ipa}</b> (${p.name}) — ${count} hata</span>
+        <span class="steps">1. "Sesi Öğren" → ${p.ipa} · 2. ${partner?`Minimal Pairs: ${partner}`:'Minimal Pairs testi'} · 3. Sound Test: ${p.ipa}</span></div>`;
+    }).join('');
+  }
+}
+
+document.getElementById('retryBtn').addEventListener('click',()=>launchQuiz(state.questions));
+document.getElementById('reviewBtn').addEventListener('click',()=>{
+  const mistakes = state.answers.filter(a=>!a.isCorrect).map(a=>a.q);
+  if(!mistakes.length){ alert('Bu testte hata yapmadın — gözden geçirilecek soru yok.'); return; }
+  launchQuiz(mistakes);
+});
+document.getElementById('weakBtn').addEventListener('click',()=>{
+  const ids = Object.keys(state.weakSounds);
+  if(!ids.length){ alert('Zayıf alan tespit edilmedi — istediğin bir testi seçebilirsin.'); return; }
+  const pool = bank.filter(q=> ids.some(id=> String(q.targetSound).split(',').includes(id)));
+  launchQuiz(pick(pool, Math.min(15,pool.length)));
+});
+document.getElementById('newTestBtn').addEventListener('click',()=>{
+  document.getElementById('resultArea').classList.remove('open');
+  document.getElementById('testler').scrollIntoView({behavior: prefersReducedMotion()?'auto':'smooth'});
+});
+
+/* ---------- init ---------- */
+renderGrid();
+renderAlphabetChart();
+if('speechSynthesis' in window){ speechSynthesis.onvoiceschanged = ()=>{}; }
+})();
+</script>
+</body>
+</html>
+<script src="/assets/ko/consent.js?v=2" defer></script>
