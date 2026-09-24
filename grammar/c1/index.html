@@ -482,7 +482,7 @@
 
   <section class="gr-section">
     <div class="gr-container">
-      <div class="gr-cat-grid" id="gr-topic-grid"></div>
+      <div class="gr-cat-grid" id="gr-topic-grid"><!--pre--><a class="gr-cat-card" href="/grammar/c1/present-perfect-discourse"><span><strong>1. Present Perfect in Discourse</strong></span><span class="gr-cat-tr">Metin Düzeyinde Yakın Geçmiş Kullanımı</span></a><a class="gr-cat-card" href="/grammar/c1/future-perfect-continuous"><span><strong>2. Future Perfect Continuous</strong></span><span class="gr-cat-tr">Gelecekte Süregelmiş Olacak Eylem</span></a><a class="gr-cat-card" href="/grammar/c1/the-subjunctive"><span><strong>3. The Subjunctive</strong></span><span class="gr-cat-tr">Dilek-Şart Kipi (Subjunctive)</span></a><a class="gr-cat-card" href="/grammar/c1/would-have"><span><strong>4. Would have</strong></span><span class="gr-cat-tr">Gerçekleşmemiş Geçmiş İstek/Sonuç</span></a><a class="gr-cat-card" href="/grammar/c1/mixed-conditionals"><span><strong>5. Mixed Conditionals</strong></span><span class="gr-cat-tr">Karışık Koşul Cümleleri</span></a><a class="gr-cat-card" href="/grammar/c1/whoever-whatever-whenever-wherever-however"><span><strong>6. Whoever, Whatever, Whenever...</strong></span><span class="gr-cat-tr">-ever ile Biten Belgisiz İfadeler</span></a><a class="gr-cat-card" href="/grammar/c1/advanced-relative-clauses"><span><strong>7. Advanced Relative Clauses</strong></span><span class="gr-cat-tr">İleri Düzey Sıfat Cümlecikleri</span></a><a class="gr-cat-card" href="/grammar/c1/inversion-with-negative-adverbials"><span><strong>8. Inversion with Negative Adverbials</strong></span><span class="gr-cat-tr">Olumsuz Zarflarla Devrik Yapı</span></a><a class="gr-cat-card" href="/grammar/c1/formal-conditional-inversion"><span><strong>9. Formal Conditional Inversion</strong></span><span class="gr-cat-tr">Resmi Koşul Cümlelerinde Devrik Yapı</span></a><a class="gr-cat-card" href="/grammar/c1/advanced-participle-clauses"><span><strong>10. Advanced Participle Clauses</strong></span><span class="gr-cat-tr">İleri Düzey Ortaç Cümlecikleri</span></a><a class="gr-cat-card" href="/grammar/c1/emphatic-structures-and-clefts"><span><strong>11. Emphatic Structures &amp; Cleft Sentences</strong></span><span class="gr-cat-tr">Vurgu Yapıları ve Cleft Cümleler</span></a><!--/pre--></div>
     </div>
   </section>
 
@@ -501,8 +501,8 @@
 <script>
 window.GR_SITE_ROOT = "../../";
 window.GR_BREADCRUMB = [
-  { label: "Anasayfa", href: window.GR_SITE_ROOT + "index.html" },
-  { label: "Grammar", href: window.GR_SITE_ROOT + "grammar/index.html" },
+  { label: "Anasayfa", href: "/" },
+  { label: "Grammar", href: "/grammar" },
   { label: "C1" }
 ];
 window.GR_LEVEL = "C1";
@@ -1194,7 +1194,7 @@ window.GR_LEVEL = "C1";
     ids.forEach(function (id) {
       var t = G.getById(id);
       if (!t) return;
-      var href = ROOT + "grammar/" + t.level.toLowerCase() + "/" + t.slug + ".html";
+      var href = "/grammar/" + t.level.toLowerCase() + "/" + t.slug;
       html += '<a href="' + href + '">' + t.title + " <span aria-hidden=\"true\">→</span></a>";
     });
     mount.innerHTML = html;
@@ -1220,7 +1220,7 @@ window.GR_LEVEL = "C1";
 
   document.getElementById("gr-topic-grid").innerHTML = topics.map(function (t, i) {
     var status = P.getTopicStatus(t.id);
-    var href = ROOT + "grammar/" + t.level.toLowerCase() + "/" + t.slug + ".html";
+    var href = "/grammar/" + t.level.toLowerCase() + "/" + t.slug;
     var statusLabel = { "not-started": "Başlanmadı", "in-progress": "Devam ediyor", "completed": "Tamamlandı", "mastered": "Ustalaştı ⭐", "needs-review": "Tekrar önerilir ↻" }[status];
     var swatchColor = (G.categories.filter(function (c) { return c.id === t.category; })[0] || {}).color;
     var isBuilt = t.status === "built";

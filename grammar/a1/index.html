@@ -482,7 +482,7 @@
 
   <section class="gr-section">
     <div class="gr-container">
-      <div class="gr-cat-grid" id="gr-topic-grid"></div>
+      <div class="gr-cat-grid" id="gr-topic-grid"><!--pre--><a class="gr-cat-card" href="/grammar/a1/sentence-basics"><span><strong>1. Sentence Structure</strong></span><span class="gr-cat-tr">Temel Cümle Yapısı</span></a><a class="gr-cat-card" href="/grammar/a1/word-order-basics"><span><strong>2. Basic Word Order (SVO)</strong></span><span class="gr-cat-tr">Temel Sözcük Dizilimi</span></a><a class="gr-cat-card" href="/grammar/a1/be"><span><strong>3. Be (am / is / are)</strong></span><span class="gr-cat-tr">Be Fiili</span></a><a class="gr-cat-card" href="/grammar/a1/there-is-are"><span><strong>4. There is / There are</strong></span><span class="gr-cat-tr">Var / Yok Yapısı</span></a><a class="gr-cat-card" href="/grammar/a1/have-and-have-got"><span><strong>5. Have / Have got (Possession)</strong></span><span class="gr-cat-tr">Sahiplik Bildiren Have / Have got</span></a><a class="gr-cat-card" href="/grammar/a1/present-simple"><span><strong>6. Present Simple</strong></span><span class="gr-cat-tr">Geniş Zaman</span></a><a class="gr-cat-card" href="/grammar/a1/present-continuous"><span><strong>7. Present Continuous</strong></span><span class="gr-cat-tr">Şimdiki Zaman</span></a><a class="gr-cat-card" href="/grammar/a1/past-simple"><span><strong>8. Past Simple</strong></span><span class="gr-cat-tr">Geçmiş Zaman</span></a><a class="gr-cat-card" href="/grammar/a1/ability-can-could-be-able-to"><span><strong>9. Ability: Can / Could / Be able to</strong></span><span class="gr-cat-tr">Yetenek Belirten Modaller</span></a><a class="gr-cat-card" href="/grammar/a1/yes-no-questions"><span><strong>10. Yes/No Questions</strong></span><span class="gr-cat-tr">Evet/Hayır Soruları</span></a><a class="gr-cat-card" href="/grammar/a1/wh-questions"><span><strong>11. Wh- Questions</strong></span><span class="gr-cat-tr">Wh- Soruları</span></a><a class="gr-cat-card" href="/grammar/a1/countable-and-uncountable-nouns"><span><strong>12. Countable &amp; Uncountable Nouns</strong></span><span class="gr-cat-tr">Sayılabilen ve Sayılamayan İsimler</span></a><a class="gr-cat-card" href="/grammar/a1/articles-a-an-the"><span><strong>13. Articles: A / An / The</strong></span><span class="gr-cat-tr">Tanımlıklar (a / an / the)</span></a><a class="gr-cat-card" href="/grammar/a1/personal-and-possessive-pronouns"><span><strong>14. Personal &amp; Possessive Pronouns</strong></span><span class="gr-cat-tr">Kişi ve İyelik Zamirleri</span></a><a class="gr-cat-card" href="/grammar/a1/basic-quantifiers"><span><strong>15. Basic Quantifiers</strong></span><span class="gr-cat-tr">Temel Miktar Sözcükleri</span></a><a class="gr-cat-card" href="/grammar/a1/prepositions-of-time"><span><strong>16. Prepositions of Time</strong></span><span class="gr-cat-tr">Zaman Edatları</span></a><a class="gr-cat-card" href="/grammar/a1/prepositions-of-place"><span><strong>17. Prepositions of Place</strong></span><span class="gr-cat-tr">Yer Edatları</span></a><!--/pre--></div>
     </div>
   </section>
 
@@ -491,7 +491,7 @@
       <div class="gr-section-head">
         <div class="gr-kicker">Next Step</div>
         <h2 class="gr-mt-0">A1'i bitirince</h2>
-        <p style="color:var(--n-600)">A1 konularının çoğunu tamamladığında <a href="../a2/index.html">A2 Grammar</a>'a geçmeye hazırsın.</p>
+        <p style="color:var(--n-600)">A1 konularının çoğunu tamamladığında <a href="/grammar/a2">A2 Grammar</a>'a geçmeye hazırsın.</p>
       </div>
     </div>
   </section>
@@ -501,8 +501,8 @@
 <script>
 window.GR_SITE_ROOT = "../../";
 window.GR_BREADCRUMB = [
-  { label: "Anasayfa", href: window.GR_SITE_ROOT + "index.html" },
-  { label: "Grammar", href: window.GR_SITE_ROOT + "grammar/index.html" },
+  { label: "Anasayfa", href: "/" },
+  { label: "Grammar", href: "/grammar" },
   { label: "A1" }
 ];
 window.GR_LEVEL = "A1";
@@ -1194,7 +1194,7 @@ window.GR_LEVEL = "A1";
     ids.forEach(function (id) {
       var t = G.getById(id);
       if (!t) return;
-      var href = ROOT + "grammar/" + t.level.toLowerCase() + "/" + t.slug + ".html";
+      var href = "/grammar/" + t.level.toLowerCase() + "/" + t.slug;
       html += '<a href="' + href + '">' + t.title + " <span aria-hidden=\"true\">→</span></a>";
     });
     mount.innerHTML = html;
@@ -1220,7 +1220,7 @@ window.GR_LEVEL = "A1";
 
   document.getElementById("gr-topic-grid").innerHTML = topics.map(function (t, i) {
     var status = P.getTopicStatus(t.id);
-    var href = ROOT + "grammar/" + t.level.toLowerCase() + "/" + t.slug + ".html";
+    var href = "/grammar/" + t.level.toLowerCase() + "/" + t.slug;
     var statusLabel = { "not-started": "Başlanmadı", "in-progress": "Devam ediyor", "completed": "Tamamlandı", "mastered": "Ustalaştı ⭐", "needs-review": "Tekrar önerilir ↻" }[status];
     var swatchColor = (G.categories.filter(function (c) { return c.id === t.category; })[0] || {}).color;
     var isBuilt = t.status === "built";

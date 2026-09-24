@@ -2,3 +2,6 @@
 /landing/*    /:splat        301
 /IELTS        /ielts         301
 /IELTS.html   /ielts         301
+
+# build tools live in the repo but are not part of the public site
+/tools/*   /404   404!
