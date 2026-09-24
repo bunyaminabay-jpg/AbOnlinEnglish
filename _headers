@@ -5,3 +5,292 @@
   Permissions-Policy: geolocation=(), camera=(), microphone=()
   X-XSS-Protection: 1; mode=block
   Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+# Kendin Öğren indirilebilir dosyalar
+/ingilizce-*
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests
+  Cross-Origin-Opener-Policy: same-origin
+/gizlilik
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests
+  Cross-Origin-Opener-Policy: same-origin
+/assets/ko/*
+  Cache-Control: public, max-age=604800
+/assets/og/*
+  Cache-Control: public, max-age=604800
+/pdfs/ingilizce-a1/ingilizce-a1-tum-uniteler.pdf
+  Link: <https://abonlinenglish.school/ingilizce-a1/>; rel="canonical"
+/pdfs/ingilizce-a1/a1-unite-1-to-be-am-is-are.pdf
+  Link: <https://abonlinenglish.school/ingilizce-a1/unite-1-to-be-am-is-are>; rel="canonical"
+/pdfs/ingilizce-a1/a1-unite-1-to-be-am-is-are.docx
+  X-Robots-Tag: noindex
+  Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+/pdfs/ingilizce-a1/a1-unite-2-a-an-articles.pdf
+  Link: <https://abonlinenglish.school/ingilizce-a1/unite-2-a-an-articles>; rel="canonical"
+/pdfs/ingilizce-a1/a1-unite-2-a-an-articles.docx
+  X-Robots-Tag: noindex
+  Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+/pdfs/ingilizce-a1/a1-unite-3-have-has-possessive-adjectives.pdf
+  Link: <https://abonlinenglish.school/ingilizce-a1/unite-3-have-has-possessive-adjectives>; rel="canonical"
+/pdfs/ingilizce-a1/a1-unite-3-have-has-possessive-adjectives.docx
+  X-Robots-Tag: noindex
+  Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+/pdfs/ingilizce-a1/a1-unite-4-simple-present-tense.pdf
+  Link: <https://abonlinenglish.school/ingilizce-a1/unite-4-simple-present-tense>; rel="canonical"
+/pdfs/ingilizce-a1/a1-unite-4-simple-present-tense.docx
+  X-Robots-Tag: noindex
+  Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+/pdfs/ingilizce-a1/a1-unite-5-like-love-hate-ing.pdf
+  Link: <https://abonlinenglish.school/ingilizce-a1/unite-5-like-love-hate-ing>; rel="canonical"
+/pdfs/ingilizce-a1/a1-unite-5-like-love-hate-ing.docx
+  X-Robots-Tag: noindex
+  Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+/pdfs/ingilizce-a1/a1-unite-6-can-cant-ability.pdf
+  Link: <https://abonlinenglish.school/ingilizce-a1/unite-6-can-cant-ability>; rel="canonical"
+/pdfs/ingilizce-a1/a1-unite-6-can-cant-ability.docx
+  X-Robots-Tag: noindex
+  Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+/pdfs/ingilizce-a1/a1-unite-7-there-is-there-are.pdf
+  Link: <https://abonlinenglish.school/ingilizce-a1/unite-7-there-is-there-are>; rel="canonical"
+/pdfs/ingilizce-a1/a1-unite-7-there-is-there-are.docx
+  X-Robots-Tag: noindex
+  Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+/pdfs/ingilizce-a1/a1-unite-8-how-much-how-many.pdf
+  Link: <https://abonlinenglish.school/ingilizce-a1/unite-8-how-much-how-many>; rel="canonical"
+/pdfs/ingilizce-a1/a1-unite-8-how-much-how-many.docx
+  X-Robots-Tag: noindex
+  Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+/pdfs/ingilizce-a1/a1-unite-9-present-continuous.pdf
+  Link: <https://abonlinenglish.school/ingilizce-a1/unite-9-present-continuous>; rel="canonical"
+/pdfs/ingilizce-a1/a1-unite-9-present-continuous.docx
+  X-Robots-Tag: noindex
+  Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+/pdfs/ingilizce-a1/a1-unite-10-should-shouldnt.pdf
+  Link: <https://abonlinenglish.school/ingilizce-a1/unite-10-should-shouldnt>; rel="canonical"
+/pdfs/ingilizce-a1/a1-unite-10-should-shouldnt.docx
+  X-Robots-Tag: noindex
+  Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+/pdfs/ingilizce-a2/ingilizce-a2-tum-uniteler.pdf
+  Link: <https://abonlinenglish.school/ingilizce-a2/>; rel="canonical"
+/pdfs/ingilizce-a2/a2-unite-1-past-simple.pdf
+  Link: <https://abonlinenglish.school/ingilizce-a2/unite-1-past-simple>; rel="canonical"
+/pdfs/ingilizce-a2/a2-unite-1-past-simple.docx
+  X-Robots-Tag: noindex
+  Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+/pdfs/ingilizce-a2/a2-unite-2-comparatives-superlatives.pdf
+  Link: <https://abonlinenglish.school/ingilizce-a2/unite-2-comparatives-superlatives>; rel="canonical"
+/pdfs/ingilizce-a2/a2-unite-2-comparatives-superlatives.docx
+  X-Robots-Tag: noindex
+  Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+/pdfs/ingilizce-a2/a2-unite-3-going-to-will.pdf
+  Link: <https://abonlinenglish.school/ingilizce-a2/unite-3-going-to-will>; rel="canonical"
+/pdfs/ingilizce-a2/a2-unite-3-going-to-will.docx
+  X-Robots-Tag: noindex
+  Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+/pdfs/ingilizce-a2/a2-unite-4-prepositions-of-movement-directions.pdf
+  Link: <https://abonlinenglish.school/ingilizce-a2/unite-4-prepositions-of-movement-directions>; rel="canonical"
+/pdfs/ingilizce-a2/a2-unite-4-prepositions-of-movement-directions.docx
+  X-Robots-Tag: noindex
+  Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+/pdfs/ingilizce-a2/a2-unite-5-present-perfect-ever-never-just-already-yet.pdf
+  Link: <https://abonlinenglish.school/ingilizce-a2/unite-5-present-perfect-ever-never-just-already-yet>; rel="canonical"
+/pdfs/ingilizce-a2/a2-unite-5-present-perfect-ever-never-just-already-yet.docx
+  X-Robots-Tag: noindex
+  Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+/pdfs/ingilizce-a2/a2-unite-6-some-any-much-many.pdf
+  Link: <https://abonlinenglish.school/ingilizce-a2/unite-6-some-any-much-many>; rel="canonical"
+/pdfs/ingilizce-a2/a2-unite-6-some-any-much-many.docx
+  X-Robots-Tag: noindex
+  Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+/pdfs/ingilizce-a2/a2-unite-7-must-have-to-should.pdf
+  Link: <https://abonlinenglish.school/ingilizce-a2/unite-7-must-have-to-should>; rel="canonical"
+/pdfs/ingilizce-a2/a2-unite-7-must-have-to-should.docx
+  X-Robots-Tag: noindex
+  Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+/pdfs/ingilizce-a2/a2-unite-8-gerunds-infinitives.pdf
+  Link: <https://abonlinenglish.school/ingilizce-a2/unite-8-gerunds-infinitives>; rel="canonical"
+/pdfs/ingilizce-a2/a2-unite-8-gerunds-infinitives.docx
+  X-Robots-Tag: noindex
+  Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+/pdfs/ingilizce-a2/a2-unite-9-adverbs-of-frequency.pdf
+  Link: <https://abonlinenglish.school/ingilizce-a2/unite-9-adverbs-of-frequency>; rel="canonical"
+/pdfs/ingilizce-a2/a2-unite-9-adverbs-of-frequency.docx
+  X-Robots-Tag: noindex
+  Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+/pdfs/ingilizce-a2/a2-unite-10-relative-clauses-who-which-that.pdf
+  Link: <https://abonlinenglish.school/ingilizce-a2/unite-10-relative-clauses-who-which-that>; rel="canonical"
+/pdfs/ingilizce-a2/a2-unite-10-relative-clauses-who-which-that.docx
+  X-Robots-Tag: noindex
+  Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+/pdfs/ingilizce-b1/ingilizce-b1-tum-uniteler.pdf
+  Link: <https://abonlinenglish.school/ingilizce-b1/>; rel="canonical"
+/pdfs/ingilizce-b1/b1-unite-1-present-perfect-vs-past-simple.pdf
+  Link: <https://abonlinenglish.school/ingilizce-b1/unite-1-present-perfect-vs-past-simple>; rel="canonical"
+/pdfs/ingilizce-b1/b1-unite-1-present-perfect-vs-past-simple.docx
+  X-Robots-Tag: noindex
+  Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+/pdfs/ingilizce-b1/b1-unite-2-passive-voice-modal-deduction.pdf
+  Link: <https://abonlinenglish.school/ingilizce-b1/unite-2-passive-voice-modal-deduction>; rel="canonical"
+/pdfs/ingilizce-b1/b1-unite-2-passive-voice-modal-deduction.docx
+  X-Robots-Tag: noindex
+  Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+/pdfs/ingilizce-b1/b1-unite-3-zero-first-conditional-time-clauses.pdf
+  Link: <https://abonlinenglish.school/ingilizce-b1/unite-3-zero-first-conditional-time-clauses>; rel="canonical"
+/pdfs/ingilizce-b1/b1-unite-3-zero-first-conditional-time-clauses.docx
+  X-Robots-Tag: noindex
+  Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+/pdfs/ingilizce-b1/b1-unite-4-used-to-past-continuous.pdf
+  Link: <https://abonlinenglish.school/ingilizce-b1/unite-4-used-to-past-continuous>; rel="canonical"
+/pdfs/ingilizce-b1/b1-unite-4-used-to-past-continuous.docx
+  X-Robots-Tag: noindex
+  Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+/pdfs/ingilizce-b1/b1-unite-5-present-perfect-continuous.pdf
+  Link: <https://abonlinenglish.school/ingilizce-b1/unite-5-present-perfect-continuous>; rel="canonical"
+/pdfs/ingilizce-b1/b1-unite-5-present-perfect-continuous.docx
+  X-Robots-Tag: noindex
+  Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+/pdfs/ingilizce-b1/b1-unite-6-advanced-quantifiers.pdf
+  Link: <https://abonlinenglish.school/ingilizce-b1/unite-6-advanced-quantifiers>; rel="canonical"
+/pdfs/ingilizce-b1/b1-unite-6-advanced-quantifiers.docx
+  X-Robots-Tag: noindex
+  Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+/pdfs/ingilizce-b1/b1-unite-7-narrative-tenses-past-perfect.pdf
+  Link: <https://abonlinenglish.school/ingilizce-b1/unite-7-narrative-tenses-past-perfect>; rel="canonical"
+/pdfs/ingilizce-b1/b1-unite-7-narrative-tenses-past-perfect.docx
+  X-Robots-Tag: noindex
+  Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+/pdfs/ingilizce-b1/b1-unite-8-second-conditional-wish.pdf
+  Link: <https://abonlinenglish.school/ingilizce-b1/unite-8-second-conditional-wish>; rel="canonical"
+/pdfs/ingilizce-b1/b1-unite-8-second-conditional-wish.docx
+  X-Robots-Tag: noindex
+  Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+/pdfs/ingilizce-b1/b1-unite-9-reported-speech.pdf
+  Link: <https://abonlinenglish.school/ingilizce-b1/unite-9-reported-speech>; rel="canonical"
+/pdfs/ingilizce-b1/b1-unite-9-reported-speech.docx
+  X-Robots-Tag: noindex
+  Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+/pdfs/ingilizce-b1/b1-unite-10-third-conditional-wish-if-only.pdf
+  Link: <https://abonlinenglish.school/ingilizce-b1/unite-10-third-conditional-wish-if-only>; rel="canonical"
+/pdfs/ingilizce-b1/b1-unite-10-third-conditional-wish-if-only.docx
+  X-Robots-Tag: noindex
+  Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+/pdfs/ingilizce-b2/ingilizce-b2-tum-uniteler.pdf
+  Link: <https://abonlinenglish.school/ingilizce-b2/>; rel="canonical"
+/pdfs/ingilizce-b2/b2-unite-1-advanced-passive-impersonal.pdf
+  Link: <https://abonlinenglish.school/ingilizce-b2/unite-1-advanced-passive-impersonal>; rel="canonical"
+/pdfs/ingilizce-b2/b2-unite-1-advanced-passive-impersonal.docx
+  X-Robots-Tag: noindex
+  Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+/pdfs/ingilizce-b2/b2-unite-2-defining-non-defining-relative-clauses.pdf
+  Link: <https://abonlinenglish.school/ingilizce-b2/unite-2-defining-non-defining-relative-clauses>; rel="canonical"
+/pdfs/ingilizce-b2/b2-unite-2-defining-non-defining-relative-clauses.docx
+  X-Robots-Tag: noindex
+  Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+/pdfs/ingilizce-b2/b2-unite-3-cleft-sentences-fronting.pdf
+  Link: <https://abonlinenglish.school/ingilizce-b2/unite-3-cleft-sentences-fronting>; rel="canonical"
+/pdfs/ingilizce-b2/b2-unite-3-cleft-sentences-fronting.docx
+  X-Robots-Tag: noindex
+  Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+/pdfs/ingilizce-b2/b2-unite-4-gerund-vs-infinitive-meaning-change.pdf
+  Link: <https://abonlinenglish.school/ingilizce-b2/unite-4-gerund-vs-infinitive-meaning-change>; rel="canonical"
+/pdfs/ingilizce-b2/b2-unite-4-gerund-vs-infinitive-meaning-change.docx
+  X-Robots-Tag: noindex
+  Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+/pdfs/ingilizce-b2/b2-unite-5-modal-perfects.pdf
+  Link: <https://abonlinenglish.school/ingilizce-b2/unite-5-modal-perfects>; rel="canonical"
+/pdfs/ingilizce-b2/b2-unite-5-modal-perfects.docx
+  X-Robots-Tag: noindex
+  Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+/pdfs/ingilizce-b2/b2-unite-6-discourse-markers-linkers.pdf
+  Link: <https://abonlinenglish.school/ingilizce-b2/unite-6-discourse-markers-linkers>; rel="canonical"
+/pdfs/ingilizce-b2/b2-unite-6-discourse-markers-linkers.docx
+  X-Robots-Tag: noindex
+  Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+/pdfs/ingilizce-b2/b2-unite-7-subjunctive-formal-inversion.pdf
+  Link: <https://abonlinenglish.school/ingilizce-b2/unite-7-subjunctive-formal-inversion>; rel="canonical"
+/pdfs/ingilizce-b2/b2-unite-7-subjunctive-formal-inversion.docx
+  X-Robots-Tag: noindex
+  Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+/pdfs/ingilizce-b2/b2-unite-8-nominalisation-academic-register.pdf
+  Link: <https://abonlinenglish.school/ingilizce-b2/unite-8-nominalisation-academic-register>; rel="canonical"
+/pdfs/ingilizce-b2/b2-unite-8-nominalisation-academic-register.docx
+  X-Robots-Tag: noindex
+  Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+/pdfs/ingilizce-b2/b2-unite-9-hedging-language.pdf
+  Link: <https://abonlinenglish.school/ingilizce-b2/unite-9-hedging-language>; rel="canonical"
+/pdfs/ingilizce-b2/b2-unite-9-hedging-language.docx
+  X-Robots-Tag: noindex
+  Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+/pdfs/ingilizce-b2/b2-unite-10-mixed-conditionals.pdf
+  Link: <https://abonlinenglish.school/ingilizce-b2/unite-10-mixed-conditionals>; rel="canonical"
+/pdfs/ingilizce-b2/b2-unite-10-mixed-conditionals.docx
+  X-Robots-Tag: noindex
+  Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+/pdfs/ingilizce-c1/ingilizce-c1-tum-uniteler.pdf
+  Link: <https://abonlinenglish.school/ingilizce-c1/>; rel="canonical"
+/pdfs/ingilizce-c1/c1-unite-1-nominal-clauses-ellipsis-substitution.pdf
+  Link: <https://abonlinenglish.school/ingilizce-c1/unite-1-nominal-clauses-ellipsis-substitution>; rel="canonical"
+/pdfs/ingilizce-c1/c1-unite-1-nominal-clauses-ellipsis-substitution.docx
+  X-Robots-Tag: noindex
+  Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+/pdfs/ingilizce-c1/c1-unite-2-negative-inversion.pdf
+  Link: <https://abonlinenglish.school/ingilizce-c1/unite-2-negative-inversion>; rel="canonical"
+/pdfs/ingilizce-c1/c1-unite-2-negative-inversion.docx
+  X-Robots-Tag: noindex
+  Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+/pdfs/ingilizce-c1/c1-unite-3-concessive-clauses.pdf
+  Link: <https://abonlinenglish.school/ingilizce-c1/unite-3-concessive-clauses>; rel="canonical"
+/pdfs/ingilizce-c1/c1-unite-3-concessive-clauses.docx
+  X-Robots-Tag: noindex
+  Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+/pdfs/ingilizce-c1/c1-unite-4-stance-adverbials-reporting-verbs.pdf
+  Link: <https://abonlinenglish.school/ingilizce-c1/unite-4-stance-adverbials-reporting-verbs>; rel="canonical"
+/pdfs/ingilizce-c1/c1-unite-4-stance-adverbials-reporting-verbs.docx
+  X-Robots-Tag: noindex
+  Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+/pdfs/ingilizce-c1/c1-unite-5-wish-id-rather-its-high-time-as-if.pdf
+  Link: <https://abonlinenglish.school/ingilizce-c1/unite-5-wish-id-rather-its-high-time-as-if>; rel="canonical"
+/pdfs/ingilizce-c1/c1-unite-5-wish-id-rather-its-high-time-as-if.docx
+  X-Robots-Tag: noindex
+  Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+/pdfs/ingilizce-c1/c1-unite-6-participial-absolute-phrases.pdf
+  Link: <https://abonlinenglish.school/ingilizce-c1/unite-6-participial-absolute-phrases>; rel="canonical"
+/pdfs/ingilizce-c1/c1-unite-6-participial-absolute-phrases.docx
+  X-Robots-Tag: noindex
+  Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+/pdfs/ingilizce-c1/c1-unite-7-noun-phrase-post-modification.pdf
+  Link: <https://abonlinenglish.school/ingilizce-c1/unite-7-noun-phrase-post-modification>; rel="canonical"
+/pdfs/ingilizce-c1/c1-unite-7-noun-phrase-post-modification.docx
+  X-Robots-Tag: noindex
+  Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+/pdfs/ingilizce-c1/c1-unite-8-advanced-concession.pdf
+  Link: <https://abonlinenglish.school/ingilizce-c1/unite-8-advanced-concession>; rel="canonical"
+/pdfs/ingilizce-c1/c1-unite-8-advanced-concession.docx
+  X-Robots-Tag: noindex
+  Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+/pdfs/ingilizce-c1/c1-unite-9-c1-grammar-synthesis.pdf
+  Link: <https://abonlinenglish.school/ingilizce-c1/unite-9-c1-grammar-synthesis>; rel="canonical"
+/pdfs/ingilizce-c1/c1-unite-9-c1-grammar-synthesis.docx
+  X-Robots-Tag: noindex
+  Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+/pdfs/ingilizce-c1/c1-unite-10-c1-b2-full-synthesis.pdf
+  Link: <https://abonlinenglish.school/ingilizce-c1/unite-10-c1-b2-full-synthesis>; rel="canonical"
+/pdfs/ingilizce-c1/c1-unite-10-c1-b2-full-synthesis.docx
+  X-Robots-Tag: noindex
+  Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+/pdfs/ingilizce-c2/ingilizce-c2-tum-uniteler.pdf
+  Link: <https://abonlinenglish.school/ingilizce-c2/>; rel="canonical"
+/pdfs/ingilizce-c2/c2-unite-1-cleft-pseudo-cleft-sentences.pdf
+  Link: <https://abonlinenglish.school/ingilizce-c2/unite-1-cleft-pseudo-cleft-sentences>; rel="canonical"
+/pdfs/ingilizce-c2/c2-unite-1-cleft-pseudo-cleft-sentences.docx
+  X-Robots-Tag: noindex
+  Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+/pdfs/ingilizce-c2/c2-unite-2-subjunctive-formal-register.pdf
+  Link: <https://abonlinenglish.school/ingilizce-c2/unite-2-subjunctive-formal-register>; rel="canonical"
+/pdfs/ingilizce-c2/c2-unite-2-subjunctive-formal-register.docx
+  X-Robots-Tag: noindex
+  Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+/pdfs/ingilizce-c2/c2-unite-3-advanced-inversion-fronting.pdf
+  Link: <https://abonlinenglish.school/ingilizce-c2/unite-3-advanced-inversion-fronting>; rel="canonical"
+/pdfs/ingilizce-c2/c2-unite-3-advanced-inversion-fronting.docx
+  X-Robots-Tag: noindex
+  Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document

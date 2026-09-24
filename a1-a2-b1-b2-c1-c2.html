@@ -3259,5 +3259,14 @@ document.addEventListener('DOMContentLoaded',()=>{
 });
 
 </script>
+<script>
+/* Yeni sayfalara yönlendirme: /a1-a2-b1-b2-c1-c2#a1 → /ingilizce-a1 · #reader-a1-0 ve #workbook-a1 panelleri açar */
+(function(){
+  var h=(location.hash||'').slice(1).toLowerCase();
+  if(/^(a1|a2|b1|b2|c1|c2)$/.test(h)){location.replace('/ingilizce-'+h+'/');return;}
+  var m=h.match(/^(reader|workbook)-(a1|a2|b1|b2|c1)(?:-(\d))?$/);
+  if(m){window.addEventListener('load',function(){try{m[1]==='reader'?showReader(m[2],+(m[3]||0)):showWorkbook(m[2]);}catch(e){}});}
+})();
+</script>
 </body>
 </html>
