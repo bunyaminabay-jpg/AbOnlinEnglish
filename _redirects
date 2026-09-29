@@ -3,5 +3,13 @@
 /IELTS        /ielts         301
 /IELTS.html   /ielts         301
 
+# Upper Secondary — only the main landing page is exposed for now.
+# Existing folders/files are untouched. Inner pages can be rebuilt later from the books.
+/upper-secondary  /upper-secondary/UpperSecondary_SharedAssets_TeacherZone/upper-secondary/  200
+/upper-secondary/ /upper-secondary/UpperSecondary_SharedAssets_TeacherZone/upper-secondary/  200
+
+# Assets required by the Upper Secondary landing page.
+/upper-secondary/assets/* /upper-secondary/UpperSecondary_SharedAssets_TeacherZone/upper-secondary/assets/:splat 200
+
 # build tools live in the repo but are not part of the public site
 /tools/*   /404   404!
