@@ -3,13 +3,66 @@
 /IELTS        /ielts         301
 /IELTS.html   /ielts         301
 
-# Upper Secondary — only the main landing page is exposed for now.
-# Existing folders/files are untouched. Inner pages can be rebuilt later from the books.
+# Upper Secondary — clean public routes
 /upper-secondary  /upper-secondary/UpperSecondary_SharedAssets_TeacherZone/upper-secondary/  200
 /upper-secondary/ /upper-secondary/UpperSecondary_SharedAssets_TeacherZone/upper-secondary/  200
-
-# Assets required by the Upper Secondary landing page.
 /upper-secondary/assets/* /upper-secondary/UpperSecondary_SharedAssets_TeacherZone/upper-secondary/assets/:splat 200
 
+# Programme pages
+/upper-secondary/prep/* /upper-secondary/UpperSecondary_Prep_Downloads_Complete/prep/:splat 200
+/upper-secondary/after-prep-10/* /upper-secondary/UpperSecondary_AfterPrep10_Part1/upper-secondary/after-prep-10/:splat 200
+/upper-secondary/after-prep-11/* /upper-secondary/UpperSecondary_AfterPrep11/upper-secondary/after-prep-11/:splat 200
+/upper-secondary/year-9/* /upper-secondary/UpperSecondary_Year9_Part1/upper-secondary/year-9/:splat 200
+/upper-secondary/year-10/* /upper-secondary/UpperSecondary_Year10_Part1/upper-secondary/year-10/:splat 200
+/upper-secondary/year-11/* /upper-secondary/UpperSecondary_Year11_Part1/upper-secondary/year-11/:splat 200
+
+# PDF/download package routes — split packages are kept in their original folders.
+/upper-secondary/downloads/prep/* /upper-secondary/UpperSecondary_Prep_Downloads_Complete/prep/downloads/prep/:splat 200
+
+/upper-secondary/downloads/after-prep-10/theme-1/* /upper-secondary/UpperSecondary_AfterPrep10_Part1/upper-secondary/downloads/after-prep-10/theme-1/:splat 200
+/upper-secondary/downloads/after-prep-10/theme-2/* /upper-secondary/UpperSecondary_AfterPrep10_Part1/upper-secondary/downloads/after-prep-10/theme-2/:splat 200
+/upper-secondary/downloads/after-prep-10/theme-3/* /upper-secondary/UpperSecondary_AfterPrep10_Part1/upper-secondary/downloads/after-prep-10/theme-3/:splat 200
+/upper-secondary/downloads/after-prep-10/theme-4/* /upper-secondary/UpperSecondary_AfterPrep10_Part1/upper-secondary/downloads/after-prep-10/theme-4/:splat 200
+/upper-secondary/downloads/after-prep-10/theme-5/* /upper-secondary/UpperSecondary_AfterPrep10_Part1/upper-secondary/downloads/after-prep-10/theme-5/:splat 200
+/upper-secondary/downloads/after-prep-10/theme-6/* /upper-secondary/UpperSecondary_AfterPrep10_Part2/upper-secondary/downloads/after-prep-10/theme-6/:splat 200
+/upper-secondary/downloads/after-prep-10/theme-7/* /upper-secondary/UpperSecondary_AfterPrep10_Part2/upper-secondary/downloads/after-prep-10/theme-7/:splat 200
+/upper-secondary/downloads/after-prep-10/theme-8/* /upper-secondary/UpperSecondary_AfterPrep10_Part2/upper-secondary/downloads/after-prep-10/theme-8/:splat 200
+/upper-secondary/downloads/after-prep-10/theme-9/* /upper-secondary/UpperSecondary_AfterPrep10_Part2/upper-secondary/downloads/after-prep-10/theme-9/:splat 200
+/upper-secondary/downloads/after-prep-10/theme-10/* /upper-secondary/UpperSecondary_AfterPrep10_Part2/upper-secondary/downloads/after-prep-10/theme-10/:splat 200
+
+/upper-secondary/downloads/year-9/theme-1/* /upper-secondary/UpperSecondary_Year9_Part1/upper-secondary/downloads/year-9/theme-1/:splat 200
+/upper-secondary/downloads/year-9/theme-2/* /upper-secondary/UpperSecondary_Year9_Part1/upper-secondary/downloads/year-9/theme-2/:splat 200
+/upper-secondary/downloads/year-9/theme-3/* /upper-secondary/UpperSecondary_Year9_Part1/upper-secondary/downloads/year-9/theme-3/:splat 200
+/upper-secondary/downloads/year-9/theme-4/* /upper-secondary/UpperSecondary_Year9_Part1/upper-secondary/downloads/year-9/theme-4/:splat 200
+/upper-secondary/downloads/year-9/theme-5/* /upper-secondary/UpperSecondary_Year9_Part2/upper-secondary/downloads/year-9/theme-5/:splat 200
+/upper-secondary/downloads/year-9/theme-6/* /upper-secondary/UpperSecondary_Year9_Part2/upper-secondary/downloads/year-9/theme-6/:splat 200
+/upper-secondary/downloads/year-9/theme-7/* /upper-secondary/UpperSecondary_Year9_Part2/upper-secondary/downloads/year-9/theme-7/:splat 200
+/upper-secondary/downloads/year-9/theme-8/* /upper-secondary/UpperSecondary_Year9_Part2/upper-secondary/downloads/year-9/theme-8/:splat 200
+
+/upper-secondary/downloads/year-10/theme-1/* /upper-secondary/UpperSecondary_Year10_Part1/upper-secondary/downloads/year-10/theme-1/:splat 200
+/upper-secondary/downloads/year-10/theme-2/* /upper-secondary/UpperSecondary_Year10_Part1/upper-secondary/downloads/year-10/theme-2/:splat 200
+/upper-secondary/downloads/year-10/theme-3/* /upper-secondary/UpperSecondary_Year10_Part1/upper-secondary/downloads/year-10/theme-3/:splat 200
+/upper-secondary/downloads/year-10/theme-4/* /upper-secondary/UpperSecondary_Year10_Part1/upper-secondary/downloads/year-10/theme-4/:splat 200
+/upper-secondary/downloads/year-10/theme-5/* /upper-secondary/UpperSecondary_Year10_Part2/upper-secondary/downloads/year-10/theme-5/:splat 200
+/upper-secondary/downloads/year-10/theme-6/* /upper-secondary/UpperSecondary_Year10_Part2/upper-secondary/downloads/year-10/theme-6/:splat 200
+/upper-secondary/downloads/year-10/theme-7/* /upper-secondary/UpperSecondary_Year10_Part2/upper-secondary/downloads/year-10/theme-7/:splat 200
+/upper-secondary/downloads/year-10/theme-8/* /upper-secondary/UpperSecondary_Year10_Part2/upper-secondary/downloads/year-10/theme-8/:splat 200
+
+/upper-secondary/downloads/year-11/theme-1/* /upper-secondary/UpperSecondary_Year11_Part1/upper-secondary/downloads/year-11/theme-1/:splat 200
+/upper-secondary/downloads/year-11/theme-2/* /upper-secondary/UpperSecondary_Year11_Part1/upper-secondary/downloads/year-11/theme-2/:splat 200
+/upper-secondary/downloads/year-11/theme-3/* /upper-secondary/UpperSecondary_Year11_Part1/upper-secondary/downloads/year-11/theme-3/:splat 200
+/upper-secondary/downloads/year-11/theme-4/* /upper-secondary/UpperSecondary_Year11_Part1/upper-secondary/downloads/year-11/theme-4/:splat 200
+/upper-secondary/downloads/year-11/theme-5/* /upper-secondary/UpperSecondary_Year11_Part1/upper-secondary/downloads/year-11/theme-5/:splat 200
+/upper-secondary/downloads/year-11/theme-6/* /upper-secondary/UpperSecondary_Year11_Part2/upper-secondary/downloads/year-11/theme-6/:splat 200
+/upper-secondary/downloads/year-11/theme-7/* /upper-secondary/UpperSecondary_Year11_Part2/upper-secondary/downloads/year-11/theme-7/:splat 200
+/upper-secondary/downloads/year-11/theme-8/* /upper-secondary/UpperSecondary_Year11_Part2/upper-secondary/downloads/year-11/theme-8/:splat 200
+/upper-secondary/downloads/year-11/theme-9/* /upper-secondary/UpperSecondary_Year11_Part2/upper-secondary/downloads/year-11/theme-9/:splat 200
+/upper-secondary/downloads/year-11/theme-10/* /upper-secondary/UpperSecondary_Year11_Part2/upper-secondary/downloads/year-11/theme-10/:splat 200
+
+# Shared teacher pages
+/upper-secondary/teacher-zone/* /upper-secondary/UpperSecondary_SharedAssets_TeacherZone/upper-secondary/teacher-zone/:splat 200
+/upper-secondary/istatistik/* /upper-secondary/UpperSecondary_SharedAssets_TeacherZone/upper-secondary/istatistik/:splat 200
+/upper-secondary/ornek-tema/* /upper-secondary/UpperSecondary_SharedAssets_TeacherZone/upper-secondary/ornek-tema/:splat 200
+
 # build tools live in the repo but are not part of the public site
-/tools/*   /404   404!
+/tools/* /404 404!
