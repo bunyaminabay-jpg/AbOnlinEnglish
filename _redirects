@@ -3,5 +3,29 @@
 /IELTS        /ielts         301
 /IELTS.html   /ielts         301
 
+# Upper Secondary — safe URL rewrites
+# Existing files are kept in their current folders; these rules only expose clean public URLs.
+
+/upper-secondary/                                      /upper-secondary/UpperSecondary_SharedAssets_TeacherZone/upper-secondary/                                      200
+/upper-secondary/assets/*                              /upper-secondary/UpperSecondary_SharedAssets_TeacherZone/upper-secondary/assets/:splat                              200
+
+/upper-secondary/after-prep-10/*                       /upper-secondary/UpperSecondary_AfterPrep10_Part1/upper-secondary/after-prep-10/:splat                       200
+/upper-secondary/after-prep-11/*                       /upper-secondary/UpperSecondary_AfterPrep11/upper-secondary/after-prep-11/:splat                       200
+/upper-secondary/prep/*                               /upper-secondary/UpperSecondary_Prep_Downloads_Complete/prep/:splat                               200
+/upper-secondary/year-9/*                             /upper-secondary/UpperSecondary_Year9_Part1/upper-secondary/year-9/:splat                             200
+/upper-secondary/year-10/*                            /upper-secondary/UpperSecondary_Year10_Part1/upper-secondary/year-10/:splat                            200
+/upper-secondary/year-11/*                            /upper-secondary/UpperSecondary_Year11_Part1/upper-secondary/year-11/:splat                            200
+
+# Teacher Zone and shared pages
+/upper-secondary/teacher-zone/*                       /upper-secondary/UpperSecondary_SharedAssets_TeacherZone/upper-secondary/teacher-zone/:splat                       200
+/upper-secondary/istatistik/*                         /upper-secondary/UpperSecondary_SharedAssets_TeacherZone/upper-secondary/istatistik/:splat                         200
+/upper-secondary/ornek-tema/*                         /upper-secondary/UpperSecondary_SharedAssets_TeacherZone/upper-secondary/ornek-tema/:splat                         200
+
+# Download packages are stored separately from the lesson pages.
+/upper-secondary/downloads/after-prep-10/*             /upper-secondary/UpperSecondary_AfterPrep10_Part2/upper-secondary/downloads/after-prep-10/:splat             200
+/upper-secondary/downloads/year-9/*                    /upper-secondary/UpperSecondary_Year9_Part2/upper-secondary/downloads/year-9/:splat                    200
+/upper-secondary/downloads/year-10/*                   /upper-secondary/UpperSecondary_Year10_Part2/upper-secondary/downloads/year-10/:splat                   200
+/upper-secondary/downloads/year-11/*                   /upper-secondary/UpperSecondary_Year11_Part2/upper-secondary/downloads/year-11/:splat                   200
+
 # build tools live in the repo but are not part of the public site
 /tools/*   /404   404!
