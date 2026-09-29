@@ -8,6 +8,20 @@
 /upper-secondary/ /upper-secondary/UpperSecondary_SharedAssets_TeacherZone/upper-secondary/  200
 /upper-secondary/assets/* /upper-secondary/UpperSecondary_SharedAssets_TeacherZone/upper-secondary/assets/:splat 200
 
+# Shared assets for direct/internal package URLs (keeps existing relative CSS/JS working)
+/upper-secondary/UpperSecondary_Prep_Downloads_Complete/prep/assets/* /upper-secondary/UpperSecondary_SharedAssets_TeacherZone/upper-secondary/assets/:splat 200
+/upper-secondary/UpperSecondary_AfterPrep9_Part1/upper-secondary/assets/* /upper-secondary/UpperSecondary_SharedAssets_TeacherZone/upper-secondary/assets/:splat 200
+/upper-secondary/UpperSecondary_AfterPrep9_Part2/upper-secondary/assets/* /upper-secondary/UpperSecondary_SharedAssets_TeacherZone/upper-secondary/assets/:splat 200
+/upper-secondary/UpperSecondary_AfterPrep10_Part1/upper-secondary/assets/* /upper-secondary/UpperSecondary_SharedAssets_TeacherZone/upper-secondary/assets/:splat 200
+/upper-secondary/UpperSecondary_AfterPrep10_Part2/upper-secondary/assets/* /upper-secondary/UpperSecondary_SharedAssets_TeacherZone/upper-secondary/assets/:splat 200
+/upper-secondary/UpperSecondary_AfterPrep11/upper-secondary/assets/* /upper-secondary/UpperSecondary_SharedAssets_TeacherZone/upper-secondary/assets/:splat 200
+/upper-secondary/UpperSecondary_Year9_Part1/upper-secondary/assets/* /upper-secondary/UpperSecondary_SharedAssets_TeacherZone/upper-secondary/assets/:splat 200
+/upper-secondary/UpperSecondary_Year9_Part2/upper-secondary/assets/* /upper-secondary/UpperSecondary_SharedAssets_TeacherZone/upper-secondary/assets/:splat 200
+/upper-secondary/UpperSecondary_Year10_Part1/upper-secondary/assets/* /upper-secondary/UpperSecondary_SharedAssets_TeacherZone/upper-secondary/assets/:splat 200
+/upper-secondary/UpperSecondary_Year10_Part2/upper-secondary/assets/* /upper-secondary/UpperSecondary_SharedAssets_TeacherZone/upper-secondary/assets/:splat 200
+/upper-secondary/UpperSecondary_Year11_Part1/upper-secondary/assets/* /upper-secondary/UpperSecondary_SharedAssets_TeacherZone/upper-secondary/assets/:splat 200
+/upper-secondary/UpperSecondary_Year11_Part2/upper-secondary/assets/* /upper-secondary/UpperSecondary_SharedAssets_TeacherZone/upper-secondary/assets/:splat 200
+
 # Programme pages
 /upper-secondary/prep/* /upper-secondary/UpperSecondary_Prep_Downloads_Complete/prep/:splat 200
 /upper-secondary/after-prep-10/* /upper-secondary/UpperSecondary_AfterPrep10_Part1/upper-secondary/after-prep-10/:splat 200
