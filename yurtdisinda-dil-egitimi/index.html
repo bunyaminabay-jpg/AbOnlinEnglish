@@ -3,40 +3,332 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Yurtdışında Dil Eğitimi — Yakında | AbOnlinEnglish</title>
-<meta name="description" content="Yurtdışında dil eğitimi rehberi hazırlanıyor. Çok yakında AbOnlinEnglish'te.">
-<meta name="robots" content="noindex">
+<title>Yurtdışında Dil Eğitimi — Ülke Ülke Dil Okulu Rehberi | AbOnlinEnglish</title>
+<meta name="description" content="Yurtdışında dil eğitimi almak isteyenler için ülke ülke dil okulu rehberi: şehirler, program süreleri, güncel fiyat aralıkları, yaş grupları ve çalışma izni bilgileri.">
 <link rel="canonical" href="https://abonlinenglish.school/yurtdisinda-dil-egitimi">
 <style>
-:root{--navy:#102F5F;--blue:#1479E8;--bg-tint:#F3F7FC;--ink:#182A44;--muted:#59677C;--line:#E1E8F2}
+:root{
+  --navy:#102F5F;--navy-ink:#0C2648;--blue:#1479E8;--blue-dark:#0F5FC0;
+  --bg-tint:#F3F7FC;--bg-tint-2:#EAF1FA;--line:#E1E8F2;--ink:#182A44;
+  --muted:#59677C;--muted-2:#7A879A;
+  --shadow-sm:0 2px 10px -4px rgba(16,47,95,.12);
+  --shadow-md:0 14px 34px -14px rgba(16,47,95,.22);
+  --radius:16px;--radius-sm:10px;--container:1180px;
+}
 *{box-sizing:border-box}
-body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg-tint);color:var(--ink)}
-.wrap{min-height:100vh;display:flex;flex-direction:column}
-header{padding:22px 24px}
-header a{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:var(--navy);font-weight:700;font-size:18px}
-header img{width:36px;height:36px;border-radius:8px}
-main{flex:1;display:flex;align-items:center;justify-content:center;padding:40px 20px}
-.card{max-width:560px;text-align:center;background:#fff;border:1px solid var(--line);border-radius:20px;padding:48px 36px;box-shadow:0 14px 34px -14px rgba(16,47,95,.18)}
-.badge{display:inline-block;background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;font-weight:600;font-size:13px;letter-spacing:.02em;padding:6px 14px;border-radius:999px;margin-bottom:18px}
-h1{font-size:28px;margin:0 0 14px;color:var(--navy)}
-p{color:var(--muted);line-height:1.6;font-size:16px;margin:0 0 28px}
-.btn{display:inline-block;background:var(--blue);color:#fff;text-decoration:none;font-weight:600;padding:13px 26px;border-radius:999px}
-.btn:hover{background:var(--navy)}
-footer{padding:20px;text-align:center;color:var(--muted);font-size:13px}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:#fff;color:var(--ink);line-height:1.5}
+.container{max-width:var(--container);margin:0 auto;padding:0 24px}
+a{color:var(--blue)}
+header.top{padding:18px 0;border-bottom:1px solid var(--line)}
+.top-inner{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--navy);font-weight:700;font-size:18px}
+.brand img{width:38px;height:38px;border-radius:9px}
+.top-actions{display:flex;gap:10px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:11px 20px;font-weight:600;font-size:14.5px;text-decoration:none;white-space:nowrap;border:1.5px solid transparent;cursor:pointer}
+.btn-primary{background:var(--blue);color:#fff}
+.btn-primary:hover{background:var(--blue-dark)}
+.btn-outline{border-color:var(--line);color:var(--navy);background:#fff}
+.btn-outline:hover{border-color:var(--blue)}
+.back-link{font-size:14px;color:var(--muted);text-decoration:none}
+.back-link:hover{color:var(--blue)}
+
+.hero{padding:56px 0 40px;background:linear-gradient(180deg,var(--bg-tint) 0%,#fff 100%)}
+.hero .eyebrow{display:inline-block;background:var(--bg-tint-2);color:var(--navy);font-weight:600;font-size:13px;padding:6px 14px;border-radius:999px;margin-bottom:16px}
+.hero h1{font-size:clamp(32px,4.6vw,48px);margin:0 0 16px;color:var(--navy);letter-spacing:-.4px}
+.hero p{max-width:760px;color:var(--muted);font-size:17px;line-height:1.65;margin:0 0 22px}
+.hero .actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero .note{margin-top:18px;font-size:13.5px;color:var(--muted-2)}
+
+.section{padding:52px 0}
+.section-alt{background:var(--bg-tint)}
+.section h2{font-size:clamp(24px,3vw,32px);color:var(--navy);margin:0 0 10px}
+.section .lede{color:var(--muted);font-size:15.5px;max-width:760px;margin:0 0 32px;line-height:1.6}
+
+.country-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
+.ccard{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px 22px 20px;box-shadow:var(--shadow-sm)}
+.ccard h3{margin:0 0 4px;font-size:19px;color:var(--navy);display:flex;align-items:center;gap:8px}
+.ccard .cities{color:var(--muted-2);font-size:13px;margin:0 0 14px}
+.ccard table{width:100%;border-collapse:collapse;font-size:13.5px;margin-bottom:12px}
+.ccard table td{padding:5px 0;border-top:1px dashed var(--line)}
+.ccard table td:first-child{color:var(--muted);width:44%}
+.ccard table td:last-child{text-align:right;font-weight:600;color:var(--ink)}
+.ccard .meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.ccard .chip{background:var(--bg-tint-2);color:var(--navy);font-size:11.5px;font-weight:600;padding:4px 10px;border-radius:999px}
+
+.age-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.age-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+.age-card .num{display:inline-block;background:var(--blue);color:#fff;font-weight:700;font-size:14px;padding:5px 14px;border-radius:999px;margin-bottom:14px}
+.age-card h3{margin:0 0 8px;color:var(--navy);font-size:19px}
+.age-card p{color:var(--muted);font-size:14.5px;margin:0}
+
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.step{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+.step .k{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:var(--navy);color:#fff;font-weight:700;font-size:14px;margin-bottom:12px}
+.step h4{margin:0 0 6px;font-size:15.5px;color:var(--ink)}
+.step p{margin:0;color:var(--muted);font-size:13.5px;line-height:1.5}
+
+.disclaimer{background:#fff;border:1px solid var(--line);border-radius:var(--radius-sm);padding:18px 20px;font-size:13px;color:var(--muted);line-height:1.6}
+
+.cta{background:linear-gradient(135deg,var(--navy),var(--blue));border-radius:var(--radius);padding:44px 40px;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.cta h2{color:#fff;margin:0 0 8px;font-size:24px}
+.cta p{margin:0;opacity:.88;font-size:14.5px;max-width:440px}
+.cta .actions{display:flex;gap:12px;flex-wrap:wrap}
+.cta .btn-primary{background:#fff;color:var(--navy)}
+.cta .btn-primary:hover{background:var(--bg-tint)}
+.cta .btn-outline{border-color:rgba(255,255,255,.5);color:#fff;background:transparent}
+.cta .btn-outline:hover{border-color:#fff}
+
+footer.site-footer{padding:32px 0;text-align:center;color:var(--muted-2);font-size:13px;border-top:1px solid var(--line)}
+
+@media (max-width:880px){
+  .age-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:560px){
+  .steps{grid-template-columns:1fr}
+  .cta{flex-direction:column;align-items:flex-start}
+}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <header><a href="/"><img src="/assets/logo.jpg" alt="">AbOnlinEnglish</a></header>
-  <main>
-    <div class="card">
-      <span class="badge">Yakında</span>
-      <h1>Yurtdışında Dil Eğitimi</h1>
-      <p>Yurtdışında dil eğitimi rehberimizi hazırlıyoruz — okul seçimi, süreç ve pratik ipuçlarıyla çok yakında burada olacak.</p>
-      <a class="btn" href="/">Ana Sayfaya Dön</a>
+
+<header class="top">
+  <div class="container top-inner">
+    <a class="brand" href="/"><img src="/assets/logo.jpg" alt="AbOnlinEnglish logosu">AbOnlinEnglish</a>
+    <div class="top-actions">
+      <a class="back-link" href="/">← Ana Sayfa</a>
+      <a class="btn btn-primary" href="https://wa.me/onlineelt1" target="_blank" rel="noopener">WhatsApp'tan Yaz</a>
     </div>
-  </main>
-  <footer>AbOnlinEnglish Dil Eğitimi</footer>
-</div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow">Yurtdışı Eğitim Rehberi</span>
+    <h1>Yurtdışında Dil Eğitimi</h1>
+    <p>Yurtdışında bir dil okulunda İngilizce, Almanca, İspanyolca veya Japonca öğrenmeyi mi düşünüyorsun? Aşağıda ülke ülke şehir seçenekleri, program süreleri, güncel fiyat aralıkları ve çalışma izni bilgilerini bulabilirsin. Yola çıkmadan önce dil seviyeni AbOnlinEnglish'te güçlendirip, doğru okulu ve programı seçme konusunda bizden birebir yönlendirme alabilirsin.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="https://wa.me/onlineelt1" target="_blank" rel="noopener">WhatsApp'tan Danış</a>
+      <a class="btn btn-outline" href="mailto:ingilizceogrensene@gmail.com">E-posta Gönder</a>
+      <a class="btn btn-outline" href="/placement-test">Önce Seviyeni Öğren</a>
+    </div>
+    <p class="note">Fiyatlar 2026 yılı genel piyasa aralıklarını gösteren yaklaşık rakamlardır; okul, sezon ve döviz kuruna göre değişir. Kesin fiyat ve kontenjan için bizimle iletişime geç.</p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="countries-title">
+  <div class="container">
+    <h2 id="countries-title">Ülke Ülke Dil Okulu Seçenekleri</h2>
+    <p class="lede">10 ülkede dil okulu şehirleri, program süreleri ve 2026 yaklaşık fiyat aralıkları. Fiyatlar eğitim ücretini gösterir; konaklama ayrıca hesaplanmıştır.</p>
+
+    <div class="country-grid">
+
+      <div class="ccard">
+        <h3>🇬🇧 İngiltere</h3>
+        <p class="cities">Londra, Oxford, Cambridge, Brighton, Bath, Bournemouth, Manchester, Birmingham, Canterbury</p>
+        <table>
+          <tr><td>1 aylık program</td><td>630–1.300 GBP</td></tr>
+          <tr><td>6 aylık program</td><td>3.000–4.500 GBP</td></tr>
+          <tr><td>Yaz dönemi</td><td>1.500–2.700 GBP</td></tr>
+          <tr><td>Konaklama / hafta</td><td>150–350 GBP</td></tr>
+        </table>
+        <div class="meta"><span class="chip">Vize ~3-6 hafta</span><span class="chip">Haftada 20 saat çalışma izni</span></div>
+      </div>
+
+      <div class="ccard">
+        <h3>🇺🇸 Amerika</h3>
+        <p class="cities">New York, Boston, Chicago, Washington, Seattle, Portland, Florida, California, Philadelphia, Atlanta</p>
+        <table>
+          <tr><td>1 aylık program</td><td>1.200–2.200 USD</td></tr>
+          <tr><td>6 aylık program</td><td>6.000–8.500 USD</td></tr>
+          <tr><td>Yaz dönemi (yoğun)</td><td>3.500–4.500 USD</td></tr>
+          <tr><td>Konaklama / hafta</td><td>200–400 USD</td></tr>
+        </table>
+        <div class="meta"><span class="chip">Lise ve yetişkin programları</span></div>
+      </div>
+
+      <div class="ccard">
+        <h3>🇲🇹 Malta</h3>
+        <p class="cities">Valletta, St. Julian's, Sliema, Gozo</p>
+        <table>
+          <tr><td>1 aylık program</td><td>1.000–1.800 EUR</td></tr>
+          <tr><td>6 aylık program</td><td>4.500–7.100 EUR</td></tr>
+          <tr><td>Yaz dönemi (yoğun)</td><td>2.500–3.700 EUR</td></tr>
+          <tr><td>Konaklama / hafta</td><td>100–250 EUR</td></tr>
+        </table>
+        <div class="meta"><span class="chip">Yetişkin + çocuk/aile programı</span><span class="chip">Haftada 20 saat çalışma izni</span></div>
+      </div>
+
+      <div class="ccard">
+        <h3>🇮🇪 İrlanda</h3>
+        <p class="cities">Dublin, Cork, Limerick, Waterford, Bray, Drogheda</p>
+        <table>
+          <tr><td>1 aylık program</td><td>1.200–1.800 EUR</td></tr>
+          <tr><td>6 aylık program</td><td>6.500–8.500 EUR</td></tr>
+          <tr><td>Yaz dönemi</td><td>2.500–3.500 EUR</td></tr>
+          <tr><td>Konaklama / hafta</td><td>150–300 EUR</td></tr>
+        </table>
+        <div class="meta"><span class="chip">Çalışma izinli programlar mevcut</span></div>
+      </div>
+
+      <div class="ccard">
+        <h3>🇨🇦 Kanada</h3>
+        <p class="cities">Toronto, Vancouver, Montreal, Calgary, Lunenburg</p>
+        <table>
+          <tr><td>1 aylık program</td><td>1.200–1.850 CAD</td></tr>
+          <tr><td>6 aylık program</td><td>6.000–7.600 CAD</td></tr>
+          <tr><td>Yaz dönemi (yoğun)</td><td>3.200–4.400 CAD</td></tr>
+          <tr><td>Konaklama / hafta</td><td>150–350 CAD</td></tr>
+        </table>
+        <div class="meta"><span class="chip">Vize ~3-6 hafta</span></div>
+      </div>
+
+      <div class="ccard">
+        <h3>🇦🇺 Avustralya</h3>
+        <p class="cities">Sydney, Melbourne, Brisbane, Perth, Adelaide, Gold Coast, Cairns, Darwin</p>
+        <table>
+          <tr><td>1 aylık program</td><td>1.250–2.000 AUD</td></tr>
+          <tr><td>6 aylık program</td><td>7.000–9.000 AUD</td></tr>
+          <tr><td>Yaz dönemi (yoğun)</td><td>3.000–5.000 AUD</td></tr>
+          <tr><td>Konaklama / hafta</td><td>150–300 AUD</td></tr>
+        </table>
+        <div class="meta"><span class="chip">Vize 4-6 hafta</span><span class="chip">Haftada 20 saat çalışma izni</span></div>
+      </div>
+
+      <div class="ccard">
+        <h3>🇩🇪 Almanya</h3>
+        <p class="cities">Berlin, Münih, Hamburg, Frankfurt, Heidelberg, Essen</p>
+        <table>
+          <tr><td>4 hafta</td><td>700–1.200 EUR</td></tr>
+          <tr><td>12 hafta</td><td>2.100–3.300 EUR</td></tr>
+          <tr><td>24 hafta</td><td>4.000–6.000 EUR</td></tr>
+          <tr><td>Konaklama / ay</td><td>500–900 EUR</td></tr>
+        </table>
+        <div class="meta"><span class="chip">Yaş sınırı yok, lise mezunu yeterli</span><span class="chip">TestDaF/telc hazırlık</span></div>
+      </div>
+
+      <div class="ccard">
+        <h3>🇪🇸 İspanya</h3>
+        <p class="cities">Barcelona, Madrid, Málaga</p>
+        <table>
+          <tr><td>1 aylık program</td><td>900–1.100 EUR</td></tr>
+          <tr><td>6 aylık program</td><td>5.000–5.500 EUR</td></tr>
+          <tr><td>Yaz dönemi (yoğun)</td><td>2.000–2.500 EUR</td></tr>
+          <tr><td>Konaklama / hafta</td><td>100–250 EUR</td></tr>
+        </table>
+        <div class="meta"><span class="chip">Vize ~3-6 hafta</span><span class="chip">Haftada 20 saat çalışma izni</span></div>
+      </div>
+
+      <div class="ccard">
+        <h3>🇦🇪 Dubai</h3>
+        <p class="cities">Dubai</p>
+        <table>
+          <tr><td>1 aylık program</td><td>1.900–3.000 AED</td></tr>
+          <tr><td>6 aylık program</td><td>4.700–10.000 AED</td></tr>
+          <tr><td>Yaz dönemi (yoğun)</td><td>2.900–4.500 AED</td></tr>
+          <tr><td>Konaklama / hafta</td><td>1.500–3.000 AED</td></tr>
+        </table>
+        <div class="meta"><span class="chip">Vize 2-4 hafta</span><span class="chip">Program sonrası çalışma izni imkânı</span></div>
+      </div>
+
+      <div class="ccard">
+        <h3>🇯🇵 Japonya</h3>
+        <p class="cities">Tokyo, Osaka, Kyoto, Fukuoka, Kobe</p>
+        <table>
+          <tr><td>1 aylık program</td><td>150.000–250.000 JPY</td></tr>
+          <tr><td>6 aylık program</td><td>800.000–1.200.000 JPY</td></tr>
+          <tr><td>Yaz dönemi</td><td>200.000–350.000 JPY</td></tr>
+          <tr><td>Konaklama / hafta</td><td>10.000–25.000 JPY</td></tr>
+        </table>
+        <div class="meta"><span class="chip">En az 18 yaş</span><span class="chip">Haftada 28 saat çalışma izni</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" aria-labelledby="age-title">
+  <div class="container">
+    <h2 id="age-title">Yaşa Göre Program Türleri</h2>
+    <p class="lede">Yetişkin genel dil programlarının çoğunda net bir üst yaş sınırı yoktur (Japonya'da minimum 18, Almanya'da lise mezuniyeti yeterli). Çocuk ve genç öğrenciler için ise ayrı, gözetimli yaz okulu programları sunulur:</p>
+    <div class="age-grid">
+      <div class="age-card">
+        <span class="num">8–12 yaş</span>
+        <h3>Çocuk Yaz Okulu Programları</h3>
+        <p>Yaşa uygun, güvenli ve gözetimli ortamlarda düzenlenen kısa süreli yaz kampları. Dil dersleri, sanat atölyeleri ve sosyal aktivitelerle desteklenir; genellikle İngiltere, Malta, İrlanda, İspanya ve Amerika'da düzenlenir.</p>
+      </div>
+      <div class="age-card">
+        <span class="num">13–16 yaş</span>
+        <h3>Genç Yaz Okulu Programları</h3>
+        <p>Daha yoğun dil eğitimi, kültürel geziler ve grup aktiviteleriyle desteklenen genç programları. Aile programı seçeneği de bulunur.</p>
+      </div>
+      <div class="age-card">
+        <span class="num">17+ yaş</span>
+        <h3>Yetişkin / Genel İngilizce Programları</h3>
+        <p>1 aylık ve 6 aylık genel dil, iş dili ve sınav hazırlık (IELTS, TOEFL, TestDaF, JLPT vb.) programları. Çoğu ülkede öğrenci vizesiyle haftada 20–28 saat çalışma izni mümkündür.</p>
+      </div>
+      <div class="age-card">
+        <span class="num">18+ yaş</span>
+        <h3>Work &amp; Study / Work &amp; Travel</h3>
+        <p>Avustralya, Dubai, İrlanda ve Malta gibi ülkelerde dil eğitimiyle birlikte çalışma imkânı sunan programlar; Amerika ve Kanada'da ise Work &amp; Travel ve staj seçenekleri mevcuttur.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="steps-title">
+  <div class="container">
+    <h2 id="steps-title">Nasıl Başlarım?</h2>
+    <p class="lede">Yurtdışı dil okuluna gitmeden önce izleyebileceğin pratik yol:</p>
+    <div class="steps">
+      <div class="step">
+        <span class="k">1</span>
+        <h4>Seviyeni Öğren</h4>
+        <p>Ücretsiz seviye testimizle CEFR seviyeni (A1–C1) birkaç dakikada öğren.</p>
+      </div>
+      <div class="step">
+        <span class="k">2</span>
+        <h4>Seviyeni Güçlendir</h4>
+        <p>Gitmeden önce Kendin Öğren, Lise veya Ortaokul serilerimizle günlük İngilizceni pekiştir.</p>
+      </div>
+      <div class="step">
+        <span class="k">3</span>
+        <h4>Ülke ve Program Seç</h4>
+        <p>Yukarıdaki bilgilerle bütçene ve hedefine uygun ülke, şehir ve süreyi belirle.</p>
+      </div>
+      <div class="step">
+        <span class="k">4</span>
+        <h4>Bize Danış</h4>
+        <p>WhatsApp veya e-postadan yaz; sorularını birebir yanıtlayalım.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <p class="disclaimer">Bu sayfadaki şehir, süre ve fiyat bilgileri, yurtdışı eğitim danışmanlığı sektöründeki güncel (2026) genel piyasa aralıklarına dayanan yaklaşık rakamlardır; okuldan okula, sezona ve döviz kuruna göre değişebilir. AbOnlinEnglish bu sayfada yalnızca bilgilendirme ve İngilizce hazırlık desteği sunar; kesin fiyat, kontenjan ve başvuru süreci için doğrudan bizimle iletişime geçmeni öneririz.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cta">
+      <div>
+        <h2>Sorularını yanıtlayalım</h2>
+        <p>Hangi ülke, hangi süre, hangi bütçe? WhatsApp'tan yaz, birlikte planlayalım.</p>
+      </div>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://wa.me/onlineelt1" target="_blank" rel="noopener">WhatsApp'tan Yaz</a>
+        <a class="btn btn-outline" href="mailto:ingilizceogrensene@gmail.com">E-posta Gönder</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">AbOnlinEnglish Dil Eğitimi · <a href="/">Ana Sayfa</a></div>
+</footer>
+
 </body>
 </html>
