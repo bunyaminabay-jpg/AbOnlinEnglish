@@ -373,8 +373,13 @@
         if (on && t.scrollIntoView && bar) { var r = t.getBoundingClientRect(), br = bar.getBoundingClientRect(); if (r.left < br.left || r.right > br.right) t.scrollIntoView({ block: "nearest", inline: "center" }); }
       });
       if (scrollTo) {
-        if (target && ids.indexOf(id) < 0) target.scrollIntoView({ block: "start" });
-        else { var top = (bar ? bar.getBoundingClientRect().top + window.pageYOffset : 0); if (window.pageYOffset > top) window.scrollTo(0, top); }
+        var scrollEl = (target && ids.indexOf(id) < 0) ? target : document.getElementById(panelId);
+        if (scrollEl) {
+          var barH = bar ? bar.getBoundingClientRect().height : 0;
+          var y = 0, node = scrollEl;
+          while (node) { y += node.offsetTop; node = node.offsetParent; }
+          window.scrollTo(0, Math.max(y - barH - 8, 0));
+        }
       }
     }
     document.addEventListener("click", function (e) {
