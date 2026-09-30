@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-labelledby="t">
+<title id="t">Yurtdışında dil eğitimi — uçak ve dünya haritası temalı illüstrasyon</title>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#102F5F"/>
+<stop offset="1" stop-color="#1479E8"/>
+</linearGradient>
+</defs>
+<rect width="800" height="1000" fill="url(#bg)"/>
+<g opacity=".16" stroke="#ffffff" stroke-width="2" fill="none">
+<circle cx="400" cy="430" r="230"/>
+<ellipse cx="400" cy="430" rx="230" ry="90"/>
+<ellipse cx="400" cy="430" rx="230" ry="150"/>
+<line x1="170" y1="430" x2="630" y2="430"/>
+<line x1="400" y1="200" x2="400" y2="660"/>
+</g>
+<g fill="#ffffff" opacity=".92">
+<path d="M470 300 L560 220 L590 240 L520 330 L590 360 L640 340 L660 365 L590 410 L500 400 L430 460 L460 500 L440 520 L390 470 L350 500 L340 470 L380 430 L330 400 L300 415 L280 390 L340 360 L410 345 Z" transform="translate(-40,10) scale(0.62) translate(60,60)"/>
+</g>
+<g transform="translate(400,430) rotate(-28)">
+<path d="M0 -95
+  C 14 -95 24 -78 24 -50
+  L 24 10
+  L 92 58
+  C 100 63 100 75 92 80
+  L 24 55
+  L 24 96
+  L 52 118
+  C 58 123 58 133 50 135
+  L 0 122
+  L -50 135
+  C -58 133 -58 123 -52 118
+  L -24 96
+  L -24 55
+  L -92 80
+  C -100 75 -100 63 -92 58
+  L -24 10
+  L -24 -50
+  C -24 -78 -14 -95 0 -95 Z"
+  fill="#ffffff"/>
+</g>
+<g fill="#ffffff" opacity=".85">
+<circle cx="560" cy="230" r="5"/>
+<circle cx="605" cy="270" r="3.5"/>
+<circle cx="245" cy="620" r="4"/>
+<circle cx="300" cy="660" r="3"/>
+<circle cx="530" cy="640" r="3.5"/>
+</g>
+<g stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity=".55" fill="none">
+<path d="M150 620 C 220 590 280 590 330 630" stroke-dasharray="2 10"/>
+</g>
+</svg>

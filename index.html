@@ -274,7 +274,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{
 .teacher-list li:first-child{padding-top:0}
 
 /* ---------- Choose your goal ---------- */
-.goal-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:22px}
+.goal-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:22px}
 .goal-card{
   position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);
   aspect-ratio:4/5;display:flex;align-items:flex-end;transition:box-shadow .22s ease,transform .22s ease;
@@ -487,9 +487,14 @@ a:focus-visible,button:focus-visible,input:focus-visible{
           <div class="dropdown">
             <a href="/ogretmenbul"><b>Öğretmenimiz Ol</b><span>Ailemize katıl, öğrencilerle buluş</span></a>
             <a href="/ogretmenbul"><b>Sana Uygun Öğretmeni Bul</b><span>İhtiyacına göre öğretmen eşleştir</span></a>
-            <a href="/teacher-planner"><b>Özel Ders Rehberi</b><span>Ders planla, materyallerini yönet</span></a>
-            <a href="/ozeldersrehberi"><b>Öğretmen Kaynakları</b><span>Ders planları ve sınıf materyalleri</span></a>
+            <a href="/teacher-planner"><b>Öğretmen Bölümü</b><span>Ders planlayıcı (Teacher Planner)</span></a>
+            <a href="/ozeldersrehberi"><b>Özel Ders Sistemi Nasıl Kurulur</b><span>5 kitaplık kurulum rehberi</span></a>
             <a href="/meboyunmerkezi"><b>MEB Oyun Merkezi</b><span>Müfredata uygun sınıf oyunları</span></a>
+            <a href="/kendin-ogren"><b>Kendin Öğren PDF'leri</b><span>İndirilebilir, seviye seviye çalışma kağıtları</span></a>
+            <a href="/gramer-serisi/"><b>İnfoGrammar</b><span>Görsel, indirilebilir gramer posterleri</span></a>
+            <a href="/grammar"><b>Dilbilgisi Serisi</b><span>Detaylı, interaktif gramer alıştırmaları</span></a>
+            <a href="/ortaokul-serisi/"><b>Ortaokul Materyalleri</b><span>5–8. sınıf ünite kartları</span></a>
+            <a href="/upper-secondary/"><b>Lise Materyalleri</b><span>Hazırlık, 9–11. sınıf içerikleri</span></a>
           </div>
         </li>
 
@@ -561,9 +566,14 @@ a:focus-visible,button:focus-visible,input:focus-visible{
         <div class="mobile-sub">
           <a href="/ogretmenbul">Öğretmenimiz Ol</a>
           <a href="/ogretmenbul">Sana Uygun Öğretmeni Bul</a>
-          <a href="/teacher-planner">Özel Ders Rehberi</a>
-          <a href="/ozeldersrehberi">Öğretmen Kaynakları</a>
+          <a href="/teacher-planner">Öğretmen Bölümü (Teacher Planner)</a>
+          <a href="/ozeldersrehberi">Özel Ders Sistemi Nasıl Kurulur</a>
           <a href="/meboyunmerkezi">MEB Oyun Merkezi</a>
+          <a href="/kendin-ogren">Kendin Öğren PDF'leri</a>
+          <a href="/gramer-serisi/">İnfoGrammar</a>
+          <a href="/grammar">Dilbilgisi Serisi</a>
+          <a href="/ortaokul-serisi/">Ortaokul Materyalleri</a>
+          <a href="/upper-secondary/">Lise Materyalleri</a>
         </div>
       </li>
       <li><a href="/ielts">Sınavlar</a></li>
@@ -597,7 +607,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{
         <p class="hero-sub">Öğrenciler, öğretmenler ve sınava hazırlananlar için İngilizce kaynakları — gramer, hikâyeler, fonetik ve sınav hazırlığı, hepsi tek bir yerde.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="/kendin-ogren">Öğrenmeye Başla →</a>
-          <a class="btn btn-outline" href="#teacher-zone">Öğretmen Bölümü</a>
+          <a class="btn btn-outline" href="/teacher-planner">Öğretmen Bölümü</a>
         </div>
         <nav class="hero-quicklinks" aria-label="Hızlı erişim">
           <a href="/ortaokul-serisi/">Ortaokul İngilizce</a>
@@ -630,7 +640,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{
           </div>
         </a>
 
-        <a class="pathway-card" href="#teacher-zone">
+        <a class="pathway-card" href="/teacher-planner">
           <div class="media"><img src="assets/03-teacher-zone.jpg" alt="Kalem ve dosyanın yanında Plan, Teach, Inspire yazan bir defter" loading="lazy" width="800" height="600"></div>
           <div class="body">
             <h3>Öğretmen Bölümü</h3>
@@ -730,7 +740,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{
             <span>CEFR seviyene uygun seçilmiş hikâyeler.</span>
           </li>
           <li>
-            <a href="/ozeldersrehberi">Öğretmen Kaynak Kütüphanesi</a>
+            <a href="/teacher-planner">Öğretmen Kaynak Kütüphanesi</a>
             <span>Diğer öğretmenlerin önerdiği ders planları ve sınıf materyalleri.</span>
           </li>
           <li>
@@ -833,10 +843,18 @@ a:focus-visible,button:focus-visible,input:focus-visible{
           <li><a href="/placement-test">Seviye testi</a></li>
           <li><a href="#resources">Önerilen kaynakları bul</a></li>
           <li><a href="/teacher-planner">Derslerini planla</a></li>
-          <li><a href="/ozeldersrehberi">Kullanıma hazır öğretim materyalleri</a></li>
         </ul>
-        <div style="margin-top:32px">
-          <a class="btn btn-primary" href="/ozeldersrehberi">Öğretmen Bölümüne Gir →</a>
+        <p style="margin:22px 0 10px;font-weight:600;color:var(--ink)">Kullanıma hazır öğretim materyalleri</p>
+        <ul class="teacher-list">
+          <li><a href="/kendin-ogren">Kendin Öğren PDF'leri</a></li>
+          <li><a href="/gramer-serisi/">İnfoGrammar</a></li>
+          <li><a href="/grammar">Dilbilgisi Serisi</a></li>
+          <li><a href="/ortaokul-serisi/">Ortaokul</a></li>
+          <li><a href="/upper-secondary/">Lise</a></li>
+        </ul>
+        <div style="margin-top:32px;display:flex;gap:14px;flex-wrap:wrap">
+          <a class="btn btn-primary" href="/teacher-planner">Öğretmen Bölümüne Gir →</a>
+          <a class="btn btn-outline" href="/ozeldersrehberi">Özel Ders Sistemi Nasıl Kurulur →</a>
         </div>
       </div>
     </div>
@@ -859,17 +877,21 @@ a:focus-visible,button:focus-visible,input:focus-visible{
           <img src="assets/15-goal-exam.jpg" alt="Kitapların üzerinde, tam ortasına ok saplanmış bir dart hedefi" loading="lazy" width="600" height="445">
           <span class="label">Sınava Hazırlanmak</span>
         </a>
-        <a class="goal-card" href="/ozeldersrehberi">
+        <a class="goal-card" href="/teacher-planner">
           <img src="assets/16-goal-teaching.jpg" alt="Plan, Teach, Inspire yazan bir defter" loading="lazy" width="600" height="445">
           <span class="label">Öğretim Kaynağı Bulmak</span>
         </a>
-        <a class="goal-card" href="/a1-a2-b1-b2-c1-c2">
+        <a class="goal-card" href="/kendin-ogren">
           <img src="assets/17-goal-study.jpg" alt="Bir bitkinin yanında masa üzerinde dizüstü bilgisayar ve defter" loading="lazy" width="600" height="445">
           <span class="label">Kendi Başıma Çalışmak</span>
         </a>
         <a class="goal-card" href="/skills">
           <img src="assets/18-goal-speaking.jpg" alt="Confidence Starts with a Conversation yazan bir kupa" loading="lazy" width="600" height="445">
           <span class="label">Konuşmamı Geliştirmek</span>
+        </a>
+        <a class="goal-card" href="/yurtdisinda-dil-egitimi">
+          <img src="assets/25-goal-abroad.svg" alt="Uçak ve dünya haritası illüstrasyonu" loading="lazy" width="600" height="445">
+          <span class="label">Yurtdışında Dil Eğitimi</span>
         </a>
 
       </div>
@@ -1023,8 +1045,8 @@ a:focus-visible,button:focus-visible,input:focus-visible{
         <ul>
           <li><a href="/ogretmenbul">Öğretmenimiz Ol</a></li>
           <li><a href="/ogretmenbul">Sana Uygun Öğretmeni Bul</a></li>
-          <li><a href="/teacher-planner">Özel Ders Rehberi</a></li>
-          <li><a href="/ozeldersrehberi">Öğretmen Kaynakları</a></li>
+          <li><a href="/teacher-planner">Öğretmen Bölümü (Teacher Planner)</a></li>
+          <li><a href="/ozeldersrehberi">Özel Ders Sistemi Nasıl Kurulur</a></li>
           <li><a href="/meboyunmerkezi">MEB Oyun Merkezi</a></li>
         </ul>
       </div>
@@ -1099,8 +1121,11 @@ a:focus-visible,button:focus-visible,input:focus-visible{
     {label:'IELTS Hazırlık', url:'/ielts'},
     {label:'Öğretmenimiz Ol', url:'/ogretmenbul'},
     {label:'Sana Uygun Öğretmeni Bul', url:'/ogretmenbul'},
-    {label:'Özel Ders Rehberi', url:'/teacher-planner'},
-    {label:'Öğretmen Kaynakları', url:'/ozeldersrehberi'},
+    {label:'Öğretmen Bölümü (Teacher Planner)', url:'/teacher-planner'},
+    {label:'Özel Ders Sistemi Nasıl Kurulur', url:'/ozeldersrehberi'},
+    {label:'Kendin Öğren PDF’leri', url:'/kendin-ogren'},
+    {label:'İnfoGrammar', url:'/gramer-serisi/'},
+    {label:'Dilbilgisi Serisi', url:'/grammar'},
     {label:'Ortaokul İngilizce · 5, 6, 7, 8. Sınıf Konu Anlatımı', url:'/ortaokul-serisi/'},
     {label:'MEB Oyun Merkezi', url:'/meboyunmerkezi'},
     {label:'Hakkımızda', url:'/hakkimizda'}
