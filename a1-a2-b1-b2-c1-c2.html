@@ -3255,17 +3255,37 @@ document.addEventListener('DOMContentLoaded',()=>{
       if(ut&&m.title)ut.textContent=m.title;
     }
   });
-  showLevel('a1');
+  var __h0=(location.hash||'').slice(1).toLowerCase();
+  var __isDeepLink0=/^(reader|workbook)-(a1|a2|b1|b2|c1|c2)(?:-(\d))?$/.test(__h0);
+  if(!__isDeepLink0){ showLevel('a1'); }
 });
 
 </script>
 <script>
-/* Yeni sayfalara yönlendirme: /a1-a2-b1-b2-c1-c2#a1 → /ingilizce-a1 · #reader-a1-0 ve #workbook-a1 panelleri açar */
+/* Yeni sayfalara yönlendirme: /a1-a2-b1-b2-c1-c2#a1 → /ingilizce-a1 · #reader-a1-0 ve #workbook-a1 panelleri açar
+   Bir seviye sayfasından (ör. /ingilizce-a1/) derin bağlantıyla gelindiğinde,
+   eski çoklu-seviye görünümünü (üst A1-C2 sekmeleri + kenar çubuğu) gizleyip
+   sade bir okuma/alıştırma ekranı gösterir, geri dönüş için bir buton ekler. */
 (function(){
   var h=(location.hash||'').slice(1).toLowerCase();
   if(/^(a1|a2|b1|b2|c1|c2)$/.test(h)){location.replace('/ingilizce-'+h+'/');return;}
-  var m=h.match(/^(reader|workbook)-(a1|a2|b1|b2|c1)(?:-(\d))?$/);
-  if(m){window.addEventListener('load',function(){try{m[1]==='reader'?showReader(m[2],+(m[3]||0)):showWorkbook(m[2]);}catch(e){}});}
+  var m=h.match(/^(reader|workbook)-(a1|a2|b1|b2|c1|c2)(?:-(\d))?$/);
+  if(m){
+    document.addEventListener('DOMContentLoaded',function(){
+      try{
+        m[1]==='reader'?showReader(m[2],+(m[3]||0)):showWorkbook(m[2]);
+        var navLv=document.querySelector('.nav-levels'); if(navLv) navLv.style.display='none';
+        var sbEl=document.getElementById('main-sidebar'); if(sbEl) sbEl.style.display='none';
+        var mnEl=document.querySelector('.main'); if(mnEl){ mnEl.style.marginLeft='0'; mnEl.style.width='100%'; }
+        var backLink=document.createElement('a');
+        backLink.href='/ingilizce-'+m[2]+'/';
+        backLink.textContent='← '+m[2].toUpperCase()+' sayfasına dön';
+        backLink.style.cssText='display:inline-block;margin:14px 0 0 18px;padding:8px 16px;background:#1a3a6b;color:#fff;border-radius:8px;text-decoration:none;font-family:inherit;font-size:14px;font-weight:600;';
+        var panelEl=document.getElementById(m[1]==='reader'?'reader-panel':'workbook-panel');
+        if(panelEl&&panelEl.parentNode) panelEl.parentNode.insertBefore(backLink,panelEl);
+      }catch(e){}
+    });
+  }
 })();
 </script>
 </body>
