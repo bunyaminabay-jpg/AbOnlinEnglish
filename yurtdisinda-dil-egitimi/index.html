@@ -73,6 +73,8 @@ header.top{padding:18px 0;border-bottom:1px solid var(--line)}
 .age-card h3{margin:0 0 8px;color:var(--navy);font-size:19px}
 .age-card p{color:var(--muted);font-size:14.5px;margin:0}
 
+.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.faq-grid{display:grid;grid-template-columns:1fr;gap:16px}
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .step{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px}
 .step .k{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:var(--navy);color:#fff;font-weight:700;font-size:14px;margin-bottom:12px}
@@ -105,15 +107,29 @@ footer.site-footer{padding:32px 0;text-align:center;color:var(--muted-2);font-si
 .form-submit:hover{background:var(--blue-dark)}
 .form-foot{grid-column:1 / -1;font-size:12.5px;color:var(--muted-2);text-align:center;margin-top:2px}
 
+.uk-eyebrow{display:inline-block;background:#fff;border:1px solid var(--line);color:var(--navy);font-weight:600;font-size:13px;padding:6px 14px;border-radius:999px;margin-bottom:16px}
+.subhead{color:var(--navy);font-size:17px;margin:32px 0 14px}
+.feature-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.feature-card .ic{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:11px;background:var(--bg-tint-2);font-size:19px;margin-bottom:12px}
+.feature-card h3{margin:0 0 6px;color:var(--navy);font-size:16px}
+.feature-card p{margin:0;color:var(--muted);font-size:14px;line-height:1.55}
+.faq-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px 24px}
+.faq-card h3{margin:0 0 6px;color:var(--ink);font-size:15.5px}
+.faq-card p{margin:0;color:var(--muted);font-size:14px;line-height:1.55}
+
 @media (max-width:880px){
   .age-grid{grid-template-columns:1fr}
+  .feature-grid{grid-template-columns:1fr 1fr}
   .steps{grid-template-columns:repeat(2,1fr)}
 }
 @media (max-width:560px){
+  .feature-grid{grid-template-columns:1fr}
   .steps{grid-template-columns:1fr}
   .cta{flex-direction:column;align-items:flex-start}
   .form-grid{grid-template-columns:1fr}
   .form-card{padding:26px 20px}
+  .actions{flex-direction:column;align-items:stretch}
+  .actions .btn{width:100%}
 }
 </style>
 </head>
@@ -133,20 +149,20 @@ footer.site-footer{padding:32px 0;text-align:center;color:var(--muted-2);font-si
   <div class="container">
     <span class="eyebrow">Yurtdışı Eğitim Rehberi</span>
     <h1>Yurtdışında Dil Eğitimi</h1>
-    <p>Özellikle lise ve üniversite öğrencileri için yurtdışında yaz okulu ve dil kursu seçenekleri mi arıyorsun? Aşağıda önce öne çıkan yaz okulu ve dil kursu programlarını, sonra ülke ülke şehir seçeneklerini ve okul bilgilerini bulabilirsin. Yola çıkmadan önce dil seviyeni AbOnlinEnglish'te güçlendirip, doğru okulu ve programı seçme konusunda bizden birebir yönlendirme alabilirsin.</p>
+    <p>Lise ve üniversite öğrencileri için yurt dışında yaz okulu ve dil kursu rehberi — öne çıkan programlardan ülke ülke okul seçeneklerine kadar ihtiyacın olan her şey burada. Yola çıkmadan önce AbOnlinEnglish'te dil seviyeni güçlendir; doğru ülkeyi, okulu ve programı seçerken sana birebir yol gösterelim.</p>
     <div class="actions">
       <a class="btn btn-primary" href="#danismanlik">Ücretsiz Danışmanlık Al</a>
       <a class="btn btn-outline" href="https://wa.me/onlineelt1" target="_blank" rel="noopener">WhatsApp'tan Danış</a>
       <a class="btn btn-outline" href="/placement-test">Önce Seviyeni Öğren</a>
     </div>
-    <p class="note">Güncel program, kontenjan ve başvuru detayları için bizimle iletişime geç.</p>
+    <p class="note">Güncel program, kontenjan ve başvuru detaylarını birlikte netleştirelim.</p>
   </div>
 </section>
 
 <section class="section section-alt" aria-labelledby="featured-title">
   <div class="container">
     <h2 id="featured-title">Lise ve Üniversite Öğrencileri İçin Öne Çıkanlar</h2>
-    <p class="lede">En çok tercih edilen iki yol: okul dönemi dışında kısa süreli yaz okulu, ya da uzun dönem dil kursuyla seviye atlamak.</p>
+    <p class="lede">İki temel yol öne çıkıyor: okul tatilinde kısa süreli bir yaz okulu, ya da uzun dönemli bir dil kursuyla seviyeni bir üst kademeye taşımak.</p>
     <div class="age-grid">
       <div class="age-card">
         <span class="num">Lise Öğrencileri</span>
@@ -165,59 +181,65 @@ footer.site-footer{padding:32px 0;text-align:center;color:var(--muted-2);font-si
 
 <section class="section section-alt" aria-labelledby="uk-title">
   <div class="container">
-    <span class="eyebrow" style="display:inline-block;background:#fff;border:1px solid var(--line);color:var(--navy);font-weight:600;font-size:13px;padding:6px 14px;border-radius:999px;margin-bottom:16px">🇬🇧 Öne Çıkan Program</span>
-    <h2 id="uk-title">İngiltere Lise Yaz Okulları: Kampüs Yaşamı ve Dil Eğitimi</h2>
-    <p class="lede">Lise çağındaki öğrenciler için yurt dışında bir yaz geçirmek; yalnızca yabancı dil becerilerini geliştirmekle kalmaz, aynı zamanda bağımsız hareket etme yetisi, global bir vizyon ve ömür boyu sürecek uluslararası dostluklar kazandırır. İngiltere'nin prestijli üniversite kampüslerinde düzenlenen yaz okulu programları, gençlerin güvenli bir ortamda hem akademik hem de sosyal açıdan kendilerini keşfetmelerini sağlar.</p>
+    <span class="uk-eyebrow">🇬🇧 Öne Çıkan Program</span>
+    <h2 id="uk-title">İngiltere Lise Yaz Okulları: Kampüs Yaşamında Bir Yaz</h2>
+    <p class="lede">Bir yazı İngiltere'nin prestijli üniversite kampüslerinde geçirmek, öğrencine sadece akıcı İngilizce kazandırmaz — kendi başına karar alma özgüveni, küresel bir bakış açısı ve dünyanın dört bir yanından ömür boyu sürecek arkadaşlıklar kazandırır. Güvenli, gözetimli bir ortamda hem akademik hem sosyal açıdan gelişen bir deneyim.</p>
 
-    <h3 style="color:var(--navy);font-size:17px;margin:28px 0 14px">Programın Öne Çıkan Özellikleri</h3>
-    <div class="age-grid" style="grid-template-columns:repeat(3,1fr)">
-      <div class="age-card">
+    <h3 class="subhead">Programı Özel Kılan Detaylar</h3>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <span class="ic">💬</span>
         <h3>İnteraktif Dil Eğitimi</h3>
-        <p>Haftada 15–20 saatlik derslerle, teorik ezberden uzak, konuşma ve dinleme odaklı sınıf içi pratikler.</p>
+        <p>Haftada 15–20 saat, ezbere değil konuşma ve dinleme pratiğine dayalı sınıf içi eğitim.</p>
       </div>
-      <div class="age-card">
+      <div class="feature-card">
+        <span class="ic">🌍</span>
         <h3>Uluslararası Sınıflar</h3>
-        <p>Dünyanın dört bir yanından gelen akranlarla aynı sınıflarda eğitim alarak doğal dil pratiği yapma imkânı.</p>
+        <p>Dünyanın dört bir yanından akranlarla aynı sınıfta, gerçek ve doğal dil pratiği.</p>
       </div>
-      <div class="age-card">
+      <div class="feature-card">
+        <span class="ic">🏠</span>
         <h3>Konforlu Kampüs Konaklaması</h3>
-        <p>Üniversite kampüsü sınırları içinde, tek kişilik ve özel banyolu (en-suite) odalarda güvenli konaklama.</p>
+        <p>Üniversite kampüsünde, tek kişilik ve özel banyolu (en-suite) odalarda güvenli konaklama.</p>
       </div>
-      <div class="age-card">
+      <div class="feature-card">
+        <span class="ic">🍽️</span>
         <h3>Tam Pansiyon Beslenme</h3>
-        <p>Öğrencilerin günlük besin ihtiyaçlarına uygun olarak hazırlanan günde 3 öğün yemek servisi.</p>
+        <p>Günde 3 öğün, öğrencinin günlük beslenme ihtiyacına göre hazırlanmış yemek servisi.</p>
       </div>
-      <div class="age-card">
+      <div class="feature-card">
+        <span class="ic">🗺️</span>
         <h3>Zengin Gezi ve Aktivite Programı</h3>
-        <p>Londra şehir merkezi, tarihi cazibe merkezleri ve müzelere düzenlenen tam gün ve yarım günlük turlar.</p>
+        <p>Londra şehir merkezi, tarihi mekânlar ve müzelere tam gün ve yarım gün rehberli turlar.</p>
       </div>
-      <div class="age-card">
+      <div class="feature-card">
+        <span class="ic">🛡️</span>
         <h3>7/24 Güvenlik ve Gözetim</h3>
-        <p>Kampüs içi güvenlik personeli ve alanında uzman grup liderleri eşliğinde kesintisiz denetim.</p>
+        <p>Kampüs güvenlik personeli ve alanında uzman grup liderleriyle kesintisiz gözetim.</p>
       </div>
     </div>
 
-    <h3 style="color:var(--navy);font-size:17px;margin:32px 0 14px">Sıkça Sorulan Sorular</h3>
-    <div class="age-grid" style="grid-template-columns:1fr">
-      <div class="age-card">
-        <h3>İngiltere Yaz Okullarına Kimler Katılabilir?</h3>
-        <p>Programlar lise çağındaki öğrenciler ve gençler için özel olarak kurgulanmıştır. Başlangıç seviyesinden ileri seviyeye kadar her düzeyde öğrenci katılım sağlayabilir. Öğrenciler, programın ilk günü yapılan seviye tespit sınavının ardından kendilerine en uygun sınıflara yerleştirilir.</p>
+    <h3 class="subhead">Sıkça Sorulan Sorular</h3>
+    <div class="faq-grid">
+      <div class="faq-card">
+        <h3>İngiltere yaz okullarına kimler katılabilir?</h3>
+        <p>Programlar lise çağındaki öğrenciler için kurgulanmıştır; başlangıçtan ileri seviyeye kadar her öğrenci katılabilir. İlk gün yapılan seviye tespit sınavının ardından herkes kendine en uygun sınıfa yerleştirilir.</p>
       </div>
-      <div class="age-card">
-        <h3>Konaklama ve Güvenlik Süreci Nasıl İşler?</h3>
-        <p>Öğrenciler, üniversite kampüslerinin içerisinde yer alan modern yurt binalarında konaklamaktadır. Odalar genellikle tek kişilik ve özel banyoludur. Kampüs alanı 7/24 güvenlik kameraları ve güvenlik personeli tarafından korunur; öğrencilerin tüm süreçleri grup liderleri tarafından gözetim altında tutulur.</p>
+      <div class="faq-card">
+        <h3>Konaklama ve güvenlik süreci nasıl işler?</h3>
+        <p>Öğrenciler üniversite kampüsü içindeki modern yurtlarda, genellikle tek kişilik ve özel banyolu odalarda kalır. Kampüs 7/24 güvenlik kamerası ve personeliyle korunur; tüm süreç grup liderleri tarafından gözetilir.</p>
       </div>
-      <div class="age-card">
-        <h3>Ders Dışında Hangi Etkinlikler Düzenlenir?</h3>
-        <p>Eğitim saatlerinin dışında öğrencilerin sosyalleşmesini sağlayan spor turnuvaları, film geceleri, yetenek yarışmaları ve tematik akşam aktiviteleri gerçekleştirilir. Hafta içi ve hafta sonlarında ise ülkenin önde gelen tarihi ve kültürel lokasyonlarına rehberli geziler düzenlenir.</p>
+      <div class="faq-card">
+        <h3>Ders dışında hangi etkinlikler düzenlenir?</h3>
+        <p>Spor turnuvaları, film geceleri, yetenek yarışmaları ve tematik akşam etkinlikleriyle sosyalleşme fırsatı sunulur; hafta sonları ülkenin önemli tarihi ve kültürel noktalarına rehberli geziler yapılır.</p>
       </div>
-      <div class="age-card">
-        <h3>Program Sonunda Sertifika Veriliyor mu?</h3>
-        <p>Evet. Kursu başarıyla tamamlayan tüm öğrencilere, uluslararası geçerliliğe sahip ve öğrencilerin dil seviyesini belgeleyen resmi katılım sertifikası takdim edilir.</p>
+      <div class="faq-card">
+        <h3>Program sonunda sertifika veriliyor mu?</h3>
+        <p>Evet — kursu başarıyla tamamlayan her öğrenciye, dil seviyesini belgeleyen, uluslararası geçerliliğe sahip resmi bir katılım sertifikası verilir.</p>
       </div>
     </div>
 
-    <p class="note" style="margin-top:20px">İngiltere yaz okulu programlarının kontenjanları, tarihleri, kayıt koşulları ve paket içerikleri hakkında detaylı bilgi almak için <a href="#danismanlik">ücretsiz danışmanlık formunu</a> doldurabilir ya da doğrudan bizimle iletişime geçebilirsin.</p>
+    <p class="note" style="margin-top:20px">Kontenjan, tarih ve kayıt koşulları hakkında güncel bilgi için <a href="#danismanlik">ücretsiz danışmanlık formunu</a> doldur — birlikte en uygun programı belirleyelim.</p>
   </div>
 </section>
 
@@ -355,7 +377,7 @@ footer.site-footer{padding:32px 0;text-align:center;color:var(--muted-2);font-si
     <div class="form-card">
       <span class="form-badge">Ücretsiz Danışmanlık</span>
       <h2 id="danismanlik-title" style="margin:0 0 8px">Bilgilerini bırak, sana özel yönlendirme yapalım</h2>
-      <p class="lede" style="margin-bottom:24px">Formu doldur — mesajın hazır şekilde WhatsApp'a düşsün, hangi ülke, program ve tarihin sana uygun olduğunu birlikte belirleyelim. Tamamen ücretsiz, taahhüt yok.</p>
+      <p class="lede" style="margin-bottom:24px">Formu doldur, mesajın hazır şekilde WhatsApp'a düşsün — hangi ülke, hangi program ve hangi tarihin sana en uygun olduğunu birlikte netleştirelim.</p>
       <form class="form-grid" id="yurtdisiForm">
         <div class="field full">
           <label for="yd-adsoyad">Ad Soyad</label>
@@ -418,7 +440,7 @@ footer.site-footer{padding:32px 0;text-align:center;color:var(--muted-2);font-si
     <div class="cta">
       <div>
         <h2>Sorularını yanıtlayalım</h2>
-        <p>Hangi ülke, hangi süre, hangi bütçe? WhatsApp'tan yaz, birlikte planlayalım.</p>
+        <p>Hangi ülke, hangi program, ne zaman? WhatsApp'tan yaz, birlikte planlayalım.</p>
       </div>
       <div class="actions">
         <a class="btn btn-primary" href="https://wa.me/onlineelt1" target="_blank" rel="noopener">WhatsApp'tan Yaz</a>
