@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="t26">
+<title id="t26">Yurt dışında yaz okulu — kampüs, kitap ve uçak temalı illüstrasyon</title>
+<defs>
+<linearGradient id="g26" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#0C2648"/>
+<stop offset="1" stop-color="#1479E8"/>
+</linearGradient>
+</defs>
+<rect width="1200" height="630" fill="url(#g26)"/>
+<g opacity=".14" stroke="#ffffff" stroke-width="2" fill="none">
+  <circle cx="900" cy="300" r="210"/>
+  <circle cx="900" cy="300" r="150"/>
+  <circle cx="900" cy="300" r="90"/>
+</g>
+<!-- campus building -->
+<g fill="#ffffff" opacity=".96">
+  <rect x="120" y="360" width="340" height="150" rx="6"/>
+  <polygon points="90,370 290,270 490,370"/>
+  <rect x="270" y="270" width="40" height="55" fill="#0C2648" opacity=".9"/>
+  <circle cx="290" cy="250" r="10" fill="#F2A93B"/>
+  <rect x="160" y="400" width="36" height="50" fill="#0C2648" opacity=".85"/>
+  <rect x="230" y="400" width="36" height="50" fill="#0C2648" opacity=".85"/>
+  <rect x="300" y="400" width="36" height="50" fill="#0C2648" opacity=".85"/>
+  <rect x="370" y="400" width="36" height="50" fill="#0C2648" opacity=".85"/>
+</g>
+<!-- open book -->
+<g fill="#ffffff" opacity=".96">
+  <path d="M560 440 C560 434 565 430 585 430 C602 430 614 434 618 440 L618 512 C614 507 602 503 585 503 C565 503 560 507 560 512 Z"/>
+  <path d="M680 440 C680 434 675 430 655 430 C638 430 626 434 622 440 L622 512 C626 507 638 503 655 503 C675 503 680 507 680 512 Z"/>
+</g>
+<!-- plane -->
+<g transform="translate(960,160) rotate(18)" fill="#ffffff" opacity=".96">
+  <path d="M0 -60
+    C9 -60 15 -49 15 -32
+    L15 6
+    L58 36
+    C63 39 63 47 58 50
+    L15 34
+    L15 60
+    L33 74
+    C37 77 37 84 31 85
+    L0 77
+    L-31 85
+    C-37 84 -37 77 -33 74
+    L-15 60
+    L-15 34
+    L-58 50
+    C-63 47 -63 39 -58 36
+    L-15 6
+    L-15 -32
+    C-15 -49 -9 -60 0 -60 Z"/>
+</g>
+<g fill="#F2A93B" opacity=".9">
+  <circle cx="760" cy="150" r="6"/>
+  <circle cx="820" cy="110" r="4"/>
+  <circle cx="200" cy="180" r="5"/>
+</g>
+</svg>
