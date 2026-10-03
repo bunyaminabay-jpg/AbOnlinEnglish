@@ -73,13 +73,13 @@ textarea,input{font-family:inherit}
 
 /* SKILL TABS */
 .skill-bar{background:var(--card);border-bottom:1px solid var(--border);display:flex;position:sticky;top:58px;z-index:190}
-.sk-tab{padding:15px 24px;font-size:14.5px;font-weight:600;color:var(--muted);border-bottom:3px solid transparent;cursor:pointer;display:flex;align-items:center;gap:7px;white-space:nowrap;transition:color .15s}
-.sk-tab:hover{color:var(--ink)}
-.sk-tab.on{color:var(--a2);border-bottom-color:var(--a2)}
-.sk-tab[data-s="w"].on{color:var(--red);border-bottom-color:var(--red)}
-.sk-tab[data-s="s"].on{color:var(--b1);border-bottom-color:var(--b1)}
-.sk-cnt{font-size:11px;font-weight:700;padding:2px 7px;border-radius:8px;background:var(--bg2);color:var(--muted)}
-@media(max-width:580px){.sk-tab{padding:13px 16px;font-size:13.5px}}
+.sk-tab{padding:19px 28px;font-size:17px;font-weight:800;color:var(--muted);border-bottom:4px solid transparent;cursor:pointer;display:flex;align-items:center;gap:8px;white-space:nowrap;transition:color .15s,background .15s}
+.sk-tab:hover{color:var(--ink);background:var(--bg2)}
+.sk-tab.on{color:var(--a2);border-bottom-color:var(--a2);background:var(--a2l)}
+.sk-tab[data-s="w"].on{color:#b3261e;border-bottom-color:#b3261e;background:#fbe4e1}
+.sk-tab[data-s="s"].on{color:var(--b1);border-bottom-color:var(--b1);background:var(--b1l)}
+.sk-cnt{font-size:12px;font-weight:700;padding:3px 8px;border-radius:8px;background:var(--bg2);color:var(--muted)}
+@media(max-width:580px){.sk-tab{padding:15px 16px;font-size:14.5px}}
 
 /* BODY LAYOUT */
 .page-body{display:flex;min-height:calc(100vh - 120px)}
@@ -352,8 +352,14 @@ textarea.wa:focus{border-color:var(--red)}
     </div>
   </nav>
   <div class="main"><div class="sp on" id="sp-r">
-<h2 style="font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--ink);margin:0 0 6px;">Reading Pratikleri</h2>
-<p style="color:var(--muted);font-size:.88rem;margin:0 0 16px;">A1'den B2'ye İngilizce reading comprehension alıştırmaları — seviyeni seç, metni oku, soruları çöz.</p>
+<h2 style="font-family:'Playfair Display',serif;font-weight:800;font-size:1.7rem;color:var(--a2);margin:0 0 6px;">📖 Reading Pratikleri</h2>
+<p style="color:var(--muted);font-size:.9rem;margin:0 0 10px;">A1'den B2'ye İngilizce reading comprehension alıştırmaları — seviyeni seç, metni oku, soruları çöz.</p>
+<ul style="margin:0 0 18px;padding-left:20px;color:var(--ink2);font-size:.88rem;line-height:1.9;">
+  <li><b style="color:var(--a1)">A1 — Beginner</b></li>
+  <li><b style="color:var(--a2)">A2 — Elementary</b></li>
+  <li><b style="color:var(--b1)">B1 — Intermediate</b></li>
+  <li><b style="color:var(--b2)">B2 — Upper-Intermediate</b></li>
+</ul>
 <div class="mob-bar" id="mob-r" style="display:none"><button class="mob-btn on" data-l="a1" onclick="goLevel('r','a1')">Beginner</button><button class="mob-btn" data-l="a2" onclick="goLevel('r','a2')">Elementary</button><button class="mob-btn" data-l="b1" onclick="goLevel('r','b1')">Intermediate</button><button class="mob-btn" data-l="b2" onclick="goLevel('r','b2')">Upper-Int.</button></div>
 <div class="lp on" id="lp-r-a1">
 <div class="lvl-hdr">
@@ -2058,8 +2064,14 @@ textarea.wa:focus{border-color:var(--red)}
 </div>
 
 <div class="sp" id="sp-w">
-<h2 style="font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--ink);margin:0 0 6px;">Writing Pratikleri</h2>
-<p style="color:var(--muted);font-size:.88rem;margin:0 0 16px;">A1'den B2'ye İngilizce writing alıştırmaları — seviyeni seç, yazma görevini tamamla, geri bildirim al.</p>
+<h2 style="font-family:'Playfair Display',serif;font-weight:800;font-size:1.7rem;color:#b3261e;margin:0 0 6px;">✍️ Writing Pratikleri</h2>
+<p style="color:var(--muted);font-size:.9rem;margin:0 0 10px;">A1'den B2'ye İngilizce writing alıştırmaları — seviyeni seç, yazma görevini tamamla, geri bildirim al.</p>
+<ul style="margin:0 0 18px;padding-left:20px;color:var(--ink2);font-size:.88rem;line-height:1.9;">
+  <li><b style="color:var(--a1)">A1 — Beginner</b></li>
+  <li><b style="color:var(--a2)">A2 — Elementary</b></li>
+  <li><b style="color:var(--b1)">B1 — Intermediate</b></li>
+  <li><b style="color:var(--b2)">B2 — Upper-Intermediate</b></li>
+</ul>
 <div class="mob-bar" id="mob-w" style="display:none"><button class="mob-btn on" data-l="a1" onclick="goLevel('w','a1')">Beginner</button><button class="mob-btn" data-l="a2" onclick="goLevel('w','a2')">Elementary</button><button class="mob-btn" data-l="b1" onclick="goLevel('w','b1')">Intermediate</button><button class="mob-btn" data-l="b2" onclick="goLevel('w','b2')">Upper-Int.</button></div>
 <div class="lp on" id="lp-w-a1">
 <div class="lvl-hdr">
@@ -2784,8 +2796,15 @@ What makes [X] stand out is...
 </div>
 
 <div class="sp" id="sp-s">
-<h2 style="font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--ink);margin:0 0 6px;">Speaking Pratikleri</h2>
-<p style="color:var(--muted);font-size:.88rem;margin:0 0 16px;">A1'den B2'ye İngilizce speaking (konuşma) alıştırmaları — seviyeni seç, soruları sesli yanıtlamayı pratik yap.</p>
+<h2 style="font-family:'Playfair Display',serif;font-weight:800;font-size:1.7rem;color:var(--b1);margin:0 0 6px;">🎙️ Speaking Pratikleri</h2>
+<p style="color:var(--muted);font-size:.9rem;margin:0 0 10px;">Pre-A1'den B2'ye İngilizce speaking (konuşma) alıştırmaları — seviyeni seç, soruları sesli yanıtlamayı pratik yap.</p>
+<ul style="margin:0 0 18px;padding-left:20px;color:var(--ink2);font-size:.88rem;line-height:1.9;">
+  <li><b style="color:#2e7d32">Pre-A1 — Starters</b></li>
+  <li><b style="color:#f57f17">A1 — Movers</b></li>
+  <li><b style="color:#1565c0">A2 — Flyers/KET</b></li>
+  <li><b style="color:#7b1fa2">B1 — PET</b></li>
+  <li><b style="color:#c62828">B2 — FCE/IELTS</b></li>
+</ul>
 <div class="spk-levels"><button class="spk-lvl-tab on" data-lv="st" data-color="#2e7d32" onclick="goSpkLevel('st')" style="border-bottom-color:#2e7d32;color:#2e7d32">🌱 Pre-A1 Pre-A1 · Starters</button><button class="spk-lvl-tab" data-lv="mv" data-color="#f57f17" onclick="goSpkLevel('mv')" >🌿 A1 A1 · Movers</button><button class="spk-lvl-tab" data-lv="fl" data-color="#1565c0" onclick="goSpkLevel('fl')" >🌟 A2 A2 · Flyers/KET</button><button class="spk-lvl-tab" data-lv="pt" data-color="#7b1fa2" onclick="goSpkLevel('pt')" >🎯 B1 B1 · PET</button><button class="spk-lvl-tab" data-lv="fc" data-color="#c62828" onclick="goSpkLevel('fc')" >🏆 B2 B2 · FCE/IELTS</button></div><div class="spk-lvl-panel on" id="spk-lv-st">
 <div class="spk-lvl-hdr" style="border-left:4px solid #2e7d32">
   <h2>🌱 Pre-A1 Pre-A1 · Starters</h2>
