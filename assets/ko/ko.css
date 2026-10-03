@@ -241,6 +241,8 @@ img{max-width:100%;display:block}
 .extra a{flex:1 1 220px;background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px;box-shadow:var(--shd);font-size:.86rem;font-weight:700;color:var(--navy);display:flex;gap:10px;align-items:center}
 .extra a:hover{border-color:var(--lv)}
 .extra a span{font-size:1.4rem}
+.extra-disabled{flex:1 1 220px;background:#f3f4f6;border:1px solid var(--border);border-radius:12px;padding:14px;font-size:.86rem;font-weight:700;color:#9ca3af;display:flex;gap:10px;align-items:center;cursor:default}
+.extra-disabled span{font-size:1.4rem;opacity:.6}
 .faq details{background:#fff;border:1px solid var(--border);border-radius:12px;margin-bottom:8px;padding:0 16px}
 .faq summary{padding:14px 0;font-weight:700;color:var(--navy);cursor:pointer;font-size:.92rem;list-style:none}
 .faq summary::-webkit-details-marker{display:none}
