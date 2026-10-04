@@ -161,6 +161,9 @@ section{padding:54px 0}
 .es-uni-src{font-size:.76rem;color:var(--text-3);margin-top:10px;font-style:italic}
 .es-uni-link{display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-weight:800;font-size:.85rem;color:var(--orange-d);text-decoration:none}
 .es-uni-link:hover{text-decoration:underline}
+.es-uni-actions{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+.es-uni-link-primary{background:var(--navy);color:#fff;padding:8px 14px;border-radius:999px;margin-top:12px}
+.es-uni-link-primary:hover{background:var(--navy2);text-decoration:none}
 .es-uni-empty{text-align:center;padding:30px;color:var(--text-3)}
 
 /* exam-section tabs */
@@ -521,20 +524,38 @@ footer.es-foot{background:var(--navy);color:#cbd8e6;padding:28px 0;font-size:.85
 
 /* ============================================================
    DATA / CONFIG — yeni üniversite eklemek için bu diziye yeni
-   bir obje eklemek yeterlidir: {name, city, sourceType, url, lastChecked, note}
+   bir obje eklemek yeterlidir:
+   {name, city, sourceType, url, lastChecked, note,
+    duration, questions, sections,            // confirmed ise doldur, yoksa boş bırak
+    sampleUrl, sampleLabel}                    // gerçek bir örnek sınav/format belgesi varsa
    ============================================================ */
 var UNIVERSITIES = [
   {name:"Marmara Üniversitesi", city:"İstanbul", sourceType:"Bilgilendirme duyurusu", url:"https://ydil.marmara.edu.tr/dosya/ydyo/%C3%96%C4%9Frenci%20%C4%B0%C5%9Fleri/S%C4%B1nav%20Duyurular%C4%B1/2025-2026/erasmusingilizce2026ogrenciINFO.pdf", lastChecked:"2026-10-04", note:"2025-2026 Erasmus İngilizce Sınavı bilgilendirme belgesi."},
-  {name:"Nevşehir Hacı Bektaş Veli Üniversitesi", city:"Nevşehir", sourceType:"Bilgilendirme duyurusu", url:"https://dosyalar.nevsehir.edu.tr/9f41b7081be8f390d3a329f389473d60/2025-2026-erasmus-yabanci-dil-sinavi-hakkinda-bilgilendirme.pdf", lastChecked:"2026-10-04", note:"2025-2026 Erasmus Yabancı Dil Sınavı bilgilendirmesi."},
+  {name:"Nevşehir Hacı Bektaş Veli Üniversitesi", city:"Nevşehir", sourceType:"Sınav formatı (resmî)", url:"https://dosyalar.nevsehir.edu.tr/9f41b7081be8f390d3a329f389473d60/2025-2026-erasmus-yabanci-dil-sinavi-hakkinda-bilgilendirme.pdf", lastChecked:"2026-10-04",
+    duration:"Bölüm 1 (Use of English+Vocabulary+Reading): 70 dk · Bölüm 2 (Listening+Writing): 50 dk",
+    questions:"Yaklaşık 70 yazılı soru (Use of English/Vocabulary 30, Reading 20, Listening 15, Writing 5) + Speaking",
+    sections:"Use of English, Vocabulary, Reading, Listening, Writing, Speaking",
+    sampleUrl:"https://dosyalar.nevsehir.edu.tr/129c71b96280415943dc24236bc87a61/eramus-exam-specifications.pdf", sampleLabel:"Sınav Formatı Belgesini Aç",
+    note:"Testing Office tarafından yayımlanan resmî 'Erasmus Exam Specifications' belgesinden: bölüm süreleri, soru sayıları ve puanlama ayrıntılı olarak veriliyor."},
   {name:"Çanakkale Onsekiz Mart Üniversitesi", city:"Çanakkale", sourceType:"Başvuru duyurusu", url:"https://cdn.comu.edu.tr/cms/fen.biyoloji/files/178-erasmus-yabanci-dil-sinavi-basvuru-duyurusu.pdf", lastChecked:"2026-10-04", note:"Erasmus Yabancı Dil Sınavı başvuru duyurusu."},
   {name:"Karamanoğlu Mehmetbey Üniversitesi", city:"Karaman", sourceType:"Sınav kılavuzu", url:"https://dosya.kmu.edu.tr/erasmus/userfiles/files/erasmus%20s%C4%B1nav%20k%C4%B1lavuzu.pdf", lastChecked:"2026-10-04", note:"Erasmus Sınav Kılavuzu."},
   {name:"Çağ Üniversitesi", city:"Mersin", sourceType:"Bilgilendirme duyurusu", url:"https://www.cag.edu.tr/tr/duyurular/erasmus-dil-sinavi-hakkinda-bilgilendirme", lastChecked:"2026-10-04", note:"Erasmus Dil Sınavı hakkında bilgilendirme sayfası."},
   {name:"Gazi Üniversitesi", city:"Ankara", sourceType:"Bilgilendirme duyurusu", url:"https://webupload.gazi.edu.tr/upload/59/2025/10/24/7cbd1266-0cd4-4709-800a-2cd93752c6d4-erasmus-sinavi-bilgilendirme.pdf", lastChecked:"2026-10-04", note:"Erasmus sınavı bilgilendirme belgesi."},
-  {name:"Sakarya Üniversitesi", city:"Sakarya", sourceType:"Sınav kılavuzu", url:"https://erasmustest.sakarya.edu.tr/sites/erasmustest.sakarya.edu.tr/file/Online_ERASMUS_INGILIZCE_Sinavi_Uygulama_Esaslari.pdf", lastChecked:"2026-10-04", note:"Online Erasmus İngilizce Sınavı Uygulama Esasları (kendi erasmustest alt alan adı üzerinden yürütülüyor)."},
+  {name:"Sakarya Üniversitesi", city:"Sakarya", sourceType:"Sınav formatı (resmî)", url:"https://erasmustest.sakarya.edu.tr/sites/erasmustest.sakarya.edu.tr/file/Online_ERASMUS_INGILIZCE_Sinavi_Uygulama_Esaslari.pdf", lastChecked:"2026-10-04",
+    duration:"Belirtilmemiş (yazılı sınav + en az 5 dk sözlü sınav)",
+    questions:"80 çoktan seçmeli soru (yazılı aşama)",
+    sections:"Use of English / Grammar / Vocabulary ağırlıklı çoktan seçmeli yazılı sınav + sözlü sınav",
+    sampleUrl:"https://erasmustest.sakarya.edu.tr/sites/erasmustest.sakarya.edu.tr/file/Online_ERASMUS_INGILIZCE_Sinavi_Uygulama_Esaslari.pdf", sampleLabel:"Sınav Uygulama Esaslarını Aç",
+    note:"İki aşamalı: 80 soruluk çoktan seçmeli yazılı sınav (ilk 400 aday sözlüye kalıyor), not %50 yazılı + %50 sözlü ortalaması. Kendi 'erasmustest' alt alan adı üzerinden yürütülüyor."},
   {name:"Hitit Üniversitesi", city:"Çorum", sourceType:"Başvuru duyurusu", url:"https://hitit.edu.tr/tr/intoffice/erasmus/erasmus-konsorsiyum-staj-hareketliligi-yabanci-dil-ingilizce-sozlu-sinavi-duyurusu", lastChecked:"2026-10-04", note:"Erasmus (konsorsiyum) yabancı dil sözlü sınavı duyurusu — burada speaking bölümü vurgulanıyor."},
   {name:"Orta Doğu Teknik Üniversitesi (ODTÜ/METU)", city:"Ankara", sourceType:"Bilgilendirme duyurusu", url:"https://ico.metu.edu.tr/node/558", lastChecked:"2026-10-04", note:"Uluslararası İşbirliği Ofisi'nin Erasmus dil sınavı bilgi sayfası."},
   {name:"Bezmialem Vakıf Üniversitesi", city:"İstanbul", sourceType:"Başvuru duyurusu", url:"https://bezmialem.edu.tr/tr/Sayfalar/DuyuruDetay/2459/erasmus-ingilizce-dil-yeterlik-sinavi", lastChecked:"2026-10-04", note:"Erasmus İngilizce Dil Yeterlik Sınavı duyurusu."},
-  {name:"İzmir Yüksek Teknoloji Enstitüsü (İYTE)", city:"İzmir", sourceType:"Örnek sınav", url:"https://ydyo.iyte.edu.tr/wp-content/uploads/sites/91/2024/04/Erasmus_%C4%B0ngilizce_S%C4%B1nav%C4%B1.pdf", lastChecked:"2026-10-04", note:"Bu belge, soru örnekleri içeren bir örnek sınav dokümanı niteliğinde görünüyor — gerçek bir alıştırma kaynağı olarak incelenebilir."},
+  {name:"İzmir Yüksek Teknoloji Enstitüsü (İYTE)", city:"İzmir", sourceType:"Örnek sınav", url:"https://ydyo.iyte.edu.tr/wp-content/uploads/sites/91/2024/04/Erasmus_%C4%B0ngilizce_S%C4%B1nav%C4%B1.pdf", lastChecked:"2026-10-04",
+    duration:"120 dakika (tek oturum)",
+    questions:"63 çoktan seçmeli soru",
+    sections:"Use of English (40p), Vocabulary (10p), Reading Comprehension (50p) — listening/writing/speaking bu örnekte yok",
+    sampleUrl:"https://ydyo.iyte.edu.tr/wp-content/uploads/sites/91/2024/04/Erasmus_%C4%B0ngilizce_S%C4%B1nav%C4%B1.pdf", sampleLabel:"Örnek Sınavı Aç (PDF)",
+    note:"Bu belge gerçek sorularla hazırlanmış bir örnek sınav — cloze test, hata bulma, boşluk doldurma, diyalog tamamlama, çoktan seçmeli reading görevlerini içeriyor."},
   {name:"Haliç Üniversitesi", city:"İstanbul", sourceType:"Başvuru duyurusu", url:"https://international.halic.edu.tr/erasmus-hareketliligi-ingilizce-yeterlilik-sinavi-english-proficiency-exam/", lastChecked:"2026-10-04", note:"Erasmus Hareketliliği İngilizce Yeterlilik Sınavı (English Proficiency Exam) duyurusu."},
   {name:"Karabük Üniversitesi", city:"Karabük", sourceType:"Başvuru duyurusu", url:"https://gstf.karabuk.edu.tr/yuklenen/dosyalar/12630092024111031.pdf", lastChecked:"2026-10-04", note:"Erasmus sınav duyuru belgesi."}
 ];
@@ -702,11 +723,14 @@ function lsSet(key, val){ try{ localStorage.setItem(key, JSON.stringify(val)); }
           '</button>'+
           '<div class="es-uni-body">'+
             '<div class="es-uni-row"><span>Sınav adı / duyuru türü</span><span>'+esc(u.sourceType)+'</span></div>'+
-            '<div class="es-uni-row"><span>Süre</span><span>Bilinmiyor — resmî kaynağa bak</span></div>'+
-            '<div class="es-uni-row"><span>Soru sayısı</span><span>Bilinmiyor — resmî kaynağa bak</span></div>'+
-            '<div class="es-uni-row"><span>Bölümler</span><span>Bilinmiyor — resmî kaynağa bak</span></div>'+
+            '<div class="es-uni-row"><span>Süre</span><span>'+esc(u.duration||"Bilinmiyor — resmî kaynağa bak")+'</span></div>'+
+            '<div class="es-uni-row"><span>Soru sayısı</span><span>'+esc(u.questions||"Bilinmiyor — resmî kaynağa bak")+'</span></div>'+
+            '<div class="es-uni-row"><span>Bölümler</span><span>'+esc(u.sections||"Bilinmiyor — resmî kaynağa bak")+'</span></div>'+
             (u.note? '<div class="es-uni-note">'+esc(u.note)+'</div>' : '')+
-            '<a class="es-uni-link" href="'+u.url+'" target="_blank" rel="noopener">Resmî kaynağı gör ↗</a>'+
+            '<div class="es-uni-actions">'+
+              (u.sampleUrl? '<a class="es-uni-link es-uni-link-primary" href="'+u.sampleUrl+'" target="_blank" rel="noopener">'+esc(u.sampleLabel||"Örnek Sınavı / Formatı Aç")+' ↗</a>' : '')+
+              '<a class="es-uni-link" href="'+u.url+'" target="_blank" rel="noopener">'+(u.sampleUrl? "Resmî duyuruyu gör ↗" : "Örnek sınav yok — resmî duyuruyu kontrol et ↗")+'</a>'+
+            '</div>'+
             '<div class="es-uni-src">Kaynak: '+esc(u.name)+' resmî web sitesi · Son kontrol: '+esc(u.lastChecked)+'</div>'+
           '</div>'+
         '</div>'
