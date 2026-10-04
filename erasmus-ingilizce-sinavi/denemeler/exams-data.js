@@ -8573,4 +8573,5689 @@ window.AB_ERASMUS_EXAMS = [
       }
     ]
   }
+,
+  {
+    "id": 7,
+    "title": "Deneme 7",
+    "level": "B2",
+    "duration": 150,
+    "questionCount": 80,
+    "questions": [
+      {
+        "id": 1,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "If the university ______ the exchange program next year, far fewer students will have the chance to study abroad.",
+        "options": [
+          "cancels",
+          "cancelled",
+          "had cancelled",
+          "would cancel"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Conditionals",
+        "level": "B2",
+        "explanation": "This is a first conditional describing a realistic future possibility, so the if-clause takes the present simple: cancels."
+      },
+      {
+        "id": 2,
+        "part": "A",
+        "type": "Structure Recognition",
+        "question": "The professor whose research on migration patterns ______ widely cited gave a guest lecture yesterday.",
+        "options": [
+          "are",
+          "is",
+          "was being",
+          "have been"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Relative Clauses",
+        "level": "B2",
+        "explanation": "The relative clause 'whose research ... is widely cited' describes the singular noun 'research', so the singular verb 'is' is correct."
+      },
+      {
+        "id": 3,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "By the time the committee finally approved the budget, three other departments ______ their proposals already.",
+        "options": [
+          "submit",
+          "submitted",
+          "had submitted",
+          "were submitting"
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Present Perfect",
+        "level": "B2",
+        "explanation": "An action completed before another past action requires the past perfect: had submitted."
+      },
+      {
+        "id": 4,
+        "part": "A",
+        "type": "Sentence Completion with Connectors",
+        "question": "The visa application process took far longer than expected; ______, the student almost missed the start of the semester.",
+        "options": [
+          "in contrast",
+          "similarly",
+          "provided that",
+          "as a result"
+        ],
+        "answer": "D",
+        "skill": "Grammar",
+        "topic": "Linking Words",
+        "level": "B2",
+        "explanation": "'As a result' correctly signals the logical consequence of the lengthy delay — the student almost missing the semester's start."
+      },
+      {
+        "id": 5,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "The new library wing ______ by a team of local architects who specialize in sustainable design.",
+        "options": [
+          "was designed",
+          "designs",
+          "designed",
+          "has design"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Passive Voice",
+        "level": "B2",
+        "explanation": "Since the focus is on the wing being acted upon by the architects, the passive 'was designed' is correct."
+      },
+      {
+        "id": 6,
+        "part": "A",
+        "type": "Error Identification",
+        "question": "Students (A) must to submit (B) their applications (C) before the deadline (D) or risk losing their place.",
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Modal Verbs",
+        "level": "B2",
+        "explanation": "Modal verbs like 'must' are followed directly by the base verb, never by 'to': it should be 'must submit', not 'must to submit'."
+      },
+      {
+        "id": 7,
+        "part": "A",
+        "type": "Cloze Test",
+        "question": "Many students are unsure ______ they should apply for the scholarship before or after confirming their placement.",
+        "options": [
+          "that",
+          "whether",
+          "if only",
+          "unless"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Noun Clauses",
+        "level": "B2",
+        "explanation": "'Whether ... or' introduces a noun clause expressing a choice between two alternatives, which fits the context."
+      },
+      {
+        "id": 8,
+        "part": "A",
+        "type": "Dialogue Completion",
+        "question": "A: Do you regret ______ your original thesis topic halfway through?\nB: Not at all — the new one turned out far more interesting.",
+        "options": [
+          "change",
+          "to change",
+          "changing",
+          "changed"
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Gerunds",
+        "level": "B2",
+        "explanation": "'Regret' is followed by a gerund when referring to a past action, so 'changing' is correct here."
+      },
+      {
+        "id": 9,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "It is ______ unusual for a first-year student to publish a paper that several professors assumed the author was a graduate researcher.",
+        "options": [
+          "such",
+          "such an",
+          "too",
+          "so"
+        ],
+        "answer": "D",
+        "skill": "Grammar",
+        "topic": "Articles",
+        "level": "B2",
+        "explanation": "'So + adjective + that-clause' is the correct structure for this degree-and-result pattern; 'unusual' is an adjective, not a noun, so 'such' is not used here."
+      },
+      {
+        "id": 10,
+        "part": "A",
+        "type": "Situation-based Question",
+        "question": "Elif had already left the campus when the fire alarm went off, so, unlike her classmates, she ______ evacuate the building.",
+        "options": [
+          "must",
+          "didn't have to",
+          "shouldn't",
+          "couldn't"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Past Perfect",
+        "level": "B2",
+        "explanation": "Since she had already left, there was no necessity for her to evacuate, which is expressed by 'didn't have to'."
+      },
+      {
+        "id": 11,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "The coordinator suggested that every participant ______ their documents translated before the interview.",
+        "options": [
+          "has",
+          "had",
+          "have",
+          "will have"
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Infinitives",
+        "level": "B2",
+        "explanation": "After a suggestion verb like 'suggested that', the subjunctive base form is used regardless of subject: have."
+      },
+      {
+        "id": 12,
+        "part": "A",
+        "type": "Structure Recognition",
+        "question": "______ of the exchange students had ever lived outside their home country before, which made the first week unusually stressful.",
+        "options": [
+          "Little",
+          "Much",
+          "Most of",
+          "Few"
+        ],
+        "answer": "D",
+        "skill": "Grammar",
+        "topic": "Quantifiers",
+        "level": "B2",
+        "explanation": "'Few' is used with countable plural nouns like 'students' to mean a small number; 'little' is for uncountables."
+      },
+      {
+        "id": 13,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "The more carefully you read the contract, ______ you will be when signing it.",
+        "options": [
+          "the more confident",
+          "confident",
+          "more confident",
+          "most confident"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Comparatives",
+        "level": "B2",
+        "explanation": "The double comparative pattern 'the more ..., the more ...' requires 'the' before the second comparative as well."
+      },
+      {
+        "id": 14,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "The dean announced that the application deadline ______ to the end of the month, giving students extra time.",
+        "options": [
+          "is extended",
+          "had been extended",
+          "extends",
+          "will extend"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Reported Speech",
+        "level": "B2",
+        "explanation": "In reported speech, a present perfect/passive statement in direct speech typically shifts back to the past perfect passive: had been extended."
+      },
+      {
+        "id": 15,
+        "part": "A",
+        "type": "Cloze Test",
+        "question": "Rather than complain ______ the delay, the students used the extra time to revise their presentation.",
+        "options": [
+          "on",
+          "for",
+          "about",
+          "at"
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Prepositions",
+        "level": "B2",
+        "explanation": "'Complain about something' is the correct collocational preposition pattern."
+      },
+      {
+        "id": 16,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "By next semester, the department ______ its entire grading system to a new digital platform.",
+        "options": [
+          "will move",
+          "moves",
+          "is moving",
+          "will have moved"
+        ],
+        "answer": "D",
+        "skill": "Grammar",
+        "topic": "Future Perfect",
+        "level": "B2",
+        "explanation": "An action expected to be completed before a specific future point ('by next semester') requires the future perfect."
+      },
+      {
+        "id": 17,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "______ amount of feedback students receive on early drafts strongly affects how confident they feel about the final version.",
+        "options": [
+          "The",
+          "A",
+          "An",
+          "Some"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Determiners",
+        "level": "B2",
+        "explanation": "'The' is used because the noun phrase 'amount of feedback' is specified by the following modifying phrase, making it a particular, identifiable amount."
+      },
+      {
+        "id": 18,
+        "part": "A",
+        "type": "Error Identification",
+        "question": "The professor had (A) the essays graded (B) by his assistant because (C) he was too busiest (D) to do it himself.",
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer": "D",
+        "skill": "Grammar",
+        "topic": "Causatives",
+        "level": "B2",
+        "explanation": "'Busiest' is a superlative form used without a comparison group here; it should simply be 'too busy'."
+      },
+      {
+        "id": 19,
+        "part": "A",
+        "type": "Functional Language",
+        "question": "A: I'm worried my presentation was too technical for the audience.\nB: ______ You explained every term clearly.",
+        "options": [
+          "I couldn't agree more.",
+          "I wouldn't worry about that.",
+          "That's exactly what I thought.",
+          "You must be joking."
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Subject-Verb Agreement",
+        "level": "B2",
+        "explanation": "The reply reassures the speaker by disagreeing with their worry, which fits 'I wouldn't worry about that' rather than agreement phrases."
+      },
+      {
+        "id": 20,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "I wish I ______ more time to proofread my dissertation before submitting it.",
+        "options": [
+          "have",
+          "had",
+          "had had",
+          "would have"
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Wish / If Only",
+        "level": "B2",
+        "explanation": "A regret about a completed past situation uses 'wish + past perfect': had had."
+      },
+      {
+        "id": 21,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "______ by the unexpected praise, the shy student finally volunteered to present her findings to the class.",
+        "options": [
+          "Encouraged",
+          "Encourage",
+          "Encouraging",
+          "Having encouraged"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Participles",
+        "level": "B2",
+        "explanation": "The student was the one receiving encouragement, so the passive past participle 'Encouraged' correctly begins the clause."
+      },
+      {
+        "id": 22,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "Of all the modules in the program, statistics is by far ______ for exchange students with little quantitative background.",
+        "options": [
+          "the more demanding",
+          "the most demanding",
+          "more demanding",
+          "most demanding"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Superlatives",
+        "level": "B2",
+        "explanation": "Comparing one module against all others in a group ('of all the modules') requires the superlative: the most demanding."
+      },
+      {
+        "id": 23,
+        "part": "A",
+        "type": "Cloze Test",
+        "question": "The seminar was rescheduled ______ the lecturer had a family emergency that could not be postponed.",
+        "options": [
+          "despite",
+          "even though",
+          "because",
+          "unless"
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Conjunctions",
+        "level": "B2",
+        "explanation": "'Because' correctly introduces the reason for the rescheduling."
+      },
+      {
+        "id": 24,
+        "part": "A",
+        "type": "Situation-based Question",
+        "question": "When the fire drill began, several researchers ______ a sensitive experiment in the lab, so they had to leave it running unattended.",
+        "options": [
+          "ran",
+          "had run",
+          "run",
+          "were running"
+        ],
+        "answer": "D",
+        "skill": "Grammar",
+        "topic": "Past Continuous",
+        "level": "B2",
+        "explanation": "The ongoing action interrupted by another event ('the fire drill began') is expressed with the past continuous."
+      },
+      {
+        "id": 25,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "By the end of this academic year, the research team ______ the data from over two thousand survey responses.",
+        "options": [
+          "will have analyzed",
+          "will analyze",
+          "analyzes",
+          "analyzed"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Future Perfect",
+        "level": "B2",
+        "explanation": "Completion before a future deadline ('by the end of this academic year') is marked by the future perfect."
+      },
+      {
+        "id": 26,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "Neither the coordinator nor the two assistants ______ aware that the room had been double-booked.",
+        "options": [
+          "was",
+          "were",
+          "has been",
+          "being"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Subject-Verb Agreement",
+        "level": "B2",
+        "explanation": "With 'neither ... nor', the verb typically agrees with the closer subject, 'the two assistants', which is plural: were."
+      },
+      {
+        "id": 27,
+        "part": "A",
+        "type": "Dialogue Completion",
+        "question": "A: Why didn't you tell me the deadline had changed?\nB: I ______ — I left you three messages about it.",
+        "options": [
+          "was doing",
+          "have done",
+          "did",
+          "do"
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Present Continuous",
+        "level": "B2",
+        "explanation": "The emphatic short answer disputing the claim uses the simple past 'did' to match the implied action in the question."
+      },
+      {
+        "id": 28,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "The results of the survey, ______ took almost a year to collect, revealed some genuinely surprising patterns.",
+        "options": [
+          "that",
+          "who",
+          "what",
+          "which"
+        ],
+        "answer": "D",
+        "skill": "Grammar",
+        "topic": "Relative Clauses",
+        "level": "B2",
+        "explanation": "A non-defining relative clause adding extra information about 'the results' must use 'which', not 'that'."
+      },
+      {
+        "id": 29,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "She ______ have missed the email about the schedule change, since she replied to it this morning.",
+        "options": [
+          "can't",
+          "mustn't",
+          "shouldn't",
+          "needn't"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Modal Verbs",
+        "level": "B2",
+        "explanation": "'Can't have' expresses a logical deduction that something was impossible, which fits the evidence that she replied."
+      },
+      {
+        "id": 30,
+        "part": "A",
+        "type": "Cloze Test",
+        "question": "The guest lecturer, ______ research focuses on bilingual education, will join us for a Q&A session on Friday.",
+        "options": [
+          "who",
+          "whose",
+          "which",
+          "that"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Relative Clauses",
+        "level": "B2",
+        "explanation": "'Whose' shows possession, linking the lecturer to 'research', so it correctly replaces 'the lecturer's research'."
+      },
+      {
+        "id": 31,
+        "part": "B",
+        "type": "Vocabulary in Context",
+        "question": "After months of negotiation, the two universities finally reached a consensus on how credits would be transferred.",
+        "options": [
+          "disagreement",
+          "deadline",
+          "agreement",
+          "proposal"
+        ],
+        "answer": "C",
+        "skill": "Vocabulary",
+        "topic": "Academic Life",
+        "level": "B2",
+        "explanation": "'Consensus' means general agreement, matching option B."
+      },
+      {
+        "id": 32,
+        "part": "B",
+        "type": "Collocation",
+        "question": "It took the committee several weeks to ______ a final decision on the new admissions policy.",
+        "options": [
+          "make",
+          "do",
+          "take",
+          "reach"
+        ],
+        "answer": "D",
+        "skill": "Vocabulary",
+        "topic": "Education",
+        "level": "B2",
+        "explanation": "'Reach a decision' is the natural collocation meaning to arrive at one after deliberation."
+      },
+      {
+        "id": 33,
+        "part": "B",
+        "type": "Phrasal Verb",
+        "question": "The orientation session was meant to help new Erasmus students ______ their nervousness about living abroad.",
+        "options": [
+          "get over",
+          "get along",
+          "get across",
+          "get by"
+        ],
+        "answer": "A",
+        "skill": "Vocabulary",
+        "topic": "Erasmus",
+        "level": "B2",
+        "explanation": "'Get over' means to recover from or overcome a difficulty, such as nervousness."
+      },
+      {
+        "id": 34,
+        "part": "B",
+        "type": "Synonym",
+        "question": "The city council's plan to ban cars from the historic center was met with considerable opposition from local shopkeepers.",
+        "options": [
+          "approval",
+          "resistance",
+          "indifference",
+          "curiosity"
+        ],
+        "answer": "B",
+        "skill": "Vocabulary",
+        "topic": "Society",
+        "level": "B2",
+        "explanation": "'Opposition' means resistance to a plan, so 'resistance' is the closest synonym."
+      },
+      {
+        "id": 35,
+        "part": "B",
+        "type": "Word Choice",
+        "question": "The company's new recycling initiative had a ______ effect on the surrounding community, inspiring several nearby businesses to adopt similar practices.",
+        "options": [
+          "ripe",
+          "rippled",
+          "ripple",
+          "ripping"
+        ],
+        "answer": "C",
+        "skill": "Vocabulary",
+        "topic": "Environment",
+        "level": "B2",
+        "explanation": "'Ripple effect' is a fixed expression describing a gradually spreading influence."
+      },
+      {
+        "id": 36,
+        "part": "B",
+        "type": "Antonym",
+        "question": "The professor's feedback was refreshingly candid, even when it meant pointing out serious flaws in the proposal.",
+        "options": [
+          "blunt",
+          "harsh",
+          "detailed",
+          "evasive"
+        ],
+        "answer": "D",
+        "skill": "Vocabulary",
+        "topic": "Communication",
+        "level": "B2",
+        "explanation": "'Candid' means open and honest; 'evasive', meaning avoiding directness, is its opposite."
+      },
+      {
+        "id": 37,
+        "part": "B",
+        "type": "Collocation",
+        "question": "The new scholarship scheme is designed to ______ the financial burden on students from lower-income families.",
+        "options": [
+          "ease",
+          "loosen",
+          "lower",
+          "soften"
+        ],
+        "answer": "A",
+        "skill": "Vocabulary",
+        "topic": "Business",
+        "level": "B2",
+        "explanation": "'Ease a burden' is the standard collocation meaning to reduce difficulty."
+      },
+      {
+        "id": 38,
+        "part": "B",
+        "type": "Phrasal Verb",
+        "question": "Rather than addressing the complaints directly, the airline seemed to be trying to ______ the issue until it was forgotten.",
+        "options": [
+          "stir up",
+          "brush off",
+          "catch on",
+          "work out"
+        ],
+        "answer": "B",
+        "skill": "Vocabulary",
+        "topic": "Transport",
+        "level": "B2",
+        "explanation": "'Brush off' means to dismiss or avoid dealing with something, matching the airline's behavior described."
+      },
+      {
+        "id": 39,
+        "part": "B",
+        "type": "Academic Vocabulary",
+        "question": "The researchers were careful to distinguish between correlation and ______ when interpreting their data.",
+        "options": [
+          "causality's",
+          "causative",
+          "causation",
+          "causing"
+        ],
+        "answer": "C",
+        "skill": "Vocabulary",
+        "topic": "Science",
+        "level": "B2",
+        "explanation": "'Causation' is the noun paired with 'correlation' in this well-known academic distinction."
+      },
+      {
+        "id": 40,
+        "part": "B",
+        "type": "Word Choice",
+        "question": "Despite the clinic's limited resources, the staff managed to provide ______ care to every patient who arrived.",
+        "options": [
+          "adequately",
+          "adequacy",
+          "adequateness",
+          "adequate"
+        ],
+        "answer": "D",
+        "skill": "Vocabulary",
+        "topic": "Health",
+        "level": "B2",
+        "explanation": "An adjective is needed to modify the noun 'care', so 'adequate' is correct."
+      },
+      {
+        "id": 41,
+        "part": "B",
+        "type": "Synonym",
+        "question": "The journalist was praised for her meticulous attention to detail when fact-checking the report.",
+        "options": [
+          "thorough",
+          "careless",
+          "swift",
+          "biased"
+        ],
+        "answer": "A",
+        "skill": "Vocabulary",
+        "topic": "Media",
+        "level": "B2",
+        "explanation": "'Meticulous' means extremely careful and thorough, matching 'thorough'."
+      },
+      {
+        "id": 42,
+        "part": "B",
+        "type": "Collocation",
+        "question": "The manager had to ______ a balance between meeting deadlines and maintaining the quality of the work.",
+        "options": [
+          "hit",
+          "strike",
+          "beat",
+          "catch"
+        ],
+        "answer": "B",
+        "skill": "Vocabulary",
+        "topic": "Work",
+        "level": "B2",
+        "explanation": "'Strike a balance' is the fixed collocation meaning to find a satisfactory compromise."
+      },
+      {
+        "id": 43,
+        "part": "B",
+        "type": "Vocabulary in Context",
+        "question": "The hotel's claim to be eco-friendly turned out to be little more than a marketing gimmick with no real environmental benefit.",
+        "options": [
+          "genuine strategy",
+          "legal requirement",
+          "superficial trick",
+          "scientific study"
+        ],
+        "answer": "C",
+        "skill": "Vocabulary",
+        "topic": "Travel",
+        "level": "B2",
+        "explanation": "'Gimmick' refers to a superficial trick used to attract attention rather than a genuine measure."
+      },
+      {
+        "id": 44,
+        "part": "B",
+        "type": "Phrasal Verb",
+        "question": "It took the new app several months to ______ with users once word of mouth began to spread.",
+        "options": [
+          "fall through",
+          "hold off",
+          "wear off",
+          "catch on"
+        ],
+        "answer": "D",
+        "skill": "Vocabulary",
+        "topic": "Technology",
+        "level": "B2",
+        "explanation": "'Catch on' means to become popular, which fits the context of the app gaining users."
+      },
+      {
+        "id": 45,
+        "part": "B",
+        "type": "Antonym",
+        "question": "The negotiations were surprisingly amicable, with both sides willing to compromise from the very first meeting.",
+        "options": [
+          "hostile",
+          "cooperative",
+          "lengthy",
+          "formal"
+        ],
+        "answer": "A",
+        "skill": "Vocabulary",
+        "topic": "Society",
+        "level": "B2",
+        "explanation": "'Amicable' means friendly and cooperative; 'hostile' is its opposite."
+      },
+      {
+        "id": 46,
+        "part": "B",
+        "type": "Word Choice",
+        "question": "The committee's decision to reject the proposal was widely seen as ______, given how much work had gone into preparing it.",
+        "options": [
+          "prematurely",
+          "premature",
+          "prematureness",
+          "prematured"
+        ],
+        "answer": "B",
+        "skill": "Vocabulary",
+        "topic": "Academic Life",
+        "level": "B2",
+        "explanation": "An adjective completing the linking verb 'was' is needed, so 'premature' is correct."
+      },
+      {
+        "id": 47,
+        "part": "B",
+        "type": "Collocation",
+        "question": "The professor asked students to ______ their arguments with concrete evidence rather than personal opinion.",
+        "options": [
+          "back off",
+          "back down",
+          "back up",
+          "back out"
+        ],
+        "answer": "C",
+        "skill": "Vocabulary",
+        "topic": "Academic Vocabulary",
+        "level": "B2",
+        "explanation": "'Back up an argument' means to support it with evidence, which fits the request made."
+      },
+      {
+        "id": 48,
+        "part": "B",
+        "type": "Synonym",
+        "question": "The volunteers showed remarkable resilience, continuing their work despite the extremely difficult conditions.",
+        "options": [
+          "fragility",
+          "generosity",
+          "patience",
+          "toughness"
+        ],
+        "answer": "D",
+        "skill": "Vocabulary",
+        "topic": "Daily Life",
+        "level": "B2",
+        "explanation": "'Resilience' refers to the ability to recover from or withstand difficulty, close in meaning to 'toughness'."
+      },
+      {
+        "id": 49,
+        "part": "B",
+        "type": "Vocabulary in Context",
+        "question": "Many commuters find the constant notifications from work apps intrusive, especially outside office hours.",
+        "options": [
+          "disruptive",
+          "welcome",
+          "unobtrusive",
+          "optional"
+        ],
+        "answer": "A",
+        "skill": "Vocabulary",
+        "topic": "Communication",
+        "level": "B2",
+        "explanation": "'Intrusive' describes something that disturbs or disrupts, matching 'disruptive'."
+      },
+      {
+        "id": 50,
+        "part": "B",
+        "type": "Word Choice",
+        "question": "The budget cuts forced the department to ______ several planned research projects for the coming year.",
+        "options": [
+          "shelf",
+          "shelve",
+          "shelving",
+          "shelved"
+        ],
+        "answer": "B",
+        "skill": "Vocabulary",
+        "topic": "Business",
+        "level": "B2",
+        "explanation": "The base verb form is needed after 'to', and 'shelve' means to postpone or abandon plans."
+      },
+      {
+        "id": 51,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Main Idea",
+        "question": "What is the main point the passage makes about algorithmic recommendation systems?",
+        "options": [
+          "They are designed primarily to waste users' time.",
+          "They are becoming less accurate as more data becomes available.",
+          "They quietly shape many everyday choices, often without users noticing the extent of their influence.",
+          "Most users actively resist and override their suggestions."
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Main Idea",
+        "level": "B2",
+        "explanation": "The passage's central argument is that recommendation systems subtly guide decisions across many areas of life while most users underestimate how much influence they have."
+      },
+      {
+        "id": 52,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Specific Information",
+        "question": "According to the passage, what did the university study measure?",
+        "options": [
+          "How often students changed their passwords",
+          "How much time participants spent comparing options before a recommendation was shown",
+          "How satisfied users felt with customer service",
+          "How participants' choices shifted after being shown a ranked list of suggestions"
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Specific Information",
+        "level": "B2",
+        "explanation": "The passage describes a study tracking how participants' final choices changed once a ranked recommendation list was introduced."
+      },
+      {
+        "id": 53,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Inference",
+        "question": "What can be inferred about the participants who were shown no recommendations at all?",
+        "options": [
+          "They spent longer evaluating a wider range of options before deciding.",
+          "They made decisions faster than the other group.",
+          "They were more likely to choose options that were actually unavailable.",
+          "They refused to make any decision at all."
+        ],
+        "answer": "A",
+        "skill": "Reading",
+        "topic": "Inference",
+        "level": "B2",
+        "explanation": "Since recommendations narrow attention toward a few suggested options, the group without them is implied to have considered a broader range, taking longer to decide."
+      },
+      {
+        "id": 54,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Vocabulary in Context",
+        "question": "In the passage, the word 'nudge' most likely refers to",
+        "options": [
+          "a forceful command that leaves no choice",
+          "a gentle influence that steers a decision without eliminating other options",
+          "a random, meaningless suggestion",
+          "a legal requirement imposed by regulators"
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Vocabulary in Context",
+        "level": "B2",
+        "explanation": "'Nudge' is used to describe a subtle influence that encourages a choice while still technically leaving other options open."
+      },
+      {
+        "id": 55,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Author's Purpose",
+        "question": "Why does the author mention the restaurant delivery app example?",
+        "options": [
+          "To criticize the food industry for poor hygiene standards",
+          "To argue that delivery apps should be banned",
+          "To provide a relatable, everyday illustration of how ranking order affects choice",
+          "To compare delivery prices across different cities"
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Author's Purpose",
+        "level": "B2",
+        "explanation": "The delivery app example is used as a concrete, familiar case to make the abstract idea of ranking influence easier to grasp."
+      },
+      {
+        "id": 56,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Reference",
+        "question": "In the sentence 'Few people pause to ask who decided this order, or why,' what does 'this order' refer to?",
+        "options": [
+          "The sequence of events in a historical timeline",
+          "The order in which a customer places items in a shopping cart",
+          "The order of courses in a restaurant menu",
+          "The ranking in which options are presented to a user"
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Reference",
+        "level": "B2",
+        "explanation": "'This order' refers back to the previously discussed ranking of recommended options shown to users."
+      },
+      {
+        "id": 57,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Logical Conclusion",
+        "question": "Based on the passage, which conclusion would the author most likely agree with?",
+        "options": [
+          "Users would benefit from understanding, at least broadly, how ranking systems influence their choices.",
+          "Recommendation systems should be eliminated entirely from digital platforms.",
+          "Only older users are affected by algorithmic recommendations.",
+          "Companies deliberately design these systems to deceive every user."
+        ],
+        "answer": "A",
+        "skill": "Reading",
+        "topic": "Logical Conclusion",
+        "level": "B2",
+        "explanation": "The passage's tone and closing argument support greater awareness of these systems rather than their outright elimination or claims of deliberate deception."
+      },
+      {
+        "id": 58,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Best Title",
+        "question": "Which title best fits the passage?",
+        "options": [
+          "The History of Social Clubs",
+          "Why Feeling Alone in a Crowd Is Becoming More Common",
+          "A Guide to Making New Friends Quickly",
+          "The Economics of Urban Housing"
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Best Title",
+        "level": "B2",
+        "explanation": "The passage focuses on how social isolation can persist even amid dense urban populations and constant digital contact, matching this title."
+      },
+      {
+        "id": 59,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Specific Information",
+        "question": "According to the passage, what did the longitudinal survey find about reported close friendships?",
+        "options": [
+          "They increased steadily across every age group surveyed.",
+          "They remained stable among young adults but declined sharply among retirees.",
+          "The average number of close friendships reported by young adults declined over the period studied.",
+          "They were unaffected by the number of hours spent on social media."
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Specific Information",
+        "level": "B2",
+        "explanation": "The passage reports that the survey tracked a decline in the average number of close friendships young adults reported over the studied period."
+      },
+      {
+        "id": 60,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Inference",
+        "question": "What does the passage imply about the relationship between online interaction and feelings of connection?",
+        "options": [
+          "Online interaction always strengthens feelings of genuine connection.",
+          "People who use social media the most never feel lonely.",
+          "Online interaction has completely replaced the need for in-person contact.",
+          "Frequent online contact can coexist with a persistent sense of isolation."
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Inference",
+        "level": "B2",
+        "explanation": "The passage suggests that constant digital contact does not necessarily prevent loneliness, implying the two can coexist."
+      },
+      {
+        "id": 61,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Cause/Effect",
+        "question": "According to the passage, what is one effect of longer commuting times mentioned by researchers?",
+        "options": [
+          "Reduced opportunity for the casual, unplanned social contact that builds friendships",
+          "Increased likelihood of joining community organizations",
+          "Higher rates of home ownership",
+          "Improved physical fitness among commuters"
+        ],
+        "answer": "A",
+        "skill": "Reading",
+        "topic": "Cause/Effect",
+        "level": "B2",
+        "explanation": "The passage links longer commutes to less time and energy available for the informal social contact that typically forms friendships."
+      },
+      {
+        "id": 62,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Writer's Opinion",
+        "question": "What is the author's attitude toward simple technological fixes for this problem?",
+        "options": [
+          "Fully supportive, viewing them as sufficient on their own",
+          "Dismissive, suggesting they oversimplify a more complex social issue",
+          "Indifferent, since the author does not discuss possible solutions",
+          "Enthusiastic, recommending new apps as the primary solution"
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Writer's Opinion",
+        "level": "B2",
+        "explanation": "The author expresses skepticism that technological fixes alone can resolve what is presented as a deeper structural and social problem."
+      },
+      {
+        "id": 63,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Vocabulary in Context",
+        "question": "In the passage, the phrase 'a paradox of modern connectivity' most nearly means",
+        "options": [
+          "a technical malfunction in communication networks",
+          "a widely accepted scientific law",
+          "a contradiction between being constantly connected and still feeling isolated",
+          "a type of internet security problem"
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Vocabulary in Context",
+        "level": "B2",
+        "explanation": "The phrase captures the contradictory situation in which greater connectivity does not prevent, and may even accompany, greater isolation."
+      },
+      {
+        "id": 64,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Reference",
+        "question": "What does the word 'this' refer to in 'Researchers are still debating what, exactly, is driving this'?",
+        "options": [
+          "The rise in average commuting times",
+          "The growth of the smartphone industry",
+          "The popularity of a particular social media platform",
+          "The decline in reported close friendships among young adults"
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Reference",
+        "level": "B2",
+        "explanation": "'This' refers back to the previously mentioned decline in close friendships that researchers are trying to explain."
+      },
+      {
+        "id": 65,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Main Idea",
+        "question": "What is the central argument of the passage about memory?",
+        "options": [
+          "Memory is largely reconstructed each time it is recalled, rather than being retrieved unchanged.",
+          "Human memory functions like a video recording that can be replayed exactly.",
+          "Only people with exceptional memory skills experience any distortion when remembering events.",
+          "Memories become more accurate the more frequently they are recalled."
+        ],
+        "answer": "A",
+        "skill": "Reading",
+        "topic": "Main Idea",
+        "level": "B2",
+        "explanation": "The passage's main claim is that memory recall is a reconstructive process, not a simple, unaltered retrieval, which contradicts the video-recording idea."
+      },
+      {
+        "id": 66,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Specific Information",
+        "question": "According to the passage, what happened to participants who were shown a misleading photo after witnessing an event?",
+        "options": [
+          "Their memory of the event became noticeably more accurate.",
+          "Some incorporated false details from the photo into their later description of the event.",
+          "They were unable to remember the event at all afterward.",
+          "They immediately recognized the photo as inaccurate and ignored it."
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Specific Information",
+        "level": "B2",
+        "explanation": "The passage describes how exposure to misleading information after an event led some participants to blend false details into their memory of it."
+      },
+      {
+        "id": 67,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Inference",
+        "question": "What can be inferred about eyewitness testimony based on the passage?",
+        "options": [
+          "It should always be treated as completely unreliable and ignored.",
+          "It is more reliable than any form of physical evidence.",
+          "It may be sincerely believed by the witness while still containing inaccuracies.",
+          "It is only unreliable when the witness is deliberately lying."
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Inference",
+        "level": "B2",
+        "explanation": "The passage implies that distorted memories can feel completely genuine to the person recalling them, so sincerity does not guarantee accuracy."
+      },
+      {
+        "id": 68,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Cause/Effect",
+        "question": "According to the passage, what effect does strong emotion have on memory formation?",
+        "options": [
+          "It prevents any memory of the event from forming.",
+          "It guarantees that every detail will be remembered correctly.",
+          "It has no measurable effect on how a memory is later recalled.",
+          "It can make a memory feel vivid and confident while not necessarily making it more accurate."
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Cause/Effect",
+        "level": "B2",
+        "explanation": "The passage explains that emotional intensity increases the vividness and confidence of a memory without necessarily improving its factual accuracy."
+      },
+      {
+        "id": 69,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Vocabulary in Context",
+        "question": "In the passage, the word 'fallible' most nearly means",
+        "options": [
+          "capable of being mistaken or inaccurate",
+          "perfectly reliable",
+          "artificially enhanced",
+          "completely forgotten"
+        ],
+        "answer": "A",
+        "skill": "Reading",
+        "topic": "Vocabulary in Context",
+        "level": "B2",
+        "explanation": "'Fallible' describes something prone to error, which matches 'capable of being mistaken'."
+      },
+      {
+        "id": 70,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Logical Conclusion",
+        "question": "Which statement would the author most likely support based on the passage's argument?",
+        "options": [
+          "Courts should rely solely on eyewitness confidence to judge the accuracy of testimony.",
+          "Corroborating eyewitness accounts with independent evidence is a reasonable precaution.",
+          "Memory research has no practical relevance outside laboratory settings.",
+          "People with vivid memories of an event never make factual errors."
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Logical Conclusion",
+        "level": "B2",
+        "explanation": "Given the passage's emphasis on memory's fallibility despite felt confidence, the author would logically support seeking independent corroboration."
+      },
+      {
+        "id": 71,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Reference",
+        "question": "In the sentence 'What makes this particularly significant for real-world contexts ... is that the confidence with which a memory is reported bears little relationship to its accuracy,' what does 'this' refer to?",
+        "options": [
+          "The invention of video recording technology",
+          "The decision of courts to stop using eyewitnesses altogether",
+          "The finding that participants can absorb false suggested details into a memory without realizing it",
+          "The high cost of running psychology experiments"
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Reference",
+        "level": "B2",
+        "explanation": "'This' points back to the experimental finding just described: that participants unknowingly incorporate false suggested details into their memory of an event."
+      },
+      {
+        "id": 72,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Writer's Opinion",
+        "question": "What is the author's attitude toward the idea that human memory works like a recording?",
+        "options": [
+          "Fully supportive, treating it as an accurate description",
+          "Uncertain, refusing to take any position on the matter",
+          "Mildly supportive, but only for emotionally intense memories",
+          "Dismissive, presenting it as a seriously mistaken popular belief"
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Writer's Opinion",
+        "level": "B2",
+        "explanation": "The author explicitly states that decades of research have shown the recording model of memory to be 'seriously mistaken', indicating a dismissive stance toward it."
+      },
+      {
+        "id": 73,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Main Idea",
+        "question": "What is the main idea of the passage about the gig economy?",
+        "options": [
+          "The flexibility offered by platform work often comes paired with significant financial and social trade-offs.",
+          "Freelance platform work offers workers unlimited flexibility with no real trade-offs.",
+          "Traditional full-time employment has completely disappeared in most industries.",
+          "Platform companies are universally condemned by all of their workers."
+        ],
+        "answer": "A",
+        "skill": "Reading",
+        "topic": "Main Idea",
+        "level": "B2",
+        "explanation": "The passage's overall argument balances the appeal of flexible platform work against the real trade-offs it often involves, such as income instability."
+      },
+      {
+        "id": 74,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Specific Information",
+        "question": "According to the passage, what did the survey of platform workers reveal about income?",
+        "options": [
+          "Most workers reported perfectly stable, predictable monthly earnings.",
+          "A majority reported significant week-to-week fluctuation in their earnings.",
+          "Platform companies guarantee a fixed minimum income to every worker.",
+          "Income instability was reported only by workers in a single country."
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Specific Information",
+        "level": "B2",
+        "explanation": "The passage cites survey data showing that most platform workers experience considerable week-to-week variation in income."
+      },
+      {
+        "id": 75,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Inference",
+        "question": "What can be inferred about why some workers still prefer platform work despite its instability?",
+        "options": [
+          "They are unaware that the instability exists.",
+          "They are required by law to work exclusively through platforms.",
+          "They value the autonomy to set their own schedule more than they value income predictability.",
+          "They receive the same benefits as traditional full-time employees."
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Inference",
+        "level": "B2",
+        "explanation": "The passage implies that for some workers, the value placed on scheduling freedom outweighs the downside of unpredictable income."
+      },
+      {
+        "id": 76,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Reference",
+        "question": "What does 'this trade-off' refer to in the passage?",
+        "options": [
+          "The choice between studying abroad and staying at a home university",
+          "A decision about which smartphone operating system to use",
+          "The comparison between two different university grading systems",
+          "The exchange of scheduling freedom for reduced financial and social security"
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Reference",
+        "level": "B2",
+        "explanation": "'This trade-off' refers to the previously described exchange of flexible scheduling for less predictable income and fewer protections."
+      },
+      {
+        "id": 77,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Writer's Opinion",
+        "question": "What is the author's overall stance toward platform work, based on the passage?",
+        "options": [
+          "Balanced, acknowledging genuine benefits alongside real risks",
+          "Entirely negative, arguing it should be banned",
+          "Entirely positive, presenting it as a flawless alternative to traditional jobs",
+          "Neutral to the point of expressing no argument at all"
+        ],
+        "answer": "A",
+        "skill": "Reading",
+        "topic": "Writer's Opinion",
+        "level": "B2",
+        "explanation": "The passage presents both the appeal and the risks of platform work without arguing for banning or uncritically endorsing it."
+      },
+      {
+        "id": 78,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Vocabulary in Context",
+        "question": "In the passage, the word 'precarious' most nearly means",
+        "options": [
+          "completely secure",
+          "unstable or uncertain",
+          "extremely profitable",
+          "legally protected"
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Vocabulary in Context",
+        "level": "B2",
+        "explanation": "'Precarious' describes something unstable or likely to fail, matching 'unstable or uncertain' in this context of income security."
+      },
+      {
+        "id": 79,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Cause/Effect",
+        "question": "According to the passage, what is one consequence of lacking access to employer-provided benefits?",
+        "options": [
+          "Workers automatically receive government compensation instead.",
+          "Platform companies are legally required to provide equivalent benefits.",
+          "Workers must independently arrange and pay for things like health coverage.",
+          "Workers lose the right to use the platform entirely."
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Cause/Effect",
+        "level": "B2",
+        "explanation": "The passage notes that without employer-provided benefits, platform workers must arrange and fund such protections themselves."
+      },
+      {
+        "id": 80,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Logical Conclusion",
+        "question": "Based on the passage, which policy idea would most directly address the problem it describes?",
+        "options": [
+          "Banning all forms of freelance work immediately",
+          "Removing all scheduling flexibility from platform work",
+          "Eliminating any form of hourly pay reporting",
+          "Portable benefits that follow a worker across different platforms and jobs"
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Logical Conclusion",
+        "level": "B2",
+        "explanation": "Since the core problem described is the loss of stable benefits when moving between flexible jobs, a portable-benefits system follows logically as a direct solution."
+      }
+    ],
+    "passages": [
+      {
+        "id": "p1",
+        "title": "Who Decided This Order? Recommendation Systems and Everyday Choice",
+        "text": "Open almost any shopping, streaming, or food-delivery app, and the first thing you typically see is not a blank list of every option available, but a ranked selection chosen for you by an algorithm. Few people pause to ask who decided this order, or why. Yet the order in which choices are presented turns out to shape decisions far more than most users realize.\n\nA study conducted by researchers at a European university illustrates this clearly. Participants were asked to choose a meal from a restaurant delivery app under two conditions. In one, dishes appeared in a ranked list generated by the app's recommendation engine. In the other, the same dishes were shown in a random, unranked order. The researchers tracked not only which dishes participants ultimately chose, but also how long they spent evaluating the available options before deciding. Those viewing the ranked list consistently chose from among the first few suggestions and reached a decision quickly. Those viewing the random list took noticeably longer, scrolling further and comparing a wider range of dishes before settling on a choice.\n\nWhat makes this influence so effective, researchers suggest, is that it rarely feels like influence at all. A ranked list does not forbid any option; every dish remains technically available with a single tap. Instead, the system works through what some researchers term a nudge: a gentle steering of attention and effort toward certain choices rather than others, without ever removing alternatives outright. Because the choice still feels entirely free, few users stop to consider how much the initial ranking shaped where their attention, and ultimately their decision, landed.\n\nThis dynamic is not limited to food delivery. Streaming platforms rank which shows appear first on a homepage; shopping sites rank which products appear at the top of a search; even job-listing sites rank which postings a candidate sees first. In each case, the underlying mechanism is similar: a ranking, built from data about what previous users clicked, quietly funnels attention toward a narrower set of options.\n\nNone of this means recommendation systems are inherently harmful. Many genuinely help users navigate an overwhelming number of choices that would otherwise be difficult to sort through manually. The concern raised by researchers is less about the existence of these systems and more about the near-total invisibility of their influence. If users understood, even in general terms, how ranking shapes what they notice and choose, they might approach recommended lists with a more deliberate, questioning eye, rather than treating the top suggestion as simply the best one."
+      },
+      {
+        "id": "p2",
+        "title": "A Paradox of Modern Connectivity",
+        "text": "By almost any measure, people today are in contact with one another more often than any previous generation. Messaging apps deliver a constant stream of notifications; social media feeds update by the minute; video calls make it possible to see a friend's face from thousands of kilometers away. And yet, across many surveys conducted over the past two decades, a troubling pattern has emerged: young adults increasingly report feeling lonely, even as their digital contact with others has expanded. Researchers are still debating what, exactly, is driving this, but several contributing factors have become clearer.\n\nOne long-term survey tracked reported close friendships among young adults across more than fifteen years. The average number of close friendships reported by young adults declined over the period studied, even as the same respondents reported spending increasing amounts of time communicating through digital platforms. The finding points toward what researchers describe as a paradox of modern connectivity: constant digital contact does not reliably translate into a strong sense of connection, and the two can clearly coexist with persistent isolation.\n\nPart of the explanation may lie in how urban life has changed. Longer commuting times, driven by housing costs that push workers further from city centers, leave less time and energy for the kind of casual, unplanned social contact, a chat with a neighbor, a conversation after a local class, that has traditionally built and sustained friendships. When free time shrinks, maintaining existing friendships can take priority over forming new ones, leaving little room for the kind of spontaneous interaction that typically sparks them in the first place.\n\nSome technology companies have responded by building features explicitly designed to combat loneliness: community forums, local-interest groups, even apps designed purely to help users find others nearby with shared hobbies. The author of this piece remains skeptical that such features, however well designed, can fully address a problem rooted in structural changes to how cities are organized and how time is spent. Treating loneliness as a problem that a new app feature can solve risks overlooking the deeper causes behind the trend: long commutes, expensive housing, and shrinking unstructured time.\n\nWhat does seem reasonably clear, based on the available evidence, is that connectivity and connection are not the same thing, and conflating them may lead both individuals and policymakers to look for solutions in the wrong place."
+      },
+      {
+        "id": "p3",
+        "title": "Why Your Memory Is Not a Recording",
+        "text": "Most people imagine memory as something like a video recording: an event happens, the brain records it, and recalling the memory later simply means replaying that recording. Decades of psychological research, however, have shown this model to be seriously mistaken. Human memory is not a fixed recording retrieved unchanged, but a fallible, reconstructive process, rebuilt in pieces each time it is recalled.\n\nOne of the clearest demonstrations of this comes from a well-known category of experiments. Participants first witness a staged event, such as a minor traffic accident performed by actors. Afterward, researchers show participants photographs or descriptions containing subtly false details, a street sign that was not actually present, for instance. When asked to describe the original event days later, a striking number of participants incorporate the false details into their account, often with no awareness that anything has changed. Some incorporated false details from the photo directly into their later description of the event, describing the fabricated sign as though they had seen it themselves.\n\nWhat makes this particularly significant for real-world contexts, such as criminal trials, is that the confidence with which a memory is reported bears little relationship to its accuracy. A witness recalling a vivid, emotionally intense memory may describe it with complete sincerity and conviction, genuinely believing every detail to be correct, while still being factually mistaken about key elements. Strong emotion appears to increase the vividness and felt confidence of a memory without necessarily improving its underlying accuracy; a memory can therefore be fallible and still feel entirely certain to the person recalling it.\n\nThis research has shaped how some legal systems approach eyewitness testimony. Rather than treating a confident, detailed account as inherently reliable, many investigators now place greater weight on corroborating testimony with independent evidence, physical records, timestamps, other witnesses, precisely because memory alone, however vivid, cannot be assumed to be accurate.\n\nNone of this means human memory is useless or that witnesses are typically lying. It means something more unsettling in some ways: that the mind reconstructs the past using whatever fragments and associations are available, filling gaps with plausible details that were never actually experienced, all without any sense that reconstruction, rather than simple retrieval, has taken place."
+      },
+      {
+        "id": "p4",
+        "title": "The Trade-Off at the Heart of the Gig Economy",
+        "text": "Ask a freelance delivery rider or a ride-share driver why they chose platform work over a traditional job, and flexibility is almost always near the top of the list. Setting your own hours, logging on and off whenever convenient, and avoiding a fixed schedule dictated by an employer are genuinely appealing features, especially for students, parents, or anyone juggling multiple responsibilities. What receives less attention in these conversations is what workers give up in exchange for that flexibility, and whether the trade-off is as favorable as it first appears.\n\nA recent survey of several thousand platform workers across multiple countries sheds some light on this question. A majority reported significant week-to-week fluctuation in their earnings, with some weeks bringing in several times more income than others, depending on factors largely outside their control: weather, local events, or simply how many other workers happened to be logged on at the same time. For workers supporting dependents or managing fixed monthly expenses, this kind of unpredictability can create genuine financial strain, even when average monthly earnings appear reasonable on paper.\n\nThis instability is compounded by a second issue: the absence of employer-provided benefits. Without access to the health coverage, paid leave, or retirement contributions that many traditional jobs include, workers must independently arrange and pay for things like health coverage, often at a higher cost than an employer could negotiate on their behalf. In this sense, the trade-off facing platform workers echoes, in a new form, challenges long familiar to part-time retail and hospitality workers, who have historically faced similarly unpredictable scheduling, even if the specific mechanisms differ.\n\nFaced with mounting evidence of this precarious position, some city governments have begun exploring regulatory responses. Rather than banning platform work outright, a measure most workers surveyed opposed, several municipalities have begun experimenting with minimum per-task pay rules intended to establish an earnings floor without eliminating the scheduling flexibility that draws many workers to this kind of work in the first place. Whether such measures can meaningfully address the underlying instability, without simply pushing companies to adjust their algorithms around the new rules, remains an open and actively studied question.\n\nWhat emerges from the available evidence is not a simple story of exploitation or liberation, but a genuine trade-off: real flexibility, paired with real financial and social risk, and no easy way to have one without at least some of the other."
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Deneme 8",
+    "level": "B2",
+    "duration": 150,
+    "questionCount": 80,
+    "questions": [
+      {
+        "id": 1,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "Had the technician checked the server logs sooner, the outage ______ several hours earlier.",
+        "options": [
+          "would have been resolved",
+          "would be resolved",
+          "will be resolved",
+          "was resolved"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Conditionals",
+        "level": "B2",
+        "explanation": "This is a third conditional referring to an unreal past situation, so the result clause requires 'would have been resolved'."
+      },
+      {
+        "id": 2,
+        "part": "A",
+        "type": "Sentence Completion with Connectors",
+        "question": "The company reported record profits this quarter; ______, it announced a round of layoffs the same week.",
+        "options": [
+          "as a result",
+          "nevertheless",
+          "consequently",
+          "in addition"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Linking Words",
+        "level": "B2",
+        "explanation": "'Nevertheless' signals a contrast between the record profits and the surprising layoffs, which fits the logical relationship here."
+      },
+      {
+        "id": 3,
+        "part": "A",
+        "type": "Structure Recognition",
+        "question": "The report, the conclusions of ______ were later disputed by other economists, had initially been well received.",
+        "options": [
+          "it",
+          "that",
+          "which",
+          "them"
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Relative Clauses",
+        "level": "B2",
+        "explanation": "In the pattern 'noun + of which', 'which' is required to form a grammatically correct non-defining relative clause referring to 'the report'."
+      },
+      {
+        "id": 4,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "Not only ______ the proposal rejected, but the committee also asked for a complete rewrite.",
+        "options": [
+          "did",
+          "has",
+          "is",
+          "was"
+        ],
+        "answer": "D",
+        "skill": "Grammar",
+        "topic": "Subject-Verb Agreement",
+        "level": "B2",
+        "explanation": "After the fronted negative adverbial 'Not only', subject-verb inversion is required; since the main verb is passive ('was rejected'), 'was' is correct."
+      },
+      {
+        "id": 5,
+        "part": "A",
+        "type": "Error Identification",
+        "question": "The manager admitted (A) to having made (B) a mistake, but insisted (C) that it (D) don't affect the final results.",
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer": "D",
+        "skill": "Grammar",
+        "topic": "Reported Speech",
+        "level": "B2",
+        "explanation": "The subject 'it' requires the third-person singular form 'doesn't', not 'don't'."
+      },
+      {
+        "id": 6,
+        "part": "A",
+        "type": "Cloze Test",
+        "question": "The board insisted that the final report ______ reviewed by an independent auditor before publication.",
+        "options": [
+          "be",
+          "is",
+          "was",
+          "being"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Passive Voice",
+        "level": "B2",
+        "explanation": "After a verb of insistence like 'insisted that', the subjunctive base form is used, giving the passive construction 'be reviewed'."
+      },
+      {
+        "id": 7,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "______ how thoroughly the plan was tested, something still went wrong during the actual launch.",
+        "options": [
+          "Despite",
+          "No matter",
+          "Although",
+          "However"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Conjunctions",
+        "level": "B2",
+        "explanation": "'No matter how' correctly introduces a concessive clause meaning 'regardless of the degree to which', fitting the sentence's logic."
+      },
+      {
+        "id": 8,
+        "part": "A",
+        "type": "Dialogue Completion",
+        "question": "A: You look exhausted.\nB: I know, I ______ on this report since six this morning without a break.",
+        "options": [
+          "work",
+          "worked",
+          "have been working",
+          "was working"
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Present Perfect",
+        "level": "B2",
+        "explanation": "An ongoing action that began in the past and continues into the present, with duration emphasized, requires the present perfect continuous."
+      },
+      {
+        "id": 9,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "The negotiations broke down largely ______ a single unresolved clause in the contract.",
+        "options": [
+          "due to",
+          "because",
+          "since",
+          "as"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Prepositions",
+        "level": "B2",
+        "explanation": "'Due to' is followed directly by a noun phrase ('a single unresolved clause'), unlike 'because', which requires a clause with a subject and verb."
+      },
+      {
+        "id": 10,
+        "part": "A",
+        "type": "Situation-based Question",
+        "question": "The intern had completed the task perfectly well; there ______ any need for her supervisor to redo it.",
+        "options": [
+          "mustn't have been",
+          "wasn't",
+          "shouldn't have been",
+          "needn't have been"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Modal Verbs",
+        "level": "B2",
+        "explanation": "A plain statement of fact about the past, that no such need existed, is expressed with the simple past 'wasn't', not a modal of deduction or obligation."
+      },
+      {
+        "id": 11,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "The article raised the question of ______ automation should be regulated at the national or international level.",
+        "options": [
+          "that",
+          "if",
+          "whether",
+          "what"
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Noun Clauses",
+        "level": "B2",
+        "explanation": "After 'the question of', a noun clause introduced by 'whether' is used to present an unresolved issue; 'if' is not used directly after a preposition like 'of' in this way."
+      },
+      {
+        "id": 12,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "The lecturer avoided ______ directly to the controversy, preferring instead to let students draw their own conclusions.",
+        "options": [
+          "refer",
+          "to refer",
+          "referred",
+          "referring"
+        ],
+        "answer": "D",
+        "skill": "Grammar",
+        "topic": "Gerunds",
+        "level": "B2",
+        "explanation": "'Avoid' is followed by a gerund, so 'referring' is the correct form."
+      },
+      {
+        "id": 13,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "By the time the inspectors arrived, the factory ______ its safety procedures to meet the new regulations.",
+        "options": [
+          "had already updated",
+          "updates",
+          "updated",
+          "was updating"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Past Perfect",
+        "level": "B2",
+        "explanation": "An action completed before another past event ('by the time the inspectors arrived') requires the past perfect."
+      },
+      {
+        "id": 14,
+        "part": "A",
+        "type": "Cloze Test",
+        "question": "It was ______ a minor detail that the editor almost removed it from the final draft entirely.",
+        "options": [
+          "so",
+          "such a",
+          "such",
+          "too"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Articles",
+        "level": "B2",
+        "explanation": "'Such a + adjective + noun' is the correct structure before a singular countable noun like 'detail'."
+      },
+      {
+        "id": 15,
+        "part": "A",
+        "type": "Structure Recognition",
+        "question": "______ research has been conducted on the topic, surprisingly little is known about its long-term effects.",
+        "options": [
+          "Many",
+          "A few",
+          "Much",
+          "Several"
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Quantifiers",
+        "level": "B2",
+        "explanation": "'Research' is an uncountable noun, so the quantifier 'much' is required rather than 'many' or 'several'."
+      },
+      {
+        "id": 16,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "The smaller the sample size, ______ the margin of error tends to be.",
+        "options": [
+          "large",
+          "larger",
+          "largest",
+          "the larger"
+        ],
+        "answer": "D",
+        "skill": "Grammar",
+        "topic": "Comparatives",
+        "level": "B2",
+        "explanation": "The double comparative construction 'the + comparative, the + comparative' requires 'the larger' in the second clause."
+      },
+      {
+        "id": 17,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "The CEO announced that the merger ______ finalized within the next two fiscal quarters.",
+        "options": [
+          "would be",
+          "will have been",
+          "is being",
+          "has been"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Reported Speech",
+        "level": "B2",
+        "explanation": "In reported speech, a future statement in direct speech ('will be finalized') typically shifts to 'would be finalized'."
+      },
+      {
+        "id": 18,
+        "part": "A",
+        "type": "Error Identification",
+        "question": "The researchers (A) have been studying (B) the effects of (C) sleep deprivation since (D) three years.",
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer": "D",
+        "skill": "Grammar",
+        "topic": "Present Perfect",
+        "level": "B2",
+        "explanation": "'Since' is used with a specific point in time, whereas a duration like 'three years' should be introduced with 'for'."
+      },
+      {
+        "id": 19,
+        "part": "A",
+        "type": "Cloze Test",
+        "question": "The engineers had the faulty component ______ before the machine was put back into operation.",
+        "options": [
+          "replace",
+          "replaced",
+          "replacing",
+          "to replace"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Causatives",
+        "level": "B2",
+        "explanation": "In the causative structure 'have something done', the past participle 'replaced' is used because the action is performed by someone else."
+      },
+      {
+        "id": 20,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "The warehouse, ______ location made deliveries notoriously slow, was finally relocated closer to the motorway.",
+        "options": [
+          "which",
+          "that",
+          "whose",
+          "where"
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Relative Clauses",
+        "level": "B2",
+        "explanation": "'Whose' shows possession, linking 'location' to 'the warehouse', so it is the correct relative pronoun here."
+      },
+      {
+        "id": 21,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "I wish the airline ______ us about the delay before we had already checked in our luggage.",
+        "options": [
+          "had told",
+          "told",
+          "would tell",
+          "tells"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Wish / If Only",
+        "level": "B2",
+        "explanation": "A regret about a completed past event uses 'wish + past perfect': had told."
+      },
+      {
+        "id": 22,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "______ aware of the risks, the climbers decided to continue toward the summit despite the worsening weather.",
+        "options": [
+          "Full",
+          "Fully",
+          "Fullness",
+          "Fuller"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Adjectives and Adverbs",
+        "level": "B2",
+        "explanation": "An adverb is required to modify the adjective 'aware', so 'fully' is correct."
+      },
+      {
+        "id": 23,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "______ by the committee's unexpected decision, the applicant requested a formal explanation in writing.",
+        "options": [
+          "Surprise",
+          "Surprising",
+          "Surprised",
+          "To surprise"
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Participles",
+        "level": "B2",
+        "explanation": "The applicant is the one who experienced surprise, so the passive past participle 'Surprised' correctly opens the clause."
+      },
+      {
+        "id": 24,
+        "part": "A",
+        "type": "Situation-based Question",
+        "question": "The two witnesses gave accounts that directly contradicted each other, so the detective concluded that at least one of them ______ the truth.",
+        "options": [
+          "mustn't have told",
+          "needn't have told",
+          "shouldn't have told",
+          "can't have told"
+        ],
+        "answer": "D",
+        "skill": "Grammar",
+        "topic": "Modal Verbs",
+        "level": "B2",
+        "explanation": "'Can't have told' expresses a logical deduction that something was impossible, matching the detective's reasoning about the contradiction."
+      },
+      {
+        "id": 25,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "This is by far ______ decision the board has had to make since the company was founded.",
+        "options": [
+          "the most difficult",
+          "a difficult",
+          "more difficult",
+          "difficult"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Superlatives",
+        "level": "B2",
+        "explanation": "Comparing this decision against every decision the company has made historically requires the superlative: the most difficult."
+      },
+      {
+        "id": 26,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "By the time the conference ends on Friday, over three hundred researchers ______ their findings.",
+        "options": [
+          "will present",
+          "will have presented",
+          "present",
+          "presented"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Future Perfect",
+        "level": "B2",
+        "explanation": "Completion before a specified future point ('by the time the conference ends') requires the future perfect."
+      },
+      {
+        "id": 27,
+        "part": "A",
+        "type": "Dialogue Completion",
+        "question": "A: Did you remember to send the invoice?\nB: Yes, I ______ it first thing this morning, before anyone else arrived.",
+        "options": [
+          "send",
+          "was sending",
+          "sent",
+          "have sent"
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Past Simple",
+        "level": "B2",
+        "explanation": "A completed action at a specific past time ('first thing this morning') is expressed with the simple past: sent."
+      },
+      {
+        "id": 28,
+        "part": "A",
+        "type": "Cloze Test",
+        "question": "The analysts disagreed sharply ______ whether the downturn was temporary or the beginning of a longer trend.",
+        "options": [
+          "for",
+          "about",
+          "at",
+          "on"
+        ],
+        "answer": "D",
+        "skill": "Grammar",
+        "topic": "Prepositions",
+        "level": "B2",
+        "explanation": "'Disagree on something' is the standard collocational preposition used when specifying the point of disagreement."
+      },
+      {
+        "id": 29,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "While the junior staff ______ the data, the senior analyst was drafting the executive summary in the next room.",
+        "options": [
+          "were entering",
+          "entered",
+          "had entered",
+          "enter"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Past Continuous",
+        "level": "B2",
+        "explanation": "Two simultaneous ongoing past actions are both expressed with the past continuous, so 'were entering' fits alongside 'was drafting'."
+      },
+      {
+        "id": 30,
+        "part": "A",
+        "type": "Functional Language",
+        "question": "A: I still think we should have launched the product earlier.\nB: ______ We had no way of knowing the market would shift so fast.",
+        "options": [
+          "Fair enough.",
+          "I see what you mean, but I'm not sure that's fair.",
+          "Exactly my point.",
+          "You've got a point there."
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Determiners",
+        "level": "B2",
+        "explanation": "The response politely disagrees while acknowledging the speaker's view, which fits 'I see what you mean, but I'm not sure that's fair' rather than the agreement phrases."
+      },
+      {
+        "id": 31,
+        "part": "B",
+        "type": "Collocation",
+        "question": "The two companies decided to ______ forces in order to compete more effectively against larger rivals.",
+        "options": [
+          "combine",
+          "merge",
+          "join",
+          "unite"
+        ],
+        "answer": "C",
+        "skill": "Vocabulary",
+        "topic": "Business",
+        "level": "B2",
+        "explanation": "'Join forces' is the fixed collocation meaning to cooperate with another party toward a shared goal; the other verbs do not pair naturally with 'forces' in this fixed expression."
+      },
+      {
+        "id": 32,
+        "part": "B",
+        "type": "Synonym",
+        "question": "The scandal severely undermined public confidence in the institution's leadership.",
+        "options": [
+          "strengthened",
+          "restored",
+          "measured",
+          "weakened"
+        ],
+        "answer": "D",
+        "skill": "Vocabulary",
+        "topic": "Society",
+        "level": "B2",
+        "explanation": "'Undermine' means to weaken something gradually, matching 'weakened'."
+      },
+      {
+        "id": 33,
+        "part": "B",
+        "type": "Word Choice",
+        "question": "The committee's report was criticized for being overly ______, offering only broad statements without any specific recommendations.",
+        "options": [
+          "vague",
+          "vagueness",
+          "vaguely",
+          "vaguer"
+        ],
+        "answer": "A",
+        "skill": "Vocabulary",
+        "topic": "Communication",
+        "level": "B2",
+        "explanation": "An adjective is needed after 'being', so 'vague' is correct."
+      },
+      {
+        "id": 34,
+        "part": "B",
+        "type": "Phrasal Verb",
+        "question": "The negotiations nearly ______ when both sides refused to compromise on the price.",
+        "options": [
+          "fell for",
+          "fell through",
+          "fell behind",
+          "fell out"
+        ],
+        "answer": "B",
+        "skill": "Vocabulary",
+        "topic": "Business",
+        "level": "B2",
+        "explanation": "'Fall through' means to fail to happen, which fits a negotiation collapsing."
+      },
+      {
+        "id": 35,
+        "part": "B",
+        "type": "Collocation",
+        "question": "Before launching the campaign, the marketing team needed to ______ a thorough analysis of the target audience.",
+        "options": [
+          "make",
+          "do",
+          "conduct",
+          "take"
+        ],
+        "answer": "C",
+        "skill": "Vocabulary",
+        "topic": "Academic Vocabulary",
+        "level": "B2",
+        "explanation": "'Conduct an analysis' is the standard academic collocation for carrying out a structured investigation."
+      },
+      {
+        "id": 36,
+        "part": "B",
+        "type": "Vocabulary in Context",
+        "question": "The new policy was met with widespread skepticism, as many employees doubted it would actually be enforced.",
+        "options": [
+          "enthusiasm",
+          "silence",
+          "curiosity",
+          "doubt"
+        ],
+        "answer": "D",
+        "skill": "Vocabulary",
+        "topic": "Work",
+        "level": "B2",
+        "explanation": "'Skepticism' means doubt about whether something is true or will happen, matching option B."
+      },
+      {
+        "id": 37,
+        "part": "B",
+        "type": "Phrasal Verb",
+        "question": "The city council had to ______ its plan to build a new stadium after local residents strongly objected.",
+        "options": [
+          "scale back",
+          "scale up",
+          "take over",
+          "set up"
+        ],
+        "answer": "A",
+        "skill": "Vocabulary",
+        "topic": "Society",
+        "level": "B2",
+        "explanation": "'Scale back' means to reduce the size or extent of a plan, fitting the response to residents' objections."
+      },
+      {
+        "id": 38,
+        "part": "B",
+        "type": "Word Choice",
+        "question": "The vaccine trial produced results that were statistically ______, meaning they were unlikely to be due to chance.",
+        "options": [
+          "significance",
+          "significant",
+          "signify",
+          "significantly"
+        ],
+        "answer": "B",
+        "skill": "Vocabulary",
+        "topic": "Science",
+        "level": "B2",
+        "explanation": "An adjective completing the linking verb 'were' is required, so 'significant' is correct."
+      },
+      {
+        "id": 39,
+        "part": "B",
+        "type": "Collocation",
+        "question": "The journalist was careful to ______ a clear distinction between verified facts and unconfirmed rumors.",
+        "options": [
+          "pull",
+          "pick",
+          "draw",
+          "take"
+        ],
+        "answer": "C",
+        "skill": "Vocabulary",
+        "topic": "Media",
+        "level": "B2",
+        "explanation": "'Draw a distinction' is the fixed collocation meaning to clearly separate two things conceptually."
+      },
+      {
+        "id": 40,
+        "part": "B",
+        "type": "Antonym",
+        "question": "The new regulations are notably stringent, requiring far more documentation than the previous system did.",
+        "options": [
+          "strict",
+          "complicated",
+          "recent",
+          "lenient"
+        ],
+        "answer": "D",
+        "skill": "Vocabulary",
+        "topic": "Society",
+        "level": "B2",
+        "explanation": "'Stringent' means strict or demanding; 'lenient', meaning permissive or relaxed, is its opposite."
+      },
+      {
+        "id": 41,
+        "part": "B",
+        "type": "Synonym",
+        "question": "The professor's explanation was so convoluted that most of the class left the lecture more confused than before.",
+        "options": [
+          "complicated",
+          "simple",
+          "brief",
+          "memorable"
+        ],
+        "answer": "A",
+        "skill": "Vocabulary",
+        "topic": "Academic Life",
+        "level": "B2",
+        "explanation": "'Convoluted' means excessively complicated or hard to follow, matching 'complicated'."
+      },
+      {
+        "id": 42,
+        "part": "B",
+        "type": "Phrasal Verb",
+        "question": "After the data breach, the company had to ______ its entire cybersecurity policy from scratch.",
+        "options": [
+          "look into",
+          "overhaul",
+          "come across",
+          "put off"
+        ],
+        "answer": "B",
+        "skill": "Vocabulary",
+        "topic": "Technology",
+        "level": "B2",
+        "explanation": "'Overhaul' means to thoroughly reorganize or renew something, fitting the complete policy rebuild described."
+      },
+      {
+        "id": 43,
+        "part": "B",
+        "type": "Vocabulary in Context",
+        "question": "The budget proposal was rejected because it relied on overly optimistic projections of future revenue.",
+        "options": [
+          "pessimistic",
+          "cautious",
+          "unrealistically positive",
+          "detailed"
+        ],
+        "answer": "C",
+        "skill": "Vocabulary",
+        "topic": "Business",
+        "level": "B2",
+        "explanation": "'Overly optimistic' describes projections that are unrealistically positive, which is the meaning tested here."
+      },
+      {
+        "id": 44,
+        "part": "B",
+        "type": "Collocation",
+        "question": "The airline was forced to ______ all flights after the volcanic ash cloud spread across the region.",
+        "options": [
+          "land",
+          "stop",
+          "hold",
+          "ground"
+        ],
+        "answer": "D",
+        "skill": "Vocabulary",
+        "topic": "Transport",
+        "level": "B2",
+        "explanation": "'Ground flights' is the standard collocation meaning to prevent aircraft from taking off."
+      },
+      {
+        "id": 45,
+        "part": "B",
+        "type": "Antonym",
+        "question": "The negotiations have been remarkably transparent, with both sides publishing detailed minutes after every session.",
+        "options": [
+          "secretive",
+          "open",
+          "lengthy",
+          "formal"
+        ],
+        "answer": "A",
+        "skill": "Vocabulary",
+        "topic": "Communication",
+        "level": "B2",
+        "explanation": "'Transparent' means open and easy to see through; 'secretive' is its opposite."
+      },
+      {
+        "id": 46,
+        "part": "B",
+        "type": "Word Choice",
+        "question": "The clinic's new scheduling system proved far more ______ than the paper-based one it replaced.",
+        "options": [
+          "efficiency",
+          "efficient",
+          "efficiently",
+          "efficacy"
+        ],
+        "answer": "B",
+        "skill": "Vocabulary",
+        "topic": "Health",
+        "level": "B2",
+        "explanation": "An adjective is needed after 'more', so 'efficient' is correct."
+      },
+      {
+        "id": 47,
+        "part": "B",
+        "type": "Phrasal Verb",
+        "question": "The research team had to ______ their original hypothesis once the new data contradicted it.",
+        "options": [
+          "rule out",
+          "come up with",
+          "do away with",
+          "get around"
+        ],
+        "answer": "C",
+        "skill": "Vocabulary",
+        "topic": "Science",
+        "level": "B2",
+        "explanation": "'Do away with' means to abandon or discard something, which fits abandoning a disproven hypothesis."
+      },
+      {
+        "id": 48,
+        "part": "B",
+        "type": "Synonym",
+        "question": "The CEO's decision to relocate the headquarters was widely seen as a pragmatic response to rising costs.",
+        "options": [
+          "idealistic",
+          "emotional",
+          "impulsive",
+          "practical"
+        ],
+        "answer": "D",
+        "skill": "Vocabulary",
+        "topic": "Business",
+        "level": "B2",
+        "explanation": "'Pragmatic' means dealing with things sensibly and practically, matching 'practical'."
+      },
+      {
+        "id": 49,
+        "part": "B",
+        "type": "Vocabulary in Context",
+        "question": "The documentary was praised for its objective portrayal of both sides of the dispute, without obvious favoritism.",
+        "options": [
+          "balanced",
+          "biased",
+          "dramatic",
+          "lengthy"
+        ],
+        "answer": "A",
+        "skill": "Vocabulary",
+        "topic": "Media",
+        "level": "B2",
+        "explanation": "'Objective' here describes an even-handed, unbiased portrayal, which matches 'balanced'."
+      },
+      {
+        "id": 50,
+        "part": "B",
+        "type": "Collocation",
+        "question": "The professor encouraged students to ______ their assumptions and consider alternative explanations for the data.",
+        "options": [
+          "ask",
+          "question",
+          "wonder",
+          "doubt"
+        ],
+        "answer": "B",
+        "skill": "Vocabulary",
+        "topic": "Academic Vocabulary",
+        "level": "B2",
+        "explanation": "'Question an assumption' is the standard academic collocation meaning to critically examine it."
+      },
+      {
+        "id": 51,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Main Idea",
+        "question": "What is the main argument of the passage about expert predictions?",
+        "options": [
+          "Experts are almost always more accurate than non-experts when forecasting complex events.",
+          "Forecasting has become entirely unnecessary due to modern computing power.",
+          "Experts frequently overestimate their own forecasting accuracy, especially for complex systems.",
+          "No forecast of any kind has ever proven useful in any field."
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Main Idea",
+        "level": "B2",
+        "explanation": "The passage's central claim is that experts tend to be overconfident about their predictive accuracy, particularly regarding complex, interconnected systems."
+      },
+      {
+        "id": 52,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Specific Information",
+        "question": "According to the passage, what did the decades-long study of expert forecasters find?",
+        "options": [
+          "Experts with the most media attention made the most accurate predictions.",
+          "Non-experts consistently outperformed every expert in every category tested.",
+          "All forecasts, regardless of topic, proved equally reliable.",
+          "Predictions made by specialists were, on average, barely better than chance for complex long-term outcomes."
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Specific Information",
+        "level": "B2",
+        "explanation": "The passage reports that the long-term study found expert predictions about complex outcomes performed only marginally better than random chance on average."
+      },
+      {
+        "id": 53,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Inference",
+        "question": "What can be inferred about the forecasters the study described as 'foxes' rather than 'hedgehogs'?",
+        "options": [
+          "They tended to draw on multiple perspectives and revise their views as new evidence appeared.",
+          "They relied on a single powerful theory to explain every situation.",
+          "They refused to ever change their initial predictions.",
+          "They avoided making any predictions at all."
+        ],
+        "answer": "A",
+        "skill": "Reading",
+        "topic": "Inference",
+        "level": "B2",
+        "explanation": "Since 'hedgehogs' are described as relying on one big idea, the contrasting 'foxes' are implied to draw on diverse perspectives and adapt their views."
+      },
+      {
+        "id": 54,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Cause/Effect",
+        "question": "According to the passage, what effect does media exposure have on a forecaster's perceived credibility?",
+        "options": [
+          "It has no measurable relationship to credibility at all.",
+          "Frequent media appearances can boost perceived credibility independent of actual accuracy.",
+          "Greater media exposure is strongly correlated with greater forecasting accuracy.",
+          "Media exposure always reduces a forecaster's confidence in their own predictions."
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Cause/Effect",
+        "level": "B2",
+        "explanation": "The passage notes that visibility in the media can inflate a forecaster's reputation regardless of whether their track record actually supports it."
+      },
+      {
+        "id": 55,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Vocabulary in Context",
+        "question": "In the passage, the word 'hedging' most nearly means",
+        "options": [
+          "committing firmly to a single bold claim",
+          "publishing a prediction anonymously",
+          "qualifying a statement to avoid being proven definitively wrong",
+          "refusing to discuss a topic publicly"
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Vocabulary in Context",
+        "level": "B2",
+        "explanation": "'Hedging' refers to adding qualifications to a statement so it cannot easily be proven wrong, matching option B."
+      },
+      {
+        "id": 56,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Logical Conclusion",
+        "question": "Based on the passage, which practice would the author most likely recommend to someone evaluating an expert's forecast?",
+        "options": [
+          "Trusting the forecast automatically because the person is a recognized expert",
+          "Ignoring all expert forecasts regardless of their track record",
+          "Assuming that media appearances are a reliable indicator of accuracy",
+          "Checking the forecaster's documented track record of past predictions before trusting a new one"
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Logical Conclusion",
+        "level": "B2",
+        "explanation": "Given the passage's emphasis on the gap between reputation and documented accuracy, checking a verified track record follows as the logical recommendation."
+      },
+      {
+        "id": 57,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Author's Purpose",
+        "question": "Why does the author introduce the distinction between 'foxes' and 'hedgehogs'?",
+        "options": [
+          "To provide a framework for explaining why some forecasting styles perform better than others",
+          "To entertain readers with an unrelated animal metaphor",
+          "To argue that all forecasters should be replaced by computer models",
+          "To criticize zoologists for poor research methods"
+        ],
+        "answer": "A",
+        "skill": "Reading",
+        "topic": "Author's Purpose",
+        "level": "B2",
+        "explanation": "The metaphor is introduced as an analytical framework to explain differences in forecasting performance between two broad types of thinkers."
+      },
+      {
+        "id": 58,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Best Title",
+        "question": "Which title best fits the passage?",
+        "options": [
+          "A Short History of Plastic Packaging",
+          "The Rebound Effect: When Efficiency Backfires",
+          "How to Reduce Your Household Energy Bill",
+          "The Discovery of Renewable Fuel Sources"
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Best Title",
+        "level": "B2",
+        "explanation": "The passage centers on the rebound effect, in which efficiency improvements can paradoxically lead to increased overall consumption, matching this title."
+      },
+      {
+        "id": 59,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Specific Information",
+        "question": "According to the passage, what happened after fuel-efficient cars became more widely available?",
+        "options": [
+          "Total distance driven by consumers decreased sharply.",
+          "Car manufacturers stopped producing fuel-efficient models entirely.",
+          "Many drivers used the fuel savings as an incentive to drive more, offsetting some of the expected reduction in fuel use.",
+          "Governments banned the sale of all non-efficient vehicles."
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Specific Information",
+        "level": "B2",
+        "explanation": "The passage explains that cheaper per-kilometer costs encouraged some drivers to drive more, partially offsetting the efficiency gain."
+      },
+      {
+        "id": 60,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Inference",
+        "question": "What does the passage imply about policies that focus only on improving technological efficiency?",
+        "options": [
+          "They are guaranteed to reduce total resource consumption on their own.",
+          "They have no effect whatsoever on consumer behavior.",
+          "They always increase costs for consumers without any benefit.",
+          "They may need to be paired with other measures to achieve their intended environmental goals."
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Inference",
+        "level": "B2",
+        "explanation": "Since the rebound effect can offset efficiency gains, the passage implies such policies may need complementary measures to fully achieve their goals."
+      },
+      {
+        "id": 61,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Comparison",
+        "question": "How does the passage compare the direct and indirect rebound effects?",
+        "options": [
+          "It describes the direct effect as increased use of the exact efficient product, and the indirect effect as increased spending on other goods and services.",
+          "It claims the two effects are identical and interchangeable.",
+          "It argues that only the indirect effect has ever been observed in practice.",
+          "It states that the direct effect is always larger than the indirect effect."
+        ],
+        "answer": "A",
+        "skill": "Reading",
+        "topic": "Comparison",
+        "level": "B2",
+        "explanation": "The passage distinguishes direct rebound (more use of the efficient item itself) from indirect rebound (money saved being spent elsewhere, increasing other consumption)."
+      },
+      {
+        "id": 62,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Vocabulary in Context",
+        "question": "In the passage, the phrase 'offset' most nearly means",
+        "options": [
+          "to completely eliminate",
+          "to counterbalance or partially cancel out",
+          "to accelerate dramatically",
+          "to ignore entirely"
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Vocabulary in Context",
+        "level": "B2",
+        "explanation": "'Offset' means to counterbalance one effect against another, matching option B."
+      },
+      {
+        "id": 63,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Writer's Opinion",
+        "question": "What is the author's stance on abandoning efficiency-focused policies altogether?",
+        "options": [
+          "Strongly in favor, viewing efficiency policies as entirely counterproductive",
+          "Indifferent, since the passage takes no position on policy",
+          "Opposed, suggesting the rebound effect is a reason to refine rather than abandon such policies",
+          "Strongly in favor, but only for transportation policy specifically"
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Writer's Opinion",
+        "level": "B2",
+        "explanation": "The author frames the rebound effect as a complication to be addressed through better-designed policy, not as grounds for scrapping efficiency measures."
+      },
+      {
+        "id": 64,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Reference",
+        "question": "What does 'this complication' refer to in the passage?",
+        "options": [
+          "The rising price of crude oil in global markets",
+          "A dispute between two groups of economists",
+          "The process of manufacturing solar panels",
+          "The way efficiency savings can lead to increased overall consumption"
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Reference",
+        "level": "B2",
+        "explanation": "'This complication' refers back to the previously explained rebound effect, in which efficiency gains can paradoxically increase total consumption."
+      },
+      {
+        "id": 65,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Main Idea",
+        "question": "What is the main idea of the passage about habit formation?",
+        "options": [
+          "Habits form gradually through repeated context-behavior associations, and can be reshaped by altering context.",
+          "Habits are formed instantly and cannot be changed once established.",
+          "Willpower alone is sufficient to permanently change any habit overnight.",
+          "Only negative habits are influenced by environmental context."
+        ],
+        "answer": "A",
+        "skill": "Reading",
+        "topic": "Main Idea",
+        "level": "B2",
+        "explanation": "The passage's central claim is that habits form through repeated links between context and behavior, and that changing the context is an effective way to reshape them."
+      },
+      {
+        "id": 66,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Specific Information",
+        "question": "According to the passage, what did researchers observe about students who moved to a new university?",
+        "options": [
+          "Their study habits remained completely unaffected by the change in environment.",
+          "Old habits tied to specific locations were disrupted, creating an opportunity to form new ones.",
+          "They immediately reverted to their childhood study habits.",
+          "They were unable to form any new habits for several years."
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Specific Information",
+        "level": "B2",
+        "explanation": "The passage describes how moving to a new environment disrupted previously automatic, context-linked habits, opening a window for new ones to form."
+      },
+      {
+        "id": 67,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Inference",
+        "question": "What can be inferred about why relapse into an old habit often occurs after returning to a familiar environment?",
+        "options": [
+          "People deliberately choose to abandon any progress they have made.",
+          "New habits are physically impossible to maintain for more than a few days.",
+          "The environment itself contains cues that automatically trigger the previously associated behavior.",
+          "Familiar environments eliminate the need for any habits at all."
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Inference",
+        "level": "B2",
+        "explanation": "Since habits are described as context-triggered, returning to the original context is implied to reactivate the cues that prompt the old behavior."
+      },
+      {
+        "id": 68,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Cause/Effect",
+        "question": "According to the passage, what effect does consistently pairing a new behavior with the same cue have?",
+        "options": [
+          "It has no measurable long-term effect on behavior.",
+          "It always eliminates the need for the cue after a single repetition.",
+          "It only works for behaviors related to diet and exercise.",
+          "It gradually strengthens the mental association until the behavior becomes more automatic."
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Cause/Effect",
+        "level": "B2",
+        "explanation": "The passage explains that repeated pairing of a cue with a behavior strengthens the automatic association, making the behavior more habitual over time."
+      },
+      {
+        "id": 69,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Vocabulary in Context",
+        "question": "In the passage, the word 'entrenched' most nearly means",
+        "options": [
+          "firmly established and difficult to change",
+          "newly formed and easily changed",
+          "temporarily forgotten",
+          "legally required"
+        ],
+        "answer": "A",
+        "skill": "Reading",
+        "topic": "Vocabulary in Context",
+        "level": "B2",
+        "explanation": "'Entrenched' describes something firmly fixed or established, making it resistant to change, matching option B."
+      },
+      {
+        "id": 70,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Logical Conclusion",
+        "question": "Based on the passage, which strategy would most directly follow from its argument about context and habit?",
+        "options": [
+          "Relying purely on willpower while keeping every aspect of one's environment unchanged",
+          "Deliberately changing some aspect of the environment to disrupt the cues linked to an unwanted habit",
+          "Avoiding any new behaviors until the old habit disappears on its own",
+          "Repeating an old habit more frequently in order to weaken it"
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Logical Conclusion",
+        "level": "B2",
+        "explanation": "Since the passage argues that context triggers habitual behavior, deliberately altering the context follows logically as a way to disrupt an unwanted habit."
+      },
+      {
+        "id": 71,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Reference",
+        "question": "What does 'this window' refer to in the passage's discussion of students moving to a new university?",
+        "options": [
+          "A literal window in a university dormitory",
+          "The application deadline for transferring universities",
+          "The temporary period when old context-linked habits are disrupted and new ones can more easily form",
+          "A gap in the academic calendar between semesters"
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Reference",
+        "level": "B2",
+        "explanation": "'This window' refers back to the temporary opportunity created when a change of environment disrupts old habitual cues, as described just before."
+      },
+      {
+        "id": 72,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Writer's Opinion",
+        "question": "What is the author's attitude toward the idea that lasting behavior change depends mainly on willpower?",
+        "options": [
+          "Fully supportive, treating willpower as the only factor that matters",
+          "Indifferent, since the passage takes no clear position",
+          "Supportive, but only for habits related to diet",
+          "Skeptical, suggesting that changing one's environment may matter more than sheer determination"
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Writer's Opinion",
+        "level": "B2",
+        "explanation": "The author explicitly suggests that lasting change 'may depend less on sheer determination and more on deliberately altering context', indicating skepticism toward a willpower-only view."
+      },
+      {
+        "id": 73,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Main Idea",
+        "question": "What is the main idea of the passage about microplastics?",
+        "options": [
+          "Microplastics have spread through nearly every part of the environment and food chain, and their long-term effects remain only partly understood.",
+          "Microplastics are a minor issue limited entirely to ocean ecosystems.",
+          "Microplastics have been completely eliminated through international regulation.",
+          "Microplastics only affect marine animals, never humans."
+        ],
+        "answer": "A",
+        "skill": "Reading",
+        "topic": "Main Idea",
+        "level": "B2",
+        "explanation": "The passage's overall argument is that microplastic contamination is now widespread across ecosystems and the food chain, with scientific understanding of its effects still developing."
+      },
+      {
+        "id": 74,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Specific Information",
+        "question": "According to the passage, where have researchers detected microplastic particles?",
+        "options": [
+          "Only in samples taken from deep-sea environments",
+          "In locations ranging from remote mountain snow to drinking water and human blood samples",
+          "Exclusively in plastic manufacturing facilities",
+          "Only in countries with no plastic recycling programs"
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Specific Information",
+        "level": "B2",
+        "explanation": "The passage lists a wide range of locations, including remote snow, drinking water, and human blood, where microplastics have been detected."
+      },
+      {
+        "id": 75,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Inference",
+        "question": "What can be inferred about why scientists are cautious when discussing the health effects of microplastics in humans?",
+        "options": [
+          "They are certain microplastics have no effect on human health whatsoever.",
+          "They believe the topic is not worth further research.",
+          "Long-term, controlled human studies are difficult to conduct, so much of the current evidence remains preliminary.",
+          "All necessary research has already been completed and published."
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Inference",
+        "level": "B2",
+        "explanation": "The passage implies that the practical difficulty of conducting long-term human studies is why much current evidence remains preliminary, prompting scientific caution."
+      },
+      {
+        "id": 76,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Cause/Effect",
+        "question": "According to the passage, what is identified as a major source of microplastic pollution in waterways?",
+        "options": [
+          "Natural erosion of mountain rock formations",
+          "Volcanic activity releasing particles into rivers",
+          "Increased rainfall patterns linked to climate change",
+          "The gradual breakdown of larger plastic waste and synthetic fibers shed during washing"
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Cause/Effect",
+        "level": "B2",
+        "explanation": "The passage identifies the breakdown of larger plastic debris and fibers released during the washing of synthetic clothing as a major contributing source."
+      },
+      {
+        "id": 77,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Vocabulary in Context",
+        "question": "In the passage, the word 'ubiquitous' most nearly means",
+        "options": [
+          "found almost everywhere",
+          "extremely rare",
+          "recently discovered",
+          "artificially created in laboratories only"
+        ],
+        "answer": "A",
+        "skill": "Reading",
+        "topic": "Vocabulary in Context",
+        "level": "B2",
+        "explanation": "'Ubiquitous' means present or found everywhere, matching option A."
+      },
+      {
+        "id": 78,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Writer's Opinion",
+        "question": "What is the author's attitude toward claims that the microplastics issue is already fully understood?",
+        "options": [
+          "Fully supportive, treating the science as completely settled",
+          "Skeptical, emphasizing that significant scientific uncertainty remains",
+          "Indifferent, since the author expresses no view on the matter",
+          "Dismissive of the topic as unworthy of further study"
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Writer's Opinion",
+        "level": "B2",
+        "explanation": "The author repeatedly highlights ongoing scientific uncertainty, indicating skepticism toward any claim that the issue is already fully resolved."
+      },
+      {
+        "id": 79,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Reference",
+        "question": "What does 'this uncertainty' refer to in the passage?",
+        "options": [
+          "Doubt about whether plastic recycling technology exists",
+          "Disagreement about the chemical formula of common plastics",
+          "The unresolved scientific question of how microplastics affect long-term human health",
+          "Confusion over international shipping regulations"
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Reference",
+        "level": "B2",
+        "explanation": "'This uncertainty' refers back to the open scientific question of microplastics' long-term effects on human health discussed earlier in the passage."
+      },
+      {
+        "id": 80,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Logical Conclusion",
+        "question": "Based on the passage, which response would most directly follow from the uncertainty it describes?",
+        "options": [
+          "Halting all further research into microplastics immediately",
+          "Ignoring the topic entirely until a crisis is declared",
+          "Banning all forms of plastic packaging worldwide overnight",
+          "Continued investment in long-term studies while taking reasonable precautionary steps to reduce exposure"
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Logical Conclusion",
+        "level": "B2",
+        "explanation": "Given that the health effects remain uncertain but plausible, continuing research alongside reasonable precaution follows more logically than halting study or extreme immediate bans."
+      }
+    ],
+    "passages": [
+      {
+        "id": "p1",
+        "title": "Foxes, Hedgehogs, and the Trouble with Expert Predictions",
+        "text": "Every year, newspapers, television programs, and conferences are filled with confident predictions from economists, political analysts, and other specialists about what the coming months or years will bring. Fewer people ask a more uncomfortable question: how often are these predictions actually correct?\n\nOne of the most extensive attempts to answer this question tracked the forecasts of several hundred experts across multiple fields over nearly two decades, comparing their predictions against what actually happened. The decades-long study of expert forecasters found that predictions made by specialists were, on average, barely better than chance for complex, long-term outcomes, a result that surprised even the researchers who designed the study. This did not mean every expert performed equally poorly; some consistently outperformed the average by a meaningful margin.\n\nWhat distinguished the more accurate forecasters, the research suggested, was not necessarily specialized knowledge but a particular style of thinking. Borrowing a famous metaphor, researchers described some forecasters as 'hedgehogs,' who approach every problem through a single, favored theory, forcing complex situations to fit a familiar framework. Others were described as 'foxes,' who drew on a wide range of perspectives, treated their own theories skeptically, and were willing to substantially revise their views when new evidence contradicted earlier assumptions. Foxes, the data showed, were consistently more accurate than hedgehogs, particularly over longer time horizons.\n\nA further complication involves the relationship between visibility and credibility. Forecasters with the most dramatic, attention-grabbing predictions tend to receive the most media coverage, regardless of whether those predictions eventually prove accurate. Frequent media appearances can boost perceived credibility independent of actual accuracy, creating a public perception of expertise that may have little relationship to a forecaster's actual track record. Compounding this, many public forecasters practice what researchers call hedging: qualifying predictions so heavily with conditions and caveats that the statement becomes almost impossible to definitively disprove, regardless of what actually happens.\n\nNone of this means expert judgment is worthless. It suggests, rather, that audiences, and forecasters themselves, would benefit from paying closer attention to documented accuracy over time rather than to confidence, media profile, or the comforting simplicity of a single bold theory."
+      },
+      {
+        "id": "p2",
+        "title": "The Rebound Effect: When Efficiency Backfires",
+        "text": "Improving the efficiency of a product, whether a car engine, a light bulb, or a factory process, seems like an unambiguous environmental win: use less energy or fuel to achieve the same result, and overall consumption should fall. Economists who study energy use, however, have long known that the relationship is considerably more complicated than this intuition suggests, due to a phenomenon known as the rebound effect.\n\nConsider fuel-efficient cars. When vehicles become more efficient, the cost of driving each additional kilometer drops, since less fuel is required to cover the same distance. Many drivers used the fuel savings as an incentive to drive more, offsetting some of the expected reduction in fuel use, a pattern documented across multiple national transportation studies. In some cases, this direct rebound effect can offset a substantial portion of the efficiency gain, though rarely all of it.\n\nA second, less obvious mechanism is the indirect rebound effect. Money saved through greater efficiency does not simply disappear; it is typically spent elsewhere, on other goods and services that themselves require energy to produce and consume. A household that saves money through a more efficient heating system might use those savings to take an additional flight for a holiday, a purchase with its own, sometimes considerable, environmental cost. The direct effect involves increased use of the efficient item itself, while the indirect effect involves increased spending on other, unrelated goods and services, but both work against the original efficiency gain.\n\nNone of this suggests that efficiency improvements are pointless. In nearly every documented case, the rebound effect only partially offsets the gain; efficiency still produces a net reduction in resource use, just a smaller one than a simple calculation would predict. The author's position, reflected throughout current policy discussions, is not that efficiency policy should be abandoned in light of this complication, but that it should be designed with the rebound effect explicitly in mind, often by pairing efficiency standards with complementary measures such as congestion pricing or carbon taxes that address the behavioral response directly.\n\nUnderstanding the rebound effect ultimately reframes the policy question. Rather than asking simply 'how can we make this more efficient,' policymakers are increasingly asking a second, equally important question: 'what will people do with the resources that efficiency frees up?'"
+      },
+      {
+        "id": "p3",
+        "title": "Why Moving House Can Break a Bad Habit",
+        "text": "Anyone who has tried and failed to give up a habit, snacking late at night, checking a phone first thing in the morning, knows how stubborn such patterns can feel. Psychological research into habit formation offers one explanation for this persistence, and, perhaps counterintuitively, a practical insight into how habits can sometimes be most effectively changed: not through willpower alone, but through a change of environment.\n\nHabits, researchers explain, are not simply repeated choices; they are learned associations between a particular context and a particular behavior, strengthened through repetition until the behavior becomes largely automatic. A specific chair, a specific time of day, a specific room, can all become powerful triggers, cueing a behavior with little conscious deliberation involved at all. This is precisely what makes habits so efficient, requiring minimal mental effort, and so entrenched, resistant to simple decisions to behave differently.\n\nA study tracking students who transferred between universities offered a striking illustration of how context shapes habitual behavior. Researchers observed that old habits tied to specific locations were disrupted when students moved to a new university, with study routines, procrastination patterns, and even exercise habits all showing unusually high rates of change immediately following the move. Crucially, this held true regardless of whether the new habits were better or worse than the old ones; the disruption of familiar cues, not conscious willpower, appeared to be the decisive factor opening the door to change.\n\nThis finding helps explain a common frustration: why habits broken successfully while traveling or living temporarily elsewhere so often return once someone goes back home. The environment itself contains cues that automatically trigger the previously associated behavior, reactivating old associations that had simply been dormant, not erased, during the time away.\n\nThe practical implication, researchers suggest, is that lasting behavior change may depend less on sheer determination and more on deliberately altering context: rearranging a room, changing a daily route, or introducing a new cue paired consistently with a desired behavior, taking advantage of this window of disruption rather than relying solely on willpower within an unchanged environment that continues sending the same old signals."
+      },
+      {
+        "id": "p4",
+        "title": "Microplastics: A Problem Without Clear Edges",
+        "text": "Plastic production has grown so rapidly over the past seventy years that scientists now routinely find tiny fragments of it, known as microplastics, in places far removed from any obvious source of plastic waste. In locations ranging from remote mountain snow to drinking water and human blood samples, researchers have documented particles small enough to pass largely unnoticed through the environment and, apparently, through living bodies as well.\n\nA major source of this contamination comes from the gradual breakdown of larger plastic debris exposed to sunlight, waves, and friction, combined with synthetic fibers shed from clothing during ordinary washing, which pass through many water treatment systems largely unfiltered. Once released, these particles can travel enormous distances through air and water currents, helping explain their presence in environments that have no local plastic industry of their own.\n\nWhat happens once microplastics enter a living organism remains an area of active, and at times contentious, scientific investigation. Laboratory studies on animals have documented measurable effects on digestive and reproductive systems at certain concentrations, but translating these findings directly to long-term human health risk is far from straightforward. Long-term, controlled human studies are difficult to conduct, so much of the current evidence remains preliminary, a reality that sometimes gets lost amid more alarming headlines.\n\nThis uncertainty frustrates both the public and policymakers, who would understandably prefer a clear, confident answer about the risk microplastics pose rather than an honest acknowledgment of how much remains unknown. Some commentators have used this uncertainty to argue the issue is being exaggerated, a view the available evidence does not clearly support, since the ubiquitous presence of these particles, now confirmed across nearly every ecosystem studied, is itself well established, whatever remains uncertain about their precise health effects.\n\nGiven this combination of confirmed widespread presence and genuinely unresolved health questions, continued investment in long-term research alongside reasonable precautionary steps, reducing unnecessary plastic use, improving filtration in water treatment, appears considerably more justified by the current evidence than either dismissing the issue or declaring it a fully settled crisis."
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Deneme 9",
+    "level": "B2",
+    "duration": 150,
+    "questionCount": 80,
+    "questions": [
+      {
+        "id": 1,
+        "part": "A",
+        "type": "Sentence Completion with Connectors",
+        "question": "The theory elegantly explains most of the observed data; ______, it fails to account for a handful of persistent anomalies.",
+        "options": [
+          "nonetheless",
+          "moreover",
+          "therefore",
+          "similarly"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Linking Words",
+        "level": "B2",
+        "explanation": "'Nonetheless' signals a contrast between the theory's strength and its remaining weaknesses, fitting the discourse relationship between the two clauses."
+      },
+      {
+        "id": 2,
+        "part": "A",
+        "type": "Structure Recognition",
+        "question": "It is the consistency of the results, rather than their size, ______ researchers found most convincing.",
+        "options": [
+          "what",
+          "that",
+          "which",
+          "who"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Relative Clauses",
+        "level": "B2",
+        "explanation": "This is a cleft sentence ('It is X that...'), and the structure requires 'that' to introduce the clause emphasizing 'the consistency of the results'."
+      },
+      {
+        "id": 3,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "Had the original data set included more participants, the conclusions ______ considerably more robust.",
+        "options": [
+          "would be",
+          "will be",
+          "would have been",
+          "were"
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Conditionals",
+        "level": "B2",
+        "explanation": "This is a third conditional describing an unreal past condition, so the result clause requires 'would have been'."
+      },
+      {
+        "id": 4,
+        "part": "A",
+        "type": "Cloze Test",
+        "question": "The findings were ______ significant that the journal fast-tracked the paper's publication.",
+        "options": [
+          "such",
+          "too",
+          "very",
+          "so"
+        ],
+        "answer": "D",
+        "skill": "Grammar",
+        "topic": "Articles",
+        "level": "B2",
+        "explanation": "'So + adjective + that-clause' is required here since 'significant' is an adjective, not a noun, ruling out 'such'."
+      },
+      {
+        "id": 5,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "The hypothesis, once widely accepted, ______ by a series of replication failures over the past decade.",
+        "options": [
+          "has been undermined",
+          "undermines",
+          "undermined",
+          "is undermining"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Passive Voice",
+        "level": "B2",
+        "explanation": "The hypothesis is the one being affected by the failures, and the effect continues into the present, so the present perfect passive is correct."
+      },
+      {
+        "id": 6,
+        "part": "A",
+        "type": "Error Identification",
+        "question": "Although (A) the sample size was (B) relatively small, the researchers was (C) confident that the pattern (D) would hold.",
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Subject-Verb Agreement",
+        "level": "B2",
+        "explanation": "'Researchers' is plural, so the verb must be 'were', not 'was'."
+      },
+      {
+        "id": 7,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "The more variables a model attempts to control for, ______ it typically becomes to interpret.",
+        "options": [
+          "difficult",
+          "the more difficult",
+          "more difficult",
+          "most difficult"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Comparatives",
+        "level": "B2",
+        "explanation": "The correlative comparative pattern requires 'the' before the second comparative phrase as well: the more difficult."
+      },
+      {
+        "id": 8,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "The committee recommended that the methodology section ______ substantially before resubmission.",
+        "options": [
+          "is revised",
+          "revises",
+          "will revise",
+          "be revised"
+        ],
+        "answer": "D",
+        "skill": "Grammar",
+        "topic": "Noun Clauses",
+        "level": "B2",
+        "explanation": "After a verb of recommendation, the subjunctive base form is used: 'be revised', regardless of subject or tense."
+      },
+      {
+        "id": 9,
+        "part": "A",
+        "type": "Dialogue Completion",
+        "question": "A: Why wasn't the second experiment included in the final paper?\nB: Because by the time we finished analyzing it, the deadline ______.",
+        "options": [
+          "had passed",
+          "passed",
+          "was passing",
+          "has passed"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Past Perfect",
+        "level": "B2",
+        "explanation": "An event completed before another past event ('by the time we finished') requires the past perfect: had passed."
+      },
+      {
+        "id": 10,
+        "part": "A",
+        "type": "Cloze Test",
+        "question": "The paper's central claim rests ______ an assumption that later proved difficult to justify empirically.",
+        "options": [
+          "in",
+          "on",
+          "with",
+          "for"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Prepositions",
+        "level": "B2",
+        "explanation": "'Rest on an assumption' is the standard collocational preposition pattern meaning to depend on it."
+      },
+      {
+        "id": 11,
+        "part": "A",
+        "type": "Situation-based Question",
+        "question": "The reviewer pointed out that the authors ______ have controlled for seasonal variation, since the data clearly show a recurring pattern they never addressed.",
+        "options": [
+          "mustn't",
+          "needn't",
+          "should",
+          "can't"
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Modal Verbs",
+        "level": "B2",
+        "explanation": "'Should have controlled' expresses criticism of a past omission, matching the reviewer's implied complaint about the missing control."
+      },
+      {
+        "id": 12,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "The lead author denied ______ any data from the analysis, despite the irregular pattern reviewers noticed.",
+        "options": [
+          "to exclude",
+          "exclude",
+          "excluded",
+          "excluding"
+        ],
+        "answer": "D",
+        "skill": "Grammar",
+        "topic": "Gerunds",
+        "level": "B2",
+        "explanation": "'Deny' is followed by a gerund when referring to a completed action, so 'excluding' is correct."
+      },
+      {
+        "id": 13,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "By the time the final version of the manuscript is published, the authors ______ the data for nearly five years.",
+        "options": [
+          "will have been analyzing",
+          "will analyze",
+          "analyze",
+          "analyzed"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Future Perfect",
+        "level": "B2",
+        "explanation": "An ongoing action with emphasized duration, completed by a future point, requires the future perfect continuous."
+      },
+      {
+        "id": 14,
+        "part": "A",
+        "type": "Structure Recognition",
+        "question": "______ of the participants reported any discomfort, which surprised the research team given the intensity of the task.",
+        "options": [
+          "Little",
+          "Few",
+          "A little",
+          "Much"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Quantifiers",
+        "level": "B2",
+        "explanation": "'Few' is used with the countable plural noun 'participants' to mean a small number; 'little' applies only to uncountables."
+      },
+      {
+        "id": 15,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "The editor insisted that the authors ______ the ambiguous terminology before the paper could proceed to peer review.",
+        "options": [
+          "clarified",
+          "clarifying",
+          "clarify",
+          "will clarify"
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Infinitives",
+        "level": "B2",
+        "explanation": "After a verb of insistence, the subjunctive base form is required: 'clarify', not a tensed or non-finite alternative."
+      },
+      {
+        "id": 16,
+        "part": "A",
+        "type": "Cloze Test",
+        "question": "Scholars remain divided over the issue, ______ some arguing the effect is real and others dismissing it as a statistical artifact.",
+        "options": [
+          "despite",
+          "because",
+          "unless",
+          "with"
+        ],
+        "answer": "D",
+        "skill": "Grammar",
+        "topic": "Participles",
+        "level": "B2",
+        "explanation": "'With + noun + present participle' is used to add a descriptive detail about the ongoing disagreement; 'arguing' functions as the participle here."
+      },
+      {
+        "id": 17,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "This is, without question, ______ compelling piece of evidence the committee has reviewed all year.",
+        "options": [
+          "the most",
+          "a more",
+          "the more",
+          "most"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Superlatives",
+        "level": "B2",
+        "explanation": "Comparing this evidence to all evidence reviewed over a period requires the superlative: the most compelling."
+      },
+      {
+        "id": 18,
+        "part": "A",
+        "type": "Error Identification",
+        "question": "The researcher claimed (A) that she (B) had been studying the phenomenon (C) since (D) five years.",
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer": "D",
+        "skill": "Grammar",
+        "topic": "Present Perfect",
+        "level": "B2",
+        "explanation": "A duration such as 'five years' requires 'for', not 'since', which is reserved for a specific starting point in time."
+      },
+      {
+        "id": 19,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "The journal's editor announced that the retracted paper ______ from the database the following week.",
+        "options": [
+          "will remove",
+          "would be removed",
+          "is removed",
+          "has removed"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Reported Speech",
+        "level": "B2",
+        "explanation": "In reported speech, a future passive statement shifts back to 'would be removed'."
+      },
+      {
+        "id": 20,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "I wish the original authors ______ their raw data publicly, since it would make replication far easier now.",
+        "options": [
+          "released",
+          "would release",
+          "had released",
+          "release"
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Wish / If Only",
+        "level": "B2",
+        "explanation": "A regret about a completed past action requires 'wish + past perfect': had released."
+      },
+      {
+        "id": 21,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "The professor had the statistical model ______ by a colleague who specializes in that particular technique.",
+        "options": [
+          "checked",
+          "check",
+          "checking",
+          "to check"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Causatives",
+        "level": "B2",
+        "explanation": "The causative structure 'have something done' takes the past participle, so 'checked' is correct here."
+      },
+      {
+        "id": 22,
+        "part": "A",
+        "type": "Dialogue Completion",
+        "question": "A: Do you think the panel will accept the revised argument?\nB: Possibly, ______ they're still unconvinced by the central assumption.",
+        "options": [
+          "provided that",
+          "although",
+          "in order that",
+          "unless"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Conjunctions",
+        "level": "B2",
+        "explanation": "'Although' correctly introduces a concessive clause expressing a contrast with the uncertainty of acceptance."
+      },
+      {
+        "id": 23,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "Several of the claims made in the editorial, ______ were never substantiated with data, drew sharp criticism from the research community.",
+        "options": [
+          "that",
+          "who",
+          "which",
+          "what"
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Relative Clauses",
+        "level": "B2",
+        "explanation": "A non-defining relative clause adding extra information about 'the claims' requires 'which', not 'that'."
+      },
+      {
+        "id": 24,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "______ amount of funding allocated to the project was far smaller than the proposal had originally requested.",
+        "options": [
+          "A",
+          "An",
+          "Some",
+          "The"
+        ],
+        "answer": "D",
+        "skill": "Grammar",
+        "topic": "Determiners",
+        "level": "B2",
+        "explanation": "'The' is used because 'amount of funding' is made specific by the following clause, identifying a particular, known amount."
+      },
+      {
+        "id": 25,
+        "part": "A",
+        "type": "Situation-based Question",
+        "question": "Reviewers suspected the result ______ fabricated, since no laboratory has since been able to reproduce it under any condition.",
+        "options": [
+          "might have been",
+          "mustn't have been",
+          "needn't have been",
+          "shouldn't have been"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Modal Verbs",
+        "level": "B2",
+        "explanation": "'Might have been' expresses a plausible past possibility consistent with the suspicion described, unlike the other modals, which suggest certainty or obligation."
+      },
+      {
+        "id": 26,
+        "part": "A",
+        "type": "Cloze Test",
+        "question": "The paper's conclusion was weakened not by a lack of data but ______ an overreliance on a single, narrow data set.",
+        "options": [
+          "with",
+          "by",
+          "for",
+          "at"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Prepositions",
+        "level": "B2",
+        "explanation": "'Weakened by' is the standard preposition pattern expressing the cause of a weakness."
+      },
+      {
+        "id": 27,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "By next year, the research consortium ______ its preliminary findings to three separate international conferences.",
+        "options": [
+          "will present",
+          "presents",
+          "will have presented",
+          "presented"
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Future Perfect",
+        "level": "B2",
+        "explanation": "Completion before a future reference point ('by next year') is expressed with the future perfect."
+      },
+      {
+        "id": 28,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "Neither the lead researcher nor her two co-authors ______ willing to comment on the retraction when contacted by journalists.",
+        "options": [
+          "was",
+          "has been",
+          "being",
+          "were"
+        ],
+        "answer": "D",
+        "skill": "Grammar",
+        "topic": "Subject-Verb Agreement",
+        "level": "B2",
+        "explanation": "With 'neither...nor', the verb agrees with the nearer subject, 'her two co-authors', which is plural, so 'were' is correct."
+      },
+      {
+        "id": 29,
+        "part": "A",
+        "type": "Functional Language",
+        "question": "A: I still believe the sample was too small to support such a strong conclusion.\nB: ______ The authors themselves acknowledged that limitation in their discussion section.",
+        "options": [
+          "That's a fair point.",
+          "I couldn't disagree more.",
+          "You must be joking.",
+          "That seems unlikely."
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Adjectives and Adverbs",
+        "level": "B2",
+        "explanation": "The reply agrees with the concern, matching 'That's a fair point', which is reinforced by the following sentence about the authors' own acknowledgment."
+      },
+      {
+        "id": 30,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "______ criticized for its small sample, the study has since been cited in dozens of subsequent papers.",
+        "options": [
+          "Wide",
+          "Widely",
+          "Wider",
+          "Widest"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Past Continuous",
+        "level": "B2",
+        "explanation": "An adverb modifying the participle 'criticized' is needed here, so 'widely' is correct in this reduced passive participial clause."
+      },
+      {
+        "id": 31,
+        "part": "B",
+        "type": "Academic Vocabulary",
+        "question": "The study's conclusions were later shown to be an artifact of flawed methodology rather than a genuine ______ discovery.",
+        "options": [
+          "empirically",
+          "empiricism",
+          "empirical",
+          "empiricist"
+        ],
+        "answer": "C",
+        "skill": "Vocabulary",
+        "topic": "Science",
+        "level": "B2",
+        "explanation": "An adjective modifying 'discovery' is needed, so 'empirical' is correct."
+      },
+      {
+        "id": 32,
+        "part": "B",
+        "type": "Collocation",
+        "question": "The panel was asked to ______ the credibility of each submitted proposal before funding decisions were made.",
+        "options": [
+          "attend",
+          "address",
+          "assign",
+          "assess"
+        ],
+        "answer": "D",
+        "skill": "Vocabulary",
+        "topic": "Academic Vocabulary",
+        "level": "B2",
+        "explanation": "'Assess credibility' is the natural academic collocation meaning to evaluate how trustworthy something is."
+      },
+      {
+        "id": 33,
+        "part": "B",
+        "type": "Phrasal Verb",
+        "question": "Several promising early results failed to ______ once the experiment was repeated under stricter conditions.",
+        "options": [
+          "hold up",
+          "hold on",
+          "hold off",
+          "hold back"
+        ],
+        "answer": "A",
+        "skill": "Vocabulary",
+        "topic": "Science",
+        "level": "B2",
+        "explanation": "'Hold up' means to remain valid or true under scrutiny, matching results that fail to replicate."
+      },
+      {
+        "id": 34,
+        "part": "B",
+        "type": "Synonym",
+        "question": "The author's argument, though superficially persuasive, rests on a questionable premise.",
+        "options": [
+          "conclusion",
+          "assumption",
+          "example",
+          "citation"
+        ],
+        "answer": "B",
+        "skill": "Vocabulary",
+        "topic": "Academic Life",
+        "level": "B2",
+        "explanation": "'Premise' refers to a basic assumption underlying an argument, matching 'assumption'."
+      },
+      {
+        "id": 35,
+        "part": "B",
+        "type": "Word Choice",
+        "question": "The committee's report was notably ______, avoiding any direct criticism of the institution's leadership.",
+        "options": [
+          "diplomacy",
+          "diplomat",
+          "diplomatic",
+          "diplomatically"
+        ],
+        "answer": "C",
+        "skill": "Vocabulary",
+        "topic": "Communication",
+        "level": "B2",
+        "explanation": "An adjective completing the linking verb 'was' is required, so 'diplomatic' is correct."
+      },
+      {
+        "id": 36,
+        "part": "B",
+        "type": "Collocation",
+        "question": "The think tank's latest paper attempts to ______ light on a question policymakers have long struggled to answer.",
+        "options": [
+          "give",
+          "make",
+          "bring",
+          "shed"
+        ],
+        "answer": "D",
+        "skill": "Vocabulary",
+        "topic": "Society",
+        "level": "B2",
+        "explanation": "'Shed light on' is the fixed collocation meaning to clarify or help explain something."
+      },
+      {
+        "id": 37,
+        "part": "B",
+        "type": "Antonym",
+        "question": "The journal's peer-review process is famously rigorous, rejecting the vast majority of submissions it receives.",
+        "options": [
+          "lax",
+          "demanding",
+          "slow",
+          "thorough"
+        ],
+        "answer": "A",
+        "skill": "Vocabulary",
+        "topic": "Academic Life",
+        "level": "B2",
+        "explanation": "'Rigorous' means strict and thorough; 'lax', meaning careless or undemanding, is its opposite."
+      },
+      {
+        "id": 38,
+        "part": "B",
+        "type": "Vocabulary in Context",
+        "question": "Critics argue that the policy's benefits have been overstated, while its hidden costs remain largely unexamined.",
+        "options": [
+          "understated",
+          "exaggerated",
+          "disproven",
+          "confirmed"
+        ],
+        "answer": "B",
+        "skill": "Vocabulary",
+        "topic": "Society",
+        "level": "B2",
+        "explanation": "'Overstated' means presented as more significant than is actually the case, matching 'exaggerated'."
+      },
+      {
+        "id": 39,
+        "part": "B",
+        "type": "Phrasal Verb",
+        "question": "Despite early skepticism, the new theoretical framework gradually began to ______ among researchers in the field.",
+        "options": [
+          "fall through",
+          "wear off",
+          "catch on",
+          "hold off"
+        ],
+        "answer": "C",
+        "skill": "Vocabulary",
+        "topic": "Science",
+        "level": "B2",
+        "explanation": "'Catch on' means to become accepted or popular, which fits a theory gaining traction among researchers."
+      },
+      {
+        "id": 40,
+        "part": "B",
+        "type": "Collocation",
+        "question": "The authors were careful to ______ their findings within the broader context of existing research.",
+        "options": [
+          "locate",
+          "place",
+          "position",
+          "situate"
+        ],
+        "answer": "D",
+        "skill": "Vocabulary",
+        "topic": "Academic Vocabulary",
+        "level": "B2",
+        "explanation": "'Situate findings within a context' is the standard academic collocation meaning to connect them meaningfully to existing work."
+      },
+      {
+        "id": 41,
+        "part": "B",
+        "type": "Synonym",
+        "question": "The report's findings were corroborated by two independent research teams working in different countries.",
+        "options": [
+          "confirmed",
+          "contradicted",
+          "ignored",
+          "summarized"
+        ],
+        "answer": "A",
+        "skill": "Vocabulary",
+        "topic": "Science",
+        "level": "B2",
+        "explanation": "'Corroborate' means to confirm or support, matching 'confirmed'."
+      },
+      {
+        "id": 42,
+        "part": "B",
+        "type": "Word Choice",
+        "question": "The debate over the policy's effectiveness remains ______, with credible studies on both sides of the question.",
+        "options": [
+          "unresolving",
+          "unresolved",
+          "unresolvedly",
+          "resolvable"
+        ],
+        "answer": "B",
+        "skill": "Vocabulary",
+        "topic": "Society",
+        "level": "B2",
+        "explanation": "An adjective completing the linking verb 'remains' is needed, so 'unresolved' is correct."
+      },
+      {
+        "id": 43,
+        "part": "B",
+        "type": "Vocabulary in Context",
+        "question": "The researcher's claims were met with considerable skepticism from colleagues who found the evidence unconvincing.",
+        "options": [
+          "enthusiasm",
+          "indifference",
+          "doubt",
+          "approval"
+        ],
+        "answer": "C",
+        "skill": "Vocabulary",
+        "topic": "Academic Life",
+        "level": "B2",
+        "explanation": "'Skepticism' refers to doubt about the truth of a claim, matching option B."
+      },
+      {
+        "id": 44,
+        "part": "B",
+        "type": "Collocation",
+        "question": "The editorial board decided to ______ the paper for publication after two independent reviewers endorsed it.",
+        "options": [
+          "approve",
+          "admit",
+          "allow",
+          "accept"
+        ],
+        "answer": "D",
+        "skill": "Vocabulary",
+        "topic": "Academic Vocabulary",
+        "level": "B2",
+        "explanation": "'Accept a paper for publication' is the standard fixed collocation used in academic publishing contexts."
+      },
+      {
+        "id": 45,
+        "part": "B",
+        "type": "Antonym",
+        "question": "The study's methodology was praised as remarkably transparent, with every step of the analysis openly documented.",
+        "options": [
+          "opaque",
+          "clear",
+          "detailed",
+          "lengthy"
+        ],
+        "answer": "A",
+        "skill": "Vocabulary",
+        "topic": "Science",
+        "level": "B2",
+        "explanation": "'Transparent' means open and easy to understand or verify; 'opaque', meaning unclear or hidden, is its opposite."
+      },
+      {
+        "id": 46,
+        "part": "B",
+        "type": "Synonym",
+        "question": "The committee's decision was widely regarded as arbitrary, lacking any clear or consistent justification.",
+        "options": [
+          "reasoned",
+          "random",
+          "unanimous",
+          "delayed"
+        ],
+        "answer": "B",
+        "skill": "Vocabulary",
+        "topic": "Society",
+        "level": "B2",
+        "explanation": "'Arbitrary' means based on random choice rather than reason, matching 'random'."
+      },
+      {
+        "id": 47,
+        "part": "B",
+        "type": "Collocation",
+        "question": "The authors were required to ______ a conflict of interest before their paper could be considered for publication.",
+        "options": [
+          "tell",
+          "declare",
+          "say",
+          "speak"
+        ],
+        "answer": "B",
+        "skill": "Vocabulary",
+        "topic": "Academic Vocabulary",
+        "level": "B2",
+        "explanation": "'Declare a conflict of interest' is the standard fixed expression used in academic and professional publishing contexts."
+      },
+      {
+        "id": 48,
+        "part": "B",
+        "type": "Phrasal Verb",
+        "question": "The research team had to ______ their initial model once new data revealed serious flaws in its assumptions.",
+        "options": [
+          "look into",
+          "come across",
+          "put off",
+          "scrap"
+        ],
+        "answer": "D",
+        "skill": "Vocabulary",
+        "topic": "Science",
+        "level": "B2",
+        "explanation": "'Scrap' means to abandon or discard something considered no longer usable, fitting a flawed model being discarded."
+      },
+      {
+        "id": 49,
+        "part": "B",
+        "type": "Vocabulary in Context",
+        "question": "The researchers were careful not to overstate the implications of a single, preliminary study.",
+        "options": [
+          "exaggerate the importance of",
+          "downplay",
+          "ignore",
+          "summarize briefly"
+        ],
+        "answer": "A",
+        "skill": "Vocabulary",
+        "topic": "Academic Vocabulary",
+        "level": "B2",
+        "explanation": "'Overstate the implications' means to exaggerate how significant something is, matching option B."
+      },
+      {
+        "id": 50,
+        "part": "B",
+        "type": "Word Choice",
+        "question": "The panel found the proposal's budget estimates to be wildly ______, bearing little relation to actual project costs.",
+        "options": [
+          "inflate",
+          "inflation",
+          "inflated",
+          "inflating"
+        ],
+        "answer": "C",
+        "skill": "Vocabulary",
+        "topic": "Business",
+        "level": "B2",
+        "explanation": "An adjective describing the estimates is required, and 'inflated' means unjustifiably increased, fitting the context."
+      },
+      {
+        "id": 51,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Main Idea",
+        "question": "What is the central argument of the passage regarding the replication crisis?",
+        "options": [
+          "Most scientific findings published in the past were deliberately fabricated.",
+          "Replication studies are unnecessary once a finding has been peer-reviewed.",
+          "A substantial proportion of published findings fail to replicate, raising concerns about current research incentives and practices.",
+          "The replication crisis affects only a single, narrow subfield of psychology."
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Main Idea",
+        "level": "B2",
+        "explanation": "The passage's central claim is that a significant share of published findings fail to replicate, which it links to broader concerns about incentives in research practice, not to fabrication or a single subfield."
+      },
+      {
+        "id": 52,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Specific Information",
+        "question": "According to the passage, what did the large-scale replication project find?",
+        "options": [
+          "Virtually every study attempted was successfully replicated.",
+          "Replication was impossible for any study published before a certain date.",
+          "Only studies conducted outside universities failed to replicate.",
+          "Fewer than half of the studies attempted produced a statistically significant effect in the replication."
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Specific Information",
+        "level": "B2",
+        "explanation": "The passage reports that the large-scale replication effort found fewer than half of the original studies produced a significant effect when repeated."
+      },
+      {
+        "id": 53,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Inference",
+        "question": "What can be inferred about why researchers might be drawn toward practices such as selectively reporting results?",
+        "options": [
+          "Career incentives that reward novel, statistically significant findings may create pressure to present data more favorably.",
+          "Academic journals actively require researchers to falsify their data.",
+          "Researchers are legally obligated to report only positive results.",
+          "Selective reporting is explicitly encouraged in every academic discipline without exception."
+        ],
+        "answer": "A",
+        "skill": "Reading",
+        "topic": "Inference",
+        "level": "B2",
+        "explanation": "The passage implies that incentive structures rewarding novel, significant findings create pressure that can lead to selective reporting, without claiming this is required or universal."
+      },
+      {
+        "id": 54,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Cause/Effect",
+        "question": "According to the passage, what effect has the replication crisis had on certain institutional practices?",
+        "options": [
+          "It has eliminated the need for statistical analysis in published research.",
+          "It has led some journals to require pre-registration of study designs before data collection begins.",
+          "It has caused most universities to stop funding behavioral research entirely.",
+          "It has had no measurable effect on how research is conducted or published."
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Cause/Effect",
+        "level": "B2",
+        "explanation": "The passage describes pre-registration as one practice adopted by some journals partly in response to concerns raised by the replication crisis."
+      },
+      {
+        "id": 55,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Vocabulary in Context",
+        "question": "In the passage, the phrase 'p-hacking' most nearly refers to",
+        "options": [
+          "a form of computer security breach affecting research databases",
+          "a standardized method for calculating sample size before a study begins",
+          "the practice of analyzing data in multiple ways until a statistically significant result is found",
+          "a type of peer-review software used by academic journals"
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Vocabulary in Context",
+        "level": "B2",
+        "explanation": "The passage uses 'p-hacking' to describe the practice of repeatedly analyzing data in different ways until a significant result emerges, which is option B."
+      },
+      {
+        "id": 56,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Logical Conclusion",
+        "question": "Based on the passage, which practice would most directly help address the concerns it raises?",
+        "options": [
+          "Publishing only studies that confirm a researcher's initial hypothesis",
+          "Reducing the number of participants in every study to save resources",
+          "Eliminating peer review entirely to speed up publication",
+          "Requiring researchers to specify their analysis plan before collecting data"
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Logical Conclusion",
+        "level": "B2",
+        "explanation": "Since the passage's central concern involves flexible, after-the-fact analysis choices, pre-specifying an analysis plan follows logically as a direct remedy."
+      },
+      {
+        "id": 57,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Author's Purpose",
+        "question": "Why does the author include the specific statistic about the proportion of studies that failed to replicate?",
+        "options": [
+          "To provide concrete evidence supporting the seriousness of the replication crisis",
+          "To entertain readers with an unrelated piece of trivia",
+          "To argue that all published psychological research should be disregarded",
+          "To compare the funding levels of different academic disciplines"
+        ],
+        "answer": "A",
+        "skill": "Reading",
+        "topic": "Author's Purpose",
+        "level": "B2",
+        "explanation": "The specific statistic is introduced as concrete evidence to substantiate the scale of the replication problem being discussed, not as an aside or a blanket dismissal of the field."
+      },
+      {
+        "id": 58,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Best Title",
+        "question": "Which title best fits the passage?",
+        "options": [
+          "A Brief History of Standardized Testing",
+          "What Standardized Tests Can and Cannot Tell Us",
+          "How to Prepare Students for Timed Examinations",
+          "The Economics of Private Tutoring"
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Best Title",
+        "level": "B2",
+        "explanation": "The passage examines both the genuine uses and the significant limitations of standardized testing, matching this balanced title."
+      },
+      {
+        "id": 59,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Specific Information",
+        "question": "According to the passage, what did the longitudinal study comparing test scores and later outcomes find?",
+        "options": [
+          "Test scores alone predicted later life outcomes with near-perfect accuracy.",
+          "There was no statistical relationship whatsoever between test scores and any later outcome.",
+          "Test scores showed a measurable but modest correlation with certain later outcomes, explaining only part of the variation.",
+          "Students who performed poorly on tests uniformly underperformed in every subsequent measure studied."
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Specific Information",
+        "level": "B2",
+        "explanation": "The passage reports a modest, partial correlation between test scores and later outcomes, explicitly not a perfect or absent relationship."
+      },
+      {
+        "id": 60,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Inference",
+        "question": "What can be inferred about why some educators argue standardized tests disadvantage certain student groups?",
+        "options": [
+          "Standardized tests are always scored by hand, introducing random human error.",
+          "Every standardized test ever created has been proven invalid.",
+          "Students from all backgrounds consistently perform identically on every test.",
+          "Test content and format may reflect assumptions and experiences more familiar to some groups than others."
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Inference",
+        "level": "B2",
+        "explanation": "The passage implies that differences in familiarity with test content and format, not inherent ability, may contribute to disparities in performance across groups."
+      },
+      {
+        "id": 61,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Comparison",
+        "question": "How does the passage compare standardized tests with teacher assessments as measures of student ability?",
+        "options": [
+          "It presents both as having distinct strengths and limitations, rather than declaring one simply superior.",
+          "It claims teacher assessments are always more objective than standardized tests.",
+          "It argues that teacher assessments should be abolished entirely.",
+          "It states that standardized tests are the only valid measure of ability."
+        ],
+        "answer": "A",
+        "skill": "Reading",
+        "topic": "Comparison",
+        "level": "B2",
+        "explanation": "The passage presents a balanced comparison, noting strengths and weaknesses of each method rather than declaring either one categorically superior."
+      },
+      {
+        "id": 62,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Vocabulary in Context",
+        "question": "In the passage, the word 'proxy' most nearly means",
+        "options": [
+          "an official government representative",
+          "an imperfect stand-in measure used to estimate something that is hard to observe directly",
+          "a type of statistical error",
+          "a legal document used in court proceedings"
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Vocabulary in Context",
+        "level": "B2",
+        "explanation": "'Proxy' is used to describe an indirect, imperfect measure standing in for something difficult to assess directly, matching option B."
+      },
+      {
+        "id": 63,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Writer's Opinion",
+        "question": "What is the author's overall stance on eliminating standardized testing entirely?",
+        "options": [
+          "Strongly supportive, arguing tests provide no useful information at all",
+          "Entirely opposed to any reform of current testing practices",
+          "Cautious, suggesting tests provide limited but genuine information that should be interpreted carefully rather than discarded",
+          "Indifferent, since the passage expresses no clear position"
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Writer's Opinion",
+        "level": "B2",
+        "explanation": "The author presents a measured position, acknowledging genuine but limited value in testing, favoring careful interpretation over outright elimination."
+      },
+      {
+        "id": 64,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Reference",
+        "question": "What does 'this limitation' refer to in the passage?",
+        "options": [
+          "The restricted length of most standardized tests",
+          "A rule limiting how many times a student may retake an exam",
+          "A budget constraint affecting how tests are funded",
+          "The fact that test scores capture only part of what determines later success"
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Reference",
+        "level": "B2",
+        "explanation": "'This limitation' refers back to the previously discussed fact that test scores only partially explain later outcomes, leaving much unaccounted for."
+      },
+      {
+        "id": 65,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Main Idea",
+        "question": "What is the main idea of the passage about citizen science?",
+        "options": [
+          "Large-scale citizen science projects can generate scientifically valuable data when properly designed, despite relying on non-expert volunteers.",
+          "Volunteer-collected data is always less reliable than professionally collected data.",
+          "Citizen science has entirely replaced the need for professional researchers in most fields.",
+          "Only trained scientists are capable of correctly identifying species in the field."
+        ],
+        "answer": "A",
+        "skill": "Reading",
+        "topic": "Main Idea",
+        "level": "B2",
+        "explanation": "The passage's central claim is that properly designed citizen science projects can produce genuinely valuable scientific data despite relying on non-expert volunteers."
+      },
+      {
+        "id": 66,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Specific Information",
+        "question": "According to the passage, what safeguard do many citizen science projects use to ensure data quality?",
+        "options": [
+          "Relying solely on the honesty of volunteers with no further verification",
+          "Having multiple volunteers independently classify the same observation and comparing results",
+          "Excluding any data submitted outside a research institution",
+          "Requiring volunteers to hold a university degree in a relevant field"
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Specific Information",
+        "level": "B2",
+        "explanation": "The passage describes cross-checking multiple independent volunteer classifications of the same observation as a key quality-control safeguard."
+      },
+      {
+        "id": 67,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Inference",
+        "question": "What can be inferred about the scale of data citizen science projects can collect compared to small professional teams?",
+        "options": [
+          "Citizen science projects typically collect far less data than small professional teams could alone.",
+          "Professional research teams never need large volumes of data for any purpose.",
+          "The large number of volunteer participants allows these projects to gather data across a scale that would be impractical for a small team to cover alone.",
+          "Volunteer participation has no effect on the total amount of data collected."
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Inference",
+        "level": "B2",
+        "explanation": "Since the passage emphasizes the sheer number of volunteers involved, it implies that this scale allows data collection beyond what a small professional team could manage alone."
+      },
+      {
+        "id": 68,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Cause/Effect",
+        "question": "According to the passage, what effect has citizen-collected bird migration data had on scientific understanding?",
+        "options": [
+          "It has had no measurable scientific impact at all.",
+          "It has proven that bird migration patterns never change over time.",
+          "It has made professional ornithological research entirely unnecessary.",
+          "It has helped researchers detect shifts in migration timing linked to changing climate patterns."
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Cause/Effect",
+        "level": "B2",
+        "explanation": "The passage credits citizen-collected migration data with helping researchers identify shifts in timing associated with climate change."
+      },
+      {
+        "id": 69,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Vocabulary in Context",
+        "question": "In the passage, the word 'rigorous' most nearly means",
+        "options": [
+          "thorough and carefully controlled",
+          "careless and poorly designed",
+          "extremely brief",
+          "financially expensive"
+        ],
+        "answer": "A",
+        "skill": "Reading",
+        "topic": "Vocabulary in Context",
+        "level": "B2",
+        "explanation": "'Rigorous' describes something thorough and carefully controlled, which is the meaning intended here regarding project design."
+      },
+      {
+        "id": 70,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Logical Conclusion",
+        "question": "Based on the passage, which conclusion would the author most likely support?",
+        "options": [
+          "Citizen science data should never be used in peer-reviewed research under any circumstances.",
+          "Well-designed citizen science projects, with proper verification steps, can meaningfully contribute to scientific knowledge.",
+          "Only data collected by professional scientists has any scientific value whatsoever.",
+          "Citizen science is useful only for entertainment and has no research applications."
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Logical Conclusion",
+        "level": "B2",
+        "explanation": "Given the passage's emphasis on safeguards enabling reliable data, the author would logically support the value of well-designed citizen science projects."
+      },
+      {
+        "id": 71,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Reference",
+        "question": "What does 'this safeguard' refer to in the passage?",
+        "options": [
+          "A legal requirement for volunteers to sign a research contract",
+          "A government policy regulating wildlife photography",
+          "The practice of having multiple volunteers independently classify the same observation",
+          "A fee charged to volunteers for participating in a project"
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Reference",
+        "level": "B2",
+        "explanation": "'This safeguard' refers back to the previously described practice of cross-checking independent volunteer classifications to verify data quality."
+      },
+      {
+        "id": 72,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Writer's Opinion",
+        "question": "What is the author's attitude toward dismissing citizen science as inherently unreliable?",
+        "options": [
+          "Fully supportive of this dismissal",
+          "Indifferent, expressing no opinion on the matter",
+          "Supportive, but only regarding astronomy-related projects",
+          "Critical of this dismissal, pointing to design features that can make the data genuinely reliable"
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Writer's Opinion",
+        "level": "B2",
+        "explanation": "The author pushes back against blanket dismissal of citizen science by highlighting specific safeguards that can make such data reliable."
+      },
+      {
+        "id": 73,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Main Idea",
+        "question": "What is the main idea of the passage about food waste?",
+        "options": [
+          "A substantial share of food is lost or wasted at multiple points across the supply chain, each requiring different solutions.",
+          "Food waste occurs almost exclusively at the household level and nowhere else in the supply chain.",
+          "Food waste has been completely eliminated in developed countries through technology.",
+          "Only consumers, never producers or retailers, bear responsibility for food waste."
+        ],
+        "answer": "A",
+        "skill": "Reading",
+        "topic": "Main Idea",
+        "level": "B2",
+        "explanation": "The passage's overall argument is that food loss occurs at multiple distinct stages of the supply chain, each requiring a tailored response rather than a single blanket solution."
+      },
+      {
+        "id": 74,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Specific Information",
+        "question": "According to the passage, what is a major cause of food loss at the farm level in many developing regions?",
+        "options": [
+          "Excessive consumer demand for perfectly shaped produce",
+          "Inadequate storage and transport infrastructure that allows harvested crops to spoil before reaching markets",
+          "Overly strict government regulations banning the sale of fresh produce",
+          "A global shortage of agricultural land suitable for farming"
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Specific Information",
+        "level": "B2",
+        "explanation": "The passage identifies inadequate storage and transport infrastructure as a major cause of post-harvest loss in many developing regions."
+      },
+      {
+        "id": 75,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Inference",
+        "question": "What can be inferred about why retailers in wealthier countries often reject cosmetically imperfect produce?",
+        "options": [
+          "They are legally required to discard any produce that is not perfectly shaped.",
+          "Imperfect produce is always less nutritious than perfectly shaped produce.",
+          "Consumer purchasing patterns have historically favored visually uniform produce, shaping retailer sourcing decisions.",
+          "Farmers refuse to sell any produce that does not meet a specific shape."
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Inference",
+        "level": "B2",
+        "explanation": "The passage implies that retailer sourcing decisions have been shaped by consumer preferences for visually uniform produce, not by legal requirements or nutritional differences."
+      },
+      {
+        "id": 76,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Cause/Effect",
+        "question": "According to the passage, what effect has public awareness of food waste had on some retailers?",
+        "options": [
+          "It has had no effect on retailer policy anywhere.",
+          "It has caused all retailers worldwide to stop selling fresh produce entirely.",
+          "It has led to an increase in the price of cosmetically perfect produce only.",
+          "Some retailers have introduced discounted lines of cosmetically imperfect produce in response to shifting consumer attitudes."
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Cause/Effect",
+        "level": "B2",
+        "explanation": "The passage credits growing public awareness with prompting some retailers to introduce discounted imperfect-produce lines as consumer attitudes shift."
+      },
+      {
+        "id": 77,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Vocabulary in Context",
+        "question": "In the passage, the word 'perishable' most nearly means",
+        "options": [
+          "likely to spoil or decay within a relatively short time",
+          "able to last indefinitely without spoiling",
+          "artificially preserved using chemical additives",
+          "exclusively grown in tropical climates"
+        ],
+        "answer": "A",
+        "skill": "Reading",
+        "topic": "Vocabulary in Context",
+        "level": "B2",
+        "explanation": "'Perishable' describes goods, especially food, that spoil relatively quickly, matching option B."
+      },
+      {
+        "id": 78,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Reference",
+        "question": "What does 'this disconnect' refer to in the passage?",
+        "options": [
+          "A technical fault in a supermarket's refrigeration system",
+          "The gap between the amount of food produced globally and the amount that is actually consumed",
+          "A disagreement between two government agencies",
+          "The difference in time zones between exporting and importing countries"
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Reference",
+        "level": "B2",
+        "explanation": "'This disconnect' refers back to the previously discussed gap between total food production and the amount that ultimately reaches consumers."
+      },
+      {
+        "id": 79,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Logical Conclusion",
+        "question": "Based on the passage, which combination of measures would most directly address food loss across the entire supply chain?",
+        "options": [
+          "Focusing exclusively on consumer education while ignoring farm-level infrastructure",
+          "Banning the sale of all fresh produce in favor of packaged alternatives",
+          "Improving storage and transport infrastructure at the farm level alongside shifting retailer and consumer standards for produce appearance",
+          "Relying solely on individual household composting programs"
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Logical Conclusion",
+        "level": "B2",
+        "explanation": "Since the passage identifies loss at multiple distinct stages, a combined approach addressing both infrastructure and appearance standards follows most directly from its argument."
+      },
+      {
+        "id": 80,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Author's Purpose",
+        "question": "Why does the author contrast food loss patterns in developing and developed countries?",
+        "options": [
+          "To argue that developing countries are solely responsible for global food waste",
+          "To promote a specific international aid organization",
+          "To criticize farmers in developing countries for poor practices",
+          "To show that food loss stems from different causes at different points in the supply chain depending on context, requiring different solutions"
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Author's Purpose",
+        "level": "B2",
+        "explanation": "The contrast is used to illustrate that the causes and appropriate solutions for food loss differ by context, reinforcing the passage's broader argument about tailored responses."
+      }
+    ],
+    "passages": [
+      {
+        "id": "p1",
+        "title": "The Replication Crisis and the Incentives Behind It",
+        "text": "Over the past fifteen years, a growing body of research has raised uncomfortable questions about the reliability of findings published across several scientific fields, particularly in psychology and some areas of medicine. At the center of this concern is what has come to be known as the replication crisis: the discovery that a substantial proportion of published findings, when the original experiments are repeated under similarly controlled conditions, fail to produce the same result a second time.\n\nOne large-scale replication project attempted to reproduce the results of roughly one hundred studies published in leading psychology journals. Fewer than half of the studies attempted produced a statistically significant effect in the replication, a result that sent shockwaves through the discipline and prompted considerable soul-searching about research practices more broadly. Importantly, the project's organizers were careful to note that a failed replication does not automatically prove the original finding was false; statistical results can vary for legitimate reasons. Still, the scale of the failure rate was difficult to dismiss as mere chance.\n\nSeveral explanations have been proposed for why this problem became so widespread. One concerns the incentive structures governing academic careers: journals have historically favored novel, statistically significant findings over null or ambiguous results, and researchers whose careers depend on publication records face understandable pressure to produce exactly that kind of result. This pressure, researchers argue, can lead, consciously or not, to questionable practices such as p-hacking: the practice of analyzing data in multiple ways until a statistically significant result is found, then reporting only that analysis without disclosing the others that were tried.\n\nIn response to these concerns, a number of institutional reforms have gained traction. Several major journals have begun requiring pre-registration of study designs: researchers must specify, before collecting any data, exactly which hypotheses they will test and how the data will be analyzed, closing off the flexibility that made p-hacking possible after the fact. Open-data requirements, obliging researchers to make their raw data available for independent scrutiny, have also become more common.\n\nWhether these reforms will substantially reduce the replication problem remains an open empirical question, one that will itself require years of careful study to answer. What seems less disputable is that the crisis has already reshaped how many researchers think about the reliability of a single published study, encouraging a more cautious default: treating any individual finding, however striking, as provisional until it has been independently confirmed."
+      },
+      {
+        "id": "p2",
+        "title": "What Standardized Tests Can and Cannot Tell Us",
+        "text": "Few tools in education generate as much heated disagreement as the standardized test. Supporters argue that such tests provide an objective, comparable measure of student achievement across vastly different schools and backgrounds. Critics counter that these tests capture only a narrow slice of what matters, while potentially disadvantaging certain groups of students in the process. The evidence, examined carefully, supports elements of both positions, while fitting comfortably into neither camp entirely.\n\nA long-running study tracking thousands of students from adolescence into adulthood offers a useful starting point. Researchers correlated standardized test scores from secondary school with a range of outcomes measured decades later, including career stability and reported life satisfaction. Test scores showed a measurable but modest correlation with certain later outcomes, explaining only part of the variation researchers observed, leaving the majority of differences in these later outcomes explained by other factors entirely, among them family circumstances, opportunity, and plain chance.\n\nThis finding helps explain why many researchers describe test scores as a proxy: an imperfect stand-in measure used to estimate something that is hard to observe directly, in this case, the full range of knowledge, skill, and potential a young person carries into adulthood. A proxy can be genuinely informative while still falling well short of a complete picture, and treating it as more than that risks drawing conclusions the data cannot actually support.\n\nConcerns about fairness compound this limitation. Critics point to patterns in test content and format, vocabulary choices, cultural references, even time pressure, that may be more familiar to some student populations than others, independent of the underlying ability the test claims to measure. This does not mean the tests are measuring nothing meaningful; it means the scores likely reflect a mixture of ability and familiarity with the particular format and content being tested, a mixture that is difficult to fully disentangle.\n\nTeacher assessments, often proposed as an alternative, bring their own strengths and weaknesses to this picture: greater insight into a student's work over time, but also greater vulnerability to inconsistency between different teachers and schools. Rather than treating either method as a simple replacement for the other, the more defensible position, and the one most consistent with the available evidence, treats test scores as one useful but partial input among several, to be interpreted with appropriate caution rather than either dismissed outright or treated as a definitive verdict on a student's worth or future."
+      },
+      {
+        "id": "p3",
+        "title": "Can Volunteers Do Real Science?",
+        "text": "On any given weekend, thousands of ordinary people around the world photograph birds, count insects, and log weather observations, not as a hobby disconnected from science, but as active contributors to research projects run by professional institutions. This practice, known as citizen science, has grown dramatically over the past two decades, raising a question some professional researchers once dismissed too quickly: can data collected by untrained volunteers actually meet the standards required for genuine scientific use?\n\nThe answer, according to a growing body of methodological research, is a carefully qualified yes, provided the projects are designed with sufficient rigor. Well-designed citizen science platforms typically build in specific safeguards to protect data quality. Chief among these is having multiple volunteers independently classify the same observation and comparing results, flagging cases of disagreement for expert review rather than accepting a single volunteer's judgment uncritically. This cross-checking approach has been shown, in multiple published validation studies, to produce classification accuracy approaching that of trained professionals for many straightforward identification tasks.\n\nWhat citizen science sacrifices in per-observer expertise, it can compensate for through sheer scale. The large number of volunteer participants allows these projects to gather data across a scale that would be impractical for a small team to cover alone, spanning geographic areas and time periods far beyond what a handful of funded researchers could realistically monitor on their own. Long-running bird migration monitoring programs illustrate this advantage clearly: decades of citizen-submitted sighting data have helped researchers detect shifts in migration timing linked to changing climate patterns, a pattern that would have been extraordinarily difficult, and far more costly, to document through professional observation alone.\n\nNone of this suggests citizen science is appropriate for every scientific question. Tasks requiring specialized equipment, invasive sampling, or highly technical expertise clearly remain outside its scope. But for large-scale observational tasks, counting, sighting, basic classification, the evidence increasingly challenges any blanket assumption that non-expert data is inherently too unreliable for genuine scientific use. Dismissing the approach outright, without engaging with the specific safeguards that distinguish well-designed projects from poorly designed ones, risks discarding a genuinely valuable research tool over a concern that careful methodology has already substantially addressed."
+      },
+      {
+        "id": "p4",
+        "title": "Where Food Actually Gets Wasted",
+        "text": "Roughly a third of all food produced globally for human consumption is lost or wasted before it is eaten, a statistic frequently cited in discussions of sustainability and hunger. Far less frequently discussed, however, is where exactly in the process this loss occurs, a detail that turns out to matter enormously for designing effective solutions, since the causes, and the appropriate responses, differ sharply depending on where along the supply chain the loss actually happens.\n\nIn many developing regions, the majority of food loss happens remarkably early, often before food ever reaches a market at all. Inadequate storage and transport infrastructure that allows harvested crops to spoil before reaching markets accounts for a substantial share of this early loss: produce sitting in inadequate storage facilities, or spoiling during lengthy, poorly refrigerated transport over damaged roads, well before it reaches any consumer. In these contexts, the most effective interventions tend to involve infrastructure investment: better storage facilities, improved roads, more reliable refrigerated transport, rather than any change in consumer behavior.\n\nIn wealthier countries, by contrast, a disconnect emerges at a different point in the chain, closer to the consumer. Retailers in these markets have historically rejected a significant share of edible, perfectly nutritious produce purely on cosmetic grounds, a pattern shaped less by any inherent flaw in the food itself and more by consumer purchasing habits that have long favored visually uniform fruits and vegetables, habits that retailers' sourcing decisions have, in turn, reinforced over time. A crooked carrot or an oddly shaped tomato, nutritionally indistinguishable from its more symmetrical counterpart, is often discarded well before it ever reaches a store shelf.\n\nEncouragingly, growing public awareness of this disconnect has begun to shift practice. Some retailers have introduced discounted lines of cosmetically imperfect produce in response to shifting consumer attitudes, finding that a meaningful segment of shoppers are willing, even eager, to buy admittedly unusual-looking produce once its quality is explained and its lower price highlighted.\n\nWhat emerges from comparing these two contexts is a clear argument against any single, universal solution to food waste. Addressing the problem effectively requires improving storage and transport infrastructure at the farm level alongside shifting retailer and consumer standards for produce appearance elsewhere, a combination that acknowledges food loss as several distinct problems wearing one shared, deceptively simple-sounding name."
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Deneme 10",
+    "level": "B2 (challenging)",
+    "duration": 150,
+    "questionCount": 80,
+    "questions": [
+      {
+        "id": 1,
+        "part": "A",
+        "type": "Structure Recognition",
+        "question": "Rarely ______ a proposal received such immediate and near-unanimous support from the board.",
+        "options": [
+          "has",
+          "did",
+          "was",
+          "does"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Present Perfect",
+        "level": "B2",
+        "explanation": "The fronted negative adverb 'Rarely' triggers subject-auxiliary inversion; since the intended meaning is present perfect ('has received'), 'has' is correct."
+      },
+      {
+        "id": 2,
+        "part": "A",
+        "type": "Sentence Completion with Connectors",
+        "question": "The policy succeeded in reducing emissions; ______, it did so at a social cost that few had anticipated.",
+        "options": [
+          "furthermore",
+          "yet",
+          "consequently",
+          "likewise"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Linking Words",
+        "level": "B2",
+        "explanation": "'Yet' signals a contrast between the policy's success and its unexpected social cost, matching the discourse relationship between the clauses."
+      },
+      {
+        "id": 3,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "Were the funding to be withdrawn at this stage, years of painstaking fieldwork ______ effectively wasted.",
+        "options": [
+          "will be",
+          "are",
+          "would be",
+          "had been"
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Conditionals",
+        "level": "B2",
+        "explanation": "'Were X to be withdrawn' is an inverted first/second conditional form referring to a hypothetical future situation, so the result clause takes 'would be'."
+      },
+      {
+        "id": 4,
+        "part": "A",
+        "type": "Cloze Test",
+        "question": "The clause was ambiguous enough ______ both sides interpreted it in their own favor during arbitration.",
+        "options": [
+          "that",
+          "as",
+          "which",
+          "so that"
+        ],
+        "answer": "D",
+        "skill": "Grammar",
+        "topic": "Conjunctions",
+        "level": "B2",
+        "explanation": "'So that' correctly introduces the result clause explaining the consequence of the ambiguity; 'enough that' alone is less standard in formal usage here."
+      },
+      {
+        "id": 5,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "Not until the final results were independently verified ______ the researchers willing to publish their claim.",
+        "options": [
+          "were",
+          "did",
+          "had",
+          "was"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Subject-Verb Agreement",
+        "level": "B2",
+        "explanation": "The fronted negative time expression 'Not until...' triggers inversion; since the main verb is 'be' ('were willing'), 'were' is required, matching the plural subject."
+      },
+      {
+        "id": 6,
+        "part": "A",
+        "type": "Error Identification",
+        "question": "The board (A) was so impressed by the pitch (B) that they decided (C) to invest despite (D) of the risks involved.",
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer": "D",
+        "skill": "Grammar",
+        "topic": "Prepositions",
+        "level": "B2",
+        "explanation": "'Despite' is never followed by 'of'; it should simply be 'despite the risks', unlike 'in spite of', which does take 'of'."
+      },
+      {
+        "id": 7,
+        "part": "A",
+        "type": "Structure Recognition",
+        "question": "The argument, flawed ______ it was, nevertheless persuaded most of the committee.",
+        "options": [
+          "as",
+          "A and C",
+          "that",
+          "though"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Conjunctions",
+        "level": "B2",
+        "explanation": "Both 'as' and 'though' can follow an adjective in this inverted concessive structure ('flawed as/though it was'), making D the correct choice."
+      },
+      {
+        "id": 8,
+        "part": "A",
+        "type": "Cloze Test",
+        "question": "The report's tone suggests the authors were less interested in persuading critics than ______ their own position.",
+        "options": [
+          "to confirm",
+          "confirm",
+          "confirming",
+          "confirmed"
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Gerunds",
+        "level": "B2",
+        "explanation": "In the parallel structure 'less interested in X than in Y', both elements after 'in' take the gerund form: confirming."
+      },
+      {
+        "id": 9,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "By the time the inquiry concluded, the original witnesses ______ their accounts so many times that the details no longer matched.",
+        "options": [
+          "had revised",
+          "revised",
+          "have revised",
+          "were revising"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Past Perfect",
+        "level": "B2",
+        "explanation": "An action completed repeatedly before another past reference point ('by the time the inquiry concluded') requires the past perfect."
+      },
+      {
+        "id": 10,
+        "part": "A",
+        "type": "Situation-based Question",
+        "question": "Given how carefully the contract had been drafted, the lawyer concluded that the loophole ______ accidental.",
+        "options": [
+          "mustn't have been",
+          "can't have been",
+          "needn't have been",
+          "shouldn't have been"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Modal Verbs",
+        "level": "B2",
+        "explanation": "'Can't have been' expresses a confident deduction that something was impossible, fitting the lawyer's conclusion based on the careful drafting."
+      },
+      {
+        "id": 11,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "The panel's recommendation was that the merger ______ postponed until the antitrust review was complete.",
+        "options": [
+          "is",
+          "was",
+          "be",
+          "will be"
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Noun Clauses",
+        "level": "B2",
+        "explanation": "After a noun clause following a recommendation, the subjunctive base form 'be postponed' is required regardless of tense."
+      },
+      {
+        "id": 12,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "The less transparent an institution's decision-making process, ______ the public tends to be of its motives.",
+        "options": [
+          "suspicious",
+          "more suspicious",
+          "most suspicious",
+          "the more suspicious"
+        ],
+        "answer": "D",
+        "skill": "Grammar",
+        "topic": "Comparatives",
+        "level": "B2",
+        "explanation": "The double comparative construction requires 'the' before the second comparative phrase as well: the more suspicious."
+      },
+      {
+        "id": 13,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "The minister's aide later admitted that the figures ______ deliberately understated in the original briefing.",
+        "options": [
+          "had been",
+          "were",
+          "are",
+          "have been"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Reported Speech",
+        "level": "B2",
+        "explanation": "In reported speech describing an action that had already occurred before the time of admission, the past perfect passive 'had been understated' is correct."
+      },
+      {
+        "id": 14,
+        "part": "A",
+        "type": "Cloze Test",
+        "question": "The negotiations stalled, not because of the price itself, but ______ neither side trusted the other to honor the terms.",
+        "options": [
+          "because of",
+          "because",
+          "due to",
+          "owing to"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Conjunctions",
+        "level": "B2",
+        "explanation": "'Because' is followed by a full clause with a subject and verb ('neither side trusted'), unlike 'because of', 'due to', or 'owing to', which require a noun phrase."
+      },
+      {
+        "id": 15,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "By the end of next year, the agency ______ over a decade reviewing cases under the current, widely criticized framework.",
+        "options": [
+          "will spend",
+          "spends",
+          "will have spent",
+          "spent"
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Future Perfect",
+        "level": "B2",
+        "explanation": "Completion of a duration by a specified future point ('by the end of next year') requires the future perfect."
+      },
+      {
+        "id": 16,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "The committee's harshest critics argue that its conclusions were predetermined, with the review process ______ little more than a formality.",
+        "options": [
+          "been",
+          "be",
+          "is",
+          "being"
+        ],
+        "answer": "D",
+        "skill": "Grammar",
+        "topic": "Participles",
+        "level": "B2",
+        "explanation": "'With + noun + present participle' adds descriptive detail here; 'being' correctly functions as the participle following 'the review process'."
+      },
+      {
+        "id": 17,
+        "part": "A",
+        "type": "Structure Recognition",
+        "question": "______ little evidence existed to support the claim, several newspapers reported it as established fact.",
+        "options": [
+          "Although",
+          "Despite",
+          "In spite of",
+          "Because"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Conjunctions",
+        "level": "B2",
+        "explanation": "'Although' is followed by a full clause ('little evidence existed'), unlike 'despite' and 'in spite of', which require a noun phrase."
+      },
+      {
+        "id": 18,
+        "part": "A",
+        "type": "Error Identification",
+        "question": "The auditors (A) found that neither the figures (B) nor the supporting documents (C) was (D) consistent with company records.",
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer": "D",
+        "skill": "Grammar",
+        "topic": "Subject-Verb Agreement",
+        "level": "B2",
+        "explanation": "With 'neither...nor', the verb agrees with the nearer subject, 'the supporting documents', which is plural, so it should be 'were', not 'was'."
+      },
+      {
+        "id": 19,
+        "part": "A",
+        "type": "Cloze Test",
+        "question": "The whistleblower insisted that the records ______ before any external audit could take place.",
+        "options": [
+          "destroy",
+          "be destroyed",
+          "destroyed",
+          "were destroyed"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Passive Voice",
+        "level": "B2",
+        "explanation": "After 'insisted that', the subjunctive base form of the passive is used: be destroyed, since the records are the ones acted upon."
+      },
+      {
+        "id": 20,
+        "part": "A",
+        "type": "Dialogue Completion",
+        "question": "A: You seem certain the board already knew about the discrepancy.\nB: They ______ — internal emails from months earlier mention it explicitly.",
+        "options": [
+          "can have",
+          "needn't have",
+          "must have",
+          "should have"
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Modal Verbs",
+        "level": "B2",
+        "explanation": "'Must have known' expresses a confident deduction based on strong evidence (the emails), fitting the speaker's certainty."
+      },
+      {
+        "id": 21,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "I wish the original report ______ a clearer methodology section, since the current ambiguity has fueled years of dispute.",
+        "options": [
+          "had included",
+          "included",
+          "would include",
+          "includes"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Wish / If Only",
+        "level": "B2",
+        "explanation": "A regret about a completed past omission requires 'wish + past perfect': had included."
+      },
+      {
+        "id": 22,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "The chairman had the minutes ______ to remove any reference to the disputed vote.",
+        "options": [
+          "amend",
+          "amended",
+          "amending",
+          "to amend"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Causatives",
+        "level": "B2",
+        "explanation": "The causative 'have something done' structure takes the past participle, so 'amended' is correct."
+      },
+      {
+        "id": 23,
+        "part": "A",
+        "type": "Structure Recognition",
+        "question": "The report, the methodology of ______ has since been thoroughly discredited, is still cited occasionally by lobbyists.",
+        "options": [
+          "it",
+          "that",
+          "which",
+          "what"
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Relative Clauses",
+        "level": "B2",
+        "explanation": "In the pattern 'noun + of which', 'which' is the only correct relative pronoun linking back to 'the report'."
+      },
+      {
+        "id": 24,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "This is arguably ______ controversial ruling the court has issued in its entire history.",
+        "options": [
+          "a more",
+          "the more",
+          "most",
+          "the most"
+        ],
+        "answer": "D",
+        "skill": "Grammar",
+        "topic": "Superlatives",
+        "level": "B2",
+        "explanation": "Comparing this ruling against every ruling in the court's history requires the superlative: the most controversial."
+      },
+      {
+        "id": 25,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "Scarcely ______ the settlement been announced when a rival firm filed a competing claim.",
+        "options": [
+          "had",
+          "did",
+          "was",
+          "has"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Past Perfect",
+        "level": "B2",
+        "explanation": "'Scarcely...when' is a fronted construction requiring inversion with the past perfect: had the settlement been announced."
+      },
+      {
+        "id": 26,
+        "part": "A",
+        "type": "Cloze Test",
+        "question": "The defense argued that the evidence had been obtained ______ a manner that violated the defendant's rights.",
+        "options": [
+          "by",
+          "in",
+          "through",
+          "with"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Prepositions",
+        "level": "B2",
+        "explanation": "'In a manner' is the standard fixed preposition pattern describing the way something was done."
+      },
+      {
+        "id": 27,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "______ amount of damage caused by the error was far greater than the initial estimate had suggested.",
+        "options": [
+          "A",
+          "An",
+          "The",
+          "Some"
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Determiners",
+        "level": "B2",
+        "explanation": "'The' is required because the following clause makes 'amount of damage' specific and identifiable, referring to a particular known quantity."
+      },
+      {
+        "id": 28,
+        "part": "A",
+        "type": "Functional Language",
+        "question": "A: I think the ruling sets a dangerous precedent for future cases.\nB: ______ Although I can see why some legal scholars disagree.",
+        "options": [
+          "I couldn't care less.",
+          "That's beside the point.",
+          "You've lost me completely.",
+          "So do I."
+        ],
+        "answer": "D",
+        "skill": "Grammar",
+        "topic": "Quantifiers",
+        "level": "B2",
+        "explanation": "'So do I' correctly expresses agreement with the speaker's opinion, which fits the continuation acknowledging a differing scholarly view."
+      },
+      {
+        "id": 29,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "The tribunal's ruling, ______ many legal scholars found internally inconsistent, has already been appealed twice.",
+        "options": [
+          "which",
+          "that",
+          "who",
+          "what"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Relative Clauses",
+        "level": "B2",
+        "explanation": "A non-defining relative clause adding extra commentary about 'the ruling' must use 'which', not 'that'."
+      },
+      {
+        "id": 30,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "______ undermined by the leaked documents, the official's credibility never fully recovered, even after the formal apology.",
+        "options": [
+          "Severe",
+          "Severely",
+          "Severity",
+          "Severest"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Adjectives and Adverbs",
+        "level": "B2",
+        "explanation": "An adverb is needed to modify the participle 'undermined', so 'severely' is correct in this reduced participial clause."
+      },
+      {
+        "id": 31,
+        "part": "B",
+        "type": "Academic Vocabulary",
+        "question": "The report's conclusions were widely seen as a tacit admission that the original policy had failed, even though no such admission was ever made explicitly.",
+        "options": [
+          "an open and direct",
+          "a legally binding",
+          "an unspoken but implied",
+          "a publicly celebrated"
+        ],
+        "answer": "C",
+        "skill": "Vocabulary",
+        "topic": "Academic Vocabulary",
+        "level": "B2",
+        "explanation": "'Tacit' describes something implied without being stated directly, matching 'an unspoken but implied' admission."
+      },
+      {
+        "id": 32,
+        "part": "B",
+        "type": "Word Choice",
+        "question": "The negotiators reached an ______ that satisfied neither side completely but avoided a complete breakdown in talks.",
+        "options": [
+          "accommodate",
+          "accommodating",
+          "accommodated",
+          "accommodation"
+        ],
+        "answer": "D",
+        "skill": "Vocabulary",
+        "topic": "Business",
+        "level": "B2",
+        "explanation": "A noun is needed as the object of 'reached an', and 'accommodation' here means a compromise arrangement."
+      },
+      {
+        "id": 33,
+        "part": "B",
+        "type": "Collocation",
+        "question": "The scandal threatened to ______ irreparable harm on the organization's reputation before it was finally contained.",
+        "options": [
+          "inflict",
+          "make",
+          "take",
+          "hold"
+        ],
+        "answer": "A",
+        "skill": "Vocabulary",
+        "topic": "Society",
+        "level": "B2",
+        "explanation": "'Inflict harm on something' is the standard fixed collocation; the other verbs do not combine naturally with 'harm' in this pattern."
+      },
+      {
+        "id": 34,
+        "part": "B",
+        "type": "Synonym",
+        "question": "The minister's statement was carefully worded to be evasive, leaving the central question conspicuously unanswered.",
+        "options": [
+          "direct",
+          "noncommittal",
+          "detailed",
+          "apologetic"
+        ],
+        "answer": "B",
+        "skill": "Vocabulary",
+        "topic": "Communication",
+        "level": "B2",
+        "explanation": "'Evasive' means deliberately vague or avoiding a direct answer, closely matching 'noncommittal'."
+      },
+      {
+        "id": 35,
+        "part": "B",
+        "type": "Phrasal Verb",
+        "question": "The investigation was eventually ______ after key witnesses refused to testify and evidence proved insufficient.",
+        "options": [
+          "called on",
+          "called up",
+          "called off",
+          "called for"
+        ],
+        "answer": "C",
+        "skill": "Vocabulary",
+        "topic": "Society",
+        "level": "B2",
+        "explanation": "'Call off' means to cancel or discontinue something, fitting an investigation that was discontinued."
+      },
+      {
+        "id": 36,
+        "part": "B",
+        "type": "Antonym",
+        "question": "The report's findings were notably equivocal, offering no clear verdict on whether the policy had succeeded or failed.",
+        "options": [
+          "ambiguous",
+          "lengthy",
+          "preliminary",
+          "unambiguous"
+        ],
+        "answer": "D",
+        "skill": "Vocabulary",
+        "topic": "Academic Vocabulary",
+        "level": "B2",
+        "explanation": "'Equivocal' means unclear or open to more than one interpretation; 'unambiguous' is its direct opposite."
+      },
+      {
+        "id": 37,
+        "part": "B",
+        "type": "Word Choice",
+        "question": "The agency's response to the crisis was criticized as ______, arriving long after the damage had already been done.",
+        "options": [
+          "belated",
+          "belatedly",
+          "belate",
+          "belatedness"
+        ],
+        "answer": "A",
+        "skill": "Vocabulary",
+        "topic": "Society",
+        "level": "B2",
+        "explanation": "An adjective completing the phrase 'criticized as' is required, so 'belated', meaning coming too late, is correct."
+      },
+      {
+        "id": 38,
+        "part": "B",
+        "type": "Collocation",
+        "question": "The committee was accused of trying to ______ the blame for the failure onto a single junior employee.",
+        "options": [
+          "move",
+          "shift",
+          "push",
+          "turn"
+        ],
+        "answer": "B",
+        "skill": "Vocabulary",
+        "topic": "Business",
+        "level": "B2",
+        "explanation": "'Shift blame onto someone' is the fixed collocation meaning to redirect responsibility, often unfairly."
+      },
+      {
+        "id": 39,
+        "part": "B",
+        "type": "Vocabulary in Context",
+        "question": "The think tank's analysis was dismissed by critics as little more than a thinly veiled attempt to justify a predetermined conclusion.",
+        "options": [
+          "openly declared",
+          "scientifically rigorous",
+          "barely disguised",
+          "entirely original"
+        ],
+        "answer": "C",
+        "skill": "Vocabulary",
+        "topic": "Academic Vocabulary",
+        "level": "B2",
+        "explanation": "'Thinly veiled' describes something poorly disguised, so the intended meaning is 'barely disguised'."
+      },
+      {
+        "id": 40,
+        "part": "B",
+        "type": "Phrasal Verb",
+        "question": "The CEO's casual remark about layoffs ______ a wave of panic among employees that the official statement later struggled to contain.",
+        "options": [
+          "set up",
+          "set out",
+          "set aside",
+          "set off"
+        ],
+        "answer": "D",
+        "skill": "Vocabulary",
+        "topic": "Business",
+        "level": "B2",
+        "explanation": "'Set off' means to trigger or initiate a reaction, fitting the remark that triggered panic."
+      },
+      {
+        "id": 41,
+        "part": "B",
+        "type": "Synonym",
+        "question": "The professor's critique of the paper was scathing, leaving little of the original argument intact.",
+        "options": [
+          "harsh",
+          "mild",
+          "brief",
+          "balanced"
+        ],
+        "answer": "A",
+        "skill": "Vocabulary",
+        "topic": "Academic Life",
+        "level": "B2",
+        "explanation": "'Scathing' means severely critical, closely matching 'harsh'."
+      },
+      {
+        "id": 42,
+        "part": "B",
+        "type": "Collocation",
+        "question": "The agency's credibility had already been ______ by a series of earlier scandals, long before this latest controversy emerged.",
+        "options": [
+          "erased",
+          "eroded",
+          "evaporated",
+          "exhausted"
+        ],
+        "answer": "B",
+        "skill": "Vocabulary",
+        "topic": "Society",
+        "level": "B2",
+        "explanation": "'Erode credibility' is the standard collocation describing a gradual weakening of trust or reputation over time."
+      },
+      {
+        "id": 43,
+        "part": "B",
+        "type": "Word Choice",
+        "question": "The journalist's account of events was later shown to be ______ inaccurate in several key respects.",
+        "options": [
+          "demonstrable",
+          "demonstrate",
+          "demonstrably",
+          "demonstration"
+        ],
+        "answer": "C",
+        "skill": "Vocabulary",
+        "topic": "Media",
+        "level": "B2",
+        "explanation": "An adverb modifying the adjective 'inaccurate' is required, so 'demonstrably' is correct."
+      },
+      {
+        "id": 44,
+        "part": "B",
+        "type": "Vocabulary in Context",
+        "question": "The board's decision was widely seen as a capitulation to shareholder pressure rather than a genuine change of strategic direction.",
+        "options": [
+          "bold stand against",
+          "careful analysis of",
+          "public celebration of",
+          "surrender to"
+        ],
+        "answer": "D",
+        "skill": "Vocabulary",
+        "topic": "Business",
+        "level": "B2",
+        "explanation": "'Capitulation' means giving in or surrendering, matching 'surrender to' shareholder pressure."
+      },
+      {
+        "id": 45,
+        "part": "B",
+        "type": "Antonym",
+        "question": "The spokesperson's explanation struck most observers as disingenuous, given how clearly it contradicted the leaked internal memo.",
+        "options": [
+          "sincere",
+          "dishonest",
+          "lengthy",
+          "confident"
+        ],
+        "answer": "A",
+        "skill": "Vocabulary",
+        "topic": "Communication",
+        "level": "B2",
+        "explanation": "'Disingenuous' means insincere or not fully honest; 'sincere' is its direct opposite."
+      },
+      {
+        "id": 46,
+        "part": "B",
+        "type": "Collocation",
+        "question": "The opposition accused the government of trying to ______ public attention away from the unemployment figures released that morning.",
+        "options": [
+          "disperse",
+          "divert",
+          "dismiss",
+          "discharge"
+        ],
+        "answer": "B",
+        "skill": "Vocabulary",
+        "topic": "Society",
+        "level": "B2",
+        "explanation": "'Divert attention' is the fixed collocation meaning to redirect focus away from something."
+      },
+      {
+        "id": 47,
+        "part": "B",
+        "type": "Word Choice",
+        "question": "The panel's findings were framed in language ______ enough to avoid committing to any specific policy recommendation.",
+        "options": [
+          "ambiguously",
+          "ambiguity",
+          "ambiguous",
+          "ambiguate"
+        ],
+        "answer": "C",
+        "skill": "Vocabulary",
+        "topic": "Academic Vocabulary",
+        "level": "B2",
+        "explanation": "An adjective is required before 'enough', so 'ambiguous' is correct."
+      },
+      {
+        "id": 48,
+        "part": "B",
+        "type": "Synonym",
+        "question": "The negotiator's unflappable demeanor throughout the talks reportedly frustrated opponents hoping to provoke a reaction.",
+        "options": [
+          "nervous",
+          "aggressive",
+          "dishonest",
+          "calm"
+        ],
+        "answer": "D",
+        "skill": "Vocabulary",
+        "topic": "Communication",
+        "level": "B2",
+        "explanation": "'Unflappable' means remaining calm under pressure, matching 'calm'."
+      },
+      {
+        "id": 49,
+        "part": "B",
+        "type": "Phrasal Verb",
+        "question": "The company's attempt to ______ the controversy by issuing a brief apology only drew further criticism.",
+        "options": [
+          "play down",
+          "play up",
+          "play along",
+          "play out"
+        ],
+        "answer": "A",
+        "skill": "Vocabulary",
+        "topic": "Business",
+        "level": "B2",
+        "explanation": "'Play down' means to minimize the perceived importance of something, fitting an attempt to reduce the controversy's impact."
+      },
+      {
+        "id": 50,
+        "part": "B",
+        "type": "Collocation",
+        "question": "The editorial board was forced to ______ a correction after the article's central claim was shown to be false.",
+        "options": [
+          "give",
+          "issue",
+          "send",
+          "make"
+        ],
+        "answer": "B",
+        "skill": "Vocabulary",
+        "topic": "Media",
+        "level": "B2",
+        "explanation": "'Issue a correction' is the standard fixed collocation used in journalism and publishing."
+      },
+      {
+        "id": 51,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Main Idea",
+        "question": "What is the central argument of the passage regarding the attention economy?",
+        "options": [
+          "Digital platforms have no measurable influence on how people allocate their attention.",
+          "Every social media platform has voluntarily reduced its use of attention-capturing design features.",
+          "Competition for user attention has reshaped platform design in ways that may conflict with users' own stated goals.",
+          "Attention is a resource that cannot, in principle, be studied scientifically."
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Main Idea",
+        "level": "B2",
+        "explanation": "The passage's central claim is that competition for attention has shaped platform design in ways that can work against users' own intentions, not that platforms lack influence or have voluntarily scaled back such features."
+      },
+      {
+        "id": 52,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Specific Information",
+        "question": "According to the passage, what did the controlled laboratory study measure?",
+        "options": [
+          "How quickly users could type a message under time pressure",
+          "The average battery life of smartphones across different brands",
+          "How often users changed the wallpaper on their devices",
+          "How users' intended usage time compared with their actual time spent once variable rewards were introduced into the interface"
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Specific Information",
+        "level": "B2",
+        "explanation": "The passage describes a study comparing users' stated intended usage time against their actual behavior once variable-reward features were added to an interface."
+      },
+      {
+        "id": 53,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Inference",
+        "question": "What can be inferred about why variable, unpredictable rewards are particularly effective at sustaining engagement?",
+        "options": [
+          "Unpredictability itself appears to intensify the psychological pull of checking for a potential reward, independent of the reward's actual value.",
+          "They are effective only when users are explicitly told how the reward schedule works.",
+          "They have no greater effect than a reward delivered on a fixed, predictable schedule.",
+          "They work only for users who have no prior experience with digital platforms."
+        ],
+        "answer": "A",
+        "skill": "Reading",
+        "topic": "Inference",
+        "level": "B2",
+        "explanation": "The passage implies that the unpredictability of a reward, not its size or users' awareness of the schedule, is what intensifies the pull to keep checking."
+      },
+      {
+        "id": 54,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Cause/Effect",
+        "question": "According to the passage, what effect did the removal of a specific notification feature have in the internal company experiment?",
+        "options": [
+          "It had no measurable effect on daily active usage.",
+          "It led to a modest but measurable decline in average daily time spent on the platform.",
+          "It caused a complete collapse in the platform's user base within a week.",
+          "It significantly increased the platform's advertising revenue immediately."
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Cause/Effect",
+        "level": "B2",
+        "explanation": "The passage reports that removing the notification feature produced a modest measurable decline in average usage time, not no effect or a dramatic collapse."
+      },
+      {
+        "id": 55,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Vocabulary in Context",
+        "question": "In the passage, the phrase 'engineered compulsion' most nearly refers to",
+        "options": [
+          "a legal requirement imposed by data protection regulators",
+          "a software bug that occurs unintentionally during development",
+          "a deliberately designed feature intended to produce a strong, repeated urge to use a product",
+          "a voluntary agreement between competing technology companies"
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Vocabulary in Context",
+        "level": "B2",
+        "explanation": "'Engineered compulsion' refers to a deliberately built-in design feature meant to generate a strong, repeated urge to use the product, matching option B."
+      },
+      {
+        "id": 56,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Logical Conclusion",
+        "question": "Based on the passage's argument, which design change would most directly reduce the effect it describes?",
+        "options": [
+          "Increasing the size of the reward offered for each notification",
+          "Removing all ability for users to adjust their own notification settings",
+          "Displaying advertisements more frequently throughout the interface",
+          "Making notifications arrive on a more predictable, scheduled basis rather than a variable one"
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Logical Conclusion",
+        "level": "B2",
+        "explanation": "Since the passage attributes the engagement effect specifically to unpredictability, replacing variable rewards with a predictable schedule follows logically as a way to reduce that effect."
+      },
+      {
+        "id": 57,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Author's Purpose",
+        "question": "Why does the author include the detail about the internal company experiment on notifications?",
+        "options": [
+          "To provide concrete, internally generated evidence supporting the broader claim about design's influence on behavior",
+          "To argue that all notification features should be banned by law immediately",
+          "To promote a specific competing social media platform",
+          "To criticize a particular individual engineer by name"
+        ],
+        "answer": "A",
+        "skill": "Reading",
+        "topic": "Author's Purpose",
+        "level": "B2",
+        "explanation": "The internal experiment is introduced as concrete supporting evidence for the passage's broader claim, not as a call for legal action or a personal criticism."
+      },
+      {
+        "id": 58,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Best Title",
+        "question": "Which title best fits the passage?",
+        "options": [
+          "A History of Early Internet Browsers",
+          "The Paradox of Choice in a World of Endless Options",
+          "How to Build a Successful Online Store",
+          "The Decline of Physical Retail Shopping"
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Best Title",
+        "level": "B2",
+        "explanation": "The passage centers on how an abundance of choice can paradoxically reduce satisfaction and increase difficulty in decision-making, matching this title."
+      },
+      {
+        "id": 59,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Specific Information",
+        "question": "According to the passage, what did the supermarket jam-tasting experiment find?",
+        "options": [
+          "Customers offered a larger selection of jams were more likely to make a purchase than those offered a smaller selection.",
+          "The number of jam varieties offered had no measurable effect on purchasing behavior whatsoever.",
+          "Customers offered a smaller selection of jams were, in fact, considerably more likely to make a purchase than those offered a much larger selection.",
+          "Customers refused to taste any jam regardless of how many options were available."
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Specific Information",
+        "level": "B2",
+        "explanation": "The passage describes an experiment in which a smaller selection of jams led to significantly more purchases than a much larger selection, the opposite of what intuition might predict."
+      },
+      {
+        "id": 60,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Inference",
+        "question": "What can be inferred about why an abundance of options can increase post-decision regret?",
+        "options": [
+          "More options make it easier to identify the single best choice with complete confidence.",
+          "Regret occurs only when a decision involves no alternatives whatsoever.",
+          "People who face many options never experience any form of regret.",
+          "A larger set of alternatives increases the likelihood that a chooser will imagine a forgone option that might have been better."
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Inference",
+        "level": "B2",
+        "explanation": "The passage implies that more alternatives make it easier to imagine a superior option that was not chosen, increasing the likelihood of regret after deciding."
+      },
+      {
+        "id": 61,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Comparison",
+        "question": "How does the passage compare 'maximizers' and 'satisficers' as decision-making styles?",
+        "options": [
+          "It describes maximizers as seeking the single best option at a psychological cost, while satisficers accept a 'good enough' option and report greater satisfaction.",
+          "It argues that maximizers always make objectively better decisions than satisficers.",
+          "It claims satisficers never make any decision at all.",
+          "It presents the two styles as functionally identical in every measurable respect."
+        ],
+        "answer": "A",
+        "skill": "Reading",
+        "topic": "Comparison",
+        "level": "B2",
+        "explanation": "The passage contrasts maximizers, who exhaustively search for the best option often at a psychological cost, with satisficers, who settle for a sufficient option and tend to report greater satisfaction."
+      },
+      {
+        "id": 62,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Vocabulary in Context",
+        "question": "In the passage, the word 'overwhelmed' most nearly means",
+        "options": [
+          "completely confident and at ease",
+          "unable to cope effectively due to an excessive amount of something",
+          "mildly amused",
+          "fully informed about every available detail"
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Vocabulary in Context",
+        "level": "B2",
+        "explanation": "'Overwhelmed' describes being unable to cope due to an excessive amount of something, such as choices, matching option B."
+      },
+      {
+        "id": 63,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Writer's Opinion",
+        "question": "What is the author's stance on completely eliminating choice as a solution to this paradox?",
+        "options": [
+          "Strongly supportive, arguing that no choice at all is preferable to any amount of choice",
+          "Indifferent, since the passage avoids discussing any possible response",
+          "Skeptical, suggesting that thoughtfully limiting and structuring options is preferable to eliminating choice outright",
+          "Supportive, but only in the specific context of grocery shopping"
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Writer's Opinion",
+        "level": "B2",
+        "explanation": "The author frames thoughtful curation of options as the more defensible response, rather than eliminating choice altogether, which is not supported by the passage's argument."
+      },
+      {
+        "id": 64,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Reference",
+        "question": "What does 'this cost' refer to in the passage's discussion of maximizers?",
+        "options": [
+          "The monetary price of a product being compared",
+          "A tax imposed on luxury retail goods",
+          "The shipping fee charged by an online retailer",
+          "The psychological toll, including anxiety and regret, associated with exhaustively searching for the single best option"
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Reference",
+        "level": "B2",
+        "explanation": "'This cost' refers back to the previously described psychological toll, such as anxiety and regret, that maximizers tend to experience while searching exhaustively for the best option."
+      },
+      {
+        "id": 65,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Main Idea",
+        "question": "What is the main idea of the passage about neuroplasticity in adulthood?",
+        "options": [
+          "The adult brain retains a meaningful, though more limited, capacity to reorganize itself in response to sustained new experience.",
+          "The adult brain is entirely fixed and incapable of any structural change after a certain age.",
+          "Neuroplasticity has been fully disproven by recent neuroscience research.",
+          "Only children's brains show any capacity for structural change whatsoever."
+        ],
+        "answer": "A",
+        "skill": "Reading",
+        "topic": "Main Idea",
+        "level": "B2",
+        "explanation": "The passage's central claim is that the adult brain retains a genuine, if more limited, capacity for structural reorganization, rejecting the view that it is entirely fixed."
+      },
+      {
+        "id": 66,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Specific Information",
+        "question": "According to the passage, what did brain imaging studies of adult musicians reveal?",
+        "options": [
+          "No measurable structural differences compared to non-musicians of the same age.",
+          "Measurable structural differences in brain regions associated with the specific skills their instrument demands.",
+          "A complete absence of any brain activity during musical performance.",
+          "Identical brain structure regardless of how many years an individual had practiced."
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Specific Information",
+        "level": "B2",
+        "explanation": "The passage reports that imaging studies found measurable structural differences in brain regions linked to the specific skills demanded by a musician's instrument."
+      },
+      {
+        "id": 67,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Inference",
+        "question": "What can be inferred about why intensity and consistency of practice matter more than age alone for adult skill learning?",
+        "options": [
+          "Age has no relationship whatsoever to how the brain changes in response to practice.",
+          "Children's brains change only because of genetic factors unrelated to practice.",
+          "Structural brain change appears to depend substantially on the sustained demands placed on relevant neural circuits, rather than on age as an isolated factor.",
+          "Adults are incapable of learning any new skill after reaching a certain age, regardless of effort."
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Inference",
+        "level": "B2",
+        "explanation": "The passage implies that the sustained demand placed on specific brain circuits, not age in isolation, is the more decisive factor behind structural change."
+      },
+      {
+        "id": 68,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Cause/Effect",
+        "question": "According to the passage, what effect did consistent practice have on the taxi drivers studied in the research described?",
+        "options": [
+          "It had no measurable effect on any brain region studied.",
+          "It caused measurable shrinkage in every region of the brain examined.",
+          "It permanently impaired their ability to navigate unfamiliar areas.",
+          "It was associated with measurable growth in a brain region linked to spatial navigation."
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Cause/Effect",
+        "level": "B2",
+        "explanation": "The passage describes consistent navigation practice as being associated with measurable growth in a brain region linked to spatial processing among the drivers studied."
+      },
+      {
+        "id": 69,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Vocabulary in Context",
+        "question": "In the passage, the word 'plasticity' most nearly means",
+        "options": [
+          "the capacity to change or be reshaped in response to experience",
+          "the complete absence of any physical structure",
+          "a specific type of synthetic material",
+          "a permanent, unchangeable state"
+        ],
+        "answer": "A",
+        "skill": "Reading",
+        "topic": "Vocabulary in Context",
+        "level": "B2",
+        "explanation": "In this context, 'plasticity' refers to the brain's capacity to change and reorganize in response to experience, matching option B."
+      },
+      {
+        "id": 70,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Logical Conclusion",
+        "question": "Based on the passage, which conclusion would the author most likely support regarding adult learning?",
+        "options": [
+          "Adults should avoid attempting to learn demanding new skills, since no meaningful change is possible.",
+          "Sustained, consistent engagement with a challenging new skill can produce real, measurable changes in the adult brain over time.",
+          "Only skills learned before adolescence can ever produce any brain change.",
+          "A single brief exposure to a new skill is sufficient to produce lasting structural change."
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Logical Conclusion",
+        "level": "B2",
+        "explanation": "Given the passage's emphasis on sustained practice producing measurable change, the author would logically support the value of consistent engagement with a challenging skill, not a single brief exposure or complete avoidance."
+      },
+      {
+        "id": 71,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Reference",
+        "question": "What does 'this capacity' refer to in the passage?",
+        "options": [
+          "The maximum number of students a university can enroll",
+          "The storage capacity of a digital imaging device",
+          "The brain's ability to structurally reorganize itself in response to sustained new experience",
+          "The seating capacity of a research laboratory"
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Reference",
+        "level": "B2",
+        "explanation": "'This capacity' refers back to the previously discussed ability of the brain to reorganize itself structurally in response to sustained experience."
+      },
+      {
+        "part": "C",
+        "passageId": "p3",
+        "type": "Writer's Opinion",
+        "question": "What is the author's attitude toward describing the adult brain as entirely fixed and unchangeable?",
+        "options": [
+          "Fully supportive, treating the brain as completely fixed after childhood",
+          "Indifferent, since the passage avoids taking any position",
+          "Supportive, but only regarding musicians specifically",
+          "Skeptical, presenting substantial evidence that meaningful structural change continues into adulthood"
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Writer's Opinion",
+        "level": "B2",
+        "explanation": "The author presents substantial evidence for ongoing adult neuroplasticity, indicating skepticism toward any claim that the adult brain is entirely fixed.",
+        "id": 72
+      },
+      {
+        "id": 73,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Main Idea",
+        "question": "What is the main idea of the passage about the attention economy's effect on sustained focus?",
+        "options": [
+          "Evidence increasingly suggests that constant digital interruption may be eroding people's capacity for sustained, deep focus, though the long-term implications remain debated.",
+          "Sustained attention has improved dramatically for most people over the past two decades.",
+          "No credible evidence exists linking digital technology to any change in attention span.",
+          "Only elderly individuals have experienced any change in their ability to concentrate."
+        ],
+        "answer": "A",
+        "skill": "Reading",
+        "topic": "Main Idea",
+        "level": "B2",
+        "explanation": "The passage's overall argument is that mounting evidence points toward digital interruption eroding sustained focus, while acknowledging genuine ongoing debate about the long-term implications."
+      },
+      {
+        "id": 74,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Specific Information",
+        "question": "According to the passage, what did the workplace study measure regarding task-switching?",
+        "options": [
+          "The average salary of employees in different departments",
+          "The amount of time it took employees to fully regain focus on a primary task after being interrupted by a notification",
+          "The number of coffee breaks taken by employees each day",
+          "The physical distance between employees' desks in an open office"
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Specific Information",
+        "level": "B2",
+        "explanation": "The passage describes a study measuring how long it took employees to regain full focus on their original task after a notification-driven interruption."
+      },
+      {
+        "id": 75,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Inference",
+        "question": "What can be inferred about why some researchers remain cautious about describing this pattern as a permanent decline in attentional capacity?",
+        "options": [
+          "They believe no further research on the topic is necessary.",
+          "They are certain that attention span has not changed in any way for any population.",
+          "It remains unclear whether observed changes reflect a lasting alteration in capacity or a context-dependent adaptation to an environment full of interruptions.",
+          "They believe the topic is entirely outside the scope of legitimate scientific inquiry."
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Inference",
+        "level": "B2",
+        "explanation": "The passage implies that researchers are cautious because it remains unclear whether the observed pattern reflects a permanent change or an adaptive response specific to an interruption-heavy environment."
+      },
+      {
+        "id": 76,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Cause/Effect",
+        "question": "According to the passage, what effect did scheduled, interruption-free work blocks have in the workplace intervention described?",
+        "options": [
+          "They had no measurable effect on employee output or well-being.",
+          "They caused a significant decline in employee satisfaction across every department tested.",
+          "They eliminated the need for any further workplace research on attention.",
+          "They were associated with both higher self-reported focus and, in some cases, greater output on complex tasks."
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Cause/Effect",
+        "level": "B2",
+        "explanation": "The passage reports that scheduled interruption-free blocks were linked to higher self-reported focus and, in some cases, greater output on complex tasks, not a decline in either measure."
+      },
+      {
+        "id": 77,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Vocabulary in Context",
+        "question": "In the passage, the phrase 'cognitive residue' most nearly refers to",
+        "options": [
+          "the lingering mental effort spent on a previous task that continues to partially occupy attention after switching to a new one",
+          "a physical substance that accumulates in brain tissue over time",
+          "a type of memory-enhancing medication",
+          "an outdated theory that has been fully disproven"
+        ],
+        "answer": "A",
+        "skill": "Reading",
+        "topic": "Vocabulary in Context",
+        "level": "B2",
+        "explanation": "'Cognitive residue' describes the lingering mental occupation with a previous task that persists after switching attention elsewhere, matching option B."
+      },
+      {
+        "id": 78,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Writer's Opinion",
+        "question": "What is the author's attitude toward claims that nothing can be done to mitigate this pattern?",
+        "options": [
+          "Fully supportive, treating the situation as entirely unchangeable",
+          "Skeptical, pointing to workplace interventions that appear to meaningfully improve focus",
+          "Indifferent, expressing no view on possible interventions",
+          "Supportive, but only for interventions involving medication"
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Writer's Opinion",
+        "level": "B2",
+        "explanation": "The author highlights evidence from workplace interventions as grounds for skepticism toward the claim that the pattern is entirely unchangeable."
+      },
+      {
+        "id": 79,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Reference",
+        "question": "What does 'this adaptation' refer to in the passage?",
+        "options": [
+          "A biological process occurring over many generations",
+          "A legal change to workplace safety regulations",
+          "A possible context-specific adjustment in attentional habits that could, in principle, reverse if the interrupting environment changed",
+          "A technical modification made to smartphone hardware"
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Reference",
+        "level": "B2",
+        "explanation": "'This adaptation' refers back to the possibility, raised earlier in the passage, that the observed pattern is a reversible, context-specific adjustment rather than a permanent change."
+      },
+      {
+        "id": 80,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Logical Conclusion",
+        "question": "Based on the passage, which workplace policy would most directly follow from its findings about interruption-free blocks?",
+        "options": [
+          "Increasing the frequency of notifications to keep employees consistently engaged",
+          "Eliminating all breaks throughout the workday to maximize continuous output",
+          "Removing all deadlines so that no task ever requires sustained focus",
+          "Scheduling regular, protected periods free from notifications and messaging for tasks requiring deep concentration"
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Logical Conclusion",
+        "level": "B2",
+        "explanation": "Since the passage links protected, interruption-free blocks to improved focus and output, scheduling such blocks follows logically as a policy response, unlike increasing notifications or removing deadlines."
+      }
+    ],
+    "passages": [
+      {
+        "id": "p1",
+        "title": "Designed to Be Checked: Inside the Attention Economy",
+        "text": "Few people who open a social media app intending to check one notification would predict that they will still be scrolling twenty minutes later. Yet this pattern, usage time substantially exceeding intention, has become so common that researchers studying digital behavior have given it a name: the intention-behavior gap, and have increasingly focused on the specific design choices that appear to widen it.\n\nA controlled laboratory study offers a revealing illustration. Participants were asked to state, in advance, how long they intended to use a given application. Researchers then compared this stated intention against actual usage under two conditions: an interface with a fixed, predictable reward structure, and an otherwise identical interface in which rewards, new content, likes, matches, appeared on a variable, unpredictable schedule. The gap between intended and actual usage time was significantly wider under the variable-reward condition, even though the total amount of rewarding content delivered over the session did not differ meaningfully between the two groups.\n\nThis finding connects to decades-old psychological research on reinforcement schedules, originally conducted using animals in laboratory settings, which found that variable, unpredictable rewards generate more persistent, harder-to-extinguish behavior than rewards delivered on a fixed, predictable schedule. Unpredictability itself appears to intensify the psychological pull of checking for a potential reward, independent of the reward's actual value, a mechanism some critics have described, controversially, as a form of engineered compulsion: a deliberately designed feature intended to produce a strong, repeated urge to use a product, whether or not its designers frame it in quite those terms publicly.\n\nInternal experimentation by technology companies themselves offers further, if less frequently publicized, evidence. One internal study, later disclosed through a former employee's testimony, examined the effect of removing a particular notification feature from an application. It led to a modest but measurable decline in average daily time spent on the platform, data the company reportedly used not to justify removing the feature permanently, but to quantify precisely how much engagement, and associated advertising revenue, the feature was generating.\n\nNone of this suggests that every design choice reflects a deliberate intention to manipulate users, nor that users bear no responsibility for managing their own use of these platforms. It does suggest, however, that treating the intention-behavior gap as a simple failure of individual willpower overlooks a substantial, well-documented role played by specific, measurable design choices, choices whose effects on behavior are rarely disclosed to the users experiencing them."
+      },
+      {
+        "id": "p2",
+        "title": "The Paradox of Choice in a World of Endless Options",
+        "text": "Conventional economic wisdom has long held that more choice is unambiguously better: a consumer offered ten options can always simply ignore nine and choose precisely as they would have with just one. Research across psychology and behavioral economics over the past several decades has substantially complicated this assumption, documenting circumstances under which additional choice measurably reduces, rather than increases, both decision quality and satisfaction with the outcome.\n\nA now-well-known field experiment conducted in an upscale supermarket illustrates the pattern starkly. Researchers set up a tasting booth offering either a wide selection of gourmet jams or a considerably narrower one, on alternating days. While the larger display attracted more initial interest from passing shoppers, customers offered a smaller selection of jams were, in fact, considerably more likely to make a purchase than those offered a much larger selection, a result that directly contradicted the assumption that more options would reliably translate into more sales.\n\nResearchers studying this phenomenon have identified several contributing mechanisms. One involves the sheer cognitive burden of comparison: evaluating ten alternatives against one another requires meaningfully more mental effort than evaluating three, and that added effort can leave a chooser feeling overwhelmed, unable to cope effectively given the volume of comparison required, well before any decision is actually reached. A second, subtler mechanism involves regret: a larger set of alternatives increases the likelihood that a chooser will imagine a forgone option that might have been better, fueling a nagging uncertainty about whether the right choice was actually made, even when the chosen option was perfectly satisfactory on its own terms.\n\nThis research has given rise to a now-common distinction between two decision-making styles. So-called maximizers approach every decision by attempting to identify the objectively best possible option, a search that, across multiple studies, correlates with higher reported anxiety and regret regardless of the eventual outcome, this cost appearing to outweigh any marginal benefit from the slightly superior choice they may ultimately select. Satisficers, by contrast, settle for an option that meets a reasonable threshold of acceptability and move on, consistently reporting higher life satisfaction in long-term follow-up studies, despite, by most objective measures, 'choosing worse' on any individual decision.\n\nNone of this constitutes an argument for eliminating choice altogether; a complete absence of options carries obvious costs of its own, well documented in entirely different research. It does, however, caution against the common assumption, still embedded in much retail design and public policy, that simply maximizing the number of available options reliably serves the interests of the people choosing among them."
+      },
+      {
+        "id": "p3",
+        "title": "The Adult Brain Is Not as Fixed as Once Believed",
+        "text": "For much of the twentieth century, the dominant scientific view held that the human brain's basic structure was essentially fixed by early adulthood, with meaningful reorganization occurring, if at all, only during a narrow developmental window in childhood. Neuroscience research over the past three decades has substantially revised this picture, documenting a capacity for structural change, termed neuroplasticity, that persists, in more limited form, well into adulthood.\n\nAmong the most frequently cited evidence are brain imaging studies of professional musicians. Researchers comparing the brains of musicians who began intensive training as adults against those who began in childhood found measurable structural differences in brain regions associated with the specific skills their instrument demands, differences correlated not primarily with the age training began, but with the cumulative hours of deliberate, sustained practice logged over time.\n\nA separate, widely cited body of research focused on licensed taxi drivers navigating a famously complex city without the aid of satellite navigation. Years of consistent practice, memorizing and navigating an extraordinarily dense street network, was associated with measurable growth in a brain region linked to spatial navigation, growth that was absent in a comparison group of drivers who relied on navigation software rather than memorized routes. Crucially, when some drivers later stopped actively using these memorized routes, follow-up imaging suggested at least partial reversal of the earlier structural growth, pointing to plasticity, the capacity to change or be reshaped in response to experience, as a genuinely ongoing process rather than a one-time, permanent alteration achieved once and then fixed forever.\n\nWhat these studies collectively suggest is that structural brain change depends substantially on the sustained demands placed on relevant neural circuits, rather than on age as an isolated factor, though researchers are careful to note that adult neuroplasticity, while real, generally proceeds more slowly and within somewhat narrower limits than during critical developmental periods in childhood; the comparison is one of degree, not of fundamental absence versus presence.\n\nThe practical implication, cautiously endorsed across much of the current research, is that sustained, consistent engagement with a challenging new skill can produce real, measurable changes in the adult brain over time, a markedly more optimistic picture than the once-dominant view of an adult brain fixed irreversibly in its structure, even if the process demands considerably more sustained effort than it typically does during childhood."
+      },
+      {
+        "id": "p4",
+        "title": "Is Constant Interruption Changing How We Focus?",
+        "text": "Complaints about a shrinking attention span have become common enough to feel like received wisdom, repeated so often in casual conversation that the underlying claim rarely receives much scrutiny. Evidence increasingly suggests that constant digital interruption may be eroding people's capacity for sustained, deep focus, though the long-term implications remain debated among researchers studying the question more carefully than casual conversation typically allows.\n\nOne frequently cited workplace study tracked employees across several departments of a mid-sized company, measuring the amount of time it took employees to fully regain focus on a primary task after being interrupted by a notification, whether from email, an instant message, or a calendar reminder. The recovery period proved substantial, averaging well over twenty minutes per interruption in many cases, a finding that helped popularize the concept of cognitive residue: the lingering mental effort spent on a previous task that continues to partially occupy attention after switching to a new one, quietly degrading performance on whatever task comes next.\n\nWhether this pattern reflects a lasting change in underlying attentional capacity, or simply a learned, context-specific adaptation to an unusually interruption-heavy environment, remains genuinely unresolved. It remains unclear whether observed changes reflect a lasting alteration in capacity or a context-dependent adaptation to an environment full of interruptions, and researchers studying the question have generally resisted drawing firm conclusions in either direction, aware that overstating the case in a dramatic headline is considerably easier than resolving it through careful, patient research.\n\nA workplace intervention conducted at the same company offers a cautiously encouraging data point regardless of how that deeper question is eventually resolved. Employees in a subset of teams were given scheduled, protected blocks of time, clearly marked on shared calendars, during which notifications were automatically silenced and colleagues were asked not to interrupt except for genuine emergencies. They were associated with both higher self-reported focus and, in some cases, greater output on complex tasks, compared with employees in teams that continued operating under the company's previous, notification-heavy default.\n\nThis adaptation, if that is indeed what the broader pattern of eroded focus actually represents, appears, at least under these particular workplace conditions, to be at least partially reversible through fairly modest structural changes, rather than fixed and permanent. Whether similar interventions would prove equally effective outside a workplace setting, in managing personal device use at home, for instance, remains a considerably more open, and so far less thoroughly studied, question."
+      }
+    ]
+  }
 ];
