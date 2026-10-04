@@ -501,7 +501,13 @@ a:focus-visible,button:focus-visible,input:focus-visible{
           </div>
         </li>
 
-        <li><a href="/ielts">Sınavlar</a></li>
+        <li class="has-dropdown" data-open="false">
+          <button aria-expanded="false" aria-haspopup="true">Sınavlar<span class="chevron"></span></button>
+          <div class="dropdown">
+            <a href="/ielts"><b>IELTS Hazırlık</b><span>4 beceri, mock sınav ve kelime çalışması</span></a>
+            <a href="/erasmus-ingilizce-sinavi/"><b>Erasmus İngilizce Sınavı</b><span>Üniversiteni bul, B1 checkpoint, hazırlık planı</span></a>
+          </div>
+        </li>
         <li><a href="#resources">Kaynak Önerileri</a></li>
 
         <li class="has-dropdown" data-open="false">
@@ -580,7 +586,13 @@ a:focus-visible,button:focus-visible,input:focus-visible{
           <a href="/upper-secondary/">Lise Materyalleri</a>
         </div>
       </li>
-      <li><a href="/ielts">Sınavlar</a></li>
+      <li class="mobile-has-dropdown" data-open="false">
+        <button aria-expanded="false">Sınavlar<span class="chevron"></span></button>
+        <div class="mobile-sub">
+          <a href="/ielts">IELTS Hazırlık</a>
+          <a href="/erasmus-ingilizce-sinavi/">Erasmus İngilizce Sınavı</a>
+        </div>
+      </li>
       <li><a href="#resources">Kaynak Önerileri</a></li>
       <li class="mobile-has-dropdown" data-open="false">
         <button aria-expanded="false">Araçlar<span class="chevron"></span></button>
@@ -1058,6 +1070,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{
         <h4>Sınavlar &amp; Seviye</h4>
         <ul>
           <li><a href="/ielts">IELTS Hazırlık</a></li>
+          <li><a href="/erasmus-ingilizce-sinavi/">Erasmus İngilizce Sınavı</a></li>
           <li><a href="/placement-test">Seviye Testi</a></li>
           <li><a href="/roadmap">Yol Haritası</a></li>
           <li><a href="/canli-ders">Canlı Ders</a></li>
@@ -1145,6 +1158,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{
     {label:'Yol Haritası', url:'/roadmap'},
     {label:'Canlı Ders', url:'/canli-ders'},
     {label:'IELTS Hazırlık', url:'/ielts'},
+    {label:'Erasmus İngilizce Sınavı', url:'/erasmus-ingilizce-sinavi/'},
     {label:'Öğretmenimiz Ol', url:'/ogretmenbul'},
     {label:'Sana Uygun Öğretmeni Bul', url:'/ogretmenbul'},
     {label:'Öğretmen Bölümü (Teacher Planner)', url:'/teacher-planner'},
