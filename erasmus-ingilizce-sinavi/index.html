@@ -92,10 +92,16 @@ img,svg{max-width:100%}
 
 /* sticky quick nav */
 .es-nav{position:sticky;top:0;z-index:100;background:rgba(250,248,244,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);box-shadow:0 1px 0 rgba(0,0,0,.02)}
-.es-nav-in{max-width:1080px;margin:0 auto;display:flex;gap:4px;overflow-x:auto;padding:8px 14px;scrollbar-width:thin}
+.es-nav-row{max-width:1080px;margin:0 auto;display:flex;align-items:center;gap:8px;padding:8px 14px}
+.es-nav-in{display:flex;gap:4px;overflow-x:auto;scrollbar-width:thin;min-width:0;flex:1 1 auto}
 .es-nav-in::-webkit-scrollbar{height:4px}
 .es-nav a{flex:none;white-space:nowrap;padding:9px 14px;border-radius:999px;color:var(--navy);text-decoration:none;font-weight:700;font-size:.86rem}
 .es-nav a:hover,.es-nav a.active{background:var(--navy);color:#fff}
+.es-nav a.es-nav-cta{flex:none;background:var(--orange);color:#10243e;font-weight:900;font-size:.92rem;padding:10px 20px;box-shadow:0 2px 10px rgba(232,121,44,.4);animation:esNavPulse 2.4s ease-in-out infinite}
+.es-nav a.es-nav-cta:hover{background:#f08a3f;color:#10243e;transform:translateY(-1px)}
+@keyframes esNavPulse{0%,100%{box-shadow:0 2px 10px rgba(232,121,44,.4)}50%{box-shadow:0 2px 18px rgba(232,121,44,.75)}}
+@media(prefers-reduced-motion:reduce){.es-nav a.es-nav-cta{animation:none}}
+@media(max-width:560px){.es-nav a.es-nav-cta{padding:10px 14px;font-size:.84rem}}
 
 main{display:block}
 section{padding:54px 0}
@@ -296,15 +302,18 @@ footer.es-foot{background:var(--navy);color:#cbd8e6;padding:28px 0;font-size:.85
 </header>
 
 <nav class="es-nav" aria-label="Sayfa içi menü">
-  <div class="es-nav-in" id="es-nav-in">
-    <a href="#hero">Erasmus İngilizce Sınavı</a>
-    <a href="#universiteler">Üniversiteler</a>
-    <a href="#bolumler">Sınav Bölümleri</a>
-    <a href="#b1checkpoint">B1 Checkpoint</a>
-    <a href="#hazirlik-plani">Hazırlık Planı</a>
-    <a href="#videolar">Videolar</a>
-    <a href="#taktikler">Sınav Taktikleri</a>
-    <a href="#sss">SSS</a>
+  <div class="es-nav-row">
+    <div class="es-nav-in" id="es-nav-in">
+      <a href="#hero">Erasmus İngilizce Sınavı</a>
+      <a href="#universiteler">Üniversiteler</a>
+      <a href="#bolumler">Sınav Bölümleri</a>
+      <a href="#b1checkpoint">B1 Checkpoint</a>
+      <a href="#hazirlik-plani">Hazırlık Planı</a>
+      <a href="#videolar">Videolar</a>
+      <a href="#taktikler">Sınav Taktikleri</a>
+      <a href="#sss">SSS</a>
+    </div>
+    <a href="/erasmus-ingilizce-sinavi/denemeler/" class="es-nav-cta">🔥 Denemeler</a>
   </div>
 </nav>
 
@@ -659,7 +668,8 @@ function lsSet(key, val){ try{ localStorage.setItem(key, JSON.stringify(val)); }
 /* ---- sticky nav active state ---- */
 (function initNav(){
   var links = $all("#es-nav-in a");
-  var map = links.map(function(a){ return {a:a, el: document.querySelector(a.getAttribute("href"))}; }).filter(function(m){ return m.el; });
+  var map = links.filter(function(a){ return (a.getAttribute("href")||"").charAt(0) === "#"; })
+    .map(function(a){ return {a:a, el: document.querySelector(a.getAttribute("href"))}; }).filter(function(m){ return m.el; });
   function onScroll(){
     var y = window.scrollY + 120;
     var current = map[0];
