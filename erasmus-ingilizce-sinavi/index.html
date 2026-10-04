@@ -227,8 +227,14 @@ section{padding:54px 0}
 
 /* videos */
 .es-video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
-.es-video-slot{aspect-ratio:16/9;border-radius:var(--radius);overflow:hidden;background:#000}
+.es-video-card{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);box-shadow:var(--shadow);padding:14px;transition:transform .18s ease,box-shadow .18s ease}
+.es-video-card:hover{transform:translateY(-4px);box-shadow:0 14px 28px rgba(0,0,0,.12)}
+.es-video-badge{position:absolute;top:22px;left:22px;z-index:2;background:rgba(0,0,0,.72);color:#fff;font-size:.72rem;font-weight:700;padding:3px 9px;border-radius:999px;letter-spacing:.02em}
+.es-video-slot{aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#000}
 .es-video-slot iframe{width:100%;height:100%;border:0}
+.es-video-title{margin:12px 0 4px;font-size:1rem;font-weight:800}
+.es-video-desc{margin:0;font-size:.88rem;color:var(--text-3)}
+.es-video-cta{margin-top:18px;text-align:center}
 .es-video-empty{background:var(--surface);border:1px dashed var(--line-2);border-radius:var(--radius-lg);box-shadow:var(--shadow);padding:40px 24px;text-align:center}
 .es-video-empty .ico{font-size:2.6rem;margin-bottom:10px;display:block}
 
@@ -544,10 +550,14 @@ var SECTIONS = [
   {key:"speaking", label:"Speaking", topics:["Personal Questions","Giving Opinions","Comparing","Describing","Giving Reasons","Agreeing / Disagreeing"]}
 ];
 
-/* Videolar — gerçek AbOnlinEnglish Erasmus videosu bulunana kadar BOŞ.
+/* Videolar — AbOnlinEnglish YouTube kanalının gerçek Erasmus videoları.
    Yeni video eklemek için: {id:"YOUTUBE_VIDEO_ID", title:"Video başlığı"} ekle.
    Sahte/placeholder video ID ASLA eklenmemelidir. */
-var VIDEOS = [];
+var VIDEOS = [
+  {id:"cuSDi5Ln9VI", title:"Erasmus Sınavına Hazırlık — Reading Soruları Nasıl Çözülür?", desc:"Erasmus İngilizce sınavındaki reading sorularını çözme stratejileri."},
+  {id:"REF2V3A_Wwc", title:"Erasmus İngilizce Sınavı", desc:"Erasmus İngilizce sınavı hakkında genel bilgi ve hazırlık önerileri."},
+  {id:"IPBofYLp8iw", title:"Erasmus İngilizce Sınav Örneği — Sınav Çözüm Videosu", desc:"Örnek bir Erasmus İngilizce sınavının adım adım çözümü."}
+];
 
 /* B1 Checkpoint — 20 madde */
 var B1_ITEMS = ["Present Simple","Present Continuous","Past Simple","Past Continuous","Present Perfect","Future Forms","Modals","Conditionals","Passive Voice","Relative Clauses","Reported Speech","Gerund / Infinitive","Comparatives / Superlatives","Articles","Prepositions","Countable / Uncountable","Linking Words","Phrasal Verbs","B1 Vocabulary","Reading Strategies"];
@@ -887,12 +897,21 @@ function lsSet(key, val){ try{ localStorage.setItem(key, JSON.stringify(val)); }
   var grid = document.createElement("div");
   grid.className = "es-video-grid";
   VIDEOS.slice(0,3).forEach(function(v){
-    var slot = document.createElement("div");
-    slot.className = "es-video-slot";
-    slot.innerHTML = '<iframe loading="lazy" src="https://www.youtube.com/embed/'+encodeURIComponent(v.id)+'" title="'+esc(v.title||"AbOnlinEnglish video")+'" allowfullscreen></iframe>';
-    grid.appendChild(slot);
+    var card = document.createElement("div");
+    card.className = "es-video-card";
+    card.innerHTML = (
+      '<span class="es-video-badge">▶ YouTube</span>'+
+      '<div class="es-video-slot"><iframe loading="lazy" src="https://www.youtube.com/embed/'+encodeURIComponent(v.id)+'" title="'+esc(v.title||"AbOnlinEnglish video")+'" allowfullscreen></iframe></div>'+
+      '<h3 class="es-video-title">'+esc(v.title||"")+'</h3>'+
+      '<p class="es-video-desc">'+esc(v.desc||"")+'</p>'
+    );
+    grid.appendChild(card);
   });
   area.appendChild(grid);
+  var cta = document.createElement("div");
+  cta.className = "es-video-cta";
+  cta.innerHTML = '<a class="es-btn es-btn-dark" href="https://www.youtube.com/@AbOnlinEnglish" target="_blank" rel="noopener">YouTube kanalını ziyaret et ↗</a>';
+  area.appendChild(cta);
 })();
 
 /* ---- Sınav Taktikleri accordion ---- */
