@@ -445,6 +445,74 @@ nav{position:fixed;top:0;left:0;right:0;z-index:2000;background:rgba(15,30,60,0.
   .res-lv{font-size:3.5rem}
   .intro-title{font-size:2.4rem}
 }
+/* ===== Adaptive Level Test (ad-) ===== */
+.ad-feature{position:relative;text-align:left;background:linear-gradient(135deg,#0c1a30,#1c2f57);color:#fff;border-radius:18px;padding:20px 20px 18px;margin:0 0 18px;box-shadow:0 8px 28px rgba(12,26,48,.28);overflow:hidden;border:1px solid rgba(232,160,32,.5)}
+.ad-feature:before{content:'';position:absolute;right:-40px;top:-40px;width:140px;height:140px;border-radius:50%;background:radial-gradient(circle,rgba(232,160,32,.35),transparent 70%)}
+.ad-badge{display:inline-block;background:#e8a020;color:#0c1a30;font-size:10.5px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;padding:3px 10px;border-radius:20px;margin-bottom:8px}
+.ad-feature h3{font-family:'Cormorant Garamond',serif;font-size:1.65rem;line-height:1.1;margin-bottom:6px}
+.ad-feature p{font-size:13.5px;line-height:1.5;color:rgba(255,255,255,.82);margin-bottom:12px}
+.ad-btn{display:inline-flex;align-items:center;gap:8px;background:#e8a020;color:#0c1a30;border:none;border-radius:12px;padding:12px 24px;font:700 15px 'Outfit',sans-serif;cursor:pointer;transition:var(--tr)}
+.ad-btn:hover{background:#f0c060;transform:translateY(-1px)}
+.ad-btn.ghost{background:transparent;color:var(--ink2);border:1.5px solid var(--mist3)}
+.ad-btn.ghost:hover{background:var(--mist)}
+.ad-btn.dark{background:var(--ink2);color:#fff}
+.ad-wrap{width:100%;max-width:640px;margin:0 auto;padding:1.25rem 1.1rem 3rem;text-align:left}
+.ad-view{display:none}.ad-view.on{display:block}
+.ad-h1{font-family:'Cormorant Garamond',serif;font-size:clamp(1.9rem,6vw,2.6rem);line-height:1.1;margin-bottom:8px}
+.ad-warn{background:#fff8c5;border:1.5px solid #e8c547;border-radius:14px;padding:14px 16px;margin:14px 0;font-size:14px;line-height:1.55;color:#5a4300}
+.ad-warn b{color:#7a2e00}
+.ad-rules{list-style:none;margin:10px 0 14px}
+.ad-rules li{display:flex;gap:10px;padding:8px 0;border-bottom:1px solid var(--mist2);font-size:14px;line-height:1.45}
+.ad-rules li span:first-child{flex:0 0 26px;font-size:18px}
+.ad-steps{display:flex;gap:6px;margin:12px 0 16px}
+.ad-steps div{flex:1;text-align:center;padding:8px 2px;border-radius:10px;background:#fff;border:1.5px solid var(--mist3);font-weight:800;font-size:13px}
+.ad-steps div small{display:block;font-weight:500;font-size:10px;color:var(--ink4)}
+.ad-steps div.cur{border-color:var(--azure);background:var(--azure-pale);color:var(--azure)}
+.ad-steps div.done{border-color:var(--jade);background:var(--jade-pale);color:var(--jade)}
+.ad-steps div.fail{border-color:#d1242f;background:#ffebe9;color:#d1242f}
+.ad-sel{margin:10px 0 16px;font-size:13px;color:var(--ink4)}
+.ad-sel select{font:600 14px 'Outfit',sans-serif;padding:8px 10px;border-radius:8px;border:1.5px solid var(--mist3);margin-left:6px}
+.ad-top{display:flex;justify-content:space-between;align-items:center;font-size:12.5px;font-weight:700;color:var(--ink4);margin-bottom:8px}
+.ad-lvl{background:var(--ink2);color:#fff;border-radius:20px;padding:3px 12px;font-size:12px}
+.ad-hearts{letter-spacing:3px;font-size:16px}
+.ad-bar{height:7px;background:var(--mist3);border-radius:4px;overflow:hidden;margin-bottom:16px}
+.ad-bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--azure),var(--jade));transition:width .3s}
+.ad-card{background:#fff;border-radius:16px;padding:18px;box-shadow:var(--sh);border:1px solid var(--mist2)}
+.ad-topic{display:inline-block;font-size:10.5px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--lavender);background:var(--lavender-pale);padding:2px 9px;border-radius:6px;margin-bottom:10px}
+.ad-ctx{background:var(--mist);border-left:4px solid var(--azure);padding:10px 12px;border-radius:0 8px 8px 0;font-size:14px;line-height:1.55;margin-bottom:12px;font-style:italic}
+.ad-q{font-size:17px;font-weight:600;line-height:1.45;margin-bottom:14px}
+.ad-opts{display:flex;flex-direction:column;gap:8px}
+.ad-opt{display:flex;gap:10px;align-items:flex-start;text-align:left;width:100%;padding:12px 14px;border:1.5px solid var(--mist3);background:#fff;border-radius:12px;font:500 15px/1.4 'Outfit',sans-serif;cursor:pointer;transition:var(--tr);color:var(--ink)}
+.ad-opt b{flex:0 0 24px;height:24px;border-radius:6px;background:var(--mist);display:flex;align-items:center;justify-content:center;font-size:12px}
+.ad-opt:hover:not(:disabled){border-color:var(--azure);background:#f8fbff}
+.ad-opt.ok{border-color:var(--jade);background:var(--jade-pale)}
+.ad-opt.no{border-color:#d1242f;background:#ffebe9}
+.ad-opt:disabled{cursor:default}
+.ad-idk{margin-top:10px;background:none;border:none;color:var(--ink4);font:600 13px 'Outfit',sans-serif;text-decoration:underline;cursor:pointer}
+.ad-fb{margin-top:12px;padding:11px 13px;border-radius:10px;font-size:13.5px;line-height:1.5;display:none}
+.ad-fb.ok{display:block;background:var(--jade-pale);color:#0b4d3b}
+.ad-fb.no{display:block;background:#ffebe9;color:#8a1520}
+.ad-next{margin-top:12px;display:none}
+.ad-pass{text-align:center;padding:26px 10px}
+.ad-pass .big{font-size:54px}
+.ad-res-hero{background:linear-gradient(135deg,#0c1a30,#1c2f57);color:#fff;border-radius:18px;padding:22px 18px;text-align:center;margin-bottom:14px}
+.ad-res-hero small{display:block;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#e8a020;font-weight:800}
+.ad-res-hero .lv{font-family:'Cormorant Garamond',serif;font-size:4.2rem;font-weight:700;line-height:1;margin:6px 0}
+.ad-res-hero p{font-size:14px;color:rgba(255,255,255,.85);line-height:1.5}
+.ad-sec{background:#fff;border-radius:14px;padding:15px 16px;margin-bottom:12px;border:1px solid var(--mist2);box-shadow:var(--sh)}
+.ad-sec h4{font-size:12px;letter-spacing:1.4px;text-transform:uppercase;color:var(--ink4);margin-bottom:10px}
+.ad-tl{display:flex;flex-direction:column;gap:6px}
+.ad-tl div{display:flex;justify-content:space-between;gap:8px;padding:8px 12px;border-radius:9px;font-size:13.5px;font-weight:600}
+.ad-tl .p{background:var(--jade-pale);color:#0b4d3b}.ad-tl .f{background:#ffebe9;color:#8a1520}.ad-tl .n{background:var(--mist);color:var(--ink4)}
+.ad-links{display:flex;flex-direction:column;gap:8px}
+.ad-links a{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:12px 14px;border-radius:11px;background:var(--azure-pale);color:#07458f;font-weight:700;font-size:14px;text-decoration:none}
+.ad-links a.pri{background:#e8a020;color:#0c1a30}
+.ad-links a:hover{filter:brightness(.96)}
+.ad-chip{display:inline-block;background:var(--amber-pale);color:var(--amber);font-size:12.5px;font-weight:700;padding:4px 10px;border-radius:8px;margin:0 6px 6px 0}
+.ad-rev{border-top:1px solid var(--mist2);padding:10px 0;font-size:13.5px;line-height:1.5}
+.ad-rev:first-child{border-top:none}
+.ad-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+@media(max-width:480px){.ad-q{font-size:16px}.ad-feature h3{font-size:1.45rem}}
 </style>
 </head>
 <body>
@@ -517,6 +585,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:2000;background:rgba(15,30,60,0.
     <div class="lvl-divider"><span>veya</span></div>
 
     <div class="lvl-panel open" id="lvlPanel">
+      <div class="ad-feature" id="adFeature">
+        <span class="ad-badge">&#11088; Yeni &middot; Adaptif Seviye Testi</span>
+        <h3>Cambridge tarzı Seviye Tespit Testi</h3>
+        <p>A1&rarr;C1 aşama aşama ilerler: her seviyede 12 soru, 4 yanlışta test biter. Sonunda gerçek seviyeni, ne yapman gerektiğini ve sana uygun konu linklerini görürsün.</p>
+        <button class="ad-btn" onclick="adOpen()">Seviyemi Bul &rarr;</button>
+      </div>
       <div class="lvl-age-box">
         <div class="lvl-age-label">Öğrencinin yaşını girin:</div>
         <div class="lvl-age-row">
@@ -634,6 +708,40 @@ nav{position:fixed;top:0;left:0;right:0;z-index:2000;background:rgba(15,30,60,0.
       <strong>AbOnlinEnglish</strong> Dil Eğitimi &copy; 2025
     </div>
   </div>
+</div>
+<!-- ADAPTIVE LEVEL TEST -->
+<div class="panel scrollable" id="adaptPanel" style="overflow-y:auto">
+ <div class="ad-wrap">
+  <div class="ad-view on" id="adIntro">
+    <div class="eyebrow">&#127891; CEFR &middot; A1 &rarr; C1</div>
+    <h2 class="ad-h1">Adaptif Seviye Testi</h2>
+    <p style="font-size:14.5px;line-height:1.55;color:var(--ink3)">Cambridge, Oxford ve Pearson sınavlarındaki mantıkla hazırlandı: gramer, kelime, mini okuma ve günlük kullanım soruları.</p>
+    <div class="ad-warn">&#9888;&#65039; <b>Önemli kural:</b> Her seviyede <b>12 soru</b> var. Bir seviyede <b>4 soru yanlış</b> yaparsan <b>test o anda biter</b>, devam etmez. "Bilmiyorum" da yanlış sayılır. Rastgele işaretleme; bilmediğin soruda "Bilmiyorum" de.</div>
+    <ul class="ad-rules">
+      <li><span>1&#65039;&#8419;</span><span><b>Seviye geçişi:</b> 12 sorudan en fazla 3 yanlış yaparsan seviyeyi geçer, bir üst seviyeye çıkarsın.</span></li>
+      <li><span>2&#65039;&#8419;</span><span><b>Sıra:</b> A1 &rarr; A2 &rarr; B1 &rarr; B2 &rarr; C1. Sorular her çözüşte karışık gelir.</span></li>
+      <li><span>3&#65039;&#8419;</span><span><b>Sonuç:</b> Son geçtiğin seviye senin seviyendir. Eksik konuların ve site içi Kendin Öğren / Gramer linkleri verilir.</span></li>
+      <li><span>&#9201;&#65039;</span><span>Süre sınırı yok. Ortalama 10&ndash;20 dk. Ücretsiz, kayıt yok.</span></li>
+    </ul>
+    <div class="ad-sel">Başlangıç seviyesi: <select id="adStart"><option value="0">A1 (önerilen)</option><option value="1">A2</option><option value="2">B1</option><option value="3">B2</option><option value="4">C1</option></select></div>
+    <div class="ad-actions"><button class="ad-btn dark" onclick="adStart()">Testi Başlat &rarr;</button><button class="ad-btn ghost" onclick="showPanel('introPanel')">&larr; Geri</button></div>
+  </div>
+  <div class="ad-view" id="adQ">
+    <div class="ad-top"><span class="ad-lvl" id="adLvlTag">A1</span><span id="adCount">1 / 12</span><span class="ad-hearts" id="adHearts"></span></div>
+    <div class="ad-bar"><i id="adBar"></i></div>
+    <div class="ad-card">
+      <span class="ad-topic" id="adTopic"></span>
+      <div class="ad-ctx" id="adCtx" style="display:none"></div>
+      <div class="ad-q" id="adQText"></div>
+      <div class="ad-opts" id="adOpts"></div>
+      <button class="ad-idk" id="adIdk" onclick="adAnswer(-1)">Bilmiyorum</button>
+      <div class="ad-fb" id="adFb"></div>
+      <button class="ad-btn dark ad-next" id="adNext" onclick="adNext()">Devam &rarr;</button>
+    </div>
+  </div>
+  <div class="ad-view" id="adPass"></div>
+  <div class="ad-view" id="adRes"></div>
+ </div>
 </div>
 <div class="toast" id="toast"></div>
 <script>
@@ -1534,6 +1642,209 @@ window.addEventListener('DOMContentLoaded',function(){
     toast('🔄 Test resumed','tinfo');
   }
 });
+</script>
+<script>
+/* ===== Adaptive Level Test engine ===== */
+(function(){
+var LV=['A1','A2','B1','B2','C1'];
+var NAMES={A1:'Beginner',A2:'Elementary',B1:'Intermediate',B2:'Upper-Intermediate',C1:'Advanced'};
+/* [topic, context, question, CORRECT, wrong1, wrong2, wrong3, explanation] */
+var BANK={
+A1:[
+['to be','','She ___ a teacher.','is','are','am','be','"She" ile "is" kullanılır: She is a teacher.'],
+['to be','','I ___ from Spain. I\'m Italian.','am not','not am','don\'t','isn\'t','"I" ile olumsuz: I am not.'],
+['Articles','','I have ___ umbrella.','an','a','some','any','"umbrella" ünlü sesle başlar, bu yüzden "an".'],
+['Present simple','','He ___ coffee every morning.','drinks','drink','drinking','is drink','He/she/it ile fiile -s gelir: drinks.'],
+['Plurals','','There are three ___ in the room.','children','childs','childrens','child','"child" düzensiz çoğul: children.'],
+['Possessives','','This is Ali. ___ sister is a doctor.','His','Her','He','He\'s','Erkek için sahiplik sıfatı "his".'],
+['Prepositions','','The meeting is ___ Monday.','on','in','at','by','Günlerle "on" kullanılır.'],
+['Question words','','___ do you live? — In Izmir.','Where','When','Who','Why','Cevap yer bildiriyor: Where.'],
+['Modal: can','','I can ___ French.','speak','to speak','speaking','speaks','can + fiilin yalın hali: can speak.'],
+['Vocabulary','','A place where you buy bread is a ___.','bakery','library','pharmacy','hospital','Ekmek satılan yer: bakery (fırın).'],
+['Mini reading',"Hi, I'm Mia. I'm 12. I live in Leeds with my mum, dad and dog, Max.",'Who is Max?','Mia\'s dog','Mia\'s brother','Mia\'s dad','Mia\'s friend','Metinde "dog, Max" yazıyor: Max köpek.'],
+['Everyday English','','A: How are you?  B: ___','Fine, thanks.','I\'m twelve.','Yes, I am.','At home.','"How are you?" sorusuna "Fine, thanks." denir.']
+],
+A2:[
+['Past simple','','Yesterday we ___ to the cinema.','went','go','goed','have gone','"yesterday" geçmiş zaman ister; go\'nun geçmişi went.'],
+['Comparatives','','My bag is ___ than yours.','heavier','more heavy','heavyer','the heaviest','Kısa sıfat + -er; y\'li sıfat: heavier.'],
+['Present continuous','','Be quiet! The baby ___.','is sleeping','sleeps','sleep','slept','Şu anda olan eylem: is sleeping.'],
+['Quantifiers','','How ___ money do you have?','much','many','more','lot','Sayılamayan isim (money) ile "how much".'],
+['Future: going to','','Look at those clouds! It ___ rain.','is going to','will to','goes to','is go to','Kanıta dayalı tahmin: is going to + fiil.'],
+['Past simple','','I ___ my keys, so I couldn\'t open the door.','lost','lose','was lost','loosed','Geçmişte olan olay: lost (lose\'un geçmişi).'],
+['Prepositions','','She\'s interested ___ art.','in','on','at','for','"interested in" kalıbı.'],
+['Adverbs of frequency','','I ___ get up late on Sundays.','usually','am usually','usually am','usual','Sıklık zarfı ana fiilden önce gelir: I usually get up.'],
+['Obligation','','You ___ wear a uniform at our school. It\'s a rule.','have to','may','would','might','Kural/zorunluluk: have to.'],
+['Vocabulary','','The opposite of "cheap" is ___.','expensive','heavy','difficult','dangerous','cheap ↔ expensive.'],
+['Mini reading','Hotel Sun — Breakfast 7:00–10:00. Pool open all day. No pets.','Which is true?','You can\'t bring a dog.','You can\'t swim.','Breakfast is all day.','Breakfast is at 6.','"No pets" = evcil hayvan yasak.'],
+['Everyday English','','Would you like some tea? — ___','Yes, please.','Yes, I want.','No, I wouldn\'t.','It\'s OK, I do.','İkrama kibar cevap: Yes, please.']
+],
+B1:[
+['Present perfect','','I ___ in this city since 2015.','have lived','live','lived','am living','"since" ile present perfect: have lived.'],
+['First conditional','','If it rains tomorrow, we ___ at home.','will stay','would stay','stayed','had stayed','If + present, will + fiil (gerçekçi gelecek).'],
+['Relative clauses','','The woman ___ lives next door is a nurse.','who','which','whose','what','Kişi için özne konumunda "who".'],
+['Passive voice','','This bridge ___ in 1890.','was built','built','is built','has built','Geçmişte yapılmış, edilgen: was built.'],
+['Gerund / infinitive','','I\'m looking forward to ___ you.','seeing','see','saw','to see','"look forward to" + -ing: seeing.'],
+['Phrasal verbs','','Can you ___ the radio? It\'s too loud.','turn down','turn up','turn into','turn on','turn down = sesi kısmak.'],
+['Modals of deduction','','The lights are off. They ___ be at home.','can\'t','mustn\'t','shouldn\'t','needn\'t','Olumsuz çıkarım (kesin değil): can\'t be.'],
+['Too / enough','','He isn\'t old ___ to drive.','enough','too','very','so','Sıfat + enough + to: old enough.'],
+['Collocations','','I need to ___ a decision by Friday.','make','do','have','give','"make a decision" kalıbı.'],
+['Mini reading',"Dear Sam, sorry I can't come to your party on Saturday. I have to work late. How about lunch on Sunday instead? — Jo",'Why can\'t Jo come to the party?','Jo has to work.','Jo is ill.','Jo is away.','Jo has another party.','"I have to work late" diyor.'],
+['Prepositions','','She is good ___ playing chess.','at','in','on','with','"good at" kalıbı.'],
+['Everyday English','','"I\'m sorry, I didn\'t catch that." — ___','Could you repeat that, please?','Could you to repeat?','Can you repeating?','Do you said again?','Doğru kalıp: Could you repeat that, please?']
+],
+B2:[
+['Second conditional','','If I ___ more time, I would learn Japanese.','had','have','will have','would have','If + past simple, would + fiil.'],
+['Third conditional','','If she had studied harder, she ___ the exam.','would have passed','would pass','will pass','had passed','If + past perfect, would have + V3.'],
+['Wishes','','I wish I ___ speak Spanish. It would help on holiday.','could','can','will','would','Şimdiki zaman pişmanlığı: wish + could.'],
+['Passive reporting','','The company is said ___ millions last year.','to have lost','to lose','losing','that lost','Geçmişe işaret: to have + V3.'],
+['Inversion','','Not only ___ late, but he also forgot the files.','did he arrive','he arrived','he did arrive','arrived he','"Not only" başta olunca devrik yapı: did he arrive.'],
+['Collocations','','The new law will ___ into effect next month.','come','go','take','put','"come into effect" = yürürlüğe girmek.'],
+['Linkers','','___ the heavy rain, the match went ahead.','Despite','Although','However','Because','Despite + isim öbeği; Although + cümle olurdu.'],
+['Mini reading','Although remote working saves commuting time, many employees report feeling isolated, which can reduce productivity in the long run.','What is the writer\'s main point?','Remote work has benefits but also a drawback.','Remote work always increases productivity.','Commuting is unavoidable.','Employees prefer offices.','"Although..." avantaj + dezavantajı birlikte veriyor.'],
+['Phrasal verbs','','We need to ___ with a better solution before Monday.','come up','get up','go up','take up','"come up with" = (fikir) bulmak.'],
+['Conditional inversion','','Which sentence is correct?','Had I known about the delay, I would have left earlier.','Had I knew about the delay, I would have left earlier.','If I would have known about the delay, I would leave earlier.','Have I known about the delay, I would left earlier.','Had + özne + V3 = If I had known\'un devrik hali.'],
+['Word formation','','His ___ to solve the problem impressed everyone.','ability','able','enable','ably','İsim gerekli: ability.'],
+['Register','','Which is the most formal way to refuse an invitation?','I regret that I will be unable to attend.','No way, I\'m busy.','I can\'t come, sorry.','Nope, not this time.','Resmi dil: "I regret that I will be unable to..."']
+],
+C1:[
+['Mixed conditionals','','If I hadn\'t missed the train, I ___ in the meeting now.','would be','would have been','will be','had been','Geçmiş koşul + şimdiki sonuç: would be.'],
+['Inversion','','Hardly ___ the house when it started to rain.','had we left','we had left','did we leave','we left','"Hardly" + past perfect devrik: had we left ... when.'],
+['Subjunctive','','The doctor recommended that she ___ more rest.','get','gets','got','getting','recommend that + özne + yalın fiil (subjunctive).'],
+['Collocations','','The findings ___ doubt on the earlier theory.','cast','make','give','lay','"cast doubt on" kalıbı.'],
+['Cleft sentences','','___ I need is a long holiday.','What','That','Which','It','Vurgu yapısı: What I need is...'],
+['Mini reading','The author contends that nostalgia, far from being a mere longing for the past, serves to bolster one\'s sense of identity during periods of upheaval.','According to the author, nostalgia ___.','helps people feel stable in times of change','is only a form of sadness','damages a person\'s identity','is becoming rare','"bolster one\'s sense of identity during upheaval" = değişim döneminde kimliği güçlendirir.'],
+['Word forms','','His argument, though ___, failed to convince the jury.','plausible','plausibility','plausibly','plausibleness','"though" sonrası sıfat: plausible.'],
+['Phrasal verbs','','After the scandal, the minister was forced to ___ down.','step','stand','stay','sit','"step down" = istifa etmek.'],
+['Participle clauses','','___ the report, she realised there were errors.','Having read','Having been read','Having reading','Have read','Özne raporu okuyan kişi: Having read.'],
+['Verb patterns','','She suggested ___ the meeting.','postponing','to postpone','to postponing','postpone','suggest + -ing.'],
+['Hedging','','Which statement is the most cautious (hedged)?','The data would seem to suggest a link.','The data proves a link.','There is definitely a link.','Everyone knows there\'s a link.','Akademik temkinli dil: would seem to suggest.'],
+['Collocations','','Her ___ for detail makes her an excellent editor.','eye','sight','look','view','"an eye for detail" kalıbı.']
+]};
+var ADV={
+A1:{done:'A1 temelini geçtin ama A2 sınırında takılıyorsun.',tr:'Başlangıç seviyesindesin. Şu an en doğru adım: temel cümle yapıları, to be, present simple ve günlük kelimelerle sağlam bir başlangıç yapmak.'},
+A2:{tr:'Temel İngilizcen var; günlük basit konuşmaları anlayabiliyorsun. Hedef: geçmiş zaman, gelecek, karşılaştırma ve daha uzun cümleler.'},
+B1:{tr:'Orta seviyedesin: günlük hayatı, seyahati ve tanıdık konuları anlatabiliyorsun. Hedef: koşul cümleleri, edilgen, ilgi zamirleri ve akıcılık.'},
+B2:{tr:'Üst-orta seviyedesin: karmaşık metinleri anlıyor ve akıcı iletişim kurabiliyorsun. Hedef: ileri gramer, resmi dil ve kelime çeşitliliği.'},
+C1:{tr:'İleri seviyedesin. Esnek ve doğru bir dil kullanıyorsun. Hedef: incelikler, akademik/resmi register ve C2 kelime hazinesi.'}
+};
+var ST=null;
+function $(id){return document.getElementById(id);}
+function shuf(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function view(id){['adIntro','adQ','adPass','adRes'].forEach(function(v){$(v).classList.toggle('on',v===id);});$('adaptPanel').scrollTop=0;}
+window.adOpen=function(){showPanel('adaptPanel');view('adIntro');};
+window.adStart=function(){
+  var s=parseInt($('adStart').value,10)||0;
+  ST={start:s,li:s,qi:0,wrong:0,right:0,qs:[],blocks:[],wrongList:[],locked:false,done:false};
+  loadBlock();view('adQ');showQ();
+};
+function loadBlock(){
+  var key=LV[ST.li];
+  ST.qs=shuf(BANK[key]).map(function(r){
+    var opts=shuf([{t:r[3],c:1},{t:r[4]},{t:r[5]},{t:r[6]}]);
+    return {topic:r[0],ctx:r[1],q:r[2],opts:opts,e:r[7],right:r[3]};
+  });
+  ST.qi=0;ST.wrong=0;ST.right=0;
+}
+function hearts(){var h='';for(var i=0;i<4;i++)h+=i<4-ST.wrong?'&#10084;&#65039;':'&#128420;';$('adHearts').innerHTML=h;}
+function showQ(){
+  var q=ST.qs[ST.qi];ST.locked=false;
+  $('adLvlTag').textContent=LV[ST.li]+' · '+NAMES[LV[ST.li]];
+  $('adCount').textContent=(ST.qi+1)+' / 12';
+  $('adBar').style.width=(ST.qi/12*100)+'%';
+  hearts();
+  $('adTopic').textContent=q.topic;
+  var c=$('adCtx');if(q.ctx){c.style.display='block';c.textContent=q.ctx;}else c.style.display='none';
+  $('adQText').textContent=q.q;
+  $('adOpts').innerHTML=q.opts.map(function(o,i){return '<button class="ad-opt" data-i="'+i+'" onclick="adAnswer('+i+')"><b>'+'ABCD'[i]+'</b><span>'+esc(o.t)+'</span></button>';}).join('');
+  $('adIdk').style.display='';
+  var fb=$('adFb');fb.className='ad-fb';fb.innerHTML='';
+  $('adNext').style.display='none';
+}
+window.adAnswer=function(i){
+  if(!ST||ST.locked)return;ST.locked=true;
+  var q=ST.qs[ST.qi],ok=i>=0&&q.opts[i].c===1;
+  var btns=document.querySelectorAll('#adOpts .ad-opt');
+  btns.forEach(function(b,k){b.disabled=true;if(q.opts[k].c)b.classList.add('ok');else if(k===i)b.classList.add('no');});
+  $('adIdk').style.display='none';
+  var fb=$('adFb');
+  if(ok){ST.right++;fb.className='ad-fb ok';fb.innerHTML='&#9989; <b>Doğru!</b> '+esc(q.e);}
+  else{ST.wrong++;ST.wrongList.push({lv:LV[ST.li],topic:q.topic,q:q.q,ctx:q.ctx,right:q.right,e:q.e,you:i>=0?q.opts[i].t:'(Bilmiyorum)'});
+    fb.className='ad-fb no';fb.innerHTML=(i<0?'Bilmiyorum':'&#10060; <b>Yanlış.</b>')+' Doğru cevap: <b>'+esc(q.right)+'</b>. '+esc(q.e);hearts();}
+  var nx=$('adNext');nx.style.display='inline-flex';
+  if(ST.wrong>=4)nx.textContent='Sonucu Gör →';
+  else if(ST.qi===11)nx.textContent=LV[ST.li]+' tamamlandı →';
+  else nx.textContent='Devam →';
+};
+window.adNext=function(){
+  if(ST.wrong>=4){ST.blocks.push({lv:LV[ST.li],pass:false,right:ST.right,wrong:ST.wrong,answered:ST.qi+1});return result();}
+  if(ST.qi<11){ST.qi++;return showQ();}
+  ST.blocks.push({lv:LV[ST.li],pass:true,right:ST.right,wrong:ST.wrong,answered:12});
+  if(ST.li===4)return result();
+  var from=LV[ST.li],to=LV[ST.li+1];
+  $('adPass').innerHTML='<div class="ad-pass"><div class="big">&#127881;</div><h2 class="ad-h1">'+from+' seviyesini geçtin!</h2><p style="font-size:15px;line-height:1.55;margin-bottom:6px">Skor: <b>'+ST.right+'/12</b> ('+ST.wrong+' yanlış)</p><p style="font-size:14px;color:var(--ink4);margin-bottom:18px">Şimdi <b>'+to+' · '+NAMES[to]+'</b> bölümüne geçiyorsun. Hatırlatma: bu seviyede de 12 soru var, <b>4 yanlışta test biter.</b></p><button class="ad-btn dark" onclick="adGo()">'+to+' sorularına geç →</button></div>';
+  view('adPass');
+};
+window.adGo=function(){ST.li++;loadBlock();view('adQ');showQ();};
+function result(){
+  var passed=ST.blocks.filter(function(b){return b.pass;});
+  var last=ST.blocks[ST.blocks.length-1];
+  var levelIdx,estimated=false,levelName;
+  if(passed.length){levelIdx=LV.indexOf(passed[passed.length-1].lv);}
+  else if(ST.start>0){levelIdx=ST.start-1;estimated=true;}
+  else levelIdx=-1;
+  var L=levelIdx>=0?LV[levelIdx]:'Pre-A1';
+  var nextL=LV[levelIdx+1]||null;
+  var topics={};ST.wrongList.forEach(function(w){topics[w.topic]=(topics[w.topic]||0)+1;});
+  var weak=Object.keys(topics).sort(function(a,b){return topics[b]-topics[a];});
+  /* timeline */
+  var tl='';LV.forEach(function(l,i){
+    var b=ST.blocks.filter(function(x){return x.lv===l;})[0];
+    if(b&&b.pass)tl+='<div class="p"><span>✅ '+l+' · geçti</span><span>'+b.right+'/12</span></div>';
+    else if(b)tl+='<div class="f"><span>❌ '+l+' · 4 yanlışla bitti ('+b.answered+'. soruda)</span><span>'+b.right+'/'+b.answered+'</span></div>';
+    else if(i<ST.start)tl+='<div class="n"><span>— '+l+' · atlandı (başlangıç seçimi)</span><span></span></div>';
+    else tl+='<div class="n"><span>— '+l+' · bu seviyeye ulaşılmadı</span><span></span></div>';});
+  /* advice */
+  var maxed=(L==='C1'&&last.pass);
+  var title,adv,startAt;
+  var prevBlock=passed.length?passed[passed.length-1]:null;
+  var strong=prevBlock&&prevBlock.wrong<=1;
+  var closeFail=!last.pass&&last.answered>=9;
+  if(maxed){title='Tebrikler! C1 seviyesini tamamen geçtin.';adv='Tüm bölümleri başarıyla tamamladın. C2 hedefi için akademik okuma, ileri kelime çalışması ve yoğun konuşma pratiği önerilir.';startAt='C1';}
+  else if(L==='Pre-A1'){title='Seviyen: A1 öncesi (başlangıç)';adv='A1 testinde 4 yanlışa ulaştın. Sorun değil! En doğru yol A1 seviyesinden, sıfırdan ve düzenli başlamak.';startAt='A1';}
+  else{
+    title='Seviyen: '+L+' · '+NAMES[L];
+    adv=ADV[L].tr;
+    if(estimated)adv='(Not: A1\'den başlamadığın için bu sonuç tahminidir.) '+adv;
+    if(nextL&&strong&&closeFail){startAt=nextL;adv+=' <b>'+L+'\'i çok iyi geçtin ve '+nextL+' sınavında da çok yaklaştın.</b> Önerimiz: '+nextL+' konularına başla; '+L+'\'den sadece eksik kalan başlıkları tekrar et.';}
+    else if(nextL&&strong){startAt=nextL;adv+=' <b>'+L+' hakimiyetin güçlü.</b> Önerimiz: '+nextL+' seviyesinin başından başla, '+L+' konularını arada tekrar et.';}
+    else{startAt=L;adv+=' <b>Önerimiz:</b> '+L+' seviyesinde devam et; aşağıdaki eksik konuları pekiştirdikten sonra '+(nextL||'bir üst seviye')+'\'e geç.';}
+  }
+  var lo=startAt.toLowerCase();
+  var gLink=lo==='pre-a1'?'a1':lo;
+  var html='<div class="ad-res-hero"><small>Senin Seviyen</small><div class="lv">'+L+'</div><p><b>'+esc(title)+'</b><br>'+adv+'</p></div>';
+  html+='<div class="ad-sec"><h4>Seviye Geçişlerin</h4><div class="ad-tl">'+tl+'</div></div>';
+  html+='<div class="ad-sec"><h4>Eksik Konuların</h4>'+(weak.length?weak.map(function(t){return '<span class="ad-chip">'+esc(t)+(topics[t]>1?' ×'+topics[t]:'')+'</span>';}).join(''):'<p style="font-size:14px">Belirgin bir eksik çıkmadı. Harika!</p>')+'</div>';
+  html+='<div class="ad-sec"><h4>Şimdi Ne Yapmalısın? ('+startAt.toUpperCase()+' için)</h4><div class="ad-links">'+
+    '<a class="pri" href="/kendin-ogren">📚 Kendin Öğren — '+startAt+' dersleri <span>→</span></a>'+
+    '<a href="/grammar/'+gLink+'/">✏️ Gramer — '+startAt+' konuları <span>→</span></a>'+
+    (L!==startAt&&L!=='Pre-A1'?'<a href="/grammar/'+L.toLowerCase()+'/">🔁 '+L+' gramer tekrarı <span>→</span></a>':'')+
+    '<a href="/ingilizce-'+gLink+'/">🎯 '+startAt+' çalışma sayfası <span>→</span></a>'+
+    '<a href="/roadmap">🗺️ Yol haritası <span>→</span></a>'+
+    '<a href="/ozel-ders">👩‍🏫 Özel ders / öğretmenle çalış <span>→</span></a></div></div>';
+  if(ST.wrongList.length){html+='<div class="ad-sec"><h4>Yanlışların ve Açıklamaları</h4>'+ST.wrongList.map(function(w){return '<div class="ad-rev"><b>['+w.lv+'] '+esc(w.q)+'</b><br>Senin cevabın: '+esc(w.you)+' &nbsp;·&nbsp; Doğru: <b>'+esc(w.right)+'</b><br><span style="color:var(--ink4)">'+esc(w.e)+'</span></div>';}).join('')+'</div>';}
+  var msg='Merhaba, AbOnlinEnglish seviye testini çözdüm. Sonucum: '+L+'. Önerilen başlangıç: '+startAt+'. Bana uygun bir plan çıkarabilir misiniz?';
+  html+='<div class="ad-actions"><a class="ad-btn" style="text-decoration:none;background:#25d366;color:#fff" target="_blank" rel="noopener" href="https://wa.me/onlineelt1?text='+encodeURIComponent(msg)+'">WhatsApp\'tan öğretmene gönder</a><button class="ad-btn ghost" onclick="adOpen()">Testi tekrar çöz</button><button class="ad-btn ghost" onclick="showPanel(\'introPanel\')">Ana sayfa</button></div>';
+  $('adRes').innerHTML=html;view('adRes');
+}
+document.addEventListener('keydown',function(e){
+  var p=$('adaptPanel');if(!p||!p.classList.contains('on')||!$('adQ').classList.contains('on'))return;
+  if(ST&&!ST.locked&&'1234'.indexOf(e.key)>-1&&e.key.length===1)adAnswer(parseInt(e.key,10)-1);
+  else if(ST&&ST.locked&&(e.key==='Enter'||e.key===' ')){e.preventDefault();adNext();}
+});
+document.addEventListener('DOMContentLoaded',function(){if(location.hash==='#seviye-testi')adOpen();});
+window.adBank=BANK;
+})();
 </script>
 </body>
 </html>
