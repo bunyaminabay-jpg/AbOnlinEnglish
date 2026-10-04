@@ -2856,5 +2856,5721 @@ window.AB_ERASMUS_EXAMS = [
         "text": "For most of the twentieth century, education was widely imagined as something that happened mainly during a specific, limited period of life: childhood through early adulthood. Once a person finished school or university and entered the workforce, formal learning was generally expected to slow down dramatically, apart from occasional job-specific training. That model is now changing rapidly, and the phrase 'lifelong learning' has moved from an academic buzzword into something increasingly close to a practical necessity.\n\nSeveral overlapping trends explain this shift. The most obvious is the pace of technological change itself. Skills that were highly valuable a decade ago, particularly in fields connected to computing, may become outdated well before a worker reaches retirement age, making periodic retraining less of a bonus and more of a requirement for staying employed. Equally significant, though less frequently discussed, is a demographic trend: people are living, and working, considerably longer than previous generations did, which means a single set of skills learned at twenty-two must now realistically last, in some form, for fifty years or more rather than thirty.\n\nEducational institutions have responded unevenly to this shift. Some universities have moved quickly, developing short, flexible courses explicitly designed for working adults who need to update specific skills without committing to a multi-year degree. These courses tend to be assessed differently from traditional degrees, often through practical projects rather than lengthy written exams, and are frequently delivered in formats that accommodate full-time employment, such as evening classes or intensive weekend modules. Other institutions, built around more traditional academic structures and funding models designed for young, full-time students, have struggled to adapt their offerings as quickly, even as demand from older, working learners continues to grow steadily year after year.\n\nEmployers have also become more directly involved in this space than they traditionally were. Many large companies now operate their own internal training programmes, sometimes partnering directly with universities to design courses tailored specifically to their particular industry's evolving needs. Supporters of this trend argue it ensures that newly learned skills are immediately practical and genuinely relevant to real workplace demands, since employers understand precisely what their own industry requires better than a generalist curriculum designed in advance ever could. Critics, however, worry that employer-designed training can be too narrowly focused on a single company's immediate, short-term needs, potentially leaving workers with specific, firm-dependent skills that transfer poorly if they eventually need to change employers or entire industries altogether.\n\nFor individual workers navigating this shift, the practical challenge is less about choosing education or avoiding it entirely, and much more about learning to manage an ongoing, open-ended process that genuinely never finishes in the way a traditional degree once did. This requires a different mindset from the one many of us developed in school, where learning typically had a fairly clear beginning, middle, and end, usually marked by a final exam or an official graduation ceremony. Lifelong learners, by contrast, must become comfortable with a kind of permanent, low-level uncertainty about their own skills, regularly asking themselves honestly what they might need to learn next, well before any particular skill becomes genuinely outdated or obsolete in their field.\n\nWhether this new model ultimately proves better or worse for workers overall than the traditional one remains genuinely debated among economists and educators alike. What seems far less debatable, however, is that the old assumption, that a good education received once in early adulthood would reliably last an entire career from beginning to end, is no longer a particularly safe or realistic one to make in most fast-changing fields."
       }
     ]
+  },
+  {
+    "id": 3,
+    "title": "Deneme 3",
+    "level": "B1+",
+    "duration": 150,
+    "questionCount": 80,
+    "questions": [
+      {
+        "id": 1,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "Most European universities ______ a wide range of courses in English for international students.",
+        "options": [
+          "offer",
+          "offering",
+          "offered",
+          "are offer"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Present Simple",
+        "level": "B1+",
+        "explanation": "A general, permanent fact about universities needs the present simple with a plural subject: offer."
+      },
+      {
+        "id": 2,
+        "part": "A",
+        "type": "Dialogue Completion",
+        "question": "A: Why is Mert not answering his phone?\nB: He ______ for his final exams at the library, so he probably has it switched off.",
+        "options": [
+          "studies",
+          "is studying",
+          "studied",
+          "has studied"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Present Continuous",
+        "level": "B1+",
+        "explanation": "An action in progress around now requires the present continuous: is studying."
+      },
+      {
+        "id": 3,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "The Erasmus coordinator ______ us detailed information about accommodation during last week's orientation meeting.",
+        "options": [
+          "gives",
+          "has given",
+          "gave",
+          "was giving"
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Past Simple",
+        "level": "B1+",
+        "explanation": "A completed action at a specific past time ('last week's orientation meeting') requires the past simple: gave."
+      },
+      {
+        "id": 4,
+        "part": "A",
+        "type": "Error Identification",
+        "question": "She (A) has lived (B) in Prague (C) since (D) since three years.",
+        "options": [
+          "has lived",
+          "in Prague",
+          "since",
+          "since three years"
+        ],
+        "answer": "D",
+        "skill": "Grammar",
+        "topic": "Present Perfect",
+        "level": "B1+",
+        "explanation": "A duration such as 'three years' is introduced by 'for', not 'since'; 'since' is used with a specific point in time."
+      },
+      {
+        "id": 5,
+        "part": "A",
+        "type": "Situation-based Question",
+        "question": "Rule: Students are not allowed to use dictionaries during the listening section of the exam. Which sentence best expresses this rule?",
+        "options": [
+          "Students must use dictionaries during the listening section.",
+          "Students don't have to use dictionaries during the listening section.",
+          "Students could use dictionaries during the listening section.",
+          "Students mustn't use dictionaries during the listening section."
+        ],
+        "answer": "D",
+        "skill": "Grammar",
+        "topic": "Modal Verbs",
+        "level": "B1+",
+        "explanation": "'Mustn't' expresses prohibition, which matches the meaning of 'not allowed to'."
+      },
+      {
+        "id": 6,
+        "part": "A",
+        "type": "Cloze Test",
+        "question": "If the university ______ the scholarship application deadline, many students would have missed it.",
+        "options": [
+          "hadn't extended",
+          "didn't extend",
+          "wouldn't extend",
+          "doesn't extend"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Conditionals",
+        "level": "B1+",
+        "explanation": "The result clause 'would have missed' signals a third conditional, so the if-clause needs the past perfect: hadn't extended."
+      },
+      {
+        "id": 7,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "The professor ______ lecture we attended yesterday specializes in environmental policy.",
+        "options": [
+          "who",
+          "whose",
+          "which",
+          "that"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Relative Clauses",
+        "level": "B1+",
+        "explanation": "Possession ('his/her lecture') is shown by the possessive relative pronoun 'whose'."
+      },
+      {
+        "id": 8,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "All exchange applications ______ carefully before the committee makes its final decision.",
+        "options": [
+          "review",
+          "reviewed",
+          "are reviewed",
+          "have review"
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Passive Voice",
+        "level": "B1+",
+        "explanation": "The applications receive the action rather than performing it, so the passive form 'are reviewed' is correct."
+      },
+      {
+        "id": 9,
+        "part": "A",
+        "type": "Structure Recognition",
+        "question": "______ a new language fluently usually takes years of regular practice.",
+        "options": [
+          "Learn",
+          "To learning",
+          "Learned",
+          "Learning"
+        ],
+        "answer": "D",
+        "skill": "Grammar",
+        "topic": "Gerunds",
+        "level": "B1+",
+        "explanation": "A gerund can function as the subject of a sentence: Learning."
+      },
+      {
+        "id": 10,
+        "part": "A",
+        "type": "Sentence Completion with Connectors",
+        "question": "The exchange office sent an email ______ remind students about the visa deadline.",
+        "options": [
+          "to",
+          "for",
+          "so that",
+          "in order that"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Infinitives",
+        "level": "B1+",
+        "explanation": "'To' plus the base verb expresses purpose and follows a simple verb directly: to remind."
+      },
+      {
+        "id": 11,
+        "part": "A",
+        "type": "Error Identification",
+        "question": "I spent (A) an wonderful semester (B) at a (C) university in (D) the Netherlands.",
+        "options": [
+          "an wonderful semester",
+          "at a",
+          "university in",
+          "the Netherlands"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Articles",
+        "level": "B1+",
+        "explanation": "'Wonderful' begins with the consonant sound /w/, so it takes 'a', not 'an': a wonderful semester."
+      },
+      {
+        "id": 12,
+        "part": "A",
+        "type": "Dialogue Completion",
+        "question": "A: How much luggage can we take on this flight?\nB: ______ bags over 23 kilos cost extra, so pack carefully.",
+        "options": [
+          "Few",
+          "Any",
+          "Much",
+          "Little"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Quantifiers",
+        "level": "B1+",
+        "explanation": "'Any' is used in general statements that apply to every member of a group; 'much' and 'little' are for uncountable nouns."
+      },
+      {
+        "id": 13,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "______ students on this programme come from more than twenty different countries.",
+        "options": [
+          "This",
+          "That",
+          "These",
+          "This's"
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Determiners",
+        "level": "B1+",
+        "explanation": "The plural noun 'students' requires the plural demonstrative 'these', not the singular 'this' or 'that'."
+      },
+      {
+        "id": 14,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "The final essay must be submitted ______ Friday at the latest.",
+        "options": [
+          "until",
+          "since",
+          "during",
+          "by"
+        ],
+        "answer": "D",
+        "skill": "Grammar",
+        "topic": "Prepositions",
+        "level": "B1+",
+        "explanation": "'By' indicates a deadline ('no later than'); 'until' would describe a continuous action up to that point."
+      },
+      {
+        "id": 15,
+        "part": "A",
+        "type": "Cloze Test",
+        "question": "______ the weather was terrible, the field trip to the botanical garden went ahead as planned.",
+        "options": [
+          "Although",
+          "Despite",
+          "Because of",
+          "So"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Conjunctions",
+        "level": "B1+",
+        "explanation": "'Although' introduces a contrast clause with a full subject and verb; 'despite' would need a noun phrase instead."
+      },
+      {
+        "id": 16,
+        "part": "A",
+        "type": "Sentence Completion with Connectors",
+        "question": "The lecture hall was full; ______, several students had to stand at the back.",
+        "options": [
+          "however",
+          "therefore",
+          "although",
+          "because"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Linking Words",
+        "level": "B1+",
+        "explanation": "'Therefore' shows a logical result: the hall being full caused students to stand."
+      },
+      {
+        "id": 17,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "Living in a dormitory is usually ______ than renting a private flat near campus.",
+        "options": [
+          "cheap",
+          "the cheapest",
+          "cheaper",
+          "as cheap"
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Comparatives",
+        "level": "B1+",
+        "explanation": "A comparison between two housing options requires the comparative form: cheaper."
+      },
+      {
+        "id": 18,
+        "part": "A",
+        "type": "Structure Recognition",
+        "question": "Of all the courses she took abroad, intercultural communication was ______.",
+        "options": [
+          "more useful",
+          "useful",
+          "as useful",
+          "the most useful"
+        ],
+        "answer": "D",
+        "skill": "Grammar",
+        "topic": "Superlatives",
+        "level": "B1+",
+        "explanation": "Comparing one item against a whole group ('of all the courses') requires the superlative: the most useful."
+      },
+      {
+        "id": 19,
+        "part": "A",
+        "type": "Error Identification",
+        "question": "She (A) answered (B) the interview questions (C) very confident (D) despite being nervous.",
+        "options": [
+          "answered",
+          "the interview questions",
+          "very confident",
+          "despite being nervous"
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Adjectives and Adverbs",
+        "level": "B1+",
+        "explanation": "The verb 'answered' must be modified by an adverb, not an adjective: very confidently."
+      },
+      {
+        "id": 20,
+        "part": "A",
+        "type": "Dialogue Completion",
+        "question": "A: What did the advisor tell you about the scholarship?\nB: She said that the results ______ by the end of the month.",
+        "options": [
+          "would be announced",
+          "will be announced",
+          "are announced",
+          "were announced"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Reported Speech",
+        "level": "B1+",
+        "explanation": "In reported speech, 'will' shifts back to 'would' when the reporting verb is in the past."
+      },
+      {
+        "id": 21,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "Because her transcript had an error, she ______ the registrar's office correct it before graduation.",
+        "options": [
+          "made",
+          "had",
+          "let",
+          "got"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Causatives",
+        "level": "B1+",
+        "explanation": "'Have + object + base verb' expresses arranging for someone else to do something: had the office correct it."
+      },
+      {
+        "id": 22,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "The amount of plastic waste produced by the city ______ considerably since the new recycling programme began.",
+        "options": [
+          "have decreased",
+          "decrease",
+          "has decreased",
+          "are decreasing"
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Subject-Verb Agreement",
+        "level": "B1+",
+        "explanation": "'The amount of' takes a singular verb, since the amount itself is the subject: has decreased."
+      },
+      {
+        "id": 23,
+        "part": "A",
+        "type": "Situation-based Question",
+        "question": "Elif did not apply for the exchange programme, and now she regrets it. Which sentence expresses her feeling?",
+        "options": [
+          "I wish I apply for the programme.",
+          "I wish I applied for the programme.",
+          "I wish I would apply for the programme.",
+          "I wish I had applied for the programme."
+        ],
+        "answer": "D",
+        "skill": "Grammar",
+        "topic": "Wish / If Only",
+        "level": "B1+",
+        "explanation": "Regret about a past action uses 'wish' with the past perfect: I wish I had applied."
+      },
+      {
+        "id": 24,
+        "part": "A",
+        "type": "Structure Recognition",
+        "question": "______ by the sudden change in the exam schedule, the students asked the coordinator for an explanation.",
+        "options": [
+          "Confused",
+          "Confuse",
+          "Confusing",
+          "To confuse"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Participles",
+        "level": "B1+",
+        "explanation": "The students feel confused rather than causing confusion, so the past participle 'Confused' is used as an adjective."
+      },
+      {
+        "id": 25,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "This time next week, students ______ their final presentations in front of the committee.",
+        "options": [
+          "will give",
+          "will be giving",
+          "give",
+          "will have given"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Future Forms",
+        "level": "B1+",
+        "explanation": "'This time next week' describes an action in progress at a specific future moment, requiring the future continuous: will be giving."
+      },
+      {
+        "id": 26,
+        "part": "A",
+        "type": "Cloze Test",
+        "question": "The committee ______ its decision on the scholarship applications by the time the new semester starts.",
+        "options": [
+          "will make",
+          "makes",
+          "will have made",
+          "is making"
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Future Perfect",
+        "level": "B1+",
+        "explanation": "'By the time' plus a future event signals that the action will be completed before that point: will have made."
+      },
+      {
+        "id": 27,
+        "part": "A",
+        "type": "Dialogue Completion",
+        "question": "A: Did you hear the fire alarm this morning?\nB: Yes, I did. I ______ breakfast when it suddenly went off.",
+        "options": [
+          "had",
+          "have had",
+          "have",
+          "was having"
+        ],
+        "answer": "D",
+        "skill": "Grammar",
+        "topic": "Past Continuous",
+        "level": "B1+",
+        "explanation": "An action in progress when another action interrupted it needs the past continuous: was having."
+      },
+      {
+        "id": 28,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "By the time the professor arrived, most of the students ______ the quiz.",
+        "options": [
+          "had finished",
+          "finished",
+          "have finished",
+          "were finishing"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Past Perfect",
+        "level": "B1+",
+        "explanation": "The finishing happened before the professor's arrival, an earlier past event, so the past perfect is needed: had finished."
+      },
+      {
+        "id": 29,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "______ caused the delay in the visa process is still unclear to the applicants.",
+        "options": [
+          "That",
+          "What",
+          "Which",
+          "Who"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Noun Clauses",
+        "level": "B1+",
+        "explanation": "'What' introduces a noun clause functioning as the subject of the sentence, meaning 'the thing that'."
+      },
+      {
+        "id": 30,
+        "part": "A",
+        "type": "Functional Language",
+        "question": "You want to politely ask your professor for an extension on an assignment. Which is the most appropriate thing to say?",
+        "options": [
+          "Give me more time for the assignment.",
+          "You have to give me more time.",
+          "I was wondering if it might be possible to have a short extension.",
+          "I want an extension now."
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Functional Language",
+        "level": "B1+",
+        "explanation": "Indirect, hedged language ('I was wondering if it might be possible') is the most polite way to make a request to a professor."
+      },
+      {
+        "id": 31,
+        "part": "B",
+        "type": "Collocation",
+        "question": "Before the final exam, it's important to ______ a realistic study schedule and stick to it.",
+        "options": [
+          "take up",
+          "bring up",
+          "keep up",
+          "draw up"
+        ],
+        "answer": "D",
+        "skill": "Vocabulary",
+        "topic": "Academic Life",
+        "level": "B1+",
+        "explanation": "'Draw up' means to prepare or create something in detail, such as a plan or schedule."
+      },
+      {
+        "id": 32,
+        "part": "B",
+        "type": "Phrasal Verb",
+        "question": "The repair was taking longer than expected, so the mechanic told us to ______ in the waiting room for a while.",
+        "options": [
+          "hang around",
+          "hang on",
+          "hang up",
+          "hang out"
+        ],
+        "answer": "A",
+        "skill": "Vocabulary",
+        "topic": "Daily Life",
+        "level": "B1+",
+        "explanation": "'Hang around' means to wait or stay somewhere without a specific purpose, which fits waiting in a repair shop."
+      },
+      {
+        "id": 33,
+        "part": "B",
+        "type": "Synonym",
+        "question": "The new app's interface is remarkably intuitive, so even beginners find it easy to use. Which word is closest in meaning to 'intuitive' here?",
+        "options": [
+          "complicated",
+          "user-friendly",
+          "expensive",
+          "outdated"
+        ],
+        "answer": "B",
+        "skill": "Vocabulary",
+        "topic": "Technology",
+        "level": "B1+",
+        "explanation": "'Intuitive' here means easy to understand and use naturally, which is closest to 'user-friendly'."
+      },
+      {
+        "id": 34,
+        "part": "B",
+        "type": "Word Choice",
+        "question": "Before going abroad, exchange students must ______ their course choices with their home university's coordinator.",
+        "options": [
+          "conform",
+          "inform",
+          "confirm",
+          "perform"
+        ],
+        "answer": "C",
+        "skill": "Vocabulary",
+        "topic": "Erasmus",
+        "level": "B1+",
+        "explanation": "'Confirm' means to make something certain or official, which fits finalizing course choices."
+      },
+      {
+        "id": 35,
+        "part": "B",
+        "type": "Antonym",
+        "question": "The factory's emissions have had a harmful effect on the surrounding wildlife. Which word is opposite in meaning to 'harmful' here?",
+        "options": [
+          "harsh",
+          "hazardous",
+          "damaging",
+          "beneficial"
+        ],
+        "answer": "D",
+        "skill": "Vocabulary",
+        "topic": "Environment",
+        "level": "B1+",
+        "explanation": "'Beneficial' means having a good effect, the opposite of 'harmful'; the other options are synonyms of 'harmful'."
+      },
+      {
+        "id": 36,
+        "part": "B",
+        "type": "Academic Vocabulary",
+        "question": "The researcher's conclusions were based on a thorough ______ of the survey data.",
+        "options": [
+          "analysis",
+          "analyze",
+          "analytic",
+          "analyzed"
+        ],
+        "answer": "A",
+        "skill": "Vocabulary",
+        "topic": "Education",
+        "level": "B1+",
+        "explanation": "A noun is needed after 'a thorough' and before 'of'; 'analysis' is the correct noun form."
+      },
+      {
+        "id": 37,
+        "part": "B",
+        "type": "Collocation",
+        "question": "Doctors recommend that university students ______ enough sleep, especially during exam periods.",
+        "options": [
+          "do",
+          "get",
+          "make",
+          "take"
+        ],
+        "answer": "B",
+        "skill": "Vocabulary",
+        "topic": "Health",
+        "level": "B1+",
+        "explanation": "The standard collocation is 'get enough sleep'."
+      },
+      {
+        "id": 38,
+        "part": "B",
+        "type": "Phrasal Verb",
+        "question": "After months of searching, she finally managed to ______ a part-time job near campus.",
+        "options": [
+          "take on",
+          "get over",
+          "come across",
+          "put off"
+        ],
+        "answer": "C",
+        "skill": "Vocabulary",
+        "topic": "Work",
+        "level": "B1+",
+        "explanation": "'Come across' means to find something by chance, which fits managing to find a job."
+      },
+      {
+        "id": 39,
+        "part": "B",
+        "type": "Vocabulary in Context",
+        "question": "Many young volunteers are drawn to projects that have a tangible impact on their local community. What does 'tangible' mean here?",
+        "options": [
+          "temporary",
+          "financial",
+          "traditional",
+          "clear and real"
+        ],
+        "answer": "D",
+        "skill": "Vocabulary",
+        "topic": "Society",
+        "level": "B1+",
+        "explanation": "'Tangible' describes something clear, definite and real, not something temporary or financial."
+      },
+      {
+        "id": 40,
+        "part": "B",
+        "type": "Word Choice",
+        "question": "The museum's new exhibition aims to ______ visitors about the history of local crafts.",
+        "options": [
+          "educate",
+          "educated",
+          "education",
+          "educational"
+        ],
+        "answer": "A",
+        "skill": "Vocabulary",
+        "topic": "Culture",
+        "level": "B1+",
+        "explanation": "A base verb form is needed after 'aims to'; 'educate' is correct."
+      },
+      {
+        "id": 41,
+        "part": "B",
+        "type": "Synonym",
+        "question": "The professor's explanation was so concise that everyone understood it immediately. Which word is closest in meaning to 'concise'?",
+        "options": [
+          "long",
+          "brief",
+          "confusing",
+          "formal"
+        ],
+        "answer": "B",
+        "skill": "Vocabulary",
+        "topic": "Communication",
+        "level": "B1+",
+        "explanation": "'Concise' means expressed clearly in few words, which is closest to 'brief'."
+      },
+      {
+        "id": 42,
+        "part": "B",
+        "type": "Antonym",
+        "question": "The results of the experiment were consistent across all three trials. Which word is opposite in meaning to 'consistent'?",
+        "options": [
+          "stable",
+          "reliable",
+          "contradictory",
+          "accurate"
+        ],
+        "answer": "C",
+        "skill": "Vocabulary",
+        "topic": "Science",
+        "level": "B1+",
+        "explanation": "'Contradictory' means conflicting or inconsistent, the opposite of 'consistent'."
+      },
+      {
+        "id": 43,
+        "part": "B",
+        "type": "Collocation",
+        "question": "The two companies decided to ______ forces to develop a new product together.",
+        "options": [
+          "make",
+          "take",
+          "do",
+          "join"
+        ],
+        "answer": "D",
+        "skill": "Vocabulary",
+        "topic": "Business",
+        "level": "B1+",
+        "explanation": "The fixed collocation 'join forces' means to combine efforts with another person or group."
+      },
+      {
+        "id": 44,
+        "part": "B",
+        "type": "Phrasal Verb",
+        "question": "The bus suddenly ______ in the middle of the motorway, leaving passengers stranded for an hour.",
+        "options": [
+          "broke down",
+          "broke up",
+          "broke in",
+          "broke off"
+        ],
+        "answer": "A",
+        "skill": "Vocabulary",
+        "topic": "Transport",
+        "level": "B1+",
+        "explanation": "'Break down' means to stop functioning, which is used especially for vehicles and machines."
+      },
+      {
+        "id": 45,
+        "part": "B",
+        "type": "Academic Vocabulary",
+        "question": "The documentary presents a balanced ______ of both sides of the debate.",
+        "options": [
+          "perspectively",
+          "perspective",
+          "perspectivity",
+          "perspectived"
+        ],
+        "answer": "B",
+        "skill": "Vocabulary",
+        "topic": "Media",
+        "level": "B1+",
+        "explanation": "'Perspective' is the correct noun form meaning a particular way of viewing something."
+      },
+      {
+        "id": 46,
+        "part": "B",
+        "type": "Vocabulary in Context",
+        "question": "After a long day at work, she likes to unwind by going for a quiet walk in the park. What does 'unwind' mean here?",
+        "options": [
+          "exercise intensely",
+          "get lost",
+          "relax after stress",
+          "earn money"
+        ],
+        "answer": "C",
+        "skill": "Vocabulary",
+        "topic": "Daily Life",
+        "level": "B1+",
+        "explanation": "'Unwind' means to relax, especially after a period of work or tension."
+      },
+      {
+        "id": 47,
+        "part": "B",
+        "type": "Word Choice",
+        "question": "Before the final exam, students are advised to ______ all their lecture notes from the semester.",
+        "options": [
+          "revive",
+          "rewind",
+          "rewrite",
+          "revise"
+        ],
+        "answer": "D",
+        "skill": "Vocabulary",
+        "topic": "Academic Life",
+        "level": "B1+",
+        "explanation": "'Revise' means to study something again in preparation for an exam; the other options have unrelated meanings."
+      },
+      {
+        "id": 48,
+        "part": "B",
+        "type": "Synonym",
+        "question": "The trip was far from luxurious, but the stunning scenery more than compensated for it. Which word is closest in meaning to 'compensated'?",
+        "options": [
+          "made up",
+          "complained",
+          "paid",
+          "prepared"
+        ],
+        "answer": "A",
+        "skill": "Vocabulary",
+        "topic": "Travel",
+        "level": "B1+",
+        "explanation": "'Compensate for' means to make up for something negative, so 'made up (for)' is closest in meaning."
+      },
+      {
+        "id": 49,
+        "part": "B",
+        "type": "Collocation",
+        "question": "Before leaving for her exchange semester, Aylin had to ______ a long list of paperwork requirements.",
+        "options": [
+          "fulfillment",
+          "fulfill",
+          "fulfilled",
+          "fulfilling"
+        ],
+        "answer": "B",
+        "skill": "Vocabulary",
+        "topic": "Erasmus",
+        "level": "B1+",
+        "explanation": "A base verb form is needed after 'had to'; 'fulfill', meaning to complete or satisfy a requirement, is correct."
+      },
+      {
+        "id": 50,
+        "part": "B",
+        "type": "Phrasal Verb",
+        "question": "The teacher asked the students to ______ their essays before submitting the final draft.",
+        "options": [
+          "look up",
+          "look out",
+          "look over",
+          "look into"
+        ],
+        "answer": "C",
+        "skill": "Vocabulary",
+        "topic": "Education",
+        "level": "B1+",
+        "explanation": "'Look over' means to examine something quickly, which fits checking an essay before submission."
+      },
+      {
+        "id": 51,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Main Idea",
+        "question": "What is the main idea of the passage?",
+        "options": [
+          "Volunteering abroad is mainly useful for improving a student's CV.",
+          "Volunteering abroad is always more difficult than people expect.",
+          "Volunteering abroad should replace traditional university education.",
+          "Volunteering abroad can change students' perspectives in ways that go beyond simple relaxation."
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Main Idea",
+        "level": "B1+",
+        "explanation": "The passage argues that volunteering abroad can shift students' perspectives and push personal growth, which goes well beyond simply relaxing on a break."
+      },
+      {
+        "id": 52,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Specific Information",
+        "question": "According to the passage, what often pushes volunteers to adapt quickly?",
+        "options": [
+          "The lack of their usual comforts and routines",
+          "The pressure to finish their degree on time",
+          "The need to raise money for the trip",
+          "Instructions from their university coordinator"
+        ],
+        "answer": "A",
+        "skill": "Reading",
+        "topic": "Specific Information",
+        "level": "B1+",
+        "explanation": "The passage states that without their usual routines and conveniences, volunteers are pushed to adapt quickly."
+      },
+      {
+        "id": 53,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Vocabulary in Context",
+        "question": "In the passage, what does 'glamorous' mean?",
+        "options": [
+          "dangerous and risky",
+          "exciting and attractive",
+          "expensive and rare",
+          "simple and quick"
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Vocabulary in Context",
+        "level": "B1+",
+        "explanation": "The passage says volunteering tasks are 'rarely glamorous', meaning they usually are ordinary rather than exciting or impressive-looking."
+      },
+      {
+        "id": 54,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Reference",
+        "question": "In the sentence 'This skill, researchers say, transfers surprisingly well...', what does 'This skill' refer to?",
+        "options": [
+          "Teaching children in another country",
+          "Building simple houses",
+          "Communicating without a shared first language",
+          "Choosing a volunteering programme carefully"
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Reference",
+        "level": "B1+",
+        "explanation": "The previous sentence describes volunteers learning to communicate without a shared first language; 'this skill' refers to that improved communication."
+      },
+      {
+        "id": 55,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Inference",
+        "question": "What can be inferred about students who teach in rural areas during their volunteering?",
+        "options": [
+          "They always regret choosing a teaching project.",
+          "They usually have teaching qualifications before they go.",
+          "They prefer formal classrooms to any other method.",
+          "They may begin to question their previous ideas about education."
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Inference",
+        "level": "B1+",
+        "explanation": "The passage gives the example of a student whose assumptions about formal classrooms might change after a rural teaching project."
+      },
+      {
+        "id": 56,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Writer's Opinion",
+        "question": "What is the writer's attitude toward criticism of volunteering programmes?",
+        "options": [
+          "The writer agrees the criticism is somewhat valid but still sees value in responsible volunteering.",
+          "The writer dismisses the criticism as completely wrong.",
+          "The writer believes volunteering should be banned.",
+          "The writer ignores the criticism entirely."
+        ],
+        "answer": "A",
+        "skill": "Reading",
+        "topic": "Writer's Opinion",
+        "level": "B1+",
+        "explanation": "The writer admits the criticism 'is not entirely unfair' but still argues that responsible volunteering offers lasting value."
+      },
+      {
+        "id": 57,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Best Title",
+        "question": "Which title best fits the passage?",
+        "options": [
+          "How to Build a Perfect CV",
+          "The Hidden Rewards of Volunteering Abroad",
+          "Why Students Should Avoid Travelling",
+          "The History of International Volunteering"
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Best Title",
+        "level": "B1+",
+        "explanation": "The passage focuses on the less obvious, lasting personal benefits of volunteering abroad."
+      },
+      {
+        "id": 58,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Main Idea",
+        "question": "What is the main point of this passage?",
+        "options": [
+          "University students should stop using smartphones completely.",
+          "Sleep is not actually important for memory.",
+          "Many students sleep far less than recommended, which can harm their learning and well-being.",
+          "Universities are responsible for all student sleep problems."
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Main Idea",
+        "level": "B1+",
+        "explanation": "The passage describes widespread sleep deprivation among students and its negative effects on learning and well-being."
+      },
+      {
+        "id": 59,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Specific Information",
+        "question": "According to the passage, how many hours of sleep are generally recommended for young adults?",
+        "options": [
+          "Four to six hours",
+          "Five to seven hours",
+          "Nine to eleven hours",
+          "Seven to nine hours"
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Specific Information",
+        "level": "B1+",
+        "explanation": "The passage states that seven to nine hours is generally recommended for young adults."
+      },
+      {
+        "id": 60,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Cause/Effect",
+        "question": "According to the passage, what is one effect of smartphone use before sleep?",
+        "options": [
+          "It can interfere with the body's natural signal to feel sleepy.",
+          "It improves memory consolidation.",
+          "It reduces the need for deep sleep.",
+          "It has no measurable effect on sleep."
+        ],
+        "answer": "A",
+        "skill": "Reading",
+        "topic": "Cause/Effect",
+        "level": "B1+",
+        "explanation": "The passage explains that blue light from screens can interfere with the body's natural signal to feel sleepy."
+      },
+      {
+        "id": 61,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Vocabulary in Context",
+        "question": "What does 'trivial' mean in the sentence 'The consequences of this pattern are not trivial'?",
+        "options": [
+          "unexpected",
+          "unimportant",
+          "obvious",
+          "permanent"
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Vocabulary in Context",
+        "level": "B1+",
+        "explanation": "'Trivial' means unimportant; the sentence states the consequences are significant, not trivial."
+      },
+      {
+        "id": 62,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Inference",
+        "question": "What can be inferred about students who stay up late to study instead of sleeping?",
+        "options": [
+          "They always achieve better exam results than students who sleep more.",
+          "They are following expert advice correctly.",
+          "Their extra study time may be less effective because of poor sleep.",
+          "They have no other responsibilities besides studying."
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Inference",
+        "level": "B1+",
+        "explanation": "The passage suggests that cutting sleep short may undermine the very studying students are trying to protect."
+      },
+      {
+        "id": 63,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Reference",
+        "question": "In the final paragraph, what does 'these measures' refer to?",
+        "options": [
+          "The causes of poor sleep described earlier",
+          "The health risks of sleep deprivation",
+          "The habits of students who sleep well",
+          "The practical adjustments and university initiatives mentioned in the previous paragraph"
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Reference",
+        "level": "B1+",
+        "explanation": "'These measures' refers back to the practical adjustments and university initiatives described just before."
+      },
+      {
+        "id": 64,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Writer's Opinion",
+        "question": "What is the writer's opinion about blaming individual students for poor sleep?",
+        "options": [
+          "The writer suggests that factors outside students' control should also be considered.",
+          "The writer strongly believes students are entirely to blame.",
+          "The writer thinks universities should punish students who sleep badly.",
+          "The writer has no opinion on the subject."
+        ],
+        "answer": "A",
+        "skill": "Reading",
+        "topic": "Writer's Opinion",
+        "level": "B1+",
+        "explanation": "The passage notes that sleep experts avoid blaming individual students since schedules and jobs are often outside their control."
+      },
+      {
+        "id": 65,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Main Idea",
+        "question": "What is the main idea of the passage?",
+        "options": [
+          "Space tourism is a complete failure that will never succeed.",
+          "Space tourism has become a reality but still faces major obstacles before it can become widespread.",
+          "Government agencies should stop all space programmes.",
+          "Space tourism is now as safe and affordable as commercial flights."
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Main Idea",
+        "level": "B1+",
+        "explanation": "The passage presents space tourism as a real but still limited industry facing cost, safety, and environmental challenges."
+      },
+      {
+        "id": 66,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Best Title",
+        "question": "Which title best suits this passage?",
+        "options": [
+          "The End of Government Space Programmes",
+          "Why Rockets Are Dangerous",
+          "Space Tourism: Exciting but Far From Easy",
+          "A Beginner's Guide to Becoming an Astronaut"
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Best Title",
+        "level": "B1+",
+        "explanation": "The passage balances the excitement of space tourism with the real obstacles it still faces."
+      },
+      {
+        "id": 67,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Specific Information",
+        "question": "According to the passage, why are current space tourism tickets so expensive?",
+        "options": [
+          "Because governments add extremely high taxes",
+          "Because insurance companies refuse to cover the flights",
+          "Because there are too many passengers for each flight",
+          "Because the technology is still new and flight frequency is low"
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Specific Information",
+        "level": "B1+",
+        "explanation": "The passage explains that prices will fall only gradually as technology improves and flights become more frequent."
+      },
+      {
+        "id": 68,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Cause/Effect",
+        "question": "According to the passage, what could happen if a serious accident occurred?",
+        "options": [
+          "It could damage public confidence in the whole industry.",
+          "It would have no effect on public opinion.",
+          "It would immediately make space travel safer.",
+          "It would lower ticket prices significantly."
+        ],
+        "answer": "A",
+        "skill": "Reading",
+        "topic": "Cause/Effect",
+        "level": "B1+",
+        "explanation": "The passage states that a serious accident could damage public confidence in the entire industry for years."
+      },
+      {
+        "id": 69,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Vocabulary in Context",
+        "question": "What does 'reigniting' mean in the first paragraph?",
+        "options": [
+          "destroying completely",
+          "bringing back to attention",
+          "making something more dangerous",
+          "slowing something down"
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Vocabulary in Context",
+        "level": "B1+",
+        "explanation": "'Reigniting' means bringing something back to life or attention, in this case an old question about space travel."
+      },
+      {
+        "id": 70,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Inference",
+        "question": "What can be inferred about the companies offering space tourism flights?",
+        "options": [
+          "They are mainly motivated by scientific research alone.",
+          "They receive unlimited funding from governments.",
+          "They compete with each other, which has helped reduce the cost of reaching orbit.",
+          "They have completely solved the safety concerns of space travel."
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Inference",
+        "level": "B1+",
+        "explanation": "The passage states that private companies competing for tourist revenue have driven down the cost of reaching orbit."
+      },
+      {
+        "id": 71,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Writer's Opinion",
+        "question": "What is the writer's overall tone toward the future of space tourism?",
+        "options": [
+          "Completely dismissive and negative",
+          "Entirely enthusiastic with no concerns",
+          "Angry about its environmental impact",
+          "Cautiously balanced, acknowledging both potential and problems"
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Writer's Opinion",
+        "level": "B1+",
+        "explanation": "The writer presents both the appeal and the obstacles of space tourism without taking an extreme position."
+      },
+      {
+        "id": 72,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Reference",
+        "question": "In the sentence 'today's expensive joyrides are simply funding tomorrow's more serious ambitions', what does 'today's expensive joyrides' refer to?",
+        "options": [
+          "Current commercial space tourism flights",
+          "Government-funded missions to Mars",
+          "Future satellite launches",
+          "Scientific research conducted in laboratories"
+        ],
+        "answer": "A",
+        "skill": "Reading",
+        "topic": "Reference",
+        "level": "B1+",
+        "explanation": "'Today's expensive joyrides' refers to the current, costly commercial space tourism flights described throughout the passage."
+      },
+      {
+        "id": 73,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Main Idea",
+        "question": "What is the main idea of the passage?",
+        "options": [
+          "Museums are disappearing because of digital technology.",
+          "Museums are changing in several ways to remain relevant and engaging.",
+          "All museums should become children's museums.",
+          "Museum funding has increased dramatically in recent years."
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Main Idea",
+        "level": "B1+",
+        "explanation": "The passage describes several ways museums are adapting, from technology to funding to whose stories are told."
+      },
+      {
+        "id": 74,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Specific Information",
+        "question": "According to the passage, what approach did children's museums pioneer?",
+        "options": [
+          "Displaying objects exclusively behind glass",
+          "Returning items to their communities of origin",
+          "Hands-on, interactive exploration",
+          "Charging very high entrance fees"
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Specific Information",
+        "level": "B1+",
+        "explanation": "The passage states that children's museums led the way by encouraging hands-on exploration."
+      },
+      {
+        "id": 75,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Vocabulary in Context",
+        "question": "What does 'stagnated' mean in the context of public funding?",
+        "options": [
+          "increased sharply",
+          "been eliminated entirely",
+          "been redirected to other projects",
+          "remained the same without growing"
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Vocabulary in Context",
+        "level": "B1+",
+        "explanation": "'Stagnated' means to stop growing or developing, i.e. remained the same, contrasted with rising costs."
+      },
+      {
+        "id": 76,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Inference",
+        "question": "What can be inferred about some museums' use of technology, according to critics?",
+        "options": [
+          "It might sometimes prioritize entertainment over accurate scholarship.",
+          "It has completely solved the problem of declining visitor numbers.",
+          "It is universally praised by all museum professionals.",
+          "It is used only in natural history museums."
+        ],
+        "answer": "A",
+        "skill": "Reading",
+        "topic": "Inference",
+        "level": "B1+",
+        "explanation": "The passage notes critics worry that excessive focus on entertainment can overshadow genuine, accurate learning."
+      },
+      {
+        "id": 77,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Cause/Effect",
+        "question": "According to the passage, what is one cause of museums seeking new sources of income?",
+        "options": [
+          "An increase in public funding for culture",
+          "A decrease or stagnation in public funding relative to rising costs",
+          "A decline in the number of historical artefacts available",
+          "New laws banning temporary exhibitions"
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Cause/Effect",
+        "level": "B1+",
+        "explanation": "The passage explains that public funding has stagnated or shrunk relative to rising costs, pushing museums to find new income."
+      },
+      {
+        "id": 78,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Reference",
+        "question": "In the sentence 'This has meant returning some contested items...', what does 'This' refer to?",
+        "options": [
+          "The decline in museum attendance",
+          "The use of augmented reality apps",
+          "The move to tell a wider range of stories and perspectives",
+          "The rise of blockbuster exhibitions"
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Reference",
+        "level": "B1+",
+        "explanation": "'This' refers back to museums seeking out and displaying previously overlooked perspectives."
+      },
+      {
+        "id": 79,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Writer's Opinion",
+        "question": "What is the writer's view on whether traditional museums are disappearing?",
+        "options": [
+          "The writer believes traditional museums have already disappeared completely.",
+          "The writer argues traditional museums should be banned.",
+          "The writer has no view on this question.",
+          "The writer suggests traditional museums still exist alongside newer approaches."
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Writer's Opinion",
+        "level": "B1+",
+        "explanation": "The writer states that quiet, traditional galleries still exist and are valued, alongside newer, more flexible approaches."
+      },
+      {
+        "id": 80,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Best Title",
+        "question": "Which title best fits this passage?",
+        "options": [
+          "The Decline and Fall of Museums",
+          "Museums in Transition: Balancing Tradition and Innovation",
+          "Why Children's Museums Are Superior",
+          "The Financial Collapse of Cultural Institutions"
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Best Title",
+        "level": "B1+",
+        "explanation": "The passage covers multiple ongoing changes in museums while noting that tradition still coexists with innovation."
+      }
+    ],
+    "passages": [
+      {
+        "id": "p1",
+        "title": "The Hidden Benefits of Volunteering Abroad",
+        "theme": "Society / Erasmus",
+        "length": "short",
+        "text": "Every year, thousands of university students choose to spend part of their holidays volunteering in another country rather than simply relaxing on a beach. At first glance, this might seem like an unusual way to spend a break from study, but many students who try it say it changes the way they see the world.\n\nVolunteering abroad usually involves working on projects such as teaching children, building simple houses, or helping with environmental clean-up programmes. These tasks are rarely glamorous, and the living conditions can be far more basic than what most students are used to at home. Yet it is precisely this lack of comfort that many volunteers later describe as valuable. Without their usual routines and conveniences, they are pushed to adapt quickly, solve unexpected problems, and work closely with people from completely different backgrounds.\n\nOne of the most frequently mentioned benefits is a noticeable improvement in communication skills. When volunteers cannot rely on a shared first language, they learn to explain ideas more simply and to listen more carefully. This skill, researchers say, transfers surprisingly well to academic and professional settings once students return home.\n\nThere are also less obvious advantages. Spending weeks in an unfamiliar environment forces volunteers to question assumptions they did not even know they held. A student who has always assumed that formal classrooms are the best way to learn might come away from a rural teaching project with a very different view of education. Such shifts in perspective are difficult to achieve through reading alone; they tend to require direct, sometimes uncomfortable, experience.\n\nCritics argue that some volunteering programmes do little real good and exist mainly to provide students with an impressive line on their CVs. This criticism is not entirely unfair, and students are increasingly encouraged to choose programmes carefully, checking that local communities genuinely benefit rather than being treated as a backdrop for someone else's personal growth. Even so, for those who choose responsibly, the experience can offer something that few lecture halls can: a lasting change in how they understand both the world and themselves."
+      },
+      {
+        "id": "p2",
+        "title": "Why Students Are Sleeping Less Than Ever",
+        "theme": "Health / Daily Life",
+        "length": "medium",
+        "text": "Ask any group of university students how many hours they slept last night, and you are likely to hear a wide range of answers, many of them worryingly low. Surveys conducted on campuses around the world consistently show that a large proportion of students sleep fewer than six hours a night during term time, well below the seven to nine hours generally recommended for young adults.\n\nSeveral factors appear to be responsible. The most obvious is workload: lectures, assignments, part-time jobs, and social commitments all compete for the same twenty-four hours in a day, and sleep is often the first thing sacrificed when time runs short. Unlike a missed meal or an unfinished reading, lost sleep rarely produces an immediate, visible consequence, which makes it easy to postpone again and again.\n\nTechnology plays an equally significant role. Smartphones keep students connected to friends, coursework, and entertainment at all hours, and the blue light emitted by screens can interfere with the body's natural signal to feel sleepy. Many students admit to checking messages or watching short videos 'just for a few minutes' after turning off the main light, only to look up an hour or more later.\n\nThe consequences of this pattern are not trivial. Researchers who study sleep and learning point out that memory consolidation, the process by which the brain strengthens and organizes what has been learned during the day, happens largely during deep sleep. Students who consistently cut their sleep short may therefore be undermining the very studying they are trying to protect by staying up late. Poor sleep has also been linked to lower concentration, slower reaction times, and a reduced ability to manage stress, all of which can make everyday university life considerably harder than it needs to be.\n\nWhat can be done? Sleep experts generally avoid blaming individual students, since university schedules and part-time work are often outside their control. Instead, many recommend practical adjustments: setting a fixed time to put devices away, treating sleep as seriously as any scheduled class, and recognizing that an extra hour of sleep before an exam is frequently more useful than an extra hour of last-minute revision. Universities, for their part, are beginning to experiment with later start times for some courses and awareness campaigns during exam periods.\n\nNone of these measures will transform a chronically sleep-deprived campus overnight. However, treating sleep as a genuine priority, rather than a flexible luxury to be cut whenever something else comes up, may be one of the simplest and most effective changes a student can make."
+      },
+      {
+        "id": "p3",
+        "title": "Could Space Tourism Really Take Off?",
+        "theme": "Science / Technology",
+        "length": "medium",
+        "text": "For decades, space travel belonged almost exclusively to government agencies and a small number of highly trained astronauts. In the last few years, however, a handful of private companies have begun offering short trips beyond the edge of the atmosphere to paying customers, reigniting an old question: could ordinary people one day travel to space the way they currently travel by plane?\n\nThe appeal is not hard to understand. A flight that briefly crosses into space offers passengers a view of the curved horizon of the Earth and several minutes of weightlessness, an experience that was, until recently, almost impossible to describe except in the words of professional astronauts. Early customers have described the trip as life-changing, and demand, at least among those who can afford it, appears strong.\n\nYet several obstacles stand between occasional headline-grabbing flights and anything resembling mass tourism. The most immediate is cost. Current tickets are priced in the hundreds of thousands of dollars, putting them far beyond the reach of almost everyone except the extremely wealthy. Even optimistic industry forecasts suggest that prices will fall only gradually, as new technology and increased flight frequency slowly bring down costs that remain, for now, enormous.\n\nSafety presents a second, more serious challenge. Unlike commercial aviation, which has spent a century refining its safety record through strict regulation and decades of accumulated data, commercial space travel is still in its early stages. A single serious accident, analysts warn, could damage public confidence in the entire industry for years, regardless of how rare such accidents statistically are.\n\nThere is also the question of environmental impact. Rocket launches release gases and particles directly into the upper atmosphere, where their long-term effects are not yet fully understood. As the frequency of launches increases to meet growing tourist demand, scientists are calling for closer monitoring of this impact, pointing out that an industry built around leisure travel will face particular pressure to justify its environmental cost.\n\nSupporters of the industry argue that space tourism, whatever its current limitations, plays an important role in advancing the technology needed for future space exploration more broadly. Private companies competing for tourist revenue, they note, have driven down the cost of reaching orbit far faster than government programmes alone ever managed. In this view, today's expensive joyrides are simply funding tomorrow's more serious ambitions, from satellite deployment to eventual missions to Mars.\n\nWhether space tourism becomes a genuine mass-market industry or remains a rare experience reserved for the extremely rich may not be settled for another generation. What seems clear already is that the idea of ordinary civilians travelling to space, once confined to science fiction, is now, however briefly and expensively, a reality."
+      },
+      {
+        "id": "p4",
+        "title": "How Museums Are Reinventing Themselves",
+        "theme": "Culture",
+        "length": "long",
+        "text": "Walk into many major museums today, and you might notice something that would have seemed unusual a generation ago: interactive touchscreens beside paintings, augmented reality apps that bring ancient artefacts to life, and exhibition spaces designed less like quiet halls and more like immersive experiences. This shift did not happen overnight, and it reflects a deeper rethinking of what a museum is actually for.\n\nFor much of the twentieth century, museums operated on a fairly simple model. Objects of historical, artistic, or scientific value were collected, carefully preserved, and displayed behind glass with a small printed label offering basic facts. Visitors moved quietly from room to room, looking rather than touching, listening rather than participating. This model served its purpose well for many decades, but as competition for people's leisure time increased, particularly from digital entertainment, museum attendance in several countries began to decline, and institutions were forced to ask difficult questions about their own relevance.\n\nThe response, in many cases, has been a move toward active engagement rather than passive observation. Children's museums led the way decades ago by encouraging hands-on exploration, but the approach has since spread to institutions showcasing everything from fine art to natural history. Visitors to some modern exhibitions can now reconstruct ancient pottery through touchscreen puzzles, hear simulated conversations between historical figures through audio guides, or use a smartphone camera to see a reconstructed version of a ruined building superimposed over its remains.\n\nCritics of this trend worry that an excessive focus on entertainment risks turning serious cultural institutions into something closer to theme parks, where spectacle overshadows genuine learning. There is a real tension here: technology that makes an exhibition exciting is not automatically technology that makes it educational, and a few institutions have been accused of prioritizing photogenic installations over accurate, carefully researched content. Curators increasingly describe their job as a balancing act, trying to make exhibitions accessible and enjoyable without sacrificing the scholarly rigor that gives a museum its credibility.\n\nAnother significant change has been in whose stories museums choose to tell. Many institutions that once focused almost exclusively on the achievements of a narrow set of historical figures, usually drawn from dominant cultural groups, have begun actively seeking out and displaying perspectives that were previously overlooked or excluded. This has meant returning some contested items to the communities they originally came from, consulting more closely with descendant communities when designing exhibitions, and acknowledging, rather than glossing over, the sometimes troubling history behind how certain collections were originally acquired.\n\nFinancial pressure has also reshaped museum strategy. Public funding for culture has, in many countries, either stagnated or shrunk relative to rising costs, pushing museums to find new sources of income. Some have turned to blockbuster temporary exhibitions capable of drawing large paying crowds, licensing partnerships, or expanded online content that can be accessed by audiences who may never physically visit the building at all. This last point raises an intriguing possibility: a museum's digital presence may eventually matter as much as the physical building that most people still imagine when they hear the word 'museum.'\n\nNone of these changes mean that traditional museums are disappearing. Quiet galleries filled with carefully labelled objects still exist, and many visitors continue to value exactly that kind of calm, contemplative experience. What is changing is the assumption that this was ever the only valid way for a museum to operate. Increasingly, the most successful institutions appear to be those willing to offer multiple kinds of experience simultaneously, treating flexibility, rather than tradition alone, as their most valuable asset."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Deneme 4",
+    "level": "B1+ / B2",
+    "duration": 150,
+    "questionCount": 80,
+    "questions": [
+      {
+        "id": 1,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "The new library building ______ next year, according to the latest construction schedule.",
+        "options": [
+          "will be completed",
+          "will complete",
+          "completes",
+          "is completing"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Passive Voice",
+        "level": "B1+",
+        "explanation": "The building receives the action of completing, so the passive future form is needed: will be completed."
+      },
+      {
+        "id": 2,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "Scientists ______ a new method for recycling plastic, and several countries are already testing it.",
+        "options": [
+          "develop",
+          "have developed",
+          "developed",
+          "are developing"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Present Perfect",
+        "level": "B1+",
+        "explanation": "The present perfect links a past action to its current relevance ('are already testing it'): have developed."
+      },
+      {
+        "id": 3,
+        "part": "A",
+        "type": "Cloze Test",
+        "question": "If universities ______ more affordable housing, fewer students would struggle financially during their studies.",
+        "options": [
+          "provide",
+          "will provide",
+          "provided",
+          "had provided"
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Conditionals",
+        "level": "B1+",
+        "explanation": "A hypothetical present or future situation uses the second conditional: if + past simple, would + base verb."
+      },
+      {
+        "id": 4,
+        "part": "A",
+        "type": "Error Identification",
+        "question": "The students (A) which (B) failed the exam (C) were given (D) a chance to retake it.",
+        "options": [
+          "which",
+          "failed the exam",
+          "were given",
+          "a chance to retake it"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Relative Clauses",
+        "level": "B1+",
+        "explanation": "'Which' refers to things, not people; the relative pronoun for people is 'who'."
+      },
+      {
+        "id": 5,
+        "part": "A",
+        "type": "Situation-based Question",
+        "question": "Situation: The lights in the office are on, but nobody is answering the door. The car is in the parking lot though. Which sentence best expresses a logical deduction?",
+        "options": [
+          "Someone can be inside.",
+          "Someone should be inside.",
+          "Someone will be inside.",
+          "Someone must be inside."
+        ],
+        "answer": "D",
+        "skill": "Grammar",
+        "topic": "Modal Verbs",
+        "level": "B1+",
+        "explanation": "'Must' expresses a confident logical deduction based on available evidence."
+      },
+      {
+        "id": 6,
+        "part": "A",
+        "type": "Dialogue Completion",
+        "question": "A: What did the dean announce at the meeting?\nB: He announced that the new scholarship programme ______ the following semester.",
+        "options": [
+          "would launch",
+          "will launch",
+          "launches",
+          "launched"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Reported Speech",
+        "level": "B1+",
+        "explanation": "Reported speech shifts 'will' to 'would' after a past reporting verb: would launch."
+      },
+      {
+        "id": 7,
+        "part": "A",
+        "type": "Structure Recognition",
+        "question": "The committee is considering ______ the application deadline by two weeks.",
+        "options": [
+          "to extend",
+          "extending",
+          "extend",
+          "extended"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Gerunds",
+        "level": "B1+",
+        "explanation": "'Consider' is followed by a gerund: considering extending."
+      },
+      {
+        "id": 8,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "It is essential ______ all required documents before the visa interview.",
+        "options": [
+          "preparing",
+          "prepare",
+          "to prepare",
+          "prepared"
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Infinitives",
+        "level": "B1+",
+        "explanation": "The structure 'It is essential + infinitive' is correct: to prepare."
+      },
+      {
+        "id": 9,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "The professor did not explain ______ the deadline had been changed so suddenly.",
+        "options": [
+          "that",
+          "if",
+          "what",
+          "why"
+        ],
+        "answer": "D",
+        "skill": "Grammar",
+        "topic": "Noun Clauses",
+        "level": "B1+",
+        "explanation": "'Why' introduces a noun clause asking for a reason, matching the context of an unexplained sudden change."
+      },
+      {
+        "id": 10,
+        "part": "A",
+        "type": "Error Identification",
+        "question": "(A) An European student (B) told me that (C) the tuition fees (D) had increased again.",
+        "options": [
+          "An European student",
+          "told me that",
+          "the tuition fees",
+          "had increased again"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Articles",
+        "level": "B1+",
+        "explanation": "'European' begins with the consonant sound /j/, so it takes 'a', not 'an': a European student."
+      },
+      {
+        "id": 11,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "______ of the students in the class had already visited another country before starting university.",
+        "options": [
+          "Few",
+          "Much",
+          "Little",
+          "Every"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Quantifiers",
+        "level": "B1+",
+        "explanation": "'Few' is used with countable plural nouns to mean 'not many'; 'much' and 'little' are for uncountable nouns."
+      },
+      {
+        "id": 12,
+        "part": "A",
+        "type": "Dialogue Completion",
+        "question": "A: Which laptop should I buy for university?\nB: The store has three recommended models. ______ you choose, make sure it has a long battery life.",
+        "options": [
+          "Whatever",
+          "Whichever",
+          "However",
+          "Whoever"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Determiners",
+        "level": "B1+",
+        "explanation": "'Whichever' is used when choosing among a limited, specific set of options, such as the three recommended laptops."
+      },
+      {
+        "id": 13,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "The research team is working ______ a solution to the water shortage problem.",
+        "options": [
+          "at",
+          "for",
+          "on",
+          "in"
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Prepositions",
+        "level": "B1+",
+        "explanation": "'Work on' means to make an effort to deal with or create something, which fits the context."
+      },
+      {
+        "id": 14,
+        "part": "A",
+        "type": "Cloze Test",
+        "question": "The experiment produced unexpected results; ______, the team decided to repeat it under stricter conditions.",
+        "options": [
+          "otherwise",
+          "meanwhile",
+          "nevertheless",
+          "consequently"
+        ],
+        "answer": "D",
+        "skill": "Grammar",
+        "topic": "Linking Words",
+        "level": "B1+",
+        "explanation": "'Consequently' shows that repeating the experiment was a direct result of the unexpected findings."
+      },
+      {
+        "id": 15,
+        "part": "A",
+        "type": "Sentence Completion with Connectors",
+        "question": "______ she had never studied abroad before, she adapted to university life in Germany remarkably quickly.",
+        "options": [
+          "Even though",
+          "Despite",
+          "Because",
+          "In spite of"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Conjunctions",
+        "level": "B1+",
+        "explanation": "'Even though' introduces a contrast clause with a full subject and verb; 'despite' and 'in spite of' would need a noun phrase."
+      },
+      {
+        "id": 16,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "The second experiment produced results that were ______ accurate than those of the first.",
+        "options": [
+          "most",
+          "more",
+          "much",
+          "very"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Comparatives",
+        "level": "B1+",
+        "explanation": "A comparison between two experiments requires the comparative structure 'more + adjective + than'."
+      },
+      {
+        "id": 17,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "Of all the subjects she studied last semester, statistics was ______ for her.",
+        "options": [
+          "more challenging",
+          "as challenging",
+          "the most challenging",
+          "challenging"
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Superlatives",
+        "level": "B1+",
+        "explanation": "Comparing one subject to the whole group ('of all the subjects') requires the superlative: the most challenging."
+      },
+      {
+        "id": 18,
+        "part": "A",
+        "type": "Error Identification",
+        "question": "The committee (A) reviewed (B) the proposal (C) extreme carefully (D) before approving it.",
+        "options": [
+          "reviewed",
+          "the proposal",
+          "extreme carefully",
+          "before approving it"
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Adjectives and Adverbs",
+        "level": "B1+",
+        "explanation": "An adverb modifying another adverb must also be in adverb form: extremely carefully, not extreme carefully."
+      },
+      {
+        "id": 19,
+        "part": "A",
+        "type": "Structure Recognition",
+        "question": "The university ______ a new wing built to accommodate the growing number of international students.",
+        "options": [
+          "made",
+          "let",
+          "was",
+          "had"
+        ],
+        "answer": "D",
+        "skill": "Grammar",
+        "topic": "Causatives",
+        "level": "B1+",
+        "explanation": "'Have + object + past participle' expresses arranging for something to be done by someone else: had a new wing built."
+      },
+      {
+        "id": 20,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "Neither the lecturer nor the teaching assistants ______ aware of the schedule change.",
+        "options": [
+          "were",
+          "was",
+          "is",
+          "has been"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Subject-Verb Agreement",
+        "level": "B1+",
+        "explanation": "With 'neither...nor', the verb agrees with the nearer subject ('teaching assistants', plural): were."
+      },
+      {
+        "id": 21,
+        "part": "A",
+        "type": "Situation-based Question",
+        "question": "Situation: It is raining heavily outside, and Deniz has an important presentation to walk to. Which sentence expresses her wish about the present situation?",
+        "options": [
+          "I wish it isn't raining.",
+          "I wish it wasn't raining.",
+          "I wish it hadn't rained.",
+          "If only it doesn't rain."
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Wish / If Only",
+        "level": "B1+",
+        "explanation": "A wish about a present situation uses 'wish' with the past simple: I wish it wasn't raining."
+      },
+      {
+        "id": 22,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "______ by the professor's detailed feedback, the student revised her thesis chapter completely.",
+        "options": [
+          "Encourage",
+          "Encouraging",
+          "Encouraged",
+          "To encourage"
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Participles",
+        "level": "B1+",
+        "explanation": "The student receives the encouragement rather than causing it, so the past participle 'Encouraged' is used."
+      },
+      {
+        "id": 23,
+        "part": "A",
+        "type": "Dialogue Completion",
+        "question": "A: Have you decided what to do after graduation?\nB: Yes, I ______ a master's degree in international relations next year.",
+        "options": [
+          "pursue",
+          "will have pursued",
+          "am pursuing right now",
+          "am going to pursue"
+        ],
+        "answer": "D",
+        "skill": "Grammar",
+        "topic": "Future Forms",
+        "level": "B1+",
+        "explanation": "'Be going to' expresses a prior decision or plan about the future: am going to pursue."
+      },
+      {
+        "id": 24,
+        "part": "A",
+        "type": "Cloze Test",
+        "question": "By the time she turns thirty, she ______ three different countries for work or study.",
+        "options": [
+          "will have lived in",
+          "will live",
+          "lives in",
+          "is living in"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Future Perfect",
+        "level": "B1+",
+        "explanation": "'By the time' plus a future reference point requires the future perfect to show completion before that point: will have lived in."
+      },
+      {
+        "id": 25,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "While the researchers ______ the data, the power suddenly went out in the laboratory.",
+        "options": [
+          "analyzed",
+          "were analyzing",
+          "have analyzed",
+          "analyze"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Past Continuous",
+        "level": "B1+",
+        "explanation": "An ongoing past action interrupted by another event requires the past continuous: were analyzing."
+      },
+      {
+        "id": 26,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "No sooner ______ the exam results than she started celebrating with her classmates.",
+        "options": [
+          "she saw",
+          "she had seen",
+          "had she seen",
+          "did she see"
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Past Perfect",
+        "level": "B2",
+        "explanation": "'No sooner' triggers inversion and requires the past perfect: had she seen."
+      },
+      {
+        "id": 27,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "Light ______ faster than sound, which is why we see lightning before we hear thunder.",
+        "options": [
+          "is travelling",
+          "travelled",
+          "has travelled",
+          "travels"
+        ],
+        "answer": "D",
+        "skill": "Grammar",
+        "topic": "Present Simple",
+        "level": "B1+",
+        "explanation": "A permanent scientific fact requires the present simple: travels."
+      },
+      {
+        "id": 28,
+        "part": "A",
+        "type": "Dialogue Completion",
+        "question": "A: Can you help me move these boxes?\nB: Sorry, I can't right now — I ______ an online exam that started five minutes ago.",
+        "options": [
+          "am taking",
+          "take",
+          "took",
+          "have taken"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Present Continuous",
+        "level": "B1+",
+        "explanation": "An action in progress at the moment of speaking requires the present continuous: am taking."
+      },
+      {
+        "id": 29,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "The university ______ its international partnership programme back in 2015.",
+        "options": [
+          "launches",
+          "launched",
+          "has launched",
+          "was launching"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Past Simple",
+        "level": "B1+",
+        "explanation": "A specific, completed past time ('back in 2015') requires the past simple: launched."
+      },
+      {
+        "id": 30,
+        "part": "A",
+        "type": "Functional Language",
+        "question": "Situation: You disagree with a classmate's opinion during a seminar discussion, but want to do so politely. Which is the most appropriate thing to say?",
+        "options": [
+          "You're completely wrong about that.",
+          "That's a stupid idea.",
+          "I see your point, but I'm not sure I entirely agree.",
+          "No, that's not true at all."
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Functional Language",
+        "level": "B1+",
+        "explanation": "'I see your point, but I'm not sure I entirely agree' politely acknowledges the other view before disagreeing."
+      },
+      {
+        "id": 31,
+        "part": "B",
+        "type": "Collocation",
+        "question": "The team conducted a series of experiments to ______ their hypothesis before publishing the results.",
+        "options": [
+          "make",
+          "do",
+          "take",
+          "test"
+        ],
+        "answer": "D",
+        "skill": "Vocabulary",
+        "topic": "Science",
+        "level": "B1+",
+        "explanation": "The standard collocation is 'test a hypothesis'."
+      },
+      {
+        "id": 32,
+        "part": "B",
+        "type": "Phrasal Verb",
+        "question": "It took her a while to ______ the shock of the news that her flight had been cancelled.",
+        "options": [
+          "get over",
+          "get along",
+          "get through",
+          "get round"
+        ],
+        "answer": "A",
+        "skill": "Vocabulary",
+        "topic": "Daily Life",
+        "level": "B1+",
+        "explanation": "'Get over' means to recover from something difficult or disappointing."
+      },
+      {
+        "id": 33,
+        "part": "B",
+        "type": "Synonym",
+        "question": "The company's profits declined sharply after the new regulations were introduced. Which word is closest in meaning to 'declined'?",
+        "options": [
+          "increased",
+          "fell",
+          "stabilized",
+          "doubled"
+        ],
+        "answer": "B",
+        "skill": "Vocabulary",
+        "topic": "Business",
+        "level": "B1+",
+        "explanation": "'Declined' means decreased, which is closest to 'fell'."
+      },
+      {
+        "id": 34,
+        "part": "B",
+        "type": "Word Choice",
+        "question": "The spokesperson refused to ______ any further statements about the controversial decision.",
+        "options": [
+          "do",
+          "take",
+          "make",
+          "have"
+        ],
+        "answer": "C",
+        "skill": "Vocabulary",
+        "topic": "Communication",
+        "level": "B1+",
+        "explanation": "'Make a statement' is the correct fixed collocation."
+      },
+      {
+        "id": 35,
+        "part": "B",
+        "type": "Antonym",
+        "question": "The orientation programme for exchange students was surprisingly comprehensive, covering everything from housing to local customs. Which word is opposite in meaning to 'comprehensive'?",
+        "options": [
+          "thorough",
+          "detailed",
+          "extensive",
+          "limited"
+        ],
+        "answer": "D",
+        "skill": "Vocabulary",
+        "topic": "Erasmus",
+        "level": "B1+",
+        "explanation": "'Limited' means restricted in scope, the opposite of 'comprehensive'; the other options are synonyms."
+      },
+      {
+        "id": 36,
+        "part": "B",
+        "type": "Academic Vocabulary",
+        "question": "The paper's main ______ is that social media use negatively affects concentration.",
+        "options": [
+          "argument",
+          "arguing",
+          "argued",
+          "argumentative"
+        ],
+        "answer": "A",
+        "skill": "Vocabulary",
+        "topic": "Academic Life",
+        "level": "B1+",
+        "explanation": "A noun is needed after 'main'; 'argument' is the correct noun form."
+      },
+      {
+        "id": 37,
+        "part": "B",
+        "type": "Collocation",
+        "question": "Many cities are trying to ______ their carbon footprint by investing in public transport.",
+        "options": [
+          "low",
+          "lower",
+          "lowering",
+          "lowered"
+        ],
+        "answer": "B",
+        "skill": "Vocabulary",
+        "topic": "Environment",
+        "level": "B1+",
+        "explanation": "A base verb form is needed after 'to'; 'lower' collocates naturally with 'carbon footprint'."
+      },
+      {
+        "id": 38,
+        "part": "B",
+        "type": "Phrasal Verb",
+        "question": "The app developers had to ______ several bugs before the official release.",
+        "options": [
+          "hand out",
+          "work out",
+          "iron out",
+          "look out"
+        ],
+        "answer": "C",
+        "skill": "Vocabulary",
+        "topic": "Technology",
+        "level": "B1+",
+        "explanation": "'Iron out' means to resolve small problems or difficulties, which fits fixing bugs."
+      },
+      {
+        "id": 39,
+        "part": "B",
+        "type": "Vocabulary in Context",
+        "question": "Regular exercise can significantly boost both physical and mental well-being. What does 'boost' mean here?",
+        "options": [
+          "damage",
+          "measure",
+          "replace",
+          "improve"
+        ],
+        "answer": "D",
+        "skill": "Vocabulary",
+        "topic": "Health",
+        "level": "B1+",
+        "explanation": "'Boost' means to improve or increase something positively."
+      },
+      {
+        "id": 40,
+        "part": "B",
+        "type": "Word Choice",
+        "question": "The festival aims to ______ traditional music to a new generation of young people.",
+        "options": [
+          "introduce",
+          "induce",
+          "produce",
+          "reduce"
+        ],
+        "answer": "A",
+        "skill": "Vocabulary",
+        "topic": "Culture",
+        "level": "B1+",
+        "explanation": "'Introduce' means to present something to someone for the first time; the other options have unrelated meanings despite looking similar."
+      },
+      {
+        "id": 41,
+        "part": "B",
+        "type": "Synonym",
+        "question": "The new high-speed rail line has drastically cut travel time between the two cities. Which word is closest in meaning to 'drastically'?",
+        "options": [
+          "slightly",
+          "dramatically",
+          "occasionally",
+          "slowly"
+        ],
+        "answer": "B",
+        "skill": "Vocabulary",
+        "topic": "Transport",
+        "level": "B1+",
+        "explanation": "'Drastically' means to a great or extreme degree, which is closest to 'dramatically'."
+      },
+      {
+        "id": 42,
+        "part": "B",
+        "type": "Antonym",
+        "question": "The newspaper was criticized for publishing a biased account of the election. Which word is opposite in meaning to 'biased'?",
+        "options": [
+          "one-sided",
+          "subjective",
+          "objective",
+          "opinionated"
+        ],
+        "answer": "C",
+        "skill": "Vocabulary",
+        "topic": "Media",
+        "level": "B1+",
+        "explanation": "'Objective' means fair and not influenced by personal opinion, the opposite of 'biased'."
+      },
+      {
+        "id": 43,
+        "part": "B",
+        "type": "Collocation",
+        "question": "After the merger, hundreds of employees were made ______ due to restructuring.",
+        "options": [
+          "absent",
+          "unemployed",
+          "retired",
+          "redundant"
+        ],
+        "answer": "D",
+        "skill": "Vocabulary",
+        "topic": "Work",
+        "level": "B1+",
+        "explanation": "'Made redundant' is the standard collocation for losing a job due to restructuring or downsizing."
+      },
+      {
+        "id": 44,
+        "part": "B",
+        "type": "Phrasal Verb",
+        "question": "The organization decided to ______ its campaign after donations fell far short of the target.",
+        "options": [
+          "call off",
+          "call on",
+          "call up",
+          "call for"
+        ],
+        "answer": "A",
+        "skill": "Vocabulary",
+        "topic": "Society",
+        "level": "B1+",
+        "explanation": "'Call off' means to cancel something that had been planned."
+      },
+      {
+        "id": 45,
+        "part": "B",
+        "type": "Academic Vocabulary",
+        "question": "Social media algorithms often ______ users' existing opinions rather than exposing them to different viewpoints.",
+        "options": [
+          "reinforcement",
+          "reinforce",
+          "reinforcing",
+          "reinforced"
+        ],
+        "answer": "B",
+        "skill": "Vocabulary",
+        "topic": "Media",
+        "level": "B1+",
+        "explanation": "A base verb form is needed after 'often'; 'reinforce', meaning to strengthen, is correct."
+      },
+      {
+        "id": 46,
+        "part": "B",
+        "type": "Vocabulary in Context",
+        "question": "He tends to procrastinate when faced with a task he finds boring, leaving it until the very last moment. What does 'procrastinate' mean here?",
+        "options": [
+          "complete something quickly",
+          "forget something completely",
+          "delay doing something",
+          "enjoy doing something"
+        ],
+        "answer": "C",
+        "skill": "Vocabulary",
+        "topic": "Daily Life",
+        "level": "B1+",
+        "explanation": "'Procrastinate' means to delay or postpone doing something, especially something unpleasant."
+      },
+      {
+        "id": 47,
+        "part": "B",
+        "type": "Word Choice",
+        "question": "Travellers are advised to ______ their passports at least six months before the expiry date.",
+        "options": [
+          "review",
+          "revise",
+          "remind",
+          "renew"
+        ],
+        "answer": "D",
+        "skill": "Vocabulary",
+        "topic": "Travel",
+        "level": "B1+",
+        "explanation": "'Renew' means to extend the validity of something, such as a passport; the other options have unrelated meanings."
+      },
+      {
+        "id": 48,
+        "part": "B",
+        "type": "Synonym",
+        "question": "Adjusting to a completely different academic system abroad can be a daunting experience for new exchange students. Which word is closest in meaning to 'daunting'?",
+        "options": [
+          "intimidating",
+          "exciting",
+          "simple",
+          "enjoyable"
+        ],
+        "answer": "A",
+        "skill": "Vocabulary",
+        "topic": "Erasmus",
+        "level": "B1+",
+        "explanation": "'Daunting' means frightening or discouraging, which is closest to 'intimidating'."
+      },
+      {
+        "id": 49,
+        "part": "B",
+        "type": "Collocation",
+        "question": "Students who ______ attention in lectures often struggle to keep up with the course material.",
+        "options": [
+          "do not make",
+          "do not pay",
+          "do not take",
+          "do not hold"
+        ],
+        "answer": "B",
+        "skill": "Vocabulary",
+        "topic": "Academic Life",
+        "level": "B1+",
+        "explanation": "The standard collocation is 'pay attention'."
+      },
+      {
+        "id": 50,
+        "part": "B",
+        "type": "Phrasal Verb",
+        "question": "The start-up managed to ______ enough investors to launch its product on schedule.",
+        "options": [
+          "bring up",
+          "bring down",
+          "bring in",
+          "bring about"
+        ],
+        "answer": "C",
+        "skill": "Vocabulary",
+        "topic": "Business",
+        "level": "B1+",
+        "explanation": "'Bring in' means to attract or obtain something, such as investors or income."
+      },
+      {
+        "id": 51,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Main Idea",
+        "question": "What is the main idea of the passage?",
+        "options": [
+          "Classroom language instruction is completely useless.",
+          "Only children can successfully learn a new language.",
+          "Exchange students never improve their language skills abroad.",
+          "Language immersion can significantly improve practical language skills, especially combined with prior classroom knowledge."
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Main Idea",
+        "level": "B1+",
+        "explanation": "The passage argues immersion and classroom learning work best together, significantly improving practical ability."
+      },
+      {
+        "id": 52,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Specific Information",
+        "question": "According to the passage, what often happens to exchange students within a few months of immersion?",
+        "options": [
+          "Their speech becomes quicker and more natural, though not always perfect.",
+          "They stop speaking the local language altogether.",
+          "They forget the grammar rules they learned in the classroom.",
+          "They return home earlier than planned."
+        ],
+        "answer": "A",
+        "skill": "Reading",
+        "topic": "Specific Information",
+        "level": "B1+",
+        "explanation": "The passage states that hesitant speech gradually gives way to quicker, more natural, if occasionally imperfect, speech."
+      },
+      {
+        "id": 53,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Inference",
+        "question": "What can be inferred about students who have little prior knowledge of a language before an immersion experience?",
+        "options": [
+          "They will progress exactly as fast as students with a strong grammatical foundation.",
+          "They may progress more slowly than those with existing classroom knowledge.",
+          "They should avoid immersion programmes entirely.",
+          "They cannot learn the language under any circumstances."
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Inference",
+        "level": "B1+",
+        "explanation": "The passage states that students with a solid grammatical foundation generally progress faster than those with little prior knowledge."
+      },
+      {
+        "id": 54,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Vocabulary in Context",
+        "question": "What does 'advocates' mean in the second paragraph?",
+        "options": [
+          "critics",
+          "teachers",
+          "supporters",
+          "beginners"
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Vocabulary in Context",
+        "level": "B1+",
+        "explanation": "'Advocates' means people who support or argue in favor of something, in this case immersion learning."
+      },
+      {
+        "id": 55,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Reference",
+        "question": "In the sentence 'immersion sharpens and activates existing knowledge rather than creating it from nothing', what does 'it' refer to?",
+        "options": [
+          "Immersion",
+          "Classroom instruction",
+          "An exchange semester",
+          "Existing knowledge"
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Reference",
+        "level": "B1+",
+        "explanation": "'It' refers back to 'existing knowledge', which immersion sharpens rather than creates from scratch."
+      },
+      {
+        "id": 56,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Inference",
+        "question": "What does the passage suggest about students who spend their entire exchange semester only with English-speaking friends?",
+        "options": [
+          "They may not benefit as much from the immersion opportunity.",
+          "They will likely make the same language progress as other students.",
+          "They are following the ideal strategy recommended by researchers.",
+          "They will automatically become fluent regardless of their habits."
+        ],
+        "answer": "A",
+        "skill": "Reading",
+        "topic": "Inference",
+        "level": "B1+",
+        "explanation": "The passage warns against relying on being surrounded by English-speaking friends, implying such students miss out on immersion benefits."
+      },
+      {
+        "id": 57,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Best Title",
+        "question": "Which title best fits the passage?",
+        "options": [
+          "The Failure of Classroom Learning",
+          "Immersion: Turning Exposure into Fluency",
+          "Why Children Learn Faster Than Adults",
+          "The History of Language Teaching Methods"
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Best Title",
+        "level": "B1+",
+        "explanation": "The passage focuses on how immersion converts exposure to a language into practical fluency."
+      },
+      {
+        "id": 58,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Main Idea",
+        "question": "What is the main idea of the passage?",
+        "options": [
+          "Procrastination is always a sign of laziness that cannot be fixed.",
+          "Students should never take breaks while studying.",
+          "Procrastination is often an emotional response to discomfort, and understanding this can help manage it.",
+          "Procrastination has no real negative effects on anyone."
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Main Idea",
+        "level": "B1+",
+        "explanation": "The passage reframes procrastination as an emotional response that can be managed with practical adjustments."
+      },
+      {
+        "id": 59,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Specific Information",
+        "question": "According to the passage, what is the 'five-minute rule'?",
+        "options": [
+          "Taking a five-minute break every hour while studying",
+          "Limiting all assignments to five minutes of planning",
+          "Waiting five minutes before starting any new task",
+          "Committing to work on a dreaded task for five minutes, with permission to stop afterward"
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Specific Information",
+        "level": "B1+",
+        "explanation": "The passage defines the five-minute rule as committing to five minutes of work with permission to stop afterward."
+      },
+      {
+        "id": 60,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Cause/Effect",
+        "question": "According to the passage, what effect does postponing an anxiety-inducing task have in the short term?",
+        "options": [
+          "It temporarily relieves anxiety, which reinforces the behaviour.",
+          "It increases anxiety immediately.",
+          "It permanently removes the need to complete the task.",
+          "It has no emotional effect at all."
+        ],
+        "answer": "A",
+        "skill": "Reading",
+        "topic": "Cause/Effect",
+        "level": "B1+",
+        "explanation": "The passage explains that the relief from postponing is real, which is why the behaviour gets repeated."
+      },
+      {
+        "id": 61,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Vocabulary in Context",
+        "question": "What does 'chronic' mean in the context of procrastination described near the end of the passage?",
+        "options": [
+          "occasional and harmless",
+          "persistent and repeated over time",
+          "sudden and temporary",
+          "related to childhood"
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Vocabulary in Context",
+        "level": "B1+",
+        "explanation": "'Chronic' describes something persistent and ongoing, contrasted in the passage with an occasional postponed task."
+      },
+      {
+        "id": 62,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Inference",
+        "question": "What can be inferred about a student who easily starts large tasks they enjoy but delays small tasks they find uncomfortable?",
+        "options": [
+          "Task size is the main factor driving their procrastination.",
+          "They are simply lazy by nature.",
+          "Emotional discomfort, not task size, is likely driving their procrastination.",
+          "They never experience procrastination at all."
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Inference",
+        "level": "B1+",
+        "explanation": "The passage states that discomfort, not task size, more reliably predicts procrastination."
+      },
+      {
+        "id": 63,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Writer's Opinion",
+        "question": "What is the writer's suggested attitude for students who procrastinate?",
+        "options": [
+          "They should see it as a manageable emotional response rather than a character flaw.",
+          "They should view it as an unfixable personal flaw.",
+          "They should feel guilty and ashamed about it.",
+          "They should ignore the problem completely."
+        ],
+        "answer": "A",
+        "skill": "Reading",
+        "topic": "Writer's Opinion",
+        "level": "B1+",
+        "explanation": "The writer recommends seeing procrastination as an emotional response that can be managed, not a character flaw."
+      },
+      {
+        "id": 64,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Inference",
+        "question": "What does the passage suggest about occasional, brief procrastination?",
+        "options": [
+          "It is always seriously harmful and should be eliminated completely.",
+          "It is identical in effect to chronic procrastination.",
+          "It only happens to people with poor self-discipline.",
+          "It may sometimes be harmless or even occasionally beneficial."
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Inference",
+        "level": "B1+",
+        "explanation": "The passage notes that brief delays can occasionally allow for better decisions or creative insight."
+      },
+      {
+        "id": 65,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Main Idea",
+        "question": "What is the main idea of the passage?",
+        "options": [
+          "Renewable energy has already completely replaced fossil fuels worldwide.",
+          "Renewable energy faces real challenges, but most experts expect a gradual transition using a combination of technologies.",
+          "Fossil fuels are cheaper than renewable energy in every situation.",
+          "Battery storage has made the intermittency problem completely irrelevant."
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Main Idea",
+        "level": "B1+",
+        "explanation": "The passage presents both the challenges and progress of renewable energy, concluding the transition will likely be gradual and combined."
+      },
+      {
+        "id": 66,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Specific Information",
+        "question": "According to the passage, what is the 'intermittency problem'?",
+        "options": [
+          "The high manufacturing cost of solar panels",
+          "The difficulty of transporting fossil fuels",
+          "The mismatch between when renewable energy is available and when it is needed",
+          "The lack of government support for renewable energy"
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Specific Information",
+        "level": "B1+",
+        "explanation": "The passage defines intermittency as the mismatch between renewable energy availability and actual demand."
+      },
+      {
+        "id": 67,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Cause/Effect",
+        "question": "According to the passage, what has caused renewable energy to become cheaper in many regions?",
+        "options": [
+          "Government bans on fossil fuels",
+          "A sudden decrease in global energy demand",
+          "New taxes on coal and natural gas",
+          "Scaled-up manufacturing and improved technology"
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Cause/Effect",
+        "level": "B1+",
+        "explanation": "The passage attributes falling costs to manufacturing scaling up and technology improving."
+      },
+      {
+        "id": 68,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Vocabulary in Context",
+        "question": "What does 'prohibitively' mean in the phrase 'once dismissed as prohibitively expensive'?",
+        "options": [
+          "extremely, to the point of preventing something",
+          "slightly",
+          "reasonably",
+          "temporarily"
+        ],
+        "answer": "A",
+        "skill": "Reading",
+        "topic": "Vocabulary in Context",
+        "level": "B1+",
+        "explanation": "'Prohibitively expensive' means so expensive that it prevents something from happening."
+      },
+      {
+        "id": 69,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Inference",
+        "question": "What can be inferred about connecting electricity grids across wider geographic areas?",
+        "options": [
+          "It completely eliminates the need for any backup power.",
+          "It can help smooth out some of the variability in renewable energy supply.",
+          "It makes renewable energy more expensive overall.",
+          "It is only useful for fossil fuel plants."
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Inference",
+        "level": "B1+",
+        "explanation": "The passage states that connecting grids across regions can smooth out variability, since weather differs by location."
+      },
+      {
+        "id": 70,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Writer's Opinion",
+        "question": "What is the writer's overall approach to presenting this topic?",
+        "options": [
+          "Strongly biased in favor of fossil fuels only",
+          "Entirely dismissive of renewable energy's potential",
+          "Focused only on the financial profits of energy companies",
+          "Balanced, presenting both challenges and progress of renewable energy"
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Writer's Opinion",
+        "level": "B1+",
+        "explanation": "The writer presents cost progress, technical challenges, and expert consensus without taking an extreme position."
+      },
+      {
+        "id": 71,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Inference",
+        "question": "What does the passage suggest about the overall expert consensus on the energy transition?",
+        "options": [
+          "Experts agree it will happen suddenly within a year or two.",
+          "Experts believe fossil fuels will never be reduced at all.",
+          "Experts generally agree it will be gradual and involve multiple combined approaches.",
+          "Experts have no agreement on any aspect of the transition."
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Inference",
+        "level": "B1+",
+        "explanation": "The passage states most researchers agree the transition will be gradual and will combine several technologies."
+      },
+      {
+        "id": 72,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Reference",
+        "question": "In the final paragraph, what does 'that transition' refer to?",
+        "options": [
+          "The move away from fossil fuels toward renewable and combined energy sources",
+          "The invention of battery storage",
+          "The construction of new coal power plants",
+          "The debate about electricity grid design"
+        ],
+        "answer": "A",
+        "skill": "Reading",
+        "topic": "Reference",
+        "level": "B1+",
+        "explanation": "'That transition' refers to the overall shift away from fossil fuels discussed throughout the passage."
+      },
+      {
+        "id": 73,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Main Idea",
+        "question": "What is the main idea of the passage?",
+        "options": [
+          "Automation is mainly happening through dramatic, sudden job elimination.",
+          "Automation mostly works by gradually absorbing specific tasks within jobs rather than eliminating entire professions outright.",
+          "Automation has had no real effect on most jobs.",
+          "Automation only affects factory and manufacturing jobs."
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Main Idea",
+        "level": "B1+",
+        "explanation": "The passage argues automation mostly reshapes jobs by absorbing specific tasks, not eliminating whole professions."
+      },
+      {
+        "id": 74,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Specific Information",
+        "question": "According to the passage, what distinction do economists draw regarding automation?",
+        "options": [
+          "Factory automation versus office automation",
+          "Fast automation versus slow automation",
+          "Task automation versus job automation",
+          "National automation versus global automation"
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Specific Information",
+        "level": "B1+",
+        "explanation": "The passage describes economists distinguishing 'task automation' from 'job automation'."
+      },
+      {
+        "id": 75,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Vocabulary in Context",
+        "question": "What does 'anomalies' mean in the context of accounting software?",
+        "options": [
+          "routine transactions",
+          "employee salaries",
+          "tax deadlines",
+          "unusual or irregular items"
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Vocabulary in Context",
+        "level": "B1+",
+        "explanation": "'Anomalies' means things that deviate from what is normal or expected, i.e. unusual or irregular items."
+      },
+      {
+        "id": 76,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Inference",
+        "question": "What can be inferred about skills that resist easy automation?",
+        "options": [
+          "They are becoming less valuable in the job market.",
+          "They may offer better long-term job security than highly repetitive tasks.",
+          "They are no longer needed in any profession.",
+          "They can be fully replicated by current software."
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Inference",
+        "level": "B1+",
+        "explanation": "The passage suggests cultivating skills that resist automation may offer better long-term job security."
+      },
+      {
+        "id": 77,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Cause/Effect",
+        "question": "According to the passage, what is one effect of automating a customer service task such as checking an order status?",
+        "options": [
+          "The entire customer service job disappears completely.",
+          "Customers can no longer contact the company at all.",
+          "The human employee can focus on more complex tasks requiring judgment or empathy.",
+          "The company is required to hire more staff."
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Cause/Effect",
+        "level": "B1+",
+        "explanation": "The passage describes the employee being freed to handle complicated requests requiring empathy and judgment."
+      },
+      {
+        "id": 78,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Inference",
+        "question": "What does the passage suggest about who benefits financially from automation's efficiency gains?",
+        "options": [
+          "The gains always go directly to the remaining employees as higher wages.",
+          "The gains are evenly distributed by law in every country.",
+          "There are no financial gains from automation at all.",
+          "The gains do not automatically benefit workers and often go to profits or lower prices instead."
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Inference",
+        "level": "B1+",
+        "explanation": "The passage states that efficiency savings often flow to company profits or lower prices rather than to workers."
+      },
+      {
+        "id": 79,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Writer's Opinion",
+        "question": "What is the writer's view of framing automation as a simple 'robots take all jobs or nothing changes' debate?",
+        "options": [
+          "The writer considers this framing accurate and helpful.",
+          "The writer considers this framing a misrepresentation of a more gradual, complex reality.",
+          "The writer refuses to take any position on the framing.",
+          "The writer believes this framing understates the dangers of automation."
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Writer's Opinion",
+        "level": "B1+",
+        "explanation": "The writer explicitly states that this binary framing badly misrepresents the gradual, piecemeal reality of automation."
+      },
+      {
+        "id": 80,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Best Title",
+        "question": "Which title best fits the passage?",
+        "options": [
+          "The End of Human Labor",
+          "Why Robots Will Never Replace Humans",
+          "The Complete History of Factory Automation",
+          "How Automation Quietly Reshapes Jobs, Task by Task"
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Best Title",
+        "level": "B1+",
+        "explanation": "The passage's central theme is the gradual, task-by-task reshaping of jobs through automation."
+      }
+    ],
+    "passages": [
+      {
+        "id": "p1",
+        "title": "Learning a Language Through Immersion",
+        "theme": "Erasmus / Education",
+        "length": "short",
+        "text": "Anyone who has tried to learn a foreign language purely from textbooks knows the frustration of understanding grammar rules perfectly while still struggling to order a coffee in the actual language. This gap between theoretical knowledge and practical ability is exactly what language immersion programmes are designed to close.\n\nImmersion involves surrounding learners with the target language almost constantly, ideally by living in a country where it is spoken, rather than studying it for a few scheduled hours each week. Advocates argue that this approach mirrors how children acquire their first language: through constant exposure and necessity, rather than through memorized rules.\n\nFor university exchange students, a semester abroad often functions as an unplanned immersion experiment. Many arrive with several years of formal classroom instruction behind them, yet find themselves unable to follow a fast conversation at a local market. Within a few months, however, something shifts. Hesitant, grammatically careful sentences gradually give way to quicker, more natural, if occasionally imperfect, speech.\n\nResearchers who study second language acquisition point to a few likely reasons for this change. First, immersion forces learners to communicate despite imperfect knowledge, since waiting for a perfectly correct sentence is simply not practical in a real conversation. Second, constant exposure provides far more input than any classroom could offer, allowing the brain to notice patterns that formal lessons might present only briefly. Third, and perhaps most importantly, immersion attaches language to genuine need: asking for directions when lost is a far stronger motivator than completing a workbook exercise.\n\nNone of this means that classroom instruction becomes useless once immersion begins. Students who arrive abroad with a solid grammatical foundation generally progress faster than those with little prior knowledge, since immersion sharpens and activates existing knowledge rather than creating it from nothing. The two approaches, in other words, appear to work best in combination rather than in competition.\n\nFor students considering an exchange semester partly to improve their language skills, the message from research seems encouraging but also realistic: significant progress is likely, but it depends on genuinely engaging with the language outside the classroom, rather than relying on being surrounded by English-speaking friends for the entire stay."
+      },
+      {
+        "id": "p2",
+        "title": "The Psychology of Procrastination",
+        "theme": "Psychology / Academic Life",
+        "length": "medium",
+        "text": "Almost everyone has postponed an important task at some point, choosing instead to clean a kitchen that did not particularly need cleaning or to scroll through a phone for reasons that are hard to explain afterward. For university students facing deadlines, this pattern, known as procrastination, can feel like a simple lack of willpower. Psychologists studying the behaviour, however, argue that something more complicated is usually going on.\n\nRather than being purely about laziness, procrastination is often linked to how people manage uncomfortable emotions. A task that feels overwhelming, boring, or likely to reveal weaknesses in one's own ability can trigger anxiety, and putting the task off, at least temporarily, relieves that anxiety. The relief is real, which is exactly why the behaviour gets repeated: it works, in the short term, even though it usually makes things considerably worse later on.\n\nThis emotional explanation helps account for a pattern many students notice in themselves: they rarely procrastinate on tasks they enjoy or feel confident about, no matter how large those tasks are, yet they can delay a short, simple task for days if it makes them feel anxious or inadequate. The size of a task, in other words, predicts procrastination far less reliably than the discomfort associated with starting it.\n\nSeveral strategies researchers recommend focus on reducing this initial discomfort rather than simply demanding more self-discipline. Breaking an overwhelming assignment into much smaller, clearly defined steps can make the very first action feel less threatening. Some psychologists also recommend what they call the 'five-minute rule': committing to work on a dreaded task for just five minutes, with permission to stop afterward if it still feels unbearable. In practice, the hardest part is almost always starting, and once begun, many people find it easier to continue than they expected.\n\nInterestingly, a small amount of procrastination does not appear to be harmful, and some research even suggests that brief delays can occasionally allow for better decision-making or unexpected creative insight. The real problem, researchers emphasize, is chronic procrastination that consistently damages someone's work, health, or relationships, not an occasional postponed task.\n\nFor students who recognize this pattern in themselves, the most useful shift may be abandoning the idea that procrastination reflects a personal character flaw. Seeing it instead as an emotional response to a specific task, one that can be managed with small, practical adjustments, tends to be both more accurate and considerably less discouraging."
+      },
+      {
+        "id": "p3",
+        "title": "Can Renewable Energy Really Replace Fossil Fuels?",
+        "theme": "Environment",
+        "length": "medium",
+        "text": "Few topics generate as much heated discussion as the question of whether renewable energy sources, such as solar and wind power, can realistically replace fossil fuels on a global scale. Supporters point to rapidly falling costs and record-breaking installations; skeptics point to the enormous scale of existing energy demand and the practical challenges of meeting it reliably with sources that depend on the weather.\n\nThe cost argument has shifted considerably over the past decade. Solar panels and wind turbines, once dismissed as prohibitively expensive compared with coal or natural gas, have become dramatically cheaper as manufacturing has scaled up and technology has improved. In many regions, building new renewable capacity is now cheaper than building new fossil fuel plants, a development that would have seemed unlikely only fifteen years ago.\n\nHowever, cost is only part of the story. Solar panels generate no electricity at night, and wind turbines produce little power on calm days, creating a fundamental mismatch between when renewable energy is available and when people actually need electricity. This intermittency problem is often cited as the central technical obstacle to full reliance on renewables.\n\nBattery storage technology is frequently proposed as the solution, allowing excess energy generated during sunny or windy periods to be saved for use later. Battery costs have fallen substantially, mirroring the earlier trajectory of solar panels, and large-scale storage projects are now operating in several countries. Even so, storing enough energy to cover an entire region through several consecutive cloudy, windless days remains technically difficult and expensive at the scale required by large cities.\n\nOther approaches aim to work around intermittency rather than solve it directly. Connecting electricity grids across wider geographic areas means that when it is calm in one region, it might be windy in another, smoothing out some of the variability. Keeping a smaller number of flexible backup power sources available for periods of especially high demand or low renewable output is another commonly proposed strategy, though debate continues about what those backup sources should be.\n\nWhat most energy researchers appear to agree on, despite their disagreements over the details, is that the transition away from fossil fuels will likely be gradual rather than sudden, and will probably involve a combination of renewable generation, improved storage, smarter electricity grids, and, for some years yet, a reduced but not entirely eliminated role for traditional power sources. The debate, in other words, may not really be about whether renewables can eventually dominate the energy system, but about how quickly, and through what combination of technologies, that transition can realistically happen."
+      },
+      {
+        "id": "p4",
+        "title": "The Quiet Rise of Automation in Everyday Jobs",
+        "theme": "Technology / Work",
+        "length": "long",
+        "text": "When people imagine automation taking over jobs, many picture dramatic scenes from science fiction: factories run entirely by robots, or self-driving trucks replacing long-haul drivers overnight. The reality unfolding in most workplaces today is considerably less dramatic, but arguably just as significant. Automation is advancing less through sudden, visible replacement and more through a slow, almost invisible absorption of specific tasks within jobs that otherwise continue to exist.\n\nConsider a customer service representative at a mid-sized company. A decade ago, this employee might have personally handled every single phone call and email that came in, regardless of how routine the request. Today, a chatbot or automated system often handles straightforward questions, such as checking an order status, freeing the human employee to focus on complicated complaints, unusual requests, or situations requiring empathy and judgment that current automated systems still struggle with. The job has not disappeared; it has been quietly reshaped.\n\nThis pattern, described by economists as 'task automation' rather than 'job automation', appears to be far more common than the complete elimination of entire professions. Accountants increasingly rely on software that automatically categorizes transactions and flags anomalies, a task that previously consumed hours of manual checking. Doctors use diagnostic software that can flag potential concerns in medical scans faster than the human eye alone, though final decisions and patient communication remain firmly human responsibilities. Lawyers use document review software capable of scanning thousands of pages for relevant clauses in minutes rather than days.\n\nIn each of these cases, the underlying job survives, but its content shifts, often toward responsibilities that require precisely the skills current technology struggles to replicate: nuanced judgment, emotional intelligence, creative problem-solving, and the ability to handle situations that do not fit neatly into existing categories or patterns. This has significant implications for how students and workers might think about preparing for their careers. Memorizing procedures or performing highly repetitive, predictable tasks, the kind of work automation handles increasingly well, may offer less long-term job security than cultivating skills that resist easy automation.\n\nNone of this means the transition is painless. Workers whose roles consist almost entirely of tasks now being automated face genuine and serious disruption, and retraining is neither quick nor guaranteed to succeed for everyone affected. Critics rightly point out that economic analyses describing automation in reassuringly abstract terms, tasks shifting rather than jobs disappearing, can understate the real difficulty faced by specific individuals whose particular combination of skills becomes suddenly less valuable in the job market, sometimes with little advance warning and limited support for adjustment.\n\nThere is also a less discussed question of who benefits financially from these efficiency gains. When a task is automated, the resulting savings in time and labour costs do not automatically flow to the remaining workers in the form of higher wages or reduced hours; in many cases, the benefit flows primarily to company profits or lower prices for customers, while employees are simply expected to accomplish more within the same working hours.\n\nWhat seems reasonably clear is that framing the conversation as a simple binary, either robots take all the jobs or nothing changes at all, badly misrepresents what is actually happening across most industries. The more accurate, if less dramatic, story is one of constant, piecemeal adjustment: specific tasks shifting to machines, job descriptions quietly being rewritten around what remains, and workers facing an ongoing, uneven pressure to develop skills that complement rather than compete with automated systems."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Deneme 5",
+    "level": "B2 (başlangıç)",
+    "duration": 150,
+    "questionCount": 80,
+    "questions": [
+      {
+        "id": 1,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "She ______ in three different countries, but she has never felt as at home as she does in Istanbul.",
+        "options": [
+          "has lived",
+          "lived",
+          "is living",
+          "was living"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Present Perfect",
+        "level": "B2",
+        "explanation": "An experience that remains relevant to the present (contrasted with 'has never felt') requires the present perfect: has lived."
+      },
+      {
+        "id": 2,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "By the time the ambulance arrived, the injured hiker ______ for almost two hours.",
+        "options": [
+          "waited",
+          "had waited",
+          "has waited",
+          "was waiting"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Past Perfect",
+        "level": "B2",
+        "explanation": "An action continuing up to another past point requires the past perfect: had waited."
+      },
+      {
+        "id": 3,
+        "part": "A",
+        "type": "Situation-based Question",
+        "question": "Situation: The lecture hall lights were off and the door was locked when Mert arrived at 9:05, even though the class was supposed to start at 9:00. Which best expresses what probably happened?",
+        "options": [
+          "The class can have been cancelled.",
+          "The class should be cancelled.",
+          "The class must have been cancelled.",
+          "The class will have been cancelled."
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Modal Verbs",
+        "level": "B2",
+        "explanation": "'Must have been' expresses a confident deduction about a past situation based on evidence."
+      },
+      {
+        "id": 4,
+        "part": "A",
+        "type": "Cloze Test",
+        "question": "If she hadn't missed her connecting flight, she ______ at the conference right now.",
+        "options": [
+          "would have been",
+          "will be",
+          "had been",
+          "would be"
+        ],
+        "answer": "D",
+        "skill": "Grammar",
+        "topic": "Conditionals",
+        "level": "B2",
+        "explanation": "A past condition with a present result requires a mixed conditional: past perfect in the if-clause, 'would + base verb' in the result clause."
+      },
+      {
+        "id": 5,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "The new policy, ______ was announced without any warning, caused considerable confusion among staff.",
+        "options": [
+          "which",
+          "that",
+          "who",
+          "whose"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Relative Clauses",
+        "level": "B2",
+        "explanation": "A non-defining relative clause describing a whole situation uses 'which', not 'that'; the commas signal extra, non-essential information."
+      },
+      {
+        "id": 6,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "______ makes the proposal particularly risky is that it depends entirely on unpredictable funding.",
+        "options": [
+          "That",
+          "What",
+          "Which",
+          "It"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Noun Clauses",
+        "level": "B2",
+        "explanation": "'What' introduces a noun clause functioning as the subject, meaning 'the thing that'."
+      },
+      {
+        "id": 7,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "She stopped ______ coffee last year because it was affecting her sleep.",
+        "options": [
+          "to drink",
+          "drink",
+          "drinking",
+          "drunk"
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Gerunds",
+        "level": "B2",
+        "explanation": "'Stop + gerund' means to cease an activity entirely; 'stop + infinitive' would mean pausing in order to do something else."
+      },
+      {
+        "id": 8,
+        "part": "A",
+        "type": "Structure Recognition",
+        "question": "He paused ______ his notes before continuing the presentation.",
+        "options": [
+          "checking",
+          "check",
+          "checked",
+          "to check"
+        ],
+        "answer": "D",
+        "skill": "Grammar",
+        "topic": "Infinitives",
+        "level": "B2",
+        "explanation": "'Pause + infinitive' describes interrupting one action in order to do another: paused to check."
+      },
+      {
+        "id": 9,
+        "part": "A",
+        "type": "Error Identification",
+        "question": "Scientists agree that (A) the climate change is (B) one of (C) the most serious challenges (D) facing humanity.",
+        "options": [
+          "the climate change is",
+          "one of",
+          "the most serious challenges",
+          "facing humanity"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Articles",
+        "level": "B2",
+        "explanation": "General abstract concepts like 'climate change' take no article: climate change, not the climate change."
+      },
+      {
+        "id": 10,
+        "part": "A",
+        "type": "Dialogue Completion",
+        "question": "A: Did either of the applicants meet the requirements?\nB: ______ of them did, unfortunately, so the position remains open.",
+        "options": [
+          "Neither",
+          "Both",
+          "Either",
+          "All"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Determiners",
+        "level": "B2",
+        "explanation": "'Neither' expresses a negative meaning ('not one nor the other'), matching 'unfortunately' and 'remains open'."
+      },
+      {
+        "id": 11,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "______ research has been published on this rare condition, so doctors must rely largely on individual case studies.",
+        "options": [
+          "Few",
+          "Little",
+          "Many",
+          "A few"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Quantifiers",
+        "level": "B2",
+        "explanation": "'Research' is uncountable, and the context signals a small amount, so 'little' is correct."
+      },
+      {
+        "id": 12,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "The committee's decision was ultimately consistent ______ the recommendations of the external reviewers.",
+        "options": [
+          "to",
+          "for",
+          "with",
+          "on"
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Prepositions",
+        "level": "B2",
+        "explanation": "The fixed expression is 'consistent with'."
+      },
+      {
+        "id": 13,
+        "part": "A",
+        "type": "Cloze Test",
+        "question": "______ many critics predicted its failure, the new policy has so far produced encouraging results.",
+        "options": [
+          "Despite",
+          "Because",
+          "Unless",
+          "Although"
+        ],
+        "answer": "D",
+        "skill": "Grammar",
+        "topic": "Conjunctions",
+        "level": "B2",
+        "explanation": "'Although' introduces a contrast clause with a full subject and verb; 'despite' would require a noun phrase instead."
+      },
+      {
+        "id": 14,
+        "part": "A",
+        "type": "Sentence Completion with Connectors",
+        "question": "The data had clearly been manipulated; ______, the journal retracted the entire study.",
+        "options": [
+          "as a result",
+          "nevertheless",
+          "on the other hand",
+          "in contrast"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Linking Words",
+        "level": "B2",
+        "explanation": "'As a result' shows that the retraction was a direct consequence of the manipulated data."
+      },
+      {
+        "id": 15,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "______ complex the algorithm becomes, the harder it is for researchers to explain its decisions.",
+        "options": [
+          "More",
+          "The more",
+          "The most",
+          "As more"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Comparatives",
+        "level": "B2",
+        "explanation": "The correlative structure 'the more..., the more/harder...' expresses a proportional relationship."
+      },
+      {
+        "id": 16,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "This is one of ______ ethical dilemmas modern medicine has had to confront.",
+        "options": [
+          "more difficult",
+          "most difficult",
+          "the most difficult",
+          "as difficult as"
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Superlatives",
+        "level": "B2",
+        "explanation": "'One of the + superlative + plural noun' is the correct structure: one of the most difficult dilemmas."
+      },
+      {
+        "id": 17,
+        "part": "A",
+        "type": "Error Identification",
+        "question": "The results were (A) presented (B) in a clear and (C) concisely manner, (D) impressing the entire panel.",
+        "options": [
+          "presented",
+          "in a clear and",
+          "concisely manner",
+          "impressing the entire panel"
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Adjectives and Adverbs",
+        "level": "B2",
+        "explanation": "A noun ('manner') must be modified by an adjective, not an adverb: a clear and concise manner."
+      },
+      {
+        "id": 18,
+        "part": "A",
+        "type": "Dialogue Completion",
+        "question": "A: What did the inspector conclude?\nB: She said that the building ______ renovated before it could be reopened to the public.",
+        "options": [
+          "must be",
+          "must have been",
+          "has to be",
+          "had to be"
+        ],
+        "answer": "D",
+        "skill": "Grammar",
+        "topic": "Reported Speech",
+        "level": "B2",
+        "explanation": "In reported speech, 'must' expressing obligation typically shifts to 'had to' after a past reporting verb."
+      },
+      {
+        "id": 19,
+        "part": "A",
+        "type": "Structure Recognition",
+        "question": "The technician ______ the printer to work properly after replacing a part.",
+        "options": [
+          "got",
+          "made",
+          "had",
+          "let"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Causatives",
+        "level": "B2",
+        "explanation": "'Get + object + to + infinitive' is the correct causative pattern; 'make', 'have', and 'let' are followed by the bare infinitive, not 'to + infinitive'."
+      },
+      {
+        "id": 20,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "Economics ______ one of the most popular elective courses among exchange students.",
+        "options": [
+          "are",
+          "is",
+          "have been",
+          "were"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Subject-Verb Agreement",
+        "level": "B2",
+        "explanation": "Names of academic subjects ending in '-ics', such as economics, are treated as singular: is."
+      },
+      {
+        "id": 21,
+        "part": "A",
+        "type": "Situation-based Question",
+        "question": "Situation: Deniz cannot speak French, and she is now living in Paris for her exchange semester. Which sentence expresses her wish about this ability?",
+        "options": [
+          "I wish I can speak French.",
+          "I wish I spoke French.",
+          "I wish I could speak French.",
+          "If only I would speak French."
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Wish / If Only",
+        "level": "B2",
+        "explanation": "'Wish + could' is used specifically to express a wish about a present ability, matching the context directly."
+      },
+      {
+        "id": 22,
+        "part": "A",
+        "type": "Structure Recognition",
+        "question": "Students ______ in the exchange programme must submit their applications by March 1st.",
+        "options": [
+          "interesting",
+          "who interest",
+          "are interested",
+          "interested"
+        ],
+        "answer": "D",
+        "skill": "Grammar",
+        "topic": "Participles",
+        "level": "B2",
+        "explanation": "A reduced relative clause with a passive meaning uses the past participle: students (who are) interested."
+      },
+      {
+        "id": 23,
+        "part": "A",
+        "type": "Dialogue Completion",
+        "question": "A: Look at those dark clouds over the stadium.\nB: It ______ before the match even starts.",
+        "options": [
+          "is going to rain",
+          "will rain",
+          "rains",
+          "is raining"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Future Forms",
+        "level": "B2",
+        "explanation": "'Be going to' is used for a prediction based on present evidence, such as visible dark clouds."
+      },
+      {
+        "id": 24,
+        "part": "A",
+        "type": "Cloze Test",
+        "question": "If the construction continues at this pace, the new campus building ______ before the start of the next academic year.",
+        "options": [
+          "will finish",
+          "will have been finished",
+          "finishes",
+          "is finished"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Future Perfect",
+        "level": "B2",
+        "explanation": "The future perfect passive describes an action expected to be completed before a future point: will have been finished."
+      },
+      {
+        "id": 25,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "While most passengers ______ patiently, one man began arguing loudly with the gate staff about the delay.",
+        "options": [
+          "waited",
+          "have waited",
+          "were waiting",
+          "wait"
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Past Continuous",
+        "level": "B2",
+        "explanation": "The background, ongoing action is expressed with the past continuous, while the interrupting main event uses the past simple."
+      },
+      {
+        "id": 26,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "Correlation ______ necessarily imply causation, a distinction many beginner researchers overlook.",
+        "options": [
+          "is not",
+          "has not",
+          "will not",
+          "does not"
+        ],
+        "answer": "D",
+        "skill": "Grammar",
+        "topic": "Present Simple",
+        "level": "B2",
+        "explanation": "A general, timeless truth about research methodology requires the present simple negative: does not."
+      },
+      {
+        "id": 27,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "More and more universities ______ their lectures online, even after the pandemic has ended.",
+        "options": [
+          "are recording",
+          "record",
+          "have recorded",
+          "recorded"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Present Continuous",
+        "level": "B2",
+        "explanation": "The present continuous can describe a developing or changing trend over a current period of time: are recording."
+      },
+      {
+        "id": 28,
+        "part": "A",
+        "type": "Dialogue Completion",
+        "question": "A: Why does the lab look so empty?\nB: The department ______ to a new building across campus last month.",
+        "options": [
+          "moves",
+          "moved",
+          "has moved",
+          "was moving"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Past Simple",
+        "level": "B2",
+        "explanation": "A completed action at a specific past time ('last month') requires the past simple: moved."
+      },
+      {
+        "id": 29,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "The ancient manuscript ______ by a graduate student while cataloguing the university archive.",
+        "options": [
+          "discovered",
+          "has discovered",
+          "was discovered",
+          "discovers"
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Passive Voice",
+        "level": "B2",
+        "explanation": "The manuscript receives the action, so the passive form is natural: was discovered."
+      },
+      {
+        "id": 30,
+        "part": "A",
+        "type": "Functional Language",
+        "question": "Situation: You want to suggest an alternative plan to your study group without sounding like you are rejecting their idea completely. Which is most appropriate?",
+        "options": [
+          "Your plan is wrong; we should do mine instead.",
+          "Forget your plan, let's do something else.",
+          "I don't like your plan at all.",
+          "What if we combined your idea with a slightly different approach?"
+        ],
+        "answer": "D",
+        "skill": "Grammar",
+        "topic": "Functional Language",
+        "level": "B2",
+        "explanation": "'What if we combined...' softly proposes an alternative without dismissing the group's original idea."
+      },
+      {
+        "id": 31,
+        "part": "B",
+        "type": "Collocation",
+        "question": "The team's findings ______ serious doubt on the previous theory, prompting further investigation.",
+        "options": [
+          "cast",
+          "throw",
+          "make",
+          "put"
+        ],
+        "answer": "A",
+        "skill": "Vocabulary",
+        "topic": "Science",
+        "level": "B2",
+        "explanation": "The fixed collocation is 'cast doubt on'."
+      },
+      {
+        "id": 32,
+        "part": "B",
+        "type": "Phrasal Verb",
+        "question": "The government has pledged to ______ extreme poverty within the next decade.",
+        "options": [
+          "stamp down",
+          "stamp out",
+          "root up",
+          "wipe over"
+        ],
+        "answer": "B",
+        "skill": "Vocabulary",
+        "topic": "Society",
+        "level": "B2",
+        "explanation": "'Stamp out' means to eliminate something completely, such as poverty or corruption."
+      },
+      {
+        "id": 33,
+        "part": "B",
+        "type": "Synonym",
+        "question": "The treatment proved remarkably efficacious in clinical trials. Which word is closest in meaning to 'efficacious'?",
+        "options": [
+          "expensive",
+          "experimental",
+          "effective",
+          "risky"
+        ],
+        "answer": "C",
+        "skill": "Vocabulary",
+        "topic": "Health",
+        "level": "B2",
+        "explanation": "'Efficacious' means producing the intended result, which is closest to 'effective'."
+      },
+      {
+        "id": 34,
+        "part": "B",
+        "type": "Word Choice",
+        "question": "Her dissertation makes a compelling ______ for reforming the current grading system.",
+        "options": [
+          "cause",
+          "reason",
+          "point",
+          "case"
+        ],
+        "answer": "D",
+        "skill": "Vocabulary",
+        "topic": "Academic Life",
+        "level": "B2",
+        "explanation": "'Make a case for' is the standard idiomatic expression meaning to argue persuasively for something."
+      },
+      {
+        "id": 35,
+        "part": "B",
+        "type": "Antonym",
+        "question": "The merger led to a substantial increase in the company's market share. Which word is opposite in meaning to 'substantial'?",
+        "options": [
+          "negligible",
+          "significant",
+          "considerable",
+          "notable"
+        ],
+        "answer": "A",
+        "skill": "Vocabulary",
+        "topic": "Business",
+        "level": "B2",
+        "explanation": "'Negligible' means too small to be significant, the opposite of 'substantial'."
+      },
+      {
+        "id": 36,
+        "part": "B",
+        "type": "Academic Vocabulary",
+        "question": "The study's ______ were limited by a relatively small sample size.",
+        "options": [
+          "finding",
+          "findings",
+          "found",
+          "finds"
+        ],
+        "answer": "B",
+        "skill": "Vocabulary",
+        "topic": "Education",
+        "level": "B2",
+        "explanation": "The plural noun 'findings', meaning the results of a study, is required here."
+      },
+      {
+        "id": 37,
+        "part": "B",
+        "type": "Collocation",
+        "question": "Several coastal cities are at risk of being submerged as sea levels continue to ______.",
+        "options": [
+          "raise",
+          "arise",
+          "rise",
+          "rouse"
+        ],
+        "answer": "C",
+        "skill": "Vocabulary",
+        "topic": "Environment",
+        "level": "B2",
+        "explanation": "'Rise' is intransitive, used for something going up on its own, which fits 'sea levels'."
+      },
+      {
+        "id": 38,
+        "part": "B",
+        "type": "Phrasal Verb",
+        "question": "The company had to ______ the product launch after discovering a serious security flaw.",
+        "options": [
+          "hold up",
+          "hold on",
+          "hold out",
+          "hold off"
+        ],
+        "answer": "D",
+        "skill": "Vocabulary",
+        "topic": "Technology",
+        "level": "B2",
+        "explanation": "'Hold off' means to delay or postpone an action."
+      },
+      {
+        "id": 39,
+        "part": "B",
+        "type": "Vocabulary in Context",
+        "question": "The drug's side effects were negligible compared to its clear benefits. What does 'negligible' mean here?",
+        "options": [
+          "too small to matter",
+          "severe",
+          "completely unknown",
+          "extremely common"
+        ],
+        "answer": "A",
+        "skill": "Vocabulary",
+        "topic": "Health",
+        "level": "B2",
+        "explanation": "'Negligible' means so small that it is not worth considering."
+      },
+      {
+        "id": 40,
+        "part": "B",
+        "type": "Word Choice",
+        "question": "The novel offers a nuanced ______ of life under occupation, avoiding simple heroes and villains.",
+        "options": [
+          "portray",
+          "portrayal",
+          "portraying",
+          "portrayed"
+        ],
+        "answer": "B",
+        "skill": "Vocabulary",
+        "topic": "Culture",
+        "level": "B2",
+        "explanation": "A noun is needed after 'nuanced'; 'portrayal' is the correct noun form."
+      },
+      {
+        "id": 41,
+        "part": "B",
+        "type": "Synonym",
+        "question": "His argument, though persuasive, relied on a somewhat dubious interpretation of the data. Which word is closest in meaning to 'dubious'?",
+        "options": [
+          "certain",
+          "accurate",
+          "questionable",
+          "detailed"
+        ],
+        "answer": "C",
+        "skill": "Vocabulary",
+        "topic": "Communication",
+        "level": "B2",
+        "explanation": "'Dubious' means doubtful or questionable."
+      },
+      {
+        "id": 42,
+        "part": "B",
+        "type": "Antonym",
+        "question": "The policy was criticized for disproportionately affecting marginalized communities. Which word is opposite in meaning to 'marginalized'?",
+        "options": [
+          "excluded",
+          "overlooked",
+          "disadvantaged",
+          "privileged"
+        ],
+        "answer": "D",
+        "skill": "Vocabulary",
+        "topic": "Society",
+        "level": "B2",
+        "explanation": "'Privileged' means having special advantages, the opposite of 'marginalized'."
+      },
+      {
+        "id": 43,
+        "part": "B",
+        "type": "Collocation",
+        "question": "She was finally offered a permanent contract after years of ______ employment.",
+        "options": [
+          "precarious",
+          "stable",
+          "secure",
+          "guaranteed"
+        ],
+        "answer": "A",
+        "skill": "Vocabulary",
+        "topic": "Work",
+        "level": "B2",
+        "explanation": "'Precarious employment' is a common collocation meaning insecure, unstable work."
+      },
+      {
+        "id": 44,
+        "part": "B",
+        "type": "Phrasal Verb",
+        "question": "Due to the volcanic ash cloud, dozens of flights were ______ at the last minute.",
+        "options": [
+          "carried out",
+          "called off",
+          "taken over",
+          "given up"
+        ],
+        "answer": "B",
+        "skill": "Vocabulary",
+        "topic": "Travel",
+        "level": "B2",
+        "explanation": "'Called off' means cancelled."
+      },
+      {
+        "id": 45,
+        "part": "B",
+        "type": "Academic Vocabulary",
+        "question": "The article's ______ tone made it difficult to determine whether the writer supported or opposed the policy.",
+        "options": [
+          "ambiguity",
+          "ambiguously",
+          "ambiguous",
+          "ambiguousness"
+        ],
+        "answer": "C",
+        "skill": "Vocabulary",
+        "topic": "Media",
+        "level": "B2",
+        "explanation": "An adjective is needed to modify 'tone'; 'ambiguous' is correct."
+      },
+      {
+        "id": 46,
+        "part": "B",
+        "type": "Vocabulary in Context",
+        "question": "He has a tendency to exaggerate minor inconveniences, turning a small delay into a major catastrophe. What does 'exaggerate' mean here?",
+        "options": [
+          "ignore",
+          "solve quickly",
+          "explain clearly",
+          "make something seem larger or worse than it is"
+        ],
+        "answer": "D",
+        "skill": "Vocabulary",
+        "topic": "Daily Life",
+        "level": "B2",
+        "explanation": "'Exaggerate' means to represent something as more significant than it actually is."
+      },
+      {
+        "id": 47,
+        "part": "B",
+        "type": "Word Choice",
+        "question": "The examiner found several ______ in the candidate's argument that undermined its overall validity.",
+        "options": [
+          "flaws",
+          "flaw",
+          "flawed",
+          "flawless"
+        ],
+        "answer": "A",
+        "skill": "Vocabulary",
+        "topic": "Academic Life",
+        "level": "B2",
+        "explanation": "The plural noun 'flaws' (weaknesses) is required after 'several'."
+      },
+      {
+        "id": 48,
+        "part": "B",
+        "type": "Synonym",
+        "question": "Many exchange students initially feel somewhat isolated before gradually building a new social circle. Which word is closest in meaning to 'isolated'?",
+        "options": [
+          "connected",
+          "alone",
+          "excited",
+          "confused"
+        ],
+        "answer": "B",
+        "skill": "Vocabulary",
+        "topic": "Erasmus",
+        "level": "B2",
+        "explanation": "'Isolated' means cut off from others, which is closest to 'alone'."
+      },
+      {
+        "id": 49,
+        "part": "B",
+        "type": "Collocation",
+        "question": "The researchers had to ______ for several confounding variables before drawing any conclusions.",
+        "options": [
+          "count",
+          "amount",
+          "account",
+          "discount"
+        ],
+        "answer": "C",
+        "skill": "Vocabulary",
+        "topic": "Science",
+        "level": "B2",
+        "explanation": "'Account for' means to take something into consideration, especially when analyzing data."
+      },
+      {
+        "id": 50,
+        "part": "B",
+        "type": "Phrasal Verb",
+        "question": "The start-up eventually had to ______ due to a lack of investment.",
+        "options": [
+          "turn down",
+          "break down",
+          "close in",
+          "shut down"
+        ],
+        "answer": "D",
+        "skill": "Vocabulary",
+        "topic": "Business",
+        "level": "B2",
+        "explanation": "'Shut down' means to stop operating completely, which fits a company failing due to lack of investment."
+      },
+      {
+        "id": 51,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Main Idea",
+        "question": "What is the main idea of the passage?",
+        "options": [
+          "Group work creates real challenges around coordination and fairness, even though it may teach valuable collaborative skills.",
+          "Group projects are always more enjoyable than individual exams.",
+          "Lecturers have completely solved the problem of unequal contribution.",
+          "Students should never be assigned group projects."
+        ],
+        "answer": "A",
+        "skill": "Reading",
+        "topic": "Main Idea",
+        "level": "B2",
+        "explanation": "The passage discusses coordination and fairness challenges in group work while acknowledging its potential collaborative value."
+      },
+      {
+        "id": 52,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Specific Information",
+        "question": "According to the passage, what measure do some lecturers now use to address uneven contribution?",
+        "options": [
+          "Lowering the grade for the entire group automatically",
+          "Peer evaluations or individual reflection pieces",
+          "Banning group projects completely",
+          "Allowing students to choose their own groups randomly"
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Specific Information",
+        "level": "B2",
+        "explanation": "The passage states some lecturers require peer evaluations or individual reflection pieces to address uneven contribution."
+      },
+      {
+        "id": 53,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Inference",
+        "question": "What can be inferred about the skills group work is said to teach?",
+        "options": [
+          "They are usually reflected clearly in the final grading rubric.",
+          "They have no real value outside university.",
+          "They are rarely directly assessed, even though they may be valuable.",
+          "They are identical to the skills tested in individual essays."
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Inference",
+        "level": "B2",
+        "explanation": "The passage states these skills are rarely the ones being assessed on the final grading rubric."
+      },
+      {
+        "id": 54,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Vocabulary in Context",
+        "question": "What does 'puzzling' mean in the first paragraph?",
+        "options": [
+          "annoying",
+          "boring",
+          "obvious",
+          "confusing or hard to understand"
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Vocabulary in Context",
+        "level": "B2",
+        "explanation": "'Puzzling' describes something confusing or hard to understand at first glance."
+      },
+      {
+        "id": 55,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Reference",
+        "question": "In the sentence 'these measures are far from a perfect solution', what does 'these measures' refer to?",
+        "options": [
+          "Peer evaluations and individual reflection pieces",
+          "Group project deadlines",
+          "Final exams",
+          "Lecture attendance policies"
+        ],
+        "answer": "A",
+        "skill": "Reading",
+        "topic": "Reference",
+        "level": "B2",
+        "explanation": "'These measures' refers back to the peer evaluations and reflection pieces mentioned just before."
+      },
+      {
+        "id": 56,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Inference",
+        "question": "What does the passage suggest about the comparison between group work and individual essays?",
+        "options": [
+          "They demonstrate exactly the same skill.",
+          "They may demonstrate different, equally valuable skills.",
+          "Individual essays are always more useful.",
+          "Group work has no connection to real workplaces."
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Inference",
+        "level": "B2",
+        "explanation": "The passage states that an essay demonstrates one skill while navigating group dynamics demonstrates a different, arguably practical one."
+      },
+      {
+        "id": 57,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Writer's Opinion",
+        "question": "What is the writer's overall stance on whether group work's benefits justify its frustrations?",
+        "options": [
+          "The writer firmly believes it is fully justified with no doubts.",
+          "The writer argues group work should be abolished immediately.",
+          "The writer presents the justification but suggests the question remains debatable.",
+          "The writer has no opinion on the matter."
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Writer's Opinion",
+        "level": "B2",
+        "explanation": "The writer presents educators' defense of group work but explicitly states the justification 'remains debatable'."
+      },
+      {
+        "id": 58,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Main Idea",
+        "question": "What is the main idea of the passage?",
+        "options": [
+          "All wildlife struggles equally in urban environments.",
+          "Cities are now safer for animals than forests.",
+          "Urban planning has already solved all wildlife problems.",
+          "A small number of highly adaptable species thrive in cities, while this success can mask a larger decline in overall urban biodiversity."
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Main Idea",
+        "level": "B2",
+        "explanation": "The passage explains that adaptable species thrive in cities while less flexible species are pushed out, reducing overall biodiversity."
+      },
+      {
+        "id": 59,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Specific Information",
+        "question": "According to the passage, what is the 'urban heat island' effect?",
+        "options": [
+          "The tendency of cities to run slightly warmer than surrounding areas due to heat absorbed by buildings and pavement",
+          "The tendency of cities to be colder than surrounding rural areas",
+          "A method used to track wildlife populations",
+          "A disease affecting urban animal populations"
+        ],
+        "answer": "A",
+        "skill": "Reading",
+        "topic": "Specific Information",
+        "level": "B2",
+        "explanation": "The passage defines the urban heat island effect as cities running warmer due to heat absorbed and radiated by buildings and pavement."
+      },
+      {
+        "id": 60,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Cause/Effect",
+        "question": "According to the passage, what is one effect of fewer natural predators in cities?",
+        "options": [
+          "It makes cities more dangerous for adaptable species.",
+          "It can help smaller, adaptable species establish themselves more easily.",
+          "It increases road traffic accidents.",
+          "It reduces the urban heat island effect."
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Cause/Effect",
+        "level": "B2",
+        "explanation": "The passage states that fewer natural predators make it easier for smaller, adaptable species to establish themselves in cities."
+      },
+      {
+        "id": 61,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Vocabulary in Context",
+        "question": "What does 'generalist' mean in the context of species dominating urban ecosystems?",
+        "options": [
+          "a species with very specific habitat and food needs",
+          "a species that is now extinct",
+          "a species that can adapt to a wide range of conditions and food sources",
+          "a species found only in forests"
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Vocabulary in Context",
+        "level": "B2",
+        "explanation": "'Generalist' describes a species able to adapt to varied conditions and food sources, contrasted with specialized species."
+      },
+      {
+        "id": 62,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Inference",
+        "question": "What can be inferred about a city with large numbers of pigeons and raccoons but few other species?",
+        "options": [
+          "This definitely proves urban wildlife is thriving overall.",
+          "This means there are no risks to wildlife in that city.",
+          "This means the city has an unusually high number of natural predators.",
+          "This may actually indicate reduced biodiversity, with only flexible species surviving."
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Inference",
+        "level": "B2",
+        "explanation": "The passage explicitly warns that dominance by a few adaptable species may indicate reduced biodiversity, not overall wildlife success."
+      },
+      {
+        "id": 63,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Writer's Opinion",
+        "question": "What does the writer suggest researchers believe about urban planning's role in supporting biodiversity?",
+        "options": [
+          "Urban planning cannot do anything to help.",
+          "Urban planning could help support a wider range of species through specific measures.",
+          "Urban planning should focus exclusively on adaptable species like pigeons.",
+          "Urban planning has no connection to wildlife at all."
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Writer's Opinion",
+        "level": "B2",
+        "explanation": "The passage reports researchers arguing that planning measures could help cities support broader biodiversity."
+      },
+      {
+        "id": 64,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Inference",
+        "question": "What does the passage suggest about the overall safety of urban environments for individual wild animals?",
+        "options": [
+          "Urban animals can still face significant risks such as traffic and poisoning, despite species-level success.",
+          "Urban animals face no real dangers at all.",
+          "Urban environments are entirely safer than rural ones for every individual animal.",
+          "Only rural animals face dangers from traffic."
+        ],
+        "answer": "A",
+        "skill": "Reading",
+        "topic": "Inference",
+        "level": "B2",
+        "explanation": "The passage notes that species thriving overall does not mean individual animals are safe from traffic, poisoning, or hazards."
+      },
+      {
+        "id": 65,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Main Idea",
+        "question": "What is the main idea of the passage?",
+        "options": [
+          "Gene editing has no ethical concerns whatsoever.",
+          "All countries have already banned gene editing completely.",
+          "Gene editing offers real benefits but raises serious, mostly unresolved ethical questions, especially regarding germline editing.",
+          "Gene editing is only used for agricultural purposes."
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Main Idea",
+        "level": "B2",
+        "explanation": "The passage discusses the benefits of gene editing alongside serious, unresolved ethical concerns, particularly around germline editing."
+      },
+      {
+        "id": 66,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Specific Information",
+        "question": "According to the passage, what is the key difference between somatic and germline editing?",
+        "options": [
+          "Somatic editing is illegal everywhere, while germline editing is legal everywhere.",
+          "Somatic editing is cheaper than germline editing.",
+          "Germline editing only affects plants, not humans.",
+          "Somatic editing affects only the individual patient, while germline editing is passed on to future generations."
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Specific Information",
+        "level": "B2",
+        "explanation": "The passage explains that somatic editing affects only the treated individual, while germline editing is inherited by future generations."
+      },
+      {
+        "id": 67,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Cause/Effect",
+        "question": "According to the passage, what is one reason germline editing raises more serious concerns than somatic editing?",
+        "options": [
+          "Changes become a permanent part of the human gene pool, affecting people who never consented.",
+          "It is far less effective at correcting diseases.",
+          "It is significantly cheaper to perform.",
+          "It has already been proven completely safe."
+        ],
+        "answer": "A",
+        "skill": "Reading",
+        "topic": "Cause/Effect",
+        "level": "B2",
+        "explanation": "The passage states that germline changes become permanent and affect future individuals who never consented."
+      },
+      {
+        "id": 68,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Vocabulary in Context",
+        "question": "What does 'unilaterally' mean in the final paragraph?",
+        "options": [
+          "with the full agreement of every country",
+          "by one party acting alone, without the agreement of others",
+          "slowly and carefully",
+          "illegally and secretly"
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Vocabulary in Context",
+        "level": "B2",
+        "explanation": "'Unilaterally' means done by one party alone, without consulting or agreeing with others."
+      },
+      {
+        "id": 69,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Inference",
+        "question": "What can be inferred about the distinction between treating disease and enhancing normal human traits?",
+        "options": [
+          "Most observers consider them identical with no meaningful difference.",
+          "Enhancement is universally considered more acceptable than disease treatment.",
+          "Most observers see them as ethically distinct, though the same technology could be used for both.",
+          "This distinction has never been discussed by ethicists."
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Inference",
+        "level": "B2",
+        "explanation": "The passage states most observers see disease treatment and trait enhancement as ethically distinct, even though the same technology applies to both."
+      },
+      {
+        "id": 70,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Writer's Opinion",
+        "question": "What is the writer's implied view on how decisions about gene editing should be made?",
+        "options": [
+          "Such decisions require careful global coordination and public scrutiny rather than unilateral action.",
+          "Individual researchers should decide alone without oversight.",
+          "Only wealthy countries should be allowed to make these decisions.",
+          "The writer believes no regulation is necessary at all."
+        ],
+        "answer": "A",
+        "skill": "Reading",
+        "topic": "Writer's Opinion",
+        "level": "B2",
+        "explanation": "The passage states such decisions 'require careful global coordination and sustained public ethical scrutiny'."
+      },
+      {
+        "id": 71,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Inference",
+        "question": "What does the passage suggest could happen if advanced genetic treatments remain unregulated and expensive?",
+        "options": [
+          "Everyone would automatically have equal access regardless of cost.",
+          "The treatments would become free within a few years.",
+          "Genetic inequality would have no connection to wealth at all.",
+          "Inequality could deepen if only wealthy individuals or countries can access them."
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Inference",
+        "level": "B2",
+        "explanation": "The passage warns that unregulated, expensive treatments could deepen inequality between wealthy and less wealthy groups."
+      },
+      {
+        "id": 72,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Reference",
+        "question": "In the sentence 'before any wider application becomes acceptable', what does 'any wider application' most likely refer to?",
+        "options": [
+          "Wider use of somatic editing for minor illnesses only",
+          "Broader, less restricted use of gene-editing technology, including potentially germline editing",
+          "The construction of new hospitals",
+          "The training of more genetic researchers"
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Reference",
+        "level": "B2",
+        "explanation": "'Any wider application' refers to broader use of gene-editing technology beyond the currently restricted scope."
+      },
+      {
+        "id": 73,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Main Idea",
+        "question": "What is the main idea of the passage?",
+        "options": [
+          "Migration always harms cities regardless of policy.",
+          "Cities have never experienced migration before the modern era.",
+          "Migration's effects on cities are complex, and outcomes depend heavily on how cities respond through policy.",
+          "Migration only benefits wealthy residents of a city."
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Main Idea",
+        "level": "B2",
+        "explanation": "The passage concludes that outcomes depend considerably more on policy choices than on migration itself."
+      },
+      {
+        "id": 74,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Specific Information",
+        "question": "According to the passage, what is the most commonly cited reason people move to cities?",
+        "options": [
+          "Climate preferences",
+          "Educational curiosity",
+          "Family tradition",
+          "Economic opportunity"
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Specific Information",
+        "level": "B2",
+        "explanation": "The passage states economic opportunity is the most commonly cited reason people move to cities."
+      },
+      {
+        "id": 75,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Vocabulary in Context",
+        "question": "What does 'entrench' mean in the sentence about segregated neighborhoods?",
+        "options": [
+          "make something firmly established and hard to change",
+          "solve quickly",
+          "completely eliminate",
+          "temporarily pause"
+        ],
+        "answer": "A",
+        "skill": "Reading",
+        "topic": "Vocabulary in Context",
+        "level": "B2",
+        "explanation": "'Entrench' means to establish something so firmly that it becomes very difficult to change."
+      },
+      {
+        "id": 76,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Inference",
+        "question": "What can be inferred about cities that invest in housing, training, and opportunities for social mixing?",
+        "options": [
+          "They tend to integrate newcomers less successfully than cities without such investment.",
+          "They tend to integrate newcomers more successfully, according to available research.",
+          "They experience no migration at all.",
+          "They have no effect on integration outcomes."
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Inference",
+        "level": "B2",
+        "explanation": "The passage states such cities 'integrate newcomers considerably more successfully' according to available research."
+      },
+      {
+        "id": 77,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Cause/Effect",
+        "question": "According to the passage, what is one cause of strain on housing markets and infrastructure in rapidly growing cities?",
+        "options": [
+          "A sudden decrease in the number of migrants",
+          "Too much government funding for public services",
+          "Migration growth outpacing public investment and planning",
+          "A decline in economic opportunity in cities"
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Cause/Effect",
+        "level": "B2",
+        "explanation": "The passage states strain occurs when population growth 'significantly outpaces the public investment and planning needed'."
+      },
+      {
+        "id": 78,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Inference",
+        "question": "What does the passage suggest about historical anxieties regarding earlier waves of migration?",
+        "options": [
+          "They are now generally seen by historians as having been fully justified.",
+          "They never existed before the modern era.",
+          "They always led to the complete collapse of cities.",
+          "They are often remembered in retrospect as not fully justified, similar to some current anxieties."
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Inference",
+        "level": "B2",
+        "explanation": "The passage states such past concerns 'are now rarely remembered as justified by most historians studying those earlier periods'."
+      },
+      {
+        "id": 79,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Writer's Opinion",
+        "question": "What is the writer's view on dismissing all current concerns about migration as automatically invalid?",
+        "options": [
+          "The writer believes all concerns about migration should be dismissed.",
+          "The writer argues specific, legitimate challenges deserve serious attention, even while cautioning against treating migration as inherently a threat.",
+          "The writer refuses to discuss any concerns about migration.",
+          "The writer believes migration has no real challenges at all."
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Writer's Opinion",
+        "level": "B2",
+        "explanation": "The writer states legitimate challenges 'deserve serious, evidence-based policy attention' while cautioning against viewing migration as inherently a threat."
+      },
+      {
+        "id": 80,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Best Title",
+        "question": "Which title best fits the passage?",
+        "options": [
+          "The Decline of the Modern City",
+          "Why All Migration Should Be Stopped",
+          "The History of Ancient Urban Planning",
+          "Migration and the Modern City: Complexity Beyond Simple Narratives"
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Best Title",
+        "level": "B2",
+        "explanation": "The passage repeatedly emphasizes the complexity of migration's effects, resisting simple positive or negative narratives."
+      }
+    ],
+    "passages": [
+      {
+        "id": "p1",
+        "title": "The Unexpected Challenge of Group Work",
+        "theme": "Education / Academic Life",
+        "length": "short",
+        "text": "Ask university students to name their least favourite part of academic life, and group projects often appear surprisingly high on the list, sometimes ranked above exams themselves. This is a little puzzling at first glance. Working with others ought to lighten the load, sharing both the effort and the stress of a large assignment across several people rather than one. In practice, however, many students report that group work creates almost as much stress as it relieves.\n\nPart of the difficulty lies in coordination rather than content. Four students with four different schedules, four different standards for what counts as 'good enough' work, and four different communication styles must somehow agree on a single shared outcome. Disagreements about quality are especially common: one member's acceptable draft may strike another as embarrassingly unfinished, and resolving this gap without causing offence requires social skills that have little to do with the academic subject itself.\n\nA second, more sensitive issue is uneven contribution. Nearly every student who has completed a group project has a story about a teammate who contributed far less than their fair share, yet received an identical grade. Lecturers are aware of this problem, and some now require peer evaluations or individual reflection pieces specifically to address it, though these measures are far from a perfect solution and can introduce their own tensions.\n\nDespite these frustrations, many educators continue to defend group work, arguing that learning to collaborate under imperfect conditions, with people you did not choose and cannot fully control, closely resembles collaboration in most workplaces. A polished individual essay demonstrates one valuable skill; successfully navigating a difficult group dynamic demonstrates a different, arguably more practical one.\n\nWhether this justification fully compensates for the frustration students experience remains debatable. What seems clear is that the skills group work actually teaches, negotiation, compromise, and tolerance for other people's imperfect standards, are rarely the skills being assessed on the final grading rubric, which focuses almost exclusively on the finished product rather than the difficult process of producing it together."
+      },
+      {
+        "id": "p2",
+        "title": "Why Some Species Thrive Near Humans",
+        "theme": "Science / Wildlife",
+        "length": "medium",
+        "text": "Urban environments are often described as hostile to wildlife, filled with concrete, traffic, noise, and pollution that most animals would be expected to avoid. Yet a surprising number of species appear to be doing not just adequately but remarkably well in cities, sometimes outperforming their populations in nearby rural or wild areas. Understanding why reveals something interesting about adaptability itself.\n\nPigeons, raccoons, foxes, and certain gull species are among the most visible urban success stories. What they tend to share is behavioural flexibility rather than any single physical adaptation. Unlike species that depend on one specific food source or habitat type, these animals readily adjust their diet and behaviour to whatever is available. A fox that might hunt small mammals in a forest can just as easily scavenge from rubbish bins in a city, switching strategies based on opportunity rather than rigid instinct.\n\nCities also offer certain unexpected advantages over wild habitats. Natural predators are frequently absent or rare in urban areas, since larger predators generally struggle far more than smaller, adaptable species to establish themselves among human infrastructure. Temperatures in cities tend to run slightly warmer than surrounding areas due to heat absorbed and radiated by buildings and pavement, a phenomenon researchers call the 'urban heat island' effect, which can extend breeding seasons or reduce the energy an animal must expend simply staying warm.\n\nThis does not mean urban life is without serious risk for wildlife. Road traffic, poisoning from pesticides or improperly stored waste, and architectural hazards such as reflective glass windows kill enormous numbers of urban animals every year. Species thriving overall in cities are not thriving uniformly; individual animals still face significant and sometimes fatal dangers that their rural counterparts rarely encounter.\n\nThere are also broader ecological concerns. As certain highly adaptable species flourish in cities, less flexible species are often pushed out entirely, sometimes resulting in urban ecosystems with considerably less biodiversity than before urbanization, dominated by a small number of generalist species rather than hosting the varied wildlife a region might naturally support. A city full of pigeons and raccoons, in other words, is not necessarily evidence that urban wildlife overall is flourishing; it may instead indicate that only the most flexible species have managed to survive while many others disappeared.\n\nResearchers studying this phenomenon increasingly argue that urban planning could do more to accommodate a wider range of species, through measures such as green corridors connecting fragmented habitats, bird-safe building designs, and careful management of urban waste. Such changes, they suggest, could help cities support biodiversity rather than merely tolerating a handful of especially adaptable survivors."
+      },
+      {
+        "id": "p3",
+        "title": "The Ethics of Gene Editing",
+        "theme": "Science / Medicine",
+        "length": "medium",
+        "text": "Few scientific breakthroughs in recent decades have raised as many ethical questions as the development of precise gene-editing tools, which allow scientists to alter DNA with a level of accuracy that would have seemed like science fiction only twenty years ago. The technology's potential benefits are considerable: correcting genetic mutations responsible for serious inherited diseases, developing crops resistant to drought or disease, and potentially eliminating certain hereditary conditions from future generations entirely.\n\nMuch of the ethical debate centers on a key distinction: editing that affects only the individual patient being treated, known as somatic editing, versus editing that affects reproductive cells and is therefore passed on to future generations, known as germline editing. Most scientists and ethicists support continued research into somatic editing for treating diseases in living patients, since any changes, whether successful or not, remain limited to that one individual and cannot be inherited.\n\nGermline editing raises far more serious concerns, since changes made at this stage become a permanent part of the human gene pool, potentially affecting individuals who never consented to the procedure because they have not yet been born. Even if germline editing could reliably eliminate a harmful genetic mutation, critics worry about unintended long-term consequences that might not become apparent for generations, long after any mistake could realistically be corrected or reversed.\n\nThere is also concern about a slippery slope between treating disease and enhancing human traits more broadly. Correcting a mutation that causes a severe, debilitating illness seems to most observers ethically distinct from selecting for traits such as height, eye colour, or cognitive ability that fall within a normal range of human variation rather than representing disease at all. Yet the same underlying technology could, in principle, be used for either purpose, and some ethicists worry that accepting disease-focused editing today could gradually normalize broader genetic enhancement in the future, particularly if wealthy individuals gain disproportionate access to such enhancements before most of society does.\n\nAccess and inequality present a further significant concern. Advanced genetic treatments are likely to be expensive, at least initially, raising the possibility that only wealthy individuals or wealthy countries could afford them. If left entirely unregulated, this could, over generations, deepen existing inequalities in ways that are difficult to reverse once genetic advantages become embedded and compounded across family lines.\n\nGiven these serious concerns, most countries currently restrict or entirely prohibit germline editing in humans, while permitting carefully regulated somatic editing research to continue. International scientific organizations have called for continued global dialogue, arguing that decisions with such permanent, far-reaching, cross-generational consequences should not be made unilaterally by individual researchers, companies, or even single governments acting alone, but require careful global coordination and sustained public ethical scrutiny before any wider application becomes acceptable."
+      },
+      {
+        "id": "p4",
+        "title": "Migration and the Modern City",
+        "theme": "Society",
+        "length": "long",
+        "text": "Cities have always been shaped by the people who move to them, but the scale and pace of migration into major urban centers over the past several decades has transformed many of the world's largest cities into genuinely global places, where dozens of languages might be spoken within a few city blocks and where no single ethnic or cultural group forms an overwhelming majority.\n\nThis transformation did not happen by accident. Economic opportunity remains the most commonly cited reason people move to cities, whether crossing national borders or simply relocating from rural areas within the same country. Cities concentrate jobs, particularly in sectors like construction, hospitality, healthcare, and technology, in ways that sparsely populated rural regions generally cannot match. Political instability, conflict, and environmental pressures in migrants' countries or regions of origin add further, often more urgent, motivations that compound and interact with economic factors rather than operating entirely separately from them.\n\nThe effects of this migration on cities themselves are genuinely complex, defying any simple characterization as purely positive or purely negative. Economically, migrants frequently fill essential labour shortages, particularly in physically demanding or lower-paid sectors that struggle to attract enough local workers, while also, through immigrant entrepreneurship, creating entirely new businesses and, with them, new jobs that might not otherwise have existed in that local economy at all. Culturally, migration introduces new cuisines, artistic traditions, languages, and perspectives that many longtime residents come to value as central, defining features of their city's distinctive character and appeal, rather than viewing them as an unwelcome imposition from outside.\n\nAt the same time, rapid migration can place genuine strain on housing markets, public services, and infrastructure that may not have been originally designed or funded for a rapidly rising population, especially when that growth significantly outpaces the public investment and planning needed to accommodate it adequately. Tensions can also emerge between established, longer-term residents and newer arrivals, sometimes fueled by genuine competition over jobs, housing, or public resources, and sometimes by less tangible cultural anxieties about rapid and visible neighborhood change that is harder to measure or address directly through policy alone.\n\nHow cities manage this tension varies enormously and shapes outcomes considerably. Cities that invest proactively in sufficient housing, accessible language and vocational training programmes, and genuine, well-funded opportunities for social mixing across different communities tend, according to most available research, to integrate newcomers considerably more successfully than cities that simply allow migration to happen without any parallel policy planning or adequate investment in these supporting structures. Segregated neighborhoods, inadequate public resources stretched too thin across a larger population, and limited genuine opportunities for meaningful interaction between different groups can, by contrast, entrench division and measurable inequality rather than naturally dissolving these problems over time without any active intervention.\n\nUrban historians frequently point out that today's anxieties about migration, however strongly or sincerely felt by various groups in a city, echo remarkably similar concerns raised about previous waves of migration decades or even centuries earlier, concerns that in retrospect are now rarely remembered as justified by most historians studying those earlier periods. This observation does not mean current concerns about migration are automatically invalid or should be dismissed outright; legitimate, specific challenges around housing, infrastructure, and genuine integration clearly do exist in particular places and specific circumstances and deserve serious, evidence-based policy attention. It does suggest, however, that framing migration itself, in the abstract, as inherently and primarily a threat rather than as a complex, genuinely manageable policy and planning challenge may not be fully supported by the accumulated weight of longer historical experience across many different cities and eras.\n\nWhat seems most clearly supported by the available research is that outcomes depend considerably less on the simple fact or overall scale of migration itself, and depend considerably more on the specific, deliberate policy choices cities make in response to it."
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Deneme 6",
+    "level": "B2",
+    "duration": 150,
+    "questionCount": 80,
+    "questions": [
+      {
+        "id": 1,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "Metal ______ when heated, a property engineers must account for when designing bridges.",
+        "options": [
+          "expands",
+          "expand",
+          "expanded",
+          "is expanding"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Present Simple",
+        "level": "B2",
+        "explanation": "A permanent scientific fact requires the present simple with a singular subject: expands."
+      },
+      {
+        "id": 2,
+        "part": "A",
+        "type": "Dialogue Completion",
+        "question": "A: You seem stressed lately.\nB: I am. I ______ for three job interviews this week alone.",
+        "options": [
+          "prepare",
+          "am preparing",
+          "prepared",
+          "have prepared"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Present Continuous",
+        "level": "B2",
+        "explanation": "An ongoing activity covering the current period, including now, requires the present continuous: am preparing."
+      },
+      {
+        "id": 3,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "The committee ______ the proposal unanimously at last Tuesday's meeting.",
+        "options": [
+          "rejects",
+          "has rejected",
+          "rejected",
+          "was rejecting"
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Past Simple",
+        "level": "B2",
+        "explanation": "A completed action at a specific past time ('last Tuesday's meeting') requires the past simple: rejected."
+      },
+      {
+        "id": 4,
+        "part": "A",
+        "type": "Cloze Test",
+        "question": "Advances in medical imaging over the past twenty years ______ doctors to detect certain cancers far earlier than before.",
+        "options": [
+          "allow",
+          "allowed",
+          "are allowing",
+          "have allowed"
+        ],
+        "answer": "D",
+        "skill": "Grammar",
+        "topic": "Present Perfect",
+        "level": "B2",
+        "explanation": "An unfinished time period ('over the past twenty years') linking past developments to the present requires the present perfect: have allowed."
+      },
+      {
+        "id": 5,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "She realized, rather too late, that she ______ the wrong version of the file to the committee.",
+        "options": [
+          "had sent",
+          "sent",
+          "has sent",
+          "was sending"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Past Perfect",
+        "level": "B2",
+        "explanation": "The sending happened before the realizing, an earlier past event, so the past perfect is needed: had sent."
+      },
+      {
+        "id": 6,
+        "part": "A",
+        "type": "Situation-based Question",
+        "question": "Situation: The construction company promises the bridge will be fully operational before the New Year's celebrations begin on December 31st. Which sentence best reflects this promise?",
+        "options": [
+          "The bridge will be completing by December 31st.",
+          "The bridge will have been completed by December 31st.",
+          "The bridge completes by December 31st.",
+          "The bridge is completed by December 31st."
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Future Perfect",
+        "level": "B2",
+        "explanation": "The future perfect passive expresses an action that will be finished before a stated future point: will have been completed."
+      },
+      {
+        "id": 7,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "Every component of the satellite ______ rigorously before launch to prevent catastrophic failure in orbit.",
+        "options": [
+          "tests",
+          "has tested",
+          "is tested",
+          "testing"
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Passive Voice",
+        "level": "B2",
+        "explanation": "Each component receives the action of testing, so the passive form is correct: is tested."
+      },
+      {
+        "id": 8,
+        "part": "A",
+        "type": "Dialogue Completion",
+        "question": "A: I think I'll skip my dentist appointment again this month.\nB: You really ______ keep postponing it — it could turn into a much bigger problem.",
+        "options": [
+          "mustn't",
+          "can't",
+          "needn't",
+          "shouldn't"
+        ],
+        "answer": "D",
+        "skill": "Grammar",
+        "topic": "Modal Verbs",
+        "level": "B2",
+        "explanation": "'Shouldn't' gives advice against a course of action; 'mustn't' would express a stronger prohibition that does not match the gentle, advisory tone."
+      },
+      {
+        "id": 9,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "Unless the committee ______ an extension, the entire project will collapse due to lack of funding.",
+        "options": [
+          "grants",
+          "will grant",
+          "granted",
+          "would grant"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Conditionals",
+        "level": "B2",
+        "explanation": "'Unless' introduces a first conditional condition, which requires the present simple in the if-clause: grants."
+      },
+      {
+        "id": 10,
+        "part": "A",
+        "type": "Structure Recognition",
+        "question": "The reason ______ the experiment failed remains a mystery to the entire research team.",
+        "options": [
+          "which",
+          "why",
+          "what",
+          "whom"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Relative Clauses",
+        "level": "B2",
+        "explanation": "'Why' is used after 'reason' to introduce a relative clause explaining a cause."
+      },
+      {
+        "id": 11,
+        "part": "A",
+        "type": "Error Identification",
+        "question": "Nobody could explain (A) why (B) the results was (C) so different (D) from previous studies.",
+        "options": [
+          "why",
+          "the results was",
+          "so different",
+          "from previous studies"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Noun Clauses",
+        "level": "B2",
+        "explanation": "'Results' is plural, so the verb must agree: the results were, not was."
+      },
+      {
+        "id": 12,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "The board is strongly opposed to ______ the merger without further financial review.",
+        "options": [
+          "approve",
+          "approved",
+          "approving",
+          "be approved"
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Gerunds",
+        "level": "B2",
+        "explanation": "'Opposed to' is followed by a gerund: opposed to approving."
+      },
+      {
+        "id": 13,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "The committee failed ______ a clear timeline for the project's completion.",
+        "options": [
+          "providing",
+          "provide",
+          "provided",
+          "to provide"
+        ],
+        "answer": "D",
+        "skill": "Grammar",
+        "topic": "Infinitives",
+        "level": "B2",
+        "explanation": "'Fail' is followed by an infinitive: failed to provide."
+      },
+      {
+        "id": 14,
+        "part": "A",
+        "type": "Error Identification",
+        "question": "The report concluded that (A) a obesity (B) among teenagers (C) had risen sharply (D) over the past decade.",
+        "options": [
+          "a obesity",
+          "among teenagers",
+          "had risen sharply",
+          "over the past decade"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Articles",
+        "level": "B2",
+        "explanation": "Abstract, uncountable concepts like 'obesity' take no article: obesity, not a obesity."
+      },
+      {
+        "id": 15,
+        "part": "A",
+        "type": "Dialogue Completion",
+        "question": "A: The two translations of the poem are quite different.\nB: Yes, ______ version captures the original tone perfectly, in my opinion.",
+        "options": [
+          "neither",
+          "either",
+          "each",
+          "every"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Determiners",
+        "level": "B2",
+        "explanation": "'Neither' expresses a negative meaning about both of two items being discussed."
+      },
+      {
+        "id": 16,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "______ evidence supports the claim that the supplement improves memory, despite its popularity.",
+        "options": [
+          "Many",
+          "A great deal of",
+          "A great number of",
+          "Several"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Quantifiers",
+        "level": "B2",
+        "explanation": "'Evidence' is uncountable, and 'a great deal of' is the correct quantifier for uncountable nouns."
+      },
+      {
+        "id": 17,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "The professor's theory is largely based ______ data collected over fifteen years of fieldwork.",
+        "options": [
+          "in",
+          "at",
+          "on",
+          "for"
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Prepositions",
+        "level": "B2",
+        "explanation": "The fixed expression is 'based on'."
+      },
+      {
+        "id": 18,
+        "part": "A",
+        "type": "Cloze Test",
+        "question": "______ the budget cuts, the department managed to maintain most of its research programmes.",
+        "options": [
+          "Although",
+          "Because",
+          "Unless",
+          "Despite"
+        ],
+        "answer": "D",
+        "skill": "Grammar",
+        "topic": "Conjunctions",
+        "level": "B2",
+        "explanation": "'Despite' is followed by a noun phrase ('the budget cuts'), unlike 'although', which requires a full clause."
+      },
+      {
+        "id": 19,
+        "part": "A",
+        "type": "Sentence Completion with Connectors",
+        "question": "The survey results were inconclusive; ______, the researchers decided to expand the sample size and try again.",
+        "options": [
+          "consequently",
+          "in addition",
+          "similarly",
+          "likewise"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Linking Words",
+        "level": "B2",
+        "explanation": "'Consequently' shows that expanding the sample size was a direct result of the inconclusive findings."
+      },
+      {
+        "id": 20,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "The longer the drought continued, ______ the farmers' losses became.",
+        "options": [
+          "more severe",
+          "the more severe",
+          "the most severe",
+          "as severe"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Comparatives",
+        "level": "B2",
+        "explanation": "The correlative structure 'the longer..., the more severe...' expresses a proportional relationship between two changes."
+      },
+      {
+        "id": 21,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "This remains ______ discovery in the history of the laboratory, according to its director.",
+        "options": [
+          "more significant",
+          "as significant",
+          "the most significant",
+          "significant"
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Superlatives",
+        "level": "B2",
+        "explanation": "Comparing one discovery to the laboratory's entire history requires the superlative: the most significant."
+      },
+      {
+        "id": 22,
+        "part": "A",
+        "type": "Error Identification",
+        "question": "The negotiations proceeded (A) smooth (B) until (C) one delegation (D) suddenly withdrew its support.",
+        "options": [
+          "smooth",
+          "until",
+          "one delegation",
+          "suddenly withdrew its support"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Adjectives and Adverbs",
+        "level": "B2",
+        "explanation": "The verb 'proceeded' must be modified by an adverb, not an adjective: proceeded smoothly."
+      },
+      {
+        "id": 23,
+        "part": "A",
+        "type": "Dialogue Completion",
+        "question": "A: What exactly did the witness tell the police?\nB: She said she ______ the man near the scene the night before the incident.",
+        "options": [
+          "has seen",
+          "sees",
+          "saw",
+          "had seen"
+        ],
+        "answer": "D",
+        "skill": "Grammar",
+        "topic": "Reported Speech",
+        "level": "B2",
+        "explanation": "In reported speech, a past simple action in the original statement typically shifts back to the past perfect: had seen."
+      },
+      {
+        "id": 24,
+        "part": "A",
+        "type": "Structure Recognition",
+        "question": "The landlord refused to ______ the broken heating system fixed despite repeated complaints.",
+        "options": [
+          "have",
+          "make",
+          "let",
+          "do"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Causatives",
+        "level": "B2",
+        "explanation": "'Have + object + past participle' expresses arranging for something to be done: have the system fixed."
+      },
+      {
+        "id": 25,
+        "part": "A",
+        "type": "Grammar Gap Fill",
+        "question": "A number of residents ______ already signed the petition against the new construction project.",
+        "options": [
+          "has",
+          "have",
+          "is",
+          "was"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Subject-Verb Agreement",
+        "level": "B2",
+        "explanation": "'A number of' (meaning several) takes a plural verb: have."
+      },
+      {
+        "id": 26,
+        "part": "A",
+        "type": "Situation-based Question",
+        "question": "Situation: The negotiations collapsed last week because neither side was willing to compromise, and Elif deeply regrets how she handled her part in the talks. Which sentence best expresses her feeling?",
+        "options": [
+          "If only I were more flexible during the talks.",
+          "If only I am more flexible during the talks.",
+          "If only I had been more flexible during the talks.",
+          "If only I will be more flexible during the talks."
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Wish / If Only",
+        "level": "B2",
+        "explanation": "Regret about a past action uses 'if only' with the past perfect: if only I had been more flexible."
+      },
+      {
+        "id": 27,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "______ from the city center, the research facility offers researchers a quiet, distraction-free environment.",
+        "options": [
+          "Isolate",
+          "Isolating",
+          "To isolate",
+          "Isolated"
+        ],
+        "answer": "D",
+        "skill": "Grammar",
+        "topic": "Participles",
+        "level": "B2",
+        "explanation": "The facility is isolated (receives the action), so the past participle 'Isolated' is used."
+      },
+      {
+        "id": 28,
+        "part": "A",
+        "type": "Dialogue Completion",
+        "question": "A: Have you finalized your travel plans for the conference?\nB: Yes, I ______ on Thursday morning and returning the following Monday.",
+        "options": [
+          "am leaving",
+          "leave",
+          "will leave",
+          "have left"
+        ],
+        "answer": "A",
+        "skill": "Grammar",
+        "topic": "Future Forms",
+        "level": "B2",
+        "explanation": "The present continuous with a future time expression describes a fixed, pre-arranged plan: am leaving."
+      },
+      {
+        "id": 29,
+        "part": "A",
+        "type": "Sentence Completion",
+        "question": "While the technicians ______ the server, an unexpected power surge damaged several components.",
+        "options": [
+          "repaired",
+          "were repairing",
+          "have repaired",
+          "repair"
+        ],
+        "answer": "B",
+        "skill": "Grammar",
+        "topic": "Past Continuous",
+        "level": "B2",
+        "explanation": "An ongoing past action interrupted by another event requires the past continuous: were repairing."
+      },
+      {
+        "id": 30,
+        "part": "A",
+        "type": "Functional Language",
+        "question": "Situation: You need to tell your supervisor that you won't be able to meet an important deadline, and you want to do so professionally. Which is most appropriate?",
+        "options": [
+          "I'm not going to make the deadline, deal with it.",
+          "The deadline is impossible, so forget it.",
+          "I'm afraid I won't be able to meet the deadline, and I wanted to let you know as soon as possible.",
+          "It's not my fault the deadline won't be met."
+        ],
+        "answer": "C",
+        "skill": "Grammar",
+        "topic": "Functional Language",
+        "level": "B2",
+        "explanation": "This option is polite, proactive, and professional, giving advance notice without blame or confrontation."
+      },
+      {
+        "id": 31,
+        "part": "B",
+        "type": "Collocation",
+        "question": "The new software update is designed to ______ the risk of data breaches significantly.",
+        "options": [
+          "minimal",
+          "minimizing",
+          "minimized",
+          "minimize"
+        ],
+        "answer": "D",
+        "skill": "Vocabulary",
+        "topic": "Technology",
+        "level": "B2",
+        "explanation": "A base verb form is needed after 'to'; 'minimize' (to reduce) is correct."
+      },
+      {
+        "id": 32,
+        "part": "B",
+        "type": "Phrasal Verb",
+        "question": "Researchers eventually had to ______ their original theory after new evidence contradicted it.",
+        "options": [
+          "give up on",
+          "give up for",
+          "give in to",
+          "give away"
+        ],
+        "answer": "A",
+        "skill": "Vocabulary",
+        "topic": "Science",
+        "level": "B2",
+        "explanation": "'Give up on' means to stop believing in or pursuing something, such as a theory found to be incorrect."
+      },
+      {
+        "id": 33,
+        "part": "B",
+        "type": "Synonym",
+        "question": "The journalist's report was praised for its meticulous attention to detail. Which word is closest in meaning to 'meticulous'?",
+        "options": [
+          "careless",
+          "careful",
+          "brief",
+          "biased"
+        ],
+        "answer": "B",
+        "skill": "Vocabulary",
+        "topic": "Media",
+        "level": "B2",
+        "explanation": "'Meticulous' means extremely careful and precise, which is closest to 'careful'."
+      },
+      {
+        "id": 34,
+        "part": "B",
+        "type": "Word Choice",
+        "question": "Employees who consistently ______ their targets are eligible for an annual bonus.",
+        "options": [
+          "excess",
+          "access",
+          "exceed",
+          "expand"
+        ],
+        "answer": "C",
+        "skill": "Vocabulary",
+        "topic": "Work",
+        "level": "B2",
+        "explanation": "'Exceed' means to go beyond a target or limit; the other options have unrelated meanings despite looking similar."
+      },
+      {
+        "id": 35,
+        "part": "B",
+        "type": "Antonym",
+        "question": "The new regulations are intended to curb industrial pollution significantly. Which word is opposite in meaning to 'curb'?",
+        "options": [
+          "restrict",
+          "limit",
+          "control",
+          "encourage"
+        ],
+        "answer": "D",
+        "skill": "Vocabulary",
+        "topic": "Environment",
+        "level": "B2",
+        "explanation": "'Encourage' means to promote or increase something, the opposite of 'curb'."
+      },
+      {
+        "id": 36,
+        "part": "B",
+        "type": "Academic Vocabulary",
+        "question": "The hypothesis was ultimately proven ______ through repeated experimentation.",
+        "options": [
+          "valid",
+          "validity",
+          "validate",
+          "validating"
+        ],
+        "answer": "A",
+        "skill": "Vocabulary",
+        "topic": "Science",
+        "level": "B2",
+        "explanation": "An adjective is needed after 'proven'; 'valid' is correct."
+      },
+      {
+        "id": 37,
+        "part": "B",
+        "type": "Collocation",
+        "question": "It is important to ______ eye contact during a job interview to appear confident.",
+        "options": [
+          "hold",
+          "make",
+          "keep",
+          "do"
+        ],
+        "answer": "B",
+        "skill": "Vocabulary",
+        "topic": "Communication",
+        "level": "B2",
+        "explanation": "The standard collocation is 'make eye contact'."
+      },
+      {
+        "id": 38,
+        "part": "B",
+        "type": "Phrasal Verb",
+        "question": "The two firms are planning to ______ in order to compete more effectively with larger rivals.",
+        "options": [
+          "back up",
+          "catch up",
+          "team up",
+          "line up"
+        ],
+        "answer": "C",
+        "skill": "Vocabulary",
+        "topic": "Business",
+        "level": "B2",
+        "explanation": "'Team up' means to join forces or collaborate with another party."
+      },
+      {
+        "id": 39,
+        "part": "B",
+        "type": "Vocabulary in Context",
+        "question": "Her presentation was so compelling that it swayed even the most skeptical members of the audience. What does 'swayed' mean here?",
+        "options": [
+          "confused",
+          "bored",
+          "ignored",
+          "influenced or persuaded"
+        ],
+        "answer": "D",
+        "skill": "Vocabulary",
+        "topic": "Communication",
+        "level": "B2",
+        "explanation": "'Swayed' means influenced someone's opinion, which is closest to 'persuaded'."
+      },
+      {
+        "id": 40,
+        "part": "B",
+        "type": "Word Choice",
+        "question": "The city's annual festival aims to ______ its rich cultural heritage to both residents and tourists.",
+        "options": [
+          "showcase",
+          "showcasing",
+          "showcased",
+          "showcases"
+        ],
+        "answer": "A",
+        "skill": "Vocabulary",
+        "topic": "Culture",
+        "level": "B2",
+        "explanation": "A base verb form is needed after 'aims to'; 'showcase' (to display prominently) is correct."
+      },
+      {
+        "id": 41,
+        "part": "B",
+        "type": "Synonym",
+        "question": "Doctors recommend a balanced diet to prevent a wide range of chronic illnesses. Which word is closest in meaning to 'chronic'?",
+        "options": [
+          "sudden",
+          "long-lasting",
+          "rare",
+          "minor"
+        ],
+        "answer": "B",
+        "skill": "Vocabulary",
+        "topic": "Health",
+        "level": "B2",
+        "explanation": "'Chronic' describes an illness that persists over a long period, which is closest to 'long-lasting'."
+      },
+      {
+        "id": 42,
+        "part": "B",
+        "type": "Antonym",
+        "question": "The professor's feedback was refreshingly candid about the weaknesses in the thesis. Which word is opposite in meaning to 'candid'?",
+        "options": [
+          "honest",
+          "direct",
+          "evasive",
+          "blunt"
+        ],
+        "answer": "C",
+        "skill": "Vocabulary",
+        "topic": "Academic Life",
+        "level": "B2",
+        "explanation": "'Evasive' means avoiding being direct or honest, the opposite of 'candid'."
+      },
+      {
+        "id": 43,
+        "part": "B",
+        "type": "Collocation",
+        "question": "Severe weather conditions can seriously ______ flight schedules during the winter months.",
+        "options": [
+          "disturb",
+          "distract",
+          "distort",
+          "disrupt"
+        ],
+        "answer": "D",
+        "skill": "Vocabulary",
+        "topic": "Transport",
+        "level": "B2",
+        "explanation": "'Disrupt' means to interrupt the normal continuation of something, such as a schedule."
+      },
+      {
+        "id": 44,
+        "part": "B",
+        "type": "Phrasal Verb",
+        "question": "After the long hike, the group decided to ______ at a small café for lunch.",
+        "options": [
+          "stop off",
+          "stop up",
+          "stop over",
+          "stop short"
+        ],
+        "answer": "A",
+        "skill": "Vocabulary",
+        "topic": "Daily Life",
+        "level": "B2",
+        "explanation": "'Stop off' means to make a brief stop somewhere during a longer journey, which fits stopping at a café after a hike."
+      },
+      {
+        "id": 45,
+        "part": "B",
+        "type": "Academic Vocabulary",
+        "question": "The report highlights a growing ______ between rural and urban access to healthcare.",
+        "options": [
+          "disparate",
+          "disparity",
+          "disparagement",
+          "disparaging"
+        ],
+        "answer": "B",
+        "skill": "Vocabulary",
+        "topic": "Society",
+        "level": "B2",
+        "explanation": "A noun is needed after 'growing'; 'disparity' (a difference) is correct."
+      },
+      {
+        "id": 46,
+        "part": "B",
+        "type": "Vocabulary in Context",
+        "question": "The company's aggressive expansion strategy eventually proved unsustainable. What does 'unsustainable' mean here?",
+        "options": [
+          "extremely profitable",
+          "illegal in most countries",
+          "unable to be continued at the same level over time",
+          "temporarily paused"
+        ],
+        "answer": "C",
+        "skill": "Vocabulary",
+        "topic": "Business",
+        "level": "B2",
+        "explanation": "'Unsustainable' describes something that cannot be maintained over time."
+      },
+      {
+        "id": 47,
+        "part": "B",
+        "type": "Word Choice",
+        "question": "Travellers should ______ themselves with local customs before visiting an unfamiliar country.",
+        "options": [
+          "familiar",
+          "familiarity",
+          "familiarly",
+          "familiarize"
+        ],
+        "answer": "D",
+        "skill": "Vocabulary",
+        "topic": "Travel",
+        "level": "B2",
+        "explanation": "A base verb form is needed after 'should'; 'familiarize' is correct."
+      },
+      {
+        "id": 48,
+        "part": "B",
+        "type": "Synonym",
+        "question": "The orientation week was designed to help new exchange students acclimatize to their surroundings. Which word is closest in meaning to 'acclimatize'?",
+        "options": [
+          "adjust",
+          "escape",
+          "ignore",
+          "complain"
+        ],
+        "answer": "A",
+        "skill": "Vocabulary",
+        "topic": "Erasmus",
+        "level": "B2",
+        "explanation": "'Acclimatize' means to adjust to a new environment or climate."
+      },
+      {
+        "id": 49,
+        "part": "B",
+        "type": "Collocation",
+        "question": "The university has decided to ______ a new policy on academic integrity starting next semester.",
+        "options": [
+          "imply",
+          "implement",
+          "impose on",
+          "import"
+        ],
+        "answer": "B",
+        "skill": "Vocabulary",
+        "topic": "Education",
+        "level": "B2",
+        "explanation": "'Implement' means to put a plan or policy into practice."
+      },
+      {
+        "id": 50,
+        "part": "B",
+        "type": "Phrasal Verb",
+        "question": "Community leaders are encouraging young people to ______ in local decision-making processes.",
+        "options": [
+          "get over",
+          "get along",
+          "get involved",
+          "get through"
+        ],
+        "answer": "C",
+        "skill": "Vocabulary",
+        "topic": "Society",
+        "level": "B2",
+        "explanation": "'Get involved in' means to participate actively in something, such as decision-making."
+      },
+      {
+        "id": 51,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Main Idea",
+        "question": "What is the main idea of the passage?",
+        "options": [
+          "AI in education has already solved all assessment problems.",
+          "AI tools should be completely banned from all universities.",
+          "AI tools are equally accessible to every student worldwide.",
+          "AI in education offers genuine benefits but raises unresolved questions about assessment, learning, and equity."
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Main Idea",
+        "level": "B2",
+        "explanation": "The passage discusses AI's benefits in education alongside unresolved issues of assessment, learning, and equity."
+      },
+      {
+        "id": 52,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Specific Information",
+        "question": "According to the passage, how have some universities responded to AI's effect on take-home assignments?",
+        "options": [
+          "By shifting toward supervised exams or redesigning assessments around AI collaboration",
+          "By eliminating all homework entirely",
+          "By requiring all students to use AI on every assignment",
+          "By ignoring the issue completely"
+        ],
+        "answer": "A",
+        "skill": "Reading",
+        "topic": "Specific Information",
+        "level": "B2",
+        "explanation": "The passage states some institutions shifted to supervised exams, while others redesigned assessments around AI collaboration."
+      },
+      {
+        "id": 53,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Inference",
+        "question": "What can be inferred about students at under-resourced schools regarding AI tools?",
+        "options": [
+          "They have exactly the same access as students at well-resourced institutions.",
+          "They may face a disadvantage due to unequal access to advanced AI tools.",
+          "They do not need access to any educational technology.",
+          "They are entirely unaffected by equity concerns."
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Inference",
+        "level": "B2",
+        "explanation": "The passage states access to the best AI tools is unevenly distributed, implying disadvantage for under-resourced schools."
+      },
+      {
+        "id": 54,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Vocabulary in Context",
+        "question": "What does 'proponents' mean in the second paragraph?",
+        "options": [
+          "critics",
+          "inventors",
+          "supporters",
+          "beginners"
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Vocabulary in Context",
+        "level": "B2",
+        "explanation": "'Proponents' means people who support or advocate for something."
+      },
+      {
+        "id": 55,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Reference",
+        "question": "In the sentence 'the same tools can also, if misused, produce finished work that no longer reflects the student's actual ability', what does 'the same tools' refer to?",
+        "options": [
+          "Automated grading systems",
+          "Personalized tutoring software",
+          "In-person supervised exams",
+          "Writing assistance tools"
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Reference",
+        "level": "B2",
+        "explanation": "'The same tools' refers back to the writing assistance tools discussed in that paragraph."
+      },
+      {
+        "id": 56,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Inference",
+        "question": "What does the passage suggest about 'productive struggle' in learning?",
+        "options": [
+          "It may play a valuable role in deeper learning, which overreliance on AI could weaken.",
+          "It is a harmful experience that should always be avoided.",
+          "It has no connection to how students learn.",
+          "It is only relevant to students who do not use any technology."
+        ],
+        "answer": "A",
+        "skill": "Reading",
+        "topic": "Inference",
+        "level": "B2",
+        "explanation": "The passage describes productive struggle as valuable cognitive effort that often precedes real understanding, which AI overreliance could weaken."
+      },
+      {
+        "id": 57,
+        "part": "C",
+        "passageId": "p1",
+        "type": "Writer's Opinion",
+        "question": "What is the writer's overall conclusion about AI in education?",
+        "options": [
+          "AI in education is clearly a complete mistake.",
+          "The technology's rapid arrival has outpaced careful thinking, leaving important questions unresolved.",
+          "All universities have already fully resolved every concern about AI.",
+          "AI tools should be mandatory for every assignment."
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Writer's Opinion",
+        "level": "B2",
+        "explanation": "The writer concludes that AI's rapid arrival has outpaced institutional thinking, leaving key questions unresolved."
+      },
+      {
+        "id": 58,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Main Idea",
+        "question": "What is the main idea of the passage?",
+        "options": [
+          "Immigrant food is always an exact, unchanged copy of dishes from the home country.",
+          "Immigrants never experience any difficulty recreating their traditional dishes.",
+          "Food for immigrant communities serves complex roles involving identity, community, and sometimes tension, beyond mere nutrition.",
+          "Food has no real connection to cultural identity."
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Main Idea",
+        "level": "B2",
+        "explanation": "The passage explores food's roles in identity, community-building, and intergenerational tension for immigrant communities."
+      },
+      {
+        "id": 59,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Specific Information",
+        "question": "According to the passage, why might a specific ingredient taste different abroad even with the same name?",
+        "options": [
+          "Because it is always more expensive abroad",
+          "Because immigrants always prefer imported ingredients",
+          "Because recipes are kept secret by immigrant communities",
+          "Because it may be grown or processed differently due to climate, soil, or regulations"
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Specific Information",
+        "level": "B2",
+        "explanation": "The passage explains that climate, soil, and regulations can make a 'same-name' ingredient taste different abroad."
+      },
+      {
+        "id": 60,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Cause/Effect",
+        "question": "According to the passage, what is one effect of shared, food-centered gatherings among immigrant communities?",
+        "options": [
+          "They help maintain a sense of community and ease navigating life in a new country.",
+          "They tend to isolate community members from each other.",
+          "They always lead to conflict between generations.",
+          "They have no social function at all."
+        ],
+        "answer": "A",
+        "skill": "Reading",
+        "topic": "Cause/Effect",
+        "level": "B2",
+        "explanation": "The passage states shared meals help maintain community and ease navigating a new environment."
+      },
+      {
+        "id": 61,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Vocabulary in Context",
+        "question": "What does 'appropriation' mean in the context of mainstream popularity of immigrant cuisines?",
+        "options": [
+          "the fair and respectful payment of original creators",
+          "the act of taking something from a culture without proper credit or respect",
+          "a type of cooking technique",
+          "a government regulation on food imports"
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Vocabulary in Context",
+        "level": "B2",
+        "explanation": "'Appropriation' here refers to taking elements of a culture, such as food, without proper credit or respect."
+      },
+      {
+        "id": 62,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Inference",
+        "question": "What can be inferred about dishes considered 'traditional' by immigrant communities today?",
+        "options": [
+          "They are always identical to what is eaten in the country of origin today.",
+          "They have no connection whatsoever to the original culture.",
+          "They may have evolved independently abroad and differ from what is eaten in the origin country now.",
+          "They are rejected by younger generations entirely."
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Inference",
+        "level": "B2",
+        "explanation": "The passage states such dishes 'sometimes bear only a partial resemblance to what is actually eaten in the country of origin'."
+      },
+      {
+        "id": 63,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Writer's Opinion",
+        "question": "What is the writer's overall view of immigrant food adaptation?",
+        "options": [
+          "It is best understood as a genuine, evolving fusion shaped by circumstance, not simply a diminished copy.",
+          "It is simply a sad decline from an authentic original.",
+          "It has no value or interest as a topic.",
+          "It should be discouraged in favor of strict tradition."
+        ],
+        "answer": "A",
+        "skill": "Reading",
+        "topic": "Writer's Opinion",
+        "level": "B2",
+        "explanation": "The writer explicitly frames adaptation as a genuine fusion rather than merely a diminished copy of an original."
+      },
+      {
+        "id": 64,
+        "part": "C",
+        "passageId": "p2",
+        "type": "Inference",
+        "question": "What does the passage suggest about younger generations in immigrant families regarding food?",
+        "options": [
+          "They always fully reject their parents' culinary traditions.",
+          "They have no interest in food culture at all.",
+          "They always prefer their parents' traditions without any conflict.",
+          "They may feel caught between tradition and a desire to integrate into the new culture."
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Inference",
+        "level": "B2",
+        "explanation": "The passage describes younger generations feeling caught between tradition and integration into the new culture."
+      },
+      {
+        "id": 65,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Main Idea",
+        "question": "What is the main idea of the passage?",
+        "options": [
+          "First impressions are always completely accurate and reliable.",
+          "First impressions form rapidly due to evolutionary mechanisms, can be unreliable, and are resistant to revision, with real practical consequences.",
+          "First impressions have no connection to evolution at all.",
+          "First impressions are easily and quickly changed by any new information."
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Main Idea",
+        "level": "B2",
+        "explanation": "The passage describes first impressions as fast, evolutionarily rooted, often unreliable, and resistant to change, with real consequences."
+      },
+      {
+        "id": 66,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Specific Information",
+        "question": "According to the passage, how quickly can facial-based first impressions form?",
+        "options": [
+          "Within several minutes",
+          "Only after a full conversation",
+          "Within less than a tenth of a second",
+          "Within approximately one hour"
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Specific Information",
+        "level": "B2",
+        "explanation": "The passage states impressions can form 'within less than a tenth of a second based on facial appearance alone'."
+      },
+      {
+        "id": 67,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Cause/Effect",
+        "question": "According to the passage, what is one effect of the asymmetry between negative and positive first impressions?",
+        "options": [
+          "Negative impressions are easier to change than positive ones.",
+          "Both types of impressions are equally easy to change.",
+          "Neither type of impression can ever be changed.",
+          "Negative impressions generally require more effort to overcome than positive ones do to be undermined."
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Cause/Effect",
+        "level": "B2",
+        "explanation": "The passage states negative first impressions require more counter-evidence to overcome than positive ones require to be undermined."
+      },
+      {
+        "id": 68,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Vocabulary in Context",
+        "question": "What does 'disproportionately' mean in the phrase 'carry disproportionate influence'?",
+        "options": [
+          "an amount that is excessively large relative to its actual importance",
+          "an amount that is fair and balanced",
+          "an amount that is extremely small",
+          "an amount that changes randomly"
+        ],
+        "answer": "A",
+        "skill": "Reading",
+        "topic": "Vocabulary in Context",
+        "level": "B2",
+        "explanation": "'Disproportionate' describes an effect that is excessively large compared to its actual significance."
+      },
+      {
+        "id": 69,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Inference",
+        "question": "What can be inferred about the evolutionary origin of rapid first impressions?",
+        "options": [
+          "It was specifically designed for modern professional environments.",
+          "It evolved for different circumstances and may not always suit modern social and professional contexts well.",
+          "It has no connection to survival or safety at all.",
+          "It only developed within the last few decades."
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Inference",
+        "level": "B2",
+        "explanation": "The passage notes this system evolved for ancestral survival threats, not modern professional or digital contexts."
+      },
+      {
+        "id": 70,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Writer's Opinion",
+        "question": "What is the writer's overall stance on whether awareness alone can fix first-impression bias?",
+        "options": [
+          "The writer believes awareness alone is entirely sufficient.",
+          "The writer believes nothing can reduce this bias.",
+          "The writer has no opinion on this question.",
+          "The writer suggests awareness alone is not enough, but specific interventions can help."
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Writer's Opinion",
+        "level": "B2",
+        "explanation": "The writer states awareness does not automatically eliminate the bias, but specific structured interventions can help."
+      },
+      {
+        "id": 71,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Inference",
+        "question": "What does the passage suggest about structured interview techniques, such as standardized questions?",
+        "options": [
+          "They have no effect on reducing first-impression bias.",
+          "They completely eliminate all bias in hiring decisions.",
+          "They can measurably reduce, though not completely eliminate, the influence of first-impression bias.",
+          "They are only useful for candidates with positive first impressions."
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Inference",
+        "level": "B2",
+        "explanation": "The passage states such interventions 'measurably and meaningfully reduce, even if not ever completely eliminate' the bias."
+      },
+      {
+        "id": 72,
+        "part": "C",
+        "passageId": "p3",
+        "type": "Reference",
+        "question": "In the sentence 'this biasing, distorting process is quietly happening in real time', what does 'this process' refer to?",
+        "options": [
+          "The interviewer's first impression unconsciously shaping interpretation of the entire interview",
+          "The candidate's job application process",
+          "The standardized interview question design process",
+          "The evolutionary development of facial recognition"
+        ],
+        "answer": "A",
+        "skill": "Reading",
+        "topic": "Reference",
+        "level": "B2",
+        "explanation": "'This process' refers to the interviewer's first impression shaping their interpretation of the whole interview."
+      },
+      {
+        "id": 73,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Main Idea",
+        "question": "What is the main idea of the passage?",
+        "options": [
+          "Cybersecurity is only relevant to professional IT departments.",
+          "The growing connectivity of everyday devices creates real security risks requiring broader awareness, not just specialist attention.",
+          "The Internet of Things has eliminated all cybersecurity risks.",
+          "Only critical infrastructure needs any cybersecurity protection."
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Main Idea",
+        "level": "B2",
+        "explanation": "The passage argues connected devices create widespread risks that require general awareness, not just specialist attention."
+      },
+      {
+        "id": 74,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Specific Information",
+        "question": "According to the passage, what is a 'botnet'?",
+        "options": [
+          "A single highly secure government computer network",
+          "A type of smart thermostat",
+          "A network of compromised devices used by attackers to disrupt websites or services",
+          "A government cybersecurity agency"
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Specific Information",
+        "level": "B2",
+        "explanation": "The passage defines a botnet as a network of compromised devices used to overwhelm websites or services."
+      },
+      {
+        "id": 75,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Vocabulary in Context",
+        "question": "What does 'foundational' mean in the sentence about manufacturers treating security as secondary rather than foundational?",
+        "options": [
+          "optional and unnecessary",
+          "expensive and rare",
+          "temporary and easily removed",
+          "basic and essential, built in from the start"
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Vocabulary in Context",
+        "level": "B2",
+        "explanation": "'Foundational' means forming an essential basis, built in from the beginning rather than added later."
+      },
+      {
+        "id": 76,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Inference",
+        "question": "What can be inferred about manufacturers who ship devices without security update mechanisms?",
+        "options": [
+          "They are prioritizing long-term security over speed to market.",
+          "They may be prioritizing speed to market over long-term security.",
+          "They are required by law to do this in every country.",
+          "They have no effect on consumer security at all."
+        ],
+        "answer": "B",
+        "skill": "Reading",
+        "topic": "Inference",
+        "level": "B2",
+        "explanation": "The passage describes manufacturers racing to market as sometimes treating security as secondary, implying speed is prioritized over security."
+      },
+      {
+        "id": 77,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Cause/Effect",
+        "question": "According to the passage, what is one effect of a compromised smart device within a home network?",
+        "options": [
+          "It automatically improves the security of other devices.",
+          "It has no effect on any other device on the network.",
+          "It can serve as an entry point for attackers to access other, more sensitive devices and data.",
+          "It permanently disables the home's internet connection."
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Cause/Effect",
+        "level": "B2",
+        "explanation": "The passage states a compromised device can serve as an entry point to access other, more sensitive devices and data."
+      },
+      {
+        "id": 78,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Inference",
+        "question": "What does the passage suggest about international cooperation on cybersecurity regulation?",
+        "options": [
+          "It is fully effective and well-coordinated across all countries.",
+          "It is unnecessary because every country has identical priorities.",
+          "It has already solved the problem of critical infrastructure attacks.",
+          "It remains hampered by differing national interests and levels of technical capability."
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Inference",
+        "level": "B2",
+        "explanation": "The passage states meaningful international cooperation 'remains hampered by differing national interests and levels of technical capability'."
+      },
+      {
+        "id": 79,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Writer's Opinion",
+        "question": "What is the writer's overall view on how cybersecurity should be regarded in modern society?",
+        "options": [
+          "As a narrow, specialized concern relevant only to computer experts",
+          "As an issue that no longer matters due to improved regulation",
+          "As a basic form of digital literacy relevant to nearly everyone",
+          "As a problem exclusive to large corporations"
+        ],
+        "answer": "C",
+        "skill": "Reading",
+        "topic": "Writer's Opinion",
+        "level": "B2",
+        "explanation": "The writer concludes cybersecurity awareness 'increasingly resembles a basic form of digital literacy relevant to nearly everyone'."
+      },
+      {
+        "id": 80,
+        "part": "C",
+        "passageId": "p4",
+        "type": "Best Title",
+        "question": "Which title best fits the passage?",
+        "options": [
+          "The End of the Internet of Things",
+          "Why Smart Devices Should Be Banned",
+          "The History of Computer Viruses",
+          "Cybersecurity in an Increasingly Connected World"
+        ],
+        "answer": "D",
+        "skill": "Reading",
+        "topic": "Best Title",
+        "level": "B2",
+        "explanation": "The passage covers the expanding risks and responses tied to an increasingly connected world."
+      }
+    ],
+    "passages": [
+      {
+        "id": "p1",
+        "title": "The Rise of Artificial Intelligence in the Classroom",
+        "theme": "Technology / Education",
+        "length": "medium",
+        "text": "Artificial intelligence has moved from an abstract, futuristic concept into something many students now encounter directly in their daily academic lives, whether through writing assistance tools, automated grading systems, or personalized tutoring software that adjusts to an individual student's pace and weaknesses. This shift has happened remarkably quickly, and educators are still working out exactly what role these tools should play.\n\nProponents highlight the technology's potential for genuine personalization at a scale that would be impossible for a single human teacher managing dozens or hundreds of students. An AI tutoring system can, in principle, identify precisely which concept a particular student has misunderstood and provide targeted additional practice, adjusting difficulty in real time based on performance, something a teacher with limited class time and a large number of students to track simply cannot replicate for every individual learner.\n\nWriting assistance tools raise more complicated questions. Software capable of suggesting improvements to grammar, structure, and even argumentation can genuinely help students become better writers by revealing patterns in their own mistakes, but the same tools can also, if misused, produce finished work that no longer reflects the student's actual ability or genuine effort. Universities have responded with a wide range of policies, from outright bans on AI assistance for certain assignments to more permissive approaches that require students to disclose and explain exactly how AI tools were used in their work.\n\nAssessment itself faces a related challenge. Take-home essays and problem sets, long considered reliable indicators of independent understanding, have become considerably less reliable as evidence of a student's unaided ability now that sophisticated AI assistance is so widely and easily available. Some institutions have responded by shifting more heavily toward in-person, closely supervised exams; others are experimenting with assessments explicitly designed around AI collaboration, evaluating how effectively and critically a student can use these tools rather than pretending the tools do not exist in students' daily academic and professional lives at all.\n\nThere are also broader, more structural concerns worth taking seriously. Critics worry that overreliance on automated systems could gradually weaken students' tolerance for productive struggle and genuine intellectual confusion, the uncomfortable but often valuable cognitive effort that frequently precedes real understanding and deeper learning. If a tool can supply an immediate, polished answer the moment a student encounters any difficulty, will students still develop the patience and persistence needed to work through genuinely hard problems entirely on their own when such tools are unavailable or inappropriate to use?\n\nEquity concerns add yet another, often underdiscussed layer to this debate. Access to the most capable, cutting-edge AI tools is not remotely evenly distributed, and students at well-resourced institutions may gain significant, compounding advantages over those at under-resourced schools with more limited access to the newest, most effective educational technology.\n\nNone of these concerns suggest that AI in education is simply a mistake, a conclusion few serious educators currently seem to hold. They do suggest, however, that the technology's rapid, often unplanned arrival has outpaced careful institutional thinking about exactly how it should, and should not, be used, leaving many of the most important and consequential questions still genuinely unresolved for now."
+      },
+      {
+        "id": "p2",
+        "title": "Food, Identity, and the Immigrant Kitchen",
+        "theme": "Culture / Society",
+        "length": "long",
+        "text": "Few things carry memory and meaning as directly as the food someone grew up eating, and few experiences test that connection as thoroughly as leaving one's home country for an extended period, whether for study, work, or permanent resettlement. For many immigrants and long-term exchange students alike, the kitchen becomes an unexpectedly important site of identity, nostalgia, and sometimes quiet grief for a life left behind.\n\nRecreating a familiar dish in an unfamiliar country is rarely as simple as following a recipe. Specific ingredients may be unavailable, prohibitively expensive, or subtly different in flavor and texture from what one remembers; a particular variety of chili, rice, or cheese grown and processed in a different climate and soil, under different regulations, often tastes noticeably different even when technically 'the same' ingredient by name. Immigrants frequently describe years of experimentation, substitution, and occasional disappointment before arriving at a version of a childhood dish that feels close enough to the original to satisfy a specific, deeply personal craving that cannot easily be put into words to someone who has not experienced it themselves.\n\nThis process of adaptation, researchers studying food and migration note, is rarely a simple, one-directional loss of an original, 'authentic' cuisine. Immigrant cooking frequently evolves into something new, a genuine fusion shaped by necessity, local ingredient availability, and the influence of a new environment, rather than merely a diminished, nostalgic copy of a fixed, unchanging home-country original. Dishes that immigrant communities consider deeply traditional and essential to their identity today sometimes bear only a partial resemblance to what is actually eaten in the country of origin, having evolved independently over decades in response to local circumstances abroad, available substitute ingredients, and even the tastes of a second generation raised with one foot in each culture simultaneously.\n\nFood also serves a clear, practical social function for immigrant and exchange communities, well beyond its obvious nutritional role. Shared meals built around familiar dishes from home create natural occasions for people from a particular country or region to gather regularly, exchange practical information about navigating life in their new environment, and maintain a sense of community that can otherwise feel genuinely difficult to sustain in an unfamiliar country and culture. International student associations frequently organize food-centered events specifically for this reason, recognizing, whether explicitly stated or not, that shared food lowers social barriers more effectively and more naturally than almost any other single activity available to them.\n\nAt the same time, food can also become a site of friction and genuine tension, both within immigrant families and between immigrant communities and their new, surrounding society. Younger generations sometimes feel caught uncomfortably between their parents' insistence on strict culinary tradition as an anchor of family and cultural identity, and their own, often strong desire to fully integrate into their new environment's food culture and broader social life. Meanwhile, the growing, often enthusiastic mainstream popularity of certain immigrant cuisines in their adopted countries raises separate, additional questions about appropriation, fair economic credit, and who ultimately profits most directly when a once-humble, undervalued immigrant dish eventually becomes fashionable and widely marketed within the broader culture.\n\nWhat seems clear across this research is that food for immigrant and exchange communities is never simply about nutrition. It is memory, identity, practical community-building, and sometimes genuine, unresolved conflict, all served, quite literally, on the same single plate."
+      },
+      {
+        "id": "p3",
+        "title": "The Science of First Impressions",
+        "theme": "Psychology / Science",
+        "length": "long",
+        "text": "Within a fraction of a second of meeting someone new, long before any meaningful conversation has taken place, the human brain has already begun forming judgments: is this person trustworthy, competent, friendly, confident? Psychologists have spent decades studying this process, consistently finding that first impressions form astonishingly quickly, sometimes within less than a tenth of a second based on facial appearance alone, and that these snap judgments, however hastily formed, tend to be remarkably resistant to revision even after extended subsequent contact and additional information.\n\nThis speed is not, researchers argue, a flaw or a careless shortcut, but rather a deeply evolved survival mechanism. In ancestral environments where quickly determining whether an unfamiliar person posed a potential threat could genuinely be a matter of life and death, the evolutionary benefit of fast judgment, even an imperfect one prone to occasional serious error, likely outweighed the cost of waiting for more complete information before deciding how to react. The trouble, of course, is that this ancient system evolved for small, tightly knit ancestral communities and short-term physical survival threats, not for navigating complex modern society, professional environments, or digital interactions, where its errors can have a lasting impact on someone's career, opportunities, or social standing in ways our ancestors never had to consider.\n\nSpecific facial features and expressions appear to carry disproportionate influence over these rapid, largely unconscious judgments. Faces perceived, often for reasons entirely unrelated to any actual character trait, as resembling a trustworthy expression, frequently through subtle features like eyebrow position, mouth shape, or facial symmetry with no genuine logical connection to actual trustworthiness, are consistently rated as more trustworthy by study participants, regardless of the person's actual documented behavior or history. This finding has significant real-world implications: research has repeatedly found correlations between how trustworthy or competent a political candidate's face is rated by naive observers and that same candidate's actual electoral success, suggesting that voters may unconsciously be influenced by essentially irrelevant facial features having nothing to do with a candidate's genuine policy positions or qualifications.\n\nImportantly, and somewhat reassuringly for those troubled by these findings, researchers emphasize that first impressions, however quickly formed, are not literally unchangeable. Sufficient, consistent, and repeated contrary evidence can indeed gradually shift an initial judgment over time with enough sustained effort and opportunity. The documented, consistent problem, however, is one of asymmetry: negative first impressions, once firmly formed, generally require considerably more repeated positive counter-evidence to overcome than a positive first impression requires to be subsequently undermined or reversed by negative information encountered afterward.\n\nThis asymmetry carries genuinely practical implications well beyond academic psychological interest alone. In hiring decisions, for example, an interviewer's instant, largely unconscious first impression, however scientifically unreliable it may actually be as a predictor of true job performance, can subtly shape how that interviewer subsequently interprets literally everything the candidate says or does for the remainder of the interview, often without the interviewer ever being consciously aware that this biasing, distorting process is quietly happening in real time.\n\nAwareness of this well-documented bias does not, researchers caution, automatically eliminate its powerful, persistent effect through willpower or good intentions alone. However, specific structured interventions, such as standardized interview questions presented identically to every candidate regardless of initial personal impression, or formally delaying any final evaluative judgment until after all planned, relevant information has actually been thoroughly collected and carefully considered, have been shown in controlled studies to measurably and meaningfully reduce, even if not ever completely eliminate, the powerful and persistent influence of these admittedly fast, evolutionarily deep-rooted, but demonstrably often inaccurate snap judgments."
+      },
+      {
+        "id": "p4",
+        "title": "Cybersecurity in an Increasingly Connected World",
+        "theme": "Technology",
+        "length": "long",
+        "text": "A few decades ago, the idea of a household refrigerator, a child's toy, or a car being vulnerable to a hacking attack would have sounded like pure science fiction. Today, it is a well-documented security concern. As more everyday devices, collectively known as the Internet of Things, connect to the internet to offer conveniences such as remote control, voice commands, or usage tracking, the number of potential entry points for malicious actors has expanded dramatically, with no sign of slowing down.\n\nThis expansion creates a genuine tension between convenience and security that manufacturers, consumers, and regulators are all still struggling to resolve. A smart thermostat that can be adjusted remotely from a smartphone app offers real convenience, but it also represents a potential point of entry into a home's wider network if it is not properly secured. Manufacturers racing to be first to market with an appealing connected product have historically treated security as a secondary consideration rather than a foundational one, occasionally shipping devices with weak, easily guessed default passwords or no meaningful mechanism for receiving future security updates.\n\nThe consequences of inadequate security extend further than most consumers initially realize. A single compromised smart device within a home network can serve as an entry point for an attacker to access other, more sensitive devices and data on that same network, including computers holding banking information or personal records. On a larger scale, networks of compromised devices have been assembled into so-called 'botnets', powerful enough when combined to take down major websites and online services through coordinated traffic floods, with most individual device owners having no idea their own household gadget was being secretly misused this way.\n\nBeyond individual households, more sophisticated attacks increasingly target critical infrastructure directly, including power grids, water treatment facilities, hospitals, and financial institutions. Unlike a straightforward scam targeting a single individual, a successful attack on infrastructure of this scale can endanger public health and safety, disrupt essential services relied upon by millions of people, and, in severe cases, contribute to broader social and political instability within an affected region.\n\nGovernments and international organizations have responded to this escalating threat with regulatory measures of varying effectiveness, including minimum security standards for connected devices, breach notification laws requiring companies to disclose when customer data has been compromised, and, in some countries, dedicated agencies focused on defending critical national infrastructure from sophisticated, sometimes state-sponsored cyberattacks. Critics argue that regulation generally lags behind the pace of technological change, and that meaningful international cooperation on this issue remains hampered by differing national interests and levels of technical capability.\n\nFor individual users navigating this complex landscape, security experts consistently recommend several practical measures: changing default passwords immediately upon purchasing any new connected device, keeping device software updated whenever updates become available, and remaining skeptical of any manufacturer that cannot clearly demonstrate an ongoing commitment to security updates throughout a product's expected lifespan.\n\nWhat seems increasingly clear is that cybersecurity can no longer be treated as a narrow, specialized problem confined to IT departments and dedicated security professionals. As everyday objects throughout our homes, workplaces, and shared infrastructure become increasingly interconnected, cybersecurity awareness increasingly resembles a basic form of digital literacy relevant to nearly everyone in modern society, rather than a concern limited to computer experts."
+      }
+    ]
   }
 ];
