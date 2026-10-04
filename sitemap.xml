@@ -66,6 +66,13 @@
   </url>
 
   <url>
+    <loc>https://abonlinenglish.school/grammar/irregular-verbs</loc>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
     <loc>https://abonlinenglish.school/grammar/a1</loc>
     <lastmod>2026-09-24</lastmod>
     <changefreq>monthly</changefreq>
@@ -1511,7 +1518,7 @@
   </url>
   <url>
     <loc>https://abonlinenglish.school/dil-edinim-yontemi</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
