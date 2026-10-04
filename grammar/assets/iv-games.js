@@ -16,6 +16,17 @@
     var copy = POOL.filter(function (v) { return !exclude || exclude.indexOf(v) === -1; });
     return shuffle(copy).slice(0, n);
   }
+  /* Produces the classic learner mistake: treating an irregular verb as regular
+     (go -> "goed" instead of "went", see -> "seed" instead of "saw", cry-type -> "-ied").
+     Used as a deliberate wrong quiz option so the game actually drills the real confusion. */
+  function fakeRegularPast(v1) {
+    var w = v1.toLowerCase();
+    var fake;
+    if (/[^aeiou]y$/.test(w)) fake = v1.slice(0, -1) + "ied";
+    else if (/e$/.test(w)) fake = v1 + "d";
+    else fake = v1 + "ed";
+    return fake;
+  }
 
   /* ---------------- Tabs ---------------- */
   var tabMemory = document.getElementById("tab-memory");
@@ -164,9 +175,15 @@
       if (usedRecently.length > 20) usedRecently = usedRecently.slice(-10);
       var verb = pick(1, usedRecently)[0] || pick(1)[0];
       usedRecently.push(verb);
-      var wrongPool = POOL.filter(function (v) { return v.v2 !== verb.v2; });
-      var distractors = shuffle(wrongPool).slice(0, 3).map(function (v) { return v.v2; });
-      var options = shuffle([verb.v2].concat(distractors));
+      var distractors = [];
+      var fake = fakeRegularPast(verb.v1);
+      if (fake !== verb.v2 && fake !== verb.v3) distractors.push(fake);
+      var wrongPool = POOL.filter(function (v) { return v.v2 !== verb.v2 && v.v2 !== fake; });
+      shuffle(wrongPool).some(function (v) {
+        if (distractors.indexOf(v.v2) === -1) distractors.push(v.v2);
+        return distractors.length >= 3;
+      });
+      var options = shuffle([verb.v2].concat(distractors.slice(0, 3)));
       stage.innerHTML =
         '<div class="iv-quiz-prompt"><span class="lbl">Past Simple (V2) nedir?</span><div class="verb">' + verb.v1 + '</div></div>' +
         '<div class="iv-quiz-opts" id="quiz-opts"></div>';
