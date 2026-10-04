@@ -456,6 +456,16 @@ a:focus-visible,button:focus-visible,input:focus-visible{
 .ortaokul-grades a{display:inline-block;padding:8px 18px;border-radius:999px;background:#fff;border:1px solid var(--line);font-weight:600;font-size:15px;color:var(--navy);text-decoration:none;transition:border-color .18s ease,color .18s ease,transform .18s ease}
 .ortaokul-grades a:hover{border-color:var(--blue);color:var(--blue);transform:translateY(-2px)}
 @media(max-width:860px){.ortaokul-card{grid-template-columns:1fr}}
+
+/* TEST YOURSELF glow */
+.ty-wrap{margin:22px 0 4px;text-align:left}
+.ty-btn{display:inline-block;padding:15px 34px;border-radius:14px;background:linear-gradient(135deg,#ff2d55,#ff8a00);color:#fff;font-weight:900;font-size:1.35rem;letter-spacing:3px;text-decoration:none;text-transform:uppercase;border:2px solid rgba(255,255,255,.65);animation:tyGlow 1.3s ease-in-out infinite;text-shadow:0 0 10px rgba(255,255,255,.8)}
+.ty-btn:hover{transform:scale(1.05)}
+.ty-sub{display:block;margin-top:9px;font-size:.92rem;font-weight:600;color:#c2410c;animation:tyBlink 1.3s ease-in-out infinite}
+@keyframes tyGlow{0%,100%{box-shadow:0 0 8px #ff2d55,0 0 18px rgba(255,45,85,.6);opacity:1;transform:scale(1)}50%{box-shadow:0 0 26px #ff8a00,0 0 55px rgba(255,138,0,.9),0 0 90px rgba(255,45,85,.5);opacity:.78;transform:scale(1.04)}}
+@keyframes tyBlink{0%,100%{opacity:1}50%{opacity:.35}}
+@media(max-width:700px){.ty-wrap{text-align:center}.ty-btn{display:block;font-size:1.2rem;padding:14px 18px}}
+@media(prefers-reduced-motion:reduce){.ty-btn,.ty-sub{animation:none}}
 </style>
 </head>
 <body>
@@ -627,6 +637,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{
           <a class="btn btn-primary" href="/kendin-ogren">Öğrenmeye Başla →</a>
           <a class="btn btn-outline" href="/teacher-planner">Öğretmen Bölümü</a>
         </div>
+        <div class="ty-wrap"><a class="ty-btn" href="/placement-test#seviye-testi">TEST YOURSELF</a><span class="ty-sub">Hangi seviyede olduğunu öğrenmek için tıkla</span></div>
         <nav class="hero-quicklinks" aria-label="Hızlı erişim">
           <a href="/ortaokul-serisi/">Ortaokul İngilizce</a>
           <a href="/upper-secondary/">Lise İngilizce</a>
