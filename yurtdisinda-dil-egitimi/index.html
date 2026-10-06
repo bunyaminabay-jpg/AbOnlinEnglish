@@ -413,7 +413,7 @@ footer.site-footer{padding:32px 0;text-align:center;color:var(--muted-2);font-si
         </div>
         <div class="field">
           <label for="yd-telefon">Telefon / WhatsApp</label>
-          <input type="tel" id="yd-telefon" name="telefon" placeholder="05xx xxx xx xx" autocomplete="tel" inputmode="tel" pattern="[0-9 +()\-]{10,18}" required>
+          <input type="tel" id="yd-telefon" name="telefon" placeholder="05xx xxx xx xx" autocomplete="tel" inputmode="tel" pattern="[0-9 +()-]{10,18}" required>
         </div>
         <div class="field">
           <label for="yd-eposta">E-posta <span class="opt">(opsiyonel)</span></label>
@@ -566,7 +566,7 @@ footer.site-footer{padding:32px 0;text-align:center;color:var(--muted-2);font-si
         <label class="check"><input type="checkbox" id="yd-kvkk" name="kvkk" required> Paylaştığım bilgilerin yalnızca yurtdışı eğitim danışmanlığı amacıyla benimle iletişime geçilmesi için kullanılmasını kabul ediyorum.</label>
         <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
         <button type="submit" class="form-submit">Ücretsiz Danışmanlık İste →</button>
-        <div class="form-ok" id="yd-ok" hidden>✓ Talebin alındı. WhatsApp mesajını göndermeyi unutma; bilgiler e-posta ile de bize ulaştı.</div>
+        <div class="form-ok" id="yd-ok" hidden>✓ Talebin alındı. WhatsApp'ta açılan mesajı göndermeyi unutma.</div>
         <div class="form-foot">Gönder'e bastığında bilgilerin e-posta ile bize ulaşır, WhatsApp da mesajın hazır şekilde açılır — onaylayıp yollaman yeterli.</div>
       </form>
     </div>
@@ -632,7 +632,6 @@ footer.site-footer{padding:32px 0;text-align:center;color:var(--muted-2);font-si
 "İletişim Tercihi: " + g('iletisim') + "\n" +
 "Not: " + g('not');
     var url = 'https://wa.me/onlineelt1?text=' + encodeURIComponent(msg);
-    window.open(url, '_blank');
 
     // Aynı bilgileri e-postaya da gönder (FormSubmit, ücretsiz, hesap gerektirmez)
     if (!f.get('_honey')) {
@@ -651,12 +650,21 @@ footer.site-footer{padding:32px 0;text-align:center;color:var(--muted-2);font-si
         'Mesaj (WhatsApp metni)': msg
       };
       if (f.get('eposta')) data._replyto = f.get('eposta');
+      // Basit (preflight'sız) istek: FormData + yalnızca Accept başlığı
+      var fd = new FormData();
+      Object.keys(data).forEach(function(k){ fd.append(k, data[k]); });
       fetch('https://formsubmit.co/ajax/ingilizceogrensene@gmail.com', {
-        method: 'POST', keepalive: true,
-        headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
-        body: JSON.stringify(data)
-      }).catch(function(){});
+        method: 'POST', headers: {'Accept': 'application/json'}, body: fd
+      }).then(function(r){ return r.json(); }).then(function(j){
+        console.log('FormSubmit:', j);
+        if (j && String(j.success) !== 'true') showErr();
+      }).catch(function(err){ console.warn('FormSubmit hata:', err); showErr(); });
     }
+    function showErr(){
+      var ok = document.getElementById('yd-ok');
+      if (ok) { ok.hidden = false; ok.textContent = 'WhatsApp mesajını göndermen yeterli. (E-posta iletimi şu an yapılamadı; istersen ingilizceogrensene@gmail.com adresine de yazabilirsin.)'; }
+    }
+    window.open(url, '_blank');
     var ok = document.getElementById('yd-ok');
     if (ok) ok.hidden = false;
     form.reset();
