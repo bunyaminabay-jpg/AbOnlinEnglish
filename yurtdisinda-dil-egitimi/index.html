@@ -105,6 +105,12 @@ footer.site-footer{padding:32px 0;text-align:center;color:var(--muted-2);font-si
 .field textarea{resize:vertical;min-height:84px}
 .form-submit{grid-column:1 / -1;margin-top:4px;background:var(--blue);color:#fff;font-weight:700;font-size:15px;padding:14px 22px;border:none;border-radius:999px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px}
 .form-submit:hover{background:var(--blue-dark)}
+.form-sec{grid-column:1 / -1;margin:10px 0 -4px;padding-top:14px;border-top:1px dashed var(--line);font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--blue)}
+.form-sec:first-child{border-top:none;padding-top:0;margin-top:0}
+.field .opt{font-weight:400;color:var(--muted-2)}
+.field .hint{font-size:12px;color:var(--muted-2)}
+.check{grid-column:1 / -1;display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--ink)}
+.check input{margin-top:3px;width:16px;height:16px;flex:none}
 .form-foot{grid-column:1 / -1;font-size:12.5px;color:var(--muted-2);text-align:center;margin-top:2px}
 
 .uk-eyebrow{display:inline-block;background:#fff;border:1px solid var(--line);color:var(--navy);font-weight:600;font-size:13px;padding:6px 14px;border-radius:999px;margin-bottom:16px}
@@ -380,18 +386,97 @@ footer.site-footer{padding:32px 0;text-align:center;color:var(--muted-2);font-si
       <h2 id="danismanlik-title" style="margin:0 0 8px">Bilgilerini bırak, sana özel yönlendirme yapalım</h2>
       <p class="lede" style="margin-bottom:24px">Formu doldur, mesajın hazır şekilde WhatsApp'a düşsün — hangi ülke, hangi program ve hangi tarihin sana en uygun olduğunu birlikte netleştirelim.</p>
       <form class="form-grid" id="yurtdisiForm">
+        <div class="form-sec">1 · Başvuran Bilgileri</div>
+        <div class="field full">
+          <label for="yd-rol">Formu dolduran</label>
+          <select id="yd-rol" name="rol" required>
+            <option value="" disabled selected>Seç</option>
+            <option>Öğrenci</option>
+            <option>Veli</option>
+            <option>Öğretmen</option>
+            <option>Okul Yöneticisi / Okul Yetkilisi</option>
+          </select>
+        </div>
         <div class="field full">
           <label for="yd-adsoyad">Ad Soyad</label>
-          <input type="text" id="yd-adsoyad" name="adsoyad" placeholder="Adın Soyadın" required>
+          <input type="text" id="yd-adsoyad" name="adsoyad" placeholder="Adın Soyadın" autocomplete="name" required>
         </div>
         <div class="field">
           <label for="yd-telefon">Telefon / WhatsApp</label>
-          <input type="tel" id="yd-telefon" name="telefon" placeholder="05xx xxx xx xx" required>
+          <input type="tel" id="yd-telefon" name="telefon" placeholder="05xx xxx xx xx" autocomplete="tel" inputmode="tel" pattern="[0-9 +()\-]{10,18}" required>
         </div>
         <div class="field">
-          <label for="yd-yas">Yaş</label>
-          <input type="number" id="yd-yas" name="yas" placeholder="Örn. 16" min="8" max="99" required>
+          <label for="yd-eposta">E-posta <span class="opt">(opsiyonel)</span></label>
+          <input type="email" id="yd-eposta" name="eposta" placeholder="ornek@mail.com" autocomplete="email">
         </div>
+        <div class="field">
+          <label for="yd-sehir">Şehir</label>
+          <input type="text" id="yd-sehir" name="sehir" placeholder="Örn. Balıkesir" autocomplete="address-level1" required>
+        </div>
+        <div class="field">
+          <label for="yd-ilce">İlçe</label>
+          <input type="text" id="yd-ilce" name="ilce" placeholder="Örn. Karesi" autocomplete="address-level2" required>
+        </div>
+
+        <div class="form-sec">2 · Okul Bilgileri</div>
+        <div class="field full">
+          <label for="yd-okul">Okul Adı</label>
+          <input type="text" id="yd-okul" name="okul" placeholder="Örn. Atatürk Anadolu Lisesi" required>
+        </div>
+        <div class="field">
+          <label for="yd-okulturu">Okul Türü</label>
+          <select id="yd-okulturu" name="okulturu" required>
+            <option value="" disabled selected>Seç</option>
+            <option>Ortaokul</option>
+            <option>Anadolu Lisesi</option>
+            <option>Fen / Sosyal Bilimler Lisesi</option>
+            <option>Meslek / Teknik Lise</option>
+            <option>Özel Okul / Kolej</option>
+            <option>Üniversite</option>
+            <option>Diğer</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="yd-sinif">Sınıf / Kademe</label>
+          <select id="yd-sinif" name="sinif" required>
+            <option value="" disabled selected>Seç</option>
+            <option>7. sınıf</option>
+            <option>8. sınıf</option>
+            <option>Hazırlık</option>
+            <option>9. sınıf</option>
+            <option>10. sınıf</option>
+            <option>11. sınıf</option>
+            <option>12. sınıf</option>
+            <option>Üniversite</option>
+            <option>Karma grup / birden fazla sınıf</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="yd-mevcut">Okul Mevcudu <span class="opt">(toplam öğrenci)</span></label>
+          <input type="number" id="yd-mevcut" name="mevcut" placeholder="Örn. 650" min="1" max="20000" inputmode="numeric" required>
+        </div>
+        <div class="field">
+          <label for="yd-katilimci">Katılması düşünülen öğrenci sayısı</label>
+          <input type="number" id="yd-katilimci" name="katilimci" placeholder="Bireysel ise 1" min="1" max="500" inputmode="numeric" required>
+          <span class="hint">Grup başvurusu ise tahmini sayı yeterli.</span>
+        </div>
+        <div class="field">
+          <label for="yd-yas">Öğrenci yaşı / yaş aralığı</label>
+          <input type="text" id="yd-yas" name="yas" placeholder="Örn. 16 veya 15-17" required>
+        </div>
+        <div class="field">
+          <label for="yd-seviye">İngilizce Seviyesi</label>
+          <select id="yd-seviye" name="seviye" required>
+            <option value="" disabled selected>Seç</option>
+            <option>Başlangıç (A1-A2)</option>
+            <option>Orta (B1)</option>
+            <option>İyi (B2)</option>
+            <option>İleri (C1+)</option>
+            <option>Karma / bilmiyorum</option>
+          </select>
+        </div>
+
+        <div class="form-sec">3 · Program Tercihi</div>
         <div class="field">
           <label for="yd-ulke">İlgilendiğin Ülke</label>
           <select id="yd-ulke" name="ulke" required>
@@ -419,11 +504,56 @@ footer.site-footer{padding:32px 0;text-align:center;color:var(--muted-2);font-si
             <option>Henüz bilmiyorum</option>
           </select>
         </div>
-        <div class="field full">
-          <label for="yd-not">Eklemek istediğin bir şey var mı? (opsiyonel)</label>
-          <textarea id="yd-not" name="not" placeholder="Örn. Temmuz ayında 3 haftalık bir program arıyorum..."></textarea>
+        <div class="field">
+          <label for="yd-donem">Tercih edilen dönem</label>
+          <select id="yd-donem" name="donem" required>
+            <option value="" disabled selected>Seç</option>
+            <option>Sömestr tatili (Ocak-Şubat)</option>
+            <option>Nisan ara tatili</option>
+            <option>Yaz tatili - Haziran</option>
+            <option>Yaz tatili - Temmuz</option>
+            <option>Yaz tatili - Ağustos</option>
+            <option>Kasım ara tatili</option>
+            <option>Esnek / henüz belli değil</option>
+          </select>
         </div>
-        <button type="submit" class="form-submit">WhatsApp'ta Gönder →</button>
+        <div class="field">
+          <label for="yd-sure">Süre</label>
+          <select id="yd-sure" name="sure" required>
+            <option value="" disabled selected>Seç</option>
+            <option>1 hafta</option>
+            <option>2 hafta</option>
+            <option>3 hafta</option>
+            <option>4 hafta</option>
+            <option>1-3 ay</option>
+            <option>3-6 ay</option>
+            <option>Henüz bilmiyorum</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="yd-pasaport">Pasaport durumu</label>
+          <select id="yd-pasaport" name="pasaport" required>
+            <option value="" disabled selected>Seç</option>
+            <option>Var</option>
+            <option>Yok</option>
+            <option>Bazı öğrencilerde var</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="yd-iletisim">Size nasıl ulaşalım?</label>
+          <select id="yd-iletisim" name="iletisim" required>
+            <option value="" disabled selected>Seç</option>
+            <option>WhatsApp mesajı</option>
+            <option>Telefon araması</option>
+            <option>E-posta</option>
+          </select>
+        </div>
+        <div class="field full">
+          <label for="yd-not">Eklemek istediğin bir şey var mı? <span class="opt">(opsiyonel)</span></label>
+          <textarea id="yd-not" name="not" placeholder="Örn. Temmuz ayında 3 haftalık bir program arıyorum; grupta 2 öğretmen refakatçi olacak..."></textarea>
+        </div>
+        <label class="check"><input type="checkbox" id="yd-kvkk" name="kvkk" required> Paylaştığım bilgilerin yalnızca yurtdışı eğitim danışmanlığı amacıyla benimle iletişime geçilmesi için kullanılmasını kabul ediyorum.</label>
+        <button type="submit" class="form-submit">Ücretsiz Danışmanlık İste →</button>
         <div class="form-foot">Gönder'e bastığında WhatsApp açılır, mesajın hazır şekilde gelir — sadece onaylayıp yollaman yeterli.</div>
       </form>
     </div>
@@ -462,14 +592,31 @@ footer.site-footer{padding:32px 0;text-align:center;color:var(--muted-2);font-si
   form.addEventListener('submit', function(e){
     e.preventDefault();
     var f = new FormData(form);
+    var g = function(k){ var v = (f.get(k) || '').toString().trim(); return v || '-'; };
     var msg =
-"Merhaba, yurt dışı dil eğitimi/yaz okulu için ücretsiz danışmanlık talebim var:\n" +
-"Ad Soyad: " + f.get('adsoyad') + "\n" +
-"Telefon: " + f.get('telefon') + "\n" +
-"Yaş: " + f.get('yas') + "\n" +
-"İlgilendiği Ülke: " + f.get('ulke') + "\n" +
-"Program Türü: " + f.get('program') + "\n" +
-"Not: " + (f.get('not') || '-');
+"Merhaba, yurt dışı dil eğitimi/yaz okulu için ücretsiz danışmanlık talebim var:\n\n" +
+"— BAŞVURAN —\n" +
+"Formu dolduran: " + g('rol') + "\n" +
+"Ad Soyad: " + g('adsoyad') + "\n" +
+"Telefon: " + g('telefon') + "\n" +
+"E-posta: " + g('eposta') + "\n" +
+"Şehir / İlçe: " + g('sehir') + " / " + g('ilce') + "\n\n" +
+"— OKUL —\n" +
+"Okul Adı: " + g('okul') + "\n" +
+"Okul Türü: " + g('okulturu') + "\n" +
+"Sınıf / Kademe: " + g('sinif') + "\n" +
+"Okul Mevcudu: " + g('mevcut') + "\n" +
+"Katılacak Öğrenci Sayısı: " + g('katilimci') + "\n" +
+"Yaş: " + g('yas') + "\n" +
+"İngilizce Seviyesi: " + g('seviye') + "\n\n" +
+"— PROGRAM —\n" +
+"Ülke: " + g('ulke') + "\n" +
+"Program Türü: " + g('program') + "\n" +
+"Dönem: " + g('donem') + "\n" +
+"Süre: " + g('sure') + "\n" +
+"Pasaport: " + g('pasaport') + "\n" +
+"İletişim Tercihi: " + g('iletisim') + "\n" +
+"Not: " + g('not');
     var url = 'https://wa.me/onlineelt1?text=' + encodeURIComponent(msg);
     window.open(url, '_blank');
   });
