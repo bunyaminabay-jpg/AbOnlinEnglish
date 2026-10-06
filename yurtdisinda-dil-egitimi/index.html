@@ -392,9 +392,18 @@ footer.site-footer{padding:32px 0;text-align:center;color:var(--muted-2);font-si
           <select id="yd-rol" name="rol" required>
             <option value="" disabled selected>Seç</option>
             <option>Öğrenci</option>
-            <option>Veli</option>
             <option>Öğretmen</option>
-            <option>Okul Yöneticisi / Okul Yetkilisi</option>
+            <option>İdareci</option>
+            <option>Veli</option>
+          </select>
+        </div>
+        <div class="field full">
+          <label for="yd-talep">Talep türü <span class="opt">(opsiyonel)</span></label>
+          <select id="yd-talep" name="talep">
+            <option value="" selected>Seç</option>
+            <option>Okulumuzda bilgilendirme semineri</option>
+            <option>Bireysel danışmanlık</option>
+            <option>İkisi de</option>
           </select>
         </div>
         <div class="field full">
@@ -424,9 +433,9 @@ footer.site-footer{padding:32px 0;text-align:center;color:var(--muted-2);font-si
           <input type="text" id="yd-okul" name="okul" placeholder="Örn. Atatürk Anadolu Lisesi" required>
         </div>
         <div class="field">
-          <label for="yd-okulturu">Okul Türü</label>
-          <select id="yd-okulturu" name="okulturu" required>
-            <option value="" disabled selected>Seç</option>
+          <label for="yd-okulturu">Okul Türü <span class="opt">(opsiyonel)</span></label>
+          <select id="yd-okulturu" name="okulturu">
+            <option value="" selected>Seç</option>
             <option>Ortaokul</option>
             <option>Anadolu Lisesi</option>
             <option>Fen / Sosyal Bilimler Lisesi</option>
@@ -437,9 +446,9 @@ footer.site-footer{padding:32px 0;text-align:center;color:var(--muted-2);font-si
           </select>
         </div>
         <div class="field">
-          <label for="yd-sinif">Sınıf / Kademe</label>
-          <select id="yd-sinif" name="sinif" required>
-            <option value="" disabled selected>Seç</option>
+          <label for="yd-sinif">Sınıf / Kademe <span class="opt">(opsiyonel)</span></label>
+          <select id="yd-sinif" name="sinif">
+            <option value="" selected>Seç</option>
             <option>7. sınıf</option>
             <option>8. sınıf</option>
             <option>Hazırlık</option>
@@ -452,22 +461,22 @@ footer.site-footer{padding:32px 0;text-align:center;color:var(--muted-2);font-si
           </select>
         </div>
         <div class="field">
-          <label for="yd-mevcut">Okul Mevcudu <span class="opt">(toplam öğrenci)</span></label>
-          <input type="number" id="yd-mevcut" name="mevcut" placeholder="Örn. 650" min="1" max="20000" inputmode="numeric" required>
+          <label for="yd-mevcut">Okul Mevcudu <span class="opt">(opsiyonel)</span></label>
+          <input type="number" id="yd-mevcut" name="mevcut" placeholder="Örn. 650" min="1" max="20000" inputmode="numeric">
         </div>
         <div class="field">
-          <label for="yd-katilimci">Katılması düşünülen öğrenci sayısı</label>
-          <input type="number" id="yd-katilimci" name="katilimci" placeholder="Bireysel ise 1" min="1" max="500" inputmode="numeric" required>
-          <span class="hint">Grup başvurusu ise tahmini sayı yeterli.</span>
+          <label for="yd-katilimci">Seminer için tahmini katılımcı sayısı <span class="opt">(opsiyonel)</span></label>
+          <input type="number" id="yd-katilimci" name="katilimci" placeholder="Örn. 80" min="1" max="5000" inputmode="numeric">
+          <span class="hint">Kesin sayı gerekmez, yaklaşık yeterli.</span>
         </div>
         <div class="field">
-          <label for="yd-yas">Öğrenci yaşı / yaş aralığı</label>
-          <input type="text" id="yd-yas" name="yas" placeholder="Örn. 16 veya 15-17" required>
+          <label for="yd-yas">Öğrenci yaşı / yaş aralığı <span class="opt">(opsiyonel)</span></label>
+          <input type="text" id="yd-yas" name="yas" placeholder="Örn. 16 veya 15-17">
         </div>
         <div class="field">
-          <label for="yd-seviye">İngilizce Seviyesi</label>
-          <select id="yd-seviye" name="seviye" required>
-            <option value="" disabled selected>Seç</option>
+          <label for="yd-seviye">İngilizce Seviyesi <span class="opt">(opsiyonel)</span></label>
+          <select id="yd-seviye" name="seviye">
+            <option value="" selected>Seç</option>
             <option>Başlangıç (A1-A2)</option>
             <option>Orta (B1)</option>
             <option>İyi (B2)</option>
@@ -476,11 +485,11 @@ footer.site-footer{padding:32px 0;text-align:center;color:var(--muted-2);font-si
           </select>
         </div>
 
-        <div class="form-sec">3 · Program Tercihi</div>
+        <div class="form-sec">3 · Program Tercihi (biliniyorsa)</div>
         <div class="field">
-          <label for="yd-ulke">İlgilendiğin Ülke</label>
-          <select id="yd-ulke" name="ulke" required>
-            <option value="" disabled selected>Seç</option>
+          <label for="yd-ulke">İlgilendiğin Ülke <span class="opt">(opsiyonel)</span></label>
+          <select id="yd-ulke" name="ulke">
+            <option value="" selected>Seç</option>
             <option>İngiltere</option>
             <option>Amerika</option>
             <option>Malta</option>
@@ -495,54 +504,55 @@ footer.site-footer{padding:32px 0;text-align:center;color:var(--muted-2);font-si
           </select>
         </div>
         <div class="field">
-          <label for="yd-program">Program Türü</label>
-          <select id="yd-program" name="program" required>
-            <option value="" disabled selected>Seç</option>
+          <label for="yd-program">Program Türü <span class="opt">(opsiyonel)</span></label>
+          <select id="yd-program" name="program">
+            <option value="" selected>Seç</option>
             <option>Lise Yaz Okulu (2-4 hafta)</option>
             <option>Üniversite / Yetişkin Dil Kursu (1-6 ay)</option>
             <option>Work &amp; Study / Work &amp; Travel</option>
-            <option>Henüz bilmiyorum</option>
+            <option>Henüz belli değil</option>
           </select>
         </div>
         <div class="field">
-          <label for="yd-donem">Tercih edilen dönem</label>
-          <select id="yd-donem" name="donem" required>
-            <option value="" disabled selected>Seç</option>
+          <label for="yd-donem">Tercih edilen dönem <span class="opt">(opsiyonel)</span></label>
+          <select id="yd-donem" name="donem">
+            <option value="" selected>Seç</option>
             <option>Sömestr tatili (Ocak-Şubat)</option>
             <option>Nisan ara tatili</option>
             <option>Yaz tatili - Haziran</option>
             <option>Yaz tatili - Temmuz</option>
             <option>Yaz tatili - Ağustos</option>
             <option>Kasım ara tatili</option>
-            <option>Esnek / henüz belli değil</option>
+            <option>Henüz belli değil</option>
           </select>
         </div>
         <div class="field">
-          <label for="yd-sure">Süre</label>
-          <select id="yd-sure" name="sure" required>
-            <option value="" disabled selected>Seç</option>
+          <label for="yd-sure">Süre <span class="opt">(opsiyonel)</span></label>
+          <select id="yd-sure" name="sure">
+            <option value="" selected>Seç</option>
             <option>1 hafta</option>
             <option>2 hafta</option>
             <option>3 hafta</option>
             <option>4 hafta</option>
             <option>1-3 ay</option>
             <option>3-6 ay</option>
-            <option>Henüz bilmiyorum</option>
+            <option>Henüz belli değil</option>
           </select>
         </div>
         <div class="field">
-          <label for="yd-pasaport">Pasaport durumu</label>
-          <select id="yd-pasaport" name="pasaport" required>
-            <option value="" disabled selected>Seç</option>
+          <label for="yd-pasaport">Pasaport durumu <span class="opt">(opsiyonel)</span></label>
+          <select id="yd-pasaport" name="pasaport">
+            <option value="" selected>Seç</option>
             <option>Var</option>
             <option>Yok</option>
             <option>Bazı öğrencilerde var</option>
+            <option>Bilmiyorum</option>
           </select>
         </div>
         <div class="field">
-          <label for="yd-iletisim">Size nasıl ulaşalım?</label>
-          <select id="yd-iletisim" name="iletisim" required>
-            <option value="" disabled selected>Seç</option>
+          <label for="yd-iletisim">Size nasıl ulaşalım? <span class="opt">(opsiyonel)</span></label>
+          <select id="yd-iletisim" name="iletisim">
+            <option value="" selected>Seç</option>
             <option>WhatsApp mesajı</option>
             <option>Telefon araması</option>
             <option>E-posta</option>
@@ -597,6 +607,7 @@ footer.site-footer{padding:32px 0;text-align:center;color:var(--muted-2);font-si
 "Merhaba, yurt dışı dil eğitimi/yaz okulu için ücretsiz danışmanlık talebim var:\n\n" +
 "— BAŞVURAN —\n" +
 "Formu dolduran: " + g('rol') + "\n" +
+"Talep türü: " + g('talep') + "\n" +
 "Ad Soyad: " + g('adsoyad') + "\n" +
 "Telefon: " + g('telefon') + "\n" +
 "E-posta: " + g('eposta') + "\n" +
@@ -606,7 +617,7 @@ footer.site-footer{padding:32px 0;text-align:center;color:var(--muted-2);font-si
 "Okul Türü: " + g('okulturu') + "\n" +
 "Sınıf / Kademe: " + g('sinif') + "\n" +
 "Okul Mevcudu: " + g('mevcut') + "\n" +
-"Katılacak Öğrenci Sayısı: " + g('katilimci') + "\n" +
+"Seminer Tahmini Katılımcı: " + g('katilimci') + "\n" +
 "Yaş: " + g('yas') + "\n" +
 "İngilizce Seviyesi: " + g('seviye') + "\n\n" +
 "— PROGRAM —\n" +
