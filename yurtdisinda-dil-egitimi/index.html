@@ -111,6 +111,7 @@ footer.site-footer{padding:32px 0;text-align:center;color:var(--muted-2);font-si
 .field .hint{font-size:12px;color:var(--muted-2)}
 .check{grid-column:1 / -1;display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--ink)}
 .check input{margin-top:3px;width:16px;height:16px;flex:none}
+.form-ok{grid-column:1 / -1;background:#E8F6EE;color:#1E6B45;border:1px solid #BfE3CE;border-radius:10px;padding:12px 14px;font-size:13.5px;font-weight:600}
 .form-foot{grid-column:1 / -1;font-size:12.5px;color:var(--muted-2);text-align:center;margin-top:2px}
 
 .uk-eyebrow{display:inline-block;background:#fff;border:1px solid var(--line);color:var(--navy);font-weight:600;font-size:13px;padding:6px 14px;border-radius:999px;margin-bottom:16px}
@@ -563,8 +564,10 @@ footer.site-footer{padding:32px 0;text-align:center;color:var(--muted-2);font-si
           <textarea id="yd-not" name="not" placeholder="Örn. Temmuz ayında 3 haftalık bir program arıyorum; grupta 2 öğretmen refakatçi olacak..."></textarea>
         </div>
         <label class="check"><input type="checkbox" id="yd-kvkk" name="kvkk" required> Paylaştığım bilgilerin yalnızca yurtdışı eğitim danışmanlığı amacıyla benimle iletişime geçilmesi için kullanılmasını kabul ediyorum.</label>
+        <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
         <button type="submit" class="form-submit">Ücretsiz Danışmanlık İste →</button>
-        <div class="form-foot">Gönder'e bastığında WhatsApp açılır, mesajın hazır şekilde gelir — sadece onaylayıp yollaman yeterli.</div>
+        <div class="form-ok" id="yd-ok" hidden>✓ Talebin alındı. WhatsApp mesajını göndermeyi unutma; bilgiler e-posta ile de bize ulaştı.</div>
+        <div class="form-foot">Gönder'e bastığında bilgilerin e-posta ile bize ulaşır, WhatsApp da mesajın hazır şekilde açılır — onaylayıp yollaman yeterli.</div>
       </form>
     </div>
   </div>
@@ -630,6 +633,33 @@ footer.site-footer{padding:32px 0;text-align:center;color:var(--muted-2);font-si
 "Not: " + g('not');
     var url = 'https://wa.me/onlineelt1?text=' + encodeURIComponent(msg);
     window.open(url, '_blank');
+
+    // Aynı bilgileri e-postaya da gönder (FormSubmit, ücretsiz, hesap gerektirmez)
+    if (!f.get('_honey')) {
+      var data = {
+        _subject: 'Yurtdışı Eğitim - Ücretsiz Danışmanlık Talebi: ' + g('adsoyad') + ' (' + g('okul') + ')',
+        _template: 'table',
+        _captcha: 'false',
+        'Formu Dolduran': g('rol'), 'Talep Türü': g('talep'),
+        'Ad Soyad': g('adsoyad'), 'Telefon': g('telefon'), 'E-posta': g('eposta'),
+        'Şehir': g('sehir'), 'İlçe': g('ilce'),
+        'Okul Adı': g('okul'), 'Okul Türü': g('okulturu'), 'Sınıf / Kademe': g('sinif'),
+        'Okul Mevcudu': g('mevcut'), 'Seminer Tahmini Katılımcı': g('katilimci'),
+        'Yaş': g('yas'), 'İngilizce Seviyesi': g('seviye'),
+        'Ülke': g('ulke'), 'Program Türü': g('program'), 'Dönem': g('donem'), 'Süre': g('sure'),
+        'Pasaport': g('pasaport'), 'İletişim Tercihi': g('iletisim'), 'Not': g('not'),
+        'Mesaj (WhatsApp metni)': msg
+      };
+      if (f.get('eposta')) data._replyto = f.get('eposta');
+      fetch('https://formsubmit.co/ajax/ingilizceogrensene@gmail.com', {
+        method: 'POST', keepalive: true,
+        headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
+        body: JSON.stringify(data)
+      }).catch(function(){});
+    }
+    var ok = document.getElementById('yd-ok');
+    if (ok) ok.hidden = false;
+    form.reset();
   });
 })();
 </script>
